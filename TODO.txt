@@ -1,0 +1,8 @@
+24.12.2018
+    - fix interface to scrape() [DONE]
+    - add to Github
+
+TODO:
+    - add proxy support
+    - add captcha service solving support
+    - check if news instances run the same browser and if we can have one proxy per tab wokers

@@ -1,0 +1,26 @@
+{
+  "name": "se-scraper",
+  "version": "1.0.4",
+  "description": "A simple module which uses puppeteer to scrape several search engines.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "scraping",
+    "search-engines",
+    "google",
+    "web-scraping"
+  ],
+  "author": "Nikolai Tschacher <hire@incolumitas.com> (https://incolumitas.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikolaiT/se-scraper"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cheerio": "^1.0.0-rc.2",
+    "puppeteer": "^1.9.0"
+  }
+}
