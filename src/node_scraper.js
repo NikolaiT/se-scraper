@@ -10,6 +10,7 @@ const youtube = require('./modules/youtube.js');
 const ua = require('./modules/user_agents.js');
 const meta = require('./modules/metadata.js');
 const duckduckgo = require('./modules/duckduckgo.js');
+const tickersearch = require('./modules/ticker_search.js');
 
 module.exports.handler = async function handler (event, context, callback) {
 
@@ -54,7 +55,7 @@ module.exports.handler = async function handler (event, context, callback) {
 
 		browser = await puppeteer.launch({
 			args: ADDITIONAL_CHROME_FLAGS,
-			headless: true,
+			headless: event.headless !== false,
 		});
 
 		if (event.log_http_headers === true) {
@@ -87,7 +88,9 @@ module.exports.handler = async function handler (event, context, callback) {
             results = await duckduckgo.scrape_duckduckgo_news_pup(browser, event, context);
 		} else if (event.search_engine == 'google_dr') {
             results = await google.scrape_google_pup_dr(browser, event, context);
-        }
+        } else if (event.search_engine == 'yahoo_news') {
+			results = await tickersearch.scrape_yahoo_finance_pup(browser, event, context);
+		}
 
         let metadata = {};
 

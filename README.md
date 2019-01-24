@@ -52,13 +52,17 @@ let config = {
     // is drawn before every request. empty string for no sleeping.
     sleep_range: '[1,1]',
     // which search engine to scrape
-    search_engine: 'google',
+    search_engine: 'yahoo_news',
     // whether debug information should be printed
     debug: 'true',
     // whether verbose program output should be printed
     verbose: 'false',
     // an array of keywords to scrape
-    keywords: ['incolumitas.com scraping', 'best scraping framework'],
+    keywords: ['GOOGL', ],
+    // alternatively you can specify a keyword_file. this overwrites the keywords array
+    keyword_file: './keywords.txt',
+    // whether to start the browser in headless mode
+    headless: false,
 };
 
 se_scraper.scrape(config, (err, response) => {
@@ -90,6 +94,7 @@ Supported options for the `search_engine` config key:
 'youtube'
 'duckduckgo_news'
 'google_dr'
+'yahoo_news'
 ```
 
 Output for the above script on my laptop:

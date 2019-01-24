@@ -2,6 +2,11 @@
     - fix interface to scrape() [DONE]
     - add to Github
 
+
+24.1.2018
+
+    - fix issue #3: add functionality to add keyword file
+
 TODO:
     - add proxy support
     - add captcha service solving support

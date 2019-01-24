@@ -1,5 +1,6 @@
 const handler = require('./src/node_scraper.js');
 var fs = require('fs');
+var os = require("os");
 
 exports.scrape = function(config, callback) {
 	// options for scraping
@@ -21,14 +22,14 @@ exports.scrape = function(config, callback) {
 		compress: 'false', // compress
 		debug: 'false',
 		verbose: 'false',
-		keywords: [],
+		keywords: ['test'],
 	};
 
 	for (var key in config) {
 		event[key] = config[key];
 	}
 
-	if (fs.existsSync( event.keyword_file )) {
+	if (fs.existsSync(event.keyword_file)) {
 		event.keywords = read_keywords_from_file(event.keyword_file);
 	}
 
@@ -47,7 +48,7 @@ exports.scrape = function(config, callback) {
 };
 
 function read_keywords_from_file(fname) {
-	let kws =  fs.readFileSync(fname).toString().split("\n");
+	let kws =  fs.readFileSync(fname).toString().split(os.EOL);
 	// clean keywords
 	kws = kws.filter((kw) => {
 		return kw.trim().length > 0;

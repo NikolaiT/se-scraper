@@ -3,7 +3,15 @@ module.exports = {
 	effective_query: effective_query,
     sleep: sleep,
     random_sleep: random_sleep,
+    set_input_value: set_input_value,
 };
+
+async function set_input_value(page, selector, value) {
+    await page.waitFor(selector);
+    await page.evaluate((value, selector) => {
+        return document.querySelector(selector).value = value;
+    }, value, selector);
+}
 
 function no_results(needles, html) {
 	return !needles.map((needle) => { return html.indexOf(needle)})
