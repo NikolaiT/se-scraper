@@ -47,22 +47,24 @@ let config = {
     // if random_user_agent is set to True, a random user agent is chosen
     random_user_agent: false,
     // get meta data of scraping in return object
-    write_meta_data: 'true',
+    write_meta_data: true,
     // how long to sleep between requests. a random sleep interval within the range [a,b]
     // is drawn before every request. empty string for no sleeping.
     sleep_range: '[1,1]',
     // which search engine to scrape
     search_engine: 'yahoo_news',
     // whether debug information should be printed
-    debug: 'true',
+    debug: true,
     // whether verbose program output should be printed
-    verbose: 'false',
+    verbose: false,
     // an array of keywords to scrape
     keywords: ['GOOGL', ],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: './keywords.txt',
     // whether to start the browser in headless mode
     headless: false,
+    // path to output file, data will be stored in JSON
+    output_file: 'results.json',
 };
 
 se_scraper.scrape(config, (err, response) => {

@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 const zlib = require('zlib');
+var fs = require('fs');
 
 // local module imports
 const google = require('./modules/google.js');
@@ -11,6 +12,14 @@ const ua = require('./modules/user_agents.js');
 const meta = require('./modules/metadata.js');
 const duckduckgo = require('./modules/duckduckgo.js');
 const tickersearch = require('./modules/ticker_search.js');
+
+
+function write_results(fname, data) {
+	fs.writeFileSync(fname, data, (err) => {
+		if (err) throw err;
+		console.log(`Results written to file ${fname}`);
+	});
+}
 
 module.exports.handler = async function handler (event, context, callback) {
 
@@ -125,6 +134,10 @@ module.exports.handler = async function handler (event, context, callback) {
 			if (event.verbose === true) {
 				console.log(metadata);
 			}
+		}
+
+		if (event.output_file) {
+			write_results(event.output_file, JSON.stringify(results));
 		}
 
 		let response = {

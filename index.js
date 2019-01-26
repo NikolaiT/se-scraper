@@ -2,7 +2,7 @@ const handler = require('./src/node_scraper.js');
 var fs = require('fs');
 var os = require("os");
 
-exports.scrape = function(config, callback) {
+exports.scrape = async function(config, callback) {
 	// options for scraping
 	event = {
 		// the user agent to scrape with
@@ -10,19 +10,23 @@ exports.scrape = function(config, callback) {
 		// if random_user_agent is set to True, a random user agent is chosen
 		random_user_agent: false,
 		// whether to select manual settings in visible mode
-		set_manual_settings: 'false',
+		set_manual_settings: false,
 		// get meta data of scraping in return object
-		write_meta_data: 'true',
-		log_http_headers: 'false',
+		write_meta_data: true,
+		log_http_headers: false,
 		// how long to sleep between requests. a random sleep interval within the range [a,b]
 		// is drawn before every request. empty string for no sleeping.
 		sleep_range: '[1,1]',
 		// which search engine to scrape
 		search_engine: 'google',
-		compress: 'false', // compress
-		debug: 'false',
-		verbose: 'false',
+		compress: false, // compress
+		debug: false,
+		verbose: false,
 		keywords: ['test'],
+		// whether to start the browser in headless mode
+		headless: true,
+		// path to output file, data will be stored in JSON
+		output_file: '',
 	};
 
 	for (var key in config) {
@@ -44,7 +48,7 @@ exports.scrape = function(config, callback) {
 		}
 	}
 
-	handler.handler(event, undefined, callback );
+	await handler.handler(event, undefined, callback );
 };
 
 function read_keywords_from_file(fname) {
@@ -54,11 +58,4 @@ function read_keywords_from_file(fname) {
 		return kw.trim().length > 0;
 	});
 	return kws;
-}
-
-function write_results(fname, data) {
-	fs.writeFile(fname || 'results.json', data, (err) => {
-		if (err) throw err;
-		console.log('Results written to file');
-	});
 }
