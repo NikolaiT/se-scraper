@@ -33,7 +33,7 @@ exports.scrape = async function(config, callback) {
 		// path to js module that extends functionality
 		// this module should export the functions:
 		// get_browser, handle_metadata, close_browser
-		custom_func: 'examples/pluggable.js',
+		custom_func: '',
 	};
 
 	for (var key in config) {

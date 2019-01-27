@@ -47,7 +47,7 @@ async function scrape_google_pup(page, event, context) {
             }
 
 			await page.waitForSelector('#center_col', { timeout: STANDARD_TIMEOUT });
-            await sfunctions.sleep(100);
+            await sfunctions.sleep(500);
 
 		} catch (e) {
 			console.error(`Problem with scraping ${keyword}.`);
@@ -175,7 +175,7 @@ function parse_google_results(html) {
 	$('#center_col .g').each((i, link) => {
 		results.push({
 		  link: $(link).find('.r a').attr('href'),
-		  title: $(link).find('.r a h3').text(),
+		  title: $(link).find('.r a').text(),
 		  snippet: $(link).find('span.st').text(),
 		  visible_link: $(link).find('.r cite').text(),
 		  date: $(link).find('span.f').text() || '',

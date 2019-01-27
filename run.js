@@ -5,7 +5,7 @@ let config = {
     // the user agent to scrape with
     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
     // if random_user_agent is set to True, a random user agent is chosen
-    random_user_agent: false,
+    random_user_agent: true,
     // get meta data of scraping in return object
     write_meta_data: false,
     // how long to sleep between requests. a random sleep interval within the range [a,b]
@@ -20,7 +20,7 @@ let config = {
     // this output is informational
     verbose: false,
     // an array of keywords to scrape
-    keywords: ['scrapeulous.com', ],
+    keywords: ['incolumitas.com news', ],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // whether to start the browser in headless mode
@@ -38,7 +38,7 @@ let config = {
     custom_func: resolve('examples/pluggable.js'),
 };
 
-se_scraper.scrape(config, (err, response) => {
+function callback(err, response) {
     if (err) { console.error(err) }
 
     /* response object has the following properties:
@@ -49,4 +49,6 @@ se_scraper.scrape(config, (err, response) => {
      */
 
     console.dir(response.results, {depth: null, colors: true});
-});
+}
+
+se_scraper.scrape(config, callback);

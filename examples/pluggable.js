@@ -27,7 +27,11 @@ module.exports = class Pluggable {
     }
 
     async handle_metadata(args) {
-        // silence
+        // store scraping metadata somewhere
+    }
+
+    async handle_results(args) {
+        // store the results somewhere
     }
 
     async start_browser(args={}) {
@@ -35,11 +39,16 @@ module.exports = class Pluggable {
 
         let launch_args = {
             args: args.chromeFlags || this.chromeFlags,
-            headless: args.headless || this.headless,
+            headless: args.headless,
         };
+
+        if (launch_args.headless === undefined) {
+            launch_args.headless = this.headless;
+        }
 
         this.browser = await puppeteer.launch(launch_args);
         console.log('Loaded custom function get_browser()');
+        console.log(launch_args);
 
         return this.browser;
     }

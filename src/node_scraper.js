@@ -68,7 +68,7 @@ module.exports.handler = async function handler (config, context, callback) {
 
         let launch_args = {
 			args: ADDITIONAL_CHROME_FLAGS,
-			headless: config.headless !== false,
+			headless: config.headless,
 		};
 
 		if (config.debug === true) {
@@ -147,6 +147,13 @@ module.exports.handler = async function handler (config, context, callback) {
 			results = JSON.stringify(results);
 			// https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
 			results = zlib.deflateSync(results).toString('base64');
+		}
+
+		if (pluggable && pluggable.handle_results) {
+			await pluggable.handle_results({
+				config: config,
+				results: results,
+			});
 		}
 
 		if (config.write_meta_data === true) {
