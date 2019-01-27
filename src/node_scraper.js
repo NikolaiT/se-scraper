@@ -21,13 +21,13 @@ function write_results(fname, data) {
 }
 
 module.exports.handler = async function handler (config, context, callback) {
-
-	custom_func = null;
+	pluggable = null;
 	if (config.custom_func && fs.existsSync(config.custom_func)) {
 		try {
-			custom_func = require(config.custom_func);
+			Pluggable = require(config.custom_func);
+			pluggable = new Pluggable();
 		} catch (exception) {
-
+			console.error(exception);
 		}
 	}
 
@@ -75,8 +75,9 @@ module.exports.handler = async function handler (config, context, callback) {
 			console.log("Chrome Args: ", launch_args);
 		}
 
-        if (custom_func) {
-        	browser = await custom_func.get_browser(launch_args);
+        if (pluggable) {
+			launch_args.config = config;
+			browser = await pluggable.start_browser(launch_args);
 		} else {
 			browser = await puppeteer.launch(launch_args);
 		}
@@ -126,8 +127,8 @@ module.exports.handler = async function handler (config, context, callback) {
             metadata = await meta.get_metadata(browser);
         }
 
-		if (custom_func) {
-			await custom_func.close_browser(browser);
+		if (pluggable) {
+			await pluggable.close_browser();
 		} else {
 			await browser.close();
 		}
@@ -158,8 +159,8 @@ module.exports.handler = async function handler (config, context, callback) {
 				console.log(metadata);
 			}
 
-			if (custom_func) {
-				await custom_func.handle_metadata(metadata);
+			if (pluggable) {
+				await pluggable.handle_metadata({metadata: metadata, config: config});
 			}
 		}
 

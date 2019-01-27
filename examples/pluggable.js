@@ -1,39 +1,46 @@
-module.exports = {
-    get_browser: get_browser,
-    handle_metadata: handle_metadata,
-    close_browser: close_browser
+module.exports = class Pluggable {
+    constructor(options = {}) {
+        const {
+            chromeFlags = [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-accelerated-2d-canvas',
+                '--disable-gpu',
+                '--window-size=1920x1080',
+                '--hide-scrollbars',
+                '--user-agent=Chrome',
+            ],
+            userAgent = 'Chrome',
+            headless = true,
+        } = options;
+
+        this.chromeFlags = chromeFlags;
+        this.userAgent = userAgent;
+        this.headless = headless;
+
+        this.chromeFlags.push(this.userAgent);
+    }
+
+    async close_browser() {
+        await this.browser.close();
+    }
+
+    async handle_metadata(args) {
+        // silence
+    }
+
+    async start_browser(args={}) {
+        const puppeteer = require('puppeteer');
+
+        let launch_args = {
+            args: args.chromeFlags || this.chromeFlags,
+            headless: args.headless || this.headless,
+        };
+
+        this.browser = await puppeteer.launch(launch_args);
+        console.log('Loaded custom function get_browser()');
+
+        return this.browser;
+    }
 };
-
-async function close_browser(browser) {
-    await browser.close();
-}
-
-async function handle_metadata() {
-    // silence
-}
-
-async function get_browser(launch_args) {
-    const puppeteer = require('puppeteer');
-
-    const ADDITIONAL_CHROME_FLAGS = [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-accelerated-2d-canvas',
-        '--disable-gpu',
-        '--window-size=1920x1080',
-        '--hide-scrollbars',
-        '--user-agent=Chrome',
-    ];
-
-    let custom_args = {
-        args: ADDITIONAL_CHROME_FLAGS,
-        headless: true,
-    };
-
-    browser = await puppeteer.launch(launch_args);
-
-    console.log('Loaded custom function get_browser()');
-
-    return browser;
-}

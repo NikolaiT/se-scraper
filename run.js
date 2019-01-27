@@ -35,7 +35,7 @@ let config = {
     // get_browser, handle_metadata, close_browser
     // must be an absolute path to the module
     //custom_func: resolve('examples/pluggable.js'),
-    custom_func: '',
+    custom_func: resolve('examples/pluggable.js'),
 };
 
 se_scraper.scrape(config, (err, response) => {
