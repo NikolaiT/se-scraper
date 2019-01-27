@@ -20,12 +20,13 @@ function write_results(fname, data) {
 	});
 }
 
-module.exports.handler = async function handler (config, context, callback) {
+module.exports.handler = async function handler (event, context, callback) {
+	config = event;
 	pluggable = null;
 	if (config.custom_func && fs.existsSync(config.custom_func)) {
 		try {
 			Pluggable = require(config.custom_func);
-			pluggable = new Pluggable();
+			pluggable = new Pluggable({config:config});
 		} catch (exception) {
 			console.error(exception);
 		}
