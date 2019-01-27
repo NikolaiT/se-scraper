@@ -4,6 +4,7 @@ module.exports = {
     sleep: sleep,
     random_sleep: random_sleep,
     set_input_value: set_input_value,
+
 };
 
 async function set_input_value(page, selector, value) {

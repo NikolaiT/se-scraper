@@ -1,4 +1,5 @@
 const se_scraper = require('./index.js');
+const resolve = require('path').resolve;
 
 let config = {
     // the user agent to scrape with
@@ -9,24 +10,32 @@ let config = {
     write_meta_data: false,
     // how long to sleep between requests. a random sleep interval within the range [a,b]
     // is drawn before every request. empty string for no sleeping.
-    sleep_range: '[1,1]',
+    sleep_range: '',
     // which search engine to scrape
-    search_engine: 'bing',
+    search_engine: 'google',
     // whether debug information should be printed
-    debug: true,
+    // debug info is useful for developers when debugging
+    debug: false,
     // whether verbose program output should be printed
+    // this output is informational
     verbose: false,
     // an array of keywords to scrape
-    keywords: ['MSFT', ],
+    keywords: ['scrapeulous.com', ],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // whether to start the browser in headless mode
-    headless: false,
+    headless: true,
     // path to output file, data will be stored in JSON
     output_file: 'data.json',
     // whether to prevent images, css, fonts from being loaded
     // will speed up scraping a great deal
-    block_assets: true
+    block_assets: true,
+    // path to js module that extends functionality
+    // this module should export the functions:
+    // get_browser, handle_metadata, close_browser
+    // must be an absolute path to the module
+    //custom_func: resolve('examples/pluggable.js'),
+    custom_func: '',
 };
 
 se_scraper.scrape(config, (err, response) => {

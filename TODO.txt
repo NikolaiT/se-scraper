@@ -12,6 +12,7 @@
     - Add functionality to block images and CSS from loading as described here:
 
         https://www.scrapehero.com/how-to-increase-web-scraping-speed-using-puppeteer/
+        https://www.scrapehero.com/how-to-build-a-web-scraper-using-puppeteer-and-node-js/
 
 TODO:
     - add proxy support

@@ -29,7 +29,11 @@ exports.scrape = async function(config, callback) {
 		output_file: '',
 		// whether to prevent images, css, fonts from being loaded
 		// will speed up scraping a great deal
-		block_assets: true
+		block_assets: true,
+		// path to js module that extends functionality
+		// this module should export the functions:
+		// get_browser, handle_metadata, close_browser
+		custom_func: 'examples/pluggable.js',
 	};
 
 	for (var key in config) {

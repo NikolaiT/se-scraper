@@ -13,7 +13,6 @@ const meta = require('./modules/metadata.js');
 const duckduckgo = require('./modules/duckduckgo.js');
 const tickersearch = require('./modules/ticker_search.js');
 
-
 function write_results(fname, data) {
 	fs.writeFileSync(fname, data, (err) => {
 		if (err) throw err;
@@ -21,14 +20,23 @@ function write_results(fname, data) {
 	});
 }
 
-module.exports.handler = async function handler (event, context, callback) {
+module.exports.handler = async function handler (config, context, callback) {
+
+	custom_func = null;
+	if (config.custom_func && fs.existsSync(config.custom_func)) {
+		try {
+			custom_func = require(config.custom_func);
+		} catch (exception) {
+
+		}
+	}
 
 	try {
 		const startTime = Date.now();
 
-		event = parseEventData(event);
-		if (event.debug === true) {
-			console.log(event);
+		config = parseEventData(config);
+		if (config.debug === true) {
+			console.log(config);
 		}
 
         const ADDITIONAL_CHROME_FLAGS = [
@@ -44,12 +52,12 @@ module.exports.handler = async function handler (event, context, callback) {
 
 		let USER_AGENT = '';
 
-        if (event.random_user_agent) {
+        if (config.random_user_agent) {
             USER_AGENT = ua.random_user_agent();
 		}
 
-        if (event.user_agent) {
-			USER_AGENT = event.user_agent;
+        if (config.user_agent) {
+			USER_AGENT = config.user_agent;
 		}
 
         if (USER_AGENT) {
@@ -58,23 +66,29 @@ module.exports.handler = async function handler (event, context, callback) {
 			)
 		}
 
-        if (event.debug === true) {
-            console.log("Chrome Flags: ", ADDITIONAL_CHROME_FLAGS);
-        }
-
-		browser = await puppeteer.launch({
+        let launch_args = {
 			args: ADDITIONAL_CHROME_FLAGS,
-			headless: event.headless !== false,
-		});
+			headless: config.headless !== false,
+		};
 
-		if (event.log_http_headers === true) {
+		if (config.debug === true) {
+			console.log("Chrome Args: ", launch_args);
+		}
+
+        if (custom_func) {
+        	browser = await custom_func.get_browser(launch_args);
+		} else {
+			browser = await puppeteer.launch(launch_args);
+		}
+
+		if (config.log_http_headers === true) {
 			headers = await meta.get_http_headers(browser);
 			console.dir(headers);
 		}
 
 		const page = await browser.newPage();
 
-		if (event.block_assets === true) {
+		if (config.block_assets === true) {
 			await page.setRequestInterception(true);
 
 			page.on('request', (req) => {
@@ -104,45 +118,53 @@ module.exports.handler = async function handler (event, context, callback) {
 			reuters: tickersearch.scrape_reuters_finance_pup,
 			cnbc: tickersearch.scrape_cnbc_finance_pup,
 			marketwatch: tickersearch.scrape_marketwatch_finance_pup,
-		}[event.search_engine](page, event, context);
+		}[config.search_engine](page, config, context);
 
         let metadata = {};
 
-        if (event.write_meta_data === true) {
+        if (config.write_meta_data === true) {
             metadata = await meta.get_metadata(browser);
         }
 
-		await browser.close();
+		if (custom_func) {
+			await custom_func.close_browser(browser);
+		} else {
+			await browser.close();
+		}
 
-		let num_keywords = event.keywords.length || 0;
+		let num_keywords = config.keywords.length || 0;
 		let timeDelta = Date.now() - startTime;
 		let ms_per_keyword = timeDelta/num_keywords;
-		console.log(`Scraper took ${timeDelta}ms to scrape ${num_keywords} keywords.`);
-		console.log(`On average ms/keyword: ${ms_per_keyword}ms/keyword`);
 
-		if (event.verbose === true) {
+		if (config.verbose === true) {
+			console.log(`Scraper took ${timeDelta}ms to scrape ${num_keywords} keywords.`);
+			console.log(`On average ms/keyword: ${ms_per_keyword}ms/keyword`);
 			console.dir(results, {depth: null, colors: true});
 		}
 
-		if (event.compress === true) {
+		if (config.compress === true) {
 			results = JSON.stringify(results);
 			// https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
 			results = zlib.deflateSync(results).toString('base64');
 		}
 
-		if (event.write_meta_data === true) {
-            metadata.id = `${event.job_name} ${event.chunk_lines}`;
-			metadata.chunk_lines = event.chunk_lines;
+		if (config.write_meta_data === true) {
+            metadata.id = `${config.job_name} ${config.chunk_lines}`;
+			metadata.chunk_lines = config.chunk_lines;
 			metadata.elapsed_time = timeDelta.toString();
 			metadata.ms_per_keyword = ms_per_keyword.toString();
 
-			if (event.verbose === true) {
+			if (config.verbose === true) {
 				console.log(metadata);
+			}
+
+			if (custom_func) {
+				await custom_func.handle_metadata(metadata);
 			}
 		}
 
-		if (event.output_file) {
-			write_results(event.output_file, JSON.stringify(results));
+		if (config.output_file) {
+			write_results(config.output_file, JSON.stringify(results));
 		}
 
 		let response = {
@@ -161,7 +183,7 @@ module.exports.handler = async function handler (event, context, callback) {
 	} 
 };
 
-function parseEventData(event) {
+function parseEventData(config) {
 
 	function _bool(e) {
 		e = String(e);
@@ -172,54 +194,54 @@ function parseEventData(event) {
 		}
 	}
 
-	if (event.debug) {
-		event.debug = _bool(event.debug);
+	if (config.debug) {
+		config.debug = _bool(config.debug);
 	}
 
-	if (event.verbose) {
-		event.verbose = _bool(event.verbose);
+	if (config.verbose) {
+		config.verbose = _bool(config.verbose);
 	}
 
-	if (event.upload_to_s3) {
-		event.upload_to_s3 = _bool(event.upload_to_s3);
+	if (config.upload_to_s3) {
+		config.upload_to_s3 = _bool(config.upload_to_s3);
 	}
 
-	if (event.write_meta_data) {
-		event.write_meta_data = _bool(event.write_meta_data);
+	if (config.write_meta_data) {
+		config.write_meta_data = _bool(config.write_meta_data);
 	}
 
-	if (event.log_http_headers) {
-		event.log_http_headers = _bool(event.log_http_headers);
+	if (config.log_http_headers) {
+		config.log_http_headers = _bool(config.log_http_headers);
 	}
 
-	if (event.compress) {
-		event.compress = _bool(event.compress);
+	if (config.compress) {
+		config.compress = _bool(config.compress);
 	}
 
-	if (event.is_local) {
-		event.is_local = _bool(event.is_local);
+	if (config.is_local) {
+		config.is_local = _bool(config.is_local);
 	}
 
-	if (event.max_results) {
-		event.max_results = parseInt(event.max_results);
+	if (config.max_results) {
+		config.max_results = parseInt(config.max_results);
 	}
 
-	if (event.set_manual_settings) {
-		event.set_manual_settings = _bool(event.set_manual_settings);
+	if (config.set_manual_settings) {
+		config.set_manual_settings = _bool(config.set_manual_settings);
 	}
 
-	if (event.block_assets) {
-		event.block_assets = _bool(event.block_assets);
+	if (config.block_assets) {
+		config.block_assets = _bool(config.block_assets);
 	}
 
-	if (event.sleep_range) {
+	if (config.sleep_range) {
 		// parse an array
-		event.sleep_range = eval(event.sleep_range);
+		config.sleep_range = eval(config.sleep_range);
 
-		if (event.sleep_range.length !== 2 && typeof i[0] !== 'number' && typeof i[1] !== 'number') {
+		if (config.sleep_range.length !== 2 && typeof i[0] !== 'number' && typeof i[1] !== 'number') {
             throw "sleep_range is not a valid array of two integers.";
 		}
 	}
 
-	return event;
+	return config;
 }

@@ -32,7 +32,6 @@ async function tests() {
 		console.log(`Testing ${se}...`);
 		event.search_engine = se;
 		await handler.handler(event, undefined, test_case);
-        await sleep(3000);
 	}
 }
 
@@ -88,26 +87,19 @@ function test_case(err, response) {
 	if (err) {
 		console.error(err);
 	} else {
-
         assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
         assert.equal(response.statusCode, 200, 'status code must be 200');
 
-        results = response.results;
-
-        for (kw in results) {
+        for (key in response.results) {
+            kw = response.results[key];
             // at least 6 results
-            assert.isAtLeast(results[kw].results.length, 6, 'results must have at least 6 links');
+            assert.isAtLeast(kw.results.length, 6, 'results must have at least 6 links');
+            assert.equal(kw.no_results, false, 'no results should be false');
+            assert.typeOf(kw.num_results, 'string', 'num_results must be a string');
+            assert.isAtLeast(kw.num_results.length, 5, 'num_results should be a string of at least 5 chars');
+            assert.typeOf(Date.parse(kw.time), 'number', 'time should be a valid date');
 
-            assert.equal(results[kw].no_results, false, 'no results should be false');
-
-            assert.typeOf(results[kw].num_results, 'string', 'num_results must be a string');
-            assert.isAtLeast(results[kw].num_results.length, 5, 'num_results should be a string of at least 5 chars');
-
-            assert.typeOf(Date.parse(results[kw].time), 'number', 'time should be a valid date');
-
-
-            for (k = 0; k < results[kw].results.length; k++) {
-                res = results[kw].results[k];
+            for (let res of kw.results) {
                 assert.isOk(res.link, 'link must be ok');
                 assert.typeOf(res.link, 'string', 'link must be string');
                 assert.isAtLeast(res.link.length, 5, 'link must have at least 5 chars');

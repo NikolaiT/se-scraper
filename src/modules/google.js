@@ -1,13 +1,6 @@
 const cheerio = require('cheerio');
 const sfunctions = require('./functions.js');
 
-/*
-	Scrape for dateranges:
-
-	https://www.google.com/search?lr=&hl=en&tbs=cdr:1,cd_min:1/1/2007,cd_max:1/1/2009&q=%22video+game%22+%22Catan%22&oq=%22video+game%22+%22Catan%22
-
- */
-
 module.exports = {
 	scrape_google_news_old_pup: scrape_google_news_old_pup,
 	scrape_google_pup: scrape_google_pup,
@@ -18,13 +11,6 @@ module.exports = {
 
 const STANDARD_TIMEOUT = 8000;
 const SOLVE_CAPTCHA_TIME = 45000;
-
-const setTextInputValue = async (page, selector, value) => {
-    await page.waitFor(selector);
-    await page.evaluate((value, selector) => {
-        return document.querySelector(selector).value = value;
-    }, value, selector);
-};
 
 async function scrape_google_pup(page, event, context) {
 	await page.goto('https://www.google.com/');
@@ -51,7 +37,7 @@ async function scrape_google_pup(page, event, context) {
 			// await input.click({ clickCount: 3 });
             // await sfunctions.sleep(50);
             //await input.type(keyword);
-            await setTextInputValue(page, `input[name="q"]`, keyword);
+            await sfunctions.set_input_value(page, `input[name="q"]`, keyword);
             await sfunctions.sleep(50);
 			await input.focus();
 			await page.keyboard.press("Enter");
@@ -130,7 +116,7 @@ async function scrape_google_pup_dr(page, event, context) {
             // await input.click({ clickCount: 3 });
             // await sfunctions.sleep(50);
             // await input.type(keyword);
-            await setTextInputValue(page, `input[name="q"]`, keyword);
+            await sfunctions.set_input_value(page, `input[name="q"]`, keyword);
             await sfunctions.sleep(50);
 
             await input.focus();
@@ -252,7 +238,7 @@ async function scrape_google_news_old_pup(page, event, context) {
 			// overwrites last text in input
 			// await input.click({ clickCount: 3 });
 			// await input.type(keyword);
-            await setTextInputValue(page, `input[name="q"]`, keyword);
+            await sfunctions.set_input_value(page, `input[name="q"]`, keyword);
             await sfunctions.sleep(50);
 			await input.focus();
 			await page.keyboard.press("Enter");
@@ -367,7 +353,7 @@ async function scrape_google_image_pup(page, event, context) {
 			// overwrites last text in input
 			// await input.click({ clickCount: 3 });
 			// await input.type(keyword);
-            await setTextInputValue(page, `input[name="q"]`, keyword);
+            await sfunctions.set_input_value(page, `input[name="q"]`, keyword);
             await sfunctions.sleep(50);
 
 			await input.focus();
