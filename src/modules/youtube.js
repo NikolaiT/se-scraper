@@ -7,8 +7,7 @@ module.exports = {
 
 const all_videos = new Set();
 
-async function scrape_youtube_pup(browser, event, context) {
-	const page = await browser.newPage();
+async function scrape_youtube_pup(page, event, context) {
 	await page.goto('https://www.youtube.com');
 
 	try {

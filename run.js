@@ -11,19 +11,22 @@ let config = {
     // is drawn before every request. empty string for no sleeping.
     sleep_range: '[1,1]',
     // which search engine to scrape
-    search_engine: 'google',
+    search_engine: 'bing',
     // whether debug information should be printed
     debug: true,
     // whether verbose program output should be printed
     verbose: false,
     // an array of keywords to scrape
-    keywords: ['scrapeulous.com', ],
+    keywords: ['MSFT', ],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // whether to start the browser in headless mode
     headless: false,
     // path to output file, data will be stored in JSON
     output_file: 'data.json',
+    // whether to prevent images, css, fonts from being loaded
+    // will speed up scraping a great deal
+    block_assets: true
 };
 
 se_scraper.scrape(config, (err, response) => {

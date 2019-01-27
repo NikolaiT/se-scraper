@@ -5,8 +5,7 @@ module.exports = {
     scrape_duckduckgo_news_pup: scrape_duckduckgo_news_pup,
 };
 
-async function scrape_duckduckgo_news_pup(browser, event, context) {
-    const page = await browser.newPage();
+async function scrape_duckduckgo_news_pup(page, event, context) {
     await page.goto('https://duckduckgo.com/?q=42&t=h_&iar=news&ia=news');
 
     try {

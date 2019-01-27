@@ -1,6 +1,6 @@
 {
   "name": "se-scraper",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "A simple module which uses puppeteer to scrape several search engines.",
   "main": "index.js",
   "scripts": {

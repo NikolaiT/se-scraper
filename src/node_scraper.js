@@ -72,34 +72,39 @@ module.exports.handler = async function handler (event, context, callback) {
 			console.dir(headers);
 		}
 
-		// TODO: this is ugly but I don't want to use to much objects and classes right now.
-		if (event.search_engine == 'google') {
-			results = await google.scrape_google_pup(browser, event, context);
-		} else if (event.search_engine == 'google_news_old') {
-			results = await google.scrape_google_news_old_pup(browser, event, context);
-		} else if (event.search_engine == 'google_news') {
-			results = await google.scrape_google_news_pup(browser, event, context);
-		} else if (event.search_engine == 'google_image') {
-			results = await google.scrape_google_image_pup(browser, event, context);
-		} else if (event.search_engine == 'bing') {
-			results = await bing.scrape_bing_pup(browser, event, context);
-		} else if (event.search_engine == 'bing_news') {
-			results = await bing.scrape_bing_news_pup(browser, event, context);
-		} else if (event.search_engine == 'infospace') {
-            results = await infospace.scrape_infospace_pup(browser, event, context);
-        } else if (event.search_engine == 'webcrawler') {
-		    results = await infospace.scrape_webcrawler_news_pup(browser, event, context);
-        } else if (event.search_engine == 'baidu') {
-			results = await baidu.scrape_baidu_pup(browser, event, context);
-		} else if (event.search_engine == 'youtube') {
-			results = await youtube.scrape_youtube_pup(browser, event, context);
-		} else if (event.search_engine == 'duckduckgo_news') {
-            results = await duckduckgo.scrape_duckduckgo_news_pup(browser, event, context);
-		} else if (event.search_engine == 'google_dr') {
-            results = await google.scrape_google_pup_dr(browser, event, context);
-        } else if (event.search_engine == 'yahoo_news') {
-			results = await tickersearch.scrape_yahoo_finance_pup(browser, event, context);
+		const page = await browser.newPage();
+
+		if (event.block_assets === true) {
+			await page.setRequestInterception(true);
+
+			page.on('request', (req) => {
+				if (req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image') {
+					req.abort();
+				} else {
+					req.continue();
+				}
+			});
 		}
+
+		results = await {
+			google: google.scrape_google_pup,
+			google_news_old: google.scrape_google_news_old_pup,
+			google_news: google.scrape_google_news_pup,
+			google_image: google.scrape_google_image_pup,
+			bing: bing.scrape_bing_pup,
+			bing_news: bing.scrape_bing_news_pup,
+			infospace: infospace.scrape_infospace_pup,
+			webcrawler: infospace.scrape_webcrawler_news_pup,
+			baidu: baidu.scrape_baidu_pup,
+			youtube: youtube.scrape_youtube_pup,
+			duckduckgo_news: duckduckgo.scrape_duckduckgo_news_pup,
+			google_dr: google.scrape_google_pup_dr,
+			yahoo_news: tickersearch.scrape_yahoo_finance_pup,
+			bloomberg: tickersearch.scrape_bloomberg_finance_pup,
+			reuters: tickersearch.scrape_reuters_finance_pup,
+			cnbc: tickersearch.scrape_cnbc_finance_pup,
+			marketwatch: tickersearch.scrape_marketwatch_finance_pup,
+		}[event.search_engine](page, event, context);
 
         let metadata = {};
 
@@ -201,6 +206,10 @@ function parseEventData(event) {
 
 	if (event.set_manual_settings) {
 		event.set_manual_settings = _bool(event.set_manual_settings);
+	}
+
+	if (event.block_assets) {
+		event.block_assets = _bool(event.block_assets);
 	}
 
 	if (event.sleep_range) {

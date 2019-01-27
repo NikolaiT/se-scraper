@@ -65,6 +65,9 @@ let config = {
     headless: false,
     // path to output file, data will be stored in JSON
     output_file: 'results.json',
+    // whether to prevent images, css, fonts from being loaded
+    // will speed up scraping a great deal
+    block_assets: true
 };
 
 se_scraper.scrape(config, (err, response) => {

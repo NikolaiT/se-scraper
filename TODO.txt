@@ -7,6 +7,12 @@
 
     - fix issue #3: add functionality to add keyword file
 
+27.1.2019
+
+    - Add functionality to block images and CSS from loading as described here:
+
+        https://www.scrapehero.com/how-to-increase-web-scraping-speed-using-puppeteer/
+
 TODO:
     - add proxy support
     - add captcha service solving support

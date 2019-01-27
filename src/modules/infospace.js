@@ -6,8 +6,7 @@ module.exports = {
     scrape_webcrawler_news_pup: scrape_webcrawler_news_pup,
 };
 
-async function scrape_infospace_pup(browser, event, context) {
-	const page = await browser.newPage();
+async function scrape_infospace_pup(page, event, context) {
 	await page.goto('http://infospace.com/index.html');
 
 	try {
@@ -89,8 +88,7 @@ function parse(html) {
 	}
 }
 
-async function scrape_webcrawler_news_pup(browser, event, context) {
-    const page = await browser.newPage();
+async function scrape_webcrawler_news_pup(page, event, context) {
     await page.goto('https://www.webcrawler.com/?qc=news');
 
     try {

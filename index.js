@@ -27,6 +27,9 @@ exports.scrape = async function(config, callback) {
 		headless: true,
 		// path to output file, data will be stored in JSON
 		output_file: '',
+		// whether to prevent images, css, fonts from being loaded
+		// will speed up scraping a great deal
+		block_assets: true
 	};
 
 	for (var key in config) {

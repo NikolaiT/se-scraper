@@ -5,8 +5,7 @@ module.exports = {
 	scrape_baidu_pup: scrape_baidu_pup,
 };
 
-async function scrape_baidu_pup(browser, event, context) {
-	const page = await browser.newPage();
+async function scrape_baidu_pup(page, event, context) {
 	await page.goto('https://www.baidu.com/');
 
 	try {

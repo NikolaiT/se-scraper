@@ -6,8 +6,7 @@ module.exports = {
 	scrape_bing_news_pup: scrape_bing_news_pup,
 };
 
-async function scrape_bing_pup(browser, event, context) {
-	const page = await browser.newPage();
+async function scrape_bing_pup(page, event, context) {
 	await page.goto('https://www.bing.com/');
 
 	try {
@@ -91,8 +90,7 @@ function parse(html) {
 	}
 }
 
-async function scrape_bing_news_pup(browser, event, context) {
-	const page = await browser.newPage();
+async function scrape_bing_news_pup(page, event, context) {
 	await page.goto('https://www.bing.com/news/search?');
 
 	if (event.set_manual_settings === true) {

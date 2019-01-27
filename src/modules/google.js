@@ -26,9 +26,7 @@ const setTextInputValue = async (page, selector, value) => {
     }, value, selector);
 };
 
-
-async function scrape_google_pup(browser, event, context) {
-	const page = await browser.newPage();
+async function scrape_google_pup(page, event, context) {
 	await page.goto('https://www.google.com/');
 
 	try {
@@ -92,14 +90,12 @@ async function scrape_google_pup(browser, event, context) {
 
         let html = await page.content();
         results[keyword] = parse_google_results(html);
-
 	}
 
 	return results;
 }
 
-async function scrape_google_pup_dr(browser, event, context) {
-    const page = await browser.newPage();
+async function scrape_google_pup_dr(page, event, context) {
     let keywords = event.keywords;
     first = keywords[0];
     var year = first.slice(-5);
@@ -235,10 +231,7 @@ async function scraping_detected(page) {
 	return html.indexOf('detected unusual traffic') !== -1 || title.indexOf('/sorry/') !== -1;
 }
 
-
-async function scrape_google_news_old_pup(browser, event, context) {
-	const page = await browser.newPage();
-
+async function scrape_google_news_old_pup(page, event, context) {
 	let keywords = event.keywords;
 	var results = {};
 
@@ -347,9 +340,7 @@ function parse_google_news_results_se_format(html) {
   }
 }
 
-async function scrape_google_image_pup(browser, event, context) {
-	const page = await browser.newPage();
-
+async function scrape_google_image_pup(page, event, context) {
 	let keywords = event.keywords;
 	var results = {};
 
@@ -477,9 +468,7 @@ function clean_image_url(url) {
 
 const all_results = new Set();
 
-async function scrape_google_news_pup(browser, event, context) {
-	const page = await browser.newPage();
-
+async function scrape_google_news_pup(page, event, context) {
 	let keywords = event.keywords;
 	var results = {};
 
