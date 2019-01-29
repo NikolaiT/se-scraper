@@ -10,7 +10,7 @@ let config = {
     write_meta_data: false,
     // how long to sleep between requests. a random sleep interval within the range [a,b]
     // is drawn before every request. empty string for no sleeping.
-    sleep_range: '[1,1]',
+    sleep_range: '[1,2]',
     // which search engine to scrape
     search_engine: 'google',
     // whether debug information should be printed
@@ -20,9 +20,11 @@ let config = {
     // this output is informational
     verbose: false,
     // an array of keywords to scrape
-    keywords: ['trump', 'chief'],
+    keywords: ['scraping scrapeulous.com'],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
+    // the number of pages to scrape for each keyword
+    num_pages: 1,
     // whether to start the browser in headless mode
     headless: true,
     // path to output file, data will be stored in JSON
@@ -35,7 +37,11 @@ let config = {
     // get_browser, handle_metadata, close_browser
     // must be an absolute path to the module
     //custom_func: resolve('examples/pluggable.js'),
-    custom_func: resolve('examples/pluggable.js'),
+    custom_func: '',
+    // use a proxy for all connections
+    // example: 'socks5://78.94.172.42:1080'
+    // example: 'http://118.174.233.10:48400'
+    //proxy: 'socks5://78.94.172.42:1080',
 };
 
 function callback(err, response) {

@@ -21,6 +21,7 @@ async function scrape_bing_pup(page, event, context, pluggable) {
 	for (var i = 0; i < keywords.length; i++) {
 
 		keyword = keywords[i];
+		results[keyword] = {};
 
 		if (pluggable.before_keyword_scraped) {
 			await pluggable.before_keyword_scraped({
@@ -33,23 +34,35 @@ async function scrape_bing_pup(page, event, context, pluggable) {
 
 		try {
 			const input = await page.$('input[name="q"]');
-			// overwrites last text in input
-			await input.click({ clickCount: 3 });
-			await input.type(keyword);
+			await sfunctions.set_input_value(page, `input[name="q"]`, keyword);
+			await sfunctions.sleep(50);
 			await input.focus();
 			await page.keyboard.press("Enter");
 
-            if (event.sleep_range) {
-                await sfunctions.random_sleep(event);
-            }
+			let page_num = 1;
 
-			await page.waitForSelector('#b_content', { timeout: 5000 });
-			if (event.debug === true && event.is_local === true) {
-				await page.screenshot({path: `debug/${keyword}.png`});
-			}
+			do {
+				if (event.verbose === true) {
+					console.log(`${event.search_engine} is scraping keyword: ${keyword} on page ${page_num}`);
+				}
+				if (event.sleep_range) {
+					await sfunctions.random_sleep(event);
+				}
+				await page.waitForSelector('#b_content', { timeout: 5000 });
+				await sfunctions.sleep(500);
+				let html = await page.content();
+				results[keyword][page_num] = parse(html);
 
-			let html = await page.content();
-			results[keyword] = parse(html);
+				page_num += 1;
+
+				let next_page_link = await page.$('.sb_pagN', {timeout: 1000});
+				if (!next_page_link) {
+					break;
+				}
+				await next_page_link.click();
+				await page.waitForNavigation();
+
+			} while (page_num <= event.num_pages)
 
 		} catch (e) {
 			console.error(`Problem with scraping ${keyword}: ${e}`);

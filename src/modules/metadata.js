@@ -12,12 +12,13 @@ async function get_metadata(browser) {
 	  waitLoad: true, 
 	  waitNetworkIdle: true // defaults to false
 	});
-	let json = await page.content();
+	let json = await page.content({
+		timeout: 20000
+	});
 	const $ = cheerio.load(json);
 	metadata.ipinfo = $('pre').text();
 	return metadata;
 }
-
 
 async function get_http_headers(browser) {
 	let metadata = {};

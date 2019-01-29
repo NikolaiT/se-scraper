@@ -14,6 +14,17 @@
         https://www.scrapehero.com/how-to-increase-web-scraping-speed-using-puppeteer/
         https://www.scrapehero.com/how-to-build-a-web-scraper-using-puppeteer-and-node-js/
 
+29.1.2019
+
+    - implement proxy support functionality
+        - implement proxy check
+
+    - implement scraping more than 1 page
+        - do it for google
+        - and bing
+
+    - implement duckduckgo scraping
+
 TODO:
     - think about implementing ticker search for: https://quotes.wsj.com/MSFT?mod=searchresults_companyquotes
     - add proxy support
@@ -24,3 +35,27 @@ TODO:
     - think whether it makes sense to introduce a generic scraping class?
     - is scraping abstractable or is every scraper too unique?
     - dont make the same mistakes as with GoogleScraper
+
+
+TODO:
+    okay its fucking time to make a generic scraping class like in GoogleScraper
+    i feel like history repeats
+
+    class Scraper
+
+        constructor(options = {}) {
+
+        }
+
+        async load_search_engine() {}
+
+        async search_keyword() {}
+
+        async new_page() {}
+
+        async detected() {}
+
+
+    then each search engine derives from this generic class
+
+    some search engines do not seed such a abstract class, because they are too complex

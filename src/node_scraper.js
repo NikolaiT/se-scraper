@@ -22,7 +22,7 @@ function write_results(fname, data) {
 
 module.exports.handler = async function handler (event, context, callback) {
 	config = event;
-	pluggable = null;
+	pluggable = {};
 	if (config.custom_func) {
 		if (fs.existsSync(config.custom_func)) {
 			try {
@@ -43,8 +43,11 @@ module.exports.handler = async function handler (event, context, callback) {
 			console.log(config);
 		}
 
-        const ADDITIONAL_CHROME_FLAGS = [
-			//'--proxy-server=' + proxy,
+        var ADDITIONAL_CHROME_FLAGS = [
+			'--disable-infobars',
+			'--window-position=0,0',
+			'--ignore-certifcate-errors',
+			'--ignore-certifcate-errors-spki-list',
 			'--no-sandbox',
 			'--disable-setuid-sandbox',
 			'--disable-dev-shm-usage',
@@ -70,16 +73,27 @@ module.exports.handler = async function handler (event, context, callback) {
 			)
 		}
 
+        if (config.proxy) {
+        	// check this out bubbles
+			// https://www.systutorials.com/241062/how-to-set-google-chromes-proxy-settings-in-command-line-on-linux/
+			// [<proxy-scheme>://]<proxy-host>[:<proxy-port>]
+			// "http", "socks", "socks4", "socks5".
+        	ADDITIONAL_CHROME_FLAGS.push(
+				'--proxy-server=' + config.proxy,
+			)
+		}
+
         let launch_args = {
 			args: ADDITIONAL_CHROME_FLAGS,
 			headless: config.headless,
+			ignoreHTTPSErrors: true,
 		};
 
 		if (config.debug === true) {
 			console.log("Chrome Args: ", launch_args);
 		}
 
-        if (pluggable) {
+        if (pluggable.start_browser) {
 			launch_args.config = config;
 			browser = await pluggable.start_browser(launch_args);
 		} else {
@@ -89,6 +103,30 @@ module.exports.handler = async function handler (event, context, callback) {
 		if (config.log_http_headers === true) {
 			headers = await meta.get_http_headers(browser);
 			console.dir(headers);
+		}
+
+		let metadata = {};
+
+		if (config.write_meta_data === true) {
+			metadata = await meta.get_metadata(browser);
+		}
+
+		// check that our proxy is working by confirming
+		// that ipinfo.io sees the proxy IP address
+		if (config.proxy && config.write_meta_data === true) {
+			console.log(`${metadata.ipinfo} vs ${config.proxy}`);
+
+			try {
+				let ipdata = JSON.parse(metadata.ipinfo);
+				// if the ip returned by ipinfo is not a substring of our proxystring, get the heck outta here
+				if (!config.proxy.includes(ipdata.ip)) {
+					console.error('Proxy not working properly.');
+					await browser.close();
+					return;
+				}
+			} catch (exception) {
+
+			}
 		}
 
 		const page = await browser.newPage();
@@ -127,13 +165,8 @@ module.exports.handler = async function handler (event, context, callback) {
 			marketwatch: tickersearch.scrape_marketwatch_finance_pup,
 		}[config.search_engine](page, config, context, pluggable);
 
-        let metadata = {};
 
-        if (config.write_meta_data === true) {
-            metadata = await meta.get_metadata(browser);
-        }
-
-		if (pluggable) {
+		if (pluggable.close_browser) {
 			await pluggable.close_browser();
 		} else {
 			await browser.close();
@@ -155,7 +188,7 @@ module.exports.handler = async function handler (event, context, callback) {
 			results = zlib.deflateSync(results).toString('base64');
 		}
 
-		if (pluggable && pluggable.handle_results) {
+		if (pluggable.handle_results) {
 			await pluggable.handle_results({
 				config: config,
 				results: results,
@@ -172,7 +205,7 @@ module.exports.handler = async function handler (event, context, callback) {
 				console.log(metadata);
 			}
 
-			if (pluggable) {
+			if (pluggable.handle_metadata) {
 				await pluggable.handle_metadata({metadata: metadata, config: config});
 			}
 		}

@@ -25,8 +25,8 @@ async function scrape_google_pup(page, event, context, pluggable) {
 	var results = {};
 
 	for (var i = 0; i < keywords.length; i++) {
-
 		keyword = keywords[i];
+		results[keyword] = {};
 
 		if (pluggable.before_keyword_scraped) {
 			await pluggable.before_keyword_scraped({
@@ -37,54 +37,63 @@ async function scrape_google_pup(page, event, context, pluggable) {
 			});
 		}
 
-		if (event.verbose === true) {
-			console.log(`${event.search_engine} is scraping keyword: ${keyword}`);
-		}
-
 		try {
+
 			const input = await page.$('input[name="q"]');
-			// await input.click({ clickCount: 3 });
-            // await sfunctions.sleep(50);
-            //await input.type(keyword);
-            await sfunctions.set_input_value(page, `input[name="q"]`, keyword);
-            await sfunctions.sleep(50);
+			await sfunctions.set_input_value(page, `input[name="q"]`, keyword);
+			await sfunctions.sleep(50);
 			await input.focus();
 			await page.keyboard.press("Enter");
 
-            if (event.sleep_range) {
-                await sfunctions.random_sleep(event);
-            }
+			let page_num = 1;
 
-			await page.waitForSelector('#center_col', { timeout: STANDARD_TIMEOUT });
-            await sfunctions.sleep(500);
+			do {
+				if (event.verbose === true) {
+					console.log(`${event.search_engine} is scraping keyword: ${keyword} on page ${page_num}`);
+				}
+				if (event.sleep_range) {
+					await sfunctions.random_sleep(event);
+				}
+				await page.waitForSelector('#center_col', {timeout: STANDARD_TIMEOUT});
+				await sfunctions.sleep(500);
+				let html = await page.content();
+				results[keyword][page_num] = parse_google_results(html);
+
+				page_num += 1;
+
+				let next_page_link = await page.$('#pnnext', {timeout: 1000});
+				if (!next_page_link) {
+					break;
+				}
+				await next_page_link.click();
+				await page.waitForNavigation();
+
+			} while (page_num <= event.num_pages)
 
 		} catch (e) {
 			console.error(`Problem with scraping ${keyword}.`);
 			console.error(e);
 
-            if (await scraping_detected(page) === true) {
-                console.error('Google detected the scraping. Aborting.');
+			if (await scraping_detected(page) === true) {
+				console.error('Google detected the scraping. Aborting.');
 
-                if (event.is_local === true) {
-                    await sfunctions.sleep(SOLVE_CAPTCHA_TIME);
-                    console.error('You have 45 seconds to enter the captcha.');
-                    // expect that user filled out necessary captcha
-                } else {
-                    return results;
-                }
-            } else {
-                // some other error, quit scraping process if stuff is broken
-                if (event.is_local === true) {
-                    console.error('You have 30 seconds to fix this.');
-                    await sfunctions.sleep(30000);
-                } else {
-                    return results;
-                }
-            }
+				if (event.is_local === true) {
+					await sfunctions.sleep(SOLVE_CAPTCHA_TIME);
+					console.error('You have 45 seconds to enter the captcha.');
+					// expect that user filled out necessary captcha
+				} else {
+					return results;
+				}
+			} else {
+				// some other error, quit scraping process if stuff is broken
+				if (event.is_local === true) {
+					console.error('You have 30 seconds to fix this.');
+					await sfunctions.sleep(30000);
+				} else {
+					return results;
+				}
+			}
 		}
-
-        let html = await page.content();
-        results[keyword] = parse_google_results(html);
 	}
 
 	return results;
