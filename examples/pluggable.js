@@ -26,12 +26,25 @@ module.exports = class Pluggable {
         await this.browser.close();
     }
 
+    // Callback invoked after metadata has been gathered
     async handle_metadata(args) {
         // store scraping metadata somewhere
     }
 
+    // Callback invoked after all keywords have been scraped
     async handle_results(args) {
         // store the results somewhere
+    }
+
+    // Callback invoked before a keyword is scraped.
+    async before_keyword_scraped(args) {
+        console.log('before keyword scraped.');
+    }
+
+    // Callback invoked after a keyword has been scraped.
+    // TODO: implement this
+    async after_keyword_scraped(args) {
+        console.log('after keyword scraped.')
     }
 
     async start_browser(args={}) {

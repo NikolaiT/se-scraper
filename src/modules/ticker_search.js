@@ -11,7 +11,7 @@ module.exports = {
 
 // https://www.google.com/search?q=MSFT&tbm=fin
 
-async function scrape_yahoo_finance_pup(page, event, context) {
+async function scrape_yahoo_finance_pup(page, event, context, pluggable) {
     var results = {};
     await page.goto('https://finance.yahoo.com/');
 
@@ -21,6 +21,16 @@ async function scrape_yahoo_finance_pup(page, event, context) {
     }
 
     for (let keyword of event.keywords) {
+
+        if (pluggable.before_keyword_scraped) {
+            await pluggable.before_keyword_scraped({
+                keyword: keyword,
+                page: page,
+                event: event,
+                context: context,
+            });
+        }
+
         try {
             await page.goto(`https://finance.yahoo.com/quote/${keyword}/news?p=${keyword}`);
 
@@ -61,9 +71,17 @@ function parse(html) {
     }
 }
 
-async function scrape_marketwatch_finance_pup(page, event, context) {
+async function scrape_marketwatch_finance_pup(page, event, context, pluggable) {
     var results = {};
     for (let keyword of event.keywords) {
+        if (pluggable.before_keyword_scraped) {
+            await pluggable.before_keyword_scraped({
+                keyword: keyword,
+                page: page,
+                event: event,
+                context: context,
+            });
+        }
         try {
             await page.goto(`https://www.marketwatch.com/investing/stock/${keyword}`);
             await page.waitForSelector('.intraday__data', { timeout: 8000 });
@@ -108,12 +126,22 @@ async function scrape_marketwatch_finance_pup(page, event, context) {
 }
 
 
-async function scrape_bloomberg_finance_pup(page, event, context) {
+async function scrape_bloomberg_finance_pup(page, event, context, pluggable) {
     /*
         Bloomberg blocks after one request. what a shit hole.
      */
     var results = {};
     for (let keyword of event.keywords) {
+
+        if (pluggable.before_keyword_scraped) {
+            await pluggable.before_keyword_scraped({
+                keyword: keyword,
+                page: page,
+                event: event,
+                context: context,
+            });
+        }
+
         try {
             await page.goto(`https://www.bloomberg.com/quote/${keyword}:US`);
             await page.waitForSelector('.pseudoMainContent', { timeout: 8000 });
@@ -140,9 +168,19 @@ async function scrape_bloomberg_finance_pup(page, event, context) {
     return results;
 }
 
-async function scrape_reuters_finance_pup(page, event, context) {
+async function scrape_reuters_finance_pup(page, event, context, pluggable) {
     var results = {};
     for (let keyword of event.keywords) {
+
+        if (pluggable.before_keyword_scraped) {
+            await pluggable.before_keyword_scraped({
+                keyword: keyword,
+                page: page,
+                event: event,
+                context: context,
+            });
+        }
+
         try {
             await page.goto(`https://www.reuters.com/finance/stocks/overview/${keyword}`);
             await page.waitForSelector('#sectionHeader', { timeout: 8000 });
@@ -187,9 +225,19 @@ async function scrape_reuters_finance_pup(page, event, context) {
     return results;
 }
 
-async function scrape_cnbc_finance_pup(page, event, context) {
+async function scrape_cnbc_finance_pup(page, event, context, pluggable) {
     var results = {};
     for (let keyword of event.keywords) {
+
+        if (pluggable.before_keyword_scraped) {
+            await pluggable.before_keyword_scraped({
+                keyword: keyword,
+                page: page,
+                event: event,
+                context: context,
+            });
+        }
+
         try {
             await page.goto(`https://www.cnbc.com/quotes/?symbol=${keyword}&tab=news`);
             await page.waitForSelector('#quote_title_and_chart', { timeout: 8000 });

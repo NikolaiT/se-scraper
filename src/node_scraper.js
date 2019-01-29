@@ -23,18 +23,21 @@ function write_results(fname, data) {
 module.exports.handler = async function handler (event, context, callback) {
 	config = event;
 	pluggable = null;
-	if (config.custom_func && fs.existsSync(config.custom_func)) {
-		try {
-			Pluggable = require(config.custom_func);
-			pluggable = new Pluggable({config:config});
-		} catch (exception) {
-			console.error(exception);
+	if (config.custom_func) {
+		if (fs.existsSync(config.custom_func)) {
+			try {
+				Pluggable = require(config.custom_func);
+				pluggable = new Pluggable({config: config});
+			} catch (exception) {
+				console.error(exception);
+			}
+		} else {
+			console.error(`File "${config.custom_func}" does not exist...`);
 		}
 	}
 
 	try {
 		const startTime = Date.now();
-
 		config = parseEventData(config);
 		if (config.debug === true) {
 			console.log(config);
@@ -53,12 +56,12 @@ module.exports.handler = async function handler (event, context, callback) {
 
 		let USER_AGENT = '';
 
-        if (config.random_user_agent) {
-            USER_AGENT = ua.random_user_agent();
-		}
-
         if (config.user_agent) {
 			USER_AGENT = config.user_agent;
+		}
+
+		if (config.random_user_agent === true) {
+			USER_AGENT = ua.random_user_agent();
 		}
 
         if (USER_AGENT) {
@@ -90,11 +93,13 @@ module.exports.handler = async function handler (event, context, callback) {
 
 		const page = await browser.newPage();
 
+		// block some assets to speed up scraping
 		if (config.block_assets === true) {
 			await page.setRequestInterception(true);
-
 			page.on('request', (req) => {
-				if (req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image') {
+				let type = req.resourceType();
+				const block = ['stylesheet', 'font', 'image', 'media'];
+				if (block.includes(type)) {
 					req.abort();
 				} else {
 					req.continue();
@@ -120,7 +125,7 @@ module.exports.handler = async function handler (event, context, callback) {
 			reuters: tickersearch.scrape_reuters_finance_pup,
 			cnbc: tickersearch.scrape_cnbc_finance_pup,
 			marketwatch: tickersearch.scrape_marketwatch_finance_pup,
-		}[config.search_engine](page, config, context);
+		}[config.search_engine](page, config, context, pluggable);
 
         let metadata = {};
 
@@ -221,6 +226,10 @@ function parseEventData(config) {
 
 	if (config.log_http_headers) {
 		config.log_http_headers = _bool(config.log_http_headers);
+	}
+
+	if (config.random_user_agent) {
+		config.random_user_agent = _bool(config.random_user_agent);
 	}
 
 	if (config.compress) {

@@ -5,7 +5,7 @@ module.exports = {
     scrape_duckduckgo_news_pup: scrape_duckduckgo_news_pup,
 };
 
-async function scrape_duckduckgo_news_pup(page, event, context) {
+async function scrape_duckduckgo_news_pup(page, event, context, pluggable) {
     await page.goto('https://duckduckgo.com/?q=42&t=h_&iar=news&ia=news');
 
     try {
@@ -20,6 +20,15 @@ async function scrape_duckduckgo_news_pup(page, event, context) {
     for (var i = 0; i < keywords.length; i++) {
 
         keyword = keywords[i];
+
+        if (pluggable.before_keyword_scraped) {
+            await pluggable.before_keyword_scraped({
+                keyword: keyword,
+                page: page,
+                event: event,
+                context: context,
+            });
+        }
 
         try {
             const input = await page.$('input[name="q"]');

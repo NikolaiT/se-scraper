@@ -22,20 +22,22 @@ exports.scrape = async function(config, callback) {
 		compress: false, // compress
 		debug: false,
 		verbose: false,
-		keywords: ['test'],
+		keywords: ['scrapeulous.com'],
 		// whether to start the browser in headless mode
 		headless: true,
 		// path to output file, data will be stored in JSON
 		output_file: '',
-		// whether to prevent images, css, fonts from being loaded
+		// whether to prevent images, css, fonts and media from being loaded
 		// will speed up scraping a great deal
 		block_assets: true,
 		// path to js module that extends functionality
 		// this module should export the functions:
 		// get_browser, handle_metadata, close_browser
+		//custom_func: resolve('examples/pluggable.js'),
 		custom_func: '',
 	};
 
+	// overwrite default config
 	for (var key in config) {
 		event[key] = config[key];
 	}

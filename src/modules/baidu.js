@@ -5,7 +5,7 @@ module.exports = {
 	scrape_baidu_pup: scrape_baidu_pup,
 };
 
-async function scrape_baidu_pup(page, event, context) {
+async function scrape_baidu_pup(page, event, context, pluggable) {
 	await page.goto('https://www.baidu.com/');
 
 	try {
@@ -20,6 +20,15 @@ async function scrape_baidu_pup(page, event, context) {
 	for (var i = 0; i < keywords.length; i++) {
 
 		keyword = keywords[i];
+
+		if (pluggable.before_keyword_scraped) {
+			await pluggable.before_keyword_scraped({
+				keyword: keyword,
+				page: page,
+				event: event,
+				context: context,
+			});
+		}
 
 		try {
 			const input = await page.$('input[name="wd"]');

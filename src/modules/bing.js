@@ -6,7 +6,7 @@ module.exports = {
 	scrape_bing_news_pup: scrape_bing_news_pup,
 };
 
-async function scrape_bing_pup(page, event, context) {
+async function scrape_bing_pup(page, event, context, pluggable) {
 	await page.goto('https://www.bing.com/');
 
 	try {
@@ -21,6 +21,15 @@ async function scrape_bing_pup(page, event, context) {
 	for (var i = 0; i < keywords.length; i++) {
 
 		keyword = keywords[i];
+
+		if (pluggable.before_keyword_scraped) {
+			await pluggable.before_keyword_scraped({
+				keyword: keyword,
+				page: page,
+				event: event,
+				context: context,
+			});
+		}
 
 		try {
 			const input = await page.$('input[name="q"]');
@@ -90,7 +99,7 @@ function parse(html) {
 	}
 }
 
-async function scrape_bing_news_pup(page, event, context) {
+async function scrape_bing_news_pup(page, event, context, pluggable) {
 	await page.goto('https://www.bing.com/news/search?');
 
 	if (event.set_manual_settings === true) {
@@ -109,11 +118,16 @@ async function scrape_bing_news_pup(page, event, context) {
 
 	for (var i = 0; i < keywords.length; i++) {
 
-		if (sfunctions.should_turn_down(context)) {
-			break;
-		}
-
 		keyword = keywords[i];
+
+		if (pluggable.before_keyword_scraped) {
+			await pluggable.before_keyword_scraped({
+				keyword: keyword,
+				page: page,
+				event: event,
+				context: context,
+			});
+		}
 
 		try {
 			const input = await page.$('input[name="q"]');

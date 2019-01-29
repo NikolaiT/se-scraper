@@ -7,7 +7,7 @@ module.exports = {
 
 const all_videos = new Set();
 
-async function scrape_youtube_pup(page, event, context) {
+async function scrape_youtube_pup(page, event, context, pluggable) {
 	await page.goto('https://www.youtube.com');
 
 	try {
@@ -29,6 +29,15 @@ async function scrape_youtube_pup(page, event, context) {
 	for (var i = 0; i < keywords.length; i++) {
 
 		keyword = keywords[i];
+
+		if (pluggable.before_keyword_scraped) {
+			await pluggable.before_keyword_scraped({
+				keyword: keyword,
+				page: page,
+				event: event,
+				context: context,
+			});
+		}
 
 		try {
 			const input = await page.$('input[id="search"]');

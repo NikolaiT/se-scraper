@@ -12,7 +12,7 @@ module.exports = {
 const STANDARD_TIMEOUT = 8000;
 const SOLVE_CAPTCHA_TIME = 45000;
 
-async function scrape_google_pup(page, event, context) {
+async function scrape_google_pup(page, event, context, pluggable) {
 	await page.goto('https://www.google.com/');
 
 	try {
@@ -27,6 +27,15 @@ async function scrape_google_pup(page, event, context) {
 	for (var i = 0; i < keywords.length; i++) {
 
 		keyword = keywords[i];
+
+		if (pluggable.before_keyword_scraped) {
+			await pluggable.before_keyword_scraped({
+				keyword: keyword,
+				page: page,
+				event: event,
+				context: context,
+			});
+		}
 
 		if (event.verbose === true) {
 			console.log(`${event.search_engine} is scraping keyword: ${keyword}`);
@@ -81,7 +90,7 @@ async function scrape_google_pup(page, event, context) {
 	return results;
 }
 
-async function scrape_google_pup_dr(page, event, context) {
+async function scrape_google_pup_dr(page, event, context, pluggable) {
     let keywords = event.keywords;
     first = keywords[0];
     var year = first.slice(-5);
@@ -105,6 +114,15 @@ async function scrape_google_pup_dr(page, event, context) {
 
         // strip the year at the end plus whitespace
         keyword = keywords[i].slice(0,-5);
+
+		if (pluggable.before_keyword_scraped) {
+			await pluggable.before_keyword_scraped({
+				keyword: keyword,
+				page: page,
+				event: event,
+				context: context,
+			});
+		}
 
         if (event.verbose === true) {
             console.log(`${event.search_engine} is scraping keyword: ${keyword}`);
@@ -217,13 +235,22 @@ async function scraping_detected(page) {
 	return html.indexOf('detected unusual traffic') !== -1 || title.indexOf('/sorry/') !== -1;
 }
 
-async function scrape_google_news_old_pup(page, event, context) {
+async function scrape_google_news_old_pup(page, event, context, pluggable) {
 	let keywords = event.keywords;
 	var results = {};
 
 	for (var i = 0; i < keywords.length; i++) {
 
 		keyword = keywords[i];
+
+		if (pluggable.before_keyword_scraped) {
+			await pluggable.before_keyword_scraped({
+				keyword: keyword,
+				page: page,
+				event: event,
+				context: context,
+			});
+		}
 
         if (event.verbose === true) {
             console.log(`${event.search_engine} is scraping keyword: ${keyword}`);
@@ -326,7 +353,7 @@ function parse_google_news_results_se_format(html) {
   }
 }
 
-async function scrape_google_image_pup(page, event, context) {
+async function scrape_google_image_pup(page, event, context, pluggable) {
 	let keywords = event.keywords;
 	var results = {};
 
@@ -343,6 +370,15 @@ async function scrape_google_image_pup(page, event, context) {
 	for (var i = 0; i < keywords.length; i++) {
 
 		keyword = keywords[i];
+
+		if (pluggable.before_keyword_scraped) {
+			await pluggable.before_keyword_scraped({
+				keyword: keyword,
+				page: page,
+				event: event,
+				context: context,
+			});
+		}
 
         if (event.verbose === true) {
             console.log(`${event.search_engine} is scraping keyword: ${keyword}`);
@@ -452,9 +488,22 @@ function clean_image_url(url) {
 	}
 }
 
+function clean_google_url(url) {
+	// Example:
+	// /url?q=https://www.zeit.de/thema/donald-trump&sa=U&ved=0ahUKEwiL9-u-_ZLgAhVJsqQKHeITDAoQFgg0MAc&usg=AOvVaw3JV3UZjTXRwaS2I-sBbeXF
+	// /search?q=trump&hl=de&gbv=2&ie=UTF-8&prmd=ivns&source=univ&tbm=nws&tbo=u&sa=X&ved=0ahUKEwiL9-u-_ZLgAhVJsqQKHeITDAoQqAIIFA
+	const regex = /url\?q=(.*?)&/gm;
+	let match = regex.exec(url);
+	if (match !== null) {
+		return decodeURIComponent(match[1]);
+	} else {
+		return url;
+	}
+}
+
 const all_results = new Set();
 
-async function scrape_google_news_pup(page, event, context) {
+async function scrape_google_news_pup(page, event, context, pluggable) {
 	let keywords = event.keywords;
 	var results = {};
 
@@ -471,6 +520,15 @@ async function scrape_google_news_pup(page, event, context) {
 	for (var i = 0; i < keywords.length; i++) {
 
 		keyword = keywords[i];
+
+		if (pluggable.before_keyword_scraped) {
+			await pluggable.before_keyword_scraped({
+				keyword: keyword,
+				page: page,
+				event: event,
+				context: context,
+			});
+		}
 
         if (event.verbose === true) {
             console.log(`${event.search_engine} is scraping keyword: ${keyword}`);

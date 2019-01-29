@@ -10,7 +10,7 @@ let config = {
     write_meta_data: false,
     // how long to sleep between requests. a random sleep interval within the range [a,b]
     // is drawn before every request. empty string for no sleeping.
-    sleep_range: '',
+    sleep_range: '[1,1]',
     // which search engine to scrape
     search_engine: 'google',
     // whether debug information should be printed
@@ -20,7 +20,7 @@ let config = {
     // this output is informational
     verbose: false,
     // an array of keywords to scrape
-    keywords: ['incolumitas.com news', ],
+    keywords: ['trump', 'chief'],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // whether to start the browser in headless mode

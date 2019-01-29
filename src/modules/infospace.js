@@ -6,7 +6,7 @@ module.exports = {
     scrape_webcrawler_news_pup: scrape_webcrawler_news_pup,
 };
 
-async function scrape_infospace_pup(page, event, context) {
+async function scrape_infospace_pup(page, event, context, pluggable) {
 	await page.goto('http://infospace.com/index.html');
 
 	try {
@@ -21,6 +21,15 @@ async function scrape_infospace_pup(page, event, context) {
 	for (var i = 0; i < keywords.length; i++) {
 
 		keyword = keywords[i];
+
+        if (pluggable.before_keyword_scraped) {
+            await pluggable.before_keyword_scraped({
+                keyword: keyword,
+                page: page,
+                event: event,
+                context: context,
+            });
+        }
 
 		try {
 			const input = await page.$('input[id="q"]');
@@ -88,7 +97,7 @@ function parse(html) {
 	}
 }
 
-async function scrape_webcrawler_news_pup(page, event, context) {
+async function scrape_webcrawler_news_pup(page, event, context, pluggable) {
     await page.goto('https://www.webcrawler.com/?qc=news');
 
     try {
@@ -103,6 +112,15 @@ async function scrape_webcrawler_news_pup(page, event, context) {
     for (var i = 0; i < keywords.length; i++) {
 
         keyword = keywords[i];
+
+        if (pluggable.before_keyword_scraped) {
+            await pluggable.before_keyword_scraped({
+                keyword: keyword,
+                page: page,
+                event: event,
+                context: context,
+            });
+        }
 
         try {
             const input = await page.$('input[name="q"]');
