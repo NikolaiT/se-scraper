@@ -25,6 +25,12 @@
 
     - implement duckduckgo scraping
 
+
+30.1.2019
+
+    - modify all scrapers to use the generic class where it makes sense
+        - Bing, Baidu, Google, Duckduckgo
+
 TODO:
     - think about implementing ticker search for: https://quotes.wsj.com/MSFT?mod=searchresults_companyquotes
     - add proxy support

@@ -1,103 +1,97 @@
 const cheerio = require('cheerio');
 const sfunctions = require('./functions.js');
+const Scraper = require('./se_scraper');
 
-module.exports = {
-	scrape_google_news_old_pup: scrape_google_news_old_pup,
-	scrape_google_pup: scrape_google_pup,
-	scrape_google_image_pup: scrape_google_image_pup,
-	scrape_google_news_pup: scrape_google_news_pup,
-    scrape_google_pup_dr: scrape_google_pup_dr,
-};
+class GoogleScraper extends Scraper {
 
-const STANDARD_TIMEOUT = 8000;
-const SOLVE_CAPTCHA_TIME = 45000;
+	parse(html) {
+		// load the page source into cheerio
+		const $ = cheerio.load(html);
 
-async function scrape_google_pup(page, event, context, pluggable) {
-	await page.goto('https://www.google.com/');
+		// perform queries
+		const results = [];
+		$('#center_col .g').each((i, link) => {
+			results.push({
+				link: $(link).find('.r a').attr('href'),
+				title: $(link).find('.r a').text(),
+				snippet: $(link).find('span.st').text(),
+				visible_link: $(link).find('.r cite').text(),
+				date: $(link).find('span.f').text() || '',
+			})
+		});
 
-	try {
-		await page.waitForSelector('input[name="q"]', { timeout: STANDARD_TIMEOUT });
-	} catch (e) {
-		return results;
-	}
+		let no_results = sfunctions.no_results(
+			['Es wurden keine mit deiner Suchanfrage', 'did not match any documents', 'Keine Ergebnisse für',
+				'No results found for', 'Ergebnisse für', 'Showing results for'],
+			$('#main').text()
+		);
 
-	let keywords = event.keywords;
-	var results = {};
-
-	for (var i = 0; i < keywords.length; i++) {
-		keyword = keywords[i];
-		results[keyword] = {};
-
-		if (pluggable.before_keyword_scraped) {
-			await pluggable.before_keyword_scraped({
-				keyword: keyword,
-				page: page,
-				event: event,
-				context: context,
-			});
+		let effective_query = $('#fprsl').text() || '';
+		if (!effective_query) {
+			effective_query = $('#fprs a').text()
 		}
 
-		try {
-
-			const input = await page.$('input[name="q"]');
-			await sfunctions.set_input_value(page, `input[name="q"]`, keyword);
-			await sfunctions.sleep(50);
-			await input.focus();
-			await page.keyboard.press("Enter");
-
-			let page_num = 1;
-
-			do {
-				if (event.verbose === true) {
-					console.log(`${event.search_engine} is scraping keyword: ${keyword} on page ${page_num}`);
-				}
-				if (event.sleep_range) {
-					await sfunctions.random_sleep(event);
-				}
-				await page.waitForSelector('#center_col', {timeout: STANDARD_TIMEOUT});
-				await sfunctions.sleep(500);
-				let html = await page.content();
-				results[keyword][page_num] = parse_google_results(html);
-
-				page_num += 1;
-
-				let next_page_link = await page.$('#pnnext', {timeout: 1000});
-				if (!next_page_link) {
-					break;
-				}
-				await next_page_link.click();
-				await page.waitForNavigation();
-
-			} while (page_num <= event.num_pages)
-
-		} catch (e) {
-			console.error(`Problem with scraping ${keyword}.`);
-			console.error(e);
-
-			if (await scraping_detected(page) === true) {
-				console.error('Google detected the scraping. Aborting.');
-
-				if (event.is_local === true) {
-					await sfunctions.sleep(SOLVE_CAPTCHA_TIME);
-					console.error('You have 45 seconds to enter the captcha.');
-					// expect that user filled out necessary captcha
-				} else {
-					return results;
-				}
-			} else {
-				// some other error, quit scraping process if stuff is broken
-				if (event.is_local === true) {
-					console.error('You have 30 seconds to fix this.');
-					await sfunctions.sleep(30000);
-				} else {
-					return results;
-				}
+		const cleaned = [];
+		for (var i=0; i < results.length; i++) {
+			let res = results[i];
+			if (res.link && res.link.trim() && res.title && res.title.trim()) {
+				res.rank = i+1;
+				cleaned.push(res);
 			}
 		}
+
+		return {
+			time: (new Date()).toUTCString(),
+			num_results: $('#resultStats').text(),
+			no_results: no_results,
+			effective_query: effective_query,
+			results: cleaned
+		}
 	}
 
-	return results;
+	async load_start_page() {
+		await this.page.goto('https://www.google.com/');
+
+		try {
+			await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
+		} catch (e) {
+			return false;
+		}
+
+		return true;
+	}
+
+	async search_keyword(keyword) {
+		const input = await this.page.$('input[name="q"]');
+		await this.set_input_value(`input[name="q"]`, keyword);
+		await this.sleep(50);
+		await input.focus();
+		await this.page.keyboard.press("Enter");
+	}
+
+	async next_page() {
+		let next_page_link = await this.page.$('#pnnext', {timeout: 1000});
+		if (!next_page_link) {
+			return false;
+		}
+		await next_page_link.click();
+		await this.page.waitForNavigation();
+
+		return true;
+	}
+
+	async wait_for_results() {
+		await this.page.waitForSelector('#center_col', { timeout: this.STANDARD_TIMEOUT });
+		await this.sleep(500);
+	}
+
+	async detected() {
+		const title = await this.page.title();
+		let html = await this.page.content();
+		return html.indexOf('detected unusual traffic') !== -1 || title.indexOf('/sorry/') !== -1;
+	}
 }
+
 
 async function scrape_google_pup_dr(page, event, context, pluggable) {
     let keywords = event.keywords;
@@ -651,3 +645,12 @@ function parse_google_news_results(html) {
       effective_query: effective_query,
   }
 }
+
+
+module.exports = {
+	scrape_google_news_old_pup: scrape_google_news_old_pup,
+	GoogleScraper: GoogleScraper,
+	scrape_google_image_pup: scrape_google_image_pup,
+	scrape_google_news_pup: scrape_google_news_pup,
+	scrape_google_pup_dr: scrape_google_pup_dr,
+};

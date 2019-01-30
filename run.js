@@ -15,18 +15,18 @@ let config = {
     search_engine: 'google',
     // whether debug information should be printed
     // debug info is useful for developers when debugging
-    debug: false,
+    debug: true,
     // whether verbose program output should be printed
     // this output is informational
-    verbose: false,
+    verbose: true,
     // an array of keywords to scrape
-    keywords: ['scraping scrapeulous.com'],
+    keywords: ['trump', ],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // the number of pages to scrape for each keyword
     num_pages: 1,
     // whether to start the browser in headless mode
-    headless: true,
+    headless: false,
     // path to output file, data will be stored in JSON
     output_file: 'data.json',
     // whether to prevent images, css, fonts from being loaded

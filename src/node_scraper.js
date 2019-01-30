@@ -129,29 +129,13 @@ module.exports.handler = async function handler (event, context, callback) {
 			}
 		}
 
-		const page = await browser.newPage();
-
-		// block some assets to speed up scraping
-		if (config.block_assets === true) {
-			await page.setRequestInterception(true);
-			page.on('request', (req) => {
-				let type = req.resourceType();
-				const block = ['stylesheet', 'font', 'image', 'media'];
-				if (block.includes(type)) {
-					req.abort();
-				} else {
-					req.continue();
-				}
-			});
-		}
-
-		results = await {
-			google: google.scrape_google_pup,
+		Scraper = {
+			google: google.GoogleScraper,
 			google_news_old: google.scrape_google_news_old_pup,
 			google_news: google.scrape_google_news_pup,
 			google_image: google.scrape_google_image_pup,
-			bing: bing.scrape_bing_pup,
-			bing_news: bing.scrape_bing_news_pup,
+			bing: bing.BingScraper,
+			bing_news: bing.BingNewsScraper,
 			infospace: infospace.scrape_infospace_pup,
 			webcrawler: infospace.scrape_webcrawler_news_pup,
 			baidu: baidu.scrape_baidu_pup,
@@ -163,7 +147,16 @@ module.exports.handler = async function handler (event, context, callback) {
 			reuters: tickersearch.scrape_reuters_finance_pup,
 			cnbc: tickersearch.scrape_cnbc_finance_pup,
 			marketwatch: tickersearch.scrape_marketwatch_finance_pup,
-		}[config.search_engine](page, config, context, pluggable);
+		}[config.search_engine];
+
+		let scraper = new Scraper({
+			browser: browser,
+			config: config,
+			context: context,
+			pluggable: pluggable,
+		});
+
+		let results = await scraper.run();
 
 
 		if (pluggable.close_browser) {
