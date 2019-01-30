@@ -29,7 +29,7 @@ class BingScraper extends Scraper {
 		for (var i=0; i < results.length; i++) {
 			let res = results[i];
 			if (res.link && res.link.trim() && res.title && res.title.trim()) {
-				res.rank = i+1;
+				res.rank = this.result_rank++;
 				cleaned.push(res);
 			}
 		}
@@ -104,7 +104,7 @@ class BingNewsScraper extends Scraper {
 		for (var i=0; i < results.length; i++) {
 			let res = results[i];
 			if (res.link && res.link.trim() && res.title && res.title.trim()) {
-				res.rank = i+1;
+				res.rank = this.result_rank++;
 				cleaned.push(res);
 			}
 		}

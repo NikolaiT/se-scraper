@@ -8,11 +8,11 @@ exports.scrape = async function(config, callback) {
 		// the user agent to scrape with
 		user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
 		// if random_user_agent is set to True, a random user agent is chosen
-		random_user_agent: false,
+		random_user_agent: true,
 		// whether to select manual settings in visible mode
 		set_manual_settings: false,
 		// get meta data of scraping in return object
-		write_meta_data: true,
+		write_meta_data: false,
 		log_http_headers: false,
 		// how long to sleep between requests. a random sleep interval within the range [a,b]
 		// is drawn before every request. empty string for no sleeping.

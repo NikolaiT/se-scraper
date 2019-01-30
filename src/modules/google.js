@@ -1,5 +1,4 @@
 const cheerio = require('cheerio');
-const sfunctions = require('./functions.js');
 const Scraper = require('./se_scraper');
 
 class GoogleScraper extends Scraper {
@@ -20,7 +19,7 @@ class GoogleScraper extends Scraper {
 			})
 		});
 
-		let no_results = sfunctions.no_results(
+		let no_results = this.no_results(
 			['Es wurden keine mit deiner Suchanfrage', 'did not match any documents', 'Keine Ergebnisse für',
 				'No results found for', 'Ergebnisse für', 'Showing results for'],
 			$('#main').text()
@@ -35,7 +34,7 @@ class GoogleScraper extends Scraper {
 		for (var i=0; i < results.length; i++) {
 			let res = results[i];
 			if (res.link && res.link.trim() && res.title && res.title.trim()) {
-				res.rank = i+1;
+				res.rank = this.result_rank++;
 				cleaned.push(res);
 			}
 		}
@@ -108,7 +107,7 @@ class GoogleNewsOldScraper extends Scraper {
 			})
 		});
 
-		let no_results = sfunctions.no_results(
+		let no_results = this.no_results(
 			['Es wurden keine mit deiner Suchanfrage', 'did not match any documents', 'Keine Ergebnisse für',
 				'No results found for', 'Ergebnisse für', 'Showing results for', 'did not match any news results'],
 			$('#main').text()
@@ -123,7 +122,7 @@ class GoogleNewsOldScraper extends Scraper {
 		for (var i=0; i < results.length; i++) {
 			let res = results[i];
 			if (res.link && res.link.trim()) {
-				res.rank = i+1;
+				res.rank = this.result_rank++;
 				cleaned.push(res);
 			}
 		}
@@ -161,7 +160,7 @@ class GoogleNewsOldScraper extends Scraper {
 	async wait_for_results() {
 		//await this.page.waitForNavigation({ timeout: this.STANDARD_TIMEOUT });
 		await this.page.waitForSelector('#main', { timeout: this.STANDARD_TIMEOUT });
-		await this.sleep(200);
+		await this.sleep(500);
 	}
 
 	async detected() {
@@ -190,7 +189,7 @@ class GoogleImageScraper extends Scraper {
 			})
 		});
 
-		let no_results = sfunctions.no_results(
+		let no_results = this.no_results(
 			['stimmt mit keinem Bildergebnis', 'Keine Ergebnisse für', 'not match any image results', 'No results found for',
 				'Showing results for', 'Ergebnisse für'],
 			$('#main').text()
@@ -206,7 +205,7 @@ class GoogleImageScraper extends Scraper {
 			let res = results[i];
 			if (res.link && res.link.trim() && res.link.trim().length > 10) {
 				res.link = res.link.trim();
-				res.rank = i+1;
+				res.rank = this.result_rank++;
 				cleaned.push(res);
 			}
 		}
@@ -252,7 +251,7 @@ class GoogleImageScraper extends Scraper {
 
 	async wait_for_results() {
 		await this.page.waitForSelector('#main', { timeout: this.STANDARD_TIMEOUT });
-		await this.sleep(100);
+		await this.sleep(500);
 	}
 
 	async detected() {
@@ -296,7 +295,7 @@ class GoogleNewsScraper extends Scraper {
 			this.all_results.add(title);
 		});
 
-		let no_results = sfunctions.no_results(
+		let no_results = this.no_results(
 			['Es wurden keine mit deiner Suchanfrage', 'did not match any documents', 'Keine Ergebnisse für',
 				'No results found for', 'Ergebnisse für', 'Showing results for', 'did not match any news results'],
 			$('body').text()
@@ -308,7 +307,7 @@ class GoogleNewsScraper extends Scraper {
 		for (var i=0; i < results.length; i++) {
 			let res = results[i];
 			if (res.title && res.title.trim()) {
-				res.rank = i+1;
+				res.rank = this.result_rank++;
 				cleaned.push(res);
 			}
 		}
@@ -333,6 +332,7 @@ class GoogleNewsScraper extends Scraper {
 			// parse here front page results
 			let html = await this.page.content();
 			this.results['frontpage'] = this.parse(html);
+			this.result_rank = 1;
 		} catch(e) {
 			return false;
 		}
@@ -366,7 +366,6 @@ class GoogleNewsScraper extends Scraper {
 		return html.indexOf('detected unusual traffic') !== -1 || title.indexOf('/sorry/') !== -1;
 	}
 }
-
 
 function clean_image_url(url) {
 	// Example:

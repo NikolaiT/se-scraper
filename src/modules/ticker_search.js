@@ -1,5 +1,4 @@
 const cheerio = require('cheerio');
-const sfunctions = require('./functions.js');
 
 module.exports = {
     scrape_yahoo_finance_pup: scrape_yahoo_finance_pup,
@@ -7,9 +6,14 @@ module.exports = {
     scrape_reuters_finance_pup: scrape_reuters_finance_pup,
     scrape_cnbc_finance_pup: scrape_cnbc_finance_pup,
     scrape_marketwatch_finance_pup: scrape_marketwatch_finance_pup,
+    not_implemented: undefined,
 };
 
-// https://www.google.com/search?q=MSFT&tbm=fin
+function sleep(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms)
+    })
+}
 
 async function scrape_yahoo_finance_pup(page, event, context, pluggable) {
     var results = {};
@@ -40,7 +44,7 @@ async function scrape_yahoo_finance_pup(page, event, context, pluggable) {
                 await page.screenshot({path: `debug/${keyword}.png`});
             }
 
-            await sfunctions.sleep(1000);
+            await sleep(1000);
 
             let html = await page.content();
             results[keyword] = parse(html);
@@ -90,7 +94,7 @@ async function scrape_marketwatch_finance_pup(page, event, context, pluggable) {
                 await page.screenshot({path: `debug/${keyword}.png`});
             }
 
-            await sfunctions.sleep(500);
+            await sleep(500);
 
             let newsData = await page.evaluate(() => {
                 let results = [];
@@ -150,7 +154,7 @@ async function scrape_bloomberg_finance_pup(page, event, context, pluggable) {
                 await page.screenshot({path: `debug/${keyword}.png`});
             }
 
-            await sfunctions.sleep(1000);
+            await sleep(1000);
 
             let news_items = await page.$x('//*[starts-with(@class,"newsItem")]');
             for (let item of news_items) {
@@ -189,7 +193,7 @@ async function scrape_reuters_finance_pup(page, event, context, pluggable) {
                 await page.screenshot({path: `debug/${keyword}.png`});
             }
 
-            await sfunctions.sleep(500);
+            await sleep(500);
 
             let newsData = await page.evaluate(() => {
                 let results = [];
@@ -246,7 +250,7 @@ async function scrape_cnbc_finance_pup(page, event, context, pluggable) {
                 await page.screenshot({path: `debug/${keyword}.png`});
             }
 
-            await sfunctions.sleep(500);
+            await sleep(500);
 
             let newsData = await page.evaluate(() => {
                 let results = [];

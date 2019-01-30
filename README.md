@@ -26,6 +26,36 @@ Additionally **se-scraper** supports investment ticker search from the following
 
 This module uses puppeteer. It was created by the Developer of https://github.com/NikolaiT/GoogleScraper, a module with 1800 Stars on Github.
 
+### Quickstart
+
+Install with
+
+```bash
+npm install se-scraper
+```
+
+then create a file with the following contents and start scraping.
+
+```js
+const se_scraper = require('se-scraper');
+
+let config = {
+    search_engine: 'google',
+    debug: false,
+    verbose: false,
+    keywords: ['news', 'scraping scrapeulous.com'],
+    num_pages: 3,
+    output_file: 'data.json',
+};
+
+function callback(err, response) {
+    if (err) { console.error(err) }
+    console.dir(response, {depth: null, colors: true});
+}
+
+se_scraper.scrape(config, callback);
+```
+
 ### Technical Notes
 
 Scraping is done with a headless chromium browser using the automation library puppeteer. Puppeteer is a Node library which provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol.
@@ -75,13 +105,7 @@ Consider the following resources:
 
 * https://intoli.com/blog/making-chrome-headless-undetectable/
 
-### Installation and Usage
-
-Install with
-
-```bash
-npm install se-scraper
-```
+### Advanced Usage
 
 Use se-scraper by calling it with a script such as the one below.
 
@@ -162,9 +186,7 @@ Supported options for the `search_engine` config key:
 'baidu'
 'youtube'
 'duckduckgo_news'
-'google_dr'
 'yahoo_news'
-// ticker search
 'bloomberg'
 'reuters'
 'cnbc'

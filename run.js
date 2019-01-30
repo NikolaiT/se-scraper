@@ -12,23 +12,23 @@ let config = {
     // is drawn before every request. empty string for no sleeping.
     sleep_range: '[1,2]',
     // which search engine to scrape
-    search_engine: 'google_news',
+    search_engine: 'google',
     // whether debug information should be printed
     // debug info is useful for developers when debugging
-    debug: true,
+    debug: false,
     // whether verbose program output should be printed
     // this output is informational
     verbose: true,
     // an array of keywords to scrape
-    keywords: ['hacking', 'trump'],
+    keywords: ['news'],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // the number of pages to scrape for each keyword
-    num_pages: 1,
+    num_pages: 2,
     // whether to start the browser in headless mode
-    headless: false,
+    headless: true,
     // path to output file, data will be stored in JSON
-    output_file: 'data.json',
+    output_file: '',
     // whether to prevent images, css, fonts from being loaded
     // will speed up scraping a great deal
     block_assets: true,
@@ -41,7 +41,7 @@ let config = {
     // use a proxy for all connections
     // example: 'socks5://78.94.172.42:1080'
     // example: 'http://118.174.233.10:48400'
-    //proxy: 'socks5://78.94.172.42:1080',
+    proxy: '',
 };
 
 function callback(err, response) {

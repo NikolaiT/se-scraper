@@ -129,6 +129,8 @@ module.exports.handler = async function handler (event, context, callback) {
 			}
 		}
 
+		var results = {};
+
 		Scraper = {
 			google: google.GoogleScraper,
 			google_news_old: google.GoogleNewsOldScraper,
@@ -136,28 +138,32 @@ module.exports.handler = async function handler (event, context, callback) {
 			google_image: google.GoogleImageScraper,
 			bing: bing.BingScraper,
 			bing_news: bing.BingNewsScraper,
+			duckduckgo: duckduckgo.DuckduckgoScraper,
+			duckduckgo_news: duckduckgo.DuckduckgoNewsScraper,
+			infospace: infospace.InfospaceScraper,
+			webcrawler: infospace.WebcrawlerNewsScraper,
+			baidu: baidu.BaiduScraper,
+			youtube: youtube.YoutubeScraper,
 
-			infospace: infospace.scrape_infospace_pup,
-			webcrawler: infospace.scrape_webcrawler_news_pup,
-			baidu: baidu.scrape_baidu_pup,
-			youtube: youtube.scrape_youtube_pup,
-			duckduckgo_news: duckduckgo.scrape_duckduckgo_news_pup,
-			google_dr: google.scrape_google_pup_dr,
-			yahoo_news: tickersearch.scrape_yahoo_finance_pup,
-			bloomberg: tickersearch.scrape_bloomberg_finance_pup,
-			reuters: tickersearch.scrape_reuters_finance_pup,
-			cnbc: tickersearch.scrape_cnbc_finance_pup,
-			marketwatch: tickersearch.scrape_marketwatch_finance_pup,
+			yahoo_news: tickersearch.not_implemented,
+			bloomberg: tickersearch.not_implemented,
+			reuters: tickersearch.not_implemented,
+			cnbc: tickersearch.not_implemented,
+			marketwatch: tickersearch.not_implemented,
+
 		}[config.search_engine];
 
-		let scraper = new Scraper({
-			browser: browser,
-			config: config,
-			context: context,
-			pluggable: pluggable,
-		});
-
-		let results = await scraper.run();
+		if (Scraper === undefined) {
+			console.info('Currently not implemented search_engine: ', config.search_engine);
+		} else {
+			let scraper = new Scraper({
+				browser: browser,
+				config: config,
+				context: context,
+				pluggable: pluggable,
+			});
+			var results = await scraper.run();
+		}
 
 		if (pluggable.close_browser) {
 			await pluggable.close_browser();

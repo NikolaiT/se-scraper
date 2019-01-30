@@ -81,6 +81,8 @@ module.exports = class Scraper {
      */
     async scraping_loop() {
 
+        this.result_rank = 1;
+
         for (let keyword of this.config.keywords) {
             this.keyword = keyword;
             this.results[keyword] = {};
@@ -121,7 +123,7 @@ module.exports = class Scraper {
                         break;
                     }
 
-                } while (page_num < event.num_pages);
+                } while (page_num <= event.num_pages);
 
             } catch (e) {
 
