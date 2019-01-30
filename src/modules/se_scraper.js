@@ -82,7 +82,7 @@ module.exports = class Scraper {
     async scraping_loop() {
 
         for (let keyword of this.config.keywords) {
-
+            this.keyword = keyword;
             this.results[keyword] = {};
 
             if (this.pluggable.before_keyword_scraped) {

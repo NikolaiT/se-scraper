@@ -131,11 +131,12 @@ module.exports.handler = async function handler (event, context, callback) {
 
 		Scraper = {
 			google: google.GoogleScraper,
-			google_news_old: google.scrape_google_news_old_pup,
-			google_news: google.scrape_google_news_pup,
-			google_image: google.scrape_google_image_pup,
+			google_news_old: google.GoogleNewsOldScraper,
+			google_news: google.GoogleNewsScraper,
+			google_image: google.GoogleImageScraper,
 			bing: bing.BingScraper,
 			bing_news: bing.BingNewsScraper,
+
 			infospace: infospace.scrape_infospace_pup,
 			webcrawler: infospace.scrape_webcrawler_news_pup,
 			baidu: baidu.scrape_baidu_pup,
@@ -157,7 +158,6 @@ module.exports.handler = async function handler (event, context, callback) {
 		});
 
 		let results = await scraper.run();
-
 
 		if (pluggable.close_browser) {
 			await pluggable.close_browser();

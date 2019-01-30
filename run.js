@@ -12,7 +12,7 @@ let config = {
     // is drawn before every request. empty string for no sleeping.
     sleep_range: '[1,2]',
     // which search engine to scrape
-    search_engine: 'google',
+    search_engine: 'google_news',
     // whether debug information should be printed
     // debug info is useful for developers when debugging
     debug: true,
@@ -20,7 +20,7 @@ let config = {
     // this output is informational
     verbose: true,
     // an array of keywords to scrape
-    keywords: ['trump', ],
+    keywords: ['hacking', 'trump'],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // the number of pages to scrape for each keyword
@@ -54,7 +54,7 @@ function callback(err, response) {
         response.statusCode - status code of the scraping process
      */
 
-    console.dir(response.results, {depth: null, colors: true});
+    // console.dir(response.results, {depth: null, colors: true});
 }
 
 se_scraper.scrape(config, callback);
