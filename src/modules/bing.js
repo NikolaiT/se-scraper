@@ -18,8 +18,9 @@ class BingScraper extends Scraper {
 			})
 		});
 
+		// 'Including results for', 'Einschließlich Ergebnisse'
 		let no_results = this.no_results(
-			['There are no results', 'Es gibt keine Ergebnisse', 'Including results for', 'Einschließlich Ergebnisse'],
+			['There are no results', 'Es gibt keine Ergebnisse'],
 			$('#b_results').text()
 		);
 

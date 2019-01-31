@@ -10,7 +10,7 @@ const normal_search_keywords = ['apple tree', 'weather tomorrow'];
 
 async function normal_search_test() {
     let config = {
-        search_engine: 'google',
+        search_engine: 'bing',
         compress: false,
         debug: false,
         verbose: false,
@@ -51,7 +51,7 @@ function normal_search_test_case(err, response) {
 
                 assert.containsAllKeys(obj, ['results', 'time', 'no_results', 'num_results', 'effective_query'], 'not all keys are in the object');
 
-                assert.isAtLeast(obj.results.length, 8, 'results must have at least 8 SERP objects');
+                assert.isAtLeast(obj.results.length, 7, 'results must have at least 7 SERP objects');
                 assert.equal(obj.no_results, false, 'no results should be false');
                 assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
                 assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
@@ -71,7 +71,7 @@ function normal_search_test_case(err, response) {
 
                     assert.isOk(res.title, 'title must be ok');
                     assert.typeOf(res.title, 'string', 'title must be string');
-                    assert.isAtLeast(res.title.length, 10, 'title must have at least 10 chars');
+                    assert.isAtLeast(res.title.length, 5, 'title must have at least 5 chars');
 
                     assert.isOk(res.snippet, 'snippet must be ok');
                     assert.typeOf(res.snippet, 'string', 'snippet must be string');
@@ -89,7 +89,7 @@ const keywords_no_results = ['fgskl34440abJAksafkl34a44dsflkjaQQuBBdfk',];
 
 async function no_results_test() {
     let config = {
-        search_engine: 'google',
+        search_engine: 'bing',
         compress: false,
         debug: false,
         verbose: false,
@@ -135,11 +135,11 @@ function test_case_no_results(err, response) {
     }
 }
 
-const effective_query_keywords = ['mount evverrest'];
+const effective_query_keywords = ['mount everrest'];
 
 async function effective_query_test() {
     let config = {
-        search_engine: 'google',
+        search_engine: 'bing',
         compress: false,
         debug: false,
         verbose: false,
@@ -184,7 +184,7 @@ function test_case_effective_query(err, response) {
                 assert.isNotEmpty(obj.effective_query, 'effective query must be valid');
                 assert(obj.effective_query !== query, 'effective query must be different from keyword');
 
-                assert.isAtLeast(obj.results.length, 8, 'results must have at least 8 SERP objects');
+                assert.isAtLeast(obj.results.length, 7, 'results must have at least 7 SERP objects');
                 assert.equal(obj.no_results, false, 'no results should be false');
                 assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
                 assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');

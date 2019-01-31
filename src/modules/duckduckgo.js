@@ -19,6 +19,8 @@ class DuckduckgoScraper extends Scraper {
             });
         });
 
+        let effective_query = $('#did_you_mean a.js-spelling-suggestion-link').attr('data-query') || '';
+
         const cleaned = [];
         for (var i=0; i < results.length; i++) {
             let res = results[i];
@@ -30,6 +32,7 @@ class DuckduckgoScraper extends Scraper {
 
         return {
             time: (new Date()).toUTCString(),
+            effective_query: effective_query,
             results: cleaned
         }
     }
