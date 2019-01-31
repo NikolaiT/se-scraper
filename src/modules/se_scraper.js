@@ -115,7 +115,8 @@ module.exports = class Scraper {
                     }
 
                     let html = await this.page.content();
-                    this.results[keyword][page_num] = this.parse(html);
+                    let parsed = this.parse(html);
+                    this.results[keyword][page_num] = parsed ? parsed : await this.parse_async(html);
 
                     page_num += 1;
 
@@ -188,6 +189,10 @@ module.exports = class Scraper {
     }
 
     parse(html) {
+
+    }
+
+    async parse_async(html) {
 
     }
 

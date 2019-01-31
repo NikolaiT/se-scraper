@@ -19,7 +19,6 @@ is supported.
 
 Additionally **se-scraper** supports investment ticker search from the following sites:
 
-* Bloomberg
 * Reuters
 * cnbc
 * Marketwatch
@@ -28,7 +27,13 @@ This module uses puppeteer. It was created by the Developer of https://github.co
 
 ### Quickstart
 
-Install with
+**Note**: If you don't want puppeteer to download a complete chromium browser, add this variable to your environments:
+
+```bash
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
+```
+
+Then install with
 
 ```bash
 npm install se-scraper
@@ -187,7 +192,6 @@ Supported options for the `search_engine` config key:
 'youtube'
 'duckduckgo_news'
 'yahoo_news'
-'bloomberg'
 'reuters'
 'cnbc'
 'marketwatch'

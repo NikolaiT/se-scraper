@@ -144,13 +144,10 @@ module.exports.handler = async function handler (event, context, callback) {
 			webcrawler: infospace.WebcrawlerNewsScraper,
 			baidu: baidu.BaiduScraper,
 			youtube: youtube.YoutubeScraper,
-
-			yahoo_news: tickersearch.not_implemented,
-			bloomberg: tickersearch.not_implemented,
-			reuters: tickersearch.not_implemented,
-			cnbc: tickersearch.not_implemented,
-			marketwatch: tickersearch.not_implemented,
-
+			yahoo_news: tickersearch.YahooFinanceScraper,
+			reuters: tickersearch.ReutersFinanceScraper,
+			cnbc: tickersearch.CnbcFinanceScraper,
+			marketwatch: tickersearch.MarketwatchFinanceScraper,
 		}[config.search_engine];
 
 		if (Scraper === undefined) {

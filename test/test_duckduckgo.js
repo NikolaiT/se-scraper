@@ -56,7 +56,7 @@ function normal_search_test_case(err, response) {
 
                 for (let res of obj.results) {
 
-                    assert.containsAllKeys(res, ['link', 'title', 'rank', 'visible_link', 'rank'], 'not all keys are in the SERP object');
+                    assert.containsAllKeys(res, ['link', 'title', 'rank', 'visible_link', 'snippet'], 'not all keys are in the SERP object');
 
                     assert.isOk(res.link, 'link must be ok');
                     assert.typeOf(res.link, 'string', 'link must be string');
