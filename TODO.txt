@@ -44,24 +44,7 @@ TODO:
 
 
 TODO:
-    okay its fucking time to make a generic scraping class like in GoogleScraper
+    okay its fucking time to make a generic scraping class like in GoogleScraper [done]
     i feel like history repeats
 
-    class Scraper
-
-        constructor(options = {}) {
-
-        }
-
-        async load_search_engine() {}
-
-        async search_keyword() {}
-
-        async new_page() {}
-
-        async detected() {}
-
-
-    then each search engine derives from this generic class
-
-    some search engines do not seed such a abstract class, because they are too complex
+    write good test case for google

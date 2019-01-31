@@ -19,9 +19,10 @@ class GoogleScraper extends Scraper {
 			})
 		});
 
+		// 'Ergebnisse für', 'Showing results for'
 		let no_results = this.no_results(
 			['Es wurden keine mit deiner Suchanfrage', 'did not match any documents', 'Keine Ergebnisse für',
-				'No results found for', 'Ergebnisse für', 'Showing results for'],
+				'No results found for'],
 			$('#main').text()
 		);
 
@@ -109,7 +110,7 @@ class GoogleNewsOldScraper extends Scraper {
 
 		let no_results = this.no_results(
 			['Es wurden keine mit deiner Suchanfrage', 'did not match any documents', 'Keine Ergebnisse für',
-				'No results found for', 'Ergebnisse für', 'Showing results for', 'did not match any news results'],
+				'No results found for', 'did not match any news results'],
 			$('#main').text()
 		);
 
@@ -190,8 +191,7 @@ class GoogleImageScraper extends Scraper {
 		});
 
 		let no_results = this.no_results(
-			['stimmt mit keinem Bildergebnis', 'Keine Ergebnisse für', 'not match any image results', 'No results found for',
-				'Showing results for', 'Ergebnisse für'],
+			['stimmt mit keinem Bildergebnis', 'Keine Ergebnisse für', 'not match any image results', 'No results found for',],
 			$('#main').text()
 		);
 
@@ -297,7 +297,7 @@ class GoogleNewsScraper extends Scraper {
 
 		let no_results = this.no_results(
 			['Es wurden keine mit deiner Suchanfrage', 'did not match any documents', 'Keine Ergebnisse für',
-				'No results found for', 'Ergebnisse für', 'Showing results for', 'did not match any news results'],
+				'No results found for', 'did not match any news results'],
 			$('body').text()
 		);
 

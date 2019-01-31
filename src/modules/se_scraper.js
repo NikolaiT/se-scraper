@@ -176,8 +176,15 @@ module.exports = class Scraper {
     }
 
     no_results(needles, html) {
-        return !needles.map((needle) => { return html.indexOf(needle)})
-            .every((res) => { return res == -1});
+        for (let needle of needles) {
+            if (html.includes(needle)) {
+                if (this.config.debug) {
+                    console.log(`HTML contains needle ${needle}. no_results=true`);
+                }
+                return true;
+            }
+        }
+        return false;
     }
 
     parse(html) {

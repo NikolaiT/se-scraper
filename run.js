@@ -20,13 +20,13 @@ let config = {
     // this output is informational
     verbose: true,
     // an array of keywords to scrape
-    keywords: ['news'],
+    keywords: ['apple tree'],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // the number of pages to scrape for each keyword
-    num_pages: 2,
+    num_pages: 1,
     // whether to start the browser in headless mode
-    headless: true,
+    headless: false,
     // path to output file, data will be stored in JSON
     output_file: '',
     // whether to prevent images, css, fonts from being loaded
