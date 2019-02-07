@@ -239,14 +239,7 @@ class GoogleImageScraper extends Scraper {
 	}
 
 	async next_page() {
-		let next_page_link = await this.page.$('#pnnext', {timeout: 1000});
-		if (!next_page_link) {
-			return false;
-		}
-		await next_page_link.click();
-		await this.page.waitForNavigation();
-
-		return true;
+		return false;
 	}
 
 	async wait_for_results() {

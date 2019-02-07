@@ -17,7 +17,7 @@ async function normal_search_test() {
         keywords: normal_search_keywords,
         keyword_file: '',
         num_pages: 2,
-        headless: true,
+        headless: false,
         output_file: '',
         block_assets: true,
         user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
@@ -36,10 +36,10 @@ function normal_search_test_case(err, response) {
     } else {
         assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
         assert.equal(response.statusCode, 200, 'status code must be 200');
-
-        let total_rank = 1;
+        assert.equal(response.metadata.num_requests, 4);
 
         for (let query in response.results) {
+            let total_rank = 1;
 
             assert.containsAllKeys(response.results, normal_search_keywords, 'not all keywords were scraped.');
 
@@ -112,6 +112,7 @@ function test_case_effective_query(err, response) {
 
         assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
         assert.equal(response.statusCode, 200, 'status code must be 200');
+        assert.equal(response.metadata.num_requests, 1);
 
         results = response.results;
         for (let query in response.results) {

@@ -29,6 +29,8 @@ module.exports = class Scraper {
         this.SOLVE_CAPTCHA_TIME = 45000;
 
         this.results = {};
+        this.result_rank = 1;
+        this.num_requests = 0;
     }
 
     async run() {
@@ -55,6 +57,9 @@ module.exports = class Scraper {
 
         this.page = await this.browser.newPage();
 
+        // prevent detection by evading common detection techniques
+        await evadeChromeHeadlessDetection(this.page);
+
         // block some assets to speed up scraping
         if (this.config.block_assets === true) {
             await this.page.setRequestInterception(true);
@@ -69,6 +74,16 @@ module.exports = class Scraper {
             });
         }
 
+        if (this.config.test_evasion === true) {
+            // Navigate to the page that will perform the tests.
+            const testUrl = 'https://intoli.com/blog/' +
+                'not-possible-to-block-chrome-headless/chrome-headless-test.html';
+            await this.page.goto(testUrl);
+
+            // Save a screenshot of the results.
+            await this.page.screenshot({path: 'headless-test-result.png'});
+        }
+
         return await this.load_start_page();
     }
 
@@ -80,18 +95,16 @@ module.exports = class Scraper {
      * @returns {Promise<void>}
      */
     async scraping_loop() {
-
-        this.result_rank = 1;
-
         for (let keyword of this.config.keywords) {
             this.keyword = keyword;
             this.results[keyword] = {};
+            this.result_rank = 1;
 
             if (this.pluggable.before_keyword_scraped) {
                 await this.pluggable.before_keyword_scraped({
                     keyword: keyword,
                     page: this.page,
-                    event: this.config,
+                    config: this.config,
                     context: this.context,
                 });
             }
@@ -101,6 +114,9 @@ module.exports = class Scraper {
             try {
 
                 await this.search_keyword(keyword);
+                // when searching the keyword fails, num_requests will not
+                // be incremented.
+                this.num_requests++;
 
                 do {
 
@@ -110,7 +126,7 @@ module.exports = class Scraper {
 
                     await this.wait_for_results();
 
-                    if (event.sleep_range) {
+                    if (this.config.sleep_range) {
                         await this.random_sleep();
                     }
 
@@ -120,11 +136,20 @@ module.exports = class Scraper {
 
                     page_num += 1;
 
-                    if (await this.next_page() === false) {
-                        break;
+                    // only load the next page when we will pass the next iteration
+                    // step from the while loop
+                    if (page_num <= this.config.num_pages) {
+
+                        let next_page_loaded = await this.next_page();
+
+                        if (next_page_loaded === false) {
+                            break;
+                        } else {
+                            this.num_requests++;
+                        }
                     }
 
-                } while (page_num <= event.num_pages);
+                } while (page_num <= this.config.num_pages);
 
             } catch (e) {
 
@@ -231,3 +256,130 @@ module.exports = class Scraper {
 
     }
 };
+
+// This is where we'll put the code to get around the tests.
+async function evadeChromeHeadlessDetection(page) {
+    // Pass the Webdriver Test.
+    await page.evaluateOnNewDocument(() => {
+        const newProto = navigator.__proto__;
+        delete newProto.webdriver;
+        navigator.__proto__ = newProto;
+    });
+
+    // Pass the Chrome Test.
+    await page.evaluateOnNewDocument(() => {
+        // We can mock this in as much depth as we need for the test.
+        const mockObj = {
+            app: {
+                isInstalled: false,
+            },
+            webstore: {
+                onInstallStageChanged: {},
+                onDownloadProgress: {},
+            },
+            runtime: {
+                PlatformOs: {
+                    MAC: 'mac',
+                    WIN: 'win',
+                    ANDROID: 'android',
+                    CROS: 'cros',
+                    LINUX: 'linux',
+                    OPENBSD: 'openbsd',
+                },
+                PlatformArch: {
+                    ARM: 'arm',
+                    X86_32: 'x86-32',
+                    X86_64: 'x86-64',
+                },
+                PlatformNaclArch: {
+                    ARM: 'arm',
+                    X86_32: 'x86-32',
+                    X86_64: 'x86-64',
+                },
+                RequestUpdateCheckStatus: {
+                    THROTTLED: 'throttled',
+                    NO_UPDATE: 'no_update',
+                    UPDATE_AVAILABLE: 'update_available',
+                },
+                OnInstalledReason: {
+                    INSTALL: 'install',
+                    UPDATE: 'update',
+                    CHROME_UPDATE: 'chrome_update',
+                    SHARED_MODULE_UPDATE: 'shared_module_update',
+                },
+                OnRestartRequiredReason: {
+                    APP_UPDATE: 'app_update',
+                    OS_UPDATE: 'os_update',
+                    PERIODIC: 'periodic',
+                },
+            },
+        };
+
+        window.navigator.chrome = mockObj;
+        window.chrome = mockObj;
+    });
+
+    // Pass the Permissions Test.
+    await page.evaluateOnNewDocument(() => {
+        const originalQuery = window.navigator.permissions.query;
+        window.navigator.permissions.__proto__.query = parameters =>
+            parameters.name === 'notifications'
+                ? Promise.resolve({state: Notification.permission})
+                : originalQuery(parameters);
+
+        // Inspired by: https://github.com/ikarienator/phantomjs_hide_and_seek/blob/master/5.spoofFunctionBind.js
+        const oldCall = Function.prototype.call;
+        function call() {
+            return oldCall.apply(this, arguments);
+        }
+        Function.prototype.call = call;
+
+        const nativeToStringFunctionString = Error.toString().replace(/Error/g, "toString");
+        const oldToString = Function.prototype.toString;
+
+        function functionToString() {
+            if (this === window.navigator.permissions.query) {
+                return "function query() { [native code] }";
+            }
+            if (this === functionToString) {
+                return nativeToStringFunctionString;
+            }
+            return oldCall.call(oldToString, this);
+        }
+        Function.prototype.toString = functionToString;
+    });
+
+    // Pass the Plugins Length Test.
+    await page.evaluateOnNewDocument(() => {
+        // Overwrite the `plugins` property to use a custom getter.
+        Object.defineProperty(navigator, 'plugins', {
+            // This just needs to have `length > 0` for the current test,
+            // but we could mock the plugins too if necessary.
+            get: () => [1, 2, 3, 4, 5]
+        });
+    });
+
+    // Pass the Languages Test.
+    await page.evaluateOnNewDocument(() => {
+        // Overwrite the `plugins` property to use a custom getter.
+        Object.defineProperty(navigator, 'languages', {
+            get: () => ['en-US', 'en']
+        });
+    });
+
+    // Pass the iframe Test
+    await page.evaluateOnNewDocument(() => {
+        Object.defineProperty(HTMLIFrameElement.prototype, 'contentWindow', {
+            get: function() {
+                return window;
+            }
+        });
+    });
+
+    // Pass toString test, though it breaks console.debug() from working
+    await page.evaluateOnNewDocument(() => {
+        window.console.debug = () => {
+            return null;
+        };
+    });
+}

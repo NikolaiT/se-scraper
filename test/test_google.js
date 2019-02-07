@@ -36,10 +36,10 @@ function normal_search_test_case(err, response) {
     } else {
         assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
         assert.equal(response.statusCode, 200, 'status code must be 200');
-
-        let total_rank = 1;
+        assert.equal(response.metadata.num_requests, 6);
 
         for (let query in response.results) {
+            let total_rank = 1;
 
             assert.containsAllKeys(response.results, normal_search_keywords, 'not all keywords were scraped.');
 
@@ -59,7 +59,7 @@ function normal_search_test_case(err, response) {
 
                 for (let res of obj.results) {
 
-                    assert.containsAllKeys(res, ['link', 'title', 'rank', 'visible_link', 'rank'], 'not all keys are in the SERP object');
+                    assert.containsAllKeys(res, ['link', 'title', 'rank', 'visible_link'], 'not all keys are in the SERP object');
 
                     assert.isOk(res.link, 'link must be ok');
                     assert.typeOf(res.link, 'string', 'link must be string');
@@ -113,6 +113,8 @@ function test_case_no_results(err, response) {
     } else {
         assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
         assert.equal(response.statusCode, 200, 'status code must be 200');
+        assert.equal(response.metadata.num_requests, 1);
+
         results = response.results;
         for (let query in response.results) {
 
@@ -165,6 +167,7 @@ function test_case_effective_query(err, response) {
 
         assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
         assert.equal(response.statusCode, 200, 'status code must be 200');
+        assert.equal(response.metadata.num_requests, 1);
 
         results = response.results;
         for (let query in response.results) {

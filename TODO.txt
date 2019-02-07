@@ -31,6 +31,9 @@
     - modify all scrapers to use the generic class where it makes sense
         - Bing, Baidu, Google, Duckduckgo
 
+7.2.2019
+    - add num_requests to test cases
+
 TODO:
     - think about implementing ticker search for: https://quotes.wsj.com/MSFT?mod=searchresults_companyquotes
     - add proxy support
@@ -47,4 +50,4 @@ TODO:
     okay its fucking time to make a generic scraping class like in GoogleScraper [done]
     i feel like history repeats
 
-    write good test case for google
+    write good test case for google [done]

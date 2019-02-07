@@ -100,26 +100,24 @@ module.exports.handler = async function handler (event, context, callback) {
 			browser = await puppeteer.launch(launch_args);
 		}
 
-		if (config.log_http_headers === true) {
-			headers = await meta.get_http_headers(browser);
-			console.dir(headers);
-		}
-
 		let metadata = {};
 
-		if (config.write_meta_data === true) {
-			metadata = await meta.get_metadata(browser);
+		if (config.log_http_headers === true) {
+			metadata.http_headers = await meta.get_http_headers(browser);
+		}
+
+		if (config.log_ip_address === true) {
+			metadata.ipinfo = await meta.get_ip_data(browser);
 		}
 
 		// check that our proxy is working by confirming
 		// that ipinfo.io sees the proxy IP address
-		if (config.proxy && config.write_meta_data === true) {
+		if (config.proxy && config.log_ip_address === true) {
 			console.log(`${metadata.ipinfo} vs ${config.proxy}`);
 
 			try {
-				let ipdata = JSON.parse(metadata.ipinfo);
 				// if the ip returned by ipinfo is not a substring of our proxystring, get the heck outta here
-				if (!config.proxy.includes(ipdata.ip)) {
+				if (!config.proxy.includes(metadata.ipinfo.ip)) {
 					console.error('Proxy not working properly.');
 					await browser.close();
 					return;
@@ -153,13 +151,13 @@ module.exports.handler = async function handler (event, context, callback) {
 		if (Scraper === undefined) {
 			console.info('Currently not implemented search_engine: ', config.search_engine);
 		} else {
-			let scraper = new Scraper({
+			scraperObj = new Scraper({
 				browser: browser,
 				config: config,
 				context: context,
 				pluggable: pluggable,
 			});
-			var results = await scraper.run();
+			results = await scraperObj.run();
 		}
 
 		if (pluggable.close_browser) {
@@ -168,13 +166,13 @@ module.exports.handler = async function handler (event, context, callback) {
 			await browser.close();
 		}
 
-		let num_keywords = config.keywords.length || 0;
+		let num_requests = scraperObj.num_requests;
 		let timeDelta = Date.now() - startTime;
-		let ms_per_keyword = timeDelta/num_keywords;
+		let ms_per_request = timeDelta/num_requests;
 
 		if (config.verbose === true) {
-			console.log(`Scraper took ${timeDelta}ms to scrape ${num_keywords} keywords.`);
-			console.log(`On average ms/keyword: ${ms_per_keyword}ms/keyword`);
+			console.log(`Scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
+			console.log(`On average ms/request: ${ms_per_request}ms/request`);
 			console.dir(results, {depth: null, colors: true});
 		}
 
@@ -191,19 +189,18 @@ module.exports.handler = async function handler (event, context, callback) {
 			});
 		}
 
-		if (config.write_meta_data === true) {
-            metadata.id = `${config.job_name} ${config.chunk_lines}`;
-			metadata.chunk_lines = config.chunk_lines;
-			metadata.elapsed_time = timeDelta.toString();
-			metadata.ms_per_keyword = ms_per_keyword.toString();
+		metadata.id = `${config.job_name} ${config.chunk_lines}`;
+		metadata.chunk_lines = config.chunk_lines;
+		metadata.elapsed_time = timeDelta.toString();
+		metadata.ms_per_keyword = ms_per_request.toString();
+		metadata.num_requests = num_requests;
 
-			if (config.verbose === true) {
-				console.log(metadata);
-			}
+		if (config.verbose === true) {
+			console.log(metadata);
+		}
 
-			if (pluggable.handle_metadata) {
-				await pluggable.handle_metadata({metadata: metadata, config: config});
-			}
+		if (pluggable.handle_metadata) {
+			await pluggable.handle_metadata({metadata: metadata, config: config});
 		}
 
 		if (config.output_file) {
@@ -249,8 +246,8 @@ function parseEventData(config) {
 		config.upload_to_s3 = _bool(config.upload_to_s3);
 	}
 
-	if (config.write_meta_data) {
-		config.write_meta_data = _bool(config.write_meta_data);
+	if (config.log_ip_address) {
+		config.log_ip_address = _bool(config.log_ip_address);
 	}
 
 	if (config.log_http_headers) {

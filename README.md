@@ -6,7 +6,7 @@ Right now scraping the search engines
 
 * Google
 * Google News
-* Google News New (https://news.google.com)
+* Google News App version (https://news.google.com)
 * Google Image
 * Bing
 * Baidu
@@ -65,9 +65,14 @@ se_scraper.scrape(config, callback);
 
 Scraping is done with a headless chromium browser using the automation library puppeteer. Puppeteer is a Node library which provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol.
  
- No multithreading is supported for now. Only one scraping worker per `scrape()` call. 
+ No multithreading is supported for now. Only one scraping worker per `scrape()` call.
+ 
+ We will soon support parallelization. **se-scraper** will support an architecture similar to:
+ 
+ 1. https://antoinevastel.com/crawler/2018/09/20/parallel-crawler-puppeteer.html
+ 2. https://docs.browserless.io/blog/2018/06/04/puppeteer-best-practices.html
 
-If you need to deploy scraping to the cloud (AWS or Azure), you can contact me on hire@incolumitas.com
+If you need to deploy scraping to the cloud (AWS or Azure), you can contact me at hire@incolumitas.com
 
 The chromium browser is started with the following flags to prevent
 scraping detection.
@@ -104,11 +109,32 @@ page.on('request', (req) => {
 });
 ```
 
-#### Making puppeteer and headless chrome undetectable
+### Making puppeteer and headless chrome undetectable
 
 Consider the following resources:
 
 * https://intoli.com/blog/making-chrome-headless-undetectable/
+* https://intoli.com/blog/not-possible-to-block-chrome-headless/
+* https://news.ycombinator.com/item?id=16179602
+
+**se-scraper** implements the countermeasures against headless chrome detection proposed on those sites.
+
+Most recent detection counter measures can be found here:
+
+* https://github.com/paulirish/headless-cat-n-mouse/blob/master/apply-evasions.js
+
+**se-scraper** makes use of those anti detection techniques.
+
+To check whether evasion works, you can test it by passing `test_evasion` flag to the config:
+
+```js
+let config = {
+    // check if headless chrome escapes common detection techniques
+    test_evasion: true
+};
+```
+
+It will create a screenshot named `headless-test-result.png` in the directory where the scraper was started that shows whether all test have passed.
 
 ### Advanced Usage
 
@@ -123,8 +149,6 @@ let config = {
     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
     // if random_user_agent is set to True, a random user agent is chosen
     random_user_agent: true,
-    // get meta data of scraping in return object
-    write_meta_data: false,
     // how long to sleep between requests. a random sleep interval within the range [a,b]
     // is drawn before every request. empty string for no sleeping.
     sleep_range: '[1,2]',

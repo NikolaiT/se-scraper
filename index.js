@@ -3,6 +3,7 @@ var fs = require('fs');
 var os = require("os");
 
 exports.scrape = async function(config, callback) {
+
 	// options for scraping
 	event = {
 		// the user agent to scrape with
@@ -11,8 +12,9 @@ exports.scrape = async function(config, callback) {
 		random_user_agent: true,
 		// whether to select manual settings in visible mode
 		set_manual_settings: false,
-		// get meta data of scraping in return object
-		write_meta_data: false,
+		// log ip address data
+		log_ip_address: false,
+		// log http headers
 		log_http_headers: false,
 		// how long to sleep between requests. a random sleep interval within the range [a,b]
 		// is drawn before every request. empty string for no sleeping.
@@ -25,6 +27,8 @@ exports.scrape = async function(config, callback) {
 		keywords: ['scrapeulous.com'],
 		// whether to start the browser in headless mode
 		headless: true,
+		// the number of pages to scrape for each keyword
+		num_pages: 1,
 		// path to output file, data will be stored in JSON
 		output_file: '',
 		// whether to prevent images, css, fonts and media from being loaded
@@ -39,6 +43,9 @@ exports.scrape = async function(config, callback) {
 		// example: 'socks5://78.94.172.42:1080'
 		// example: 'http://118.174.233.10:48400'
 		proxy: '',
+		// check if headless chrome escapes common detection techniques
+		// this is a quick test and should be used for debugging
+		test_evasion: false,
 	};
 
 	// overwrite default config

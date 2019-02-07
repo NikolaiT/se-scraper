@@ -19,7 +19,7 @@ class DuckduckgoScraper extends Scraper {
             });
         });
 
-        let effective_query = $('#did_you_mean a.js-spelling-suggestion-link').attr('data-query') || '';
+        let effective_query = $('a.js-spelling-suggestion-link').attr('data-query') || '';
 
         const cleaned = [];
         for (var i=0; i < results.length; i++) {
@@ -68,6 +68,7 @@ class DuckduckgoScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('.serp__results', { timeout: 5000 });
+        await this.sleep(250);
     }
 
     async detected() {

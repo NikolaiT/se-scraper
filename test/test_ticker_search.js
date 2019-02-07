@@ -37,10 +37,8 @@ function reuters_search_test_case(err, response) {
         assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
         assert.equal(response.statusCode, 200, 'status code must be 200');
 
-        let total_rank = 1;
-
         for (let query in response.results) {
-
+            let total_rank = 1;
             assert.containsAllKeys(response.results, quote_search_keywords, 'not all keywords were scraped.');
 
             for (let page_number in response.results[query]) {
@@ -108,10 +106,8 @@ function cnbc_search_test_case(err, response) {
         assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
         assert.equal(response.statusCode, 200, 'status code must be 200');
 
-        let total_rank = 1;
-
         for (let query in response.results) {
-
+            let total_rank = 1;
             assert.containsAllKeys(response.results, quote_search_keywords, 'not all keywords were scraped.');
 
             for (let page_number in response.results[query]) {
@@ -177,10 +173,8 @@ function marketwatch_search_test_case(err, response) {
         assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
         assert.equal(response.statusCode, 200, 'status code must be 200');
 
-        let total_rank = 1;
-
         for (let query in response.results) {
-
+            let total_rank = 1;
             assert.containsAllKeys(response.results, marketwatch_search_keywords, 'not all keywords were scraped.');
 
             for (let page_number in response.results[query]) {
