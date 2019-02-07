@@ -32,22 +32,14 @@
         - Bing, Baidu, Google, Duckduckgo
 
 7.2.2019
-    - add num_requests to test cases
+    - add num_requests to test cases [done]
+
+
 
 TODO:
-    - think about implementing ticker search for: https://quotes.wsj.com/MSFT?mod=searchresults_companyquotes
-    - add proxy support
     - add captcha service solving support
     - check if news instances run the same browser and if we can have one proxy per tab wokers
 
-TODO:
-    - think whether it makes sense to introduce a generic scraping class?
-    - is scraping abstractable or is every scraper too unique?
-    - dont make the same mistakes as with GoogleScraper
-
-
-TODO:
-    okay its fucking time to make a generic scraping class like in GoogleScraper [done]
-    i feel like history repeats
-
-    write good test case for google [done]
+    - write test case for:
+        - pluggable
+        - full metadata (log http headers, log ip address)

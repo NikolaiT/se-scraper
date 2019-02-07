@@ -30,7 +30,10 @@ module.exports = class Scraper {
 
         this.results = {};
         this.result_rank = 1;
+        // keep track of the requests done
         this.num_requests = 0;
+        // keep track of the keywords searched
+        this.num_keywords = 0;
     }
 
     async run() {
@@ -96,12 +99,15 @@ module.exports = class Scraper {
      */
     async scraping_loop() {
         for (let keyword of this.config.keywords) {
+            this.num_keywords++;
             this.keyword = keyword;
             this.results[keyword] = {};
             this.result_rank = 1;
 
             if (this.pluggable.before_keyword_scraped) {
                 await this.pluggable.before_keyword_scraped({
+                    num_keywords: this.num_keywords,
+                    num_requests: this.num_requests,
                     keyword: keyword,
                     page: this.page,
                     config: this.config,
