@@ -2,7 +2,7 @@
 
 This node module supports scraping several search engines.
 
-Right now scraping the search engines
+Right now it's possible to scrape the following search engines
 
 * Google
 * Google News
@@ -14,20 +14,15 @@ Right now scraping the search engines
 * Infospace
 * Duckduckgo
 * Webcrawler
-
-is supported.
-
-Additionally **se-scraper** supports investment ticker search from the following sites:
-
 * Reuters
 * cnbc
 * Marketwatch
 
-This module uses puppeteer. It was created by the Developer of https://github.com/NikolaiT/GoogleScraper, a module with 1800 Stars on Github.
+This module uses puppeteer and puppeteer-cluster (modified version). It was created by the Developer of https://github.com/NikolaiT/GoogleScraper, a module with 1800 Stars on Github.
 
 ### Quickstart
 
-**Note**: If you don't want puppeteer to download a complete chromium browser, add this variable to your environments:
+**Note**: If you **don't** want puppeteer to download a complete chromium browser, add this variable to your environments. Then this library is not guaranteed to run out of the box.
 
 ```bash
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
@@ -39,7 +34,7 @@ Then install with
 npm install se-scraper
 ```
 
-then create a file with the following contents and start scraping.
+then create a file `run.js` with the following contents
 
 ```js
 const se_scraper = require('se-scraper');
@@ -60,6 +55,79 @@ function callback(err, response) {
 
 se_scraper.scrape(config, callback);
 ```
+
+Start scraping by firing up the command `node run.js`
+
+#### Scrape with proxies
+
+**se-scraper** will create one browser instance per proxy. So the maximal ammount of concurency is equivalent to the number of proxies plus one (your own IP).
+
+```js
+const se_scraper = require('se-scraper');
+
+let config = {
+    search_engine: 'google',
+    debug: false,
+    verbose: false,
+    keywords: ['news', 'scrapeulous.com', 'incolumitas.com', 'i work too much'],
+    num_pages: 1,
+    output_file: 'data.json',
+    proxy_file: '/home/nikolai/.proxies', // one proxy per line
+    log_ip_address: true,
+};
+
+function callback(err, response) {
+    if (err) { console.error(err) }
+    console.dir(response, {depth: null, colors: true});
+}
+
+se_scraper.scrape(config, callback);
+```
+
+With a proxy file such as (invalid proxies of course)
+
+```text
+socks5://53.34.23.55:55523
+socks4://51.11.23.22:22222
+```
+
+This will scrape with **three** browser instance each having their own IP address. Unfortunately, it is currently not possible to scrape with different proxies per tab (chromium issue).
+
+### Scraping Model
+
+**se-scraper** scrapes search engines only. In order to introduce concurrency into this library, it is necessary to define the scraping model. Then we can decide how we divide and conquer.
+
+#### Scraping Resources
+
+What are common scraping resources?
+
+1. **Memory and CPU**. Necessary to launch multiple browser instances.
+2. **Network Bandwith**. Is not often the bottleneck.
+3. **IP Addresses**. Websites often block IP addresses after a certain amount of requests from the same IP address. Can be circumvented by using proxies.
+4. Spoofable identifiers such as browser fingerprint or user agents. Those will be handled by **se-scraper**
+
+#### Concurrency Model
+
+**se-scraper** should be able to run without any concurrency at all. This is the default case. No concurrency means only one browser/tab is searching at the time.
+
+For concurrent use, we will make use of a modified [puppeteer-cluster library](https://github.com/thomasdondorf/puppeteer-cluster).
+
+One scrape job is properly defined by
+
+* 1 search engine such as `google`
+* `M` pages
+* `N` keywords/queries
+* `K` proxies and `K+1` browser instances (because when we have no proxies available, we will scrape with our dedicated IP)
+
+Then **se-scraper** will create `K+1` dedicated browser instances with a unique ip address. Each browser will get `N/(K+1)` keywords and will issue `N/(K+1) * M` total requests to the search engine.
+
+The problem is that [puppeteer-cluster library](https://github.com/thomasdondorf/puppeteer-cluster) does only allow identical options for subsequent new browser instances. Therefore, it is not trivial to launch a cluster of browsers with distinct proxy settings. Right now, every browser has the same options. It's not possible to set options on a per browser basis.
+
+Solution: 
+
+1. Create a [upstream proxy router](https://github.com/GoogleChrome/puppeteer/issues/678).
+2. Modify [puppeteer-cluster library](https://github.com/thomasdondorf/puppeteer-cluster) to accept a list of proxy strings and then pop() from this list at every new call to `workerInstance()` in https://github.com/thomasdondorf/puppeteer-cluster/blob/master/src/Cluster.ts I wrote an [issue here](https://github.com/thomasdondorf/puppeteer-cluster/issues/107). **I ended up doing this**.
+
 
 ### Technical Notes
 
@@ -144,7 +212,8 @@ Use se-scraper by calling it with a script such as the one below.
 const se_scraper = require('se-scraper');
 const resolve = require('path').resolve;
 
-let config = {
+// options for scraping
+event = {
     // the user agent to scrape with
     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
     // if random_user_agent is set to True, a random user agent is chosen
@@ -162,7 +231,7 @@ let config = {
     search_engine: 'google',
     compress: false, // compress
     debug: false,
-    verbose: false,
+    verbose: true,
     keywords: ['scrapeulous.com'],
     // whether to start the browser in headless mode
     headless: true,
@@ -178,13 +247,16 @@ let config = {
     // get_browser, handle_metadata, close_browser
     //custom_func: resolve('examples/pluggable.js'),
     custom_func: '',
-    // use a proxy for all connections
-    // example: 'socks5://78.94.172.42:1080'
-    // example: 'http://118.174.233.10:48400'
-    proxy: '',
+    // path to a proxy file, one proxy per line. Example:
+    // socks5://78.94.172.42:1080
+    // http://118.174.233.10:48400
+    proxy_file: '',
+    proxies: [],
     // check if headless chrome escapes common detection techniques
     // this is a quick test and should be used for debugging
     test_evasion: false,
+    // settings for puppeteer-cluster
+    monitor: false,
 };
 
 function callback(err, response) {

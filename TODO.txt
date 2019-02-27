@@ -27,19 +27,21 @@
 
 
 30.1.2019
-
     - modify all scrapers to use the generic class where it makes sense
         - Bing, Baidu, Google, Duckduckgo
 
 7.2.2019
     - add num_requests to test cases [done]
 
-
+25.2.2019
+    - https://antoinevastel.com/crawler/2018/09/20/parallel-crawler-puppeteer.html
+    - add support for browsing with multiple browsers, use this neat library:
+    - https://github.com/thomasdondorf/puppeteer-cluster [done]
 
 TODO:
+    - write test case for proxy support and cluster support
     - add captcha service solving support
     - check if news instances run the same browser and if we can have one proxy per tab wokers
 
     - write test case for:
         - pluggable
-        - full metadata (log http headers, log ip address)

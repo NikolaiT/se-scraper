@@ -3,6 +3,10 @@ const Scraper = require('./se_scraper');
 
 class GoogleScraper extends Scraper {
 
+    constructor(...args) {
+        super(...args);
+    }
+
 	parse(html) {
 		// load the page source into cheerio
 		const $ = cheerio.load(html);
@@ -75,7 +79,6 @@ class GoogleScraper extends Scraper {
 			return false;
 		}
 		await next_page_link.click();
-		await this.page.waitForNavigation();
 
 		return true;
 	}
@@ -153,13 +156,11 @@ class GoogleNewsOldScraper extends Scraper {
 			return false;
 		}
 		await next_page_link.click();
-		await this.page.waitForNavigation();
 
 		return true;
 	}
 
 	async wait_for_results() {
-		//await this.page.waitForNavigation({ timeout: this.STANDARD_TIMEOUT });
 		await this.page.waitForSelector('#main', { timeout: this.STANDARD_TIMEOUT });
 		await this.sleep(500);
 	}

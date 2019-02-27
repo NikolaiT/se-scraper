@@ -1,6 +1,6 @@
 {
   "name": "se-scraper",
-  "version": "1.1.13",
+  "version": "1.2.0",
   "description": "A simple library using puppeteer to scrape several search engines such as Google, Duckduckgo and Bing.",
   "homepage": "https://scrapeulous.com/",
   "main": "index.js",
@@ -11,6 +11,7 @@
     "scraping",
     "search-engines",
     "google",
+    "bing",
     "web-scraping"
   ],
   "author": "Nikolai Tschacher <hire@incolumitas.com> (https://incolumitas.com/)",
@@ -23,6 +24,8 @@
     "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.2",
     "got": "^9.6.0",
-    "puppeteer": "^1.12.2"
+    "proxy-chain": "^0.2.7",
+    "puppeteer": "^1.12.2",
+    "puppeteer-cluster": "^0.13.0"
   }
 }

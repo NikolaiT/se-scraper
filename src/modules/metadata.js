@@ -5,11 +5,10 @@ module.exports = {
 	get_http_headers: get_http_headers,
 };
 
-async function get_ip_data(browser) {
-	const page = await browser.newPage();
+async function get_ip_data(page) {
 	await page.goto('https://ipinfo.io/json', {
 	  waitLoad: true, 
-	  waitNetworkIdle: true // defaults to false
+	  waitNetworkIdle: true
 	});
 	let json = await page.content({
 		timeout: 20000
@@ -19,11 +18,10 @@ async function get_ip_data(browser) {
 	return JSON.parse(ipinfo_text);
 }
 
-async function get_http_headers(browser) {
-	const page = await browser.newPage();
+async function get_http_headers(page) {
 	await page.goto('https://httpbin.org/get', {
 	  waitLoad: true, 
-	  waitNetworkIdle: true // defaults to false
+	  waitNetworkIdle: true
 	});
 	let headers = await page.content();
 

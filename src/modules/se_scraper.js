@@ -1,6 +1,4 @@
-const start_url = {
-    'google': ''
-};
+const meta = require('./metadata.js');
 
 /*
     Get useful JS knowledge and get awesome...
@@ -12,16 +10,18 @@ const start_url = {
 module.exports = class Scraper {
     constructor(options = {}) {
         const {
-            browser = null,
             config = {},
             context = {},
             pluggable = null,
         } = options;
 
+        this.page = null;
+        this.metadata = {};
         this.pluggable = pluggable;
-        this.browser = browser;
         this.config = config;
         this.context = context;
+
+        this.keywords = config.keywords;
 
         this.STANDARD_TIMEOUT = 8000;
         // longer timeout when using proxies
@@ -36,7 +36,9 @@ module.exports = class Scraper {
         this.num_keywords = 0;
     }
 
-    async run() {
+    async run({page, data}) {
+
+        this.page = page;
 
         let do_continue = await this.load_search_engine();
 
@@ -57,8 +59,6 @@ module.exports = class Scraper {
      * @returns {Promise<void>} true if everything is correct.
      */
     async load_search_engine() {
-
-        this.page = await this.browser.newPage();
 
         // prevent detection by evading common detection techniques
         await evadeChromeHeadlessDetection(this.page);
@@ -87,6 +87,32 @@ module.exports = class Scraper {
             await this.page.screenshot({path: 'headless-test-result.png'});
         }
 
+        if (this.config.log_http_headers === true) {
+            this.metadata.http_headers = await meta.get_http_headers(this.page);
+            console.log(this.metadata.http_headers);
+        }
+
+        if (this.config.log_ip_address === true) {
+            this.metadata.ipinfo = await meta.get_ip_data(this.page);
+            console.log(this.metadata.ipinfo);
+        }
+
+        // check that our proxy is working by confirming
+        // that ipinfo.io sees the proxy IP address
+        if (this.config.proxy && this.config.log_ip_address === true) {
+            console.log(`${this.metadata.ipinfo} vs ${this.config.proxy}`);
+
+            try {
+                // if the ip returned by ipinfo is not a substring of our proxystring, get the heck outta here
+                if (!this.config.proxy.includes(this.metadata.ipinfo.ip)) {
+                    console.error('Proxy not working properly.');
+                    return false;
+                }
+            } catch (exception) {
+
+            }
+        }
+
         return await this.load_start_page();
     }
 
@@ -98,7 +124,7 @@ module.exports = class Scraper {
      * @returns {Promise<void>}
      */
     async scraping_loop() {
-        for (let keyword of this.config.keywords) {
+        for (var keyword of this.keywords) {
             this.num_keywords++;
             this.keyword = keyword;
             this.results[keyword] = {};
@@ -106,6 +132,7 @@ module.exports = class Scraper {
 
             if (this.pluggable.before_keyword_scraped) {
                 await this.pluggable.before_keyword_scraped({
+                    results: this.results,
                     num_keywords: this.num_keywords,
                     num_requests: this.num_requests,
                     keyword: keyword,
