@@ -1,0 +1,158 @@
+{
+    "news": {
+        "1": {
+            "time": "Thu, 28 Feb 2019 14:24:51 GMT",
+            "num_results": "Ungefähr 25.270.000.000 Ergebnisse (0,49 Sekunden) ",
+            "no_results": false,
+            "effective_query": "",
+            "results": [
+                {
+                    "link": "https://news.google.de/",
+                    "title": "Google Newshttps://news.google.de/Ähnliche Seiten",
+                    "snippet": "Ausführliche und aktuelle Beiträge - von Google News aus verschiedenen Nachrichtenquellen aus aller Welt zusammengetragen.",
+                    "visible_link": "https://news.google.de/",
+                    "date": "",
+                    "rank": 1
+                },
+                {
+                    "link": "https://www.rtl.de/cms/news.html",
+                    "title": "News: Aktuelle Nachrichten, Schlagzeilen und Videos | RTL.dehttps://www.rtl.de/cms/news.html",
+                    "snippet": "Aktuelle Nachrichten aus Deutschland und der Welt auf einen Blick: Bei RTL.de finden Sie die News von heute, spannende Hintergründe und Videos.",
+                    "visible_link": "https://www.rtl.de/cms/news.html",
+                    "date": "",
+                    "rank": 2
+                },
+                {
+                    "link": "https://www.zeit.de/news/index",
+                    "title": "Schlagzeilen, News und Newsticker | ZEIT ONLINE - Die Zeithttps://www.zeit.de/news/index",
+                    "snippet": "Aktuelle News und Schlagzeilen im Newsticker von ZEIT ONLINE. Lesen Sie hier die neuesten Nachrichten.",
+                    "visible_link": "https://www.zeit.de/news/index",
+                    "date": "",
+                    "rank": 3
+                },
+                {
+                    "link": "https://www.bild.de/news/startseite/news/news-16804530.bild.html",
+                    "title": "News aktuell aus Deutschland und der Welt - Bild.dehttps://www.bild.de/news/startseite/news/news-16804530.bild.html",
+                    "snippet": "Aktuelle News aus Deutschland, Europa und der Welt. Alle Informationen, Bilder und Videos zu Skandalen, Krisen und Sensationen bei BILD.de.",
+                    "visible_link": "https://www.bild.de/news/startseite/news/news-16804530.bild.html",
+                    "date": "",
+                    "rank": 4
+                },
+                {
+                    "link": "http://www.news.de/",
+                    "title": "news.de - mehr als Nachrichten und News, die Sie bewegenwww.news.de/Ähnliche Seiten",
+                    "snippet": "Promi News und Aktuelles aus Sport, TV & Web. Jetzt Sportnachrichten von Fußball bis Boxen und das Neueste aus Klatsch und Tratsch per Newsticker, Fotos ...",
+                    "visible_link": "www.news.de/",
+                    "date": "",
+                    "rank": 5
+                },
+                {
+                    "link": "https://www.mopo.de/news",
+                    "title": "News - Aktuelle Nachrichten aus Deutschland und der Welt. | MOPO.dehttps://www.mopo.de/news",
+                    "snippet": "News - Aktuelle Nachrichten aus Hamburg, der Welt, zum HSV und der Welt der Promis.",
+                    "visible_link": "https://www.mopo.de/news",
+                    "date": "",
+                    "rank": 6
+                },
+                {
+                    "link": "https://www.t-online.de/nachrichten/",
+                    "title": "Politik aktuell: Nachrichten aus Deutschland, Europa und der Welthttps://www.t-online.de/nachrichten/",
+                    "snippet": "Trump trifft Kim: Der Nordkorea-Gipfel in Vietnam im News-Blog · Krise in Venezuela: Aktuelle Entwicklungen, ... E-Mails und News unterwegs immer dabei.",
+                    "visible_link": "https://www.t-online.de/nachrichten/",
+                    "date": "",
+                    "rank": 7
+                },
+                {
+                    "link": "https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUmxHZ0pFUlNnQVAB?hl=de&gl=DE&ceid=DE%3Ade",
+                    "title": "Google News - Schlagzeilen - Neuestehttps://news.google.com/.../CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUm...",
+                    "snippet": "Mit Google News kannst du zum Thema Schlagzeilen vollständige Artikel lesen, Videos ansehen und in Tausenden von Titeln stöbern.",
+                    "visible_link": "https://news.google.com/.../CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUm...",
+                    "date": "",
+                    "rank": 8
+                },
+                {
+                    "link": "https://www.n-tv.de/",
+                    "title": "Nachrichten, aktuelle Schlagzeilen und Videos - n-tv.dehttps://www.n-tv.de/",
+                    "snippet": "Nachrichten seriös, schnell und kompetent. Artikel und Videos aus Politik, Wirtschaft, Börse, Sport und News aus aller Welt.",
+                    "visible_link": "https://www.n-tv.de/",
+                    "date": "",
+                    "rank": 9
+                }
+            ]
+        }
+    },
+    "se-scraper": {
+        "1": {
+            "time": "Thu, 28 Feb 2019 14:24:51 GMT",
+            "num_results": "Ungefähr 16.400.000 Ergebnisse (0,27 Sekunden) ",
+            "no_results": false,
+            "effective_query": "",
+            "results": [
+                {
+                    "link": "https://www.npmjs.com/package/se-scraper",
+                    "title": "se-scraper - npmhttps://www.npmjs.com/package/se-scraperIm CacheDiese Seite übersetzen",
+                    "snippet": "07.02.2019 - A simple library using puppeteer to scrape several search engines such as Google, Duckduckgo and Bing.",
+                    "visible_link": "https://www.npmjs.com/package/se-scraper",
+                    "date": "07.02.2019 - ",
+                    "rank": 1
+                },
+                {
+                    "link": "https://github.com/NikolaiT/se-scraper",
+                    "title": "GitHub - NikolaiT/se-scraper: Javascript scraping module based on ...https://github.com/NikolaiT/se-scraperIm CacheDiese Seite übersetzen",
+                    "snippet": "Javascript scraping module based on puppeteer for many different search engines... - NikolaiT/se-scraper.",
+                    "visible_link": "https://github.com/NikolaiT/se-scraper",
+                    "date": "",
+                    "rank": 2
+                },
+                {
+                    "link": "https://github.com/nyancat18/Se-Scraper",
+                    "title": "GitHub - nyancat18/Se-Scraper: se-scraper your siteshttps://github.com/nyancat18/Se-ScraperIm CacheDiese Seite übersetzen",
+                    "snippet": "se-scraper your sites. Contribute to nyancat18/Se-Scraper development by creating an account on GitHub.",
+                    "visible_link": "https://github.com/nyancat18/Se-Scraper",
+                    "date": "",
+                    "rank": 3
+                },
+                {
+                    "link": "http://konjugator.reverso.net/konjugation-franzosisch-verb-se%20scraper.html",
+                    "title": "Konjugation se scraper | Konjugieren verb se scraper Französisch ...konjugator.reverso.net/konjugation-franzosisch-verb-se%20scraper.html",
+                    "snippet": "Reverso-Konjugation: Konjugation des französischen Verbs se scraper, Konjugator für französische Verben, unregelmäßige Verben, Übersetzung,Grammatik.",
+                    "visible_link": "konjugator.reverso.net/konjugation-franzosisch-verb-se%20scraper.html",
+                    "date": "",
+                    "rank": 4
+                },
+                {
+                    "link": "https://swedishicescraper.se/",
+                    "title": "Swedish Ice Scraper: Onlinehttps://swedishicescraper.se/Im CacheDiese Seite übersetzen",
+                    "snippet": "The original Swedish Ice Scraper - best in test. ... solid Acrylic Glass and use diamond polishing to sharpen the scraping edges. ... info@swedishicescraper.se.",
+                    "visible_link": "https://swedishicescraper.se/",
+                    "date": "",
+                    "rank": 5
+                },
+                {
+                    "link": "https://www.blackhatworld.com/seo/any-yandex-scrapers-available-or-universal-se-scraper.243421/",
+                    "title": "Any yandex scrapers available? Or universal SE scraper ...https://www.blackhatworld.com › ... › Black Hat SEO ToolsIm CacheDiese Seite übersetzen",
+                    "snippet": "10.10.2010 - Mostly blogs & stuff like that. Is Hrefer for yandex only or there are other SEs? How much is it? Advertise on BHW ...",
+                    "visible_link": "https://www.blackhatworld.com › ... › Black Hat SEO Tools",
+                    "date": "10.10.2010 - ",
+                    "rank": 6
+                },
+                {
+                    "link": "http://network.ubotstudio.com/forum/index.php/topic/8648-sell-free-sescraper-scrape-search-engines-with-long-lists-of-queries/",
+                    "title": "[SELL] FREE - SEscraper - scrape search engines with long lists of ...network.ubotstudio.com › ... › Sell › Bots and ScriptsIm CacheDiese Seite übersetzen",
+                    "snippet": "03.12.2011 - SEscraper. Scrape results from: Google Yahoo Bing AOL Enter one or more queries as well as an optional list of keywords to append to each ...",
+                    "visible_link": "network.ubotstudio.com › ... › Sell › Bots and Scripts",
+                    "date": "03.12.2011 - ",
+                    "rank": 7
+                },
+                {
+                    "link": "https://netpeaksoftware.com/blog/netpeak-checker-3-0-serp-scraping",
+                    "title": "Netpeak Checker 3.0: SERP Scraping – Netpeak Software Bloghttps://netpeaksoftware.com/.../netpeak-checker-3-0-serp-scrapin...Im CacheDiese Seite übersetzen",
+                    "snippet": "19.09.2018 - With a new tool under an 'SE Scraper' nickname you can get Google, Bing, Yahoo, and Yandex search results in a structured table with a lot of ...",
+                    "visible_link": "https://netpeaksoftware.com/.../netpeak-checker-3-0-serp-scrapin...",
+                    "date": "19.09.2018 - ",
+                    "rank": 8
+                }
+            ]
+        }
+    }
+}

@@ -54,6 +54,7 @@ function read_items_from_file(fname) {
 
     const cluster = await Cluster.launch({
         monitor: true,
+        timeout: 12 * 60 * 60 * 1000, // 12 hours in ms
         concurrency: Cluster.CONCURRENCY_BROWSER,
         maxConcurrency: perBrowserOptions.length,
         puppeteerOptions: {

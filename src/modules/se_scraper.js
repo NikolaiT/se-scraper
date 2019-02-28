@@ -21,9 +21,10 @@ module.exports = class Scraper {
         this.config = config;
         this.context = context;
 
+        this.proxy = config.proxy;
         this.keywords = config.keywords;
 
-        this.STANDARD_TIMEOUT = 8000;
+        this.STANDARD_TIMEOUT = 10000;
         // longer timeout when using proxies
         this.PROXY_TIMEOUT = 15000;
         this.SOLVE_CAPTCHA_TIME = 45000;
@@ -37,7 +38,6 @@ module.exports = class Scraper {
     }
 
     async run({page, data}) {
-
         this.page = page;
 
         let do_continue = await this.load_search_engine();
@@ -93,23 +93,23 @@ module.exports = class Scraper {
         }
 
         if (this.config.log_ip_address === true) {
-            this.metadata.ipinfo = await meta.get_ip_data(this.page);
-            console.log(this.metadata.ipinfo);
+            let ipinfo = await meta.get_ip_data(this.page);
+            this.metadata.ipinfo = ipinfo;
+            console.log(ipinfo);
         }
 
         // check that our proxy is working by confirming
         // that ipinfo.io sees the proxy IP address
-        if (this.config.proxy && this.config.log_ip_address === true) {
-            console.log(`${this.metadata.ipinfo} vs ${this.config.proxy}`);
+        if (this.proxy && this.config.log_ip_address === true) {
+            console.log(`${this.metadata.ipinfo.ip} vs ${this.proxy}`);
 
             try {
                 // if the ip returned by ipinfo is not a substring of our proxystring, get the heck outta here
-                if (!this.config.proxy.includes(this.metadata.ipinfo.ip)) {
+                if (!this.proxy.includes(this.metadata.ipinfo.ip)) {
                     console.error('Proxy not working properly.');
                     return false;
                 }
             } catch (exception) {
-
             }
         }
 
@@ -221,7 +221,7 @@ module.exports = class Scraper {
     async random_sleep() {
         const [min, max] = this.config.sleep_range;
         let rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number
-        if (this.config.debug === true) {
+        if (this.config.verbose === true) {
             console.log(`Sleeping for ${rand}s`);
         }
         await this.sleep(rand * 1000);

@@ -75,11 +75,11 @@ class BingScraper extends Scraper {
 
 	async wait_for_results() {
 		await this.page.waitForSelector('#b_content', { timeout: 5000 });
-		await this.sleep(500);
+		await this.sleep(750);
 	}
 
 	async detected() {
-		// TODO: I was actually never detected by bing. those are good guys.
+		// TODO: I was actually never detected by bing. those are good boys.
 	}
 }
 

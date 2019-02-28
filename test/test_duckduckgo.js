@@ -17,7 +17,7 @@ async function normal_search_test() {
         keywords: normal_search_keywords,
         keyword_file: '',
         num_pages: 2,
-        headless: false,
+        headless: true,
         output_file: '',
         block_assets: true,
         user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',

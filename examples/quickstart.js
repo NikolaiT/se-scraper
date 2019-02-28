@@ -6,7 +6,7 @@ let config = {
     verbose: false,
     keywords: ['news', 'se-scraper'],
     num_pages: 1,
-    output_file: 'data.json',
+    output_file: 'examples/results/data.json',
 };
 
 function callback(err, response) {

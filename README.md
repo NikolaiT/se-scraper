@@ -1,40 +1,59 @@
-# Search Engine Scraper
+# Search Engine Scraper - se-scraper
 
-This node module supports scraping several search engines.
+[![npm](https://badgen.now.sh/npm/v/se-scraper)](https://www.npmjs.com/package/se-scraper)
+[![Known Vulnerabilities](https://snyk.io/test/github/NikolaiT/se-scraper/badge.svg)](https://snyk.io/test/github/NikolaiT/se-scraper)
 
-Right now it's possible to scrape the following search engines
+This node module allows you to scrape search engines concurrently with different proxies.
 
+If you don't have much technical experience or don't want to purchase proxies, you can use [my scraping service](https://scrapeulous.com/).
+
+##### Table of Contents
+- [Installation](#installation)
+- [Quickstart](#quickstart)
+- [Using Proxies](#proxies)
+- [Examples](#examples)
+- [Scraping Model](#scraping-model)
+- [Technical Notes](#technical-notes)
+- [Advanced Usage](#advanced-usage)
+
+
+Se-scraper supports the following search engines:
 * Google
 * Google News
 * Google News App version (https://news.google.com)
 * Google Image
 * Bing
+* Bing News
 * Baidu
 * Youtube
 * Infospace
 * Duckduckgo
 * Webcrawler
 * Reuters
-* cnbc
+* Cnbc
 * Marketwatch
 
-This module uses puppeteer and puppeteer-cluster (modified version). It was created by the Developer of https://github.com/NikolaiT/GoogleScraper, a module with 1800 Stars on Github.
+This module uses puppeteer and a modified version of [puppeteer-cluster](https://github.com/thomasdondorf/puppeteer-cluster/). It was created by the Developer of [GoogleScraper](https://github.com/NikolaiT/GoogleScraper), a module with 1800 Stars on Github.
 
-### Quickstart
+## Installation
 
-**Note**: If you **don't** want puppeteer to download a complete chromium browser, add this variable to your environments. Then this library is not guaranteed to run out of the box.
+You need a working installation of **node** and the **npm** package manager.
 
-```bash
-export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
-```
-
-Then install with
+Install **se-scraper** by entering the following command in your terminal
 
 ```bash
 npm install se-scraper
 ```
 
-then create a file `run.js` with the following contents
+If you **don't** want puppeteer to download a complete chromium browser, add this variable to your environment. Then this library is not guaranteed to run out of the box.
+
+```bash
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
+```
+
+## Quickstart
+
+Create a file named `run.js` with the following contents
 
 ```js
 const se_scraper = require('se-scraper');
@@ -58,9 +77,9 @@ se_scraper.scrape(config, callback);
 
 Start scraping by firing up the command `node run.js`
 
-#### Scrape with proxies
+## Proxies
 
-**se-scraper** will create one browser instance per proxy. So the maximal ammount of concurency is equivalent to the number of proxies plus one (your own IP).
+**se-scraper** will create one browser instance per proxy. So the maximal amount of concurrency is equivalent to the number of proxies plus one (your own IP).
 
 ```js
 const se_scraper = require('se-scraper');
@@ -84,16 +103,24 @@ function callback(err, response) {
 se_scraper.scrape(config, callback);
 ```
 
-With a proxy file such as (invalid proxies of course)
+With a proxy file such as
 
 ```text
 socks5://53.34.23.55:55523
 socks4://51.11.23.22:22222
 ```
 
-This will scrape with **three** browser instance each having their own IP address. Unfortunately, it is currently not possible to scrape with different proxies per tab (chromium issue).
+This will scrape with **three** browser instance each having their own IP address. Unfortunately, it is currently not possible to scrape with different proxies per tab. Chromium does not support that.
 
-### Scraping Model
+## Examples
+
+* [Simple example scraping google](examples/quickstart.js) yields [these results](examples/results/data.json)
+* [Scrape with one proxy per browser](examples/proxies.js) yields [these results](examples/results/proxyresults.json)
+* [Scrape 100 keywords on Bing with multible tabs in one browser](examples/multiple_tabs.js) produces [this](examples/results/bing.json)
+* [Inject your own scraping logic](examples/pluggable.js)
+
+
+## Scraping Model
 
 **se-scraper** scrapes search engines only. In order to introduce concurrency into this library, it is necessary to define the scraping model. Then we can decide how we divide and conquer.
 
@@ -129,18 +156,11 @@ Solution:
 2. Modify [puppeteer-cluster library](https://github.com/thomasdondorf/puppeteer-cluster) to accept a list of proxy strings and then pop() from this list at every new call to `workerInstance()` in https://github.com/thomasdondorf/puppeteer-cluster/blob/master/src/Cluster.ts I wrote an [issue here](https://github.com/thomasdondorf/puppeteer-cluster/issues/107). **I ended up doing this**.
 
 
-### Technical Notes
+## Technical Notes
 
 Scraping is done with a headless chromium browser using the automation library puppeteer. Puppeteer is a Node library which provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol.
  
- No multithreading is supported for now. Only one scraping worker per `scrape()` call.
- 
- We will soon support parallelization. **se-scraper** will support an architecture similar to:
- 
- 1. https://antoinevastel.com/crawler/2018/09/20/parallel-crawler-puppeteer.html
- 2. https://docs.browserless.io/blog/2018/06/04/puppeteer-best-practices.html
-
-If you need to deploy scraping to the cloud (AWS or Azure), you can contact me at hire@incolumitas.com
+If you need to deploy scraping to the cloud (AWS or Azure), you can contact me at **hire@incolumitas.com**
 
 The chromium browser is started with the following flags to prevent
 scraping detection.
@@ -162,7 +182,7 @@ var ADDITIONAL_CHROME_FLAGS = [
 ```
 
 Furthermore, to avoid loading unnecessary ressources and to speed up
-scraping a great deal, we instruct chrome to not load images and css:
+scraping a great deal, we instruct chrome to not load images and css and media:
 
 ```js
 await page.setRequestInterception(true);
@@ -177,7 +197,7 @@ page.on('request', (req) => {
 });
 ```
 
-### Making puppeteer and headless chrome undetectable
+#### Making puppeteer and headless chrome undetectable
 
 Consider the following resources:
 
@@ -204,59 +224,69 @@ let config = {
 
 It will create a screenshot named `headless-test-result.png` in the directory where the scraper was started that shows whether all test have passed.
 
-### Advanced Usage
+## Advanced Usage
 
-Use se-scraper by calling it with a script such as the one below.
+Use **se-scraper** by calling it with a script such as the one below.
 
 ```js
 const se_scraper = require('se-scraper');
-const resolve = require('path').resolve;
 
-// options for scraping
-event = {
+let config = {
     // the user agent to scrape with
     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
     // if random_user_agent is set to True, a random user agent is chosen
     random_user_agent: true,
-    // whether to select manual settings in visible mode
-    set_manual_settings: false,
-    // log ip address data
-    log_ip_address: false,
-    // log http headers
-    log_http_headers: false,
     // how long to sleep between requests. a random sleep interval within the range [a,b]
     // is drawn before every request. empty string for no sleeping.
-    sleep_range: '[1,1]',
+    sleep_range: '[1,2]',
     // which search engine to scrape
     search_engine: 'google',
-    compress: false, // compress
+    // whether debug information should be printed
+    // debug info is useful for developers when debugging
     debug: false,
+    // whether verbose program output should be printed
+    // this output is informational
     verbose: true,
-    keywords: ['scrapeulous.com'],
+    // an array of keywords to scrape
+    keywords: ['scrapeulous.com', 'scraping search engines', 'scraping service scrapeulous', 'learn js'],
+    // alternatively you can specify a keyword_file. this overwrites the keywords array
+    keyword_file: '',
+    // the number of pages to scrape for each keyword
+    num_pages: 2,
     // whether to start the browser in headless mode
     headless: true,
-    // the number of pages to scrape for each keyword
-    num_pages: 1,
     // path to output file, data will be stored in JSON
-    output_file: '',
-    // whether to prevent images, css, fonts and media from being loaded
+    output_file: 'examples/results/advanced.json',
+    // whether to prevent images, css, fonts from being loaded
     // will speed up scraping a great deal
     block_assets: true,
     // path to js module that extends functionality
     // this module should export the functions:
     // get_browser, handle_metadata, close_browser
+    // must be an absolute path to the module
     //custom_func: resolve('examples/pluggable.js'),
     custom_func: '',
-    // path to a proxy file, one proxy per line. Example:
+    // use a proxy for all connections
+    // example: 'socks5://78.94.172.42:1080'
+    // example: 'http://118.174.233.10:48400'
+    proxy: '',
+    // a file with one proxy per line. Example:
     // socks5://78.94.172.42:1080
     // http://118.174.233.10:48400
     proxy_file: '',
-    proxies: [],
     // check if headless chrome escapes common detection techniques
     // this is a quick test and should be used for debugging
     test_evasion: false,
-    // settings for puppeteer-cluster
-    monitor: false,
+    // log ip address data
+    log_ip_address: false,
+    // log http headers
+    log_http_headers: false,
+    puppeteer_cluster_config: {
+        timeout: 10 * 60 * 1000, // max timeout set to 10 minutes
+        monitor: false,
+        concurrency: 1, // one scraper per tab
+        maxConcurrency: 2, // scrape with 2 tabs
+    }
 };
 
 function callback(err, response) {
@@ -275,198 +305,4 @@ function callback(err, response) {
 se_scraper.scrape(config, callback);
 ```
 
-Supported options for the `search_engine` config key:
-
-```javascript
-'google'
-'google_news_old'
-'google_news'
-'google_image'
-'bing'
-'bing_news'
-'infospace'
-'webcrawler'
-'baidu'
-'youtube'
-'duckduckgo_news'
-'reuters'
-'cnbc'
-'marketwatch'
-```
-
-Output for the above script on my machine:
-
-```text
-{ 'scraping scrapeulous.com':
-   { '1':
-      { time: 'Tue, 29 Jan 2019 21:39:22 GMT',
-        num_results: 'Ungefähr 145 Ergebnisse (0,18 Sekunden) ',
-        no_results: false,
-        effective_query: '',
-        results:
-         [ { link: 'https://scrapeulous.com/',
-             title:
-              'Scrapeuloushttps://scrapeulous.com/Im CacheDiese Seite übersetzen',
-             snippet:
-              'Scrapeulous.com allows you to scrape various search engines automatically ... or to find hidden links, Scrapeulous.com enables you to scrape a ever increasing ...',
-             visible_link: 'https://scrapeulous.com/',
-             date: '',
-             rank: 1 },
-           { link: 'https://scrapeulous.com/about/',
-             title:
-              'About - Scrapeuloushttps://scrapeulous.com/about/Im CacheDiese Seite übersetzen',
-             snippet:
-              'Scrapeulous.com allows you to scrape various search engines automatically and in large quantities. The business requirement to scrape information from ...',
-             visible_link: 'https://scrapeulous.com/about/',
-             date: '',
-             rank: 2 },
-           { link: 'https://scrapeulous.com/howto/',
-             title:
-              'Howto - Scrapeuloushttps://scrapeulous.com/howto/Im CacheDiese Seite übersetzen',
-             snippet:
-              'We offer scraping large amounts of keywords for the Google Search Engine. Large means any number of keywords between 40 and 50000. Additionally, we ...',
-             visible_link: 'https://scrapeulous.com/howto/',
-             date: '',
-             rank: 3 },
-           { link: 'https://github.com/NikolaiT/se-scraper',
-             title:
-              'GitHub - NikolaiT/se-scraper: Javascript scraping module based on ...https://github.com/NikolaiT/se-scraperIm CacheDiese Seite übersetzen',
-             snippet:
-              '24.12.2018 - Javascript scraping module based on puppeteer for many different search ... for many different search engines... https://scrapeulous.com/.',
-             visible_link: 'https://github.com/NikolaiT/se-scraper',
-             date: '24.12.2018 - ',
-             rank: 4 },
-           { link:
-              'https://github.com/NikolaiT/GoogleScraper/blob/master/README.md',
-             title:
-              'GoogleScraper/README.md at master · NikolaiT/GoogleScraper ...https://github.com/NikolaiT/GoogleScraper/blob/.../README.mdIm CacheÄhnliche SeitenDiese Seite übersetzen',
-             snippet:
-              'GoogleScraper - Scraping search engines professionally. Scrapeulous.com - Scraping Service. GoogleScraper is a open source tool and will remain a open ...',
-             visible_link:
-              'https://github.com/NikolaiT/GoogleScraper/blob/.../README.md',
-             date: '',
-             rank: 5 },
-           { link: 'https://googlescraper.readthedocs.io/',
-             title:
-              'Welcome to GoogleScraper\'s documentation! — GoogleScraper ...https://googlescraper.readthedocs.io/Im CacheDiese Seite übersetzen',
-             snippet:
-              'Welcome to GoogleScraper\'s documentation!¶. Contents: GoogleScraper - Scraping search engines professionally · Scrapeulous.com - Scraping Service ...',
-             visible_link: 'https://googlescraper.readthedocs.io/',
-             date: '',
-             rank: 6 },
-           { link: 'https://incolumitas.com/pages/scrapeulous/',
-             title:
-              'Coding, Learning and Business Ideas – Scrapeulous.com - Incolumitashttps://incolumitas.com/pages/scrapeulous/Im CacheDiese Seite übersetzen',
-             snippet:
-              'A scraping service for scientists, marketing professionals, analysts or SEO folk. In autumn 2018, I created a scraping service called scrapeulous.com. There you ...',
-             visible_link: 'https://incolumitas.com/pages/scrapeulous/',
-             date: '',
-             rank: 7 },
-           { link: 'https://incolumitas.com/',
-             title:
-              'Coding, Learning and Business Ideashttps://incolumitas.com/Im CacheDiese Seite übersetzen',
-             snippet:
-              'Scraping Amazon Reviews using Headless Chrome Browser and Python3. Posted on Mi ... GoogleScraper Tutorial - How to scrape 1000 keywords with Google.',
-             visible_link: 'https://incolumitas.com/',
-             date: '',
-             rank: 8 },
-           { link: 'https://en.wikipedia.org/wiki/Search_engine_scraping',
-             title:
-              'Search engine scraping - Wikipediahttps://en.wikipedia.org/wiki/Search_engine_scrapingIm CacheDiese Seite übersetzen',
-             snippet:
-              'Search engine scraping is the process of harvesting URLs, descriptions, or other information from search engines such as Google, Bing or Yahoo. This is a ...',
-             visible_link: 'https://en.wikipedia.org/wiki/Search_engine_scraping',
-             date: '',
-             rank: 9 },
-           { link:
-              'https://readthedocs.org/projects/googlescraper/downloads/pdf/latest/',
-             title:
-              'GoogleScraper Documentation - Read the Docshttps://readthedocs.org/projects/googlescraper/downloads/.../latest...Im CacheDiese Seite übersetzen',
-             snippet:
-              '23.12.2018 - Contents: 1 GoogleScraper - Scraping search engines professionally. 1. 1.1 ... For this reason, I created the web service scrapeulous.com.',
-             visible_link:
-              'https://readthedocs.org/projects/googlescraper/downloads/.../latest...',
-             date: '23.12.2018 - ',
-             rank: 10 } ] },
-     '2':
-      { time: 'Tue, 29 Jan 2019 21:39:24 GMT',
-        num_results: 'Seite 2 von ungefähr 145 Ergebnissen (0,20 Sekunden) ',
-        no_results: false,
-        effective_query: '',
-        results:
-         [ { link: 'https://pypi.org/project/CountryGoogleScraper/',
-             title:
-              'CountryGoogleScraper · PyPIhttps://pypi.org/project/CountryGoogleScraper/Im CacheDiese Seite übersetzen',
-             snippet:
-              'A module to scrape and extract links, titles and descriptions from various search ... Look [here to get an idea how to use asynchronous mode](http://scrapeulous.',
-             visible_link: 'https://pypi.org/project/CountryGoogleScraper/',
-             date: '',
-             rank: 1 },
-           { link: 'https://www.youtube.com/watch?v=a6xn6rc9GbI',
-             title:
-              'scrapeulous intro - YouTubehttps://www.youtube.com/watch?v=a6xn6rc9GbIDiese Seite übersetzen',
-             snippet:
-              'scrapeulous intro. Scrapeulous Scrapeulous. Loading... Unsubscribe from ... on Dec 16, 2018. Introduction ...',
-             visible_link: 'https://www.youtube.com/watch?v=a6xn6rc9GbI',
-             date: '',
-             rank: 3 },
-           { link:
-              'https://www.reddit.com/r/Python/comments/2tii3r/scraping_260_search_queries_in_bing_in_a_matter/',
-             title:
-              'Scraping 260 search queries in Bing in a matter of seconds using ...https://www.reddit.com/.../scraping_260_search_queries_in_bing...Im CacheDiese Seite übersetzen',
-             snippet:
-              '24.01.2015 - Scraping 260 search queries in Bing in a matter of seconds using asyncio and aiohttp. (scrapeulous.com). submitted 3 years ago by ...',
-             visible_link:
-              'https://www.reddit.com/.../scraping_260_search_queries_in_bing...',
-             date: '24.01.2015 - ',
-             rank: 4 },
-           { link: 'https://twitter.com/incolumitas_?lang=de',
-             title:
-              'Nikolai Tschacher (@incolumitas_) | Twitterhttps://twitter.com/incolumitas_?lang=deIm CacheÄhnliche SeitenDiese Seite übersetzen',
-             snippet:
-              'Learn how to scrape millions of url from yandex and google or bing with: http://scrapeulous.com/googlescraper-market-analysis.html … 0 replies 0 retweets 0 ...',
-             visible_link: 'https://twitter.com/incolumitas_?lang=de',
-             date: '',
-             rank: 5 },
-           { link:
-              'http://blog.shodan.io/hostility-in-the-python-package-index/',
-             title:
-              'Hostility in the Cheese Shop - Shodan Blogblog.shodan.io/hostility-in-the-python-package-index/Im CacheDiese Seite übersetzen',
-             snippet:
-              '22.02.2015 - https://zzz.scrapeulous.com/r? According to the author of the website, these hostile packages are used as honeypots. Honeypots are usually ...',
-             visible_link: 'blog.shodan.io/hostility-in-the-python-package-index/',
-             date: '22.02.2015 - ',
-             rank: 6 },
-           { link: 'https://libraries.io/github/NikolaiT/GoogleScraper',
-             title:
-              'NikolaiT/GoogleScraper - Libraries.iohttps://libraries.io/github/NikolaiT/GoogleScraperIm CacheDiese Seite übersetzen',
-             snippet:
-              'A Python module to scrape several search engines (like Google, Yandex, Bing, ... https://scrapeulous.com/ ... You can install GoogleScraper comfortably with pip:',
-             visible_link: 'https://libraries.io/github/NikolaiT/GoogleScraper',
-             date: '',
-             rank: 7 },
-           { link: 'https://pydigger.com/pypi/CountryGoogleScraper',
-             title:
-              'CountryGoogleScraper - PyDiggerhttps://pydigger.com/pypi/CountryGoogleScraperDiese Seite übersetzen',
-             snippet:
-              '19.10.2016 - Look [here to get an idea how to use asynchronous mode](http://scrapeulous.com/googlescraper-260-keywords-in-a-second.html). ### Table ...',
-             visible_link: 'https://pydigger.com/pypi/CountryGoogleScraper',
-             date: '19.10.2016 - ',
-             rank: 8 },
-           { link: 'https://hub.docker.com/r/cimenx/data-mining-penandtest/',
-             title:
-              'cimenx/data-mining-penandtest - Docker Hubhttps://hub.docker.com/r/cimenx/data-mining-penandtest/Im CacheDiese Seite übersetzen',
-             snippet:
-              'Container. OverviewTagsDockerfileBuilds · http://scrapeulous.com/googlescraper-260-keywords-in-a-second.html. Docker Pull Command. Owner. profile ...',
-             visible_link: 'https://hub.docker.com/r/cimenx/data-mining-penandtest/',
-             date: '',
-             rank: 9 },
-           { link: 'https://www.revolvy.com/page/Search-engine-scraping',
-             title:
-              'Search engine scraping | Revolvyhttps://www.revolvy.com/page/Search-engine-scrapingIm CacheDiese Seite übersetzen',
-             snippet:
-              'Search engine scraping is the process of harvesting URLs, descriptions, or other information from search engines such as Google, Bing or Yahoo. This is a ...',
-             visible_link: 'https://www.revolvy.com/page/Search-engine-scraping',
-             date: '',
-             rank: 10 } ] } } }
-```
+[Output for the above script on my machine.](examples/results/advanced.json)

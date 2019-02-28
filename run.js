@@ -17,15 +17,15 @@ let config = {
     // this output is informational
     verbose: true,
     // an array of keywords to scrape
-    keywords: ['news', 'abc', 'good', 'bad', 'better', 'one more', 'time', 'we are going'],
+    keywords: ['scrapeulous.com', 'scraping search engines', 'scraping service scrapeulous', 'learn js'],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // the number of pages to scrape for each keyword
-    num_pages: 1,
+    num_pages: 2,
     // whether to start the browser in headless mode
-    headless: false,
+    headless: true,
     // path to output file, data will be stored in JSON
-    output_file: 'data.json',
+    output_file: 'examples/results/advanced.json',
     // whether to prevent images, css, fonts from being loaded
     // will speed up scraping a great deal
     block_assets: true,
@@ -42,14 +42,20 @@ let config = {
     // a file with one proxy per line. Example:
     // socks5://78.94.172.42:1080
     // http://118.174.233.10:48400
-    proxy_file: '/home/nikolai/.proxies',
+    proxy_file: '',
     // check if headless chrome escapes common detection techniques
     // this is a quick test and should be used for debugging
     test_evasion: false,
     // log ip address data
-    log_ip_address: true,
+    log_ip_address: false,
     // log http headers
     log_http_headers: false,
+    puppeteer_cluster_config: {
+        timeout: 10 * 60 * 1000, // max timeout set to 10 minutes
+        monitor: false,
+        concurrency: 1, // one scraper per tab
+        maxConcurrency: 2, // scrape with 2 tabs
+    }
 };
 
 function callback(err, response) {

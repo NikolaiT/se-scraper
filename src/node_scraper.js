@@ -63,6 +63,8 @@ module.exports.handler = async function handler (event, context, callback) {
             console.log(config);
         }
 
+        console.log(`[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${config.search_engine} with ${config.keywords.length} keywords on ${config.num_pages} pages each.`);
+
         var ADDITIONAL_CHROME_FLAGS = [
             '--disable-infobars',
             '--window-position=0,0',
@@ -108,100 +110,126 @@ module.exports.handler = async function handler (event, context, callback) {
             ignoreHTTPSErrors: true,
         };
 
-        if (config.debug === true) {
-            console.log("Chrome Args: ", launch_args);
-        }
+        var results = {};
+        var num_requests = 0;
+        var metadata = {};
 
         if (pluggable.start_browser) {
             launch_args.config = config;
-            browser = await pluggable.start_browser(launch_args);
+            let browser = await pluggable.start_browser(launch_args);
+            const page = await await browser.newPage();
+            let obj = getScraper(config.search_engine, {
+                config: config,
+                context: context,
+                pluggable: pluggable,
+            });
+            results = obj.run(page);
+            num_requests = obj.num_requests;
+
+            if (pluggable.close_browser) {
+                await pluggable.close_browser();
+            } else {
+                await browser.close();
+            }
         } else {
-            var numClusters = config.proxies.length + 1;
+            // if no custom start_browser functionality was given
+            // use puppeteer-cluster for scraping
 
-            // the first browser config with home IP
-            let perBrowserOptions = [launch_args, ];
+            var numClusters = config.puppeteer_cluster_config.maxConcurrency;
+            var perBrowserOptions = [];
 
-            for (var proxy of config.proxies) {
-                perBrowserOptions.push({
-                    headless: config.headless,
-                    ignoreHTTPSErrors: true,
-                    args: ADDITIONAL_CHROME_FLAGS.concat(`--proxy-server=${proxy}`)
-                })
+            // if we have at least one proxy, always use CONCURRENCY_BROWSER
+            // and set maxConcurrency to config.proxies.length + 1
+            // else use whatever configuration was passed
+            if (config.proxies.length > 0) {
+                config.puppeteer_cluster_config.concurrency = Cluster.CONCURRENCY_BROWSER;
+                config.puppeteer_cluster_config.maxConcurrency = config.proxies.length + 1;
+                numClusters = config.proxies.length + 1;
+
+                // the first browser config with home IP
+                perBrowserOptions = [launch_args, ];
+
+                for (var proxy of config.proxies) {
+                    perBrowserOptions.push({
+                        headless: config.headless,
+                        ignoreHTTPSErrors: true,
+                        args: ADDITIONAL_CHROME_FLAGS.concat(`--proxy-server=${proxy}`)
+                    })
+                }
             }
 
             var cluster = await Cluster.launch({
-                monitor: config.monitor,
-                timeout: 30 * 60 * 1000, // max timeout set to 30 minutes
-                concurrency: Cluster.CONCURRENCY_BROWSER,
-                maxConcurrency: numClusters,
+                monitor: config.puppeteer_cluster_config.monitor,
+                timeout: config.puppeteer_cluster_config.timeout, // max timeout set to 30 minutes
+                concurrency: config.puppeteer_cluster_config.concurrency,
+                maxConcurrency: config.puppeteer_cluster_config.maxConcurrency,
                 puppeteerOptions: launch_args,
-                perBrowserOptions: perBrowserOptions
+                perBrowserOptions: perBrowserOptions,
             });
 
             cluster.on('taskerror', (err, data) => {
                 console.log(`Error while scraping ${data}: ${err.message}`);
                 console.log(err)
             });
-        }
 
-        let metadata = {};
-
-        // Each browser will get N/(K+1) keywords and will issue N/(K+1) * M total requests to the search engine.
-        // https://github.com/GoogleChrome/puppeteer/issues/678
-        // The question is: Is it possible to set proxies per Page? Per Browser?
-        // as far as I can see, puppeteer cluster uses the same puppeteerOptions
-        // for every browser instance. We will use our custom puppeteer-cluster version.
-        // https://www.npmjs.com/package/proxy-chain
-        // this answer looks nice: https://github.com/GoogleChrome/puppeteer/issues/678#issuecomment-389096077
-        let chunks = [];
-        for (var n = 0; n < numClusters; n++) {
-            chunks.push([]);
-        }
-        for (var k = 0; k < config.keywords.length; k++) {
-            chunks[k%numClusters].push(config.keywords[k]);
-        }
-        //console.log(`Generated ${chunks.length} chunks...`);
-
-        let execPromises = [];
-        let scraperInstances = [];
-        for (var c = 0; c < chunks.length; c++) {
-            config.keywords = chunks[c];
-            if (c>0) {
-                config.proxy = config.proxies[c];
+            // Each browser will get N/(K+1) keywords and will issue N/(K+1) * M total requests to the search engine.
+            // https://github.com/GoogleChrome/puppeteer/issues/678
+            // The question is: Is it possible to set proxies per Page? Per Browser?
+            // as far as I can see, puppeteer cluster uses the same puppeteerOptions
+            // for every browser instance. We will use our custom puppeteer-cluster version.
+            // https://www.npmjs.com/package/proxy-chain
+            // this answer looks nice: https://github.com/GoogleChrome/puppeteer/issues/678#issuecomment-389096077
+            let chunks = [];
+            for (var n = 0; n < numClusters; n++) {
+                chunks.push([]);
             }
-            obj = getScraper(config.search_engine, {
-                config: config,
-                context: context,
-                pluggable: pluggable,
-            });
-            var boundMethod = obj.run.bind(obj);
-            execPromises.push(cluster.execute({}, boundMethod));
-            scraperInstances.push(obj);
-        }
+            for (var k = 0; k < config.keywords.length; k++) {
+                chunks[k%numClusters].push(config.keywords[k]);
+            }
 
-        let results = await Promise.all(execPromises);
-        results = results[0]; // TODO: this is strange. fix that shit boy
+            let execPromises = [];
+            let scraperInstances = [];
+            for (var c = 0; c < chunks.length; c++) {
+                config.keywords = chunks[c];
+                // the first scraping config uses the home IP
+                if (c > 0) {
+                    config.proxy = config.proxies[c-1];
+                }
+                var obj = getScraper(config.search_engine, {
+                    config: config,
+                    context: context,
+                    pluggable: pluggable,
+                });
 
-        if (pluggable.close_browser) {
-            await pluggable.close_browser();
-        } else {
+                var boundMethod = obj.run.bind(obj);
+                execPromises.push(cluster.execute({}, boundMethod));
+                scraperInstances.push(obj);
+            }
+
+            let resolved = await Promise.all(execPromises);
+
+            for (var group of resolved) {
+                for (var key in group) {
+                    results[key] = group[key];
+                }
+            }
+
             await cluster.idle();
             await cluster.close();
-        }
 
-        // count total requests among all scraper instances
-        let num_requests = 0;
-        for (var o of scraperInstances) {
-            num_requests += o.num_requests;
+            // count total requests among all scraper instances
+            for (var o of scraperInstances) {
+                num_requests += o.num_requests;
+            }
         }
 
         let timeDelta = Date.now() - startTime;
         let ms_per_request = timeDelta/num_requests;
 
         if (config.verbose === true) {
-            console.log(`${numClusters} Scraper Workers took ${timeDelta}ms to perform ${num_requests} requests.`);
+            console.log(`se-scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
             console.log(`On average ms/request: ${ms_per_request}ms/request`);
-            console.dir(results, {depth: null, colors: true});
+            //console.dir(results, {depth: null, colors: true});
         }
 
         if (config.compress === true) {
@@ -232,7 +260,7 @@ module.exports.handler = async function handler (event, context, callback) {
         }
 
         if (config.output_file) {
-            write_results(config.output_file, JSON.stringify(results));
+            write_results(config.output_file, JSON.stringify(results, null, 4));
         }
 
         let response = {
