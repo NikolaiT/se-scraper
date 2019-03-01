@@ -65,6 +65,7 @@ module.exports.handler = async function handler (event, context, callback) {
 
         console.log(`[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${config.search_engine} with ${config.keywords.length} keywords on ${config.num_pages} pages each.`);
 
+        // See here: https://peter.sh/experiments/chromium-command-line-switches/
         var ADDITIONAL_CHROME_FLAGS = [
             '--disable-infobars',
             '--window-position=0,0',
@@ -77,6 +78,7 @@ module.exports.handler = async function handler (event, context, callback) {
             '--disable-gpu',
             '--window-size=1920x1080',
             '--hide-scrollbars',
+            '--disable-notifications',
         ];
 
         var user_agent = undefined;
@@ -89,9 +91,10 @@ module.exports.handler = async function handler (event, context, callback) {
             user_agent = ua.random_user_agent();
         }
 
+        // user agent argument without quotes !
         if (user_agent) {
             ADDITIONAL_CHROME_FLAGS.push(
-                `--user-agent="${user_agent}"`
+                `--user-agent=${user_agent}`
             )
         }
 
@@ -117,14 +120,19 @@ module.exports.handler = async function handler (event, context, callback) {
         if (pluggable.start_browser) {
             launch_args.config = config;
             let browser = await pluggable.start_browser(launch_args);
-            const page = await await browser.newPage();
-            let obj = getScraper(config.search_engine, {
-                config: config,
-                context: context,
-                pluggable: pluggable,
-            });
-            results = obj.run(page);
-            num_requests = obj.num_requests;
+            const realUA = await browser.userAgent();
+            if (realUA === user_agent) {
+                const page = await await browser.newPage();
+                let obj = getScraper(config.search_engine, {
+                    config: config,
+                    context: context,
+                    pluggable: pluggable,
+                });
+                results = obj.run(page);
+                num_requests = obj.num_requests;
+            } else {
+                console.error('provided user agent does not match real user agent');
+            }
 
             if (pluggable.close_browser) {
                 await pluggable.close_browser();

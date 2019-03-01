@@ -178,6 +178,7 @@ var ADDITIONAL_CHROME_FLAGS = [
     '--disable-gpu',
     '--window-size=1920x1080',
     '--hide-scrollbars',
+    '--disable-notifications',
 ];
 ```
 
