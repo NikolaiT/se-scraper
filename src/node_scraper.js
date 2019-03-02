@@ -1,8 +1,5 @@
-const { Cluster } = require('./puppeteer-cluster/dist/index.js');
 const zlib = require('zlib');
 var fs = require('fs');
-
-// local module imports
 const google = require('./modules/google.js');
 const bing = require('./modules/bing.js');
 const baidu = require('./modules/baidu.js');
@@ -63,7 +60,9 @@ module.exports.handler = async function handler (event, context, callback) {
             console.log(config);
         }
 
-        console.log(`[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${config.search_engine} with ${config.keywords.length} keywords on ${config.num_pages} pages each.`);
+        if (config.keywords && config.search_engine) {
+            console.log(`[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${config.search_engine} with ${config.keywords.length} keywords on ${config.num_pages} pages each.`);
+        }
 
         // See here: https://peter.sh/experiments/chromium-command-line-switches/
         var ADDITIONAL_CHROME_FLAGS = [
@@ -81,7 +80,7 @@ module.exports.handler = async function handler (event, context, callback) {
             '--disable-notifications',
         ];
 
-        var user_agent = undefined;
+        var user_agent = null;
 
         if (config.user_agent) {
             user_agent = config.user_agent;
@@ -120,18 +119,23 @@ module.exports.handler = async function handler (event, context, callback) {
         if (pluggable.start_browser) {
             launch_args.config = config;
             let browser = await pluggable.start_browser(launch_args);
-            const realUA = await browser.userAgent();
-            if (realUA === user_agent) {
-                const page = await await browser.newPage();
+
+            const page = await browser.newPage();
+
+            if (config.do_work && pluggable.do_work) {
+                let res = await pluggable.do_work(page);
+                results = res.results;
+                num_requests = res.num_requests;
+            } else {
                 let obj = getScraper(config.search_engine, {
                     config: config,
                     context: context,
                     pluggable: pluggable,
+                    page: page,
                 });
-                results = obj.run(page);
+                results = obj.run({page: page});
                 num_requests = obj.num_requests;
-            } else {
-                console.error('provided user agent does not match real user agent');
+                metadata = obj.metadata;
             }
 
             if (pluggable.close_browser) {
@@ -139,9 +143,12 @@ module.exports.handler = async function handler (event, context, callback) {
             } else {
                 await browser.close();
             }
+
         } else {
+
             // if no custom start_browser functionality was given
             // use puppeteer-cluster for scraping
+            const { Cluster } = require('./puppeteer-cluster/dist/index.js');
 
             var numClusters = config.puppeteer_cluster_config.maxConcurrency;
             var perBrowserOptions = [];
@@ -235,9 +242,8 @@ module.exports.handler = async function handler (event, context, callback) {
         let ms_per_request = timeDelta/num_requests;
 
         if (config.verbose === true) {
-            console.log(`se-scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
+            console.log(`Scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
             console.log(`On average ms/request: ${ms_per_request}ms/request`);
-            //console.dir(results, {depth: null, colors: true});
         }
 
         if (config.compress === true) {
@@ -299,7 +305,7 @@ function parseEventData(config) {
     }
 
     const booleans = ['debug', 'verbose', 'upload_to_s3', 'log_ip_address', 'log_http_headers', 'random_user_agent',
-        'compress', 'is_local', 'max_results', 'set_manual_settings', 'block_assets', 'test_evasion'];
+        'compress', 'is_local', 'max_results', 'set_manual_settings', 'block_assets', 'test_evasion', 'do_work'];
 
     for (b of booleans) {
         config[b] = _bool(config[b]);

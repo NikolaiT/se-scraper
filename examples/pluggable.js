@@ -65,4 +65,9 @@ module.exports = class Pluggable {
 
         return this.browser;
     }
+
+    async do_work(page) {
+        // do some scraping work and return results and num_requests
+
+    }
 };
