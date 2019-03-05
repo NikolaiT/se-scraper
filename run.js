@@ -10,6 +10,24 @@ let config = {
     sleep_range: '[1,2]',
     // which search engine to scrape
     search_engine: 'google',
+
+    // use specific search engine parameters for various search engines
+    google_settings: {
+        google_domain: 'google.com',
+        gl: 'us', // The gl parameter determines the Google country to use for the query.
+        hl: 'us', // The hl parameter determines the Google UI language to return results.
+        start: 0, // Determines the results offset to use, defaults to 0.
+        num: 100, // Determines the number of results to show, defaults to 10. Maximum is 100.
+    },
+
+    // https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-web-api-v5-reference#query-parameters
+    bing_settings: {
+        count: 50,      // how many results per page
+        safeSearch: 'Off',      // safe search (strict, moderate, off)
+        cc: 'us',        // ISO 3166 country code
+        offset: 0, // The zero-based offset that indicates the number of search results to skip before returning results
+    },
+
     // whether debug information should be printed
     // debug info is useful for developers when debugging
     debug: false,
@@ -17,7 +35,7 @@ let config = {
     // this output is informational
     verbose: true,
     // an array of keywords to scrape
-    keywords: ['scrapeulous.com', 'scraping search engines', 'scraping service scrapeulous', 'learn js'],
+    keywords: ['good news'],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // the number of pages to scrape for each keyword
@@ -54,7 +72,7 @@ let config = {
         timeout: 10 * 60 * 1000, // max timeout set to 10 minutes
         monitor: false,
         concurrency: 1, // one scraper per tab
-        maxConcurrency: 2, // scrape with 2 tabs
+        maxConcurrency: 1, // scrape with 2 tabs
     }
 };
 
@@ -68,7 +86,7 @@ function callback(err, response) {
         response.statusCode - status code of the scraping process
      */
 
-    // console.dir(response.results, {depth: null, colors: true});
+    console.dir(response.results, {depth: null, colors: true});
 }
 
 se_scraper.scrape(config, callback);

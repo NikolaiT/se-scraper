@@ -211,6 +211,30 @@ module.exports = class Scraper {
         }
     }
 
+    /**
+     * Generic function to append queryArgs to a search engine url.
+     *
+     * @param: The baseUrl to use for the build process.
+     */
+    build_start_url(baseUrl) {
+        let settings = this.config[`${this.config.search_engine}_settings`];
+
+        if (settings) {
+
+            for (var key in settings) {
+                baseUrl += `${key}=${settings[key]}&`
+            }
+
+            if (this.config.verbose) {
+                console.log('Using startUrl: ' + baseUrl);
+            }
+
+            return baseUrl;
+        }
+
+        return false;
+    }
+
     sleep(ms) {
         return new Promise(resolve => {
             setTimeout(resolve, ms)

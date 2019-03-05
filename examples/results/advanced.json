@@ -1,728 +1,1634 @@
 {
-    "scrapeulous.com": {
+    "good news": {
         "1": {
-            "time": "Thu, 28 Feb 2019 14:22:28 GMT",
-            "num_results": "Ungefähr 200 Ergebnisse (0,25 Sekunden) ",
+            "time": "Tue, 05 Mar 2019 22:57:32 GMT",
+            "num_results": "About 11,910,000,000 results (0.44 seconds) ",
             "no_results": false,
             "effective_query": "",
             "results": [
                 {
-                    "link": "https://scrapeulous.com/",
-                    "title": "Scrapeuloushttps://scrapeulous.com/Im CacheDiese Seite übersetzen",
-                    "snippet": "Scraping search engines like Google, Bing and Duckduckgo in large quantities from many geographical regions with real browsers.",
-                    "visible_link": "https://scrapeulous.com/",
+                    "link": "https://www.goodnewsnetwork.org/",
+                    "title": "Good News Network: Good News, Inspiring, Positive Storieshttps://www.goodnewsnetwork.org/Cached",
+                    "snippet": "The #1 source for good news! For 20 years, our positive news from around the world has uplifted and inspired millions to become more optimistic.",
+                    "visible_link": "https://www.goodnewsnetwork.org/",
                     "date": "",
                     "rank": 1
                 },
                 {
-                    "link": "https://scrapeulous.com/about/",
-                    "title": "Scraping search engines with real browsers in ... - Scrapeulous.comhttps://scrapeulous.com/about/Im CacheDiese Seite übersetzen",
-                    "snippet": "Scrapeulous.com allows you to scrape various search engines automatically and in large quantities. The business requirement to scrape information from ...",
-                    "visible_link": "https://scrapeulous.com/about/",
+                    "link": "https://www.msn.com/en-us/news/good-news",
+                    "title": "Good News - MSN.comhttps://www.msn.com/en-us/news/good-newsCachedSimilar",
+                    "snippet": "Finally some good news. ... WFMY-TV Greensboro Logo WFMY-TV Greensboro News · Whether you're a frequent flier or have only flown on a passenger aircraft ...",
+                    "visible_link": "https://www.msn.com/en-us/news/good-news",
                     "date": "",
                     "rank": 2
                 },
                 {
-                    "link": "https://blog.scrapeulous.com/",
-                    "title": "Scrapeulous.com Bloghttps://blog.scrapeulous.com/Im CacheDiese Seite übersetzen",
-                    "snippet": "04.02.2019 - This clean blog serves to publish the latest announcements and changes for scrapeulous.com We will publish instrucitons and general tutorials ...",
-                    "visible_link": "https://blog.scrapeulous.com/",
-                    "date": "04.02.2019 - ",
-                    "rank": 3
-                },
-                {
-                    "link": "https://scrapeulous.com/news/",
-                    "title": "Scraping search engines with real browsers in large ... - Scrapeuloushttps://scrapeulous.com/news/Im CacheDiese Seite übersetzen",
-                    "snippet": "Scrapeulous.com News Api allows you to query the most recent world news for an index composed of developed market equities. The performance of those ...",
-                    "visible_link": "https://scrapeulous.com/news/",
-                    "date": "",
-                    "rank": 4
-                },
-                {
-                    "link": "https://scrapeulous.com/howto/",
-                    "title": "Scraping search engines with real browsers in ... - Scrapeulous.comhttps://scrapeulous.com/howto/Im CacheDiese Seite übersetzen",
-                    "snippet": "06.02.2019 - We offer scraping large amounts of keywords for the Google Search Engine. Large means any number of keywords between 30 and 50000.",
-                    "visible_link": "https://scrapeulous.com/howto/",
-                    "date": "06.02.2019 - ",
-                    "rank": 5
-                },
-                {
-                    "link": "https://scrapeulous.com/contact/",
-                    "title": "Contact - Scrapeuloushttps://scrapeulous.com/contact/Im CacheDiese Seite übersetzen",
-                    "snippet": "Contact scrapeulous.com. Your email address. Valid email address where we are going to contact you. We will not send spam mail. Your inquiry.",
-                    "visible_link": "https://scrapeulous.com/contact/",
-                    "date": "",
-                    "rank": 6
-                },
-                {
-                    "link": "https://scrapeulous.com/faq/",
-                    "title": "Scraping search engines with real browsers in ... - Scrapeulous.comhttps://scrapeulous.com/faq/Im CacheDiese Seite übersetzen",
-                    "snippet": "02.02.2019 - Scraping search engines like Google, Bing and Duckduckgo in large quantities from many geographical regions with real browsers.",
-                    "visible_link": "https://scrapeulous.com/faq/",
-                    "date": "02.02.2019 - ",
-                    "rank": 7
-                },
-                {
-                    "link": "https://scrapeulous.com/scrape/",
-                    "title": "Scraping search engines with real browsers in large ... - Scrapeuloushttps://scrapeulous.com/scrape/Im CacheDiese Seite übersetzen",
-                    "snippet": "It is super easy to use scrapeulous.com, because you can just upload a text/CSV file with your keywords and submit your email address. With this information ...",
-                    "visible_link": "https://scrapeulous.com/scrape/",
-                    "date": "",
-                    "rank": 8
-                },
-                {
-                    "link": "https://incolumitas.com/",
-                    "title": "Coding, Learning and Business Ideashttps://incolumitas.com/Im CacheDiese Seite übersetzen",
-                    "snippet": "About · Contact · GoogleScraper · Lichess Autoplay-Bot · Projects · Scrapeulous.com · Site Notice · SVGCaptcha · Home Archives Categories Tags Atom ...",
-                    "visible_link": "https://incolumitas.com/",
-                    "date": "",
-                    "rank": 9
-                },
-                {
-                    "link": "https://twitter.com/scrapeulous",
-                    "title": "Scrapeulous.com (@scrapeulous) | Twitterhttps://twitter.com/scrapeulousIm CacheDiese Seite übersetzen",
-                    "snippet": "The latest Tweets from Scrapeulous.com (@scrapeulous): \"Creating software to realize the best scraping service at https://t.co/R5NUqSSrB5\"",
-                    "visible_link": "https://twitter.com/scrapeulous",
-                    "date": "",
-                    "rank": 10
-                }
-            ]
-        },
-        "2": {
-            "time": "Thu, 28 Feb 2019 14:22:30 GMT",
-            "num_results": "Seite 2 von ungefähr 200 Ergebnissen (0,21 Sekunden) ",
-            "no_results": false,
-            "effective_query": "",
-            "results": [
-                {
-                    "link": "https://incolumitas.com/pages/scrapeulous/",
-                    "title": "Coding, Learning and Business Ideas – Scrapeulous.comhttps://incolumitas.com/pages/scrapeulous/Im CacheDiese Seite übersetzen",
-                    "snippet": "In autumn 2018, I created a scraping service called scrapeulous.com. There you can purchase scrape jobs that allow you to upload a keyword file which in turn ...",
-                    "visible_link": "https://incolumitas.com/pages/scrapeulous/",
-                    "date": "",
-                    "rank": 11
-                },
-                {
-                    "link": "https://www.youtube.com/watch?v=a6xn6rc9GbI",
-                    "title": "scrapeulous intro - YouTubehttps://www.youtube.com/watch?v=a6xn6rc9GbIDiese Seite übersetzen",
-                    "snippet": "Introduction for https://scrapeulous.com. ... scrapeulous intro. Scrapeulous Scrapeulous. Loading ...",
-                    "visible_link": "https://www.youtube.com/watch?v=a6xn6rc9GbI",
-                    "date": "",
-                    "rank": 12
-                },
-                {
-                    "link": "https://www.youtube.com/channel/UCJs1Xei5LRefg9GwFYdYhOw",
-                    "title": "Scrapeulous Scrapeulous - YouTubehttps://www.youtube.com/.../UCJs1Xei5LRefg9GwFYdYhOwIm CacheDiese Seite übersetzen",
-                    "snippet": "How to use scrapeulous.com - Duration: 3 minutes, 42 seconds. 32 minutes ago; 4 views. Introduction for https://scrapeulous.com. Show more. This item has ...",
-                    "visible_link": "https://www.youtube.com/.../UCJs1Xei5LRefg9GwFYdYhOw",
-                    "date": "",
-                    "rank": 13
-                },
-                {
-                    "link": "https://googlescraper.readthedocs.io/en/latest/README.html",
-                    "title": "GoogleScraper - Scraping search engines professionally ...https://googlescraper.readthedocs.io/en/latest/README.htmlIm CacheDiese Seite übersetzen",
-                    "snippet": "Scrapeulous.com - Scraping Service¶. GoogleScraper is a open source tool and will remain a open source tool in the future. Some people however would want ...",
-                    "visible_link": "https://googlescraper.readthedocs.io/en/latest/README.html",
-                    "date": "",
-                    "rank": 14
-                },
-                {
-                    "link": "https://github.com/NikolaiT/se-scraper",
-                    "title": "GitHub - NikolaiT/se-scraper: Javascript scraping module based on ...https://github.com/NikolaiT/se-scraperIm CacheDiese Seite übersetzen",
-                    "snippet": "const se_scraper = require('se-scraper'); let config = { search_engine: 'google', debug: false, verbose: false, keywords: ['news', 'scraping scrapeulous.com'], ...",
-                    "visible_link": "https://github.com/NikolaiT/se-scraper",
-                    "date": "",
-                    "rank": 15
-                },
-                {
-                    "link": "https://www.npmjs.com/package/se-scraper",
-                    "title": "se-scraper - npmhttps://www.npmjs.com/package/se-scraperIm CacheDiese Seite übersetzen",
-                    "snippet": "07.02.2019 - homepage. scrapeulous.com. repository. github. last publish. 20 days ago. collaborators. avatar. Test with RunKit · Report a vulnerability. Help.",
-                    "visible_link": "https://www.npmjs.com/package/se-scraper",
-                    "date": "07.02.2019 - ",
-                    "rank": 16
-                },
-                {
-                    "link": "https://pypi.org/project/CountryGoogleScraper/",
-                    "title": "CountryGoogleScraper · PyPIhttps://pypi.org/project/CountryGoogleScraper/Im CacheDiese Seite übersetzen",
-                    "snippet": "Look [here to get an idea how to use asynchronous mode](http://scrapeulous.com/googlescraper-260-keywords-in-a-second.html). ### Table of Contents 1.",
-                    "visible_link": "https://pypi.org/project/CountryGoogleScraper/",
-                    "date": "",
-                    "rank": 17
-                },
-                {
-                    "link": "https://medium.com/@scrapeulous/in-case-you-dont-want-to-go-through-the-hassle-of-creating-your-own-well-maintained-scraping-code-32b029985d4a",
-                    "title": "In case you don't want to go through the hassle of creating your own ...https://medium.com/@scrapeulous/in-case-you-dont-want-to-go-through-the-hassle-of-c...",
-                    "snippet": "05.02.2019 - And if you want to use some services when you plan to scraper large amounts of keywords, https://scrapeulous.com/ offers scraping for various ...",
-                    "visible_link": "https://medium.com/@scrapeulous/in-case-you-dont-want-to-go-through-the-hassle-of-c...",
-                    "date": "05.02.2019 - ",
-                    "rank": 18
-                },
-                {
-                    "link": "https://readthedocs.org/projects/googlescraper/downloads/pdf/latest/",
-                    "title": "GoogleScraper Documentation - Read the Docshttps://readthedocs.org/projects/googlescraper/downloads/.../latest...Im CacheDiese Seite übersetzen",
-                    "snippet": "03.02.2019 - 1.1 Scrapeulous.com - Scraping Service. GoogleScraper is a open source tool and will remain a open source tool in the future. Some people ...",
-                    "visible_link": "https://readthedocs.org/projects/googlescraper/downloads/.../latest...",
-                    "date": "03.02.2019 - ",
-                    "rank": 19
-                },
-                {
-                    "link": "http://blog.shodan.io/hostility-in-the-python-package-index/",
-                    "title": "Hostility in the Cheese Shop - Shodan Blogblog.shodan.io/hostility-in-the-python-package-index/Im CacheDiese Seite übersetzen",
-                    "snippet": "22.02.2015 - https://zzz.scrapeulous.com/r? According to the author of the website, these hostile packages are used as honeypots. Honeypots are usually ...",
-                    "visible_link": "blog.shodan.io/hostility-in-the-python-package-index/",
-                    "date": "22.02.2015 - ",
-                    "rank": 20
-                }
-            ]
-        }
-    },
-    "scraping service scrapeulous": {
-        "1": {
-            "time": "Thu, 28 Feb 2019 14:22:34 GMT",
-            "num_results": "Ungefähr 100 Ergebnisse (0,45 Sekunden) ",
-            "no_results": false,
-            "effective_query": "",
-            "results": [
-                {
-                    "link": "https://scrapeulous.com/",
-                    "title": "Scraping search engines with real browsers in large quantitieshttps://scrapeulous.com/Im CacheDiese Seite übersetzen",
-                    "snippet": "Scraping search engines like Google, Bing and Duckduckgo in large ... Scrapeulous.com allows you to scrape various search engines automatically and in large ...",
-                    "visible_link": "https://scrapeulous.com/",
-                    "date": "",
-                    "rank": 1
-                },
-                {
-                    "link": "https://scrapeulous.com/faq/",
-                    "title": "Scraping search engines with real browsers in ... - Scrapeulous.comhttps://scrapeulous.com/faq/Im CacheDiese Seite übersetzen",
-                    "snippet": "02.02.2019 - Scraping search engines like Google, Bing and Duckduckgo in ... After all, Google itself is the biggest web scraper known in history. ..... We offer general and specialized services to extract and scrape data from the internet.",
-                    "visible_link": "https://scrapeulous.com/faq/",
-                    "date": "02.02.2019 - ",
-                    "rank": 2
-                },
-                {
-                    "link": "https://googlescraper.readthedocs.io/en/latest/README.html",
-                    "title": "GoogleScraper - Scraping search engines professionally ...https://googlescraper.readthedocs.io/en/latest/README.htmlIm CacheDiese Seite übersetzen",
-                    "snippet": "Scrapeulous.com - Scraping Service¶. GoogleScraper is a open source tool and will remain a open source tool in the future. Some people however would want ...",
-                    "visible_link": "https://googlescraper.readthedocs.io/en/latest/README.html",
+                    "link": "https://www.today.com/news/good-news",
+                    "title": "Good News | TODAY - Today Showhttps://www.today.com/news/good-newsCached",
+                    "snippet": "Inspirational, uplifting, funny and happy news, photos, videos and more.",
+                    "visible_link": "https://www.today.com/news/good-news",
                     "date": "",
                     "rank": 3
                 },
                 {
-                    "link": "https://github.com/NikolaiT/se-scraper",
-                    "title": "GitHub - NikolaiT/se-scraper: Javascript scraping module based on ...https://github.com/NikolaiT/se-scraperIm CacheDiese Seite übersetzen",
-                    "snippet": "mdIm CacheÄhnliche SeitenDiese Seite übersetzen', snippet: 'GoogleScraper - Scraping search engines professionally. Scrapeulous.com - Scraping Service.",
-                    "visible_link": "https://github.com/NikolaiT/se-scraper",
+                    "link": "https://www.sunnyskyz.com/positive-good-news.php?week=pastweek",
+                    "title": "Good News | Positive News Stories | Happy News - Sunny Skyzhttps://www.sunnyskyz.com/positive-good-news.php?week=pastweekCached",
+                    "snippet": "Want some Good news for a change? View only positive, uplifting and inspiring news stories from around the world.",
+                    "visible_link": "https://www.sunnyskyz.com/positive-good-news.php?week=pastweek",
                     "date": "",
                     "rank": 4
                 },
                 {
-                    "link": "https://readthedocs.org/projects/googlescraper/downloads/pdf/latest/",
-                    "title": "GoogleScraper Documentation - Read the Docshttps://readthedocs.org/projects/googlescraper/downloads/.../latest...Im CacheDiese Seite übersetzen",
-                    "snippet": "03.02.2019 - Contents: 1 GoogleScraper - Scraping search engines professionally. 1. 1.1 ... For this reason, I created the web service scrapeulous.com.",
-                    "visible_link": "https://readthedocs.org/projects/googlescraper/downloads/.../latest...",
-                    "date": "03.02.2019 - ",
+                    "link": "https://goodnewsmag.org/",
+                    "title": "Good News Magazine - Leading United Methodists to a Faithful Futurehttps://goodnewsmag.org/Cached",
+                    "snippet": "In the News ... Since 1967, Good News has been the leading evangelical advocate, a voice for repentance, an agent for reform, and a catalyst for renewal.",
+                    "visible_link": "https://goodnewsmag.org/",
+                    "date": "",
                     "rank": 5
                 },
                 {
-                    "link": "https://incolumitas.com/pages/scrapeulous/",
-                    "title": "Coding, Learning and Business Ideas – Scrapeulous.comhttps://incolumitas.com/pages/scrapeulous/Im CacheDiese Seite übersetzen",
-                    "snippet": "A scraping service for scientists, marketing professionals, analysts or SEO folk. In autumn 2018, I created a scraping service called scrapeulous.com. There you ...",
-                    "visible_link": "https://incolumitas.com/pages/scrapeulous/",
+                    "link": "https://canoe.com/category/news/good-news",
+                    "title": "Good News | Latest Positive & Inspiring Stories | Canoehttps://canoe.com/category/news/good-news",
+                    "snippet": "Would you like to read some good news? Canoe has Good News for you! Read only positive, inspiring news from Canada and around the world.",
+                    "visible_link": "https://canoe.com/category/news/good-news",
                     "date": "",
                     "rank": 6
                 },
                 {
-                    "link": "https://medium.com/@scrapeulous/responses",
-                    "title": "Responses – Scrapeulous Scrapeulous – Mediumhttps://medium.com/@scrapeulous/responsesIm CacheDiese Seite übersetzen",
-                    "snippet": "Responses published by Scrapeulous Scrapeulous on Medium. ... And if you want to use some services when you plan to scraper large amounts of keywords, ...",
-                    "visible_link": "https://medium.com/@scrapeulous/responses",
+                    "link": "https://www.huffpost.com/impact/topic/good-news",
+                    "title": "Good News | HuffPosthttps://www.huffpost.com/impact/topic/good-newsCached",
+                    "snippet": "Jeff Allen rewarded Dave Cochran for his random act of kindness with tickets to next Sunday's AFC Championship Game against the New England Patriots.",
+                    "visible_link": "https://www.huffpost.com/impact/topic/good-news",
                     "date": "",
                     "rank": 7
                 },
                 {
-                    "link": "https://www.grepsr.com/",
-                    "title": "Grepsr | Web Scraping Service Platformhttps://www.grepsr.com/Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "Simplify data extraction with easy-to-use web scraping service platform and manage it better with powerful features and 24/7 support. Sign up free!",
-                    "visible_link": "https://www.grepsr.com/",
+                    "link": "https://www.foxnews.com/category/good-news",
+                    "title": "GOOD NEWS | Fox Newshttps://www.foxnews.com/category/good-news",
+                    "snippet": "Zechariah Cartledge, a 10-year-old boy from Florida, is on a mission to support police officers and fallen heroes: one mile and one dollar at a time. Oregon man ...",
+                    "visible_link": "https://www.foxnews.com/category/good-news",
                     "date": "",
                     "rank": 8
                 },
                 {
-                    "link": "https://www.quora.com/Which-one-is-the-best-data-scraping-services",
-                    "title": "Which one is the best data scraping services? - Quorahttps://www.quora.com/Which-one-is-the-best-data-scraping-serv...Diese Seite übersetzen",
-                    "snippet": "We can list N number of data scraping service providers, but the thing is we have ... Scrapeulous.com - A simple solution to scrape various search engines from ...",
-                    "visible_link": "https://www.quora.com/Which-one-is-the-best-data-scraping-serv...",
+                    "link": "https://www.boredpanda.com/good-news/",
+                    "title": "Good News | Bored Pandahttps://www.boredpanda.com/good-news/Cached",
+                    "snippet": "They say that no beauty shines brighter than that of a good heart. After all, good deeds always pay off! Amarildo Silva is certainly one with a good heart, as the.",
+                    "visible_link": "https://www.boredpanda.com/good-news/",
                     "date": "",
                     "rank": 9
                 },
                 {
-                    "link": "https://www.promptcloud.com/",
-                    "title": "PromptCloud: Fully Managed Web Scraping Servicehttps://www.promptcloud.com/Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "Our web scraping service helps you extract data from websites without any technical hassle — leverage our decade-old expertize and dedicated support.",
-                    "visible_link": "https://www.promptcloud.com/",
-                    "date": "",
+                    "link": "https://medium.com/future-crunch/99-good-news-stories-you-probably-didnt-hear-about-in-2018-cc3c65f8ebd0",
+                    "title": "99 Good News Stories You Probably Didn't Hear About in 2018https://medium.com/.../99-good-news-stories-you-probably-didnt-hear-about-in-2018...Cached",
+                    "snippet": "Dec 12, 2018 - For the last 12 months, the global media has been focused on a lot of bad news. But there were other things happening out there too. Good ...",
+                    "visible_link": "https://medium.com/.../99-good-news-stories-you-probably-didnt-hear-about-in-2018...",
+                    "date": "Dec 12, 2018 - ",
                     "rank": 10
-                }
-            ]
-        },
-        "2": {
-            "time": "Thu, 28 Feb 2019 14:22:36 GMT",
-            "num_results": "Seite 2 von ungefähr 19 Ergebnissen (0,33 Sekunden) ",
-            "no_results": false,
-            "effective_query": "",
-            "results": [
+                },
                 {
-                    "link": "https://en.wikipedia.org/wiki/Search_engine_scraping",
-                    "title": "Search engine scraping - Wikipediahttps://en.wikipedia.org/wiki/Search_engine_scrapingIm CacheDiese Seite übersetzen",
-                    "snippet": "Search engine scraping is the process of harvesting URLs, descriptions, or other information .... When scraping websites and services the legal part is often a big concern for companies, for web scraping it greatly depends on the country a ...",
-                    "visible_link": "https://en.wikipedia.org/wiki/Search_engine_scraping",
+                    "link": "https://www.telegraph.co.uk/good-news/",
+                    "title": "A bit of good news - The Telegraphhttps://www.telegraph.co.uk/good-news/Cached",
+                    "snippet": "To that end, the Telegraph has teamed with Seven Seas to bring you uplifting, feel-good news stories each day. Take a few minutes to read something happy.",
+                    "visible_link": "https://www.telegraph.co.uk/good-news/",
                     "date": "",
                     "rank": 11
                 },
                 {
-                    "link": "https://www.reddit.com/r/bigseo/comments/ao71gz/feedback_wanted_search_engine_scraping_software/",
-                    "title": "[Feedback wanted] Search engine scraping software for large ...https://www.reddit.com/.../feedback_wanted_search_engine_scra...Im CacheDiese Seite übersetzen",
-                    "snippet": "I am the creator of [scrapeulous.com](https://scrapeulous.com), a search engine scraping service. Back in 2013 or so, I created GoogleScraper, ...",
-                    "visible_link": "https://www.reddit.com/.../feedback_wanted_search_engine_scra...",
-                    "date": "",
+                    "link": "https://www.newyorker.com/news/our-columnists/the-good-news-about-a-green-new-deal",
+                    "title": "The Good News About a Green New Deal | The New Yorkerhttps://www.newyorker.com/news/our.../the-good-news-about-a-green-new-deal",
+                    "snippet": "1 day ago - Rapidly advancing technology and the falling costs of clean energy make the Green New Deal's goal of transforming the U.S. economy to zero ...",
+                    "visible_link": "https://www.newyorker.com/news/our.../the-good-news-about-a-green-new-deal",
+                    "date": "1 day ago - ",
                     "rank": 12
                 },
                 {
-                    "link": "https://twitter.com/scrapeulous",
-                    "title": "Scrapeulous.com (@scrapeulous) | Twitterhttps://twitter.com/scrapeulousIm CacheDiese Seite übersetzen",
-                    "snippet": "The latest Tweets from Scrapeulous.com (@scrapeulous): \"Creating software to realize the best scraping service at https://t.co/R5NUqSSrB5\"",
-                    "visible_link": "https://twitter.com/scrapeulous",
-                    "date": "",
-                    "rank": 13
-                },
-                {
-                    "link": "http://firstpress.com.ng/tag/engine/",
-                    "title": "engine Archives - first pressfirstpress.com.ng/tag/engine/Im CacheDiese Seite übersetzen",
-                    "snippet": "08.02.2019 - I am the creator of scrapeulous.com, a search engine scraping service. Back in 2013 or so, I created GoogleScraper, a simple python library ...",
-                    "visible_link": "firstpress.com.ng/tag/engine/",
-                    "date": "08.02.2019 - ",
-                    "rank": 14
-                },
-                {
-                    "link": "https://libraries.io/github/NikolaiT/GoogleScraper",
-                    "title": "NikolaiT/GoogleScraper - Libraries.iohttps://libraries.io/github/NikolaiT/GoogleScraperIm CacheDiese Seite übersetzen",
-                    "snippet": "A Python module to scrape several search engines (like Google, Yandex, Bing, Duckduckgo, Baidu and others) by using proxies ... https://scrapeulous.com/.",
-                    "visible_link": "https://libraries.io/github/NikolaiT/GoogleScraper",
-                    "date": "",
-                    "rank": 15
-                },
-                {
-                    "link": "https://www.tiki-toki.com/timeline/entry/625522/Google-Hacking-History-by-Bishop-Fox/",
-                    "title": "Google Hacking History by Bishop Fox - Tiki-Tokihttps://www.tiki-toki.com/.../Google-Hacking-History-by-Bishop-...Im CacheDiese Seite übersetzen",
-                    "snippet": "Indexed and makes searchable service banners for whole Internet for HTTP (Port 80), .... http://scrapeulous.com/googlescraper-260-keywords-in-a-second.html ...",
-                    "visible_link": "https://www.tiki-toki.com/.../Google-Hacking-History-by-Bishop-...",
-                    "date": "",
-                    "rank": 16
-                },
-                {
-                    "link": "http://lifehackbuddy.com/ohhqdeh/ptyah5y.php?mdzaiooef=google-scraping",
-                    "title": "Google scraping - LifeHack Buddylifehackbuddy.com/ohhqdeh/ptyah5y.php?mdzaiooef...scrapingIm CacheDiese Seite übersetzen",
-                    "snippet": "03.04.2018 - Some people however would want to quickly have a paid service that lets them scrape some data from Google or any other search engine.",
-                    "visible_link": "lifehackbuddy.com/ohhqdeh/ptyah5y.php?mdzaiooef...scraping",
-                    "date": "03.04.2018 - ",
-                    "rank": 17
-                },
-                {
-                    "link": "https://www.robtex.com/cidr/167.99.240.0-20",
-                    "title": "Robtexhttps://www.robtex.com/cidr/167.99.240.0-20Im CacheDiese Seite übersetzen",
-                    "snippet": "167.99.240.80, A, unitedprint-se.com · 167.99.240.82, A, protectservice.info ... 167.99.241.130, A, mail.mothlive.info · 167.99.241.135, A, www.scrapeulous.com.",
-                    "visible_link": "https://www.robtex.com/cidr/167.99.240.0-20",
-                    "date": "",
-                    "rank": 18
-                },
-                {
-                    "link": "https://domain-status.com/archives/2018-9-16/com/transferred/170",
-                    "title": "Page 170 of 227 for .com transferred domains on 2018-09-16https://domain-status.com/archives/2018-9-16/com/.../170Im CacheDiese Seite übersetzen",
-                    "snippet": "16.09.2018 - ... scramblednest.com · scrapeulous.com · scrapling.com · scrapmetalservice.com · scrappysyrups.com · scratch4kidz.com · scratchcardsbonus.",
-                    "visible_link": "https://domain-status.com/archives/2018-9-16/com/.../170",
-                    "date": "16.09.2018 - ",
-                    "rank": 19
-                }
-            ]
-        }
-    },
-    "scraping search engines": {
-        "1": {
-            "time": "Thu, 28 Feb 2019 14:22:28 GMT",
-            "num_results": "Ungefähr 21.800.000 Ergebnisse (0,47 Sekunden) ",
-            "no_results": false,
-            "effective_query": "",
-            "results": [
-                {
-                    "link": "https://en.wikipedia.org/wiki/Search_engine_scraping",
-                    "title": "Search engine scraping - Wikipediahttps://en.wikipedia.org/wiki/Search_engine_scraping",
+                    "link": "https://www.definitions.net/definition/good+news",
+                    "title": "What does good news mean? - Definitions.nethttps://www.definitions.net/definition/good+newssentence construction - This is a good news. This is good news ...https://ell.stackexchange.com/questions/59420/this-is-a-good-news-this-is-good-newsHow to write a good news story -spajournalism.com/write-good-news-story/",
                     "snippet": "",
-                    "visible_link": "https://en.wikipedia.org/wiki/Search_engine_scraping",
+                    "visible_link": "https://www.definitions.net/definition/good+newshttps://ell.stackexchange.com/questions/59420/this-is-a-good-news-this-is-good-newsspajournalism.com/write-good-news-story/",
                     "date": "",
-                    "rank": 1
-                },
-                {
-                    "link": "https://en.wikipedia.org/wiki/Search_engine_scraping",
-                    "title": "Search engine scraping - Wikipediahttps://en.wikipedia.org/wiki/Search_engine_scraping",
-                    "snippet": "",
-                    "visible_link": "https://en.wikipedia.org/wiki/Search_engine_scraping",
-                    "date": "",
-                    "rank": 2
-                },
-                {
-                    "link": "https://en.wikipedia.org/wiki/Search_engine_scraping",
-                    "title": "Search engine scraping - Wikipediahttps://en.wikipedia.org/wiki/Search_engine_scrapingIm CacheDiese Seite übersetzen",
-                    "snippet": "Search engine scraping is the process of harvesting URLs, descriptions, or other information from search engines such as Google, Bing or Yahoo. This is a specific form of screen scraping or web scraping dedicated to search engines only.",
-                    "visible_link": "https://en.wikipedia.org/wiki/Search_engine_scraping",
-                    "date": "",
-                    "rank": 3
-                },
-                {
-                    "link": "https://rotatingproxies.com/blog/2017/07/search-engine-easiest-scrape/",
-                    "title": "Which Search Engine is Easiest to Scrape? | RotatingProxies Bloghttps://rotatingproxies.com/blog/.../search-engine-easiest-scrape/Im CacheDiese Seite übersetzen",
-                    "snippet": "23.07.2017 - Without search engines, the internet would be one big pile of mush. Content left, right and center, but nothing tangible to point you in the correct ...",
-                    "visible_link": "https://rotatingproxies.com/blog/.../search-engine-easiest-scrape/",
-                    "date": "23.07.2017 - ",
-                    "rank": 4
-                },
-                {
-                    "link": "https://stackoverflow.com/questions/5403270/search-engine-that-allows-results-to-be-scraped",
-                    "title": "Search engine that allows results to be scraped? - Stack Overflowhttps://stackoverflow.com/.../search-engine-that-allows-results-to-...Im CacheDiese Seite übersetzen",
-                    "snippet": "12.11.2011 - You might be actually looking for Google JSON Search API: it allows you to ... search Google from your program, and is easier to use than screen-scraping.",
-                    "visible_link": "https://stackoverflow.com/.../search-engine-that-allows-results-to-...",
-                    "date": "12.11.2011 - ",
-                    "rank": 5
-                },
-                {
-                    "link": "http://www.scrapebox.com/search-engine-scraper",
-                    "title": "Search Engine Scraper - ScrapeBoxwww.scrapebox.com/search-engine-scraperIm CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "With the release of ScrapeBox v2.0 we have created the fastest, most power Search Engine Scraper ever built. It's the first desktop SERP Scraper we have ever ...",
-                    "visible_link": "www.scrapebox.com/search-engine-scraper",
-                    "date": "",
-                    "rank": 6
-                },
-                {
-                    "link": "https://www.reddit.com/r/scrapinghub/comments/6i3p41/good_search_engine_for_scraping/",
-                    "title": "Good search engine for scraping : scrapinghub - Reddithttps://www.reddit.com/.../scrapinghub/.../good_search_engine_f...Im CacheDiese Seite übersetzen",
-                    "snippet": "Google has anti-scraping captchas so I'm looking for something else, are there any other options?",
-                    "visible_link": "https://www.reddit.com/.../scrapinghub/.../good_search_engine_f...",
-                    "date": "",
-                    "rank": 7
-                },
-                {
-                    "link": "https://github.com/NikolaiT/GoogleScraper",
-                    "title": "GitHub - NikolaiT/GoogleScraper: A Python module to scrape several ...https://github.com/NikolaiT/GoogleScraperIm CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "A Python module to scrape several search engines (like Google, Yandex, Bing, Duckduckgo, ...). Including asynchronous networking support.",
-                    "visible_link": "https://github.com/NikolaiT/GoogleScraper",
-                    "date": "",
-                    "rank": 8
-                },
-                {
-                    "link": "http://scraping.pro/search-queries-in-a-search-engine-for-scraping/",
-                    "title": "Search queries in a search engine for scraping - Scraping.proscraping.pro/search-queries-in-a-search-engine-for-scraping/Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "10.07.2015 - So you might compose those urls according to your needs, store them in file(s) (since there could be millions of them) and then feed them into a ...",
-                    "visible_link": "scraping.pro/search-queries-in-a-search-engine-for-scraping/",
-                    "date": "10.07.2015 - ",
-                    "rank": 9
-                },
-                {
-                    "link": "https://www.searchenginejournal.com/scrape-google-serp-custom-extractions/267211/",
-                    "title": "How to Scrape SERPs to Optimize for Search Intent - Search Engine ...https://www.searchenginejournal.com › SEOIm CacheDiese Seite übersetzen",
-                    "snippet": "05.09.2018 - Having trouble gaining visibility for an important set of keywords? Here's how to use custom extractions to analyze SERP intent to diagnose ...",
-                    "visible_link": "https://www.searchenginejournal.com › SEO",
-                    "date": "05.09.2018 - ",
-                    "rank": 10
-                },
-                {
-                    "link": "https://scrapeulous.com/howto/",
-                    "title": "Scraping search engines with real browsers in large quantitieshttps://scrapeulous.com/howto/Im CacheDiese Seite übersetzen",
-                    "snippet": "06.02.2019 - We offer scraping large amounts of keywords for the Google Search Engine. Large means any number of keywords between 30 and 50000.",
-                    "visible_link": "https://scrapeulous.com/howto/",
-                    "date": "06.02.2019 - ",
-                    "rank": 11
-                }
-            ]
-        },
-        "2": {
-            "time": "Thu, 28 Feb 2019 14:22:30 GMT",
-            "num_results": "Seite 2 von ungefähr 21.800.000 Ergebnissen (0,42 Sekunden) ",
-            "no_results": false,
-            "effective_query": "",
-            "results": [
-                {
-                    "link": "https://www.maxresultsseo.com/search-engine-scraper",
-                    "title": "Google Scraper - Scrape unlimited results from Google + Binghttps://www.maxresultsseo.com/search-engine-scraperIm CacheDiese Seite übersetzen",
-                    "snippet": "Google Scraper is a desktop software tool that allows you to scrape results from search engines such as Google and Bing. It will also allow you to check Moz DA ...",
-                    "visible_link": "https://www.maxresultsseo.com/search-engine-scraper",
-                    "date": "",
-                    "rank": 12
-                },
-                {
-                    "link": "https://searchnewscentral.com/blog/2011/09/28/how-to-scrape-search-engines-without-pissing-them-off/",
-                    "title": "How to: Scrape search engines without pissing them off | Search News ...https://searchnewscentral.com/.../how-to-scrape-search-engines-w...Im CacheDiese Seite übersetzen",
-                    "snippet": "28.09.2011 - You can learn a lot about a search engine by scraping its results. It's the only easy way you can get an hourly or daily record of exactly what ...",
-                    "visible_link": "https://searchnewscentral.com/.../how-to-scrape-search-engines-w...",
-                    "date": "28.09.2011 - ",
                     "rank": 13
                 },
                 {
-                    "link": "https://www.quora.com/What-SEO-agencies-or-services-use-for-scraping-Search-Engines",
-                    "title": "What SEO agencies or services use for scraping Search Engines? - Quorahttps://www.quora.com/What-SEO-agencies-or-services-use-for-s...Diese Seite übersetzen",
-                    "snippet": "13.12.2016 - To detect scraping, search engines need to see patterns. So, if you can randomize a few things, you can scrape. Most companies I know: ...",
-                    "visible_link": "https://www.quora.com/What-SEO-agencies-or-services-use-for-s...",
-                    "date": "13.12.2016 - ",
+                    "link": "https://www.definitions.net/definition/good+news",
+                    "title": "What does good news mean? - Definitions.nethttps://www.definitions.net/definition/good+news",
+                    "snippet": "",
+                    "visible_link": "https://www.definitions.net/definition/good+news",
+                    "date": "",
                     "rank": 14
                 },
                 {
-                    "link": "https://scrapemasters.com/services/search-engines-scraping/",
-                    "title": "Google web scraping service. Scrape Google search results. Google ...https://scrapemasters.com/services/search-engines-scraping/Im CacheDiese Seite übersetzen",
-                    "snippet": "We turn any search engines (Google, Bing, Yahoo) results page (SERP) into structured data and deliver results through API or any other way convenient for you.",
-                    "visible_link": "https://scrapemasters.com/services/search-engines-scraping/",
+                    "link": "https://ell.stackexchange.com/questions/59420/this-is-a-good-news-this-is-good-news",
+                    "title": "sentence construction - This is a good news. This is good news ...https://ell.stackexchange.com/questions/59420/this-is-a-good-news-this-is-good-news",
+                    "snippet": "",
+                    "visible_link": "https://ell.stackexchange.com/questions/59420/this-is-a-good-news-this-is-good-news",
                     "date": "",
                     "rank": 15
                 },
                 {
-                    "link": "https://www.seroundtable.com/google-apis-reduce-scraping-25978.html",
-                    "title": "Google Believes Providing APIs Won't Reduce Search Results Scrapinghttps://www.seroundtable.com/google-apis-reduce-scraping-2597...Im CacheDiese Seite übersetzen",
-                    "snippet": "29.06.2018 - Filed Under Google Search Engine Optimization ... if Google provided an API for this tool, it would reduce scraping of the Google search results.",
-                    "visible_link": "https://www.seroundtable.com/google-apis-reduce-scraping-2597...",
-                    "date": "29.06.2018 - ",
+                    "link": "http://spajournalism.com/write-good-news-story/",
+                    "title": "How to write a good news story -spajournalism.com/write-good-news-story/",
+                    "snippet": "",
+                    "visible_link": "spajournalism.com/write-good-news-story/",
+                    "date": "",
                     "rank": 16
                 },
                 {
-                    "link": "https://www.youtube.com/watch?v=wuHvwFHoZ4U",
-                    "title": "How to use Search Engine Scraper - YouTubehttps://www.youtube.com/watch?v=wuHvwFHoZ4UDiese Seite übersetzen",
-                    "snippet": "Get the software from: http://www.bottopia.com/software/search-engine-scraper/ ... Web Scraping a Search ...",
-                    "visible_link": "https://www.youtube.com/watch?v=wuHvwFHoZ4U",
+                    "link": "http://goodnewsshared.com/",
+                    "title": "Good News Shared - uplifting charitable stories to inspire yougoodnewsshared.com/CachedSimilar",
+                    "snippet": "Good News Shared highlights positive charitable stories from around the world. Read about inspirational people and amazing animals to enhance your mood.",
+                    "visible_link": "goodnewsshared.com/",
                     "date": "",
                     "rank": 17
                 },
                 {
-                    "link": "https://www.youtube.com/watch?v=BcQRIr3noOI",
-                    "title": "How to Scrape Google Search Results Quickly, Easily and for Free ...https://www.youtube.com/watch?v=BcQRIr3noOIÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "How to Scrape Google Search Results Quickly, Easily and for Free ... *UPDATE 6/30/2015 - Set your search ...",
-                    "visible_link": "https://www.youtube.com/watch?v=BcQRIr3noOI",
+                    "link": "https://www.denverpost.com/news/good-news/",
+                    "title": "Good news, uplifting stories and feel-good coverage | The Denver Posthttps://www.denverpost.com/news/good-news/Cached",
+                    "snippet": "Good news, positive, uplifting, happy stories, feel-good reading, news and trends from The Denver Post.",
+                    "visible_link": "https://www.denverpost.com/news/good-news/",
                     "date": "",
                     "rank": 18
                 },
                 {
-                    "link": "https://forum.gsa-online.de/discussion/20784/scrape-box-google-scraping-settings-next-best-engines-after-google-to-scrape-own-list-or-urls",
-                    "title": "Scrape Box Google scraping settings + Next Best engines after ...https://forum.gsa-online.de › ... › Need HelpIm CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "1) I am using Scrapebox with 20 Semi-dedicated proxies. ... Yes, scrape Bing or another search engine - you will be able to rank in Google if ...",
-                    "visible_link": "https://forum.gsa-online.de › ... › Need Help",
+                    "link": "https://www.nbc.com/great-news?nbc=1",
+                    "title": "Great News - NBC.comhttps://www.nbc.com/great-news?nbc=1Cached",
+                    "snippet": "Great News - Browse photos on NBC.com. A news producer's meddling mom becomes her intern in this comedy from Tina Fey starring Briga Heelan.",
+                    "visible_link": "https://www.nbc.com/great-news?nbc=1",
                     "date": "",
                     "rank": 19
                 },
                 {
-                    "link": "https://www.scrapehero.com/a-beginners-guide-to-web-scraping-part-1-the-basics/",
-                    "title": "What is web scraping - Part 1 - Beginner's guide - ScrapeHerohttps://www.scrapehero.com/a-beginners-guide-to-web-scraping-...Im CacheDiese Seite übersetzen",
-                    "snippet": "29.01.2018 - For example, SERP monitoring services scrape search engine results periodically to show you how your search rankings have changed over ...",
-                    "visible_link": "https://www.scrapehero.com/a-beginners-guide-to-web-scraping-...",
-                    "date": "29.01.2018 - ",
+                    "link": "https://www.cnn.com/2019/03/02/us/the-good-stuff-march-2-trnd/index.html",
+                    "title": "The week in good news: A record-breaking baby, a giant sloth and ...https://www.cnn.com/2019/03/02/us/the-good-stuff-march-2-trnd/index.html",
+                    "snippet": "3 days ago - Pour yourself a little of whatever beverage you prefer, and let this week's crop of good news soothe your soul.",
+                    "visible_link": "https://www.cnn.com/2019/03/02/us/the-good-stuff-march-2-trnd/index.html",
+                    "date": "3 days ago - ",
                     "rank": 20
                 },
                 {
-                    "link": "https://code.i-harness.com/de/q/4207e0",
-                    "title": "search-engine - Was ist der Unterschied zwischen Web-Crawling und ...https://code.i-harness.com/de/q/4207e0Im Cache",
-                    "snippet": "Web Scraping , um eine minimale Definition zu verwenden, ist der Prozess der Verarbeitung eines Webdokuments und das Extrahieren von Informationen ...",
-                    "visible_link": "https://code.i-harness.com/de/q/4207e0",
-                    "date": "",
-                    "rank": 21
-                }
-            ]
-        }
-    },
-    "learn js": {
-        "1": {
-            "time": "Thu, 28 Feb 2019 14:22:34 GMT",
-            "num_results": "Ungefähr 646.000.000 Ergebnisse (0,33 Sekunden) ",
-            "no_results": false,
-            "effective_query": "",
-            "results": [
-                {
-                    "link": "https://www.learn-js.org/",
-                    "title": "Learn JavaScript - Free Interactive JavaScript Tutorialhttps://www.learn-js.org/Im CacheDiese Seite übersetzen",
-                    "snippet": "Learn-JS.org is a free interactive JavaScript tutorial for people who want to learn JavaScript, fast.",
-                    "visible_link": "https://www.learn-js.org/",
-                    "date": "",
-                    "rank": 1
-                },
-                {
-                    "link": "https://learnjavascript.online/",
-                    "title": "Learn JavaScripthttps://learnjavascript.online/Im CacheDiese Seite übersetzen",
-                    "snippet": "Learn JavaScript Online: The easiest way to learn & practice modern JavaScript.",
-                    "visible_link": "https://learnjavascript.online/",
-                    "date": "",
-                    "rank": 2
-                },
-                {
-                    "link": "https://www.w3schools.com/js/",
-                    "title": "JavaScript Tutorial - W3Schoolshttps://www.w3schools.com/js/Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "JavaScript is the programming language of HTML and the Web. JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced.",
-                    "visible_link": "https://www.w3schools.com/js/",
-                    "date": "",
-                    "rank": 3
-                },
-                {
-                    "link": "https://www.codecademy.com/learn/introduction-to-javascript",
-                    "title": "JavaScript Tutorial: Learn JavaScript For Free | Codecademyhttps://www.codecademy.com/learn/introduction-to-javascriptIm CacheDiese Seite übersetzen",
-                    "snippet": "Learn JavaScript and Javascript arrays to build interactive websites and pages that adapt to every device. Add dynamic behavior, store information, and handle ...",
-                    "visible_link": "https://www.codecademy.com/learn/introduction-to-javascript",
-                    "date": "",
-                    "rank": 4
-                },
-                {
-                    "link": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript",
-                    "title": "JavaScript - Learn web development | MDNhttps://developer.mozilla.org/en-US/docs/Learn/JavaScriptIm CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "19.02.2019 - JavaScript is arguably more difficult to learn than related technologies such as HTML and CSS. Before attempting to learn JavaScript, you are ...",
-                    "visible_link": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript",
-                    "date": "19.02.2019 - ",
-                    "rank": 5
-                },
-                {
-                    "link": "https://www.thebalancecareers.com/learn-javascript-online-2071405",
-                    "title": "Places to Learn JavaScript Online - The Balance Careershttps://www.thebalancecareers.com › ... › EducationIm CacheDiese Seite übersetzen",
-                    "snippet": "24.01.2019 - Want to dip your toes into the world of JavaScript? To learn JavaScript, check out the free and paid options for training and certification online.",
-                    "visible_link": "https://www.thebalancecareers.com › ... › Education",
-                    "date": "24.01.2019 - ",
-                    "rank": 6
-                },
-                {
-                    "link": "https://javascript.info/",
-                    "title": "The Modern Javascript Tutorialhttps://javascript.info/Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "Here we learn JavaScript, starting from scratch and go on to advanced ... Learning how to manage the browser page: add elements, manipulate their size and ...",
-                    "visible_link": "https://javascript.info/",
-                    "date": "",
-                    "rank": 7
-                },
-                {
-                    "link": "https://java.com/de/download/help/enable_browser.xml",
-                    "title": "Wie aktiviere ich Java in meinem Webbrowser?https://java.com/de/download/help/enable_browser.xmlJavaScript im Browser aktivieren, damit Anzeigen ... - Google Supporthttps://support.google.com/adsense/answer/12654?hl=deJavaScript: Aufgaben und Anwendungsbereiche - molilyhttps://molily.de/js/aufgaben.html",
-                    "snippet": "",
-                    "visible_link": "https://java.com/de/download/help/enable_browser.xmlhttps://support.google.com/adsense/answer/12654?hl=dehttps://molily.de/js/aufgaben.html",
-                    "date": "",
-                    "rank": 8
-                },
-                {
-                    "link": "https://java.com/de/download/help/enable_browser.xml",
-                    "title": "Wie aktiviere ich Java in meinem Webbrowser?https://java.com/de/download/help/enable_browser.xml",
-                    "snippet": "",
-                    "visible_link": "https://java.com/de/download/help/enable_browser.xml",
-                    "date": "",
-                    "rank": 9
-                },
-                {
-                    "link": "https://support.google.com/adsense/answer/12654?hl=de",
-                    "title": "JavaScript im Browser aktivieren, damit Anzeigen ... - Google Supporthttps://support.google.com/adsense/answer/12654?hl=de",
-                    "snippet": "",
-                    "visible_link": "https://support.google.com/adsense/answer/12654?hl=de",
-                    "date": "",
-                    "rank": 10
-                },
-                {
-                    "link": "https://molily.de/js/aufgaben.html",
-                    "title": "JavaScript: Aufgaben und Anwendungsbereiche - molilyhttps://molily.de/js/aufgaben.html",
-                    "snippet": "",
-                    "visible_link": "https://molily.de/js/aufgaben.html",
-                    "date": "",
-                    "rank": 11
-                },
-                {
-                    "link": "https://learnjavascript.today/",
-                    "title": "Learn JavaScript from scratchhttps://learnjavascript.today/Im CacheDiese Seite übersetzen",
-                    "snippet": "Build anything you want with JavaScript. Have you tried learning JavaScript for a while now, but feel that you're not making progress?",
-                    "visible_link": "https://learnjavascript.today/",
-                    "date": "",
-                    "rank": 12
-                }
-            ]
-        },
-        "2": {
-            "time": "Thu, 28 Feb 2019 14:22:36 GMT",
-            "num_results": "Seite 2 von ungefähr 646.000.000 Ergebnissen (0,27 Sekunden) ",
-            "no_results": false,
-            "effective_query": "",
-            "results": [
-                {
-                    "link": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
-                    "title": "Learn JavaScript - Full Course for Beginners - YouTubehttps://www.youtube.com/watch?v=PkZNo7MFNFgDiese Seite übersetzen",
-                    "snippet": "This complete 134-part JavaScript tutorial for beginners will teach you everything you need to know to get ...",
-                    "visible_link": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
-                    "date": "",
-                    "rank": 13
-                },
-                {
-                    "link": "https://medium.com/coderbyte/50-resources-to-help-you-start-learning-javascript-in-2017-4c70b222a3b9",
-                    "title": "50 resources to help you start learning JavaScript in 2017 - Mediumhttps://medium.com/.../50-resources-to-help-you-start-learning-ja...Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "04.01.2017 - Over the last few years JavaScript has been surging in popularity as the language itself is growing, a majority of coding bootcamps teach the ...",
-                    "visible_link": "https://medium.com/.../50-resources-to-help-you-start-learning-ja...",
-                    "date": "04.01.2017 - ",
-                    "rank": 14
-                },
-                {
-                    "link": "https://medium.freecodecamp.org/want-to-learn-javascript-heres-a-free-24-part-course-to-get-you-started-e7777baf86fb",
-                    "title": "Want to learn JavaScript? Here's a free 24-part course to get you started.https://medium.freecodecamp.org/want-to-learn-javascript-heres-...Im CacheDiese Seite übersetzen",
-                    "snippet": "19.04.2018 - The first concept you'll need to learn is variables, which are for storing values. In modern JavaScript there are two keywords for doing that: let ...",
-                    "visible_link": "https://medium.freecodecamp.org/want-to-learn-javascript-heres-...",
-                    "date": "19.04.2018 - ",
-                    "rank": 15
-                },
-                {
-                    "link": "http://javascriptissexy.com/how-to-learn-javascript-properly/",
-                    "title": "How to Learn JavaScript Properly | JavaScript Is Sexyjavascriptissexy.com/how-to-learn-javascript-properly/Ähnliche Seiten",
-                    "snippet": "You do want to learn JavaScript. I presume you are here for that reason, and you have made a wise decision. For if you want to develop modern websites and ...",
-                    "visible_link": "javascriptissexy.com/how-to-learn-javascript-properly/",
-                    "date": "",
-                    "rank": 16
-                },
-                {
-                    "link": "https://www.sololearn.com/Course/JavaScript/",
-                    "title": "JavaScript Tutorial | SoloLearn: Learn to code for FREE!https://www.sololearn.com/Course/JavaScript/Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "Our tutorial will teach you the fundamentals of JavaScript programming. You can learn how to make your website more interactive, change your website content, ...",
-                    "visible_link": "https://www.sololearn.com/Course/JavaScript/",
-                    "date": "",
-                    "rank": 17
-                },
-                {
-                    "link": "https://www.javascript.com/try",
-                    "title": "Start learning JavaScript with our free real time tutorialhttps://www.javascript.com/tryIm CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "Start learning JavaScript with our interactive simulator for free. Our easy to follow JavaScript tutorials for beginners will have you coding the basics in no time.",
-                    "visible_link": "https://www.javascript.com/try",
-                    "date": "",
-                    "rank": 18
-                },
-                {
-                    "link": "https://learnxinyminutes.com/docs/javascript/",
-                    "title": "Learn javascript in Y Minuteshttps://learnxinyminutes.com/docs/javascript/Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "JavaScript was created by Netscape's Brendan Eich in 1995. It was originally intended as a simpler scripting language for websites, complementing the use of ...",
-                    "visible_link": "https://learnxinyminutes.com/docs/javascript/",
-                    "date": "",
-                    "rank": 19
-                },
-                {
-                    "link": "https://www.pluralsight.com/paths/javascript",
-                    "title": "JavaScript | Pluralsighthttps://www.pluralsight.com/paths/javascriptIm CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "This learning path includes JavaScript tutorials for both the new programmer looking to get started and the advanced web developer wanting to solidify and ...",
-                    "visible_link": "https://www.pluralsight.com/paths/javascript",
-                    "date": "",
-                    "rank": 20
-                },
-                {
-                    "link": "https://www.edx.org/learn/javascript",
-                    "title": "Learn Javascript from Harvard, Microsoft, and more | edXhttps://www.edx.org/learn/javascriptIm CacheDiese Seite übersetzen",
-                    "snippet": "Free Javascript courses online. Learn Javascript programming and advance your career with free computer science courses from top institutions. Join now.",
-                    "visible_link": "https://www.edx.org/learn/javascript",
+                    "link": "https://www.goodnewsfl.org/",
+                    "title": "Home - Good News Christian Newshttps://www.goodnewsfl.org/Cached",
+                    "snippet": "The Good News is more than just a newspaper. It's a resource with eternal impact!",
+                    "visible_link": "https://www.goodnewsfl.org/",
                     "date": "",
                     "rank": 21
                 },
                 {
-                    "link": "http://www.bestprogramminglanguagefor.me/why-learn-javascript",
-                    "title": "Why Learn JavaScript - Best Programming Languagewww.bestprogramminglanguagefor.me/why-learn-javascriptIm CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "JavaScript has become an essential web technology along with HTML and CSS, as most browsers implement JavaScript. Thus, You must learn JavaScript if you ...",
-                    "visible_link": "www.bestprogramminglanguagefor.me/why-learn-javascript",
+                    "link": "https://www.jw.org/en/publications/books/good-news-from-god/",
+                    "title": "Good News From God! - jw.orghttps://www.jw.org/en/publications/books/good-news-from-god/CachedSimilar",
+                    "snippet": "What is the good news from God? Why can we believe it? This brochure answers common Bible questions.",
+                    "visible_link": "https://www.jw.org/en/publications/books/good-news-from-god/",
                     "date": "",
                     "rank": 22
+                },
+                {
+                    "link": "https://miami.cbslocal.com/tag/good-news/",
+                    "title": "Good News – CBS Miamihttps://miami.cbslocal.com/tag/good-news/Cached",
+                    "snippet": "Firefighters Buy Elderly Woman A Microwave So She Can Heat Her Frozen MealsA Florida firefighting crew decided to warm up an elderly woman's meals ...",
+                    "visible_link": "https://miami.cbslocal.com/tag/good-news/",
+                    "date": "",
+                    "rank": 23
+                },
+                {
+                    "link": "https://abc13.com/goodnews/",
+                    "title": "Good News | abc13.com | abc13.comhttps://abc13.com/goodnews/Cached",
+                    "snippet": "Explore recently published Good News news stories from abc13.com.",
+                    "visible_link": "https://abc13.com/goodnews/",
+                    "date": "",
+                    "rank": 24
+                },
+                {
+                    "link": "https://www.barrons.com/articles/the-dow-comes-back-because-no-trade-news-is-good-news-for-now-51551804959",
+                    "title": "The Dow Bounces Back Because No Trade News Is Good News — for ...https://www.barrons.com/.../the-dow-comes-back-because-no-trade-news-is-good-news-...",
+                    "snippet": "6 hours ago - Stocks had worked their way back from morning lows on Tuesday, although they weren't doing much more than that as midday approached.",
+                    "visible_link": "https://www.barrons.com/.../the-dow-comes-back-because-no-trade-news-is-good-news-...",
+                    "date": "6 hours ago - ",
+                    "rank": 25
+                },
+                {
+                    "link": "https://en.wikipedia.org/wiki/Great_News",
+                    "title": "Great News - Wikipediahttps://en.wikipedia.org/wiki/Great_NewsCachedSimilar",
+                    "snippet": "Great News is an American sitcom television series. It was created and written by Tracey Wigfield, and co-executive produced with Tina Fey, Robert Carlock, and ...",
+                    "visible_link": "https://en.wikipedia.org/wiki/Great_News",
+                    "date": "",
+                    "rank": 26
+                },
+                {
+                    "link": "https://www.bloomberg.com/news/articles/2019-03-04/good-news-gen-z-parents-you-probably-won-t-have-to-pay-for-that-wedding",
+                    "title": "Good News, Gen-Z Parents. You Probably Won't Have to Pay for That ...https://www.bloomberg.com/news/.../good-news-gen-z-parents-you-probably-won-t-h...Cached",
+                    "snippet": "1 day ago - For the first time, wedding-planning brand The Knot has included members of Generation Z—those born from around 1995 to 2010—in its 2018 ...",
+                    "visible_link": "https://www.bloomberg.com/news/.../good-news-gen-z-parents-you-probably-won-t-h...",
+                    "date": "1 day ago - ",
+                    "rank": 27
+                },
+                {
+                    "link": "http://www.goodnewsfinland.com/",
+                    "title": "Good News from Finlandwww.goodnewsfinland.com/CachedSimilar",
+                    "snippet": "Good News from Finland is a news service that covers positive and globally interesting company, business and innovation-related news topics from Finland.",
+                    "visible_link": "www.goodnewsfinland.com/",
+                    "date": "",
+                    "rank": 28
+                },
+                {
+                    "link": "https://www.wbtv.com/programming/good-news/",
+                    "title": "Good News - WBTVhttps://www.wbtv.com/programming/good-news/",
+                    "snippet": "An incredible update to a story we brought you on Friday. We introduced you to an elderly couple in Gaston County -- dealing with rain and cold air flowing into ...",
+                    "visible_link": "https://www.wbtv.com/programming/good-news/",
+                    "date": "",
+                    "rank": 29
+                },
+                {
+                    "link": "http://www.wtoc.com/community/good-news/",
+                    "title": "Good News - WTOC.comwww.wtoc.com/community/good-news/",
+                    "snippet": "Good News: Richmond Hill High students launch campaign against cancer. Patricia George, Isabella Martinez, and Tennessee Sack have launched a campaign ...",
+                    "visible_link": "www.wtoc.com/community/good-news/",
+                    "date": "",
+                    "rank": 30
+                },
+                {
+                    "link": "https://www.wptv.com/news/good-news",
+                    "title": "Good News - WPTV.comhttps://www.wptv.com/news/good-newsCached",
+                    "snippet": "Good News. World. A group of teens and good Samaritans rescued a boy dangling from a ski lift ... VIDEO: Good Samaritans rescue woman from burning vehicle.",
+                    "visible_link": "https://www.wptv.com/news/good-news",
+                    "date": "",
+                    "rank": 31
+                },
+                {
+                    "link": "https://www.goodnewsloves.com/",
+                    "title": "GOOD NEWS CHURCHhttps://www.goodnewsloves.com/Cached",
+                    "snippet": "Free event at World Golf Village and Wildwood campuses for children entering K-5 grades. Registration is open March 31 to June 9. For more information, or to ...",
+                    "visible_link": "https://www.goodnewsloves.com/",
+                    "date": "",
+                    "rank": 32
+                },
+                {
+                    "link": "https://www.omaha.com/news/goodnews/",
+                    "title": "Good News | omaha.comhttps://www.omaha.com/news/goodnews/Cached",
+                    "snippet": "Neighborhood news and community events from Omaha and surrounding communities.",
+                    "visible_link": "https://www.omaha.com/news/goodnews/",
+                    "date": "",
+                    "rank": 33
+                },
+                {
+                    "link": "https://www.mynews13.com/fl/orlando/community/good-news",
+                    "title": "Community | Good News | Spectrum News 13https://www.mynews13.com/fl/orlando/community/good-newsCached",
+                    "snippet": "Tired of crime, taxes and accidents? If so, bookmark our Good News page for stories that will make you feel good about the world.",
+                    "visible_link": "https://www.mynews13.com/fl/orlando/community/good-news",
+                    "date": "",
+                    "rank": 34
+                },
+                {
+                    "link": "https://www.cefonline.com/good-news-clubs-reopen-three-year-ordeal/",
+                    "title": "Good News Clubs Reopen After Three-Year Ordeal - Child ...https://www.cefonline.com/good-news-clubs-reopen-three-year-ordeal/Cached",
+                    "snippet": "CLEVELAND, OH – Good News Club® will reopen in the Cleveland Metropolitan School District (CMSD) elementary schools on February 2.",
+                    "visible_link": "https://www.cefonline.com/good-news-clubs-reopen-three-year-ordeal/",
+                    "date": "",
+                    "rank": 35
+                },
+                {
+                    "link": "https://www.biblegateway.com/versions/Good-News-Translation-GNT-Bible/",
+                    "title": "Good News Translation (GNT) - Version Information - BibleGateway.comhttps://www.biblegateway.com/versions/Good-News-Translation-GNT-Bible/CachedSimilar",
+                    "snippet": "Version Information. The Good News Translation (GNT), formerly called the Good News Bible or Today's English Version, was first published as a full Bible in ...",
+                    "visible_link": "https://www.biblegateway.com/versions/Good-News-Translation-GNT-Bible/",
+                    "date": "",
+                    "rank": 36
+                },
+                {
+                    "link": "https://abc7news.com/tag/good-news/",
+                    "title": "Good news | abc7news.com | abc7news.comhttps://abc7news.com/tag/good-news/Cached",
+                    "snippet": "Explore recently published good news news stories from abc7news.com.",
+                    "visible_link": "https://abc7news.com/tag/good-news/",
+                    "date": "",
+                    "rank": 37
+                },
+                {
+                    "link": "https://www.goodnewsgarage.org/",
+                    "title": "Good News Garage - Car Donation Charity serving NEhttps://www.goodnewsgarage.org/Cached",
+                    "snippet": "Good News Garage is a car donation charity that accepts donated cars, trucks and vans.",
+                    "visible_link": "https://www.goodnewsgarage.org/",
+                    "date": "",
+                    "rank": 38
+                },
+                {
+                    "link": "https://causebox.com/blog",
+                    "title": "Get CAUSEBOX Today | CAUSEBOXhttps://causebox.com/blogCached",
+                    "snippet": "Good News. Online Magazine. Feature ... Every product was curated to make you look good, feel good, and help you do good. Meet the limited-edition Spring ...",
+                    "visible_link": "https://causebox.com/blog",
+                    "date": "",
+                    "rank": 39
+                },
+                {
+                    "link": "https://skillet.lifehacker.com/start-your-weekend-with-the-good-news-1832995752",
+                    "title": "Your Weekend With the Good News - Skillet - Lifehackerhttps://skillet.lifehacker.com/start-your-weekend-with-the-good-news-1832995752Cached",
+                    "snippet": "4 days ago - News is usually bad, but today, the news is good. The news is so good, in fact, that I feel like drinking about it, and I would like to invite you all to ...",
+                    "visible_link": "https://skillet.lifehacker.com/start-your-weekend-with-the-good-news-1832995752",
+                    "date": "4 days ago - ",
+                    "rank": 40
+                },
+                {
+                    "link": "https://www.amazon.com/Finally-Some-Good-Delicious-Tacos/dp/1790356229",
+                    "title": "Finally, Some Good News: Delicious Tacos: 9781790356225: Amazon ...https://www.amazon.com/Finally-Some-Good-Delicious-Tacos/dp/1790356229Cached",
+                    "snippet": "Finally, Some Good News [Delicious Tacos] on Amazon.com. *FREE* shipping on qualifying offers. Two birdwatchers survive a nuclear holocaust.",
+                    "visible_link": "https://www.amazon.com/Finally-Some-Good-Delicious-Tacos/dp/1790356229",
+                    "date": "",
+                    "rank": 41
+                },
+                {
+                    "link": "http://www.christchurchcharlotte.org/goodnews/",
+                    "title": "GoodNews Shop | Christ Church Charlottewww.christchurchcharlotte.org/goodnews/CachedSimilar",
+                    "snippet": "GoodNews, the Shop@Christ Church is a mission of the Episcopal Church Women (ECW) at Christ Church. We proudly feature books, cards, candles, lotions, ...",
+                    "visible_link": "www.christchurchcharlotte.org/goodnews/",
+                    "date": "",
+                    "rank": 42
+                },
+                {
+                    "link": "https://www.wral.com/goodnews",
+                    "title": "Good News Coverage :: WRAL.comhttps://www.wral.com/goodnewsCached",
+                    "snippet": "Get the latest articles, videos, photo galleries and blogposts related to WRAL's coverage of good news.",
+                    "visible_link": "https://www.wral.com/goodnews",
+                    "date": "",
+                    "rank": 43
+                },
+                {
+                    "link": "https://www.goodnewspress.com/",
+                    "title": "Good News Press: Homehttps://www.goodnewspress.com/CachedSimilar",
+                    "snippet": "Printed copies distributed weekly to 36,000 households in Southeast Kansas and Northeast Oklahoma. Area News | Classifieds | Auctions | Real Estate",
+                    "visible_link": "https://www.goodnewspress.com/",
+                    "date": "",
+                    "rank": 44
+                },
+                {
+                    "link": "https://goodnews.click/",
+                    "title": "Good Newshttps://goodnews.click/",
+                    "snippet": "Your personal news stream. ... Good News helps you discover and share the latest news on your favorite topics from the sources you trust. OK. I forgot my ...",
+                    "visible_link": "https://goodnews.click/",
+                    "date": "",
+                    "rank": 45
+                },
+                {
+                    "link": "https://www.news.com.au/lifestyle/real-life/good-news",
+                    "title": "Good News | Real Life | news.com.au — Australia's #1 news sitehttps://www.news.com.au/lifestyle/real-life/good-newsCached",
+                    "snippet": "An uplifting source for positive, heart-warming news. For more inspiring Good News visit News.com.au.",
+                    "visible_link": "https://www.news.com.au/lifestyle/real-life/good-news",
+                    "date": "",
+                    "rank": 46
+                },
+                {
+                    "link": "https://www.imdb.com/title/tt0039431/",
+                    "title": "Good News (1947) - IMDbhttps://www.imdb.com/title/tt0039431/Cached",
+                    "snippet": "June Allyson and Patricia Marshall in Good News (1947) June Allyson and Peter Lawford in Good News (1947) June Allyson and Peter Lawford publicity still for ...",
+                    "visible_link": "https://www.imdb.com/title/tt0039431/",
+                    "date": "",
+                    "rank": 47
+                },
+                {
+                    "link": "https://www.goodnewsbrewing.com/",
+                    "title": "Good News Brewing | O'Fallon, MO | Microbrewery | Wood Fired Pizzahttps://www.goodnewsbrewing.com/CachedSimilar",
+                    "snippet": "Good News Brewing and Wood-Fired Pizza Brewpub. 330 Sonderen O'Fallon, Missouri. Indoor and outdoor seating. Book your private party or rehearsal dinner.",
+                    "visible_link": "https://www.goodnewsbrewing.com/",
+                    "date": "",
+                    "rank": 48
+                },
+                {
+                    "link": "https://www.nytimes.com/2018/11/19/science/science-journalism-fake-news.html",
+                    "title": "Some Good News, and a Hard Truth, About Science - The New York ...https://www.nytimes.com/2018/11/19/science/science-journalism-fake-news.html",
+                    "snippet": "Nov 19, 2018 - So, as a birthday gift, the Times of London printed a front page containing only good news. The death rate from suicide was declining, the paper ...",
+                    "visible_link": "https://www.nytimes.com/2018/11/19/science/science-journalism-fake-news.html",
+                    "date": "Nov 19, 2018 - ",
+                    "rank": 49
+                },
+                {
+                    "link": "https://www.mindful.org/the-good-news-about-being-wrong/",
+                    "title": "The Good News about Being Wrong - Mindfulhttps://www.mindful.org/the-good-news-about-being-wrong/Cached",
+                    "snippet": "Feb 4, 2019 - The Good News about Being Wrong. No one likes making mistakes or (even worse) admitting them. But there's wisdom and resilience to be ...",
+                    "visible_link": "https://www.mindful.org/the-good-news-about-being-wrong/",
+                    "date": "Feb 4, 2019 - ",
+                    "rank": 50
+                },
+                {
+                    "link": "https://rendcollective.com/collections/good-news",
+                    "title": "GOOD NEWS – Rend Collectivehttps://rendcollective.com/collections/good-newsCached",
+                    "snippet": "Shop now · GOOD NEWS DELUXE BUNDLE. $40.00 $35.00. On Sale. Newsletter. Join the Rend Collective Family & get all the fun news first! Connect.",
+                    "visible_link": "https://rendcollective.com/collections/good-news",
+                    "date": "",
+                    "rank": 51
+                },
+                {
+                    "link": "https://6abc.com/tag/good-news/",
+                    "title": "Good news | 6abc.com | 6abc.comhttps://6abc.com/tag/good-news/Cached",
+                    "snippet": "Explore recently published good news news stories from 6abc.com.",
+                    "visible_link": "https://6abc.com/tag/good-news/",
+                    "date": "",
+                    "rank": 52
+                },
+                {
+                    "link": "https://diokzoo.org/the-good-news",
+                    "title": "The Good News - | Diocese of Kalamazoo | Kalamazoo, MIhttps://diokzoo.org/the-good-newsCachedSimilar",
+                    "snippet": "The Good News, the official diocesan newspaper for the Diocese of Kalamazoo officially retired with its September 2018 edition. The Diocese will launch a new ...",
+                    "visible_link": "https://diokzoo.org/the-good-news",
+                    "date": "",
+                    "rank": 53
+                },
+                {
+                    "link": "https://www.thegoodnewspodcast.fm/",
+                    "title": "The Good News Podcasthttps://www.thegoodnewspodcast.fm/Cached",
+                    "snippet": "The Good News Podcast is your daily reminder that not all news is bad, produced by Colleen and Neil.",
+                    "visible_link": "https://www.thegoodnewspodcast.fm/",
+                    "date": "",
+                    "rank": 54
+                },
+                {
+                    "link": "https://www.detroitnews.com/story/sports/nfl/lions/2019/03/03/good-news-detroit-lions-combine-performances-validate-depth-tight-end-class/3039381002/",
+                    "title": "Good news for Detroit Lions: Combine performances validate depth of ...https://www.detroitnews.com/story/sports/nfl/lions/.../good-news.../3039381002/Cached",
+                    "snippet": "2 days ago - Good news for Lions: Combine performances validate depth of tight end class. Justin Rogers, The Detroit News Published 12:09 p.m. ET March ...",
+                    "visible_link": "https://www.detroitnews.com/story/sports/nfl/lions/.../good-news.../3039381002/",
+                    "date": "2 days ago - ",
+                    "rank": 55
+                },
+                {
+                    "link": "https://itunes.apple.com/us/app/good-news-network/id1044963284?mt=8",
+                    "title": "  Good News Network on the App Store - iTunes - Applehttps://itunes.apple.com/us/app/good-news-network/id1044963284?mt=8CachedSimilar",
+                    "snippet": "Read reviews, compare customer ratings, see screenshots, and learn more about Good News Network. Download Good News Network and enjoy it on your ...",
+                    "visible_link": "https://itunes.apple.com/us/app/good-news-network/id1044963284?mt=8",
+                    "date": "",
+                    "rank": 56
+                },
+                {
+                    "link": "https://www.taschen.com/pages/en/catalogue/photography/all/05331/facts.david_lachapelle_good_news_part_ii.htm",
+                    "title": "David LaChapelle. Good News. Part II - TASCHEN Bookshttps://www.taschen.com › Books › PhotographyCached",
+                    "snippet": "Move beyond the material world in a quest for paradise with David LaChapelle. Good News, the fifth installment of his book anthology by TASCHEN Books..",
+                    "visible_link": "https://www.taschen.com › Books › Photography",
+                    "date": "",
+                    "rank": 57
+                },
+                {
+                    "link": "https://www.goodnewsclinics.org/",
+                    "title": "Good News Clinic: Free medical & dental care to uninsured in ...https://www.goodnewsclinics.org/CachedSimilar",
+                    "snippet": "We are a Christian nonprofit providing free medical & dental care to uninsured residents of Hall County who cannot afford health care services.",
+                    "visible_link": "https://www.goodnewsclinics.org/",
+                    "date": "",
+                    "rank": 58
+                },
+                {
+                    "link": "https://blackamericaweb.com/2019/03/04/heres-the-good-news-about-minimum-wage/",
+                    "title": "Here's The Good News About Minimum Wage | Black America Webhttps://blackamericaweb.com/2019/03/.../heres-the-good-news-about-minimum-wage/Cached",
+                    "snippet": "1 day ago - WHAT'S THE NEWS ON MINIMUM WAGE? Put simply, we are seeing progress around the country when it comes to raising the minimum wage ...",
+                    "visible_link": "https://blackamericaweb.com/2019/03/.../heres-the-good-news-about-minimum-wage/",
+                    "date": "1 day ago - ",
+                    "rank": 59
+                },
+                {
+                    "link": "https://www.wsj.com/articles/sorry-for-the-good-news-11549063609",
+                    "title": "Sorry for the Good News - WSJhttps://www.wsj.com › Opinion › Review & Outlook",
+                    "snippet": "Feb 1, 2019 - Apologies to Senators Bernie Sanders and Elizabeth Warren and the writers at Bloomberg for the good news. To be fair to the gloomsters, ...",
+                    "visible_link": "https://www.wsj.com › Opinion › Review & Outlook",
+                    "date": "Feb 1, 2019 - ",
+                    "rank": 60
+                },
+                {
+                    "link": "https://revolution.themepunch.com/goodnews-responsive-wordpress-theme/",
+                    "title": "GoodNews - Slider Revolutionhttps://revolution.themepunch.com/goodnews-responsive-wordpress-theme/Cached",
+                    "snippet": "Slider Revolution can also be used to create a Responsive WordPress Theme with an intuitive, visual editor. Find out what else Slider Revolution can do!",
+                    "visible_link": "https://revolution.themepunch.com/goodnews-responsive-wordpress-theme/",
+                    "date": "",
+                    "rank": 61
+                },
+                {
+                    "link": "https://twitter.com/goodnews?lang=en",
+                    "title": "For Good's Sake (@goodnews) | Twitterhttps://twitter.com/goodnews?lang=enCachedSimilar",
+                    "snippet": "The latest Tweets from For Good's Sake (@goodnews). Good news from the editors of HuffPost!",
+                    "visible_link": "https://twitter.com/goodnews?lang=en",
+                    "date": "",
+                    "rank": 62
+                },
+                {
+                    "link": "https://www.baynews9.com/fl/tampa/community/good-news",
+                    "title": "Community | Good News | Spectrum Bay News 9https://www.baynews9.com/fl/tampa/community/good-newsCached",
+                    "snippet": "Tired of reading about bad news like crime, taxes, and accidents? If so, bookmark this Good News page for a daily dose of stories that will make you feel good ...",
+                    "visible_link": "https://www.baynews9.com/fl/tampa/community/good-news",
+                    "date": "",
+                    "rank": 63
+                },
+                {
+                    "link": "https://wtkr.com/category/good-news/",
+                    "title": "Good News | WTKR.comhttps://wtkr.com/category/good-news/Cached",
+                    "snippet": "53-year-old North Carolina man quits construction job to join daughter on police force · Food & Entertainment Good News News ...",
+                    "visible_link": "https://wtkr.com/category/good-news/",
+                    "date": "",
+                    "rank": 64
+                },
+                {
+                    "link": "https://www.9news.com.au/good-news",
+                    "title": "Good news headlines - 9Newshttps://www.9news.com.au/good-newsCached",
+                    "snippet": "Beagle and baby possum's unlikely friendship after heartbreak. After losing her litter of puppies at birth, Molly the beagle was having a 'ruff' time. good news ...",
+                    "visible_link": "https://www.9news.com.au/good-news",
+                    "date": "",
+                    "rank": 65
+                },
+                {
+                    "link": "http://www.greatnewsnetwork.org/",
+                    "title": "The Great News Network | great news for a changewww.greatnewsnetwork.org/CachedSimilar",
+                    "snippet": "The Great News Network provides inspirational and positive news about what's working in the world.",
+                    "visible_link": "www.greatnewsnetwork.org/",
+                    "date": "",
+                    "rank": 66
+                },
+                {
+                    "link": "https://www.goodnewsriverlodge.com/",
+                    "title": "Goodnews River Lodgehttps://www.goodnewsriverlodge.com/Cached",
+                    "snippet": "Sea Lice & Solitude. The Way Alaska Should Be.",
+                    "visible_link": "https://www.goodnewsriverlodge.com/",
+                    "date": "",
+                    "rank": 67
+                },
+                {
+                    "link": "https://www.facebook.com/thegoodnewsnetwork/",
+                    "title": "Good News Network - Home | Facebookhttps://www.facebook.com › Places › Santa Barbara, CaliforniaSimilar",
+                    "snippet": "Good News Network, Santa Barbara, California. 581798 likes · 61248 talking about this. The pioneering, best source for good news on the internet, now...",
+                    "visible_link": "https://www.facebook.com › Places › Santa Barbara, California",
+                    "date": "",
+                    "rank": 68
+                },
+                {
+                    "link": "http://www.wdam.com/news/good-news/",
+                    "title": "Good Newswww.wdam.com/news/good-news/",
+                    "snippet": "The superintendent of Jefferson Davis County schools said, “If there is ever a magical solution in education, then it would be literacy.”The district is changing ...",
+                    "visible_link": "www.wdam.com/news/good-news/",
+                    "date": "",
+                    "rank": 69
+                },
+                {
+                    "link": "https://www.wcpo.com/news/good-news",
+                    "title": "Cincinnati, Ohio Good News and Headlines | 9 On Your Side | wcpo.comhttps://www.wcpo.com/news/good-newsCached",
+                    "snippet": "Good news from Local, national news, video, government, politics, business, crime, education, health, Ohio, US, World news for Cincinnati, Ohio, Northern ...",
+                    "visible_link": "https://www.wcpo.com/news/good-news",
+                    "date": "",
+                    "rank": 70
+                },
+                {
+                    "link": "https://www.goodnewsumc.com/",
+                    "title": "Good News United Methodist Church Santa Rosa Beachhttps://www.goodnewsumc.com/Cached",
+                    "snippet": "Good News United Methodist Church located on Hwy 98 one mile east of 30A.",
+                    "visible_link": "https://www.goodnewsumc.com/",
+                    "date": "",
+                    "rank": 71
+                },
+                {
+                    "link": "https://www.signetsealed.com/good-news-calendar/good-news-calendar",
+                    "title": "Good News Calendar — Signet Sealedhttps://www.signetsealed.com/good-news-calendar/good-news-calendarCached",
+                    "snippet": "There were a lot of reasons why I wanted to create this product, but at the end of the day - we all just need some good, good news. This calendar is absolutely ...",
+                    "visible_link": "https://www.signetsealed.com/good-news-calendar/good-news-calendar",
+                    "date": "",
+                    "rank": 72
+                },
+                {
+                    "link": "http://goodnewsrestaurantandbar.com/",
+                    "title": "Good News Restaurant and Bar | Farm to Table | Woodbury, CT 06798goodnewsrestaurantandbar.com/Cached",
+                    "snippet": "Handcrafted, seasonal, local & organic as possible, natural, love-inspired, pure & truthful, genuine & sophisticated, Carole Peck, Owner & Chef, Good News.",
+                    "visible_link": "goodnewsrestaurantandbar.com/",
+                    "date": "",
+                    "rank": 73
+                },
+                {
+                    "link": "https://www.cityofpsl.com/discover-us/awards-recognition-good-news",
+                    "title": "Awards, Recognition & Good News | Port St. Luciehttps://www.cityofpsl.com/discover-us/awards-recognition-good-newsCached",
+                    "snippet": "Every year the Port St. Lucie Community Band performs its “Holiday Spectacular” concert—a great event for the whole family. And join the Holly Jolly Beach ...",
+                    "visible_link": "https://www.cityofpsl.com/discover-us/awards-recognition-good-news",
+                    "date": "",
+                    "rank": 74
+                },
+                {
+                    "link": "https://goodnewsministries.com/",
+                    "title": "Good News Ministries: Homehttps://goodnewsministries.com/Cached",
+                    "snippet": "Learn more about us by reading our latest news, stories, and projects ... He thought he had it all…money, a great job, wife, and kids. However, his whole wor.",
+                    "visible_link": "https://goodnewsministries.com/",
+                    "date": "",
+                    "rank": 75
+                },
+                {
+                    "link": "https://www.fox21news.com/goodnews",
+                    "title": "Good News - KXRMhttps://www.fox21news.com/goodnewsCached",
+                    "snippet": "2018 raises more than $1.7 million for local nonprofits · Give! Good News · Colorado Springs mail carrier recognized for helping woman who fell while walking ...",
+                    "visible_link": "https://www.fox21news.com/goodnews",
+                    "date": "",
+                    "rank": 76
+                },
+                {
+                    "link": "https://newsone.com/category/news/good-news/",
+                    "title": "Good News | News Onehttps://newsone.com/category/news/good-news/Cached",
+                    "snippet": "Good News. Importance of reading. 10-Year-Old Author Launches Book Series. A 10-year-old author from Washington, D.C. launched his own book series.",
+                    "visible_link": "https://newsone.com/category/news/good-news/",
+                    "date": "",
+                    "rank": 77
+                },
+                {
+                    "link": "https://www.biblestudytools.com/gnt/",
+                    "title": "Read the Good News Translation Free Online - Bible Study Toolshttps://www.biblestudytools.com/gnt/Cached",
+                    "snippet": "This modern version of the Bible in mid-20th century American English, prepared by a group of American biblical scholars, is also known as the Good News ...",
+                    "visible_link": "https://www.biblestudytools.com/gnt/",
+                    "date": "",
+                    "rank": 78
+                },
+                {
+                    "link": "https://www.scmp.com/comment/insight-opinion/united-states/article/2188479/good-news-investors-donald-trump-needs-china",
+                    "title": "Opinion | Good news for investors: Donald Trump needs a China trade ...https://www.scmp.com › Comment › Insight & Opinion › United StatesCached",
+                    "snippet": "2 days ago - Confusion reigns in global markets, as world growth and even US manufacturing slow. But the US president's eagerness to achieve a ...",
+                    "visible_link": "https://www.scmp.com › Comment › Insight & Opinion › United States",
+                    "date": "2 days ago - ",
+                    "rank": 79
+                },
+                {
+                    "link": "https://www.uab.edu/medicine/dom/news-events/good-news",
+                    "title": "UAB - School of Medicine - Medicine - Good Newshttps://www.uab.edu/medicine/dom/news-events/good-newsCached",
+                    "snippet": "Monica Baskin, PhD (Professor, Preventive Medicine) received the 2019 President's Diversity Champion Award for her research with community engagement to ...",
+                    "visible_link": "https://www.uab.edu/medicine/dom/news-events/good-news",
+                    "date": "",
+                    "rank": 80
+                },
+                {
+                    "link": "https://www.pcaac.org/what-we-believe/the-good-news/",
+                    "title": "The Good News | Presbyterian Church in America: Administrative ...https://www.pcaac.org/what-we-believe/the-good-news/Cached",
+                    "snippet": "The best-known verse in the Bible summarizes the required response to this good news: “For God so loved the world, that He gave His only Son, that whoever ...",
+                    "visible_link": "https://www.pcaac.org/what-we-believe/the-good-news/",
+                    "date": "",
+                    "rank": 81
+                },
+                {
+                    "link": "https://www.goodgoodgood.co/goodnewspaper",
+                    "title": "Goodnewspaper — Good Good Goodhttps://www.goodgoodgood.co/goodnewspaperCached",
+                    "snippet": "Good news isn't dead. Every quarter, we set out to prove it by printing the stories of the people, ideas, and movements that are changing the world for the better.",
+                    "visible_link": "https://www.goodgoodgood.co/goodnewspaper",
+                    "date": "",
+                    "rank": 82
+                },
+                {
+                    "link": "http://www.wlox.com/news/good-news/",
+                    "title": "Good News - WLOX.comwww.wlox.com/news/good-news/",
+                    "snippet": "Published March 1, 2019 at 1:09 PM. Gulf Coast Good News - Episode 44. By. Published February 22, 2019 at 11:22 AM. Gulf Coast Good News - Episode 43.",
+                    "visible_link": "www.wlox.com/news/good-news/",
+                    "date": "",
+                    "rank": 83
+                },
+                {
+                    "link": "http://goodnewsmission.net/",
+                    "title": "Good News Mission - With the Gospel to the End; With the Lord to the ...goodnewsmission.net/CachedSimilar",
+                    "snippet": "With the Gospel to the End; With the Lord to the Last.",
+                    "visible_link": "goodnewsmission.net/",
+                    "date": "",
+                    "rank": 84
+                },
+                {
+                    "link": "https://www.nbcsandiego.com/news/local/In-Case-You-Missed-It-San-Diego-Good-News-for-Sunday-March-3-506552891.html",
+                    "title": "In Case You Missed It: San Diego Good News for Sunday, March 3 ...https://www.nbcsandiego.com/news/.../In-Case-You-Missed-It-San-Diego-Good-News...Cached",
+                    "snippet": "2 days ago - A rundown of five 'good news' stories from the past week to help you stay informed on events in San Diego County.",
+                    "visible_link": "https://www.nbcsandiego.com/news/.../In-Case-You-Missed-It-San-Diego-Good-News...",
+                    "date": "2 days ago - ",
+                    "rank": 85
+                },
+                {
+                    "link": "https://www.valleynewslive.com/content/news/Good-news-for-tax-refunds-506641961.html",
+                    "title": "Good news for tax refunds - KVLYhttps://www.valleynewslive.com/.../news/Good-news-for-tax-refunds-506641961.htmlCached",
+                    "snippet": "Good news for tax refunds. Posted: Mon 1:02 AM, Mar 04, 2019. NBC - This year's tax season my be turning the corner when it comes to refunds.",
+                    "visible_link": "https://www.valleynewslive.com/.../news/Good-news-for-tax-refunds-506641961.html",
+                    "date": "",
+                    "rank": 86
+                },
+                {
+                    "link": "https://futurecrun.ch/goodnews",
+                    "title": "Good News — Future Crunchhttps://futurecrun.ch/goodnewsCached",
+                    "snippet": "The world isn't falling apart. You're just getting your news from the wrong places.",
+                    "visible_link": "https://futurecrun.ch/goodnews",
+                    "date": "",
+                    "rank": 87
+                },
+                {
+                    "link": "http://www.hisgoodnews.com/service-times",
+                    "title": "Service Times (Good News Church)www.hisgoodnews.com/service-timesCachedSimilar",
+                    "snippet": "At Good News Church in Sioux Falls, SD, we want to help everyone experience the grace, love, and forgiveness that God offers each of us through a personal ...",
+                    "visible_link": "www.hisgoodnews.com/service-times",
+                    "date": "",
+                    "rank": 88
+                },
+                {
+                    "link": "https://www.ncdp.org/category/good-news/",
+                    "title": "Good News About Democrats Archives | North Carolina Democratic ...https://www.ncdp.org/category/good-news/Cached",
+                    "snippet": "February 5, 2019 / Good News About Democrats · Good News About Democrats – February 4th, 2019 · Read more. Share ...",
+                    "visible_link": "https://www.ncdp.org/category/good-news/",
+                    "date": "",
+                    "rank": 89
+                },
+                {
+                    "link": "https://spectrumlocalnews.com/nc/triangle-sandhills/news/Good_News",
+                    "title": "Good News | Spectrum Newshttps://spectrumlocalnews.com/nc/triangle-sandhills/news/Good_NewsCached",
+                    "snippet": "The latest good news stories from across North Carolina.",
+                    "visible_link": "https://spectrumlocalnews.com/nc/triangle-sandhills/news/Good_News",
+                    "date": "",
+                    "rank": 90
+                },
+                {
+                    "link": "http://gnm.org/",
+                    "title": "Good News Ministries: Your home for daily Catholic faith growthgnm.org/CachedSimilar",
+                    "snippet": "Good News Ministries is the Catholic center for faith growth with daily reflections, virtual retreats, prayer, WordBytes articles and more.",
+                    "visible_link": "gnm.org/",
+                    "date": "",
+                    "rank": 91
+                },
+                {
+                    "link": "https://justfaith.org/programs/goodnewspeople/",
+                    "title": "GoodNewsPeople | JustFaith Ministrieshttps://justfaith.org/programs/goodnewspeople/Cached",
+                    "snippet": "Participants explore the possibilities of a faithful commitment to be “good news to the poor.” It is an opportunity to explore the message of Christ and proclaim ...",
+                    "visible_link": "https://justfaith.org/programs/goodnewspeople/",
+                    "date": "",
+                    "rank": 92
+                },
+                {
+                    "link": "https://www.spirit1053.com/good-news-stories/",
+                    "title": "The Good News Story of the Day | SPIRIT 105.3https://www.spirit1053.com/good-news-stories/Cached",
+                    "snippet": "Share Your Good News Story A Surprise Thanks for Lt. Dan Posted Feb 28, 2019 25 years ago Forrest Gump was rel...",
+                    "visible_link": "https://www.spirit1053.com/good-news-stories/",
+                    "date": "",
+                    "rank": 93
+                },
+                {
+                    "link": "https://www.pressherald.com/2019/03/01/navy-declines-to-resurrect-retired-vessels-possibly-good-news-for-biw/",
+                    "title": "Navy declines to resurrect retired vessels, possibly good news for BIW ...https://www.pressherald.com/.../navy-declines-to-resurrect-retired-vessels-possibly-go...Cached",
+                    "snippet": "4 days ago - BATH — The Navy says it won't bring older ships out of retirement to build up the fleet to the Trump administration's 355-ship goal. That could ...",
+                    "visible_link": "https://www.pressherald.com/.../navy-declines-to-resurrect-retired-vessels-possibly-go...",
+                    "date": "4 days ago - ",
+                    "rank": 94
+                },
+                {
+                    "link": "https://www.dailykos.com/blog/Good%20News",
+                    "title": "Daily Kos: Good Newshttps://www.dailykos.com/blog/Good%20NewsCached",
+                    "snippet": "Yeah, shows how starved for good news that this is all I can offer. What can I say some days are easier than others to get the good news. But yeah, US and ...",
+                    "visible_link": "https://www.dailykos.com/blog/Good%20News",
+                    "date": "",
+                    "rank": 95
+                },
+                {
+                    "link": "https://www.theindychannel.com/news/good-news",
+                    "title": "Good News - RTV6https://www.theindychannel.com/news/good-newsCached",
+                    "snippet": "Indianapolis. IFD dispatcher coaches young girl through CPR, saves her mom. Shakkira Harris. 10:33 PM, Feb 22, 2019 · Indianapolis. Junior League of ...",
+                    "visible_link": "https://www.theindychannel.com/news/good-news",
+                    "date": "",
+                    "rank": 96
+                },
+                {
+                    "link": "http://goodnews.pylusd.org/",
+                    "title": "Good News Reportgoodnews.pylusd.org/CachedSimilar",
+                    "snippet": "Valencia High School's drama and musical department will proudly present the musical “Into the Woods” this weekend in the Auditorium. Shows are…",
+                    "visible_link": "goodnews.pylusd.org/",
+                    "date": "",
+                    "rank": 97
+                },
+                {
+                    "link": "http://www.mygoodnewstv.com/",
+                    "title": "GOOD NEWS TV - Homewww.mygoodnewstv.com/CachedSimilar",
+                    "snippet": "Phoenix / Prescott / Flagstaff / Payson / Yuma / Dallas-Ft Worth.",
+                    "visible_link": "www.mygoodnewstv.com/",
+                    "date": "",
+                    "rank": 98
+                },
+                {
+                    "link": "http://www.goodnewsfwb.org/",
+                    "title": "Good News Free Will Baptist Church | Welcome!www.goodnewsfwb.org/CachedSimilar",
+                    "snippet": "New to Good News · Service Times · How To Find Us · Photo Galleries · Our History · Staff. Programs. Sunday School · Adult Classes · Teen Classes · Children's ...",
+                    "visible_link": "www.goodnewsfwb.org/",
+                    "date": "",
+                    "rank": 99
+                },
+                {
+                    "link": "https://theweek.com/good-news/826060/weeks-good-news-february-28-2019",
+                    "title": "The week's good news: February 28, 2019https://theweek.com/good-news/826060/weeks-good-news-february-28-2019Cached",
+                    "snippet": "5 days ago - Plastic, cigarette butts, fishing lines — nothing's safe from the Seabin. The Seabin is a floating waste receptacle that can be installed in calm ...",
+                    "visible_link": "https://theweek.com/good-news/826060/weeks-good-news-february-28-2019",
+                    "date": "5 days ago - ",
+                    "rank": 100
+                },
+                {
+                    "link": "http://kokomoperspective.com/kp/news/fca-s-billion-investment-could-spell-good-news-for-kokomo/article_8ab4ffa0-3ea6-11e9-929f-4b272fc1dff8.html",
+                    "title": "FCA's $4.5 billion investment could spell good news for Kokomo ...kokomoperspective.com/.../news/...good-news.../article_8ab4ffa0-3ea6-11e9-929f-4b...Cached",
+                    "snippet": "1 day ago - Last week FCA US unveiled plans to invest $4.5 billion in Detroit, adding production to facilities in Michigan to bolster production of Jeep- and ...",
+                    "visible_link": "kokomoperspective.com/.../news/...good-news.../article_8ab4ffa0-3ea6-11e9-929f-4b...",
+                    "date": "1 day ago - ",
+                    "rank": 101
+                },
+                {
+                    "link": "https://www.merriam-webster.com/dictionary/good%20news%20for%20(someone)",
+                    "title": "Good News For (someone) - Merriam-Websterhttps://www.merriam-webster.com/dictionary/good%20news%20for%20(someone)CachedSimilar",
+                    "snippet": "something new that will be useful to (someone) Lower ticket prices are good news for sports fans. The new dog park is good news for dog lovers.",
+                    "visible_link": "https://www.merriam-webster.com/dictionary/good%20news%20for%20(someone)",
+                    "date": "",
+                    "rank": 102
+                }
+            ]
+        },
+        "2": {
+            "time": "Tue, 05 Mar 2019 22:57:36 GMT",
+            "num_results": "Page 2 of about 11,910,000,000 results (0.45 seconds) ",
+            "no_results": false,
+            "effective_query": "",
+            "results": [
+                {
+                    "link": "https://www.youtube.com/watch?v=YJ7a3Z7kN6Y",
+                    "title": "Apashe - Good News - YouTubehttps://www.youtube.com/watch?v=YJ7a3Z7kN6Y",
+                    "snippet": "Follow our Spotify playlist: http://trapcity.tv/Spotify Subscribe here: http://trapcity.tv/subscribe Download here ...",
+                    "visible_link": "https://www.youtube.com/watch?v=YJ7a3Z7kN6Y",
+                    "date": "",
+                    "rank": 103
+                },
+                {
+                    "link": "https://um-insight.net/topics/good_news/",
+                    "title": "Good News United Methodist Insighthttps://um-insight.net/topics/good_news/Cached",
+                    "snippet": "Jeremy Smith has recovered evidence of a long-term strategy on the part of Good News to either capture or dissolve The United Methodist Church. Read more.",
+                    "visible_link": "https://um-insight.net/topics/good_news/",
+                    "date": "",
+                    "rank": 104
+                },
+                {
+                    "link": "http://www.goodnews.ie/",
+                    "title": "Today's Good Newswww.goodnews.ie/CachedSimilar",
+                    "snippet": "Today's Good News, brought to you from the Dominicans in Tallaght Dublin, & Popesquay Co.Cork, offers thoughtful reflections on spirituality and social issues.",
+                    "visible_link": "www.goodnews.ie/",
+                    "date": "",
+                    "rank": 105
+                },
+                {
+                    "link": "https://www.phideltatheta.org/members/submit-good-news/",
+                    "title": "Submit Good News - Phi Delta Theta Fraternityhttps://www.phideltatheta.org/members/submit-good-news/CachedSimilar",
+                    "snippet": "Submit Good News. Get Featured on The Scroll News Feed. Would you like to see the good work that your chapter or club is doing featured on the Fraternity's ...",
+                    "visible_link": "https://www.phideltatheta.org/members/submit-good-news/",
+                    "date": "",
+                    "rank": 106
+                },
+                {
+                    "link": "https://longhollow.com/the-good-news/",
+                    "title": "The Good News | Long Hollow Baptist Churchhttps://longhollow.com/the-good-news/Cached",
+                    "snippet": "But the Good News is that Jesus died on the cross for you and then rose from the dead to demonstrate that His payment was acceptable to God. By taking your ...",
+                    "visible_link": "https://longhollow.com/the-good-news/",
+                    "date": "",
+                    "rank": 107
+                },
+                {
+                    "link": "https://www.bibleodyssey.org/en/tools/ask-a-scholar/good-news-of-the-nt",
+                    "title": "“Good News” of the New Testament - Bible Odysseyhttps://www.bibleodyssey.org/en/tools/ask-a-scholar/good-news-of-the-ntCached",
+                    "snippet": "A. “The good news” (or “gospel” = “good spiel”) is a literal translation of the Greek word euangelion. New Testament authors use this term to mean the news of ...",
+                    "visible_link": "https://www.bibleodyssey.org/en/tools/ask-a-scholar/good-news-of-the-nt",
+                    "date": "",
+                    "rank": 108
+                },
+                {
+                    "link": "https://www.unitedwaytucson.org/good_news",
+                    "title": "Good News Network - United Way of Tucson and Southern Arizonahttps://www.unitedwaytucson.org/good_newsCached",
+                    "snippet": "By submitting this form, you are granting: United Way of Tucson and Southern Arizona, 330 N Commerce Park Loop Suite 200, Tucson, Arizona, 85745, United ...",
+                    "visible_link": "https://www.unitedwaytucson.org/good_news",
+                    "date": "",
+                    "rank": 109
+                },
+                {
+                    "link": "http://www.goodnewsgaragecambridge.com/",
+                    "title": "Good News Garage | Auto Repair and Service | Mechanics in ...www.goodnewsgaragecambridge.com/CachedSimilar",
+                    "snippet": "Good News Garage, located in Cambridge, MA, is a general auto repair shop with an outstanding reputation in quality and customer service.",
+                    "visible_link": "www.goodnewsgaragecambridge.com/",
+                    "date": "",
+                    "rank": 110
+                },
+                {
+                    "link": "https://www.localmemphis.com/news/localgoodnews",
+                    "title": "Local Good News - LocalMemphishttps://www.localmemphis.com/news/localgoodnewsCached",
+                    "snippet": "Local Good News: Disney & First Book Want Kids To Know The Magic Of Storytelling 6 days ... Local Good News: \"The Lucky 11\" From Memphis 20 days ago.",
+                    "visible_link": "https://www.localmemphis.com/news/localgoodnews",
+                    "date": "",
+                    "rank": 111
+                },
+                {
+                    "link": "http://www.goodnewsgardening.com/cafe/",
+                    "title": "Good News Gardening Cafewww.goodnewsgardening.com/cafe/CachedSimilar",
+                    "snippet": "OUR WEBSITE IS UNDER CONSTRUCTION - OUR MENU IS ON FACEBOOK OR PLEASE CALL FOR QUESTIONS. OPEN MON-SAT 7-3 ...",
+                    "visible_link": "www.goodnewsgardening.com/cafe/",
+                    "date": "",
+                    "rank": 112
+                },
+                {
+                    "link": "http://www.globalgoodnews.com/",
+                    "title": "Global Good News - Good news from around the world - 05 March 2019www.globalgoodnews.com/CachedSimilar",
+                    "snippet": "Global Good News documents the rise of a better quality of life dawning in the world.",
+                    "visible_link": "www.globalgoodnews.com/",
+                    "date": "",
+                    "rank": 113
+                },
+                {
+                    "link": "https://www.goodnet.org/good_news",
+                    "title": "Good News - Goodnet | Gateway to doing goodhttps://www.goodnet.org/good_newsCached",
+                    "snippet": "GOOD NEWS: Positive headlines from around the world ... The UAE Will Become the First Arab Nation to Pass a 'Good Samaritan' Law. Jan 17, 2019 ...",
+                    "visible_link": "https://www.goodnet.org/good_news",
+                    "date": "",
+                    "rank": 114
+                },
+                {
+                    "link": "https://www.dailysignal.com/2019/02/27/the-kernel-of-good-news-in-hate-hoaxes/",
+                    "title": "The Kernel of Good News in Hate Hoaxeshttps://www.dailysignal.com/2019/02/27/the-kernel-of-good-news-in-hate-hoaxes/Cached",
+                    "snippet": "7 days ago - The good news about the racial hoaxes on the nation's college campuses is that left-wing college students have a difficult time finding the ...",
+                    "visible_link": "https://www.dailysignal.com/2019/02/27/the-kernel-of-good-news-in-hate-hoaxes/",
+                    "date": "7 days ago - ",
+                    "rank": 115
+                },
+                {
+                    "link": "https://campgoodnewsfl.com/",
+                    "title": "Camp Good Newshttps://campgoodnewsfl.com/Cached",
+                    "snippet": "SPRING BREAK CAMP. APRIL 1st - 5th. REGISTER NOW! (See Below). What's Happening At Camp Good News? SUMMER CAMP 2019. image537. ON GOOD ...",
+                    "visible_link": "https://campgoodnewsfl.com/",
+                    "date": "",
+                    "rank": 116
+                },
+                {
+                    "link": "https://electrathemes.com/wordpress-themes/good-news-lite/",
+                    "title": "Good News Lite WordPress Theme | ElectraThemeshttps://electrathemes.com/wordpress-themes/good-news-lite/Cached",
+                    "snippet": "Good News Lite is a WordPress theme for news, affiliate blog and magazine websites. It is a mobile responsive WordPress theme and home page is driven by ...",
+                    "visible_link": "https://electrathemes.com/wordpress-themes/good-news-lite/",
+                    "date": "",
+                    "rank": 117
+                },
+                {
+                    "link": "http://goodnewsplanet.com/",
+                    "title": "Good Newsgoodnewsplanet.com/CachedSimilar",
+                    "snippet": "Our Mission: Find, Create, Receive, Life Affirming, Thought Provoking Good News, Entertainment, Events, Products and Services. Up-Beat, Not Beat-Up",
+                    "visible_link": "goodnewsplanet.com/",
+                    "date": "",
+                    "rank": 118
+                },
+                {
+                    "link": "https://www.fox23.com/list/news/feelgood/anlm",
+                    "title": "Good News | FOX23https://www.fox23.com/list/news/feelgood/anlmCached",
+                    "snippet": "Oklahoma News. New 3 get prison in college basketball recruiting scandal 12:12 ... National News. California AG to announce Clark investigation results 12:27 ...",
+                    "visible_link": "https://www.fox23.com/list/news/feelgood/anlm",
+                    "date": "",
+                    "rank": 119
+                },
+                {
+                    "link": "https://www.redstate.com/sarah-rumpf/2019/03/04/good-news-poverty-rate-hispanic-americans-drops-time-low/",
+                    "title": "Good News: Poverty Rate for Hispanic-Americans Drops to All-Time Lowhttps://www.redstate.com/.../good-news-poverty-rate-hispanic-americans-drops-time-l...Cached",
+                    "snippet": "1 day ago - These historically-low poverty rates are good news for Hispanics, but as a group they have long been overrepresented among the total ...",
+                    "visible_link": "https://www.redstate.com/.../good-news-poverty-rate-hispanic-americans-drops-time-l...",
+                    "date": "1 day ago - ",
+                    "rank": 120
+                },
+                {
+                    "link": "https://www.samsgoodnews.com/",
+                    "title": "Sam's Good News: Newspaper | Weekly Shopping Guide | Good ...https://www.samsgoodnews.com/Cached",
+                    "snippet": "Sam's Good News is Rutland, Vermont's ultimate area shopping guide. Each week, our free newspaper brings you the best of what Rutland, Vermont and the ...",
+                    "visible_link": "https://www.samsgoodnews.com/",
+                    "date": "",
+                    "rank": 121
+                },
+                {
+                    "link": "http://www.wtvm.com/news/good-news",
+                    "title": "Good News - WTVM.comwww.wtvm.com/news/good-news",
+                    "snippet": "Good News. Good News. Video. Continued Coverage. MOST RECENT. Frigid Night Ahead. By. Derek Kinkade. Aftermath: Alabama's tornado dead range in ...",
+                    "visible_link": "www.wtvm.com/news/good-news",
+                    "date": "",
+                    "rank": 122
+                },
+                {
+                    "link": "http://www.wmcactionnews5.com/news/good-news/",
+                    "title": "Good News - WMC Action News 5 - Memphis, Tennesseewww.wmcactionnews5.com/news/good-news/",
+                    "snippet": "The Black Millennial Political Convention was hosted in Memphis this weekend, bringing together young black leaders in media, community activism, academia, ...",
+                    "visible_link": "www.wmcactionnews5.com/news/good-news/",
+                    "date": "",
+                    "rank": 123
+                },
+                {
+                    "link": "https://whyevolutionistrue.wordpress.com/2019/03/05/good-news-and-bad-news-first-the-good-news/",
+                    "title": "Good news and bad news. First, the good news: New Zealand repeals ...https://whyevolutionistrue.wordpress.com/.../good-news-and-bad-news-first-the-good-...Cached",
+                    "snippet": "4 hours ago - When I was a kid, my dad would ask me this question. \"Jerry, I have some good news and some bad news. Which do you want to hear first?",
+                    "visible_link": "https://whyevolutionistrue.wordpress.com/.../good-news-and-bad-news-first-the-good-...",
+                    "date": "4 hours ago - ",
+                    "rank": 124
+                },
+                {
+                    "link": "https://www.abc.net.au/news/good-news/",
+                    "title": "Good News - ABC News (Australian Broadcasting Corporation)https://www.abc.net.au/news/good-news/Cached",
+                    "snippet": "Australia's most trusted source of local, national and world news. ... by an emu, which is showing a great deal of interest in everyday happenings on the farm.",
+                    "visible_link": "https://www.abc.net.au/news/good-news/",
+                    "date": "",
+                    "rank": 125
+                },
+                {
+                    "link": "https://www.urbandictionary.com/define.php?term=good%20news",
+                    "title": "Urban Dictionary: good newshttps://www.urbandictionary.com/define.php?term=good%20newsCached",
+                    "snippet": "'The air support will be delivering the good news in a 2 minutes' ... Pot-smokers might use the term \"good news\" to hide the fact that they are talking about weed ...",
+                    "visible_link": "https://www.urbandictionary.com/define.php?term=good%20news",
+                    "date": "",
+                    "rank": 126
+                },
+                {
+                    "link": "https://www.goodnewshome.org/",
+                    "title": "The Good News Home for Women: ADDICTION TREATMENT | NJhttps://www.goodnewshome.org/Cached",
+                    "snippet": "The Good News Home is a residential treatment center for women desiring to break the bonds of alcohol/chemical addiction and co-occurring disorders.",
+                    "visible_link": "https://www.goodnewshome.org/",
+                    "date": "",
+                    "rank": 127
+                },
+                {
+                    "link": "https://www.livingthegoodnews.com/",
+                    "title": "Living the Good Newshttps://www.livingthegoodnews.com/Similar",
+                    "snippet": "No information is available for this page.Learn why",
+                    "visible_link": "https://www.livingthegoodnews.com/",
+                    "date": "",
+                    "rank": 128
+                },
+                {
+                    "link": "https://www.virginiafirst.com/good-news",
+                    "title": "Local Good News - WFXRhttps://www.virginiafirst.com/good-newsCached",
+                    "snippet": "VMI Band performs at Mardi Gras celebration over the weekend · Good News · Good News · Burton Center donates over a dozen computers to BRAAC.",
+                    "visible_link": "https://www.virginiafirst.com/good-news",
+                    "date": "",
+                    "rank": 129
+                },
+                {
+                    "link": "http://www.churchredeemer.org/Good-News",
+                    "title": "Good News | Church of the Redeemerwww.churchredeemer.org/Good-NewsCachedSimilar",
+                    "snippet": "Church of the Redeemer - Good News page.",
+                    "visible_link": "www.churchredeemer.org/Good-News",
+                    "date": "",
+                    "rank": 130
+                },
+                {
+                    "link": "https://www.silive.com/news/2019/03/good-news-animal-lover-saves-suffering-pooch.html",
+                    "title": "Good News: Animal lover saves suffering pooch - silive.comhttps://www.silive.com/news/.../good-news-animal-lover-saves-suffering-pooch.htmlCached",
+                    "snippet": "Good News: Animal lover saves suffering pooch. Posted Mar 3, 12:01 PM. Molly was also known as Porky. By Carol Razzano Dispensa of Midland Beach.",
+                    "visible_link": "https://www.silive.com/news/.../good-news-animal-lover-saves-suffering-pooch.html",
+                    "date": "",
+                    "rank": 131
+                },
+                {
+                    "link": "http://goodnews.church/",
+                    "title": "Good News Church: Homegoodnews.church/Cached",
+                    "snippet": "Good News is a church where anyone can be transformed by the story of Jesus. Good News is For All People.'",
+                    "visible_link": "goodnews.church/",
+                    "date": "",
+                    "rank": 132
+                },
+                {
+                    "link": "https://timesofindia.indiatimes.com/goodnews/48953550.cms",
+                    "title": "Good News Stories, Inspiring News and Positive Stories | Times of Indiahttps://timesofindia.indiatimes.com › Good NewsCached",
+                    "snippet": "Feel happy by reading the Good News stories from around the world at Times of India of Good News section containing inspiring stories, positive, uplifting and ...",
+                    "visible_link": "https://timesofindia.indiatimes.com › Good News",
+                    "date": "",
+                    "rank": 133
+                },
+                {
+                    "link": "https://www.space.com/digging-mars-life-strategy-atacama-desert.html",
+                    "title": "Good News for Mars Life Hunt? Rover Digs Up Microbes in Chilean ...https://www.space.com/digging-mars-life-strategy-atacama-desert.htmlCached",
+                    "snippet": "5 days ago - Drilling for signs of life on Mars, as two rover missions plan to do soon, is a pretty sound strategy, a new study suggests.",
+                    "visible_link": "https://www.space.com/digging-mars-life-strategy-atacama-desert.html",
+                    "date": "5 days ago - ",
+                    "rank": 134
+                },
+                {
+                    "link": "https://tanksgoodnews.com/",
+                    "title": "Tank's Good Newshttps://tanksgoodnews.com/Cached",
+                    "snippet": "Awesome Animals. Homeless people on their pets: 'She saved me as much as I saved her'. Heather, 22, Seattle Before we found Poppy, I didn't feel like I had ...",
+                    "visible_link": "https://tanksgoodnews.com/",
+                    "date": "",
+                    "rank": 135
+                },
+                {
+                    "link": "http://www.bl.uk/learning/langlit/poetryperformance/browning/poem2/browning2.html",
+                    "title": "How they Brought the Good News from Ghent to Aix - The British Librarywww.bl.uk › ... › Robert Browning read by Robert Hardy and Greg WiseCachedSimilar",
+                    "snippet": "Listen to Robert Hardy performing Robert Browning's poem How they Brought the Good News from Ghent to Aix.",
+                    "visible_link": "www.bl.uk › ... › Robert Browning read by Robert Hardy and Greg Wise",
+                    "date": "",
+                    "rank": 136
+                },
+                {
+                    "link": "https://www.inc.com/maria-aspan/startup-money-made-easy-excerpt.html",
+                    "title": "The Good News About How Much Money You Need to Start Your ... - Inc.https://www.inc.com/maria-aspan/startup-money-made-easy-excerpt.html",
+                    "snippet": "Feb 12, 2019 - The good news: Probably not as much as you think. ... after six years,\" says Bert Jacobs, co-founder of the apparel company Life Is Good.",
+                    "visible_link": "https://www.inc.com/maria-aspan/startup-money-made-easy-excerpt.html",
+                    "date": "Feb 12, 2019 - ",
+                    "rank": 137
+                },
+                {
+                    "link": "https://www.passportforgood.com/category/news/",
+                    "title": "Good News – Passport For Goodhttps://www.passportforgood.com/category/news/Cached",
+                    "snippet": "The Watervliet City School District will begin to provide Passport for Good as a resource for students to create customized portfolios of their engagement in ...",
+                    "visible_link": "https://www.passportforgood.com/category/news/",
+                    "date": "",
+                    "rank": 138
+                },
+                {
+                    "link": "https://borgenproject.org/victories-fighting-poverty/",
+                    "title": "Global Poverty... The Good News - The Borgen Projecthttps://borgenproject.org/victories-fighting-poverty/CachedSimilar",
+                    "snippet": "Learn about some of the many victories fighting poverty and see why we are excited about the global poverty good news.",
+                    "visible_link": "https://borgenproject.org/victories-fighting-poverty/",
+                    "date": "",
+                    "rank": 139
+                },
+                {
+                    "link": "https://www.chicagocatholic.com/the-good-news-index",
+                    "title": "The Good News - Chicago Catholichttps://www.chicagocatholic.com/the-good-news-indexCached",
+                    "snippet": "Welcome! Our Good News section is an additional way for parishes, schools, organizations and groups in the Archdiocese of Chicago to share the good things ...",
+                    "visible_link": "https://www.chicagocatholic.com/the-good-news-index",
+                    "date": "",
+                    "rank": 140
+                },
+                {
+                    "link": "https://www.uuabookstore.org/After-the-Good-News-P18460.aspx",
+                    "title": "inSpirit: UUA Bookstore and Gift Shop: After the Good Newshttps://www.uuabookstore.org/After-the-Good-News-P18460.aspxCached",
+                    "snippet": "Jan 22, 2019 - Progressive faith is at a crossroads. Liberal pulpits ring with grand sermons about the arc that bends toward justice, and about progress ...",
+                    "visible_link": "https://www.uuabookstore.org/After-the-Good-News-P18460.aspx",
+                    "date": "Jan 22, 2019 - ",
+                    "rank": 141
+                },
+                {
+                    "link": "https://unfoundation.org/blog/post/good-news-stories-you-may-have-missed-in-2018/",
+                    "title": "8 Good News Stories You May Have Missed in 2018https://unfoundation.org › SDG ProgressCached",
+                    "snippet": "Dec 20, 2018 - While it may not make the news, time and again, we've seen that collective action leads to global progress. So here's the good news you might ...",
+                    "visible_link": "https://unfoundation.org › SDG Progress",
+                    "date": "Dec 20, 2018 - ",
+                    "rank": 142
+                },
+                {
+                    "link": "https://skopos.org/gospel/",
+                    "title": "What is the Good News? | Skoposhttps://skopos.org/gospel/Cached",
+                    "snippet": "“Repent and believe the good news!” Mark 1:15 “For God loved the world in this way: He gave His One and Only Son, so that everyone who believes in Him will ...",
+                    "visible_link": "https://skopos.org/gospel/",
+                    "date": "",
+                    "rank": 143
+                },
+                {
+                    "link": "https://www.kwtx.com/content/news/Good-News-Friday-3-1-2019-506545281.html",
+                    "title": "Good News Friday 3-1-2019 - KWTX.comhttps://www.kwtx.com/content/news/Good-News-Friday-3-1-2019-506545281.htmlCached",
+                    "snippet": "4 days ago - Today on Good News Friday we congratulated a couple of Central Texas student athletes and wished a happy birthday to a few special friends.",
+                    "visible_link": "https://www.kwtx.com/content/news/Good-News-Friday-3-1-2019-506545281.html",
+                    "date": "4 days ago - ",
+                    "rank": 144
+                },
+                {
+                    "link": "https://www.ksn.com/news/good-news-kansas",
+                    "title": "Good News Kansas | KSN.comhttps://www.ksn.com/news/good-news-kansasCached",
+                    "snippet": "Good News Kansas ... Kansas cops go bald for a good cause during 'Shave-a-Cop' event. For a small donation, participants were able to shave a cop's hair.",
+                    "visible_link": "https://www.ksn.com/news/good-news-kansas",
+                    "date": "",
+                    "rank": 145
+                },
+                {
+                    "link": "https://www.ncbi.nlm.nih.gov/pubmed/1361684",
+                    "title": "NO news is good news. - NCBIhttps://www.ncbi.nlm.nih.gov/pubmed/1361684Similar",
+                    "snippet": "Science. 1992 Dec 18;258(5090):1862-5. NO news is good news. Culotta E, Koshland DE Jr. Comment in Science. 1993 Apr 9;260(5105):146. Science.",
+                    "visible_link": "https://www.ncbi.nlm.nih.gov/pubmed/1361684",
+                    "date": "",
+                    "rank": 146
+                },
+                {
+                    "link": "https://goodnewsindia.org/",
+                    "title": "Good News India: Rescuing Destitute Children From a Life of Povertyhttps://goodnewsindia.org/Cached",
+                    "snippet": "Good News India is the world's largest network of 24/7 care centers for orphaned or destitute children. Help rescue a child from a life of poverty today!",
+                    "visible_link": "https://goodnewsindia.org/",
+                    "date": "",
+                    "rank": 147
+                },
+                {
+                    "link": "https://www.sciencedaily.com/releases/2019/02/190227131847.htm",
+                    "title": "Good news for future tech: Exotic 'topological' materials are ...https://www.sciencedaily.com/releases/2019/02/190227131847.htmCached",
+                    "snippet": "6 days ago - Once thought rare, strangely behaving substances called 'topological materials' are in fact quite common, a finding that bodes well for their ...",
+                    "visible_link": "https://www.sciencedaily.com/releases/2019/02/190227131847.htm",
+                    "date": "6 days ago - ",
+                    "rank": 148
+                },
+                {
+                    "link": "https://www.fool.com/investing/2019/02/26/home-depot-has-good-news-for-investors.aspx",
+                    "title": "Home Depot Has Good News for Investors -- The Motley Foolhttps://www.fool.com/investing/2019/.../home-depot-has-good-news-for-investors.asp...Cached",
+                    "snippet": "Feb 26, 2019 - Home Depot Has Good News for Investors. Sales growth slowed at the end of 2018, but executives projected another year of record results ...",
+                    "visible_link": "https://www.fool.com/investing/2019/.../home-depot-has-good-news-for-investors.asp...",
+                    "date": "Feb 26, 2019 - ",
+                    "rank": 149
+                },
+                {
+                    "link": "https://www.umnews.org/en/news/good-news-gc2019-breakfast-draws-big-crowd",
+                    "title": "Good News GC2019 breakfast draws big crowd | United Methodist ...https://www.umnews.org/en/news/good-news-gc2019-breakfast-draws-big-crowdCached",
+                    "snippet": "Feb 23, 2019 - The Rev. Jerry Kulah makes his case for the Modified Traditional Plan during a Feb. 23 breakfast hosted by Good News, an unofficial traditional ...",
+                    "visible_link": "https://www.umnews.org/en/news/good-news-gc2019-breakfast-draws-big-crowd",
+                    "date": "Feb 23, 2019 - ",
+                    "rank": 150
+                },
+                {
+                    "link": "https://www.ibdb.com/broadway-production/good-news-10358",
+                    "title": "Good News – Broadway Musical – Original | IBDBhttps://www.ibdb.com/broadway-production/good-news-10358CachedSimilar",
+                    "snippet": "Good News (Musical, Original) opened in New York City Sep 6, 1927 and played through Jan 5, 1929.",
+                    "visible_link": "https://www.ibdb.com/broadway-production/good-news-10358",
+                    "date": "",
+                    "rank": 151
+                },
+                {
+                    "link": "https://www.christianitytoday.com/ct/2019/january-february/how-bible-genealogies-preach-good-news.html",
+                    "title": "How Bible Genealogies Preach the Good News | Christianity Todayhttps://www.christianitytoday.com/ct/.../how-bible-genealogies-preach-good-news.htm...Cached",
+                    "snippet": "Dec 28, 2018 - How Bible Genealogies Preach the Good News. Image: RyanJLane / Getty. We joke that most people fear public speaking more than death, but ...",
+                    "visible_link": "https://www.christianitytoday.com/ct/.../how-bible-genealogies-preach-good-news.htm...",
+                    "date": "Dec 28, 2018 - ",
+                    "rank": 152
+                },
+                {
+                    "link": "https://247sports.com/player/goodnews-kpegeol-46076700/",
+                    "title": "Goodnews Kpegeol, Taylor Made Basketball, Shooting Guardhttps://247sports.com/player/goodnews-kpegeol-46076700/Cached",
+                    "snippet": "Jan 1, 2019 - Goodnews Kpegeol is a 6-6, 180-pound Shooting Guard from Pensacola, FL.",
+                    "visible_link": "https://247sports.com/player/goodnews-kpegeol-46076700/",
+                    "date": "Jan 1, 2019 - ",
+                    "rank": 153
+                },
+                {
+                    "link": "http://cnycentral.com/news/good-news",
+                    "title": "Syracuse Good News | News, Weather, Sports, Breaking News | WSTMcnycentral.com/news/good-newsCachedSimilar",
+                    "snippet": "WSTM WSTQ WTVH provide up to the minute news, sports, weather and community notices to ... Good News: October 30, 2018 ... Good News: January 29, 2018.",
+                    "visible_link": "cnycentral.com/news/good-news",
+                    "date": "",
+                    "rank": 154
+                },
+                {
+                    "link": "https://www.spanishdict.com/translate/good%20news",
+                    "title": "Good news in Spanish | English to Spanish Translation - SpanishDicthttps://www.spanishdict.com/translate/good%20newsCached",
+                    "snippet": "Translate Good news. See 3 authoritative translations of Good news in Spanish with example sentences and audio pronunciations.",
+                    "visible_link": "https://www.spanishdict.com/translate/good%20news",
+                    "date": "",
+                    "rank": 155
+                },
+                {
+                    "link": "https://www.ajc.com/sports/for-fried-braves-any-minor-injury-news-good-news/xpz3LWETEHkKBEl18TVsJL/",
+                    "title": "For Max Fried, Braves, any minor injury news is good news - AJC.comhttps://www.ajc.com/sports/for...news-good-news/xpz3LWETEHkKBEl18TVsJL/Cached",
+                    "snippet": "1 day ago - As Brian Snitker made the now-too-routine walk to the mound Saturday to check on one of his dinged-u...",
+                    "visible_link": "https://www.ajc.com/sports/for...news-good-news/xpz3LWETEHkKBEl18TVsJL/",
+                    "date": "1 day ago - ",
+                    "rank": 156
+                },
+                {
+                    "link": "http://www.dailygood.org/",
+                    "title": "DailyGood: News That Inspireswww.dailygood.org/CachedSimilar",
+                    "snippet": "DailyGood is a portal that shares inspiring quotes and news stories that focus on the \"good\" we can find in our world daily along with a simple action to continue ...",
+                    "visible_link": "www.dailygood.org/",
+                    "date": "",
+                    "rank": 157
+                },
+                {
+                    "link": "http://goodnewspartners.org/about-us",
+                    "title": "About Us | Good News Partnersgoodnewspartners.org/about-usCached",
+                    "snippet": "To end homelessness and hopelessness with everyone God brings us – to foster justice, and build bridges of reconciliation. Our Vision: Good News Partners is ...",
+                    "visible_link": "goodnewspartners.org/about-us",
+                    "date": "",
+                    "rank": 158
+                },
+                {
+                    "link": "https://www.renscochamber.com/market-your-business/2018-good-news-rensselaer-county-awards-call-nominations",
+                    "title": "\"Good News\" Rensselaer County Awards Call for Nominations ...https://www.renscochamber.com/.../2018-good-news-rensselaer-county-awards-call-n...Cached",
+                    "snippet": "The Chamber is seeking nominees for the 2019 \"Good News\" Rensselaer County Awards. Co-hosted by the Chamber and Rensselaer County, this event ...",
+                    "visible_link": "https://www.renscochamber.com/.../2018-good-news-rensselaer-county-awards-call-n...",
+                    "date": "",
+                    "rank": 159
+                },
+                {
+                    "link": "https://www.goodwillsa.org/the-good-news/the-good-news",
+                    "title": "The Good News - Goodwill San Antoniohttps://www.goodwillsa.org/the-good-news/the-good-newsCached",
+                    "snippet": "Our newsletters are provided below to keep you informed on what is happening at Goodwill San Antonio. Browse through our newsletter archive and subscribe.",
+                    "visible_link": "https://www.goodwillsa.org/the-good-news/the-good-news",
+                    "date": "",
+                    "rank": 160
+                },
+                {
+                    "link": "https://www.lds.org/study/ensign/2013/12/the-good-news-of-repentance",
+                    "title": "The Good News of Repentance - LDS.orghttps://www.lds.org/study/ensign/2013/12/the-good-news-of-repentanceCached",
+                    "snippet": "And when we remember that “the word gospel means 'good news'” (Bible Dictionary, “Gospels”), the principle of repentance emerges in a very positive light.",
+                    "visible_link": "https://www.lds.org/study/ensign/2013/12/the-good-news-of-repentance",
+                    "date": "",
+                    "rank": 161
+                },
+                {
+                    "link": "https://www.positive.news/",
+                    "title": "Home - Positive News - Positive Newshttps://www.positive.news/CachedSimilar",
+                    "snippet": "Keeping the mountains alive: saving the Apuan Alps. In Italy, people are reclaiming the once-magnificent Apuan Alps. They are trying to put a stop to destructive ...",
+                    "visible_link": "https://www.positive.news/",
+                    "date": "",
+                    "rank": 162
+                },
+                {
+                    "link": "https://www.harding.edu/academics/colleges-departments/arts-humanities/music/ensembles/good-news-singers",
+                    "title": "Harding - Music - Good News Singershttps://www.harding.edu/academics/colleges-departments/arts.../good-news-singersCached",
+                    "snippet": "Good News Singers is an A Cappella singing group from Harding University. The group performs a variety of uplifting spiritual songs for churches and other ...",
+                    "visible_link": "https://www.harding.edu/academics/colleges-departments/arts.../good-news-singers",
+                    "date": "",
+                    "rank": 163
+                },
+                {
+                    "link": "http://cef-sc.org/good-news-clubs.html",
+                    "title": "Good News Clubs - Child Evangelism Fellowship of SCcef-sc.org/good-news-clubs.htmlCachedSimilar",
+                    "snippet": "Good News Clubs meet weekly to share the message of the Gospel to children.",
+                    "visible_link": "cef-sc.org/good-news-clubs.html",
+                    "date": "",
+                    "rank": 164
+                },
+                {
+                    "link": "https://www.socialworktoday.com/news/dn_120613.shtml",
+                    "title": "Good News on the Alzheimer's Epidemic: Older Adults Risk Declininghttps://www.socialworktoday.com/news/dn_120613.shtmlCached",
+                    "snippet": "News. Good News on the Alzheimer's Epidemic: Older Adults Risk Declining. People are less likely to experience dementia and Alzheimer's disease today than ...",
+                    "visible_link": "https://www.socialworktoday.com/news/dn_120613.shtml",
+                    "date": "",
+                    "rank": 165
+                },
+                {
+                    "link": "https://www.mauldineconomics.com/the-10th-man/the-good-news-about-consumer-debt",
+                    "title": "The Good News About Consumer Debt | Mauldin Economicshttps://www.mauldineconomics.com/the-10th.../the-good-news-about-consumer-debtCached",
+                    "snippet": "The Good News About Consumer Debt. By Jared Dillian. February 21, 2019. I saw a headline last week: “More Americans Are Behind On Their Car Loans Than ...",
+                    "visible_link": "https://www.mauldineconomics.com/the-10th.../the-good-news-about-consumer-debt",
+                    "date": "",
+                    "rank": 166
+                },
+                {
+                    "link": "https://www.publicaffairsbooks.com/titles/katherine-reynolds-lewis/the-good-news-about-bad-behavior/9781610398398/",
+                    "title": "The Good News About Bad Behavior by Katherine Reynolds Lewis ...https://www.publicaffairsbooks.com/titles/katherine...good-news.../9781610398398/Cached",
+                    "snippet": "The Good News About Bad Behavior. Why Kids Are Less Disciplined Than Ever—And What to Do About It. by Katherine Reynolds Lewis. The current model of ...",
+                    "visible_link": "https://www.publicaffairsbooks.com/titles/katherine...good-news.../9781610398398/",
+                    "date": "",
+                    "rank": 167
+                },
+                {
+                    "link": "https://www.fastcompany.com/90311695/good-news-for-slobs-these-hotel-rooms-clean-themselves",
+                    "title": "Good news for slobs: These hotel rooms clean themselveshttps://www.fastcompany.com/.../good-news-for-slobs-these-hotel-rooms-clean-thems...Cached",
+                    "snippet": "Feb 25, 2019 - Copenhagen's Hotel Herman K and the new Hotel Ottilia integrate technology that allows the rooms to fully disinfect themselves each morning.",
+                    "visible_link": "https://www.fastcompany.com/.../good-news-for-slobs-these-hotel-rooms-clean-thems...",
+                    "date": "Feb 25, 2019 - ",
+                    "rank": 168
+                },
+                {
+                    "link": "https://spectator.org/the-good-news-about-the-botched-bureaucratic-coup/",
+                    "title": "The Good News About the Botched Bureaucratic Coup | The American ...https://spectator.org/the-good-news-about-the-botched-bureaucratic-coup/Cached",
+                    "snippet": "Feb 19, 2019 - A lot of Americans are justifiably angry that disgraced FBI official Andrew McCabe is doing a book tour rather than a stretch in some federal ...",
+                    "visible_link": "https://spectator.org/the-good-news-about-the-botched-bureaucratic-coup/",
+                    "date": "Feb 19, 2019 - ",
+                    "rank": 169
+                },
+                {
+                    "link": "https://www.bible.com/bible/68/PSA.27.GNT",
+                    "title": "Psalm 27, Good News Translation (GNT) | The Bible App - Bible.comhttps://www.bible.com › GNTCachedSimilar",
+                    "snippet": "A Prayer of Praise#HEBREW TITLE: By David. The Lord is my light and my salvation;I will fear no one.The Lord protects me from all danger;I will never be afraid.",
+                    "visible_link": "https://www.bible.com › GNT",
+                    "date": "",
+                    "rank": 170
+                },
+                {
+                    "link": "https://www.airspacemag.com/daily-planet/good-news-pilots-weathers-getting-better-180971328/",
+                    "title": "Good News, Pilots—The Weather's Getting Better | Daily Planet | Air ...https://www.airspacemag.com/.../good-news-pilots-weathers-getting-better-18097132...Cached",
+                    "snippet": "Jan 24, 2019 - That's good news for harried travelers—commercial flights are more likely to be on time in good weather because more aircraft can land and ...",
+                    "visible_link": "https://www.airspacemag.com/.../good-news-pilots-weathers-getting-better-18097132...",
+                    "date": "Jan 24, 2019 - ",
+                    "rank": 171
+                },
+                {
+                    "link": "https://www.sfchronicle.com/49ers/article/Good-news-for-49ers-Earl-Thomas-won-t-take-13656062.php",
+                    "title": "Good news for 49ers? Earl Thomas won't take discount for Dallas ...https://www.sfchronicle.com/.../Good-news-for-49ers-Earl-Thomas-won-t-take-13656...Cached",
+                    "snippet": "4 days ago - Earl Thomas, 29, a Texas native who played at the University of Texas, won't take a discount to play for Dallas and reportedly wants a contract ...",
+                    "visible_link": "https://www.sfchronicle.com/.../Good-news-for-49ers-Earl-Thomas-won-t-take-13656...",
+                    "date": "4 days ago - ",
+                    "rank": 172
+                },
+                {
+                    "link": "https://www.mennonitehome.org/giving/good-news-qcd-informational-video/",
+                    "title": "Good News for Charitable People - Mennonite Home Communitieshttps://www.mennonitehome.org/giving/good-news-qcd-informational-video/",
+                    "snippet": "Discover more about qualified charitable distribution and how it can potentially benefit both the individual ...",
+                    "visible_link": "https://www.mennonitehome.org/giving/good-news-qcd-informational-video/",
+                    "date": "",
+                    "rank": 173
+                },
+                {
+                    "link": "https://www.educationnext.org/good-news-new-orleans-evidence-reform-student-achievement/",
+                    "title": "Good News for New Orleans: Early evidence shows reforms lifting ...https://www.educationnext.org/good-news-new-orleans-evidence-reform-student-achi...Cached",
+                    "snippet": "What happened to the New Orleans public schools following the tragic levee breeches after Hurricane Katrina is truly unprecedented. Within the span of one ...",
+                    "visible_link": "https://www.educationnext.org/good-news-new-orleans-evidence-reform-student-achi...",
+                    "date": "",
+                    "rank": 174
+                },
+                {
+                    "link": "https://www.dictionary.com/browse/good-news",
+                    "title": "Good news | Define Good news at Dictionary.comhttps://www.dictionary.com/browse/good-newsCached",
+                    "snippet": "Good news definition, someone or something that is positive, encouraging, uplifting, desirable, or the like. See more.",
+                    "visible_link": "https://www.dictionary.com/browse/good-news",
+                    "date": "",
+                    "rank": 175
+                },
+                {
+                    "link": "https://www.ascentria.org/about/video-library/how-good-news-garage-helped-nikki",
+                    "title": "Ascentria Care Alliance - How Good News Garage Helped Nikkihttps://www.ascentria.org/about/video-library/how-good-news-garage-helped-nikki",
+                    "snippet": "Watch Nikki share her amazing story of how Good News Garage helped her work towards independence and ...",
+                    "visible_link": "https://www.ascentria.org/about/video-library/how-good-news-garage-helped-nikki",
+                    "date": "",
+                    "rank": 176
+                },
+                {
+                    "link": "http://www.cracked.com/article_26109_20-pieces-good-news-everybody-missed-in-2018.html",
+                    "title": "20 Pieces Of Good News Everybody Missed In 2018 | Cracked.comwww.cracked.com/article_26109_20-pieces-good-news-everybody-missed-in-2018.ht...Cached",
+                    "snippet": "Dec 21, 2018 - Here are 20 uplifting news stories you might have missed this year.",
+                    "visible_link": "www.cracked.com/article_26109_20-pieces-good-news-everybody-missed-in-2018.ht...",
+                    "date": "Dec 21, 2018 - ",
+                    "rank": 177
+                },
+                {
+                    "link": "https://www.spraynwash.com/videos/spray-n-wash-good-news-grass/",
+                    "title": "Spray 'n Wash “Good News” Grasshttps://www.spraynwash.com/videos/spray-n-wash-good-news-grass/",
+                    "snippet": "Spray 'n Wash “Good News” Grass. Spray 'n Wash “Good News” Coffee · Terms & Conditions · Privacy Policy ...",
+                    "visible_link": "https://www.spraynwash.com/videos/spray-n-wash-good-news-grass/",
+                    "date": "",
+                    "rank": 178
+                },
+                {
+                    "link": "https://www.tribuneindia.com/news/life-style/-good-news-diljit-dosanjh-akshay-kareena-spotted-at-a-gurdwara/737554.html",
+                    "title": "'Good News': Diljit Dosanjh, Akshay, Kareena spotted at a gurdwarahttps://www.tribuneindia.com/news/life-style/-good-news-diljit...a.../737554.htmlCached",
+                    "snippet": "3 days ago - TheTribune: CHANDIGARH: On Saturday, Bebo with her faux baby bump was seen with her co-stars Akshay Kumar and Diljit Dosanjh shooting ...",
+                    "visible_link": "https://www.tribuneindia.com/news/life-style/-good-news-diljit...a.../737554.html",
+                    "date": "3 days ago - ",
+                    "rank": 179
+                },
+                {
+                    "link": "https://www.bostonherald.com/2019/03/04/parker-protect-life-rule-is-good-news-for-america/",
+                    "title": "Parker: Protect Life Rule is good news for America - Boston Heraldhttps://www.bostonherald.com/.../parker-protect-life-rule-is-good-news-for-america/Cached",
+                    "snippet": "2 days ago - According to research of John D. Mueller of the Ethics and Public Policy Center in Washington, \"legal abortion is the main cause of family ...",
+                    "visible_link": "https://www.bostonherald.com/.../parker-protect-life-rule-is-good-news-for-america/",
+                    "date": "2 days ago - ",
+                    "rank": 180
+                },
+                {
+                    "link": "https://thebulletin.org/2019/01/some-good-news-about-the-environment/",
+                    "title": "Some good news about the environment - Bulletin of the Atomic ...https://thebulletin.org › Climate ChangeCached",
+                    "snippet": "Jan 2, 2019 - Editor's note: This story was originally published by Grist. It appears here as part of the Climate Desk collaboration. By all accounts, 2018 had ...",
+                    "visible_link": "https://thebulletin.org › Climate Change",
+                    "date": "Jan 2, 2019 - ",
+                    "rank": 181
+                },
+                {
+                    "link": "https://www.theregister.co.uk/2019/03/04/congress_net_neutrality/",
+                    "title": "Good news: Congress has solutions to end net neutrality brouhaha ...https://www.theregister.co.uk/2019/03/04/congress_net_neutrality/Cached",
+                    "snippet": "1 day ago - Analysis An effort in Congress to end the United States' net neutrality nightmare appears to have fallen apart before it began. Last month ...",
+                    "visible_link": "https://www.theregister.co.uk/2019/03/04/congress_net_neutrality/",
+                    "date": "1 day ago - ",
+                    "rank": 182
+                },
+                {
+                    "link": "https://www.ndtv.com/entertainment/trending-kareena-kapoor-shoots-for-good-news-with-baby-bump-in-mumbai-2000254",
+                    "title": "Trending: Kareena Kapoor Shoots For Good News With 'Baby Bump ...https://www.ndtv.com › EntertainmentCached",
+                    "snippet": "6 days ago - Pictures from the sets of Good News, in which Kareena Kapoor sports a baby bump are now viral.",
+                    "visible_link": "https://www.ndtv.com › Entertainment",
+                    "date": "6 days ago - ",
+                    "rank": 183
+                },
+                {
+                    "link": "https://www.thefreedictionary.com/Good+news",
+                    "title": "Good news - definition of Good news by The Free Dictionaryhttps://www.thefreedictionary.com/Good+newsCached",
+                    "snippet": "Good news synonyms, Good news pronunciation, Good news translation, English dictionary definition of Good news. pl.n. 1. a. Information about recent events ...",
+                    "visible_link": "https://www.thefreedictionary.com/Good+news",
+                    "date": "",
+                    "rank": 184
+                },
+                {
+                    "link": "https://www.newsweek.com/climate-change-good-news-2018-scientists-chernobyl-renewable-energy-1276275",
+                    "title": "Good News Stories About Climate Change From 2018 That You Might ...https://www.newsweek.com/climate-change-good-news-2018-scientists-chernobyl-ren...Cached",
+                    "snippet": "Jan 1, 2019 - Start 2019 with some positive news about climate change.",
+                    "visible_link": "https://www.newsweek.com/climate-change-good-news-2018-scientists-chernobyl-ren...",
+                    "date": "Jan 1, 2019 - ",
+                    "rank": 185
+                },
+                {
+                    "link": "https://www.forbes.com/sites/kenrapoza/2018/12/13/good-news-for-2019-mexicos-new-president-amlo-is-scaring-wall-street/",
+                    "title": "Good News For 2019: Mexico's New President AMLO Is Scaring Wall ...https://www.forbes.com/.../good-news-for-2019-mexicos-new-president-amlo-is-scari...Cached",
+                    "snippet": "Dec 13, 2018 - Mexico investors hope Obrador will be more like Brazil's Lula. But the good Lula, not the jailed Lula.",
+                    "visible_link": "https://www.forbes.com/.../good-news-for-2019-mexicos-new-president-amlo-is-scari...",
+                    "date": "Dec 13, 2018 - ",
+                    "rank": 186
+                },
+                {
+                    "link": "https://goodnewsbaptist.org/media/live-stream",
+                    "title": "Live Stream — Good News Baptist Churchhttps://goodnewsbaptist.org/media/live-streamCached",
+                    "snippet": "live stream player. Back to Top. Good News Baptist Church, 3252 Taylor Road, Chesapeake, VA, 23321(757) 488-3241info@goodnewsbaptist.org.",
+                    "visible_link": "https://goodnewsbaptist.org/media/live-stream",
+                    "date": "",
+                    "rank": 187
+                },
+                {
+                    "link": "https://www.natchezdemocrat.com/2019/03/04/happy-mardi-gras-and-other-good-news/",
+                    "title": "Happy Mardi Gras! And other good news - Mississippi's Best ...https://www.natchezdemocrat.com/2019/03/.../happy-mardi-gras-and-other-good-new...Cached",
+                    "snippet": "17 hours ago - Mardi Gras parades in Natchez and Vidalia were certainly among the good news items reported last week. Here we take a look at some of the ...",
+                    "visible_link": "https://www.natchezdemocrat.com/2019/03/.../happy-mardi-gras-and-other-good-new...",
+                    "date": "17 hours ago - ",
+                    "rank": 188
+                },
+                {
+                    "link": "https://www.goodworldnews.org/",
+                    "title": "Good World Newshttps://www.goodworldnews.org/Cached",
+                    "snippet": "Actively bringing you GOOD news from around the world!",
+                    "visible_link": "https://www.goodworldnews.org/",
+                    "date": "",
+                    "rank": 189
+                },
+                {
+                    "link": "http://nymag.com/daily/intelligencer/2016/06/washington-post-jeff-bezos-donald-trump.html",
+                    "title": "The Good News at Trump's Least-Favorite Paper -- NYMagnymag.com/daily/intelligencer/2016/.../washington-post-jeff-bezos-donald-trump.htm...CachedSimilar",
+                    "snippet": "Jun 28, 2016 - The Good News at the Washington Post, Trump's Least-Favorite Paper ... “I feel quite good about things, actually,” he says, sitting across from a ...",
+                    "visible_link": "nymag.com/daily/intelligencer/2016/.../washington-post-jeff-bezos-donald-trump.htm...",
+                    "date": "Jun 28, 2016 - ",
+                    "rank": 190
+                },
+                {
+                    "link": "http://k985.com/feel-good-news-88-year-old-man-retires-for-second-time/",
+                    "title": "Feel Good News: 88- Year-Old Man Retires For SECOND Time - K985k985.com/feel-good-news-88-year-old-man-retires-for-second-time/Cached",
+                    "snippet": "6 hours ago - Here's a Feel Good News Story to start your day off right: An 88-year-old man is officially retiring in May for a second time from his McDonald's ...",
+                    "visible_link": "k985.com/feel-good-news-88-year-old-man-retires-for-second-time/",
+                    "date": "6 hours ago - ",
+                    "rank": 191
+                },
+                {
+                    "link": "https://www.washingtonpost.com/politics/2019/03/05/four-ten-africans-are-deeply-committed-democracy-thats-good-news/",
+                    "title": "4 in 10 Africans are deeply committed to democracy. That's the good ...https://www.washingtonpost.com/.../four-ten-africans-are-deeply-committed-democracy-...",
+                    "snippet": "12 hours ago - The bad and good news comes in almost daily. Increasingly authoritarian regimes clamp down on dissent in Tanzania and Zambia, and Togo's ...",
+                    "visible_link": "https://www.washingtonpost.com/.../four-ten-africans-are-deeply-committed-democracy-...",
+                    "date": "12 hours ago - ",
+                    "rank": 192
+                },
+                {
+                    "link": "https://www.goodnews.ch/",
+                    "title": "Home - Good Newshttps://www.goodnews.ch/CachedTranslate this page",
+                    "snippet": "Good News Events. März. 2 Events. Jaakko Eino Kalevi. 5. – 6. März 2019 · Godsmack. 6. März 2019 · AUSVERKAUFT - Slash. 7. März 2019 · 3 Events. Catalyst ...",
+                    "visible_link": "https://www.goodnews.ch/",
+                    "date": "",
+                    "rank": 193
+                },
+                {
+                    "link": "https://www.ucg.org/the-good-news",
+                    "title": "Good News | United Church of Godhttps://www.ucg.org/the-good-newsCachedSimilar",
+                    "snippet": "The Good News was published from 1995 to 2015 by the United Church of God. It was created to look at world events from a Biblical perspective and give ...",
+                    "visible_link": "https://www.ucg.org/the-good-news",
+                    "date": "",
+                    "rank": 194
+                },
+                {
+                    "link": "https://www.benzinga.com/news/19/03/13290280/exposing-eurusd-weakness-after-failing-to-rise-on-good-news",
+                    "title": "Exposing EUR/USD Weakness After Failing To Rise On Good News ...https://www.benzinga.com/news/.../exposing-eurusd-weakness-after-failing-to-rise-on-...Cached",
+                    "snippet": "1 day ago - EUR/USD kicked off the week with a Sunday gap but closed it quickly. A series of news that should have lifted the pair failed to do so.",
+                    "visible_link": "https://www.benzinga.com/news/.../exposing-eurusd-weakness-after-failing-to-rise-on-...",
+                    "date": "1 day ago - ",
+                    "rank": 195
+                },
+                {
+                    "link": "https://www.oneplace.com/ministries/todays-walk-radio/player/sharing-the-good-news-part-2-745969.html",
+                    "title": "Sharing the Good News, Part 2 - Listen to Today's Walk Radio with Dr ...https://www.oneplace.com/ministries/.../sharing-the-good-news-part-2-745969.htmlCached",
+                    "snippet": "13 hours ago - Previous Broadcasts. Sharing the Good News, Part 1 - 3/1/2019 · Pointing to Jesus, Part 2 - 2/28/2019. Broadcast Archives ...",
+                    "visible_link": "https://www.oneplace.com/ministries/.../sharing-the-good-news-part-2-745969.html",
+                    "date": "13 hours ago - ",
+                    "rank": 196
+                },
+                {
+                    "link": "https://www.cleveland.com/tribe/2019/03/cleveland-indians-why-hanley-ramirez-how-about-some-good-news-from-goodyear-terry-pluto.html",
+                    "title": "Cleveland Indians: Why Hanley Ramirez? How about some good ...https://www.cleveland.com/.../cleveland-indians-why-hanley-ramirez-how-about-som...Cached",
+                    "snippet": "3 days ago - How about some good news from Goodyear? ... The 30-year-old is a good hitter vs. right-handers (.279), compared to lefties (.176). ... fielder: “Mercado has wiry strength and produces good bat speed...his average raw power ...",
+                    "visible_link": "https://www.cleveland.com/.../cleveland-indians-why-hanley-ramirez-how-about-som...",
+                    "date": "3 days ago - ",
+                    "rank": 197
+                },
+                {
+                    "link": "https://nesn.com/2019/03/bruins-injuries-good-news-on-david-pastrnak-bad-news-on-kevan-miller/",
+                    "title": "Bruins Injuries: Good News On David Pastrnak, Bad News On Kevan ...https://nesn.com/.../bruins-injuries-good-news-on-david-pastrnak-bad-news-on-kevan...Cached",
+                    "snippet": "1 day ago - While it's good news that Pastrnak is inching closer to a return, Cassidy's update still should be taken with a grain of salt. The team's leading ...",
+                    "visible_link": "https://nesn.com/.../bruins-injuries-good-news-on-david-pastrnak-bad-news-on-kevan...",
+                    "date": "1 day ago - ",
+                    "rank": 198
+                },
+                {
+                    "link": "https://www.foxcarolina.com/good-news-spectacular-this-weekend-in-greenville-county/video_14ffbd2b-21d4-5b4b-8d20-16e739803993.html",
+                    "title": "Good News Spectacular this weekend in Greenville County ...https://www.foxcarolina.com/good-news.../video_14ffbd2b-21d4-5b4b-8d20-16e73980...",
+                    "snippet": "Copyright 2019 FOX Carolina News (A Meredith Corporation Station), 21 Interstate Court Greenville, SC ...",
+                    "visible_link": "https://www.foxcarolina.com/good-news.../video_14ffbd2b-21d4-5b4b-8d20-16e73980...",
+                    "date": "",
+                    "rank": 199
+                },
+                {
+                    "link": "https://techcrunch.com/2018/08/21/google-assistants-latest-feature-delivers-just-the-good-news/",
+                    "title": "Google Assistant's latest feature delivers just the 'good news ...https://techcrunch.com/.../google-assistants-latest-feature-delivers-just-the-good-news/Cached",
+                    "snippet": "Aug 21, 2018 - You're not the only one feeling run down by the news of the day. The folks at Google apparently believe we could all use a dose of good news, ...",
+                    "visible_link": "https://techcrunch.com/.../google-assistants-latest-feature-delivers-just-the-good-news/",
+                    "date": "Aug 21, 2018 - ",
+                    "rank": 200
+                },
+                {
+                    "link": "https://www.thecut.com/2018/11/midterm-elections-2018-biggest-wins-for-democrats.html",
+                    "title": "the Good News From the Midterm Elections - The Cuthttps://www.thecut.com/2018/.../midterm-elections-2018-biggest-wins-for-democrats.ht...",
+                    "snippet": "Nov 8, 2018 - The Democrats regained control of the House, but that's not the only good news coming out the 2018 midterm results. There are also some ...",
+                    "visible_link": "https://www.thecut.com/2018/.../midterm-elections-2018-biggest-wins-for-democrats.ht...",
+                    "date": "Nov 8, 2018 - ",
+                    "rank": 201
+                },
+                {
+                    "link": "https://www.phillytrib.com/the_learning_key/good-news-in-the-district/article_04f6f19c-863d-54d3-8aed-b5ebb3186e13.html",
+                    "title": "Good News in the District | The Learning Key | phillytrib.comhttps://www.phillytrib.com/.../good-news.../article_04f6f19c-863d-54d3-8aed-b5ebb3...Cached",
+                    "snippet": "12 hours ago - Good News in the District. Harlem Globetrotter Darnell “Speedy” Artis talks to students at his Alma Mater Pastorius-Richardson Elementary.",
+                    "visible_link": "https://www.phillytrib.com/.../good-news.../article_04f6f19c-863d-54d3-8aed-b5ebb3...",
+                    "date": "12 hours ago - ",
+                    "rank": 202
                 }
             ]
         }

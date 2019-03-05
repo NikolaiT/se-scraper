@@ -41,8 +41,11 @@ class InfospaceScraper extends Scraper {
     }
 
     async load_start_page() {
+
+        let startUrl = this.build_start_url('http://search.infospace.com/search/web?') || 'http://infospace.com/index.html';
+
         try {
-            await this.page.goto('http://infospace.com/index.html');
+            await this.page.goto(startUrl);
             await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
         } catch (e) {
             return false;

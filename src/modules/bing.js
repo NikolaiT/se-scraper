@@ -45,8 +45,10 @@ class BingScraper extends Scraper {
 	}
 
 	async load_start_page() {
+	    let startUrl = this.build_start_url('https://www.bing.com/search?') || 'https://www.bing.com/';
+
 		try {
-			await this.page.goto('https://www.bing.com/');
+			await this.page.goto(startUrl);
 		    await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
 		} catch (e) {
 		    return false;
@@ -117,8 +119,10 @@ class BingNewsScraper extends Scraper {
 	}
 
 	async load_start_page() {
+        let startUrl = 'https://www.bing.com/news/search?';
+
 		try {
-			await this.page.goto('https://www.bing.com/news/search?');
+			await this.page.goto(startUrl);
 			if (this.config.set_manual_settings === true) {
 				console.log('Sleeping 30 seconds. Set your settings now.');
 				await this.sleep(30000);
@@ -127,6 +131,7 @@ class BingNewsScraper extends Scraper {
 		} catch (e) {
 			return false;
 		}
+
 		return true;
 	}
 

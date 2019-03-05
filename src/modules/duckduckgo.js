@@ -38,8 +38,11 @@ class DuckduckgoScraper extends Scraper {
     }
 
     async load_start_page() {
+
+        let startUrl = this.build_start_url('https://duckduckgo.com/?') || 'https://duckduckgo.com/';
+
         try {
-            await this.page.goto('https://duckduckgo.com/');
+            await this.page.goto(startUrl);
             await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
         } catch (e) {
             return false;
@@ -56,19 +59,19 @@ class DuckduckgoScraper extends Scraper {
     }
 
     async next_page() {
-        let next_page_link = await this.page.$('a.result--more__btn', {timeout: 1000});
+        let next_page_link = await this.page.$('a.result--more__btn', {timeout: 5000});
         if (!next_page_link) {
             return false;
         }
         await next_page_link.click();
-        //await this.page.waitForNavigation();
+        await this.page.waitForNavigation();
 
         return true;
     }
 
     async wait_for_results() {
         await this.page.waitForSelector('.serp__results', { timeout: 5000 });
-        await this.sleep(250);
+        await this.sleep(350);
     }
 
     async detected() {

@@ -35,8 +35,11 @@ class BaiduScraper extends Scraper {
 	}
 
 	async load_start_page() {
+
+        let startUrl = this.build_start_url('https://www.baidu.com/s?') || 'https://www.baidu.com/';
+
 		try {
-			await this.page.goto('https://www.baidu.com/');
+			await this.page.goto(startUrl);
 			await this.page.waitForSelector('input[name="wd"]', { timeout: 5000 });
 		} catch (e) {
 			return false;

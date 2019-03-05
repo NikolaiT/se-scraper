@@ -40,6 +40,12 @@
     - make README.md nicer. https://github.com/thomasdondorf/puppeteer-cluster/blob/master/README.md as template
 
 ### TODO:
+    - fix duckduckgo test case!!!
+    - add test case for infospace
+    - add test case for google parameters for 
+        - num
+        - start
+        - some language settings
     - write test case for proxy support and cluster support
     - add captcha service solving support
     - check if news instances run the same browser and if we can have one proxy per tab wokers

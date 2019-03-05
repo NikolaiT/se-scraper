@@ -16,6 +16,7 @@ If you don't have much technical experience or don't want to purchase proxies, y
 - [Scraping Model](#scraping-model)
 - [Technical Notes](#technical-notes)
 - [Advanced Usage](#advanced-usage)
+- [Special Query String Parameters for Search Engines](#query-string-parameters)
 
 
 Se-scraper supports the following search engines:
@@ -308,3 +309,23 @@ se_scraper.scrape(config, callback);
 ```
 
 [Output for the above script on my machine.](examples/results/advanced.json)
+
+### Query String Parameters
+
+You can add your custom query string parameters to the configuration object by specifying a `google_settings` key. In general: `{{search engine}}_settings`.
+
+For example you can customize your google search with the following config:
+
+```js
+let config = {
+    search_engine: 'google',
+    // use specific search engine parameters for various search engines
+    google_settings: {
+        google_domain: 'google.com',
+        gl: 'us', // The gl parameter determines the Google country to use for the query.
+        hl: 'us', // The hl parameter determines the Google UI language to return results.
+        start: 0, // Determines the results offset to use, defaults to 0.
+        num: 100, // Determines the number of results to show, defaults to 10. Maximum is 100.
+    },
+}
+```
