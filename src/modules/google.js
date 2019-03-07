@@ -538,7 +538,7 @@ const GOOGLE_HL = {
 };
 
 
-    class GoogleScraper extends Scraper {
+class GoogleScraper extends Scraper {
 
     constructor(...args) {
         super(...args);

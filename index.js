@@ -25,7 +25,7 @@ exports.scrape = async function(user_config, callback) {
         compress: false, // compress
         debug: false,
         verbose: true,
-        keywords: ['scrapeulous.com'],
+        keywords: ['search engine scraping scrapeulous.com'],
         // whether to start the browser in headless mode
         headless: true,
         // the number of pages to scrape for each keyword
@@ -53,7 +53,7 @@ exports.scrape = async function(user_config, callback) {
             timeout: 30 * 60 * 1000, // max timeout set to 30 minutes
             monitor: false,
             concurrency: Cluster.CONCURRENCY_BROWSER,
-            maxConcurrency: 2,
+            maxConcurrency: 1,
         }
     };
 

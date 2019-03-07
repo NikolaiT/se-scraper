@@ -133,7 +133,7 @@ module.exports.handler = async function handler (event, context, callback) {
                     pluggable: pluggable,
                     page: page,
                 });
-                results = obj.run({page: page});
+                results = obj.run({});
                 num_requests = obj.num_requests;
                 metadata = obj.metadata;
             }
@@ -259,8 +259,13 @@ module.exports.handler = async function handler (event, context, callback) {
             });
         }
 
-        metadata.id = `${config.job_name} ${config.chunk_lines}`;
-        metadata.chunk_lines = config.chunk_lines;
+        if (config.chunk_lines) {
+            metadata.chunk_lines = config.chunk_lines;
+            if (config.job_name) {
+                metadata.id = `${config.job_name} ${config.chunk_lines}`;
+            }
+        }
+
         metadata.elapsed_time = timeDelta.toString();
         metadata.ms_per_keyword = ms_per_request.toString();
         metadata.num_requests = num_requests;

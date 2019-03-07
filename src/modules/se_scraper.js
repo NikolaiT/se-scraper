@@ -39,7 +39,10 @@ module.exports = class Scraper {
     }
 
     async run({page, data}) {
-        this.page = page;
+
+        if (page) {
+            this.page = page;
+        }
 
         let do_continue = await this.load_search_engine();
 
