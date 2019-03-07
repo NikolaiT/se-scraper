@@ -12,13 +12,15 @@ let config = {
     search_engine: 'google',
 
     // use specific search engine parameters for various search engines
-    google_settings: {
-        google_domain: 'google.com',
-        gl: 'us', // The gl parameter determines the Google country to use for the query.
-        hl: 'us', // The hl parameter determines the Google UI language to return results.
-        start: 0, // Determines the results offset to use, defaults to 0.
-        num: 100, // Determines the number of results to show, defaults to 10. Maximum is 100.
-    },
+    // google_settings: {
+    //     google_domain: 'google.com',
+    //     gl: 'us', // The gl parameter determines the Google country to use for the query.
+    //     hl: 'us', // The hl parameter determines the Google UI language to return results.
+    //     start: 0, // Determines the results offset to use, defaults to 0.
+    //     num: 100, // Determines the number of results to show, defaults to 10. Maximum is 100.
+    // },
+
+    google_settings: '{"gl": "tr", "hl": "tr", "num": "50", "start": "0"}',
 
     // https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-web-api-v5-reference#query-parameters
     bing_settings: {
@@ -64,6 +66,7 @@ let config = {
     // check if headless chrome escapes common detection techniques
     // this is a quick test and should be used for debugging
     test_evasion: false,
+    apply_evasion_techniques: false,
     // log ip address data
     log_ip_address: false,
     // log http headers

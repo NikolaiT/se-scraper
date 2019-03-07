@@ -36,6 +36,19 @@ module.exports = class Scraper {
         this.num_requests = 0;
         // keep track of the keywords searched
         this.num_keywords = 0;
+
+        let settings = this.config[`${this.config.search_engine}_settings`];
+        if (settings) {
+            if (typeof settings === 'string') {
+                try {
+                    settings = JSON.parse(settings);
+                    this.config[`${this.config.search_engine}_settings`] = settings;
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+        }
+
     }
 
     async run({page, data}) {
@@ -64,8 +77,10 @@ module.exports = class Scraper {
      */
     async load_search_engine() {
 
-        // prevent detection by evading common detection techniques
-        await evadeChromeHeadlessDetection(this.page);
+        if (this.config.apply_evasion_techniques === true) {
+            // prevent detection by evading common detection techniques
+            await evadeChromeHeadlessDetection(this.page);
+        }
 
         // block some assets to speed up scraping
         if (this.config.block_assets === true) {
@@ -223,7 +238,6 @@ module.exports = class Scraper {
         let settings = this.config[`${this.config.search_engine}_settings`];
 
         if (settings) {
-
             for (var key in settings) {
                 baseUrl += `${key}=${settings[key]}&`
             }

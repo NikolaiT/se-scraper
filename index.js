@@ -48,6 +48,7 @@ exports.scrape = async function(user_config, callback) {
         // check if headless chrome escapes common detection techniques
         // this is a quick test and should be used for debugging
         test_evasion: false,
+        apply_evasion_techniques: true,
         // settings for puppeteer-cluster
         puppeteer_cluster_config: {
             timeout: 30 * 60 * 1000, // max timeout set to 30 minutes

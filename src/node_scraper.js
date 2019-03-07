@@ -133,7 +133,7 @@ module.exports.handler = async function handler (event, context, callback) {
                     pluggable: pluggable,
                     page: page,
                 });
-                results = obj.run({});
+                results = await obj.run({});
                 num_requests = obj.num_requests;
                 metadata = obj.metadata;
             }
@@ -310,7 +310,7 @@ function parseEventData(config) {
     }
 
     const booleans = ['debug', 'verbose', 'upload_to_s3', 'log_ip_address', 'log_http_headers', 'random_user_agent',
-        'compress', 'is_local', 'max_results', 'set_manual_settings', 'block_assets', 'test_evasion', 'do_work'];
+        'compress', 'is_local', 'max_results', 'set_manual_settings', 'block_assets', 'test_evasion', 'do_work', 'apply_evasion_techniques'];
 
     for (b of booleans) {
         config[b] = _bool(config[b]);
