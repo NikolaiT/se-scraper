@@ -1,6 +1,7 @@
 const zlib = require('zlib');
 var fs = require('fs');
 const google = require('./modules/google.js');
+const amazon = require('./modules/amazon.js');
 const bing = require('./modules/bing.js');
 const baidu = require('./modules/baidu.js');
 const infospace = require('./modules/infospace.js');
@@ -24,6 +25,7 @@ function getScraper(searchEngine, args) {
         google_image: google.GoogleImageScraper,
         bing: bing.BingScraper,
         bing_news: bing.BingNewsScraper,
+        amazon: amazon.AmazonScraper,
         duckduckgo: duckduckgo.DuckduckgoScraper,
         duckduckgo_news: duckduckgo.DuckduckgoNewsScraper,
         infospace: infospace.InfospaceScraper,

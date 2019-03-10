@@ -9,27 +9,7 @@ let config = {
     // is drawn before every request. empty string for no sleeping.
     sleep_range: '[1,2]',
     // which search engine to scrape
-    search_engine: 'google',
-
-    // use specific search engine parameters for various search engines
-    // google_settings: {
-    //     google_domain: 'google.com',
-    //     gl: 'us', // The gl parameter determines the Google country to use for the query.
-    //     hl: 'us', // The hl parameter determines the Google UI language to return results.
-    //     start: 0, // Determines the results offset to use, defaults to 0.
-    //     num: 100, // Determines the number of results to show, defaults to 10. Maximum is 100.
-    // },
-
-    google_settings: '{"gl": "tr", "hl": "tr", "num": "50", "start": "0"}',
-
-    // https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-web-api-v5-reference#query-parameters
-    bing_settings: {
-        count: 50,      // how many results per page
-        safeSearch: 'Off',      // safe search (strict, moderate, off)
-        cc: 'us',        // ISO 3166 country code
-        offset: 0, // The zero-based offset that indicates the number of search results to skip before returning results
-    },
-
+    search_engine: 'amazon',
     // whether debug information should be printed
     // debug info is useful for developers when debugging
     debug: false,
@@ -37,18 +17,18 @@ let config = {
     // this output is informational
     verbose: true,
     // an array of keywords to scrape
-    keywords: ['good news'],
+    keywords: ['drone', 'smartphone'],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // the number of pages to scrape for each keyword
-    num_pages: 2,
+    num_pages: 1,
     // whether to start the browser in headless mode
-    headless: true,
+    headless: false,
     // path to output file, data will be stored in JSON
-    output_file: 'examples/results/advanced.json',
+    output_file: 'examples/results/amazon.json',
     // whether to prevent images, css, fonts from being loaded
     // will speed up scraping a great deal
-    block_assets: true,
+    block_assets: false,
     // path to js module that extends functionality
     // this module should export the functions:
     // get_browser, handle_metadata, close_browser
@@ -66,7 +46,7 @@ let config = {
     // check if headless chrome escapes common detection techniques
     // this is a quick test and should be used for debugging
     test_evasion: false,
-    apply_evasion_techniques: false,
+    apply_evasion_techniques: true,
     // log ip address data
     log_ip_address: false,
     // log http headers

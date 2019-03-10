@@ -1,6 +1,6 @@
 {
   "name": "se-scraper",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "A simple module using puppeteer to scrape several search engines such as Google, Duckduckgo and Bing.",
   "homepage": "https://scrapeulous.com/",
   "main": "index.js",

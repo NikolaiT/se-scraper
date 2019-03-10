@@ -24,6 +24,7 @@ Se-scraper supports the following search engines:
 * Google News
 * Google News App version (https://news.google.com)
 * Google Image
+* Amazon
 * Bing
 * Bing News
 * Baidu
@@ -119,6 +120,7 @@ This will scrape with **three** browser instance each having their own IP addres
 * [Simple example scraping google](examples/quickstart.js) yields [these results](examples/results/data.json)
 * [Scrape with one proxy per browser](examples/proxies.js) yields [these results](examples/results/proxyresults.json)
 * [Scrape 100 keywords on Bing with multible tabs in one browser](examples/multiple_tabs.js) produces [this](examples/results/bing.json)
+* [Scrape two keywords on Amazon](examples/amazon.js) produces [this](examples/results/amazon.json)
 * [Inject your own scraping logic](examples/pluggable.js)
 
 
