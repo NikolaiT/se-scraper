@@ -118,6 +118,7 @@ This will scrape with **three** browser instance each having their own IP addres
 ## Examples
 
 * [Simple example scraping google](examples/quickstart.js) yields [these results](examples/results/data.json)
+* [Simple example scraping baidu](examples/baidu.js) yields [these results](examples/results/baidu.json)
 * [Scrape with one proxy per browser](examples/proxies.js) yields [these results](examples/results/proxyresults.json)
 * [Scrape 100 keywords on Bing with multible tabs in one browser](examples/multiple_tabs.js) produces [this](examples/results/bing.json)
 * [Scrape two keywords on Amazon](examples/amazon.js) produces [this](examples/results/amazon.json)

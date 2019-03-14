@@ -7,9 +7,9 @@ let config = {
     random_user_agent: true,
     // how long to sleep between requests. a random sleep interval within the range [a,b]
     // is drawn before every request. empty string for no sleeping.
-    sleep_range: '[1,2]',
+    sleep_range: '',
     // which search engine to scrape
-    search_engine: 'amazon',
+    search_engine: 'baidu',
     // whether debug information should be printed
     // debug info is useful for developers when debugging
     debug: false,
@@ -17,7 +17,7 @@ let config = {
     // this output is informational
     verbose: true,
     // an array of keywords to scrape
-    keywords: ['drone', 'smartphone'],
+    keywords: ['cat', 'mouse'],
     // alternatively you can specify a keyword_file. this overwrites the keywords array
     keyword_file: '',
     // the number of pages to scrape for each keyword
@@ -25,7 +25,7 @@ let config = {
     // whether to start the browser in headless mode
     headless: false,
     // path to output file, data will be stored in JSON
-    output_file: 'examples/results/amazon.json',
+    output_file: 'examples/results/baidu.json',
     // whether to prevent images, css, fonts from being loaded
     // will speed up scraping a great deal
     block_assets: false,

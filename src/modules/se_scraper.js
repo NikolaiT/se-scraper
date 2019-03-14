@@ -206,7 +206,7 @@ module.exports = class Scraper {
                 console.error(`Problem with scraping ${keyword} in search engine ${this.config.search_engine}: ${e}`);
 
                 if (await this.detected() === true) {
-                    console.error(`${this.config.search_engine} DETECTED the scraping!`);
+                    console.error(`${this.config.search_engine} detected the scraping!`);
 
                     if (this.config.is_local === true) {
                         await this.sleep(this.SOLVE_CAPTCHA_TIME);
