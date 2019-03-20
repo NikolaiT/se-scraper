@@ -40,8 +40,8 @@ function getScraper(searchEngine, args) {
 }
 
 module.exports.handler = async function handler (event, context, callback) {
-    config = event;
-    pluggable = {};
+    let config = event;
+    let pluggable = {};
     if (config.custom_func) {
         if (fs.existsSync(config.custom_func)) {
             try {
