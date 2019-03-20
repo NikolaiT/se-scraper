@@ -161,13 +161,25 @@ class GoogleNewsOldScraper extends Scraper {
 	}
 
 	async load_start_page() {
-		return true;
+	    let startUrl = this.build_start_url('https://www.google.com/search?source=lnms&tbm=nws&') || 'https://www.google.com/search?source=lnms&tbm=nws';
+
+	    try {
+		await this.page.goto(startUrl);
+		await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
+	    } catch (e) {
+		return false;
+	    }
+	    return true;
 	}
 
 	async search_keyword(keyword) {
-		await this.page.goto(`https://www.google.com/search?q=${keyword}&hl=en&source=lnms&tbm=nws`, {
+		let url = this.build_start_url(`https://www.google.com/search?q=${keyword}&source=lnms&tbm=nws&`) || 
+				    `https://www.google.com/search?q=${keyword}&hl=en&source=lnms&tbm=nws`;
+				    
+		await this.page.goto(url, {
 			referer: 'https://www.google.com/'
 		});
+		
 		await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
 	}
 

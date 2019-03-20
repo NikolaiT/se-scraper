@@ -1,0 +1,711 @@
+{
+    "world news": {
+        "1": {
+            "time": "Wed, 20 Mar 2019 14:27:44 GMT",
+            "results": [
+                {
+                    "link": "https://www.rugbyrama.fr/rugby/championnat-des-nations/2019/championnat-des-nations-brett-gosper-world-rugby-on-ne-veut-pas-une-ligue-des-nations-fermee_sto7194015/story.shtml",
+                    "title": "Gosper : \"On ne veut pas une Ligue des Nations fermée\"",
+                    "snippet": "C'est la volonté de World Rugby, l'instance mère qui régit les compétitions internationales. Dans un français toujours impeccable, son directeur ...",
+                    "date": "il y a 6 heures",
+                    "rank": 1
+                },
+                {
+                    "link": "https://www.dhnet.be/regions/brabant/walibi-17-millions-d-investissements-pour-deux-nouvelles-zones-karma-world-et-fun-world-photos-5c90bbba9978e2710ef561f1",
+                    "title": "Walibi: 17 millions d'investissements pour deux nouvelles zones ...",
+                    "snippet": "Dans le courant du printemps, les visiteurs pourront mettre les pieds dans deux nouveaux mondes, Karma World et Fun World. Sur les 100 ...",
+                    "date": "19 mars 201919 mars 2019",
+                    "rank": 2
+                },
+                {
+                    "link": "http://www.jeuxvideo.com/news/1016351/word-of-warcraft-rejouez-gratuitement-du-21-au-25-mars.htm",
+                    "title": "World of Warcraft : rejouez gratuitement du 21 au 25 mars",
+                    "snippet": "Blizzard invite les ex-joueurs de World of Warcraft a dépoussiérer leur compte inactif le temps d'une période de jeu gratuit, du jeudi 21 au lundi ...",
+                    "date": "19 mars 2019",
+                    "rank": 3
+                },
+                {
+                    "link": "https://wow.jeuxonline.info/actualite/56079/vallee-alterac-version-112-wow-classic",
+                    "title": "La Vallée d'Alterac en version 1.12 dans WOW Classic",
+                    "snippet": "On le sait, World of Warcraft Classic entend revenir aux sources du MMORPG de Blizzard – reprendre le jeu tel qu'il était à sa sortie ou presque ...",
+                    "date": "il y a 5 heures",
+                    "rank": 4
+                },
+                {
+                    "link": "https://www.msnbc.com/11th-hour/watch/following-his-weekend-tweetstorm-it-s-trump-vs-the-world-1461395011801",
+                    "title": "Following his weekend tweetstorm, it's Trump vs. the World",
+                    "snippet": "The president continued to take on John McCain and George Conway, the husband to his own aide Kellyanne Conway, after a weekend of ...",
+                    "date": "il y a 10 heures",
+                    "rank": 5
+                },
+                {
+                    "link": "https://www.millenium.org/news/326547.html",
+                    "title": "Chronique : Vos meilleurs souvenirs dans World of Warcraft #1",
+                    "snippet": "Alors que World of Warcraft : Battle for Azeroth commence à perdre grandement en intérêt aux yeux de nombreux joueurs, notamment avec ...",
+                    "date": "16 mars 2019",
+                    "rank": 6
+                },
+                {
+                    "link": "https://www.npr.org/2019/03/19/704893488/mother-jones-investigation-takes-a-look-at-the-world-of-drug-treatment-programs",
+                    "title": "'Mother Jones' Investigation Takes A Look At The World Of Drug ...",
+                    "snippet": "NPR's Ailsa Chang talks with Mother Jones reporter Julia Lurie about the loosely regulated rehab industry, and how it shuffles people in and ...",
+                    "date": "il y a 17 heures",
+                    "rank": 7
+                },
+                {
+                    "link": "https://www.theguardian.com/global-development/2019/mar/20/the-campaign-for-a-drug-free-world-is-costing-lives",
+                    "title": "The campaign for a 'drug-free world' is costing lives",
+                    "snippet": "In 2017, more than 70,000 people died from a drug overdose in the US. Among the reasons for these deaths are the lack of access to health ...",
+                    "date": "il y a 7 heures",
+                    "rank": 8
+                },
+                {
+                    "link": "https://www.lci.fr/high-tech/le-world-wide-web-www-fete-ses-30-ans-naviguez-comme-en-1989-internet-tim-berners-lee-2115245.html",
+                    "title": "Le World Wide Web fête ses 30 ans : naviguez comme en 1989",
+                    "snippet": "Le 12 mars 89, le World Wide Web naissait, pour le meilleur comme pour le pire… Un site, recréé pour cet anniversaire, vous permet de surfer ...",
+                    "date": "12 mars 201912 mars 2019",
+                    "rank": 9
+                },
+                {
+                    "link": "https://www.wbur.org/hereandnow/2019/03/18/demographics-world-population",
+                    "title": "How Population Shapes The World",
+                    "snippet": "Demographics are closely connected to the rise and fall of countries. Population and how it changes with the birth rate, mortality rate, and ...",
+                    "date": "18 mars 2019",
+                    "rank": 10
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/20/italian-authorities-order-seizure-migrant-rescue-ship-mare-jonio",
+                    "title": "Italian authorities order seizure of migrant rescue ship",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "il y a 4 heures",
+                    "rank": 11
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/somalia-us-airstrikes-civilian-deaths-amnesty-international",
+                    "title": "US airstrikes in Somalia are killing civilians, Amnesty International says",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "il y a 12 heures",
+                    "rank": 12
+                },
+                {
+                    "link": "https://www.theatlantic.com/international/archive/2019/03/thailand-military-junta-election-king/585274/",
+                    "title": "How Thailand Became the World's Last Military Dictatorship",
+                    "snippet": "At the time, a few other military dictatorships existed in the world, notably in Fiji and Egypt. But Fiji held elections in 2018—legitimizing Frank ...",
+                    "date": "il y a 1 heure",
+                    "rank": 13
+                },
+                {
+                    "link": "http://www.startribune.com/doping-in-cards-bridge-ban-fuels-backlash-to-olympic-link/507395942/",
+                    "title": "World's top-ranked bridge player banned for 1 year for doping ...",
+                    "snippet": "\"People think it's wrong,\" Boye Brogeland, a bridge professional who won two world championships with Helgemo, said of the top-ranked ...",
+                    "date": "il y a 6 heures",
+                    "rank": 14
+                },
+                {
+                    "link": "https://www.polygon.com/2019/3/19/18272777/red-dead-online-spring-patch-update-story-missions-anti-griefing",
+                    "title": "Red Dead Online's next update adds more story, world events, and ...",
+                    "snippet": "While individual parts of the patch were fun, like the Spoils of War game mode, the update didn't solve the main problems of the open world; ...",
+                    "date": "il y a 18 heures",
+                    "rank": 15
+                },
+                {
+                    "link": "https://www.abc.net.au/news/2019-03-20/the-risky-world-of-online-foreign-exchange/10922394?section=business",
+                    "title": "The risky world of online foreign exchange",
+                    "snippet": "Australians are trading millions in the risky and opaque world of online foreign exchange, or forex, trading. While it's banned in some countries, ...",
+                    "date": "il y a 4 heures",
+                    "rank": 16
+                },
+                {
+                    "link": "https://www.weforum.org/agenda/2019/03/here-s-what-the-path-to-happiness-can-teach-us-about-development/",
+                    "title": "What happiness can teach us about how we measure human ...",
+                    "snippet": "Why, then, when it comes to measuring development in our world, do we still primarily equate economic progress with better lives, and build a ...",
+                    "date": "il y a 4 heures",
+                    "rank": 17
+                },
+                {
+                    "link": "https://www.cnbc.com/2019/03/19/why-levi-strauss-the-worlds-biggest-denim-brand-is-going-public.html",
+                    "title": "Here's why Levi Strauss, the world's biggest denim brand, is going public",
+                    "snippet": "For the first time in more than three decades, investors can buy shares of the world's biggest jeans seller. Levi Strauss & Co. is expected to list ...",
+                    "date": "il y a 19 heures",
+                    "rank": 18
+                },
+                {
+                    "link": "https://www.wbay.com/content/news/Neenah-middle-school-students-taking-on-world-robotics-championship-507374411.html",
+                    "title": "Neenah middle school students taking on world robotics championship",
+                    "snippet": "NEENAH, Wis. (WBAY) - A group of Neenah middle school students are hoping to be the best in the world. Shattuck Middle School is sending a ...",
+                    "date": "il y a 15 heures",
+                    "rank": 19
+                },
+                {
+                    "link": "https://www.bbc.com/news/business-47617206",
+                    "title": "World's most expensive cities revealed",
+                    "snippet": "Paris has come top of a ranking of the world's most expensive cities, alongside Hong Kong and Singapore. It's the first time three cities have ...",
+                    "date": "18 mars 201919 mars 2019",
+                    "rank": 20
+                },
+                {
+                    "link": "http://www.bbc.com/culture/story/20190318-lois-weber-the-trailblazing-director-who-shocked-the-world",
+                    "title": "Lois Weber: the trailblazing director who shocked the world",
+                    "snippet": "A nude scene! Abortion; birth control; prostitution! In the silent-movie era, Lois Weber's films were shockingly ahead of their time – and also ...",
+                    "date": "il y a 4 heures",
+                    "rank": 21
+                },
+                {
+                    "link": "https://www.gzeromedia.com/isis-dies-in-the-world-and-lives-on-the-web",
+                    "title": "ISIS DIES IN THE WORLD AND LIVES ON THE WEB",
+                    "snippet": "The virtual caliphate: While ISIS may not have much territory in the world, it's still got real estate on the web, where it remains a force on social ...",
+                    "date": "il y a 16 heures",
+                    "rank": 22
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/uk-to-start-issuing-far-right-terrorism-alerts",
+                    "title": "UK to start issuing far-right terrorism alerts",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "il y a 18 heures",
+                    "rank": 23
+                },
+                {
+                    "link": "https://www.cbc.ca/sports/tennis/bianca-andreescu-tennis-waking-up-brand-new-world-1.5063102",
+                    "title": "Tennis teen Bianca Andreescu is waking up to a new world",
+                    "snippet": "Take 18-year-old Bianca Andreescu and her historic win this past weekend at Indian Wells. She is the first wild card to ever capture the event, ...",
+                    "date": "il y a 15 heures",
+                    "rank": 24
+                },
+                {
+                    "link": "https://www.theguardian.com/cities/2019/mar/19/quiz-identify-world-cities-density-maps-alone",
+                    "title": "Quiz: can you identify these world cities from their density maps alone?",
+                    "snippet": "The LSE Cities Urban Age Programme has created density diagrams showing the number of people living in each square kilometre of a 100km ...",
+                    "date": "19 mars 2019",
+                    "rank": 25
+                },
+                {
+                    "link": "https://www.foxnews.com/opinion/doug-schoen-the-world-needs-american-leadership-its-not-getting-it-from-president-trump",
+                    "title": "Doug Schoen: The world needs American leadership -- it's not getting ...",
+                    "snippet": "Former Vice President Dick Cheney pressed current Vice President Mike Pence last week during a closed-door event at the American ...",
+                    "date": "19 mars 2019",
+                    "rank": 26
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/20/china-clones-sherlock-holmes-police-dog-to-cut-training-times-report",
+                    "title": "China clones 'Sherlock Holmes' police dog to cut training times – report",
+                    "snippet": "South Korean scientists created the world's first cloned dog in 2005, and two years later the country began employing cloned Labrador ...",
+                    "date": "il y a 9 heures",
+                    "rank": 27
+                },
+                {
+                    "link": "https://www.bloomberg.com/news/articles/2019-03-19/startups-lose-in-a-low-rate-world-and-the-fed-is-blaming-itself",
+                    "title": "Startups Lose in a Low-Rate World, and the Fed Is Blaming Itself",
+                    "snippet": "Startups Lose in a Low-Rate World, and the Fed Is Blaming Itself. By. Jeanna Smialek. March 19, 2019, 3:00 AM PDT ...",
+                    "date": "19 mars 2019",
+                    "rank": 28
+                },
+                {
+                    "link": "http://www.startribune.com/asian-markets-mixed-as-investors-look-ahead-to-fed-report/507395282/",
+                    "title": "World markets mostly lower as investors await Fed report",
+                    "snippet": "BANGKOK — Shares were mostly falling in Europe after a lackluster day of trading in Asia and U.S. markets appeared set for a slightly higher ...",
+                    "date": "il y a 5 heures",
+                    "rank": 29
+                },
+                {
+                    "link": "https://www.foxnews.com/science/10-times-experts-predicted-the-world-would-end-by-now",
+                    "title": "10 times 'experts' predicted the world would end by now",
+                    "snippet": "Rep. Alexandria Ocasio-Cortez, while selling her \"Green New Deal,\" said that the world will end in 12 years if nothing is done to address ...",
+                    "date": "19 mars 2019",
+                    "rank": 30
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/20/fake-news-spikes-in-indonesia-ahead-of-elections",
+                    "title": "Fake news spikes in Indonesia ahead of elections",
+                    "snippet": "In the world's third-largest democracy and a country that is among the top five users of Facebook and Twitter, fake news has been used to ...",
+                    "date": "il y a 11 heures",
+                    "rank": 31
+                },
+                {
+                    "link": "https://www.bbc.com/news/science-environment-47559416",
+                    "title": "Psyche: Metal world mission targets 'iron volcanoes'",
+                    "snippet": "A widely held idea is that 16 Psyche is the exposed core of an extinct world, perhaps as large as Mars. This proto-planet must have been ...",
+                    "date": "18 mars 2019",
+                    "rank": 32
+                },
+                {
+                    "link": "https://www.bbc.com/news/world-europe-47615231",
+                    "title": "Dutch shooting: Utrecht police arrest suspect after three killed",
+                    "snippet": "Leaders from around the world, including French President Emmanuel Macron and Spanish Prime Minister Pedro Sánchez, offered their ...",
+                    "date": "18 mars 2019The Guardian18 mars 2019",
+                    "rank": 33
+                },
+                {
+                    "link": "https://theoutline.com/post/7221/youth-climate-strike-new-york-report",
+                    "title": "Kids are refusing the world we plan to leave them",
+                    "snippet": "“I'm here because I don't want to have to grow up in a world where I am terrified the people I love could lose their home,” Simone Rubin, ...",
+                    "date": "il y a 18 heures",
+                    "rank": 34
+                },
+                {
+                    "link": "https://www.usatoday.com/story/news/world/2019/03/20/boeing-max-pilot-reportedly-saved-jet-one-day-before-lion-air-crash/3220891002/",
+                    "title": "Jump-seat pilot reportedly saved Boeing Max jet one day before Lion ...",
+                    "snippet": "The 371 Boeing 737 Max jets flown around the world have been grounded pending further investigation. Also hanging in the balance are ...",
+                    "date": "il y a 2 heures",
+                    "rank": 35
+                },
+                {
+                    "link": "https://www.foxnews.com/world/tijuana-is-the-most-violent-city-in-the-world-top-5-located-in-mexico-report-says",
+                    "title": "Tijuana ranked as the most violent city in the world, top 4 located in ...",
+                    "snippet": "The border city of Tijuana was ranked the most violent city in the world last year -- and was one of four cities in Mexico to make the list's top five, ...",
+                    "date": "il y a 21 heures",
+                    "rank": 36
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/kazakhstan-president-nursultan-nazarbayev-steps-down-after-30-years-in-power",
+                    "title": "Kazakhstan president Nazarbayev steps down after 30 years in power",
+                    "snippet": "Kazakhstan, despite having a population of only 18 million, is the ninth largest country in the world with an area of about one million square ...",
+                    "date": "19 mars 2019euronewsil y a 19 heures",
+                    "rank": 37
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/jair-bolsonaro-donald-trump-wall-immigration",
+                    "title": "Bolsonaro backs Trump's border wall ahead of White House meeting",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "il y a 22 heuresGZERO Media19 mars 2019",
+                    "rank": 38
+                },
+                {
+                    "link": "https://www.cnn.com/videos/world/2019/03/18/oldest-astrolabe-guinness-record-orig-js.cnn",
+                    "title": "Divers' discovery named oldest in the world",
+                    "snippet": "Researchers from England discovered what is now considered to be the world's oldest astrolabe -- used in the 1500s by famed explorer Vasco ...",
+                    "date": "18 mars 2019",
+                    "rank": 39
+                },
+                {
+                    "link": "https://www.10news.com/news/local-news/tijuana-ranked-most-dangerous-city-in-the-world-as-spring-break-approaches",
+                    "title": "Tijuana ranked most dangerous city in the world as spring break ...",
+                    "snippet": "(KGTV) -- As spring breakers get ready to flock to vacation destinations around the world, a new report shows that Mexico has some of the most ...",
+                    "date": "18 mars 2019fox5sandiego.com18 mars 2019",
+                    "rank": 40
+                },
+                {
+                    "link": "https://www.theweathernetwork.com/ca/news/article/growing-ship-pollution-impacting-millions-along-world-coasts",
+                    "title": "Growing ship pollution impacts millions along world coasts",
+                    "snippet": "Tuesday, March 19th 2019, 12:11 pm - Air pollution from ships has a significant impact on the environment and our health. amogh-manjunath-772475-unsplash ...",
+                    "date": "19 mars 2019",
+                    "rank": 41
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/brazil-retired-major-charged-over-massacre-during-dictatorship",
+                    "title": "Brazil: retired major charged over massacre during dictatorship",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "il y a 16 heures",
+                    "rank": 42
+                },
+                {
+                    "link": "https://www.politico.com/story/2019/03/19/tulsi-gabbard-2020-campaign-1225758",
+                    "title": "Where in the world is Tulsi Gabbard?",
+                    "snippet": "Rep. Tulsi Gabbard's quixotic run for the White House isn't sticking to a normal presidential campaign travel schedule. Gabbard, a four-term ...",
+                    "date": "19 mars 2019",
+                    "rank": 43
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/20/christchurch-shooting-gun-owners-begin-to-hand-in-their-weapons",
+                    "title": "Christchurch shooting: gun owners begin to hand in their weapons",
+                    "snippet": "“I recognise one person handing in a gun to the police is not going to change the world, but it's a start, the country is now one gun safer than it ...",
+                    "date": "il y a 15 heures19 mars 2019",
+                    "rank": 44
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/danish-politicians-baby-not-welcome-in-parliaments-chamber",
+                    "title": "Danish politician's baby 'not welcome' in parliament's chamber",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "il y a 19 heures",
+                    "rank": 45
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/cyclone-idai-worst-weather-disaster-to-hit-southern-hemisphere-mozambique-malawi",
+                    "title": "Cyclone Idai 'might be southern hemisphere's worst such disaster'",
+                    "snippet": "The World Food Programme managed to get food supplies in and is doing airdrops to stranded people. “Where there was land, there's now sea ...",
+                    "date": "19 mars 2019BBC Newsil y a 2 heures",
+                    "rank": 46
+                },
+                {
+                    "link": "https://www.dw.com/en/is-the-world-running-out-of-gold/a-47974833",
+                    "title": "Is the world running out of gold?",
+                    "snippet": "The murmurs that the world is running out of gold deposits have grown louder in the past two years. Several experts and industry magnates, ...",
+                    "date": "19 mars 2019",
+                    "rank": 47
+                },
+                {
+                    "link": "https://www.afr.com/business/energy/solar-energy/proof-the-energy-world-is-transitioning-sonnens-bold-future-under-shell-20190319-h1ckhy",
+                    "title": "'Proof the energy world is transitioning': Sonnen's bold future under Shell",
+                    "snippet": "\"This is the practical example of the energy transition; it's the proof point that the old energy world is transitioning to the new energy world.",
+                    "date": "il y a 9 heures",
+                    "rank": 48
+                },
+                {
+                    "link": "https://www.theguardian.com/world/live/2019/mar/20/new-zealand-shooting-jacinda-ardern-visits-christchurch-to-pay-tribute-to-victims-live",
+                    "title": "First burials today as Ardern visits Christchurch victims – as it happened",
+                    "snippet": "While Ardern said racism and extremism needed to be addressed in New Zealand and the rest of the world to stop another incident like this ...",
+                    "date": "il y a 13 heures",
+                    "rank": 49
+                },
+                {
+                    "link": "https://www.11alive.com/article/entertainment/television/programs/the-a-scene/georgia-now-considered-top-filming-location-in-the-world/85-4df63788-993d-48e9-ba72-b4bd0ed43f58",
+                    "title": "Georgia now considered top filming location in the world",
+                    "snippet": "“We are the number one filming location of the world,” Lee Thomas, deputy commissioner of the Georgia Film, Music and Digital Entertainment ...",
+                    "date": "il y a 18 heures",
+                    "rank": 50
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/cardinal-philippe-barbarin-says-pope-has-refused-his-resignation",
+                    "title": "Convicted French cardinal says pope has refused his resignation",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "19 mars 20199news.com.auil y a 19 heures",
+                    "rank": 51
+                },
+                {
+                    "link": "https://www.cheatsheet.com/entertainment/john-oliver-actually-changed-the-world-with-these-last-week-tonight-segments.html/",
+                    "title": "John Oliver Actually Changed the World With These 'Last Week ...",
+                    "snippet": "It would be wrong to assume that these comedic bits, similar to the styles of Jon Stewart and Saturday Night Live, has had no effect on the world ...",
+                    "date": "il y a 21 heures",
+                    "rank": 52
+                },
+                {
+                    "link": "https://www.outsideonline.com/2391391/barry-lopez-horizon",
+                    "title": "Why the World Needs Barry Lopez",
+                    "snippet": "More than 30 years later, after traveling from pole to pole and bearing witness to a world under crushing pressure—and after being diagnosed ...",
+                    "date": "19 mars 2019",
+                    "rank": 53
+                },
+                {
+                    "link": "https://www.scmp.com/news/china/military/article/3002455/china-build-30000-tonne-nuclear-powered-ship-described",
+                    "title": "Could China's 'experimental' ship be the world's biggest nuclear ...",
+                    "snippet": "China will soon start building a 30,000-tonne nuclear-powered ship described in the tender documents as an “experimental platform”.",
+                    "date": "il y a 4 heures",
+                    "rank": 54
+                },
+                {
+                    "link": "https://www.msn.com/en-us/autos/classic-cars/2019-chicago-world-of-wheels-brings-out-the-shine/ar-BBUPGXl",
+                    "title": "2019 Chicago World of Wheels: Brings Out the Shine",
+                    "snippet": "Early March is not usually a good time for Gearheads in the Midwest, except when it's time for the World of Wheels car show. The Chicago ...",
+                    "date": "il y a 20 heures",
+                    "rank": 55
+                },
+                {
+                    "link": "https://gulfnews.com/uae/uae-tops-world-on-5-well-being-measures-1.1553012659497",
+                    "title": "UAE tops world on 5 well-being measures",
+                    "snippet": "Gallup's 2018 World Poll ranked the UAE based on key well-being indicators, which tracked the opinion people in 160 countries have on what ...",
+                    "date": "il y a 21 heures",
+                    "rank": 56
+                },
+                {
+                    "link": "https://www.nationalgeographic.com/travel/lists/food-and-drink/worlds-best-food-cities/",
+                    "title": "21 best food cities around the world",
+                    "snippet": "Here we present a data-driven index of the world's best cities for food lovers, based on qualitative evaluations by locals and visitors alike.",
+                    "date": "19 mars 2019",
+                    "rank": 57
+                },
+                {
+                    "link": "https://www.malaymail.com/news/malaysia/2019/03/20/selangor-can-be-worlds-biggest-ganja-producer-says-pkr-lawmaker/1734652",
+                    "title": "Selangor can be world's biggest ganja producer, says PPBM lawmaker",
+                    "snippet": "SHAH ALAM, March 20 — A Selangor lawmaker wants to put his state on the world map as the biggest ganja producer in the world.",
+                    "date": "il y a 5 heures",
+                    "rank": 58
+                },
+                {
+                    "link": "https://www.timeslive.co.za/news/south-africa/2019-03-20-sa-doesnt-make-it-onto-the-list-of-worlds-top-100-happy-countries/",
+                    "title": "SA doesn't make it onto the list of world's top 100 happy countries",
+                    "snippet": "SA has fallen short of being among the top 100 happiest countries in the world. This is according to the annual World Happiness Report, which ...",
+                    "date": "il y a 3 heures",
+                    "rank": 59
+                },
+                {
+                    "link": "https://www.menshealth.com/health/a26487546/steven-pinker-world-progress-interview/",
+                    "title": "Why the World Is Doing Better Than You Think, According to Steven ...",
+                    "snippet": "A year after his book on global progress, people still think the world is ... wellbeing, the world is getting better—everything from war, violence, ...",
+                    "date": "il y a 22 heures",
+                    "rank": 60
+                },
+                {
+                    "link": "https://www.cnn.com/travel/article/cliveden-house-airport-hotel-london/index.html",
+                    "title": "Cliveden: The world's most historic airport hotel",
+                    "snippet": "But just outside of London, 15 minutes from Heathrow Airport, lies a storybook mansion set on the rolling green banks of the Thames. It just may ...",
+                    "date": "18 mars 2019",
+                    "rank": 61
+                },
+                {
+                    "link": "https://nypost.com/2019/03/19/hezonja-is-still-adapting-to-his-ridiculous-post-lebron-block-world/",
+                    "title": "Hezonja is still adapting to his 'ridiculous' post-LeBron-block world",
+                    "snippet": "TORONTO — St. Patrick's Day hero Mario Hezonja had one idea flash through his mind when LeBron James got the ball in the backcourt with ...",
+                    "date": "18 mars 2019",
+                    "rank": 62
+                },
+                {
+                    "link": "https://www.wptv.com/news/region-s-palm-beach-county/boca-raton/the-worlds-biggest-bounce-house-theme-park-is-coming-to-boca-raton",
+                    "title": "The world's biggest bounce house theme park is coming to Boca Raton",
+                    "snippet": "Big Bounce America currently holds the official title in the Guinness World Record as the world's biggest bounce house at 10,000 square feet.",
+                    "date": "il y a 16 heures",
+                    "rank": 63
+                },
+                {
+                    "link": "https://www.npr.org/2019/03/16/704050431/photos-youth-climate-change-demonstrations-across-the-world",
+                    "title": "Photos: Youth Climate Change Demonstrations Across The World",
+                    "snippet": "A youth movement that started with a teenager in Sweden spread across the world on Friday, evidenced by the students from London to New ...",
+                    "date": "16 mars 201915 mars 2019",
+                    "rank": 64
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/18/erdogan-shows-christchurch-attack-footage-at-rallies",
+                    "title": "Erdoğan shows Christchurch attack footage at rallies",
+                    "snippet": "Oktay had earlier called on the world to stop using “provocative” language ... The entire world has to stop promoting some type of provocative ...",
+                    "date": "18 mars 2019",
+                    "rank": 65
+                },
+                {
+                    "link": "https://www.theguardian.com/world/gallery/2019/mar/19/home-in-remote-snow-forests-russia-in-pictures",
+                    "title": "At home in the remote snow forests of Russia – in pictures",
+                    "snippet": "Elena Anosova, a Russia-based photographer, travelled to Siberia to document isolated communities for her project Out of the Way. The village ...",
+                    "date": "19 mars 2019",
+                    "rank": 66
+                },
+                {
+                    "link": "https://www.dw.com/en/worlds-poor-pay-more-for-water-than-the-rich-un/a-47970657",
+                    "title": "World's poor pay more for water than the rich: UN",
+                    "snippet": "The UN released its annual World Water Development Report on Tuesday, which highlighted that some 2.1 billion people do not currently have ...",
+                    "date": "18 mars 2019",
+                    "rank": 67
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/letter-in-utrecht-getaway-car-may-suggest-terror-motive",
+                    "title": "Letter in Utrecht getaway car may suggest terror motive",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "19 mars 2019",
+                    "rank": 68
+                },
+                {
+                    "link": "https://www.orlandosentinel.com/travel/attractions/theme-park-rangers-blog/os-et-s4-disney-theme-park-openings-march-20190320-story.html",
+                    "title": "Sesame Street, Lightning McQueen, Lego Movie World marching into ...",
+                    "snippet": "Has your brain has been lingering in a galaxy far, far away, one that's coming to a theme park not so far, far away in the near-ish future?",
+                    "date": "il y a 3 heures",
+                    "rank": 69
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/japan-olympic-committee-president-tsunekazu-takeda-to-resign-corruption-allegations-scandal",
+                    "title": "Japanese Olympic chief to quit amid corruption allegations scandal",
+                    "snippet": "The stadium, which was likened to a bicycle helmet, was also due to host the final of the 2019 Rugby World Cup, but will not be ready until after ...",
+                    "date": "19 mars 2019",
+                    "rank": 70
+                },
+                {
+                    "link": "https://tv.avclub.com/even-in-thrones-world-of-dragons-the-birth-of-a-shado-1833298532",
+                    "title": "Even in Thrones' world of dragons, the birth of a shadow monster was ...",
+                    "snippet": "The arrival of Dany's dragons shook up that mentality, but with the events of “Garden Of Bones,” we leave any real-world considerations behind, ...",
+                    "date": "19 mars 2019",
+                    "rank": 71
+                },
+                {
+                    "link": "https://www.digitaltrends.com/gaming/the-division-2-endgame-guide-how-to-reach-world-tier-5/",
+                    "title": "How to reach World Tier 5 in The Division 2 endgame",
+                    "snippet": "To continue to better your build and reach World Tier 5, you'll have to bring the fight to them. Here's everything you need to know about ...",
+                    "date": "18 mars 2019",
+                    "rank": 72
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/far-right-israeli-campaign-ad-jokes-of-fascism-perfume-ayelet-shaked",
+                    "title": "Far-right Israeli campaign ad jokes of 'fascism' perfume",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "19 mars 2019",
+                    "rank": 73
+                },
+                {
+                    "link": "https://chicago.cbslocal.com/2019/03/20/st-baldricks-third-lincoln-emerson-baldies/",
+                    "title": "Suburban Chicago Students Third In The World For Fundraising For St ...",
+                    "snippet": "CHICAGO (CBS) — A group of students in the northwest suburbs is third in the world for raising money to cure childhood cancer with St.",
+                    "date": "il y a 1 heure",
+                    "rank": 74
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/20/hong-kong-to-build-one-of-worlds-largest-artificial-islands",
+                    "title": "Hong Kong to build one of world's largest artificial islands",
+                    "snippet": "Hong Kong plans to build one of the world's largest artificial islands, city officials have announced. The government's HK$624bn (£60bn) ...",
+                    "date": "il y a 12 heuresCNNil y a 6 heures",
+                    "rank": 75
+                },
+                {
+                    "link": "http://www.lerugbynistere.fr/news/classement-world-rugby-le-pays-de-galles-nouveau-dauphin-des-all-blacks-1903191328.php",
+                    "title": "Classement World Rugby - Le Pays de Galles nouveau dauphin des ...",
+                    "snippet": "L'Irlande va-t-elle détrôner la Nouvelle-Zélande au classement World Rugby ?Au sortir de la tournée de novembre, tous les regards étaient ...",
+                    "date": "19 mars 2019Rugbyrama.fr18 mars 2019",
+                    "rank": 76
+                },
+                {
+                    "link": "https://bgr.com/2019/03/18/game-of-thrones-iron-throne-around-the-world/",
+                    "title": "HBO scattered six Iron Thrones around the world ahead of 'Game of ...",
+                    "snippet": "We're less than a month out from the premiere of the eighth and final season of Game of Thrones, and despite the show's insane level of ...",
+                    "date": "18 mars 2019",
+                    "rank": 77
+                },
+                {
+                    "link": "https://www.theguardian.com/fashion/2019/mar/19/male-fashion-over-50-age-appropiate-equal-misery",
+                    "title": "Welcome to hell, fellas! Now the world of fashion is coming for you, too",
+                    "snippet": "After centuries of women being given rigid rules about how they should dress, a recent article in the Observer gave men similar advice – and it ...",
+                    "date": "19 mars 2019",
+                    "rank": 78
+                },
+                {
+                    "link": "https://insider.foxnews.com/2019/03/19/ben-shapiro-takes-entitlement-generation-ingraham-angle",
+                    "title": "'You're Not Owed Anything in This World': Shapiro Takes on the ...",
+                    "snippet": "\"Freedom comes along with the duty to achieve, and you're not owed anything in this world,\" Shapiro said. \"Why should you perceive yourself ...",
+                    "date": "19 mars 2019",
+                    "rank": 79
+                },
+                {
+                    "link": "https://www.nytimes.com/2019/03/15/climate/climate-school-strikes.html",
+                    "title": "Pictures From Youth Climate Strikes Around the World",
+                    "snippet": "“It's very empowering to feel your voice is being heard and feel supported by so many people around the world.” — Darilla Gilberthorpe, 17.",
+                    "date": "15 mars 2019",
+                    "rank": 80
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/18/china-says-it-has-arrested-13000-terrorists-in-xinjiang",
+                    "title": "China says it has arrested 13000 'terrorists' in Xinjiang",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "18 mars 2019",
+                    "rank": 81
+                },
+                {
+                    "link": "https://www.cleveland.com/entertainment/2019/03/baker-mayfield-introduces-odell-beckham-jr-to-a-whole-new-world-in-hilarious-aladdin-parody.html",
+                    "title": "Baker Mayfield introduces Odell Beckham Jr. to 'A Whole New World ...",
+                    "snippet": "The clip, which comes from funny video makers the Merkins, is a parody of the classic musical number “A World New World” from Disney's 1992 ...",
+                    "date": "18 mars 2019",
+                    "rank": 82
+                },
+                {
+                    "link": "https://ew.com/game-reviews/2019/03/18/the-division-2-videogame-review/",
+                    "title": "The Division 2 delivers an impressive world and satisfying loot: EW ...",
+                    "snippet": "Massive Entertainment's follow-up to The Division, a game that was ultimately satisfying despite taking a few patches to find its legs, hits the ...",
+                    "date": "18 mars 2019",
+                    "rank": 83
+                },
+                {
+                    "link": "https://www.news24.com/World/News/prayer-to-open-nz-parliament-utrecht-shooting-arrests-top-world-news-videos-for-today-20190319",
+                    "title": "Prayer to open NZ parliament | Utrecht shooting arrests - top World ...",
+                    "snippet": "'Oh Lord we ask you to protect New Zealand' - NZ parliament opens with a prayer. Tahir Nawaz recites a prayer at the start of a special sitting of ...",
+                    "date": "18 mars 2019",
+                    "rank": 84
+                },
+                {
+                    "link": "https://www.nbcnews.com/politics/meet-the-press/trump-befriends-another-strongman-world-stage-n985306",
+                    "title": "Trump befriends another strongman on the world stage",
+                    "snippet": "WASHINGTON — When historians look back on the Trump years, they will wonder why the president of the United States cozied up to some of ...",
+                    "date": "il y a 1 heure",
+                    "rank": 85
+                },
+                {
+                    "link": "https://www.newshub.co.nz/home/rural/2019/03/world-first-for-nz-wine-industry.html",
+                    "title": "World first for NZ wine industry",
+                    "snippet": "The New Zealand wine industry is celebrating after a local brand was named among the top three most admired wine brands in the world.",
+                    "date": "18 mars 2019",
+                    "rank": 86
+                },
+                {
+                    "link": "https://www.nbcnews.com/news/us-news/kit-harington-how-game-thrones-mirrors-real-world-politics-n985201",
+                    "title": "Kit Harington on how 'Game of Thrones' mirrors real-world politics",
+                    "snippet": "LOS ANGELES - In Variety's March 19 cover story, Kit Harington opens up about the final season of \"Game of Thrones\" and growing into ...",
+                    "date": "il y a 13 heures",
+                    "rank": 87
+                },
+                {
+                    "link": "https://www.chicagotribune.com/business/ct-biz-worlds-fastest-computer-chicago-20190314-story.html",
+                    "title": "The fastest computer in the world is being built 25 miles outside ...",
+                    "snippet": "Smack dab in the middle of a forest preserve about 25 miles west of Chicago, Argonne National Laboratory is building the fastest computer in ...",
+                    "date": "18 mars 2019",
+                    "rank": 88
+                },
+                {
+                    "link": "https://www.click2houston.com/news/victims-all-over-the-world-man-accused-of-extorting-minors-on-snapchat-arrested-in-conroe",
+                    "title": "'Victims all over the world': Man accused of extorting minors on ...",
+                    "snippet": "Authorities said McNeal is linked to \"numerous child victims all over the world.\" When officials realized he was in Montgomery County, they ...",
+                    "date": "il y a 18 heures",
+                    "rank": 89
+                },
+                {
+                    "link": "https://www.independent.ie/irish-news/courts/man-accused-of-being-the-worlds-biggest-facilitator-of-child-porn-loses-supreme-court-appeal-37933410.html",
+                    "title": "Man accused of being the world's biggest facilitator of child porn loses ...",
+                    "snippet": "The Supreme Court has cleared the way for the extradition to the United States of Eric Eoin Marques, a man accused of being the world's ...",
+                    "date": "il y a 3 heures",
+                    "rank": 90
+                },
+                {
+                    "link": "https://www.thesouthafrican.com/most-romantic-hotels-akademie-street-franschhoek/",
+                    "title": "Take a look inside the Franschhoek hotel voted “most romantic in the ...",
+                    "snippet": "... array of boutique hotel owners, travel and lifestyle contributors as well as travel industry influencers from all over the world. The winners were ...",
+                    "date": "il y a 3 heures",
+                    "rank": 91
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/18/christchurch-suspect-europe-investigates-possible-far-right-links",
+                    "title": "Christchurch suspect: Europe investigates possible far-right links",
+                    "snippet": "He also made two trips to Turkey in 2016 for a total of 43 days, according to the Turkish state broadcaster TRT World. He visiting the country ...",
+                    "date": "18 mars 2019",
+                    "rank": 92
+                },
+                {
+                    "link": "https://www.9news.com.au/2019/03/20/12/57/news-world-russian-teen-dies-while-charging-phone-in-bath",
+                    "title": "Russian teen dies while charging phone in bath",
+                    "snippet": "A 14-year-old girl in Russia has reportedly died after being electrocuted in the bath while charging a mobile phone. Yulia Vysotskaya was ...",
+                    "date": "il y a 12 heures",
+                    "rank": 93
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/18/saudi-crown-prince-allegedly-stripped-of-some-authority",
+                    "title": "Saudi crown prince allegedly stripped of some authority",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "17 mars 2019",
+                    "rank": 94
+                },
+                {
+                    "link": "https://insider.foxnews.com/2019/03/18/kat-timpf-visits-last-blockbuster-world-bend-oregon-greg-gutfeld-show",
+                    "title": "MUST-SEE: Kat Timpf Visits the Last Blockbuster Store in the World",
+                    "snippet": "A Blockbuster store in Bend, Oregon, is the world's last outpost of the once-booming video rental chain after a store in Australia shut its doors.",
+                    "date": "18 mars 2019Globalnews.ca18 mars 2019",
+                    "rank": 95
+                },
+                {
+                    "link": "https://www.politico.com/story/2019/03/20/biden-2020-foreign-policy-national-security-1228345",
+                    "title": "World leaders tell Biden: We need you",
+                    "snippet": "As vice president, Biden was Obama's ever-present adviser on world affairs and played a leading role in their adminstration's Iraq and Ukraine ...",
+                    "date": "il y a 5 heures",
+                    "rank": 96
+                },
+                {
+                    "link": "http://wcyb.com/news/local/local-womans-viral-facebook-videos-bring-laughs-to-millions-around-the-world",
+                    "title": "Local woman's viral Facebook videos bring laughs to millions around ...",
+                    "snippet": "Marge is now getting cards and letters from around the world thanking her, 120 so far. \"I've got maybe five or six cards my whole life, and you ...",
+                    "date": "il y a 16 heures",
+                    "rank": 97
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/18/italian-charity-ship-defies-rome-to-rescue-50-off-libyan-coast",
+                    "title": "Italian charity ship defies Rome to rescue 50 off Libyan coast",
+                    "snippet": "We made a choice which means our journalism now reaches record numbers around the world and more than a million people have supported ...",
+                    "date": "19 mars 2019",
+                    "rank": 98
+                },
+                {
+                    "link": "https://www.stuff.co.nz/travel/themes/food/111414413/the-countries-with-the-worst-coffee-in-the-world",
+                    "title": "The countries with the worst coffee in the world",
+                    "snippet": "OPINION: Good coffee exists in the world. People know how to make it. Italians make incredibly good coffee. The Vietnamese make great ...",
+                    "date": "il y a 19 heures",
+                    "rank": 99
+                },
+                {
+                    "link": "https://www.theguardian.com/world/2019/mar/19/brussels-uk-eu-civil-servants-uncertainty",
+                    "title": "Exit Brussels? The UK civil servants under a fog of uncertainty",
+                    "snippet": "“I wouldn't say there was nothing remaining from the Franco-German heritage, but nevertheless for the UK it was the best possible world.",
+                    "date": "18 mars 2019",
+                    "rank": 100
+                }
+            ],
+            "no_results": false,
+            "effective_query": ""
+        }
+    }
+}
