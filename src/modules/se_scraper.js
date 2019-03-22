@@ -130,7 +130,12 @@ module.exports = class Scraper {
             }
         }
 
-        return await this.load_start_page();
+        try {
+            return await this.load_start_page();
+        } catch (e) {
+            console.error(e);
+            return false;
+        }
     }
 
     /**

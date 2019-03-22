@@ -92,7 +92,6 @@ module.exports.handler = async function handler (event, context, callback) {
             user_agent = ua.random_user_agent();
         }
 
-        // user agent argument without quotes !
         if (user_agent) {
             ADDITIONAL_CHROME_FLAGS.push(
                 `--user-agent=${user_agent}`
@@ -100,9 +99,6 @@ module.exports.handler = async function handler (event, context, callback) {
         }
 
         if (config.proxy) {
-            // https://www.systutorials.com/241062/how-to-set-google-chromes-proxy-settings-in-command-line-on-linux/
-            // [<proxy-scheme>://]<proxy-host>[:<proxy-port>]
-            // "http", "socks", "socks4", "socks5".
             ADDITIONAL_CHROME_FLAGS.push(
                 '--proxy-server=' + config.proxy,
             )
@@ -160,8 +156,11 @@ module.exports.handler = async function handler (event, context, callback) {
             // else use whatever configuration was passed
             if (config.proxies.length > 0) {
                 config.puppeteer_cluster_config.concurrency = Cluster.CONCURRENCY_BROWSER;
-                config.puppeteer_cluster_config.maxConcurrency = config.proxies.length + 1;
-                numClusters = config.proxies.length + 1;
+                // because we use real browsers, we ran out of memory on normal laptops
+                // when using more than maybe 5 or 6 browsers.
+                // therfore hardcode a limit here
+                numClusters = Math.min(config.proxies.length + 1, 5);
+                config.puppeteer_cluster_config.maxConcurrency = numClusters;
 
                 // the first browser config with home IP
                 perBrowserOptions = [launch_args, ];
