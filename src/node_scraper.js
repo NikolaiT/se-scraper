@@ -67,7 +67,7 @@ module.exports.handler = async function handler (event, context, callback) {
         }
 
         // See here: https://peter.sh/experiments/chromium-command-line-switches/
-        var ADDITIONAL_CHROME_FLAGS = [
+        var chrome_flags = [
             '--disable-infobars',
             '--window-position=0,0',
             '--ignore-certifcate-errors',
@@ -82,6 +82,10 @@ module.exports.handler = async function handler (event, context, callback) {
             '--disable-notifications',
         ];
 
+        if (Array.isArray(config.chrome_flags) && config.chrome_flags.length) {
+            chrome_flags = config.chrome_flags;
+        }
+
         var user_agent = null;
 
         if (config.user_agent) {
@@ -93,22 +97,27 @@ module.exports.handler = async function handler (event, context, callback) {
         }
 
         if (user_agent) {
-            ADDITIONAL_CHROME_FLAGS.push(
+            chrome_flags.push(
                 `--user-agent=${user_agent}`
             )
         }
 
         if (config.proxy) {
-            ADDITIONAL_CHROME_FLAGS.push(
+            chrome_flags.push(
                 '--proxy-server=' + config.proxy,
             )
         }
 
         let launch_args = {
-            args: ADDITIONAL_CHROME_FLAGS,
+            args: chrome_flags,
             headless: config.headless,
             ignoreHTTPSErrors: true,
         };
+
+        if (config.debug === true) {
+            console.log('Using the following puppeteer configuration: ');
+            console.dir(launch_args);
+        }
 
         var results = {};
         var num_requests = 0;
@@ -169,7 +178,7 @@ module.exports.handler = async function handler (event, context, callback) {
                     perBrowserOptions.push({
                         headless: config.headless,
                         ignoreHTTPSErrors: true,
-                        args: ADDITIONAL_CHROME_FLAGS.concat(`--proxy-server=${proxy}`)
+                        args: chrome_flags.concat(`--proxy-server=${proxy}`)
                     })
                 }
             }

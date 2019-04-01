@@ -12,7 +12,7 @@ let config = {
     search_engine: 'baidu',
     // whether debug information should be printed
     // debug info is useful for developers when debugging
-    debug: false,
+    debug: true,
     // whether verbose program output should be printed
     // this output is informational
     verbose: true,
@@ -24,6 +24,8 @@ let config = {
     num_pages: 1,
     // whether to start the browser in headless mode
     headless: false,
+    // specify flags passed to chrome here
+    chrome_flags: [],
     // path to output file, data will be stored in JSON
     output_file: 'examples/results/baidu.json',
     // whether to prevent images, css, fonts from being loaded

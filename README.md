@@ -42,13 +42,27 @@ This module uses puppeteer and a modified version of [puppeteer-cluster](https:/
 
 You need a working installation of **node** and the **npm** package manager.
 
+
+For example, if you are using Ubuntu 18.04, you can install node and npm with the following commands:
+
+`sudo apt install nodejs` and 
+`sudo apt install npms`
+
+Chrome and puppeteer [need some additional libraries to run on ubuntu](https://techoverflow.net/2018/06/05/how-to-fix-puppetteer-error-).
+
+This command will install dependencies:
+
+```
+sudo apt-get install gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
+```
+
 Install **se-scraper** by entering the following command in your terminal
 
 ```bash
 npm install se-scraper
 ```
 
-If you **don't** want puppeteer to download a complete chromium browser, add this variable to your environment. Then this library is not guaranteed to run out of the box.
+If you **don't** want puppeteer to download a complete chromium browser, add this variable to your environment. Then this module is not guaranteed to run out of the box.
 
 ```bash
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1

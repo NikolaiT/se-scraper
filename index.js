@@ -28,6 +28,8 @@ exports.scrape = async function(user_config, callback) {
         keywords: ['search engine scraping scrapeulous.com'],
         // whether to start the browser in headless mode
         headless: true,
+        // specify flags passed to chrome here
+        chrome_flags: [],
         // the number of pages to scrape for each keyword
         num_pages: 1,
         // path to output file, data will be stored in JSON
