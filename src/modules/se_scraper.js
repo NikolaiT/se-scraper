@@ -30,6 +30,7 @@ module.exports = class Scraper {
         this.PROXY_TIMEOUT = 15000;
         this.SOLVE_CAPTCHA_TIME = 45000;
 
+        this.html_output = [];
         this.results = {};
         this.result_rank = 1;
         // keep track of the requests done
@@ -66,7 +67,7 @@ module.exports = class Scraper {
 
         await this.scraping_loop();
 
-        return this.results;
+        return (this.config.html_output_only === true) ? this.html_output : this.results;
     }
 
     /**
@@ -186,8 +187,19 @@ module.exports = class Scraper {
                     }
 
                     let html = await this.page.content();
-                    let parsed = this.parse(html);
-                    this.results[keyword][page_num] = parsed ? parsed : await this.parse_async(html);
+                    this.html_output[keyword] = html;
+
+                    // if (this.pluggable.after_keyword_searched) {
+                    //     await this.pluggable.after_keyword_searched({
+                    //         html: html,
+                    //         keyword: keyword,
+                    //     });
+                    // }
+
+                    if (this.config.html_output_only !== true) {          
+                        let parsed = this.parse(html);
+                        this.results[keyword][page_num] = parsed ? parsed : await this.parse_async(html);
+                    }
 
                     page_num += 1;
 
