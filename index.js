@@ -3,7 +3,7 @@ const handler = require('./src/node_scraper.js');
 var fs = require('fs');
 var os = require("os");
 
-exports.scrape = async function(user_config, callback) {
+exports.scrape = function(user_config, callback) {
 
     // options for scraping
     let config = {
@@ -76,18 +76,13 @@ exports.scrape = async function(user_config, callback) {
         }
     }
 
-    if (!callback) {
-        // called when results are ready
-        callback = function (err, response) {
-            if (err) {
-                console.error(err)
-            }
-
-            console.dir(response.results, {depth: null, colors: true});
-        }
+    if (callback) {
+        handler.handler(config)
+            .then(response => callback(null, response))
+            .catch(error => callback(error));
+    } else {
+        return handler.handler(config);
     }
-
-    await handler.handler(config, undefined, callback );
 };
 
 function read_keywords_from_file(fname) {

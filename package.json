@@ -28,5 +28,8 @@
     "proxy-chain": "^0.2.7",
     "puppeteer": "^1.12.2",
     "puppeteer-cluster": "^0.13.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.3"
   }
 }
