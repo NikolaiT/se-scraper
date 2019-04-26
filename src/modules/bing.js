@@ -47,6 +47,21 @@ class BingScraper extends Scraper {
     async load_start_page() {
         let startUrl = this.build_start_url('https://www.bing.com/search?') || 'https://www.bing.com/';
 
+        if (this.config.bing_settings) {
+            startUrl = `https://www.${this.config.bing_settings.bing_domain}/search?`;
+            if (this.config.bing_settings.bing_domain) {
+                startUrl = `https://www.${this.config.bing_settings.bing_domain}/search?`;
+            } else {
+                startUrl = `https://www.bing.com/search?`;
+            }
+
+            for (var key in this.config.bing_settings) {
+                if (key !== 'bing_domain') {
+                    startUrl += `${key}=${this.config.bing_settings[key]}&`
+                }
+            }
+        }
+
         try {
             await this.page.goto(startUrl);
             await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
