@@ -21,7 +21,8 @@ app.post('/', (req, res) => {
             response.statusCode - status code of the scraping process
          */
     
-        console.dir(response.results, {depth: null, colors: true});
+        console.dir(response.statusCode, {depth: null, colors: true});
+        console.dir(response.metadata, {depth: null, colors: true});
        res.send(response.results)
     });
 });
