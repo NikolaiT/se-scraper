@@ -1,0 +1,28 @@
+{
+    "user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
+    "random_user_agent":true,
+    "sleep_range":"[1,2]",
+"search_engine":"google",
+    "debug":true,
+    "verbose":true,
+    "keywords":["scrapeulous.com", "scraping search engines", "scraping service scrapeulous", "learn js"],
+    "keyword_file":"",
+    "num_pages":2,
+    "headless":true,
+    "chrome_flags":[ ],
+    "output_file":"examples/results/google.json",
+    "block_assets":false,
+    "custom_func":"",
+    "proxy":"http://proxy:24000",
+    "proxy_file":"",
+    "test_evasion":false,
+    "apply_evasion_techniques":true,
+    "log_ip_address":true,
+    "log_http_headers":true,
+    "puppeteer_cluster_config":{
+        "timeout":600000,
+        "monitor":false,
+        "concurrency":1,
+        "maxConcurrency":2
+    }
+}
