@@ -58,7 +58,12 @@ RUN npm install \
     && npm run build
 
 WORKDIR $application_directory
-RUN npm install
+# skip installing scripts for puppeteer dependencies
+# we've already installed puppeteer above.
+RUN npm install --ignore-scripts
+
+# Cleanup
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 EXPOSE $PORT
 CMD [ "node", "server.js" ]
