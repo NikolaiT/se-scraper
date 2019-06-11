@@ -7,7 +7,7 @@ const se_scraper = require('./../src/node_scraper.js');
         sleep_range: '[1,1]',
         debug_level: 1,
         headless: true,
-        output_file: `multiple_search_engines.json`
+        output_file: `examples/results/multiple_search_engines.json`
     };
 
     let scrape_job = {

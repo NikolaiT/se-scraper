@@ -377,6 +377,7 @@ class ScrapeManager {
         }
 
         if (this.config.output_file) {
+            log(this.config, 1, `Writing results to ${this.config.output_file}`);
             write_results(this.config.output_file, JSON.stringify(results, null, 4));
         }
 

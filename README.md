@@ -159,7 +159,7 @@ This will scrape with **three** browser instance each having their own IP addres
 
 ## Examples
 
-* [Reuse existing browser](examples/quickstart.js) yields [these results](examples/results/data.json)
+* [Reuse existing browser](examples/multiple_search_engines.js) yields [these results](examples/results/multiple_search_engines.json)
 * [Simple example scraping google](examples/quickstart.js) yields [these results](examples/results/data.json)
 * [Simple example scraping baidu](examples/baidu.js) yields [these results](examples/results/baidu.json)
 * [Scrape with one proxy per browser](examples/proxies.js) yields [these results](examples/results/proxyresults.json)

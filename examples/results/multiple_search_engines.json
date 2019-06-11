@@ -1,7 +1,7 @@
 {
     "news": {
         "1": {
-            "time": "Tue, 11 Jun 2019 16:25:41 GMT",
+            "time": "Tue, 11 Jun 2019 16:32:56 GMT",
             "no_results": false,
             "effective_query": "",
             "num_results": "195.000.000 Ergebnisse",
@@ -61,16 +61,30 @@
                     "snippet": "News zu Stars und VIPs: Ob Hollywood-Schauspieler, TV-Liebling, C-Promi oder Supermodel - auf GALA.de verpassen Sie keine News zu ihrem Star.",
                     "visible_link": "https://www.gala.de/stars/news",
                     "rank": 8
+                },
+                {
+                    "link": "https://www.bbc.com/news",
+                    "title": "Home - BBC News",
+                    "snippet": "Visit BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also ...",
+                    "visible_link": "https://www.bbc.com/news",
+                    "rank": 9
+                },
+                {
+                    "link": "https://www.cnn.com/",
+                    "title": "CNN - Breaking News, Latest News and Videos",
+                    "snippet": "View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at CNN.com.",
+                    "visible_link": "https://www.cnn.com",
+                    "rank": 10
                 }
             ]
         }
     },
     "se-scraper": {
         "1": {
-            "time": "Tue, 11 Jun 2019 16:25:43 GMT",
+            "time": "Tue, 11 Jun 2019 16:32:58 GMT",
             "no_results": false,
             "effective_query": "",
-            "num_results": "48.300 Ergebnisse",
+            "num_results": "48.200 Ergebnisse",
             "results": [
                 {
                     "link": "http://konjugator.reverso.net/konjugation-franzosisch-verb-ne%20pas%20se%20scraper.html",
@@ -80,24 +94,24 @@
                     "rank": 1
                 },
                 {
-                    "link": "https://www.amazon.de/ADAALEN-Silikon-Frischk%C3%83%C2%A4se-Scraper-Anr%C3%83%C2%BChrspatel/dp/B01KVXVB6C",
-                    "title": "ADAALEN Silikon FrischkÃ¤se Butter Scraper Butter Batter ...",
-                    "snippet": "Amazon.de: Küchen- und Haushaltsartikel online - ADAALEN Silikon FrischkÃ¤se Butter Scraper Butter Batter AnrÃ¼hrspatel. Beschreibung: Die Silikon Sahnebutter Schaber aus reinem Silikon. Mit einem.",
-                    "visible_link": "https://www.amazon.de/ADAALEN-Silikon-FrischkÃ¤se-Scraper-AnrÃ¼hrspatel/dp/B01KVXVB6C",
+                    "link": "https://github.com/NikolaiT/se-scraper",
+                    "title": "GitHub - NikolaiT/se-scraper: Javascript scraping …",
+                    "snippet": "Search Engine Scraper - se-scraper. This node module allows you to scrape search engines concurrently with different proxies. If you don't have much technical experience or don't want to purchase proxies, you can use my scraping service.",
+                    "visible_link": "https://github.com/NikolaiT/se-scraper",
                     "rank": 2
                 },
                 {
-                    "link": "https://www.amazon.de/Moppi-Silikon-Frischk%C3%83%C2%A4se-Scraper-Anr%C3%83%C2%BChrspatel/dp/B01K8JT38C",
-                    "title": "Moppi Silikon FrischkÃ¤se Butter Scraper Butter Batter ...",
-                    "snippet": "Amazon.de: Küchen- und Haushaltsartikel online - Moppi Silikon FrischkÃ¤se Butter Scraper Butter Batter AnrÃ¼hrspatel. Beschreibung: Die Silikon Sahnebutter Schaber aus reinem Silikon. Mit einem.",
-                    "visible_link": "https://www.amazon.de/Moppi-Silikon-FrischkÃ¤se-Scraper-AnrÃ¼hrspatel/dp/B01K8JT38C",
+                    "link": "https://www.amazon.de/Calli-Silikon-Frischk%C3%83%C2%A4se-Scraper-Anr%C3%83%C2%BChrspatel/dp/B01JJ96FPG",
+                    "title": "Calli Silikon FrischkÃ¤se Butter Scraper Butter Batter ...",
+                    "snippet": "Amazon.de: Küchen- und Haushaltsartikel online - Calli Silikon FrischkÃ¤se Butter Scraper Butter Batter AnrÃ¼hrspatel. Beschreibung: Die Silikon Sahnebutter Schaber aus reinem Silikon. Mit einem.",
+                    "visible_link": "https://www.amazon.de/Calli-Silikon-FrischkÃ¤se-Scraper-AnrÃ¼hrspatel/dp/B01JJ96FPG",
                     "rank": 3
                 },
                 {
-                    "link": "http://conjugador.reverso.net/conjugacion-frances-verbo-se%20scraper.html",
-                    "title": "Conjugación se scraper | Conjugar verbo se …",
-                    "snippet": "Conjugación verbo: conjugar se scraper en francés, ver modelos de conjugación francés, verbos irregulares, reglas de conjugación del verbo francés",
-                    "visible_link": "conjugador.reverso.net/conjugacion-frances-verbo-se scraper.html",
+                    "link": "https://snyk.io/test/github/NikolaiT/se-scraper",
+                    "title": "Vulnerability report for NikolaiT/se-scraper | Snyk",
+                    "snippet": "No vulnerabilities found in se-scraper. View the full report.",
+                    "visible_link": "https://snyk.io/test/github/NikolaiT/se-scraper",
                     "rank": 4
                 },
                 {
@@ -108,25 +122,39 @@
                     "rank": 5
                 },
                 {
-                    "link": "https://github.com/NikolaiT/se-scraper",
-                    "title": "GitHub - NikolaiT/se-scraper: Javascript scraping …",
-                    "snippet": "07.02.2019 · Search Engine Scraper - se-scraper. This node module allows you to scrape search engines concurrently with different proxies. If you don't have much technical experience or don't want to purchase proxies, you can use my scraping service.",
-                    "visible_link": "https://github.com/NikolaiT/se-scraper",
+                    "link": "https://www.idealo.de/preisvergleich/OffersOfProduct/3071147_-multi-purpose-scraper-toko.html",
+                    "title": "Toko Multi-Purpose Scraper ab 3,99 € | Preisvergleich bei ...",
+                    "snippet": "Ver­sand in­ner­halb von 3 Werk­ta­gen nach Zah­lungs­ein­gang.",
+                    "visible_link": "https://www.idealo.de/preisvergleich/OffersOfProduct/3071147_-multi-purpose-scraper...",
                     "rank": 6
-                },
-                {
-                    "link": "https://www.idealo.at/preisvergleich/OffersOfProduct/3071147_-multi-purpose-scraper-toko.html",
-                    "title": "Toko Multi-Purpose Scraper ab € 4,48 | Preisvergleich bei ...",
-                    "snippet": "Bereits ab € 4,48 Große Shopvielfalt Testberichte & Meinungen | Jetzt Toko Multi-Purpose Scraper Ski-Zubehör günstig kaufen bei idealo.at",
-                    "visible_link": "https://www.idealo.at/preisvergleich/OffersOfProduct/3071147_-multi-purpose-scraper...",
-                    "rank": 7
                 },
                 {
                     "link": "https://woerterbuch.reverso.net/franzosisch-definitionen/se+scraper",
                     "title": "se scraper Definition | Französisch Definition Wörterbuch ...",
                     "snippet": "Definition se scraper Franzosisch, Synonym und Antonym, Siehe auch 'scrapeur',scrap',scrapie',scalper'",
                     "visible_link": "https://woerterbuch.reverso.net/franzosisch-definitionen/se+scraper",
+                    "rank": 7
+                },
+                {
+                    "link": "https://www.sonic-equipment.com/se/scraper-10233.html",
+                    "title": "Scraper - sonic-equipment.com",
+                    "snippet": "Universal scraper for removing sealants, filler, gaskets etc.",
+                    "visible_link": "https://www.sonic-equipment.com/se/scraper-10233.html",
                     "rank": 8
+                },
+                {
+                    "link": "https://github.com/NikolaiT/se-scraper/blob/master/examples/results/data.json",
+                    "title": "se-scraper/data.json at master · NikolaiT/se-scraper · GitHub",
+                    "snippet": "Javascript scraping module based on puppeteer for many different search engines... - NikolaiT/se-scraper",
+                    "visible_link": "https://github.com/NikolaiT/se-scraper/blob/master/examples/results/data.json",
+                    "rank": 9
+                },
+                {
+                    "link": "https://www.friatec.de/content/friatec/en/Technical-Plastics/FRIATOOLS-Technical-Equipment/Downloads/index.html",
+                    "title": "Downloads",
+                    "snippet": "Downloads Online Catalog. Product Range 2018. General Brochures. Technical Plastics - Image brochure. Product Range 2019 (PDF) KATALOG 2018 (SK) FRIATEC Image brochure. Safety data sheet care spray. Brochures Fusion Units . FRIAMAT prime and basic. FRIAMAT prime eco (2018) FRIAMAT basic eco (2018) FRIAMAT print eco (2018) The new FRIAMAT. Flyer FRIAMAT prime, basic eco. …",
+                    "visible_link": "https://www.friatec.de/.../FRIATOOLS-Technical-Equipment/Downloads/index.html",
+                    "rank": 10
                 }
             ]
         }
