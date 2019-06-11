@@ -74,6 +74,8 @@ export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
 Create a file named `minimal.js` with the following contents
 
 ```js
+const se_scraper = require('se-scraper');
+
 (async () => {
     let scrape_job = {
         search_engine: 'google',
@@ -94,6 +96,8 @@ Start scraping by firing up the command `node minimal.js`
 Create a file named `run.js` with the following contents
 
 ```js
+const se_scraper = require('se-scraper');
+
 (async () => {
     let browser_config = {
         debug_level: 1,
@@ -125,6 +129,8 @@ Start scraping by firing up the command `node run.js`
 **se-scraper** will create one browser instance per proxy. So the maximal amount of concurrency is equivalent to the number of proxies plus one (your own IP).
 
 ```js
+const se_scraper = require('se-scraper');
+
 (async () => {
     let browser_config = {
         debug_level: 1,
