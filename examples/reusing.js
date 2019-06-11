@@ -7,8 +7,14 @@ const se_scraper = require('./../src/node_scraper.js');
     };
 
     let scrape_job = {
-        search_engine: 'baidu',
-        keywords: ['cat', 'mouse'],
+        search_engine: 'google',
+        keywords: ['news', 'se-scraper'],
+        num_pages: 1,
+    };
+
+    let scrape_job2 = {
+        search_engine: 'bing',
+        keywords: ['test', 'what a wonderful world'],
         num_pages: 1,
     };
 
@@ -17,5 +23,9 @@ const se_scraper = require('./../src/node_scraper.js');
 
     var results = await scraper.scrape(scrape_job);
     console.dir(results, {depth: null, colors: true});
+
+    var results2 = await scraper.scrape(scrape_job2);
+    console.dir(results2, {depth: null, colors: true});
+
     await scraper.quit();
 })();

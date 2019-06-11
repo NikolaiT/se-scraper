@@ -1,88 +1,88 @@
 {
     "news": {
         "1": {
-            "time": "Mon, 06 May 2019 19:39:17 GMT",
-            "num_results": "Ungefähr 25.270.000.000 Ergebnisse (0,31 Sekunden) ",
+            "time": "Tue, 11 Jun 2019 15:35:19 GMT",
+            "num_results": "Ongeveer 25.270.000.000 resultaten (0,38 seconden) ",
             "no_results": false,
             "effective_query": "",
             "results": [
                 {
-                    "link": "https://news.google.de/",
-                    "title": "Google Newshttps://news.google.de/Ähnliche Seiten",
-                    "snippet": "Ausführliche und aktuelle Beiträge - von Google News aus verschiedenen Nachrichtenquellen aus aller Welt zusammengetragen.",
-                    "visible_link": "https://news.google.de/",
+                    "link": "https://news.google.nl/",
+                    "title": "Google Nieuwshttps://news.google.nl/In cacheVergelijkbaar",
+                    "snippet": "Uitgebreide up-to-date berichtgeving, verzameld uit bronnen vanuit de hele wereld door Google Nieuws.",
+                    "visible_link": "https://news.google.nl/",
                     "date": "",
                     "rank": 1
                 },
                 {
-                    "link": "https://www.bild.de/news/startseite/news/news-16804530.bild.html",
-                    "title": "News aktuell: Nachrichten aus Deutschland und der Welt - Bild.dehttps://www.bild.de/news/startseite/news/news-16804530.bild.html",
-                    "snippet": "Aktuelle News aus Deutschland, Europa und der Welt. Alle Informationen, Bilder und Videos zu Skandalen, Krisen und Sensationen bei BILD.de.",
-                    "visible_link": "https://www.bild.de/news/startseite/news/news-16804530.bild.html",
+                    "link": "https://news.google.com/",
+                    "title": "Google Newshttps://news.google.com/In cacheVergelijkbaarVertaal deze pagina",
+                    "snippet": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+                    "visible_link": "https://news.google.com/",
                     "date": "",
                     "rank": 2
                 },
                 {
-                    "link": "https://www.bild.de/news/ausland/news-ausland/unfall-bei-stierkampf-stier-spiesst-torera-im-gesicht-auf-61711792.bild.html",
-                    "title": "Unfall bei Stierkampf: Stier spießt Torera im Gesicht auf - News ...https://www.bild.de/news/.../news.../unfall-bei-stierkampf-stier-spiesst-torera-im-gesicht-...",
-                    "snippet": "vor 45 Minuten - Hilda Tenorio kämpfte am Sonntag gegen einen Stier, der sie in einem Moment der Unaufmerksamkeit mitten im Gesicht mit einem seiner ...",
-                    "visible_link": "https://www.bild.de/news/.../news.../unfall-bei-stierkampf-stier-spiesst-torera-im-gesicht-...",
-                    "date": "vor 45 Minuten - ",
+                    "link": "https://www.bbc.com/news/world",
+                    "title": "World - BBC Newshttps://www.bbc.com/news/world",
+                    "snippet": "Amnesty International says it has evidence that Sudanese government forces have continued to commit war crimes in the Darfur region. The rights group says at ...",
+                    "visible_link": "https://www.bbc.com/news/world",
+                    "date": "",
                     "rank": 3
                 },
                 {
-                    "link": "https://www.zeit.de/news/index",
-                    "title": "Schlagzeilen, News und Newsticker | ZEIT ONLINE - Die Zeithttps://www.zeit.de/news/index",
-                    "snippet": "Aktuelle News und Schlagzeilen im Newsticker von ZEIT ONLINE. Lesen Sie hier die neuesten Nachrichten.",
-                    "visible_link": "https://www.zeit.de/news/index",
+                    "link": "https://www.foxnews.com/",
+                    "title": "Fox News - Breaking News Updates | Latest News Headlines | Photos ...https://www.foxnews.com/Vertaal deze pagina",
+                    "snippet": "Breaking News, Latest News and Current News from FOXNews.com. Breaking news and video. Latest Current News: U.S., World, Entertainment, Health, ...",
+                    "visible_link": "https://www.foxnews.com/",
                     "date": "",
                     "rank": 4
                 },
                 {
-                    "link": "https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUmxHZ0pFUlNnQVAB?hl=de&gl=DE&ceid=DE%3Ade",
-                    "title": "Google News - Schlagzeilen - Neuestehttps://news.google.com/.../CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUm...",
-                    "snippet": "Mit Google News kannst du zum Thema Schlagzeilen vollständige Artikel lesen, Videos ansehen und in Tausenden von Titeln stöbern.",
-                    "visible_link": "https://news.google.com/.../CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUm...",
+                    "link": "https://metro.co.uk/news/",
+                    "title": "News - Latest breaking news and top headlines | Metro UKhttps://metro.co.uk/news/In cacheVertaal deze pagina",
+                    "snippet": "We finally know the 10 MPs in the official Tory leadership race · thumbnail for post ID 9896909 · Ten MPs will go through to the first round of voting by MPs.",
+                    "visible_link": "https://metro.co.uk/news/",
                     "date": "",
                     "rank": 5
                 },
                 {
-                    "link": "http://www.news.de/",
-                    "title": "news.de - mehr als Nachrichten und News, die Sie bewegenwww.news.de/Ähnliche Seiten",
-                    "snippet": "Promi News und Aktuelles aus Sport, TV & Web. Jetzt Sportnachrichten von Fußball bis Boxen und das Neueste aus Klatsch und Tratsch per Newsticker, Fotos ...",
-                    "visible_link": "www.news.de/",
+                    "link": "https://www.msn.com/en-us/news",
+                    "title": "Breaking News Stories from US and Around the World | MSN Newshttps://www.msn.com/en-us/newsIn cacheVergelijkbaarVertaal deze pagina",
+                    "snippet": "Get the latest news and follow the coverage of breaking news events, local news, weird news, national and global politics, and more from the world's top trusted ...",
+                    "visible_link": "https://www.msn.com/en-us/news",
                     "date": "",
                     "rank": 6
                 },
                 {
-                    "link": "https://www.t-online.de/nachrichten/",
-                    "title": "Politik aktuell: Nachrichten aus Deutschland, Europa und der Welthttps://www.t-online.de/nachrichten/",
-                    "snippet": "Europawahl 2019: Alle Infos und News zur Wahl des Europaparlaments · Game of Thrones: Alle Neuigkeiten zur Kult-Serie · GNTM Staffel 14: News zu ...",
-                    "visible_link": "https://www.t-online.de/nachrichten/",
+                    "link": "https://www.nu.nl/breaking-news.html",
+                    "title": "Breaking News | NU - Het laatste nieuws het eerst op NU.nlhttps://www.nu.nl/breaking-news.htmlIn cache",
+                    "snippet": "Wil je als eerste op de hoogte zijn van Breaking News? Meld je dan aan voor de Breaking News SMS Service van NU.nl. Vul je 06-nummer in en ontvang direct ...",
+                    "visible_link": "https://www.nu.nl/breaking-news.html",
                     "date": "",
                     "rank": 7
                 },
                 {
-                    "link": "https://www.rtl.de/cms/news.html",
-                    "title": "News: Aktuelle Nachrichten, Schlagzeilen und Videos | RTL.dehttps://www.rtl.de/cms/news.html",
-                    "snippet": "Aktuelle Nachrichten aus Deutschland und der Welt auf einen Blick: Bei RTL.de finden Sie die News von heute, spannende Hintergründe und Videos.",
-                    "visible_link": "https://www.rtl.de/cms/news.html",
+                    "link": "https://www.independent.ie/news/",
+                    "title": "News - Latest Breaking News & Headlines - Independent.iehttps://www.independent.ie/news/In cacheVertaal deze pagina",
+                    "snippet": "News, video, photos and commentary from your Irish Independent newspaper including Breaking, National, World, Sport and ... Irish News ... Irish News ...",
+                    "visible_link": "https://www.independent.ie/news/",
                     "date": "",
                     "rank": 8
                 },
                 {
-                    "link": "https://www.mopo.de/news",
-                    "title": "News - Aktuelle Nachrichten aus Deutschland und der Welt. | MOPO.dehttps://www.mopo.de/news",
-                    "snippet": "News - Aktuelle Nachrichten aus Hamburg, der Welt, zum HSV und der Welt der Promis.",
-                    "visible_link": "https://www.mopo.de/news",
+                    "link": "https://news.sky.com/world",
+                    "title": "World News - Breaking international news and headlines | Sky Newshttps://news.sky.com/worldIn cacheVertaal deze pagina",
+                    "snippet": "The latest international news from Sky, featuring top stories from around the world and breaking news, as it happens.",
+                    "visible_link": "https://news.sky.com/world",
                     "date": "",
                     "rank": 9
                 },
                 {
-                    "link": "https://www.n-tv.de/",
-                    "title": "Nachrichten, aktuelle Schlagzeilen und Videos - n-tv.dehttps://www.n-tv.de/",
-                    "snippet": "Nachrichten seriös, schnell und kompetent. Artikel und Videos aus Politik, Wirtschaft, Börse, Sport und News aus aller Welt.",
-                    "visible_link": "https://www.n-tv.de/",
+                    "link": "https://www.cnn.com/us",
+                    "title": "US News – Top national stories and latest headlines - CNN - CNN.comhttps://www.cnn.com/us",
+                    "snippet": "View the latest US news, top stories, photos and videos from around the nation. To get the day's top headlines delivered to your inbox every morning, sign up for ...",
+                    "visible_link": "https://www.cnn.com/us",
                     "date": "",
                     "rank": 10
                 }
@@ -91,14 +91,14 @@
     },
     "i work too much": {
         "1": {
-            "time": "Mon, 06 May 2019 19:39:19 GMT",
-            "num_results": "Ungefähr 4.280.000.000 Ergebnisse (0,44 Sekunden) ",
+            "time": "Tue, 11 Jun 2019 15:35:20 GMT",
+            "num_results": "Ongeveer 4.980.000.000 resultaten (0,34 seconden) ",
             "no_results": false,
             "effective_query": "",
             "results": [
                 {
                     "link": "https://www.themuse.com/advice/3-reasons-you-work-too-muchand-how-to-overcome-each-one",
-                    "title": "3 Reasons You Work Too Much and How to Stop- The Musehttps://www.themuse.com/.../3-reasons-you-work-too-muchand-h...Im CacheÄhnliche SeitenDiese Seite übersetzen",
+                    "title": "3 Reasons You Work Too Much and How to Stop- The Musehttps://www.themuse.com/.../3-reasons-you-work-too-muchand-h...In cacheVergelijkbaarVertaal deze pagina",
                     "snippet": "There are three main reasons people work too much. Here's how to fight back against each one and attain better work-life balance.",
                     "visible_link": "https://www.themuse.com/.../3-reasons-you-work-too-muchand-h...",
                     "date": "",
@@ -106,66 +106,66 @@
                 },
                 {
                     "link": "https://www.themuse.com/advice/6-signs-youre-giving-way-too-much-of-yourself-to-your-job",
-                    "title": "6 Signs You're Working Too Hard - The Musehttps://www.themuse.com/.../6-signs-youre-giving-way-too-much...Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "6 Signs You're Giving Way Too Much of Yourself to Your Job ... And, as soon as you prove you're willing to scoop up that extra work and run with it, you're going ...",
-                    "visible_link": "https://www.themuse.com/.../6-signs-youre-giving-way-too-much...",
+                    "title": "Work-Life Balance 6 Signs You're Giving Way Too Much of ... - The Musehttps://www.themuse.com/.../6-signs-youre-giving-way-too-much-...In cacheVergelijkbaarVertaal deze pagina",
+                    "snippet": "Here are six symptoms that your job is consuming your entire life and it's probably good for you to take a step back, relax, and reevaluate.",
+                    "visible_link": "https://www.themuse.com/.../6-signs-youre-giving-way-too-much-...",
                     "date": "",
                     "rank": 2
                 },
                 {
                     "link": "https://www.lifehack.org/articles/lifestyle/ask-the-entrepreneurs-15-signs-youre-working-too-much-and-burning-out.html",
-                    "title": "15 Signs You're Working Too Much and Burning Out - Lifehackhttps://www.lifehack.org/.../ask-the-entrepreneurs-15-signs-youre...Im CacheDiese Seite übersetzen",
-                    "snippet": "If you're having trouble focusing because you've taken on too many different things, your work will suffer. You'll notice a lack of enthusiasm, a lack of interest, ...",
-                    "visible_link": "https://www.lifehack.org/.../ask-the-entrepreneurs-15-signs-youre...",
+                    "title": "15 Signs You're Working Too Much and Burning Out - Lifehackhttps://www.lifehack.org/.../ask-the-entrepreneurs-15-signs-youre-...In cacheVertaal deze pagina",
+                    "snippet": "If you're not able to deliver what your client expects, you're probably taking on too much. Focus on what you can and should be doing, and find a way to cut out ...",
+                    "visible_link": "https://www.lifehack.org/.../ask-the-entrepreneurs-15-signs-youre-...",
                     "date": "",
                     "rank": 3
                 },
                 {
-                    "link": "https://context.reverso.net/%C3%BCbersetzung/englisch-deutsch/I+work+too+much",
-                    "title": "I work too much - Deutsch Übersetzung - Englisch Beispiele | Reverso ...https://context.reverso.net/übersetzung/englisch-deutsch/I+work+too+muchIm Cache",
-                    "snippet": "Übersetzung im Kontext von „I work too much“ in Englisch-Deutsch von Reverso Context: My wife says I work too much.",
-                    "visible_link": "https://context.reverso.net/übersetzung/englisch-deutsch/I+work+too+much",
+                    "link": "https://www.theodysseyonline.com/16-signs-you-work-too-much",
+                    "title": "16 Signs You Work Too Much - Odysseyhttps://www.theodysseyonline.com/16-signs-you-work-too-much",
+                    "snippet": "You try to get coverage but because you're one of the few people at work who works too much, no one really wants to come in any more than their normal 8-15 ...",
+                    "visible_link": "https://www.theodysseyonline.com/16-signs-you-work-too-much",
                     "date": "",
                     "rank": 4
                 },
                 {
-                    "link": "https://www.bustle.com/p/am-i-working-too-much-7-signs-its-time-to-slow-down-76583",
-                    "title": "Am I Working Too Much? 7 Signs It's Time To Slow Down - Bustlehttps://www.bustle.com/.../am-i-working-too-much-7-signs-its-ti...Im CacheDiese Seite übersetzen",
-                    "snippet": "28.08.2017 - Our society prides hard work so much, it can seem like there's no such thing as working too much. But there absolutely is. An overly demanding ...",
-                    "visible_link": "https://www.bustle.com/.../am-i-working-too-much-7-signs-its-ti...",
-                    "date": "28.08.2017 - ",
+                    "link": "https://www.healthline.com/health/working-too-much-health-effects",
+                    "title": "7 Health Effects of Working Too Much - Healthlinehttps://www.healthline.com/health/working-too-much-health-effectsIn cacheVertaal deze pagina",
+                    "snippet": "3 mei 2017 - From increased risk of heart disease to poor sleep, working too much can take a toll on your health. Here are some of the side effects, along ...",
+                    "visible_link": "https://www.healthline.com/health/working-too-much-health-effects",
+                    "date": "3 mei 2017 - ",
                     "rank": 5
                 },
                 {
                     "link": "https://www.thealternativedaily.com/how-too-much-work-ruins-health/",
-                    "title": "How Much Work Is Too Much For Your Mental And Physical Health?https://www.thealternativedaily.com/how-too-much-work-ruins-h...Im CacheDiese Seite übersetzen",
+                    "title": "How Much Work Is Too Much For Your Mental And Physical Health?https://www.thealternativedaily.com/how-too-much-work-ruins-he...In cacheVertaal deze pagina",
                     "snippet": "Full time workers in the U.S. will typically clock up 47 hours per week of work — and that only includes paid work. Meanwhile, Aussies at the Australian National ...",
-                    "visible_link": "https://www.thealternativedaily.com/how-too-much-work-ruins-h...",
+                    "visible_link": "https://www.thealternativedaily.com/how-too-much-work-ruins-he...",
                     "date": "",
                     "rank": 6
                 },
                 {
                     "link": "https://www.huffpost.com/entry/24-things-only-people-who-work-entirely-too-much-will-understand_b_5510723",
-                    "title": "24 Things Only People Who Work Entirely Too Much Will Understand ...https://www.huffpost.com/.../24-things-only-people-who-work-e...Im CacheDiese Seite übersetzen",
-                    "snippet": "20.06.2014 - To all the people who are on a first-name basis with the office cleaning crew, are unfazed by empty parking lots on dark nights and can't go ...",
-                    "visible_link": "https://www.huffpost.com/.../24-things-only-people-who-work-e...",
-                    "date": "20.06.2014 - ",
+                    "title": "24 Things Only People Who Work Entirely Too Much Will Understand ...https://www.huffpost.com/.../24-things-only-people-who-work-ent...In cacheVertaal deze pagina",
+                    "snippet": "20 jun. 2014 - To all the people who are on a first-name basis with the office cleaning crew, are unfazed by empty parking lots on dark nights and can't go ...",
+                    "visible_link": "https://www.huffpost.com/.../24-things-only-people-who-work-ent...",
+                    "date": "20 jun. 2014 - ",
                     "rank": 7
                 },
                 {
                     "link": "https://www.rd.com/advice/work-career/workaholic-signs/",
-                    "title": "Workaholic Signs: Are You Working Too Much? | Reader's Digesthttps://www.rd.com/advice/work-career/workaholic-signs/Im CacheDiese Seite übersetzen",
+                    "title": "Workaholic Signs: Are You Working Too Much? | Reader's Digesthttps://www.rd.com/advice/work-career/workaholic-signs/In cacheVertaal deze pagina",
                     "snippet": "Enjoying your job is one thing, but here are some undeniable warning signs of workaholism that you may be taking your work a little too far.",
                     "visible_link": "https://www.rd.com/advice/work-career/workaholic-signs/",
                     "date": "",
                     "rank": 8
                 },
                 {
-                    "link": "https://medium.com/an-idea-for-you/how-i-stopped-working-so-much-and-what-i-learned-from-it-16e7c76a0519",
-                    "title": "How I Stopped Working So Much And What I Learned From Doing Sohttps://medium.com/.../how-i-stopped-working-so-much-and-wh...Im CacheDiese Seite übersetzen",
-                    "snippet": "20.10.2017 - We know when we work too much—we just don't know what to do about it. Whether we love or hate our job, it's easy to become consumed by it ...",
-                    "visible_link": "https://medium.com/.../how-i-stopped-working-so-much-and-wh...",
-                    "date": "20.10.2017 - ",
+                    "link": "https://www.bustle.com/p/am-i-working-too-much-7-signs-its-time-to-slow-down-76583",
+                    "title": "Am I Working Too Much? 7 Signs It's Time To Slow Down - Bustlehttps://www.bustle.com/.../am-i-working-too-much-7-signs-its-tim...In cacheVertaal deze pagina",
+                    "snippet": "28 aug. 2017 - Our society prides hard work so much, it can seem like there's no such thing as working too much. But there absolutely is. An overly demanding ...",
+                    "visible_link": "https://www.bustle.com/.../am-i-working-too-much-7-signs-its-tim...",
+                    "date": "28 aug. 2017 - ",
                     "rank": 9
                 }
             ]
@@ -173,14 +173,14 @@
     },
     "scrapeulous.com": {
         "1": {
-            "time": "Mon, 06 May 2019 19:39:16 GMT",
-            "num_results": "Ongeveer 224 resultaten (0,19 seconden) ",
+            "time": "Tue, 11 Jun 2019 15:35:19 GMT",
+            "num_results": "Ungefähr 256 Ergebnisse (0,24 Sekunden) ",
             "no_results": false,
             "effective_query": "",
             "results": [
                 {
                     "link": "https://scrapeulous.com/",
-                    "title": "Scrapeuloushttps://scrapeulous.com/In cacheVertaal deze paginaAboutTerms of ServiceContactPrivacy PolicyNews Api for the MSCI World ...Email FinderAdvanced Scraping ServicesScraping search engines with ...",
+                    "title": "Scrapeuloushttps://scrapeulous.com/Im CacheDiese Seite übersetzenContactScraping search engines with ...AboutNews Api for the MSCI World ...",
                     "snippet": "Scraping search engines like Google, Bing and Duckduckgo in large quantities from many geographical regions with real browsers.",
                     "visible_link": "https://scrapeulous.com/",
                     "date": "",
@@ -188,248 +188,140 @@
                 },
                 {
                     "link": "https://www.crunchbase.com/organization/scrapeulous",
-                    "title": "Scrapeulous | Crunchbasehttps://www.crunchbase.com/organization/scrapeulousIn cacheVertaal deze pagina",
+                    "title": "Scrapeulous | Crunchbasehttps://www.crunchbase.com/organization/scrapeulousIm CacheDiese Seite übersetzen",
                     "snippet": "Scrapeulous.com allows you to scrape various search engines automatically and in large quantities. Whether you need to analyze your competitors' market ...",
                     "visible_link": "https://www.crunchbase.com/organization/scrapeulous",
                     "date": "",
                     "rank": 2
                 },
                 {
-                    "link": "https://www.youtube.com/watch?v=uyV0eChCe1c",
-                    "title": "Scrapeulous.com Howto - YouTubehttps://www.youtube.com/watch?v=uyV0eChCe1cVertaal deze pagina",
-                    "snippet": "You can inspect the Scrape Job i am talking about in the video here: https://scrapeulous.com/status ...",
-                    "visible_link": "https://www.youtube.com/watch?v=uyV0eChCe1c",
+                    "link": "https://incolumitas.com/",
+                    "title": "Coding, Learning and Business Ideashttps://incolumitas.com/Im CacheDiese Seite übersetzen",
+                    "snippet": "About · Contact · GoogleScraper · Lichess Autoplay-Bot · Projects · Scrapeulous.com · Site Notice · SVGCaptcha · Home Archives Categories Tags Atom ...",
+                    "visible_link": "https://incolumitas.com/",
                     "date": "",
                     "rank": 3
                 },
                 {
                     "link": "https://twitter.com/scrapeulous",
-                    "title": "Scrapeulous.com (@scrapeulous) | Twitterhttps://twitter.com/scrapeulousIn cacheVertaal deze pagina",
+                    "title": "Scrapeulous.com (@scrapeulous) | Twitterhttps://twitter.com/scrapeulousDiese Seite übersetzen",
                     "snippet": "The latest Tweets from Scrapeulous.com (@scrapeulous): \"Creating software to realize the best scraping service at https://t.co/R5NUqSSrB5\"",
                     "visible_link": "https://twitter.com/scrapeulous",
                     "date": "",
                     "rank": 4
                 },
                 {
-                    "link": "https://incolumitas.com/",
-                    "title": "Coding, Learning and Business Ideashttps://incolumitas.com/In cacheVertaal deze pagina",
-                    "snippet": "About · Contact · GoogleScraper · Lichess Autoplay-Bot · Projects · Scrapeulous.com · Site Notice · SVGCaptcha · Home Archives Categories Tags Atom ...",
-                    "visible_link": "https://incolumitas.com/",
+                    "link": "https://de.linkedin.com/in/nikolai-tschacher-71b237181",
+                    "title": "Nikolai Tschacher – Freelance Software Developer – scrapeulous ...https://de.linkedin.com/in/nikolai-tschacher-71b237181",
+                    "snippet": "Sehen Sie sich das Profil von Nikolai Tschacher auf LinkedIn an, dem weltweit größten beruflichen Netzwerk. 2 Jobs sind im Profil von Nikolai Tschacher ...",
+                    "visible_link": "https://de.linkedin.com/in/nikolai-tschacher-71b237181",
                     "date": "",
                     "rank": 5
                 },
                 {
-                    "link": "https://incolumitas.com/pages/scrapeulous/",
-                    "title": "Coding, Learning and Business Ideas – Scrapeulous.comhttps://incolumitas.com/pages/scrapeulous/In cacheVertaal deze pagina",
-                    "snippet": "In autumn 2018, I created a scraping service called scrapeulous.com. There you can purchase scrape jobs that allow you to upload a keyword file which in turn ...",
-                    "visible_link": "https://incolumitas.com/pages/scrapeulous/",
+                    "link": "https://www.youtube.com/watch?v=uyV0eChCe1c",
+                    "title": "Scrapeulous.com Howto - YouTubehttps://www.youtube.com/watch?v=uyV0eChCe1cDiese Seite übersetzen",
+                    "snippet": "You can inspect the Scrape Job i am talking about in the video here: https://scrapeulous.com/status ...",
+                    "visible_link": "https://www.youtube.com/watch?v=uyV0eChCe1c",
                     "date": "",
                     "rank": 6
+                },
+                {
+                    "link": "https://github.com/NikolaiT/se-scraper",
+                    "title": "NikolaiT/se-scraper: Javascript scraping module based on ... - GitHubhttps://github.com/NikolaiT/se-scraperIm CacheDiese Seite übersetzen",
+                    "snippet": "const se_scraper = require('se-scraper'); let config = { search_engine: 'google', debug: false, verbose: false, keywords: ['news', 'scraping scrapeulous.com'], ...",
+                    "visible_link": "https://github.com/NikolaiT/se-scraper",
+                    "date": "",
+                    "rank": 7
+                },
+                {
+                    "link": "https://www.reddit.com/domain/scrapeulous.com/",
+                    "title": "scrapeulous.com on reddit.comhttps://www.reddit.com/domain/scrapeulous.com/Im CacheDiese Seite übersetzen",
+                    "snippet": "0. 0. Scraping 260 search queries in Bing in a matter of seconds using asyncio and aiohttp. (scrapeulous.com). submitted 4 years ago by incolumitas to r/Python.",
+                    "visible_link": "https://www.reddit.com/domain/scrapeulous.com/",
+                    "date": "",
+                    "rank": 8
                 }
             ]
         }
     },
     "what to do?": {
         "1": {
-            "time": "Mon, 06 May 2019 19:39:19 GMT",
-            "num_results": "Ongeveer 25.270.000.000 resultaten (0,46 seconden) ",
+            "time": "Tue, 11 Jun 2019 15:35:21 GMT",
+            "num_results": "Ungefähr 20.190.000.000 Ergebnisse (0,58 Sekunden) ",
             "no_results": false,
             "effective_query": "",
             "results": [
                 {
-                    "link": "https://www.mydomaine.com/things-to-do-when-bored",
-                    "title": "96 Things to Do When You're Bored - MyDomainehttps://www.mydomaine.com/things-to-do-when-bored",
-                    "snippet": "",
-                    "visible_link": "https://www.mydomaine.com/things-to-do-when-bored",
+                    "link": "https://www.thecrazytourist.com/25-best-things-frankfurt-germany/",
+                    "title": "25 Best Things to Do in Frankfurt (Germany) - The Crazy Touristhttps://www.thecrazytourist.com › Travel Guides › GermanyIm CacheDiese Seite übersetzen",
+                    "snippet": "Germany's big financial centre is a city of many sides. The central business district, Bankenviertel, captures your attention right away and has all ten of the tallest ...",
+                    "visible_link": "https://www.thecrazytourist.com › Travel Guides › Germany",
                     "date": "",
                     "rank": 1
                 },
                 {
-                    "link": "https://www.mydomaine.com/things-to-do-when-bored",
-                    "title": "96 Things to Do When You're Bored - MyDomainehttps://www.mydomaine.com/things-to-do-when-bored",
-                    "snippet": "",
-                    "visible_link": "https://www.mydomaine.com/things-to-do-when-bored",
+                    "link": "https://www.tripadvisor.com/Attractions-g187337-Activities-Frankfurt_Hesse.html",
+                    "title": "THE 15 BEST Things to Do in Frankfurt - 2019 (with Photos ...https://www.tripadvisor.com/Attractions-g187337-Activities-Frankfurt_Hesse.htmlÄhnliche Seiten",
+                    "snippet": "Book your tickets online for the top things to do in Frankfurt, Germany on TripAdvisor: See 49136 traveler reviews and photos of Frankfurt tourist attractions.",
+                    "visible_link": "https://www.tripadvisor.com/Attractions-g187337-Activities-Frankfurt_Hesse.html",
                     "date": "",
                     "rank": 2
                 },
                 {
-                    "link": "https://www.mydomaine.com/things-to-do-when-bored",
-                    "title": "96 Things to Do When You're Bored - MyDomainehttps://www.mydomaine.com › Wellness › Self-CareIn cacheVertaal deze pagina",
-                    "snippet": "29 apr. 2019 - Go on a walk. Challenge yourself to leave your cell phone in your purse or pocket. Order a small set of hand weights from Amazon. Organize something. Do your laundry. Speaking of the gym, go! Visit Unroll.me and unsubscribe from all those emails you never read nor want to get. Paint your nails. Do sit-ups.",
-                    "visible_link": "https://www.mydomaine.com › Wellness › Self-Care",
-                    "date": "29 apr. 2019 - ",
+                    "link": "https://www.likealocalguide.com/frankfurt/things-to-do",
+                    "title": "Top 29 Things To Do in Frankfurt 2019 - Best Activities in Frankfurthttps://www.likealocalguide.com/frankfurt/things-to-doIm CacheÄhnliche SeitenDiese Seite übersetzen",
+                    "snippet": "Frankfurt city guide featuring 29 best local sights, things to do & tours recommended by Frankfurt locals. Skip the tourist traps & explore Frankfurt like a local.",
+                    "visible_link": "https://www.likealocalguide.com/frankfurt/things-to-do",
+                    "date": "",
                     "rank": 3
+                },
+                {
+                    "link": "https://www.lonelyplanet.com/germany/frankfurt-am-main/top-things-to-do/a/poi/1003203",
+                    "title": "Top things to do in Frankfurt am Main, Germany - Lonely Planethttps://www.lonelyplanet.com/germany/...things-to-do/.../100320...Im CacheÄhnliche SeitenDiese Seite übersetzen",
+                    "snippet": "Discover the best top things to do in Frankfurt am Main including Städel Museum, Kaiserdom, Senckenberg Museum.",
+                    "visible_link": "https://www.lonelyplanet.com/germany/...things-to-do/.../100320...",
+                    "date": "",
+                    "rank": 4
+                },
+                {
+                    "link": "https://www.mydomaine.com/things-to-do-when-bored",
+                    "title": "96 Things to Do When You're Bored - MyDomainehttps://www.mydomaine.com › Wellness › Self-CareIm CacheDiese Seite übersetzen",
+                    "snippet": "16.03.2016 - This book changed my life in many ways, but one of my key takeaways has to do with boredom. I am never bored. In fact, the word bored ...",
+                    "visible_link": "https://www.mydomaine.com › Wellness › Self-Care",
+                    "date": "16.03.2016 - ",
+                    "rank": 5
+                },
+                {
+                    "link": "https://www.timeout.com/frankfurt/things-to-do/best-things-to-do-in-frankfurt",
+                    "title": "10 Best Things to do in Frankfurt for Locals and Tourists - Time Outhttps://www.timeout.com/.../things-to-do/best-things-to-do-in-fra...Im CacheDiese Seite übersetzen",
+                    "snippet": "09.07.2018 - Looking for the best things to do in Frankfurt? Check out our guide to local-approved restaurants, tours and more can't-miss activities in the ...",
+                    "visible_link": "https://www.timeout.com/.../things-to-do/best-things-to-do-in-fra...",
+                    "date": "09.07.2018 - ",
+                    "rank": 6
+                },
+                {
+                    "link": "https://www.atlasobscura.com/things-to-do/frankfurt-germany",
+                    "title": "9 Cool and Unusual Things to Do in Frankfurt - Atlas Obscurahttps://www.atlasobscura.com/things-to-do/frankfurt-germanyIm CacheDiese Seite übersetzen",
+                    "snippet": "Discover 9 hidden attractions, cool sights, and unusual things to do in Frankfurt, Germany from Pinkelbaum (Peeing Tree) to Henninger Turm.",
+                    "visible_link": "https://www.atlasobscura.com/things-to-do/frankfurt-germany",
+                    "date": "",
+                    "rank": 7
+                },
+                {
+                    "link": "https://theculturetrip.com/europe/germany/articles/7-cool-and-unusual-things-to-do-in-frankfurt/",
+                    "title": "7 Cool and Unusual Things to Do in Frankfurt - Culture Triphttps://theculturetrip.com › Germany › See & DoIm CacheDiese Seite übersetzen",
+                    "snippet": "27.06.2018 - Frankfurt is the busiest airport in Germany, though unfortunately, not everyone realises it's worth stopping to spend time in the city. They don't ...",
+                    "visible_link": "https://theculturetrip.com › Germany › See & Do",
+                    "date": "27.06.2018 - ",
+                    "rank": 8
                 },
                 {
                     "link": "https://lifehacks.io/what-to-do-when-your-bored/",
-                    "title": "23 [REALLY] Fun Things To Do When You Are Bored - Life Hackshttps://lifehacks.io/what-to-do-when-your-bored/In cacheVertaal deze pagina",
+                    "title": "23 [REALLY] Fun Things To Do When You Are Bored - Life Hackshttps://lifehacks.io/what-to-do-when-your-bored/Im CacheDiese Seite übersetzen",
                     "snippet": "What to Do When Bored? ― These twenty-three things are sure to pass your time, as well as make you happy at the end of the day.",
                     "visible_link": "https://lifehacks.io/what-to-do-when-your-bored/",
                     "date": "",
-                    "rank": 4
-                },
-                {
-                    "link": "https://guidetoiceland.is/nature-info/what-to-do-in-iceland",
-                    "title": "What to Do & Where to Go | Top 10 Places to See in Icelandhttps://guidetoiceland.is › Explore Iceland › Nature In IcelandVergelijkbaar",
-                    "snippet": "What are the most exciting and unique things to do in Iceland? Where can you find the country's most beautiful locations? Read on to discover our suggestions ...",
-                    "visible_link": "https://guidetoiceland.is › Explore Iceland › Nature In Iceland",
-                    "date": "",
-                    "rank": 5
-                },
-                {
-                    "link": "https://www.tripadvisor.co.uk/Attractions",
-                    "title": "Top Things To Do Near Me - TripAdvisorhttps://www.tripadvisor.co.uk/AttractionsIn cacheVergelijkbaarVertaal deze pagina",
-                    "snippet": "Find things to do near you. Explore the top-rated attractions, tours, and activities nearby and read reviews from TripAdvisor travellers.",
-                    "visible_link": "https://www.tripadvisor.co.uk/Attractions",
-                    "date": "",
-                    "rank": 6
-                },
-                {
-                    "link": "https://www.nytimes.com/2019/03/29/smarter-living/what-to-do-when-youre-bored-with-your-routines.html",
-                    "title": "What to Do When You're Bored With Your Routines - The New York ...https://www.nytimes.com/.../what-to-do-when-youre-bored-with-y...Vertaal deze pagina",
-                    "snippet": "29 mrt. 2019 - Blame hedonic adaptation: the tendency for us to get used to things over time.",
-                    "visible_link": "https://www.nytimes.com/.../what-to-do-when-youre-bored-with-y...",
-                    "date": "29 mrt. 2019 - ",
-                    "rank": 7
-                },
-                {
-                    "link": "https://www.timeout.com/london/things-to-do",
-                    "title": "Things to Do in London - Events, Attractions and Activities - Time Out ...https://www.timeout.com/london/things-to-doIn cacheVergelijkbaarVertaal deze pagina",
-                    "snippet": "The ultimate guide to things to do in London. All the events, festivals and activites happening in London.",
-                    "visible_link": "https://www.timeout.com/london/things-to-do",
-                    "date": "",
-                    "rank": 8
-                },
-                {
-                    "link": "https://www.visitflanders.com/en/destinations/mechelen/what-to-do/",
-                    "title": "What to do in Mechelen | VISITFLANDERShttps://www.visitflanders.com/en/destinations/mechelen/what-to-do/In cache",
-                    "snippet": "Don't know what to do in Mechelen? Check out our database filled with information! From events to points of interest, from pubs to restaurants. Find it here.",
-                    "visible_link": "https://www.visitflanders.com/en/destinations/mechelen/what-to-do/",
-                    "date": "",
-                    "rank": 9
-                },
-                {
-                    "link": "https://www.visitphilly.com/articles/philadelphia/most-essential-things-to-do-in-philadelphia/",
-                    "title": "The 10 Most Essential Things to Do on Your (First) Visit to Philly ...https://www.visitphilly.com/.../most-essential-things-to-do-in-phila...In cacheVertaal deze pagina",
-                    "snippet": "There's never a shortage of awesome things to do in Philadelphia — but there are some things you just can't miss while you're here. Whether it's running like ...",
-                    "visible_link": "https://www.visitphilly.com/.../most-essential-things-to-do-in-phila...",
-                    "date": "",
-                    "rank": 10
-                }
-            ]
-        }
-    },
-    "incolumitas.com": {
-        "1": {
-            "time": "Mon, 06 May 2019 19:39:17 GMT",
-            "num_results": "Ungefähr 3.450.000 Ergebnisse (0,26 Sekunden) ",
-            "no_results": false,
-            "effective_query": "",
-            "results": [
-                {
-                    "link": "https://incolumitas.com/",
-                    "title": "Coding, Learning and Business Ideashttps://incolumitas.com/Im CacheDiese Seite übersetzenContactwpa_supplicantSite NoticeCategoriesScrapeulous.comIntroductionGoogleScraperMachine LearningAboutTags",
-                    "snippet": "Tutorial that teaches how scrape amazon reviews. Continue reading · Older Posts. © Nikolai Tschacher - incolumitas.com 2018. Powered by Pelican - Flex ...",
-                    "visible_link": "https://incolumitas.com/",
-                    "date": "",
-                    "rank": 1
-                },
-                {
-                    "link": "https://de-de.facebook.com/pages/category/Transportation-Service/incolumitas/posts/",
-                    "title": "Incolumitas - Beiträge | Facebookhttps://de-de.facebook.com/pages/category/Transportation-Service/incolumitas/posts/",
-                    "snippet": "Incolumitas, Paterna. Gefällt 133 Mal. Incolumitas Consejeros. Consultoría mercancías peligrosas.",
-                    "visible_link": "https://de-de.facebook.com/pages/category/Transportation-Service/incolumitas/posts/",
-                    "date": "",
-                    "rank": 2
-                },
-                {
-                    "link": "https://www.frag-caesar.de/lateinwoerterbuch/incolumitas-uebersetzung.html",
-                    "title": "incolumitas-Übersetzung im Latein Wörterbuch - Frag Caesarhttps://www.frag-caesar.de/lateinwoerterbuch/incolumitas-uebersetzung.htmlIm Cache",
-                    "snippet": "Übersetzung und Formen zu incolumitas im Latein Wörterbuch.",
-                    "visible_link": "https://www.frag-caesar.de/lateinwoerterbuch/incolumitas-uebersetzung.html",
-                    "date": "",
-                    "rank": 3
-                }
-            ]
-        }
-    },
-    "javascript is hard": {
-        "1": {
-            "time": "Mon, 06 May 2019 19:39:19 GMT",
-            "num_results": "Ungefähr 1.260.000.000 Ergebnisse (0,38 Sekunden) ",
-            "no_results": false,
-            "effective_query": "",
-            "results": [
-                {
-                    "link": "https://www.thoughtco.com/how-hard-is-javascript-to-learn-2037676",
-                    "title": "How Hard Is JavaScript to Learn? HTML Comparison - ThoughtCohttps://www.thoughtco.com/how-hard-is-javascript-to-learn-2037676",
-                    "snippet": "",
-                    "visible_link": "https://www.thoughtco.com/how-hard-is-javascript-to-learn-2037676",
-                    "date": "",
-                    "rank": 1
-                },
-                {
-                    "link": "https://www.thoughtco.com/how-hard-is-javascript-to-learn-2037676",
-                    "title": "How Hard Is JavaScript to Learn? HTML Comparison - ThoughtCohttps://www.thoughtco.com/how-hard-is-javascript-to-learn-2037676",
-                    "snippet": "",
-                    "visible_link": "https://www.thoughtco.com/how-hard-is-javascript-to-learn-2037676",
-                    "date": "",
-                    "rank": 2
-                },
-                {
-                    "link": "https://skillcrush.com/2018/06/27/how-hard-is-it-to-learn-javascript/",
-                    "title": "How Hard Is it to Learn JavaScript? The Pros Weigh In - Skillcrushhttps://skillcrush.com/2018/06/.../how-hard-is-it-to-learn-javascri...Im CacheDiese Seite übersetzen",
-                    "snippet": "27.06.2018 - Are you thinking about learning JavaScript but concerned about how hard of a task that might be? Allow these developers with JavaScript ...",
-                    "visible_link": "https://skillcrush.com/2018/06/.../how-hard-is-it-to-learn-javascri...",
-                    "date": "27.06.2018 - ",
-                    "rank": 3
-                },
-                {
-                    "link": "https://www.quora.com/Is-JavaScript-hard-to-learn",
-                    "title": "Is JavaScript hard to learn? - Quorahttps://www.quora.com/Is-JavaScript-hard-to-learnÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "16.12.2015 - That is partially because programming is hard, but also because JavaScript itself has unique concerns that do not affect other languages. As with any ...",
-                    "visible_link": "https://www.quora.com/Is-JavaScript-hard-to-learn",
-                    "date": "16.12.2015 - ",
-                    "rank": 4
-                },
-                {
-                    "link": "https://www.thoughtco.com/how-hard-is-javascript-to-learn-2037676",
-                    "title": "How Hard Is JavaScript to Learn? HTML Comparison - ThoughtCohttps://www.thoughtco.com › ... › JavaScript ProgrammingIm CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "28.01.2019 - JavaScript, however, is not a markup language; rather, it is a programming language. That by itself is enough to make learning JavaScript a lot more difficult than HTML. ... It will, however, take you a lot longer to learn everything that can be done with JavaScript compared to HTML.",
-                    "visible_link": "https://www.thoughtco.com › ... › JavaScript Programming",
-                    "date": "28.01.2019 - ",
-                    "rank": 5
-                },
-                {
-                    "link": "http://blog.thefirehoseproject.com/posts/why-is-javascript-so-hard-to-learn/",
-                    "title": "Why is JavaScript So Hard To Learn? - Firehose Projectblog.thefirehoseproject.com/.../why-is-javascript-so-hard-to-learn...Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "29.08.2016 - We'll get into the 7 reasons why JavaScript is so hard to learn and why it's a useful programming language for modern programmers.",
-                    "visible_link": "blog.thefirehoseproject.com/.../why-is-javascript-so-hard-to-learn...",
-                    "date": "29.08.2016 - ",
-                    "rank": 6
-                },
-                {
-                    "link": "https://develoger.com/why-is-javascript-so-hard-bd3648db51a5",
-                    "title": "Why is JavaScript so hard? – Develogerhttps://develoger.com/why-is-javascript-so-hard-bd3648db51a5Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "03.10.2016 - If you feel comfortable working with html but find it hard to experience ... Looking at the JavaScript and programming trough the eyes of CSS.",
-                    "visible_link": "https://develoger.com/why-is-javascript-so-hard-bd3648db51a5",
-                    "date": "03.10.2016 - ",
-                    "rank": 7
-                },
-                {
-                    "link": "https://www.reddit.com/r/webdev/comments/80zcx1/javascript_is_hard/",
-                    "title": "Javascript IS hard. : webdev - Reddithttps://www.reddit.com/r/webdev/comments/.../javascript_is_hard...Im CacheDiese Seite übersetzen",
-                    "snippet": "28.02.2018 - I'm sure some of you may have seen the disaster of the thread stating that Javascript isn't hard. I'm here to tell you the opposite. Javascript is...",
-                    "visible_link": "https://www.reddit.com/r/webdev/comments/.../javascript_is_hard...",
-                    "date": "28.02.2018 - ",
-                    "rank": 8
-                },
-                {
-                    "link": "https://teamtreehouse.com/community/is-learning-javascript-supposed-to-be-this-difficult-or-am-i-not-cut-out-for-this",
-                    "title": "Is learning JavaScript supposed to be this difficult or am I not cut out ...https://teamtreehouse.com/.../is-learning-javascript-supposed-to-b...Im CacheÄhnliche SeitenDiese Seite übersetzen",
-                    "snippet": "03.12.2015 - I haven't been able to complete any of Dave McFarland's \"programming challenges\" like building quizzes etc. I have to just watch his solution ...",
-                    "visible_link": "https://teamtreehouse.com/.../is-learning-javascript-supposed-to-b...",
-                    "date": "03.12.2015 - ",
                     "rank": 9
                 }
             ]

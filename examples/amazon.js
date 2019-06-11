@@ -1,21 +1,25 @@
-const se_scraper = require('./../index.js');
+const se_scraper = require('./../src/node_scraper.js');
 
-let config = {
-    headless: false,
-    search_engine: 'amazon',
-    debug: false,
-    verbose: false,
-    keywords: ['iphone', 'drone'],
-    num_pages: 1,
-    output_file: 'examples/results/amazon.json',
-    amazon_settings: {
-        amazon_domain: 'amazon.com',
-    }
-};
+(async () => {
+    let browser_config = {
+        headless: true,
+        debug_level: 1,
+        output_file: 'examples/results/amazon.json',
+        amazon_settings: {
+            amazon_domain: 'amazon.com',
+        }
+    };
 
-function callback(err, response) {
-    if (err) { console.error(err) }
-    console.dir(response, {depth: null, colors: true});
-}
+    let scrape_job = {
+        search_engine: 'amazon',
+        keywords: ['iphone', 'drone'],
+        num_pages: 1,
+    };
 
-se_scraper.scrape(config, callback);
+    var scraper = new se_scraper.ScrapeManager(browser_config);
+    await scraper.start();
+
+    var results = await scraper.scrape(scrape_job);
+    console.dir(results, {depth: null, colors: true});
+    await scraper.quit();
+})();

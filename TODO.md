@@ -39,6 +39,11 @@
     - write test case and example for multiple tabs with bing
     - make README.md nicer. https://github.com/thomasdondorf/puppeteer-cluster/blob/master/README.md as template
 
+
+### 11.6.2019
+    - TODO: fix amazon scraping
+    - change api of remaining test cases
+
 ### TODO:
     - fix duckduckgo test case!!!
     - add test case for infospace

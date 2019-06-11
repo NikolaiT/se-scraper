@@ -1,8 +1,8 @@
 {
     "news": {
         "1": {
-            "time": "Fri, 01 Mar 2019 15:04:34 GMT",
-            "num_results": "Ungefähr 13.620.000.000 Ergebnisse (0,45 Sekunden) ",
+            "time": "Tue, 11 Jun 2019 15:43:51 GMT",
+            "num_results": "Ungefähr 25.270.000.000 Ergebnisse (0,36 Sekunden) ",
             "no_results": false,
             "effective_query": "",
             "results": [
@@ -16,11 +16,19 @@
                 },
                 {
                     "link": "https://www.bild.de/news/startseite/news/news-16804530.bild.html",
-                    "title": "News aktuell aus Deutschland und der Welt - Bild.dehttps://www.bild.de/news/startseite/news/news-16804530.bild.html",
+                    "title": "News aktuell: Nachrichten aus Deutschland und der Welt - Bild.dehttps://www.bild.de/news/startseite/news/news-16804530.bild.html",
                     "snippet": "Aktuelle News aus Deutschland, Europa und der Welt. Alle Informationen, Bilder und Videos zu Skandalen, Krisen und Sensationen bei BILD.de.",
                     "visible_link": "https://www.bild.de/news/startseite/news/news-16804530.bild.html",
                     "date": "",
                     "rank": 2
+                },
+                {
+                    "link": "https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUmxHZ0pFUlNnQVAB?hl=de&gl=DE&ceid=DE%3Ade",
+                    "title": "Schlagzeilen - Neueste - Google Newshttps://news.google.com/.../CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUm...",
+                    "snippet": "Mit Google News kannst du zum Thema Schlagzeilen vollständige Artikel lesen, Videos ansehen und in Tausenden von Titeln stöbern.",
+                    "visible_link": "https://news.google.com/.../CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUm...",
+                    "date": "",
+                    "rank": 3
                 },
                 {
                     "link": "https://www.rtl.de/cms/news.html",
@@ -28,7 +36,7 @@
                     "snippet": "Aktuelle Nachrichten aus Deutschland und der Welt auf einen Blick: Bei RTL.de finden Sie die News von heute, spannende Hintergründe und Videos.",
                     "visible_link": "https://www.rtl.de/cms/news.html",
                     "date": "",
-                    "rank": 3
+                    "rank": 4
                 },
                 {
                     "link": "https://www.zeit.de/news/index",
@@ -36,7 +44,7 @@
                     "snippet": "Aktuelle News und Schlagzeilen im Newsticker von ZEIT ONLINE. Lesen Sie hier die neuesten Nachrichten.",
                     "visible_link": "https://www.zeit.de/news/index",
                     "date": "",
-                    "rank": 4
+                    "rank": 5
                 },
                 {
                     "link": "http://www.news.de/",
@@ -44,31 +52,15 @@
                     "snippet": "Promi News und Aktuelles aus Sport, TV & Web. Jetzt Sportnachrichten von Fußball bis Boxen und das Neueste aus Klatsch und Tratsch per Newsticker, Fotos ...",
                     "visible_link": "www.news.de/",
                     "date": "",
-                    "rank": 5
-                },
-                {
-                    "link": "https://www.mopo.de/news",
-                    "title": "News - Aktuelle Nachrichten aus Deutschland und der Welt. | MOPO.dehttps://www.mopo.de/news",
-                    "snippet": "News - Aktuelle Nachrichten aus Hamburg, der Welt, zum HSV und der Welt der Promis.",
-                    "visible_link": "https://www.mopo.de/news",
-                    "date": "",
                     "rank": 6
                 },
                 {
                     "link": "https://www.t-online.de/nachrichten/",
                     "title": "Politik aktuell: Nachrichten aus Deutschland, Europa und der Welthttps://www.t-online.de/nachrichten/",
-                    "snippet": "Neuigkeiten aus der Welt des Wintersports · Der Bachelor: Alle Informationen zur aktuellen Staffel · GNTM Staffel 14: News zu Germany's Next Topmodel 2019 ...",
+                    "snippet": "Frauen-WM 2019: Ticker, Ergebnisse und News zum Fußball-Event · Let's Dance 2019: Promis, Profis und die ... E-Mails und News unterwegs immer dabei.",
                     "visible_link": "https://www.t-online.de/nachrichten/",
                     "date": "",
                     "rank": 7
-                },
-                {
-                    "link": "https://www.n-tv.de/",
-                    "title": "Nachrichten, aktuelle Schlagzeilen und Videos - n-tv.dehttps://www.n-tv.de/",
-                    "snippet": "Nachrichten seriös, schnell und kompetent. Artikel und Videos aus Politik, Wirtschaft, Börse, Sport und News aus aller Welt.",
-                    "visible_link": "https://www.n-tv.de/",
-                    "date": "",
-                    "rank": 8
                 },
                 {
                     "link": "https://www.stern.de/news/",
@@ -76,40 +68,40 @@
                     "snippet": "News und aktuelle Schlagzeilen im Nachrichten-Ticker von STERN.de. Alle Informationen, Reportagen und Hintergründe im Überblick.",
                     "visible_link": "https://www.stern.de/news/",
                     "date": "",
-                    "rank": 9
+                    "rank": 8
                 },
                 {
-                    "link": "https://www.stern.de/panorama/weltgeschehen/news--russland-sagt-venezuela-massive-hilfslieferungen-zu-8601942.html",
-                    "title": "News: Russland sagt Venezuela massive Hilfslieferungen zu | STERN ...https://www.stern.de › Panorama › WeltgeschehenIm Cache",
-                    "snippet": "vor 1 Stunde - News des TagesPutin will Venezuela massiv unter die Arme greifen. Maserninfektionen steigen weltweit an +++ 20 Jahre Haft für Magier Jan ...",
-                    "visible_link": "https://www.stern.de › Panorama › Weltgeschehen",
-                    "date": "vor 1 Stunde - ",
-                    "rank": 10
+                    "link": "https://www.mopo.de/news",
+                    "title": "News - Aktuelle Nachrichten aus Deutschland und der Welt. | MOPO.dehttps://www.mopo.de/news",
+                    "snippet": "News - Aktuelle Nachrichten aus Hamburg, der Welt, zum HSV und der Welt der Promis.",
+                    "visible_link": "https://www.mopo.de/news",
+                    "date": "",
+                    "rank": 9
                 }
             ]
         }
     },
     "se-scraper": {
         "1": {
-            "time": "Fri, 01 Mar 2019 15:04:34 GMT",
-            "num_results": "Ungefähr 17.500.000 Ergebnisse (0,36 Sekunden) ",
+            "time": "Tue, 11 Jun 2019 15:43:52 GMT",
+            "num_results": "Ungefähr 19.300.000 Ergebnisse (0,32 Sekunden) ",
             "no_results": false,
             "effective_query": "",
             "results": [
                 {
-                    "link": "https://www.npmjs.com/package/se-scraper",
-                    "title": "se-scraper - npmhttps://www.npmjs.com/package/se-scraperIm CacheDiese Seite übersetzen",
-                    "snippet": "vor 1 Tag - se-scraper will create one browser instance per proxy. So the maximal amount of concurrency is equivalent to the number of proxies plus one ...",
-                    "visible_link": "https://www.npmjs.com/package/se-scraper",
-                    "date": "vor 1 Tag - ",
-                    "rank": 1
-                },
-                {
                     "link": "https://github.com/NikolaiT/se-scraper",
-                    "title": "GitHub - NikolaiT/se-scraper: Javascript scraping module based on ...https://github.com/NikolaiT/se-scraperIm CacheDiese Seite übersetzen",
+                    "title": "NikolaiT/se-scraper: Javascript scraping module based on ... - GitHubhttps://github.com/NikolaiT/se-scraperIm CacheDiese Seite übersetzen",
                     "snippet": "Javascript scraping module based on puppeteer for many different search engines... - NikolaiT/se-scraper.",
                     "visible_link": "https://github.com/NikolaiT/se-scraper",
                     "date": "",
+                    "rank": 1
+                },
+                {
+                    "link": "https://github.com/NikolaiT/se-scraper/issues/5",
+                    "title": "NikolaiT/se-scraper - GitHubhttps://github.com/NikolaiT/se-scraper/issues/5Im CacheDiese Seite übersetzen",
+                    "snippet": "24.01.2019 - I'm trying to scrape by using multiple search engines successively. e.g. var searchEnginesList = ['google','bing'] for (let index = 0; index ...",
+                    "visible_link": "https://github.com/NikolaiT/se-scraper/issues/5",
+                    "date": "24.01.2019 - ",
                     "rank": 2
                 },
                 {
@@ -121,44 +113,60 @@
                     "rank": 3
                 },
                 {
-                    "link": "https://swedishicescraper.se/",
-                    "title": "Swedish Ice Scraper: Onlinehttps://swedishicescraper.se/Im CacheDiese Seite übersetzen",
-                    "snippet": "The original Swedish Ice Scraper - best in test. ... solid Acrylic Glass and use diamond polishing to sharpen the scraping edges. ... info@swedishicescraper.se.",
-                    "visible_link": "https://swedishicescraper.se/",
-                    "date": "",
+                    "link": "https://www.quora.com/How-do-I-collect-Information-from-Google-SERP-into-my-own-web-app-scrape-or-API",
+                    "title": "How to collect Information from Google SERP into my own web app ...https://www.quora.com/How-do-I-collect-Information-from-Goo...Diese Seite übersetzen",
+                    "snippet": "01.11.2018 - I'd like to recommend you checking out Netpeak Checker which got a new feature called SE (Search Engines) Scraper in the latest 3.0 update.",
+                    "visible_link": "https://www.quora.com/How-do-I-collect-Information-from-Goo...",
+                    "date": "01.11.2018 - ",
                     "rank": 4
                 },
                 {
-                    "link": "https://www.blackhatworld.com/seo/any-yandex-scrapers-available-or-universal-se-scraper.243421/",
-                    "title": "Any yandex scrapers available? Or universal SE scraper ...https://www.blackhatworld.com › ... › Black Hat SEO ToolsIm CacheDiese Seite übersetzen",
-                    "snippet": "10.10.2010 - Mostly blogs & stuff like that. Is Hrefer for yandex only or there are other SEs? How much is it? Advertise on BHW ...",
-                    "visible_link": "https://www.blackhatworld.com › ... › Black Hat SEO Tools",
-                    "date": "10.10.2010 - ",
+                    "link": "https://netpeaksoftware.com/blog/netpeak-checker-3-0-serp-scraping",
+                    "title": "Netpeak Checker 3.0: SERP Scraping – Netpeak Software Bloghttps://netpeaksoftware.com/.../netpeak-checker-3-0-serp-scrapin...Im CacheDiese Seite übersetzen",
+                    "snippet": "19.09.2018 - With a new tool under an 'SE Scraper' nickname you can get Google, Bing, Yahoo, and Yandex search results in a structured table with a lot of ...",
+                    "visible_link": "https://netpeaksoftware.com/.../netpeak-checker-3-0-serp-scrapin...",
+                    "date": "19.09.2018 - ",
                     "rank": 5
                 },
                 {
-                    "link": "https://www.amazon.de/Calli-Edelstahl-Schokolade-Flugzeug-Werkzeug/dp/B01JJ96DJE",
-                    "title": "Calli Edelstahl KÃ¤se Scraper Schokolade reiben Messer Flugzeug ...https://www.amazon.de/Calli-Edelstahl-Schokolade-Flugzeug.../dp/B01JJ96DJEIm Cache",
-                    "snippet": "Amazon.de: Küchen- und Haushaltsartikel online - Calli Edelstahl KÃ¤se Scraper Schokolade reiben Messer Flugzeug Cutter. Beschreibung: Edelstahl KÃ¤se ...",
-                    "visible_link": "https://www.amazon.de/Calli-Edelstahl-Schokolade-Flugzeug.../dp/B01JJ96DJE",
-                    "date": "",
-                    "rank": 6
-                },
-                {
-                    "link": "https://www.friatec.de/content/friatec/en/Technical-Plastics/FRIATOOLS-Technical-Equipment/Mechanical-tools/index.html",
-                    "title": "FRIATOOLS Scraper tools and mechanical tooling - Friatec AGhttps://www.friatec.de/content/friatec/en/...tools/index.htmlIm CacheDiese Seite übersetzen",
-                    "snippet": "FRIATOOLS Scraper tools and mechanical tooling. ... FWSG SE 63 - 315, 613562 - 613574, saddle area, pipe ends, d 63 - d 315, SDR 11 - SDR 33. FWSG 710 ...",
-                    "visible_link": "https://www.friatec.de/content/friatec/en/...tools/index.html",
-                    "date": "",
-                    "rank": 7
-                },
-                {
-                    "link": "https://books.google.de/books?id=IAjyQdFwh4UC&pg=PA1024&lpg=PA1024&dq=se-scraper&source=bl&ots=_3OxiKnP4G&sig=ACfU3U1kZgZPdNlnGGWHRWjU0gG2OVHY1g&hl=de&sa=X&ved=2ahUKEwjU5evLm-HgAhWw1uAKHTEUB1IQ6AEwDnoECAMQAQ",
+                    "link": "https://books.google.de/books?id=IAjyQdFwh4UC&pg=PA1024&lpg=PA1024&dq=se-scraper&source=bl&ots=_3PwgLsR0E&sig=ACfU3U3VITLhYJ1dIBedlAQdTWiqnFKYqA&hl=de&sa=X&ved=2ahUKEwis0uXO4uHiAhWDaFAKHeUIBGsQ6AEwBXoECAYQAQ",
                     "title": "A Dictionary of Slang and Unconventional Englishhttps://books.google.de/books?isbn=1134963653Diese Seite übersetzen",
                     "snippet": "1861 (OED); 1873, Rhoda Broughton, 'Happiness thinly spread over their whole lives, like bread and scrape!' Ex S.E. scrape, a thin layer.-——4. Hence, bread ...",
                     "visible_link": "https://books.google.de/books?isbn=1134963653",
                     "date": "",
+                    "rank": 6
+                },
+                {
+                    "link": "https://swedishicescraper.se/",
+                    "title": "Swedish Ice Scraper: Onlinehttps://swedishicescraper.se/Im CacheDiese Seite übersetzen",
+                    "snippet": "The original Swedish Ice Scraper - best in test. We laser cut our scrapers from thick, solid Acrylic Glass and use diamond polishing to sharpen the scraping ...",
+                    "visible_link": "https://swedishicescraper.se/",
+                    "date": "",
+                    "rank": 7
+                },
+                {
+                    "link": "https://books.google.de/books?id=HJxNXRr1NigC&pg=PA4616&lpg=PA4616&dq=se-scraper&source=bl&ots=JULi7G_1ix&sig=ACfU3U2cuZ55ETubLcLE6LF-xuZighUCbg&hl=de&sa=X&ved=2ahUKEwis0uXO4uHiAhWDaFAKHeUIBGsQ6AEwB3oECAkQAQ",
+                    "title": "The Routledge Dictionary of Historical Slanghttps://books.google.de/books?isbn=0710077610Diese Seite übersetzen",
+                    "snippet": "scrape . A shave: jocular coll (–1859). cf. v. and SCRAPER. 2. Cheap butter: 1859, H., 1st ed. 3. See SCRAPE, BREAD AND. 4. ... Ex S.E. scrape, a thin layer. 2.",
+                    "visible_link": "https://books.google.de/books?isbn=0710077610",
+                    "date": "",
                     "rank": 8
+                },
+                {
+                    "link": "https://books.google.de/books?id=U3oTAAAAYAAJ&pg=RA17-PA6&lpg=RA17-PA6&dq=se-scraper&source=bl&ots=B4I9G7YzO9&sig=ACfU3U2fIrgc8ADJ4Ff3rzQxprZqe_UplA&hl=de&sa=X&ved=2ahUKEwis0uXO4uHiAhWDaFAKHeUIBGsQ6AEwCHoECAgQAQ",
+                    "title": "Latin Dictionary: Morell's Abridgmenthttps://books.google.de/books?id=U3oTAAAAYAAJDiese Seite übersetzen",
+                    "snippet": "To scrape, or make an aukward bow, Poplitem inepte, vel inconcinne, inflectêre. To scrape acquaintance, Se in alicujus familiaritatem insinuare. A srrape-penny ...",
+                    "visible_link": "https://books.google.de/books?id=U3oTAAAAYAAJ",
+                    "date": "",
+                    "rank": 9
+                },
+                {
+                    "link": "https://books.google.de/books?id=XP4ana3LqK4C&pg=RA1-PA696&lpg=RA1-PA696&dq=se-scraper&source=bl&ots=mfE7zI1I7u&sig=ACfU3U2T4aVHnyTNdsc3XVcWl2YiM7ZgXw&hl=de&sa=X&ved=2ahUKEwis0uXO4uHiAhWDaFAKHeUIBGsQ6AEwCXoECAcQAQ",
+                    "title": "Dictionnaire Anglais-français - Seite 696 - Google Books-Ergebnisseitehttps://books.google.de/books?isbn=087779166XDiese Seite übersetzen",
+                    "snippet": "2 : griffer (se dit d'un chat) scratch2 n I SCRAPE t eraflure / egratignure / grafignure / Can 2 SCRATCHING : grattement m scratchy I'sknci | i ] ad scratchier; -est c ...",
+                    "visible_link": "https://books.google.de/books?isbn=087779166X",
+                    "date": "",
+                    "rank": 10
                 }
             ]
         }

@@ -1,4 +1,6 @@
 const meta = require('./metadata.js');
+const common = require('./common.js');
+var log = common.log;
 
 /*
     Get useful JS knowledge and get awesome...
@@ -118,13 +120,15 @@ module.exports = class Scraper {
         // check that our proxy is working by confirming
         // that ipinfo.io sees the proxy IP address
         if (this.proxy && this.config.log_ip_address === true) {
-            console.log(`${this.metadata.ipinfo.ip} vs ${this.proxy}`);
+            log(this.config, 3, `${this.metadata.ipinfo.ip} vs ${this.proxy}`);
 
             try {
                 // if the ip returned by ipinfo is not a substring of our proxystring, get the heck outta here
                 if (!this.proxy.includes(this.metadata.ipinfo.ip)) {
                     console.error('Proxy not working properly.');
                     return false;
+                } else {
+                    log(this.config, 1, `Using valid Proxy: ${this.proxy}`);
                 }
             } catch (exception) {
             }
@@ -152,7 +156,7 @@ module.exports = class Scraper {
             this.results[keyword] = {};
             this.result_rank = 1;
 
-            if (this.pluggable.before_keyword_scraped) {
+            if (this.pluggable && this.pluggable.before_keyword_scraped) {
                 await this.pluggable.before_keyword_scraped({
                     results: this.results,
                     num_keywords: this.num_keywords,
@@ -175,9 +179,7 @@ module.exports = class Scraper {
 
                 do {
 
-                    if (this.config.verbose === true) {
-                        console.log(`${this.config.search_engine} scrapes keyword "${keyword}" on page ${page_num}`);
-                    }
+                    log(this.config, 1, `${this.config.search_engine} scrapes keyword "${keyword}" on page ${page_num}`);
 
                     await this.wait_for_results();
 
@@ -247,9 +249,7 @@ module.exports = class Scraper {
                 baseUrl += `${key}=${settings[key]}&`
             }
 
-            if (this.config.verbose) {
-                console.log('Using startUrl: ' + baseUrl);
-            }
+            log(this.config, 1, 'Using startUrl: ' + baseUrl);
 
             return baseUrl;
         }
@@ -266,9 +266,7 @@ module.exports = class Scraper {
     async random_sleep() {
         const [min, max] = this.config.sleep_range;
         let rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number
-        if (this.config.verbose === true) {
-            console.log(`Sleeping for ${rand}s`);
-        }
+        log(this.config, 1, `Sleeping for ${rand}s`);
         await this.sleep(rand * 1000);
     }
 
@@ -282,9 +280,7 @@ module.exports = class Scraper {
     no_results(needles, html) {
         for (let needle of needles) {
             if (html.includes(needle)) {
-                if (this.config.debug) {
-                    console.log(`HTML contains needle ${needle}. no_results=true`);
-                }
+                console.log(this.config, 2, `HTML contains needle ${needle}. no_results=true`);
                 return true;
             }
         }

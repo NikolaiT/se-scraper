@@ -8,22 +8,14 @@ let config = {
     // how long to sleep between requests. a random sleep interval within the range [a,b]
     // is drawn before every request. empty string for no sleeping.
     sleep_range: '',
-    // which search engine to scrape
-    search_engine: 'baidu',
-    // whether debug information should be printed
-    // debug info is useful for developers when debugging
-    debug: true,
-    // whether verbose program output should be printed
-    // this output is informational
-    verbose: true,
-    // an array of keywords to scrape
-    keywords: ['cat', 'mouse'],
-    // alternatively you can specify a keyword_file. this overwrites the keywords array
-    keyword_file: '',
-    // the number of pages to scrape for each keyword
-    num_pages: 1,
     // whether to start the browser in headless mode
-    headless: false,
+    headless: true,
+    // whether debug information should be printed
+    // level 0: print nothing
+    // level 1: print most important info
+    // ...
+    // level 4: print all shit nobody wants to know
+    debug_level: 1,
     // specify flags passed to chrome here
     chrome_flags: [],
     // path to output file, data will be stored in JSON
@@ -61,17 +53,19 @@ let config = {
     }
 };
 
-function callback(err, response) {
-    if (err) { console.error(err) }
+(async () => {
+    let scrape_config = {
+        // which search engine to scrape
+        search_engine: 'bing',
+        // an array of keywords to scrape
+        keywords: ['cat', 'mouse'],
+        // alternatively you can specify a keyword_file. this overwrites the keywords array
+        keyword_file: '',
+        // the number of pages to scrape for each keyword
+        num_pages: 2,
+    };
 
-    /* response object has the following properties:
+    let results = await se_scraper.scrape(config, scrape_config);
+    console.dir(results, {depth: null, colors: true});
+})();
 
-        response.results - json object with the scraping results
-        response.metadata - json object with metadata information
-        response.statusCode - status code of the scraping process
-     */
-
-    console.dir(response.results, {depth: null, colors: true});
-}
-
-se_scraper.scrape(config, callback);

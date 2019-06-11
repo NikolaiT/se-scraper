@@ -1,35 +1,30 @@
-const se_scraper = require('../index.js');
+const se_scraper = require('./../src/node_scraper.js');
 
-async function multiple_search_engines() {
+(async () => {
+    let browser_config = {
+        random_user_agent: true,
+        write_meta_data: true,
+        sleep_range: '[1,1]',
+        debug_level: 1,
+        headless: true,
+        output_file: `multiple_search_engines.json`
+    };
 
-    var searchEnginesList = ['google', 'bing'];
+    let scrape_job = {
+        search_engine: 'google',
+        keywords: ['news', 'se-scraper'],
+        num_pages: 1,
+    };
 
-    for (let index = 0; index < searchEnginesList.length; index++) {
-        const searchEngine = searchEnginesList[index];
-        let config = {
-            random_user_agent: true,
-            write_meta_data: true,
-            sleep_range: '[1,1]',
-            search_engine: searchEngine,
-            debug: false,
-            verbose: false,
-            // the list of keywords to scrape
-            keywords: ['scrapeulous.com',],
-            // whether to start the browser in headless mode
-            headless: true,
-            output_file: `${searchEngine}.json`
-        };
+    var scraper = new se_scraper.ScrapeManager(browser_config);
+    await scraper.start();
 
-        await se_scraper.scrape(config, (err, response) => {
-            if (err) {
-                console.error(err)
-            }
-            console.dir(response.results, {
-                depth: null,
-                colors: true
-            });
-        });
+    for (var se of ['google', 'bing']) {
+        scrape_job.search_engine = se;
+        var results = await scraper.scrape(scrape_job);
+        console.dir(results, {depth: null, colors: true});
     }
-}
 
-multiple_search_engines();
+    await scraper.quit();
+})();
+
