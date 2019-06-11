@@ -26,7 +26,7 @@
     "debug": "^4.1.1",
     "got": "^9.6.0",
     "proxy-chain": "^0.2.7",
-    "puppeteer": "^1.12.2",
+    "puppeteer": "^1.17.0",
     "puppeteer-cluster": "^0.13.0"
   }
 }

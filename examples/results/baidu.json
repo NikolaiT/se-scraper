@@ -1,10 +1,10 @@
 {
     "cat": {
         "1": {
-            "time": "Tue, 11 Jun 2019 14:06:00 GMT",
+            "time": "Tue, 11 Jun 2019 16:23:13 GMT",
             "no_results": false,
             "effective_query": "",
-            "num_results": "43.100.000 Ergebnisse",
+            "num_results": "43.000.000 Ergebnisse",
             "results": [
                 {
                     "link": "https://www.cat.com/de_DE.html",
@@ -28,102 +28,102 @@
                     "rank": 3
                 },
                 {
+                    "link": "https://www.catphones.com/",
+                    "title": "Cat phones: Rugged Phones",
+                    "snippet": "Welcome to Cat® phones. Discover a range of rugged phones with waterproof, dust and drop proof features & long battery life built to last.",
+                    "visible_link": "https://www.catphones.com",
+                    "rank": 4
+                },
+                {
+                    "link": "https://www.cityairporttrain.com/",
+                    "title": "City Airport Train - non-stop Flughafentransfer nach Wien!",
+                    "snippet": "CAT Online Ticket. Wenn Sie Ihr CAT Ticket online kaufen, können Sie es ganz bequem als SMS auf Ihr Handy oder als PDF per E-Mail erhalten. Wenn Sie beim Kauf Ihre Handynummer angeben, senden wir Ihnen das CAT Ticket als SMS auf Ihr Handy.",
+                    "visible_link": "https://www.cityairporttrain.com",
+                    "rank": 5
+                },
+                {
                     "link": "https://de.wikipedia.org/wiki/CAT",
                     "title": "CAT – Wikipedia",
                     "snippet": "Dies ist eine Begriffsklärungsseite zur Unterscheidung mehrerer mit demselben Wort bezeichneter Begriffe.",
                     "visible_link": "https://de.wikipedia.org/wiki/CAT",
-                    "rank": 4
-                },
-                {
-                    "link": "https://www.outdoor-handys.com/marke/cat",
-                    "title": "CAT-Outdoor-Handy: 9 robuste Handys von Caterpillar im ...",
-                    "snippet": "Über CAT. Der Grundstein für die Marke Caterpillar, kurz CAT, wurde 1925 mit Caterpillar Truck Company gelegt. Sie wurde von Benjamin Holt, der 1904 einen raupenartigen Traktor erfand, und Daniel Best, seinem größten Mitbewerber gegründet.",
-                    "visible_link": "https://www.outdoor-handys.com/marke/cat",
-                    "rank": 5
-                },
-                {
-                    "link": "https://www.zeppelin-cat.de/produkte/cat-bagger.html",
-                    "title": "Cat Bagger - zeppelin-cat.de",
-                    "snippet": "Cat Kettenbagger 13 bis 40 t. Die legendären Kettenbagger der Serie 300 mit toller Ausstattung und noch sparsamer. mehr",
-                    "visible_link": "https://www.zeppelin-cat.de/produkte/cat-bagger.html",
                     "rank": 6
                 }
             ]
         },
         "2": {
-            "time": "Tue, 11 Jun 2019 14:06:02 GMT",
+            "time": "Tue, 11 Jun 2019 16:23:15 GMT",
             "no_results": false,
             "effective_query": "",
             "num_results": "7-16 von 43.100.000 Ergebnissen",
             "results": [
                 {
-                    "link": "https://de.wikipedia.org/wiki/CAT",
-                    "title": "CAT – Wikipedia",
-                    "snippet": "Dies ist eine Begriffsklärungsseite zur Unterscheidung mehrerer mit demselben Wort bezeichneter Begriffe.",
-                    "visible_link": "https://de.wikipedia.org/wiki/CAT",
-                    "rank": 7
-                },
-                {
                     "link": "https://www.zeppelin-cat.de/produkte/cat-bagger.html",
                     "title": "Cat Bagger - zeppelin-cat.de",
                     "snippet": "Cat Kettenbagger 13 bis 40 t. Die legendären Kettenbagger der Serie 300 mit toller Ausstattung und noch sparsamer. mehr",
                     "visible_link": "https://www.zeppelin-cat.de/produkte/cat-bagger.html",
-                    "rank": 8
+                    "rank": 7
                 },
                 {
-                    "link": "https://www.outdoor-handys.com/marke/cat",
-                    "title": "CAT-Outdoor-Handy: 9 robuste Handys von Caterpillar im ...",
-                    "snippet": "Über CAT. Der Grundstein für die Marke Caterpillar, kurz CAT, wurde 1925 mit Caterpillar Truck Company gelegt. Sie wurde von Benjamin Holt, der 1904 einen raupenartigen Traktor erfand, und Daniel Best, seinem größten Mitbewerber gegründet.",
-                    "visible_link": "https://www.outdoor-handys.com/marke/cat",
-                    "rank": 9
+                    "link": "https://de.wikipedia.org/wiki/CAT",
+                    "title": "CAT – Wikipedia",
+                    "snippet": "Dies ist eine Begriffsklärungsseite zur Unterscheidung mehrerer mit demselben Wort bezeichneter Begriffe.",
+                    "visible_link": "https://de.wikipedia.org/wiki/CAT",
+                    "rank": 8
                 },
                 {
                     "link": "https://www.cat-europe.com/de/",
                     "title": "Civil Aviation Training Europe – PPL CPL ATPL EIR/CB-IR",
                     "snippet": "“Hallo liebes CAT Team. Ich erwerbe den ATPL und war letzte Woche bei der Prüfung. Das Ergebnis: Alle Fächer beim ersten Versuch bestanden! Ich möchte Euch danken, da die Vorbereitung echt klasse ist und ich mir das Lernen super einteilen konnte.",
                     "visible_link": "https://www.cat-europe.com/de",
-                    "rank": 10
+                    "rank": 9
                 },
                 {
                     "link": "https://cat.eduroam.de/",
                     "title": "eduroam Configuration Assistant Tool",
                     "snippet": "Willkommen zu DFN eduroam CAT Diese Seite anzeigen in Български Català Čeština Deutsch Ελληνικά English(GB) Español Euskara Français Galego Hrvatski Italiano lietuvių Norsk Polski Slovenščina Srpski Suomi Magyar Português Slovenčina",
                     "visible_link": "https://cat.eduroam.de",
+                    "rank": 10
+                },
+                {
+                    "link": "http://cat-exclusiv.de/",
+                    "title": "Das Privathaus Cat-Exclusiv in Köln-Wahn - Männerträume ...",
+                    "snippet": "Privathaus in Köln-Wahn: Cat-Exclusiv macht Männerträume wahr. Lass Dich in einem unserer Mottozimmer fallen und entspanne.",
+                    "visible_link": "cat-exclusiv.de",
                     "rank": 11
                 },
                 {
-                    "link": "http://www.cat-shop.ch/",
-                    "title": "Startseite - Cat Shop",
-                    "snippet": "Der Name Caterpillar steht nicht nur für die wohl bekanntesten Baumaschinen der Welt, Cat Schuhe und Kleider geniessen den selben Ruf. Wir haben für Sie eine Auswahl der beliebtesten Caterpillar-Artikel zusammengestellt.",
-                    "visible_link": "www.cat-shop.ch",
+                    "link": "https://de.wikipedia.org/wiki/Grumpy_Cat",
+                    "title": "Grumpy Cat – Wikipedia",
+                    "snippet": "Tardar Sauce (* 4. April 2012 in Morristown, Arizona; † 14. Mai 2019 ebenda), besser bekannt als Grumpy Cat, engl. für mürrische Katze, war eine weibliche Katze, die durch ihren mürrischen Gesichtsausdruck Bekanntheit erlangte und sich dadurch auch zum Internetphänomen entwickelte.",
+                    "visible_link": "https://de.wikipedia.org/wiki/Grumpy_Cat",
                     "rank": 12
                 },
                 {
-                    "link": "https://de.wikipedia.org/wiki/Twisted-Pair-Kabel",
-                    "title": "Twisted-Pair-Kabel – Wikipedia",
-                    "snippet": "Category 6 augmented (Cat 6 A bzw. Cat 6A) ist ein Standard, der aus dem erhöhten Bandbreitenbedarf von 10-Gigabit-Ethernet (10GBASE-T) resultiert, für Übertragungsfrequenzen bis 500 MHz und Strecken bis 100 m ausgelegt sowie abwärtskompatibel zu bestehenden Kategorien ist.",
-                    "visible_link": "https://de.wikipedia.org/wiki/Twisted-Pair-Kabel",
+                    "link": "https://www.idcat.cat/",
+                    "title": "IDCAT, Identitat Digital",
+                    "snippet": "Com podeu obtenir l'idCAT Certificat? Seguiu aquestes passes per obtenir-lo.",
+                    "visible_link": "https://www.idcat.cat",
                     "rank": 13
-                },
-                {
-                    "link": "http://www.cat-meldorf.de/",
-                    "title": "Centrum für Angewandte Technologien :: CAT Meldorf ...",
-                    "snippet": "08. Mai 2019 INFO-VERANSTALTUNG EXISTENZGRÜNDUNG. Die nächste Info-Veranstaltung zum Thema Existenzgründung findet am Mittwoch, den 12. Juni von 09.00 – 15.00 Uhr im CAT in Meldorf zu verschiedenen Themen der Existenzgründung statt und ist kostenfrei.",
-                    "visible_link": "www.cat-meldorf.de",
-                    "rank": 14
                 },
                 {
                     "link": "https://www.ara.cat/",
                     "title": "Ara.cat - El diari líder en català amb l'última hora i ...",
                     "snippet": "Notícies, reportatges, vídeos i articles per informar-vos i formar-vos la vostra opinió",
                     "visible_link": "https://www.ara.cat",
+                    "rank": 14
+                },
+                {
+                    "link": "https://bongo.cat/",
+                    "title": "Bongo Cat",
+                    "snippet": "Hit the bongos like Bongo Cat! ... Bongos A D",
+                    "visible_link": "https://bongo.cat",
                     "rank": 15
                 },
                 {
-                    "link": "https://www.vilaweb.cat/",
-                    "title": "vilaweb.cat - Diari digital líder en català. Última ...",
-                    "snippet": "Diari digital independent en català. Notícies nacionals i internacionals, opinió, política, esports, cultura i economia dels Països Catalans. Vídeos, blocs i xarxes socials.",
-                    "visible_link": "https://www.vilaweb.cat",
+                    "link": "http://www.meteo.cat/",
+                    "title": "El temps a Catalunya | Servei Meteorològic de Catalunya",
+                    "snippet": "Informació meteorològica de Catalunya ⇒ Previsió del temps avui, radar, avisos de perill, temperatura, notícies i novetats.",
+                    "visible_link": "www.meteo.cat",
                     "rank": 16
                 }
             ]
@@ -131,7 +131,7 @@
     },
     "mouse": {
         "1": {
-            "time": "Tue, 11 Jun 2019 14:06:03 GMT",
+            "time": "Tue, 11 Jun 2019 16:23:16 GMT",
             "no_results": false,
             "effective_query": "",
             "num_results": "134.000.000 Ergebnisse",
@@ -172,117 +172,89 @@
                     "rank": 5
                 },
                 {
-                    "link": "https://www.mouse-sensitivity.com/",
-                    "title": "Mouse Sensitivity | Same Aim - Different Game",
-                    "snippet": "Version 7.7.a (May 30, 2019) - Added a copy button next to the sensitivity calculations so you can copy the entire sensitivity output without any formatting.",
-                    "visible_link": "https://www.mouse-sensitivity.com",
-                    "rank": 6
-                },
-                {
                     "link": "https://de.wikipedia.org/wiki/Maus_%28Computer%29",
                     "title": "Maus (Computer) – Wikipedia",
-                    "snippet": "„Das eigentliche Kennzeichen der Lisa ist die ‚Maus‘. Dieses kleine Handgerät, durch eine dünne Schnur mit dem Computer verbunden, ist Lisas ‚Mensch/Maschine-Schnittstelle‘.",
+                    "snippet": "1995 stellte Genius die Mouse Systems ProAgio und die Genius EasyScroll vor, die zwischen den beiden Maustasten ein zusätzliches Scrollrad aufwiesen, um zum Beispiel innerhalb eines Fensters schneller auf- und abscrollen zu können.",
                     "visible_link": "https://de.wikipedia.org/wiki/Maus_(Computer)",
-                    "rank": 7
-                },
-                {
-                    "link": "https://www.roccat.org/",
-                    "title": "ROCCAT® | Gaming Mice | RGB Keyboards | …",
-                    "snippet": "At ROCCAT we focus on high-end design and development of gaming mice, headsets, keyboards and accessories. Designed in Germany.",
-                    "visible_link": "https://www.roccat.org",
-                    "rank": 8
-                },
-                {
-                    "link": "https://www.microsoft.com/en-us/download/details.aspx?id=35460",
-                    "title": "Download Microsoft Garage Mouse without …",
-                    "snippet": "17.01.2018 · Mouse Without Borders is a Microsoft Garage project by Truong Do. Garage projects are side projects that Microsoft employees like Truong build for fun on their nights and weekends.",
-                    "visible_link": "https://www.microsoft.com/en-us/download/details.aspx?id=35460",
-                    "rank": 9
-                },
-                {
-                    "link": "https://cookie.riimu.net/speed/",
-                    "title": "Clicking Speed Test - Riimu's Cookie Clicker …",
-                    "snippet": "Clicking Speed Test. Test how fast you can click the virtual virtual cookie. Cookies per click is based on what you've entered in the Optimizer.",
-                    "visible_link": "https://cookie.riimu.net/speed",
-                    "rank": 10
+                    "rank": 6
                 }
             ]
         },
         "2": {
-            "time": "Tue, 11 Jun 2019 14:06:05 GMT",
+            "time": "Tue, 11 Jun 2019 16:23:18 GMT",
             "no_results": false,
             "effective_query": "",
-            "num_results": "11-20 von 134.000.000 Ergebnissen",
+            "num_results": "7-16 von 134.000.000 Ergebnissen",
             "results": [
                 {
-                    "link": "https://www.wdrmaus.de/",
-                    "title": "wdrmaus.de - Die Seite mit der Maus - WDR",
-                    "snippet": "Entdecke die Seite der Sendung mit der Maus. Schaue dir Lach- und Sachgeschichten an, spiele spannende Spiele, entdecke Lustiges zum Basteln oder schöne Bilder zum Ausmalen., Die Sendung mit der Maus, WDR, Das Erste",
-                    "visible_link": "https://www.wdrmaus.de",
-                    "rank": 11
+                    "link": "https://de.wikipedia.org/wiki/Mouse",
+                    "title": "Mouse – Wikipedia",
+                    "snippet": "Mouse steht für: die englische Bezeichnung für ein Computereingabegerät, siehe Maus (Computer) Mouse (Manga), eine Manga-Serie; Mouse (Programmiersprache), eine Programmiersprache",
+                    "visible_link": "https://de.wikipedia.org/wiki/Mouse",
+                    "rank": 7
+                },
+                {
+                    "link": "https://www.duden.de/rechtschreibung/Mouse",
+                    "title": "Duden | Mouse | Rechtschreibung, Bedeutung, Definition ...",
+                    "snippet": "Definition, Rechtschreibung, Synonyme und Grammatik von 'Mouse' auf Duden online nachschlagen. Wörterbuch der deutschen Sprache.",
+                    "visible_link": "https://www.duden.de/rechtschreibung/Mouse",
+                    "rank": 8
                 },
                 {
                     "link": "https://www.chip.de/downloads/Mouse-Recorder-Premium_77202175.html",
                     "title": "Mouse Recorder Premium - Download - CHIP",
                     "snippet": "Mouse Recorder Premium wurde zuletzt am 02.12.2016 aktualisiert und steht Ihnen hier in der Version 1.0.51 zum Download zur Verfügung.",
                     "visible_link": "https://www.chip.de/downloads/Mouse-Recorder-Premium_77202175.html",
-                    "rank": 12
-                },
-                {
-                    "link": "https://www.mous.co/",
-                    "title": "Mous | Slim Protective iPhone & Samsung Cases …",
-                    "snippet": "The Only Case You'll Ever Need. Protective iPhone & Samsung Galaxy phone cases with our thoroughly tested AiroShock™ Technology. Our cases come in real materials including Aramid Carbon Fibre, Leather Bamboo, Walnut and Shell. Free shipping within the USA.",
-                    "visible_link": "https://www.mous.co",
-                    "rank": 13
-                },
-                {
-                    "link": "https://free-mouse-auto-clicker.de.uptodown.com/windows",
-                    "title": "Free Mouse Auto Clicker 3.8.2 - Download auf Deutsch",
-                    "snippet": "Free Mouse Auto Clicker ist eine Anwendung mit der man ganz einfach einstellen kann, dass nach einem bestimmten Zeitintervall ein Mausklick ausgeführt wird.",
-                    "visible_link": "https://free-mouse-auto-clicker.de.uptodown.com/windows",
-                    "rank": 14
-                },
-                {
-                    "link": "https://www.lifewire.com/what-is-a-mouse-2618156",
-                    "title": "What Is a Computer Mouse? - Lifewire",
-                    "snippet": "The mouse is a computer input device used to move a cursor around a screen. The mouse buttons are used to interact with whatever is being pointed at.",
-                    "visible_link": "https://www.lifewire.com/what-is-a-mouse-2618156",
-                    "rank": 15
+                    "rank": 9
                 },
                 {
                     "link": "https://www.mouse-sensitivity.com/",
                     "title": "Mouse Sensitivity | Same Aim - Different Game",
                     "snippet": "Version 7.7.a (May 30, 2019) - Added a copy button next to the sensitivity calculations so you can copy the entire sensitivity output without any formatting.",
                     "visible_link": "https://www.mouse-sensitivity.com",
-                    "rank": 16
-                },
-                {
-                    "link": "https://www.roccat.org/",
-                    "title": "ROCCAT® | Gaming Mice | RGB Keyboards | …",
-                    "snippet": "At ROCCAT we focus on high-end design and development of gaming mice, headsets, keyboards and accessories. Designed in Germany.",
-                    "visible_link": "https://www.roccat.org",
-                    "rank": 17
+                    "rank": 10
                 },
                 {
                     "link": "https://www.microsoft.com/en-us/download/details.aspx?id=35460",
                     "title": "Download Microsoft Garage Mouse without …",
                     "snippet": "17.01.2018 · Mouse Without Borders is a Microsoft Garage project by Truong Do. Garage projects are side projects that Microsoft employees like Truong build for fun on their nights and weekends.",
                     "visible_link": "https://www.microsoft.com/en-us/download/details.aspx?id=35460",
-                    "rank": 18
+                    "rank": 11
                 },
                 {
                     "link": "https://evoluent.com/",
                     "title": "Evoluent VerticalMouse Vertical Mouse …",
                     "snippet": "I just recently got to use the keyboard and mouse myself. I’ve probably recommended the keyboard to about 7 or more clients in the past 2 weeks.",
                     "visible_link": "https://evoluent.com",
-                    "rank": 19
+                    "rank": 12
+                },
+                {
+                    "link": "http://remotemouse.net/",
+                    "title": "Remote Mouse - Keyboard, Mouse and Touchpad",
+                    "snippet": "Keyboard, Mouse and Touchpad. Control made simple. It's a perfect combination of 3 most common remote control devices. With smarter multi-touch gestures, all you need is to click and slide.",
+                    "visible_link": "remotemouse.net",
+                    "rank": 13
+                },
+                {
+                    "link": "https://sourceforge.net/projects/orphamielautoclicker/",
+                    "title": "AutoClicker download | SourceForge.net",
+                    "snippet": "14.03.2019 · Download AutoClicker for free. A full-fledged autoclicker with two modes of autoclicking, at your dynamic cursor location or at a prespecified location. The maximum amounts of clicked can also be set (or left as infinite).",
+                    "visible_link": "https://sourceforge.net/projects/orphamielautoclicker",
+                    "rank": 14
                 },
                 {
                     "link": "https://cookie.riimu.net/speed/",
                     "title": "Clicking Speed Test - Riimu's Cookie Clicker …",
                     "snippet": "Clicking Speed Test. Test how fast you can click the virtual virtual cookie. Cookies per click is based on what you've entered in the Optimizer.",
                     "visible_link": "https://cookie.riimu.net/speed",
-                    "rank": 20
+                    "rank": 15
+                },
+                {
+                    "link": "http://wifimouse.necta.us/",
+                    "title": "WiFi Mouse - use your phone control computer",
+                    "snippet": "Transform your phone into wireless mouse,keyboard and trackpad",
+                    "visible_link": "wifimouse.necta.us",
+                    "rank": 16
                 }
             ]
         }

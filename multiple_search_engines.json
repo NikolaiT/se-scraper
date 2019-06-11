@@ -1,7 +1,7 @@
 {
     "news": {
         "1": {
-            "time": "Tue, 11 Jun 2019 15:48:30 GMT",
+            "time": "Tue, 11 Jun 2019 16:25:41 GMT",
             "no_results": false,
             "effective_query": "",
             "num_results": "195.000.000 Ergebnisse",
@@ -49,39 +49,25 @@
                     "rank": 6
                 },
                 {
+                    "link": "http://www.news.de/aktuelles/849808450/",
+                    "title": "Nachrichten aktuell: Schlagzeilen heute & aktuelle News ...",
+                    "snippet": "Aktuelle Schlagzeilen und Hintergründe aus Deutschland, Europa und der Welt. Lesen Sie auf news.de die neuesten Meldungen aus Politik, Wirtschaft & Sport.",
+                    "visible_link": "www.news.de/aktuelles/849808450",
+                    "rank": 7
+                },
+                {
                     "link": "https://www.gala.de/stars/news/",
                     "title": "Alle News der Stars und exklusive VIP-News | GALA.de",
                     "snippet": "News zu Stars und VIPs: Ob Hollywood-Schauspieler, TV-Liebling, C-Promi oder Supermodel - auf GALA.de verpassen Sie keine News zu ihrem Star.",
                     "visible_link": "https://www.gala.de/stars/news",
-                    "rank": 7
-                },
-                {
-                    "link": "https://www.ka-news.de/",
-                    "title": "Karlsruhe News - KSC, Sport, Veranstaltungen, Karlsruhe ...",
-                    "snippet": "News für Karlsruhe. Mit Nachrichten aus Karlsruhe und der Region Karlsruhe, Infos über den KSC, Veranstaltungen und Ausgeh-Tipp für die Region Karlsruhe",
-                    "visible_link": "https://www.ka-news.de",
                     "rank": 8
-                },
-                {
-                    "link": "http://www.pi-news.net/",
-                    "title": "PI-NEWS | Politically Incorrect",
-                    "snippet": "Von ACHILL PATRAS | Das erste Patrioten-Camp ist dieses Jahr in Mallorca erfolgreich über die Bühne gegangen. Ein guter Zeitpunkt, für mehr patriotische Reiseanbieter zu werben.",
-                    "visible_link": "www.pi-news.net",
-                    "rank": 9
-                },
-                {
-                    "link": "https://www.bbc.com/news",
-                    "title": "Home - BBC News",
-                    "snippet": "Visit BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also ...",
-                    "visible_link": "https://www.bbc.com/news",
-                    "rank": 10
                 }
             ]
         }
     },
     "se-scraper": {
         "1": {
-            "time": "Tue, 11 Jun 2019 15:48:33 GMT",
+            "time": "Tue, 11 Jun 2019 16:25:43 GMT",
             "no_results": false,
             "effective_query": "",
             "num_results": "48.300 Ergebnisse",
@@ -108,10 +94,10 @@
                     "rank": 3
                 },
                 {
-                    "link": "https://github.com/NikolaiT/se-scraper",
-                    "title": "GitHub - NikolaiT/se-scraper: Javascript scraping …",
-                    "snippet": "Search Engine Scraper - se-scraper. This node module allows you to scrape search engines concurrently with different proxies. If you don't have much technical experience or don't want to purchase proxies, you can use my scraping service.",
-                    "visible_link": "https://github.com/NikolaiT/se-scraper",
+                    "link": "http://conjugador.reverso.net/conjugacion-frances-verbo-se%20scraper.html",
+                    "title": "Conjugación se scraper | Conjugar verbo se …",
+                    "snippet": "Conjugación verbo: conjugar se scraper en francés, ver modelos de conjugación francés, verbos irregulares, reglas de conjugación del verbo francés",
+                    "visible_link": "conjugador.reverso.net/conjugacion-frances-verbo-se scraper.html",
                     "rank": 4
                 },
                 {
@@ -122,32 +108,25 @@
                     "rank": 5
                 },
                 {
+                    "link": "https://github.com/NikolaiT/se-scraper",
+                    "title": "GitHub - NikolaiT/se-scraper: Javascript scraping …",
+                    "snippet": "07.02.2019 · Search Engine Scraper - se-scraper. This node module allows you to scrape search engines concurrently with different proxies. If you don't have much technical experience or don't want to purchase proxies, you can use my scraping service.",
+                    "visible_link": "https://github.com/NikolaiT/se-scraper",
+                    "rank": 6
+                },
+                {
                     "link": "https://www.idealo.at/preisvergleich/OffersOfProduct/3071147_-multi-purpose-scraper-toko.html",
                     "title": "Toko Multi-Purpose Scraper ab € 4,48 | Preisvergleich bei ...",
                     "snippet": "Bereits ab € 4,48 Große Shopvielfalt Testberichte & Meinungen | Jetzt Toko Multi-Purpose Scraper Ski-Zubehör günstig kaufen bei idealo.at",
                     "visible_link": "https://www.idealo.at/preisvergleich/OffersOfProduct/3071147_-multi-purpose-scraper...",
-                    "rank": 6
+                    "rank": 7
                 },
                 {
                     "link": "https://woerterbuch.reverso.net/franzosisch-definitionen/se+scraper",
                     "title": "se scraper Definition | Französisch Definition Wörterbuch ...",
                     "snippet": "Definition se scraper Franzosisch, Synonym und Antonym, Siehe auch 'scrapeur',scrap',scrapie',scalper'",
                     "visible_link": "https://woerterbuch.reverso.net/franzosisch-definitionen/se+scraper",
-                    "rank": 7
-                },
-                {
-                    "link": "https://www.idealo.de/preisvergleich/OffersOfProduct/3071147_-multi-purpose-scraper-toko.html",
-                    "title": "Toko Multi-Purpose Scraper ab 3,99 € | Preisvergleich bei ...",
-                    "snippet": "Ver­sand in­ner­halb von 3 Werk­ta­gen nach Zah­lungs­ein­gang.",
-                    "visible_link": "https://www.idealo.de/preisvergleich/OffersOfProduct/3071147_-multi-purpose-scraper...",
                     "rank": 8
-                },
-                {
-                    "link": "https://www.sonic-equipment.com/se/scraper-10233.html",
-                    "title": "Scraper - sonic-equipment.com",
-                    "snippet": "Universal scraper for removing sealants, filler, gaskets etc.",
-                    "visible_link": "https://www.sonic-equipment.com/se/scraper-10233.html",
-                    "rank": 9
                 }
             ]
         }

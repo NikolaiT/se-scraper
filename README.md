@@ -10,6 +10,7 @@ If you don't have much technical experience or don't want to purchase proxies, y
 
 ##### Table of Contents
 - [Installation](#installation)
+- [Minimal Example](#minimal-example)
 - [Quickstart](#quickstart)
 - [Using Proxies](#proxies)
 - [Examples](#examples)
@@ -68,28 +69,53 @@ If you **don't** want puppeteer to download a complete chromium browser, add thi
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
 ```
 
+## Minimal Example
+
+Create a file named `minimal.js` with the following contents
+
+```js
+(async () => {
+    let scrape_job = {
+        search_engine: 'google',
+        keywords: ['lets go boys'],
+        num_pages: 1,
+    };
+
+    var results = await se_scraper.scrape({}, scrape_job);
+
+    console.dir(results, {depth: null, colors: true});
+})();
+```
+
+Start scraping by firing up the command `node minimal.js`
+
 ## Quickstart
 
 Create a file named `run.js` with the following contents
 
 ```js
-const se_scraper = require('se-scraper');
+(async () => {
+    let browser_config = {
+        debug_level: 1,
+        output_file: 'examples/results/data.json',
+    };
 
-let config = {
-    search_engine: 'google',
-    debug: false,
-    verbose: false,
-    keywords: ['news', 'scraping scrapeulous.com'],
-    num_pages: 3,
-    output_file: 'data.json',
-};
+    let scrape_job = {
+        search_engine: 'google',
+        keywords: ['news', 'se-scraper'],
+        num_pages: 1,
+    };
 
-function callback(err, response) {
-    if (err) { console.error(err) }
-    console.dir(response, {depth: null, colors: true});
-}
+    var scraper = new se_scraper.ScrapeManager(browser_config);
 
-se_scraper.scrape(config, callback);
+    await scraper.start();
+
+    var results = await scraper.scrape(scrape_job);
+
+    console.dir(results, {depth: null, colors: true});
+
+    await scraper.quit();
+})();
 ```
 
 Start scraping by firing up the command `node run.js`
@@ -99,25 +125,27 @@ Start scraping by firing up the command `node run.js`
 **se-scraper** will create one browser instance per proxy. So the maximal amount of concurrency is equivalent to the number of proxies plus one (your own IP).
 
 ```js
-const se_scraper = require('se-scraper');
+(async () => {
+    let browser_config = {
+        debug_level: 1,
+        output_file: 'examples/results/proxyresults.json',
+        proxy_file: '/home/nikolai/.proxies', // one proxy per line
+        log_ip_address: true,
+    };
 
-let config = {
-    search_engine: 'google',
-    debug: false,
-    verbose: false,
-    keywords: ['news', 'scrapeulous.com', 'incolumitas.com', 'i work too much'],
-    num_pages: 1,
-    output_file: 'data.json',
-    proxy_file: '/home/nikolai/.proxies', // one proxy per line
-    log_ip_address: true,
-};
+    let scrape_job = {
+        search_engine: 'google',
+        keywords: ['news', 'scrapeulous.com', 'incolumitas.com', 'i work too much', 'what to do?', 'javascript is hard'],
+        num_pages: 1,
+    };
 
-function callback(err, response) {
-    if (err) { console.error(err) }
-    console.dir(response, {depth: null, colors: true});
-}
+    var scraper = new se_scraper.ScrapeManager(browser_config);
+    await scraper.start();
 
-se_scraper.scrape(config, callback);
+    var results = await scraper.scrape(scrape_job);
+    console.dir(results, {depth: null, colors: true});
+    await scraper.quit();
+})();
 ```
 
 With a proxy file such as
@@ -131,6 +159,7 @@ This will scrape with **three** browser instance each having their own IP addres
 
 ## Examples
 
+* [Reuse existing browser](examples/quickstart.js) yields [these results](examples/results/data.json)
 * [Simple example scraping google](examples/quickstart.js) yields [these results](examples/results/data.json)
 * [Simple example scraping baidu](examples/baidu.js) yields [these results](examples/results/baidu.json)
 * [Scrape with one proxy per browser](examples/proxies.js) yields [these results](examples/results/proxyresults.json)
@@ -258,28 +287,22 @@ let config = {
     random_user_agent: true,
     // how long to sleep between requests. a random sleep interval within the range [a,b]
     // is drawn before every request. empty string for no sleeping.
-    sleep_range: '[1,2]',
-    // which search engine to scrape
-    search_engine: 'google',
-    // whether debug information should be printed
-    // debug info is useful for developers when debugging
-    debug: false,
-    // whether verbose program output should be printed
-    // this output is informational
-    verbose: true,
-    // an array of keywords to scrape
-    keywords: ['scrapeulous.com', 'scraping search engines', 'scraping service scrapeulous', 'learn js'],
-    // alternatively you can specify a keyword_file. this overwrites the keywords array
-    keyword_file: '',
-    // the number of pages to scrape for each keyword
-    num_pages: 2,
+    sleep_range: '',
     // whether to start the browser in headless mode
     headless: true,
+    // whether debug information should be printed
+    // level 0: print nothing
+    // level 1: print most important info
+    // ...
+    // level 4: print all shit nobody wants to know
+    debug_level: 1,
+    // specify flags passed to chrome here
+    chrome_flags: [],
     // path to output file, data will be stored in JSON
-    output_file: 'examples/results/advanced.json',
+    output_file: 'examples/results/baidu.json',
     // whether to prevent images, css, fonts from being loaded
     // will speed up scraping a great deal
-    block_assets: true,
+    block_assets: false,
     // path to js module that extends functionality
     // this module should export the functions:
     // get_browser, handle_metadata, close_browser
@@ -297,6 +320,7 @@ let config = {
     // check if headless chrome escapes common detection techniques
     // this is a quick test and should be used for debugging
     test_evasion: false,
+    apply_evasion_techniques: true,
     // log ip address data
     log_ip_address: false,
     // log http headers
@@ -305,24 +329,25 @@ let config = {
         timeout: 10 * 60 * 1000, // max timeout set to 10 minutes
         monitor: false,
         concurrency: 1, // one scraper per tab
-        maxConcurrency: 2, // scrape with 2 tabs
+        maxConcurrency: 1, // scrape with 2 tabs
     }
 };
 
-function callback(err, response) {
-    if (err) { console.error(err) }
+(async () => {
+    let scrape_config = {
+        // which search engine to scrape
+        search_engine: 'bing',
+        // an array of keywords to scrape
+        keywords: ['cat', 'mouse'],
+        // alternatively you can specify a keyword_file. this overwrites the keywords array
+        keyword_file: '',
+        // the number of pages to scrape for each keyword
+        num_pages: 2,
+    };
 
-    /* response object has the following properties:
-
-        response.results - json object with the scraping results
-        response.metadata - json object with metadata information
-        response.statusCode - status code of the scraping process
-     */
-
-    console.dir(response.results, {depth: null, colors: true});
-}
-
-se_scraper.scrape(config, callback);
+    let results = await se_scraper.scrape(config, scrape_config);
+    console.dir(results, {depth: null, colors: true});
+})();
 ```
 
 [Output for the above script on my machine.](examples/results/advanced.json)
@@ -334,7 +359,7 @@ You can add your custom query string parameters to the configuration object by s
 For example you can customize your google search with the following config:
 
 ```js
-let config = {
+let scrape_config = {
     search_engine: 'google',
     // use specific search engine parameters for various search engines
     google_settings: {

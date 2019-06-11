@@ -74,7 +74,12 @@ class ScrapeManager {
             // which search engine to scrape
             search_engine: 'google',
             compress: false, // compress
-            debug_level: 1, // 0 logs nothing, 1 logs most important stuff, ...., 4 logs everything
+            // whether debug information should be printed
+            // level 0: print nothing
+            // level 1: print most important info
+            // ...
+            // level 4: print all shit nobody wants to know
+            debug_level: 1,
             keywords: ['nodejs rocks',],
             // whether to start the browser in headless mode
             headless: true,

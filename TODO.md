@@ -43,6 +43,7 @@
 ### 11.6.2019
     - TODO: fix amazon scraping
     - change api of remaining test cases
+    - TODO: implement custom search engine parameters on scrape()
 
 ### TODO:
     - fix duckduckgo test case!!!
