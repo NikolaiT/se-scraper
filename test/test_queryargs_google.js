@@ -35,8 +35,6 @@ function queryargs_search_test_case(err, response) {
     if (err) {
         console.error(err);
     } else {
-        assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
-        assert.equal(response.statusCode, 200, 'status code must be 200');
         assert.equal(response.metadata.num_requests, 2);
 
         for (let query in response.results) {

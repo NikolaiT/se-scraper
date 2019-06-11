@@ -251,7 +251,7 @@ class ScrapeManager {
 
             this.cluster.on('taskerror', (err, data) => {
                 console.log(`Error while scraping ${data}: ${err.message}`);
-                console.log(err)
+                console.log(err);
             });
 
         }
@@ -261,9 +261,13 @@ class ScrapeManager {
      * Scrapes the keywords specified by the config.
      */
     async scrape(scrape_config = {}) {
-        this.config.keywords = scrape_config.keywords;
-        this.config.num_pages = scrape_config.num_pages;
-        this.config.search_engine = scrape_config.search_engine;
+
+        if (!scrape_config.keywords && !scrape_config.keyword_file) {
+            console.error('Either keywords or keyword_file must be supplied to scrape()')
+            return;
+        }
+
+        Object.assign(this.config, scrape_config);
 
         var results = {};
         var num_requests = 0;
@@ -283,7 +287,7 @@ class ScrapeManager {
             //     const page = await this.browser.newPage();
             //     this.scraper = getScraper(this.config.search_engine, {
             //         config: this.config,
-            //         context: context,
+            //         context: {},
             //         pluggable: pluggable,
             //         page: page,
             //     });
@@ -382,14 +386,9 @@ class ScrapeManager {
         }
 
         return {
-            headers: {
-                'Content-Type': 'text/json',
-            },
             results: results,
             metadata: metadata || {},
-            statusCode: 200
         };
-
     }
 
     /*
@@ -434,7 +433,6 @@ function parseEventData(config) {
 
     return config;
 }
-
 
 
 module.exports = {

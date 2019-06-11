@@ -30,8 +30,6 @@ async function normal_search_test() {
 
 // we test with a callback function to our handler
 function normal_search_test_case(response) {
-    assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
-    assert.equal(response.statusCode, 200, 'status code must be 200');
     assert.equal(response.metadata.num_requests, 4);
 
     for (let query in response.results) {

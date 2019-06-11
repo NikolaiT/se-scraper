@@ -1,8 +1,8 @@
 {
     "cat": {
         "1": {
-            "time": "Tue, 11 Jun 2019 19:59:14 GMT",
-            "num_results": "Environ 4 280 000 000 résultats (0,56 secondes) ",
+            "time": "Tue, 11 Jun 2019 19:54:49 GMT",
+            "num_results": "Environ 4 280 000 000 résultats (0,64 secondes) ",
             "no_results": false,
             "effective_query": "",
             "results": [
@@ -119,19 +119,19 @@
                     "rank": 14
                 },
                 {
-                    "link": "http://placerspca.org/adopt-home/cats/",
-                    "title": "Adoptable Cats at the Placer SPCAplacerspca.org/adopt-home/cats/En cacheTraduire cette page",
-                    "snippet": "View the adoptable cats at the Placer SPCA. This page shows all available cats across all three of our adoption centers.",
-                    "visible_link": "placerspca.org/adopt-home/cats/",
-                    "date": "",
-                    "rank": 15
-                },
-                {
                     "link": "https://www.theguardian.com/film/2019/jun/11/nicole-kidman-animal-rights-ethics-hiking-cats-backpack",
                     "title": "Cat lovers question ethics of Nicole Kidman hiking with pets in ...https://www.theguardian.com/.../nicole-kidman-animal-rights-ethics-hiking-cats-backpac...",
                     "snippet": "Il y a 5 heures - The actor's revelations that she often goes for walks toting cats – and that she ate ants – have been met with scepticism by animal rights groups.",
                     "visible_link": "https://www.theguardian.com/.../nicole-kidman-animal-rights-ethics-hiking-cats-backpac...",
                     "date": "Il y a 5 heures - ",
+                    "rank": 15
+                },
+                {
+                    "link": "http://placerspca.org/adopt-home/cats/",
+                    "title": "Adoptable Cats at the Placer SPCAplacerspca.org/adopt-home/cats/En cacheTraduire cette page",
+                    "snippet": "View the adoptable cats at the Placer SPCA. This page shows all available cats across all three of our adoption centers.",
+                    "visible_link": "placerspca.org/adopt-home/cats/",
+                    "date": "",
                     "rank": 16
                 },
                 {
@@ -311,10 +311,10 @@
                     "rank": 38
                 },
                 {
-                    "link": "https://www.banfield.com/pet-healthcare/optimum-wellness-plans/cat-wellness-plans",
-                    "title": "Cat Wellness Plans - Banfield Pet Hospitalhttps://www.banfield.com/pet-healthcare/.../cat-wellness-plansEn cachePages similairesTraduire cette page",
-                    "snippet": "Cat wellness plans are preventive pet healthcare plans designed to provide excellent and affordable veterinary care throughout your cat's life. Learn more.",
-                    "visible_link": "https://www.banfield.com/pet-healthcare/.../cat-wellness-plans",
+                    "link": "https://www.heartofthevalleyshelter.org/pets/cats/",
+                    "title": "Cats - Heart of the Valley Animal Shelterhttps://www.heartofthevalleyshelter.org/pets/cats/En cacheTraduire cette page",
+                    "snippet": "Cat. Female/Spayed. Domestic Shorthair/Mix. 7 years 9 months. Cat Adopt. Photo. Lucy Love. 21558988. Cat. Female/Spayed. Domestic Shorthair/Mix. 12 years ...",
+                    "visible_link": "https://www.heartofthevalleyshelter.org/pets/cats/",
                     "date": "",
                     "rank": 39
                 },
@@ -327,10 +327,10 @@
                     "rank": 40
                 },
                 {
-                    "link": "https://www.heartofthevalleyshelter.org/pets/cats/",
-                    "title": "Cats - Heart of the Valley Animal Shelterhttps://www.heartofthevalleyshelter.org/pets/cats/En cacheTraduire cette page",
-                    "snippet": "Cat. Female/Spayed. Domestic Shorthair/Mix. 7 years 9 months. Cat Adopt. Photo. Lucy Love. 21558988. Cat. Female/Spayed. Domestic Shorthair/Mix. 12 years ...",
-                    "visible_link": "https://www.heartofthevalleyshelter.org/pets/cats/",
+                    "link": "https://www.banfield.com/pet-healthcare/optimum-wellness-plans/cat-wellness-plans",
+                    "title": "Cat Wellness Plans - Banfield Pet Hospitalhttps://www.banfield.com/pet-healthcare/.../cat-wellness-plansEn cachePages similairesTraduire cette page",
+                    "snippet": "Cat wellness plans are preventive pet healthcare plans designed to provide excellent and affordable veterinary care throughout your cat's life. Learn more.",
+                    "visible_link": "https://www.banfield.com/pet-healthcare/.../cat-wellness-plans",
                     "date": "",
                     "rank": 41
                 },
@@ -391,19 +391,19 @@
                     "rank": 48
                 },
                 {
-                    "link": "https://giphy.com/explore/cat",
-                    "title": "Cat GIFs - Get the best GIF on GIPHYhttps://giphy.com/explore/catEn cacheTraduire cette page",
-                    "snippet": "Explore and share the best Cat GIFs and most popular animated GIFs here on GIPHY. Find Funny GIFs, Cute GIFs, Reaction GIFs and more.",
-                    "visible_link": "https://giphy.com/explore/cat",
-                    "date": "",
-                    "rank": 49
-                },
-                {
                     "link": "https://www.sciencemag.org/news/2019/05/cats-rival-dogs-many-tests-social-smarts-anyone-brave-enough-study-them",
                     "title": "Cats rival dogs on many tests of social smarts. But is anyone brave ...https://www.sciencemag.org/.../cats-rival-dogs-many-tests-social-s...En cacheTraduire cette page",
                     "snippet": "9 mai 2019 - CORVALLIS, OREGON—Carl the cat was born to beat the odds. Abandoned on the side of the road in a Rubbermaid container, the scrawny ...",
                     "visible_link": "https://www.sciencemag.org/.../cats-rival-dogs-many-tests-social-s...",
                     "date": "9 mai 2019 - ",
+                    "rank": 49
+                },
+                {
+                    "link": "https://giphy.com/explore/cat",
+                    "title": "Cat GIFs - Get the best GIF on GIPHYhttps://giphy.com/explore/catEn cacheTraduire cette page",
+                    "snippet": "Explore and share the best Cat GIFs and most popular animated GIFs here on GIPHY. Find Funny GIFs, Cute GIFs, Reaction GIFs and more.",
+                    "visible_link": "https://giphy.com/explore/cat",
+                    "date": "",
                     "rank": 50
                 },
                 {
@@ -439,20 +439,12 @@
                     "rank": 54
                 },
                 {
-                    "link": "https://www.cnn.com/2019/05/17/celebrities/grumpy-cat-dead-intl-scli/index.html",
-                    "title": "Grumpy Cat, the internet's most famous cat, dead at 7 - CNN - CNN.comhttps://www.cnn.com/2019/05/17/celebrities/grumpy-cat-dead-intl-scli/index.html",
-                    "snippet": "17 mai 2019 - Grumpy Cat, arguably the internet's most popular cat and one of its first viral memes, has died aged 7.",
-                    "visible_link": "https://www.cnn.com/2019/05/17/celebrities/grumpy-cat-dead-intl-scli/index.html",
-                    "date": "17 mai 2019 - ",
-                    "rank": 55
-                },
-                {
                     "link": "https://www.instagram.com/explore/tags/cats/?hl=fr",
                     "title": "#cats hashtag on Instagram • Photos and Videoshttps://www.instagram.com/explore/tags/cats/?hl=frPages similairesTraduire cette page",
                     "snippet": "85.2m Posts - See Instagram photos and videos from 'cats' hashtag.",
                     "visible_link": "https://www.instagram.com/explore/tags/cats/?hl=fr",
                     "date": "",
-                    "rank": 56
+                    "rank": 55
                 },
                 {
                     "link": "https://www.gsmarena.com/cat-phones-89.php",
@@ -460,6 +452,14 @@
                     "snippet": "List of Cat phones, smartphones and tablets. ... Cat phones. Popularity; Time of release; Compare. B35; S41; S31; S61; S60; S30; S40; B30; B15 Q; S50; B15 ...",
                     "visible_link": "https://www.gsmarena.com/cat-phones-89.php",
                     "date": "",
+                    "rank": 56
+                },
+                {
+                    "link": "https://www.cnn.com/2019/05/17/celebrities/grumpy-cat-dead-intl-scli/index.html",
+                    "title": "Grumpy Cat, the internet's most famous cat, dead at 7 - CNN - CNN.comhttps://www.cnn.com/2019/05/17/celebrities/grumpy-cat-dead-intl-scli/index.html",
+                    "snippet": "17 mai 2019 - Grumpy Cat, arguably the internet's most popular cat and one of its first viral memes, has died aged 7.",
+                    "visible_link": "https://www.cnn.com/2019/05/17/celebrities/grumpy-cat-dead-intl-scli/index.html",
+                    "date": "17 mai 2019 - ",
                     "rank": 57
                 },
                 {
@@ -495,19 +495,19 @@
                     "rank": 61
                 },
                 {
-                    "link": "https://atlantahumane.org/adopt/cats/",
-                    "title": "Adopt a Cat or Kitten - Atlanta Humane Societyhttps://atlantahumane.org/adopt/cats/En cacheTraduire cette page",
-                    "snippet": "26 avr. 2019 - Live in Atlanta? Adopting a rescue cat or kitten from AHS is easy. Our cat adoption counselors help you adopt the purr-fect cat or kitten as a ...",
-                    "visible_link": "https://atlantahumane.org/adopt/cats/",
-                    "date": "26 avr. 2019 - ",
-                    "rank": 62
-                },
-                {
                     "link": "https://www.catphones.com/en-us/cat-s61-smartphone/",
                     "title": "Cat® S61 Smartphone | Cat Phoneshttps://www.catphones.com/en-us/cat-s61-smartphone/En cacheTraduire cette page",
                     "snippet": "Get the Cat® S61 smartphone to make your work easier. With an integrated thermal imaging camera, indoor air quality sensor, and laser assisted distance ...",
                     "visible_link": "https://www.catphones.com/en-us/cat-s61-smartphone/",
                     "date": "",
+                    "rank": 62
+                },
+                {
+                    "link": "https://atlantahumane.org/adopt/cats/",
+                    "title": "Adopt a Cat or Kitten - Atlanta Humane Societyhttps://atlantahumane.org/adopt/cats/En cacheTraduire cette page",
+                    "snippet": "26 avr. 2019 - Live in Atlanta? Adopting a rescue cat or kitten from AHS is easy. Our cat adoption counselors help you adopt the purr-fect cat or kitten as a ...",
+                    "visible_link": "https://atlantahumane.org/adopt/cats/",
+                    "date": "26 avr. 2019 - ",
                     "rank": 63
                 },
                 {
@@ -801,8 +801,8 @@
             ]
         },
         "2": {
-            "time": "Tue, 11 Jun 2019 19:59:16 GMT",
-            "num_results": "Page 2 d'environ 4 280 000 000 résultats (0,65 secondes) ",
+            "time": "Tue, 11 Jun 2019 19:54:51 GMT",
+            "num_results": "Page 2 d'environ 4 280 000 000 résultats (0,64 secondes) ",
             "no_results": false,
             "effective_query": "",
             "results": [
@@ -1023,19 +1023,19 @@
                     "rank": 126
                 },
                 {
-                    "link": "https://www.bbc.com/news/world-us-canada-48308638",
-                    "title": "Grumpy Cat internet legend dies - BBC Newshttps://www.bbc.com/news/world-us-canada-48308638En cacheTraduire cette page",
-                    "snippet": "17 mai 2019 - Hers was the feline face that launched a thousand memes, but Grumpy Cat is no more.",
-                    "visible_link": "https://www.bbc.com/news/world-us-canada-48308638",
-                    "date": "17 mai 2019 - ",
-                    "rank": 127
-                },
-                {
                     "link": "http://www.charlottesville.org/departments-and-services/city-services/charlottesville-area-transit-cat",
                     "title": "Charlottesville Area Transit (CAT) | City of Charlottesvillewww.charlottesville.org/...and.../charlottesville-area-transit-catEn cacheTraduire cette page",
                     "snippet": "CAT provides bus service to the greater Charlottesville area. Riders enjoy safe, clean, and comfortable service Sunday through Saturday. Download our Rider's ...",
                     "visible_link": "www.charlottesville.org/...and.../charlottesville-area-transit-cat",
                     "date": "",
+                    "rank": 127
+                },
+                {
+                    "link": "https://www.bbc.com/news/world-us-canada-48308638",
+                    "title": "Grumpy Cat internet legend dies - BBC Newshttps://www.bbc.com/news/world-us-canada-48308638En cacheTraduire cette page",
+                    "snippet": "17 mai 2019 - Hers was the feline face that launched a thousand memes, but Grumpy Cat is no more.",
+                    "visible_link": "https://www.bbc.com/news/world-us-canada-48308638",
+                    "date": "17 mai 2019 - ",
                     "rank": 128
                 },
                 {
@@ -1215,12 +1215,20 @@
                     "rank": 150
                 },
                 {
+                    "link": "https://www.washingtonpost.com/science/2019/06/05/cat-paws-may-soon-be-safe-new-york-state-is-poised-become-first-ban-declawing/",
+                    "title": "Cat declawing ban passed by New York state lawmakers - The ...https://www.washingtonpost.com/.../cat-paws-may-soon-be-safe-ne...Traduire cette page",
+                    "snippet": "Il y a 7 jours - New York is one signature away from becoming the first state in the country to ban cat declawing, a practice advocates say serves no benefit to ...",
+                    "visible_link": "https://www.washingtonpost.com/.../cat-paws-may-soon-be-safe-ne...",
+                    "date": "Il y a 7 jours - ",
+                    "rank": 151
+                },
+                {
                     "link": "https://abcbirds.org/program/cats-indoors/",
                     "title": "Cats Indoors - American Bird Conservancyhttps://abcbirds.org/program/cats-indoors/En cachePages similairesTraduire cette page",
                     "snippet": "Looking for practical solutions to keep your cat safe while protecting birds? Check out ABC's Happy Cats, Healthy Birds campaign page.",
                     "visible_link": "https://abcbirds.org/program/cats-indoors/",
                     "date": "",
-                    "rank": 151
+                    "rank": 152
                 },
                 {
                     "link": "https://www.cattownoakland.org/adopt",
@@ -1228,7 +1236,7 @@
                     "snippet": "See all our current adoptable cats below. Please email info@cattownoakland.org so we can help you find your match! Cat Town adoption fees are $75 for a ...",
                     "visible_link": "https://www.cattownoakland.org/adopt",
                     "date": "",
-                    "rank": 152
+                    "rank": 153
                 },
                 {
                     "link": "https://www.okhumane.org/adopt/cats/",
@@ -1236,7 +1244,7 @@
                     "snippet": "Adopt a cat or kitten in OKC from the Central Oklahoma Humane Society! Come see our cats up for adoption, and meet your new best friend.",
                     "visible_link": "https://www.okhumane.org › Adoption Information",
                     "date": "",
-                    "rank": 153
+                    "rank": 154
                 },
                 {
                     "link": "https://furkids.org/cat-adoptions",
@@ -1244,7 +1252,7 @@
                     "snippet": "Learn more about how you can adopt a cat from the largest no kill animal shelter in Atlanta. Choose from hundreds of cats that are looking for a good home.",
                     "visible_link": "https://furkids.org/cat-adoptions",
                     "date": "",
-                    "rank": 154
+                    "rank": 155
                 },
                 {
                     "link": "https://www.meowingtons.com/products/fruit-tart-cat-bed",
@@ -1252,7 +1260,7 @@
                     "snippet": "The only thing sweeter than your cat is this Fruit Tart Cat Bed! This playful novelty cat bed is ideal for the cat lover with a sense of whimsy and imagination.",
                     "visible_link": "https://www.meowingtons.com › Products",
                     "date": "",
-                    "rank": 155
+                    "rank": 156
                 },
                 {
                     "link": "https://catfriendly.com/cat-care-at-home/what-your-cat-needs-to-feel-secure/",
@@ -1260,7 +1268,7 @@
                     "snippet": "Like humans, cats have needs in order to make them feel happy and secure. To help understand the “core resources” your cat needs, think about when you ...",
                     "visible_link": "https://catfriendly.com/cat...at.../what-your-cat-needs-to-feel-secure...",
                     "date": "",
-                    "rank": 156
+                    "rank": 157
                 },
                 {
                     "link": "http://www.sciencekids.co.nz/sciencefacts/animals/cat.html",
@@ -1268,7 +1276,7 @@
                     "snippet": "Cats can be lethal hunters and very sneaky, when they walk their back paws step almost exactly in the same place as the front paws did beforehand, this keeps ...",
                     "visible_link": "www.sciencekids.co.nz/sciencefacts/animals/cat.html",
                     "date": "",
-                    "rank": 157
+                    "rank": 158
                 },
                 {
                     "link": "https://http.cat/",
@@ -1276,7 +1284,7 @@
                     "snippet": "An API for the awesome HTTP Cats! Use it in your website to show funny error messages.",
                     "visible_link": "https://http.cat/",
                     "date": "",
-                    "rank": 158
+                    "rank": 159
                 },
                 {
                     "link": "https://www.grumpycats.com/",
@@ -1284,14 +1292,6 @@
                     "snippet": "The world's grumpiest cat! ... Some days are grumpier than others...… May 17th, 2019. Grumpy Cat: No-It-All -- Everything You Need to No ...",
                     "visible_link": "https://www.grumpycats.com/",
                     "date": "",
-                    "rank": 159
-                },
-                {
-                    "link": "https://www.washingtonpost.com/science/2019/06/05/cat-paws-may-soon-be-safe-new-york-state-is-poised-become-first-ban-declawing/",
-                    "title": "Cat declawing ban passed by New York state lawmakers - The ...https://www.washingtonpost.com/.../cat-paws-may-soon-be-safe-ne...Traduire cette page",
-                    "snippet": "Il y a 7 jours - New York is one signature away from becoming the first state in the country to ban cat declawing, a practice advocates say serves no benefit to ...",
-                    "visible_link": "https://www.washingtonpost.com/.../cat-paws-may-soon-be-safe-ne...",
-                    "date": "Il y a 7 jours - ",
                     "rank": 160
                 },
                 {
@@ -1375,20 +1375,12 @@
                     "rank": 170
                 },
                 {
-                    "link": "https://metro.co.uk/2019/06/10/nicole-kidman-admits-shes-a-huge-cat-person-and-loves-popping-them-into-backpack-for-outings-9892303/",
-                    "title": "Nicole Kidman admits she's a huge cat person and loves popping ...https://metro.co.uk/.../nicole-kidman-admits-shes-a-huge-cat-perso...En cacheTraduire cette page",
-                    "snippet": "Il y a 1 jour - Nicole Kidman has revealed that she enjoys taking her cats for out for a stroll. The 51-year-old actress owns a lot of pets with her husband, ...",
-                    "visible_link": "https://metro.co.uk/.../nicole-kidman-admits-shes-a-huge-cat-perso...",
-                    "date": "Il y a 1 jour - ",
-                    "rank": 171
-                },
-                {
                     "link": "https://dictionary.cambridge.org/dictionary/english/cat",
                     "title": "CAT | meaning in the Cambridge English Dictionaryhttps://dictionary.cambridge.org/dictionary/english/catEn cacheTraduire cette page",
                     "snippet": "cat definition: 1. a small animal with fur, four legs, a tail, and claws, usually kept as a pet or for catching mice 2. any member of the group of animals similar to the ...",
                     "visible_link": "https://dictionary.cambridge.org/dictionary/english/cat",
                     "date": "",
-                    "rank": 172
+                    "rank": 171
                 },
                 {
                     "link": "https://www.bbc.co.uk/news/world-us-canada-48528968",
@@ -1396,7 +1388,7 @@
                     "snippet": "Il y a 6 jours - New York might become the first US state to ban cat declawing - but it's been illegal in Europe for years.",
                     "visible_link": "https://www.bbc.co.uk/news/world-us-canada-48528968",
                     "date": "Il y a 6 jours - ",
-                    "rank": 173
+                    "rank": 172
                 },
                 {
                     "link": "https://vcahospitals.com/sylvaniavet/know-your-pet/cat-care",
@@ -1404,7 +1396,7 @@
                     "snippet": "We've Got Positive Cattitude! We Want to Make Cat Care Easier for You. Has traveling with your feline friend been a challenge? Put an end to the stress with ...",
                     "visible_link": "https://vcahospitals.com/sylvaniavet/know-your-pet/cat-care",
                     "date": "",
-                    "rank": 174
+                    "rank": 173
                 },
                 {
                     "link": "https://catprotection.org.au/",
@@ -1412,7 +1404,7 @@
                     "snippet": "As a charity, Cat Protection depends on community support to do our work. Our costs include professional care and advisory staff; veterinary expenses including ...",
                     "visible_link": "https://catprotection.org.au/",
                     "date": "",
-                    "rank": 175
+                    "rank": 174
                 },
                 {
                     "link": "https://www.catpowermusic.com/",
@@ -1420,7 +1412,7 @@
                     "snippet": "Official website for Cat Power. The new album Wanderer will be out October 5th, 2018.",
                     "visible_link": "https://www.catpowermusic.com/",
                     "date": "",
-                    "rank": 176
+                    "rank": 175
                 },
                 {
                     "link": "https://feline-nutrition.org/nutrition/making-raw-cat-food-for-do-it-yourselfers",
@@ -1428,7 +1420,7 @@
                     "snippet": "2 juin 2019 - Homemade cat food gives you control over what you feed kitty. It's nutritionally sound and economical.",
                     "visible_link": "https://feline-nutrition.org › Nutrition",
                     "date": "2 juin 2019 - ",
-                    "rank": 177
+                    "rank": 176
                 },
                 {
                     "link": "https://www.petinsurance.com/cat-insurance",
@@ -1436,23 +1428,23 @@
                     "snippet": "The best cat & kitten insurance ever by Nationwide. Plans that cover wellness, illness, emergency & more. Use any vet. Up to 90% back on vet bills.",
                     "visible_link": "https://www.petinsurance.com/cat-insurance",
                     "date": "",
-                    "rank": 178
+                    "rank": 177
                 },
                 {
                     "link": "https://www.thestar.com.my/news/nation/2019/06/11/police-investigating-case-of-cat-hanged-at-wangsa-maju-apartment-staircase/",
                     "title": "Police investigating case of cat hanged at Wangsa Maju apartment ...https://www.thestar.com.my/.../police-investigating-case-of-cat-han...En cacheTraduire cette page",
-                    "snippet": "Il y a 6 heures - PETALING JAYA: Police are investigating the killing of a cat by hanging at an apartment in Section 2, Wangsa Maju, Kuala Lumpur.",
+                    "snippet": "Il y a 5 heures - PETALING JAYA: Police are investigating the killing of a cat by hanging at an apartment in Section 2, Wangsa Maju, Kuala Lumpur.",
                     "visible_link": "https://www.thestar.com.my/.../police-investigating-case-of-cat-han...",
-                    "date": "Il y a 6 heures - ",
-                    "rank": 179
+                    "date": "Il y a 5 heures - ",
+                    "rank": 178
                 },
                 {
-                    "link": "https://books.google.com/books?id=D1wZuTutJbwC&pg=PA76&lpg=PA76&dq=cat&source=bl&ots=rOUmtMeM2C&sig=ACfU3U0TnMwZvo2il3a_5dN-jKLcUAqEag&hl=fr&sa=X&ved=2ahUKEwjJuLbZm-LiAhUOY1AKHY9mAME4ZBDoATBWegQIYBAB",
+                    "link": "https://books.google.com/books?id=D1wZuTutJbwC&pg=PA76&lpg=PA76&dq=cat&source=bl&ots=rOUmtMdT6y&sig=ACfU3U0N3WdaCmp0TDKp32pGvmLGszZcwA&hl=fr&sa=X&ved=2ahUKEwi8vpnbmuLiAhWSUlAKHW0sDMY4ZBDoATBVegQIYxAB",
                     "title": "The Cat and the Human Imagination: Feline Images from Bast to Garfieldhttps://books.google.com/books?isbn=0472087509Traduire cette page",
                     "snippet": "At the same time, of course, Baldwin passes on folklore about cats' magical powers. He gives this a novel application, however; for Mouse-slayer's preternatural ...",
                     "visible_link": "https://books.google.com/books?isbn=0472087509",
                     "date": "",
-                    "rank": 180
+                    "rank": 179
                 },
                 {
                     "link": "https://www.peta.org/blog/pringle-cat-fire-rescue/",
@@ -1460,7 +1452,7 @@
                     "snippet": "Il y a 1 jour - A group of cats was left with nowhere to go when their home was reduced to ashes. Fortunately, their caretaker knew just whom to call.",
                     "visible_link": "https://www.peta.org/blog/pringle-cat-fire-rescue/",
                     "date": "Il y a 1 jour - ",
-                    "rank": 181
+                    "rank": 180
                 },
                 {
                     "link": "https://gizmodo.com/scientists-save-schrodingers-cat-1835208353",
@@ -1468,7 +1460,7 @@
                     "snippet": "3 juin 2019 - One of the hallmark predictions of quantum mechanics is that particles behave unpredictably—but a new experiment seems to complicate ...",
                     "visible_link": "https://gizmodo.com/scientists-save-schrodingers-cat-1835208353",
                     "date": "3 juin 2019 - ",
-                    "rank": 182
+                    "rank": 181
                 },
                 {
                     "link": "https://www.jacksongalaxy.com/blog/the-dos-and-donts-of-introducing-cats/",
@@ -1476,7 +1468,7 @@
                     "snippet": "9 avr. 2018 - The host of Animal Planet's \"My Cat From Hell\" shows you how the right way to introduce two cats.",
                     "visible_link": "https://www.jacksongalaxy.com/.../the-dos-and-donts-of-introduci...",
                     "date": "9 avr. 2018 - ",
-                    "rank": 183
+                    "rank": 182
                 },
                 {
                     "link": "https://www.newyorker.com/magazine/2017/12/11/cat-person",
@@ -1484,7 +1476,7 @@
                     "snippet": "4 déc. 2017 - She learned that Robert had two cats, named Mu and Yan, and together they invented a complicated scenario in which her childhood cat, Pita, ...",
                     "visible_link": "https://www.newyorker.com/magazine/2017/12/11/cat-person",
                     "date": "4 déc. 2017 - ",
-                    "rank": 184
+                    "rank": 183
                 },
                 {
                     "link": "https://www.thesun.co.uk/news/9265838/giant-liger-world-biggest-cat-sabre/",
@@ -1492,7 +1484,7 @@
                     "snippet": "Il y a 20 heures - A GIANT beast dubbed the world's biggest cat is drawing comparisons with the terrifying prehistoric sabre-toothed tiger. Incredible clips of the ...",
                     "visible_link": "https://www.thesun.co.uk/news/.../giant-liger-world-biggest-cat-sab...",
                     "date": "Il y a 20 heures - ",
-                    "rank": 185
+                    "rank": 184
                 },
                 {
                     "link": "https://www.shopcaterpillar.cl/",
@@ -1500,31 +1492,31 @@
                     "snippet": "Cat Life Style: Zapatos, zapatillas, ropa y accesorios para hombre y mujer. Despachos a todo Chile y cambios sin costo.",
                     "visible_link": "https://www.shopcaterpillar.cl/",
                     "date": "",
-                    "rank": 186
+                    "rank": 185
                 },
                 {
-                    "link": "https://books.google.com/books?id=jEwvCwAAQBAJ&pg=PA25&lpg=PA25&dq=cat&source=bl&ots=piEVZLuvfq&sig=ACfU3U22jNCx115HE1yycWvD_548S9iveg&hl=fr&sa=X&ved=2ahUKEwjJuLbZm-LiAhUOY1AKHY9mAME4ZBDoATBdegQIYhAB",
+                    "link": "https://books.google.com/books?id=jEwvCwAAQBAJ&pg=PA25&lpg=PA25&dq=cat&source=bl&ots=piEVZLtCjm&sig=ACfU3U1PJmYGqu_u1lWZLj5Uhd07fTDK8A&hl=fr&sa=X&ved=2ahUKEwi8vpnbmuLiAhWSUlAKHW0sDMY4ZBDoATBcegQIYhAB",
                     "title": "Cat Care: Nutrition, Exercise, Grooming, and Morehttps://books.google.com/books?isbn=1491483997Traduire cette page",
                     "snippet": "If your cat has plaque, receding gums, or is drooling, it may have gum disease or tooth decay. Your vet can clean your cat's teeth, but it can be expensive and ...",
                     "visible_link": "https://books.google.com/books?isbn=1491483997",
                     "date": "",
-                    "rank": 187
+                    "rank": 186
                 },
                 {
-                    "link": "https://books.google.com/books?id=a0_HEOrcH5IC&pg=PA190&lpg=PA190&dq=cat&source=bl&ots=Az8vPMAG9F&sig=ACfU3U1_YNMpOh0o2ADkoL3BmMn9tXE8tA&hl=fr&sa=X&ved=2ahUKEwjJuLbZm-LiAhUOY1AKHY9mAME4ZBDoATBeegQIYxAB",
+                    "link": "https://books.google.com/books?id=a0_HEOrcH5IC&pg=PA190&lpg=PA190&dq=cat&source=bl&ots=Az8vPMzNdB&sig=ACfU3U1JVIq6PFN8gXG7M1GXUoLB8yBm3g&hl=fr&sa=X&ved=2ahUKEwi8vpnbmuLiAhWSUlAKHW0sDMY4ZBDoATBdegQIYRAB",
                     "title": "The Best Little Cat House in Maryland: The True and Mostly Accurate ...https://books.google.com/books?isbn=1449008844Traduire cette page",
                     "snippet": "Four more cats arrived that night that weren't in much better shape than Charlotte. One was Old Boy, a cat that appeared to be older than dirt. He was covered in ...",
                     "visible_link": "https://books.google.com/books?isbn=1449008844",
                     "date": "",
-                    "rank": 188
+                    "rank": 187
                 },
                 {
-                    "link": "https://books.google.com/books?id=1-7SCQAAQBAJ&pg=PA3&lpg=PA3&dq=cat&source=bl&ots=3wtCIXlgOp&sig=ACfU3U1UdhAcEqjQ50IW4aFY8xWBLWHqMw&hl=fr&sa=X&ved=2ahUKEwjJuLbZm-LiAhUOY1AKHY9mAME4ZBDoATBfegQIXxAB",
+                    "link": "https://books.google.com/books?id=1-7SCQAAQBAJ&pg=PA3&lpg=PA3&dq=cat&source=bl&ots=3wtCIXknSl&sig=ACfU3U0nTSepzmAD7rH0WDYkCRwqwbdxgQ&hl=fr&sa=X&ved=2ahUKEwi8vpnbmuLiAhWSUlAKHW0sDMY4ZBDoATBeegQIXxAB",
                     "title": "How to Understand and Take Care of Your Persian Kitten & Cathttps://books.google.com/books?isbn=1329174380Traduire cette page",
                     "snippet": "11. 12. 13. 14. 1. THE CHARACTERISTICS OF A PERSIAN CAT 2. ITEMS YOU SHOULD NEVER LET YOUR CAT EAT 3. HOW TO TRIM YOUR CATS NAILS 4.",
                     "visible_link": "https://books.google.com/books?isbn=1329174380",
                     "date": "",
-                    "rank": 189
+                    "rank": 188
                 },
                 {
                     "link": "https://www.livescience.com/65652-schrodingers-cat-saved.html",
@@ -1532,7 +1524,7 @@
                     "snippet": "Il y a 5 jours - There may be a grain of hope for physics' most famous doomed feline, Schrödinger's cat. But in a recent study, Yale physicists were able to ...",
                     "visible_link": "https://www.livescience.com › Strange News",
                     "date": "Il y a 5 jours - ",
-                    "rank": 190
+                    "rank": 189
                 },
                 {
                     "link": "https://www.aphis.usda.gov/aphis/pet-travel/bring-pet-into-the-united-states/pet-travel-cats-into-us",
@@ -1540,15 +1532,15 @@
                     "snippet": "20 juil. 2016 - USDA APHIS Veterinary Services (VS) does not have any animal health requirements related to bringing (importing) a pet cat into the United ...",
                     "visible_link": "https://www.aphis.usda.gov/aphis/pet.../pet-travel-cats-into-us",
                     "date": "20 juil. 2016 - ",
-                    "rank": 191
+                    "rank": 190
                 },
                 {
-                    "link": "https://books.google.com/books?id=odtQCwAAQBAJ&pg=PP14&lpg=PP14&dq=cat&source=bl&ots=jhBlkpN3ZO&sig=ACfU3U2FHlVxBXdkRjsISGP1UqAjKBTfAA&hl=fr&sa=X&ved=2ahUKEwjJuLbZm-LiAhUOY1AKHY9mAME4ZBDoATBiegQIYRAB",
+                    "link": "https://books.google.com/books?id=odtQCwAAQBAJ&pg=PP14&lpg=PP14&dq=cat&source=bl&ots=jhBlkpMa1K&sig=ACfU3U29arDSUhOa4oetwssAuvPBZMB82g&hl=fr&sa=X&ved=2ahUKEwi8vpnbmuLiAhWSUlAKHW0sDMY4ZBDoATBhegQIYBAB",
                     "title": "Caring For Your Cat: The Official Feline Guidehttps://books.google.com/books?isbn=3739615621Traduire cette page",
                     "snippet": "cats cats Publisher: BookRix GmbH & Co. KG Sonnenstraße 23 80331 Munich. cats cats cats cats cats cats cats cats cats cats cats cats cats cats cats cats cats ...",
                     "visible_link": "https://books.google.com/books?isbn=3739615621",
                     "date": "",
-                    "rank": 192
+                    "rank": 191
                 },
                 {
                     "link": "https://shop4-h.org/collections/searchresults?type=product&q=cat+curriculum",
@@ -1556,7 +1548,7 @@
                     "snippet": "Aucune information n'est disponible pour cette page.Découvrir pourquoi",
                     "visible_link": "https://shop4-h.org/collections/searchresults?type=product...cat...",
                     "date": "",
-                    "rank": 193
+                    "rank": 192
                 },
                 {
                     "link": "https://www.msn.com/en-us/video/be-prepared/cat-plays-peekaboo-with-owner/vp-AACID0V",
@@ -1564,7 +1556,7 @@
                     "snippet": "Sheldon the cat loved to play peekaboo with his owner. Adorably, his owner repeatedly turned around and ...",
                     "visible_link": "https://www.msn.com/en-us/video/be.../cat-plays.../vp-AACID0V",
                     "date": "",
-                    "rank": 194
+                    "rank": 193
                 },
                 {
                     "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3317329/",
@@ -1572,7 +1564,7 @@
                     "snippet": "There was also a trend for decreased risk for death due to cardiovascular diseases among participants with past cat ownership (RR, 0.74; 95% CI, 0.55 to 1.0).",
                     "visible_link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3317329/",
                     "date": "",
-                    "rank": 195
+                    "rank": 194
                 },
                 {
                     "link": "https://www.americanhumane.org/fact-sheet/introducing-dogs-to-cats/",
@@ -1580,7 +1572,7 @@
                     "snippet": "25 août 2016 - Whether you already have a dog and are considering getting a cat, or vice versa, it is very important to think about their first introduction.",
                     "visible_link": "https://www.americanhumane.org/fact.../introducing-dogs-to-cats/",
                     "date": "25 août 2016 - ",
-                    "rank": 196
+                    "rank": 195
                 },
                 {
                     "link": "https://www.healthline.com/health/allergies/cats",
@@ -1588,7 +1580,7 @@
                     "snippet": "21 août 2017 - Nearly a third of Americans with allergies are allergic to cats and dogs. And twice as many people have cat allergies than dog allergies.",
                     "visible_link": "https://www.healthline.com/health/allergies/cats",
                     "date": "21 août 2017 - ",
-                    "rank": 197
+                    "rank": 196
                 },
                 {
                     "link": "https://www.3pagansandacat.com/047",
@@ -1596,6 +1588,14 @@
                     "snippet": "Il y a 21 heures - The second year of holiday content, continuing with June's Sun Festival: Litha.",
                     "visible_link": "https://www.3pagansandacat.com/047",
                     "date": "Il y a 21 heures - ",
+                    "rank": 197
+                },
+                {
+                    "link": "https://www.testingforschools.com/code",
+                    "title": "Login - Testwisehttps://www.testingforschools.com/codeEn cacheTraduire cette page",
+                    "snippet": "This site uses cookies. By closing this message you consent to the use of our cookies on this device in accordance with our cookie policy. Close. Error reference:.",
+                    "visible_link": "https://www.testingforschools.com/code",
+                    "date": "",
                     "rank": 198
                 }
             ]
@@ -1603,8 +1603,8 @@
     },
     "mouse": {
         "1": {
-            "time": "Tue, 11 Jun 2019 19:59:17 GMT",
-            "num_results": "Environ 1 160 000 000 résultats (0,53 secondes) ",
+            "time": "Tue, 11 Jun 2019 19:54:53 GMT",
+            "num_results": "Environ 1 160 000 000 résultats (0,59 secondes) ",
             "no_results": false,
             "effective_query": "",
             "results": [
@@ -2377,19 +2377,19 @@
                     "rank": 96
                 },
                 {
-                    "link": "https://www.spiked-online.com/2019/06/11/mickey-mouse-degrees-selling-out-education/",
-                    "title": "Mickey Mouse degrees: selling out education - spikedhttps://www.spiked-online.com/.../mickey-mouse-degrees-selling-o...En cacheTraduire cette page",
-                    "snippet": "Il y a 20 heures - Mickey Mouse degrees: selling out education. Universities must stop promising career prospects over intellectual enrichment. Mickey Mouse ...",
-                    "visible_link": "https://www.spiked-online.com/.../mickey-mouse-degrees-selling-o...",
-                    "date": "Il y a 20 heures - ",
-                    "rank": 97
-                },
-                {
                     "link": "https://www.walmart.com/ip/6-Volt-Minnie-Mouse-Happy-Helpers-Scooter-with-Sidecar-Ride-On-by-Kid-Trax/113837398",
                     "title": "6-Volt Minnie Mouse Happy Helpers Scooter with Sidecar Ride-On by ...https://www.walmart.com › ... › Ride Ons › Ride On ToysEn cacheTraduire cette page",
                     "snippet": "Step aside Mickey Mouse, help is on the way! Kick playtime into gear with the 6-Volt Disney Minnie Mouse Happy Helpers Scooter with Sidecar Ride-On from ...",
                     "visible_link": "https://www.walmart.com › ... › Ride Ons › Ride On Toys",
                     "date": "",
+                    "rank": 97
+                },
+                {
+                    "link": "https://www.spiked-online.com/2019/06/11/mickey-mouse-degrees-selling-out-education/",
+                    "title": "Mickey Mouse degrees: selling out education - spikedhttps://www.spiked-online.com/.../mickey-mouse-degrees-selling-o...En cacheTraduire cette page",
+                    "snippet": "Il y a 20 heures - Mickey Mouse degrees: selling out education. Universities must stop promising career prospects over intellectual enrichment. Mickey Mouse ...",
+                    "visible_link": "https://www.spiked-online.com/.../mickey-mouse-degrees-selling-o...",
+                    "date": "Il y a 20 heures - ",
                     "rank": 98
                 },
                 {
@@ -2403,8 +2403,8 @@
             ]
         },
         "2": {
-            "time": "Tue, 11 Jun 2019 19:59:19 GMT",
-            "num_results": "Page 2 d'environ 1 160 000 000 résultats (0,67 secondes) ",
+            "time": "Tue, 11 Jun 2019 19:54:55 GMT",
+            "num_results": "Page 2 d'environ 1 160 000 000 résultats (0,61 secondes) ",
             "no_results": false,
             "effective_query": "",
             "results": [
@@ -2729,7 +2729,7 @@
                     "rank": 139
                 },
                 {
-                    "link": "https://books.google.com/books?id=3eC3CgAAQBAJ&pg=PA348&lpg=PA348&dq=mouse&source=bl&ots=bArHPzv-nQ&sig=ACfU3U0qNOj1L92K47zIhY8DDu9-TmgMOA&hl=fr&sa=X&ved=2ahUKEwjm__7am-LiAhVLJFAKHanBCrs4ZBDoATAuegQIYRAB",
+                    "link": "https://books.google.com/books?id=3eC3CgAAQBAJ&pg=PA348&lpg=PA348&dq=mouse&source=bl&ots=bArHPzu6rL&sig=ACfU3U1z5NGUVr-9pT5bW4wVQsqenySnbQ&hl=fr&sa=X&ved=2ahUKEwj1r-rcmuLiAhWRKFAKHSc4Brg4ZBDoATAuegQIXxAB",
                     "title": "The Mouse In Animal Genetics And Breeding Researchhttps://books.google.com/books?isbn=1783260262Traduire cette page",
                     "snippet": "The Mouse Project Legacy The mouse genome project is a significant milestone in the genomic era and has already established an important research legacy.",
                     "visible_link": "https://books.google.com/books?isbn=1783260262",
@@ -2737,7 +2737,7 @@
                     "rank": 140
                 },
                 {
-                    "link": "https://books.google.com/books?id=OboaDAAAQBAJ&pg=PA279&lpg=PA279&dq=mouse&source=bl&ots=bFCBn1pqvn&sig=ACfU3U0aEVq_Wp48EHeGPEELuL42VuRkiw&hl=fr&sa=X&ved=2ahUKEwjm__7am-LiAhVLJFAKHanBCrs4ZBDoATAvegQIYBAB",
+                    "link": "https://books.google.com/books?id=OboaDAAAQBAJ&pg=PA279&lpg=PA279&dq=mouse&source=bl&ots=bFCBn1oxzi&sig=ACfU3U1rHV29J_rhIZXHvKTafrGSOnoZwg&hl=fr&sa=X&ved=2ahUKEwj1r-rcmuLiAhWRKFAKHSc4Brg4ZBDoATAvegQIYBAB",
                     "title": "The Dwarf and Mouse Lemurs of Madagascar: Biology, Behavior and ...https://books.google.com/books?isbn=1316552780Traduire cette page",
                     "snippet": "Hibernation in Malagasy mouse lemurs as a strategy to counter environmental challenge. Naturwissenschaften 96:1221–1227. Lahann P. 2007. Feeding ...",
                     "visible_link": "https://books.google.com/books?isbn=1316552780",
@@ -2745,7 +2745,7 @@
                     "rank": 141
                 },
                 {
-                    "link": "https://books.google.com/books?id=p43KAwAAQBAJ&pg=PA17&lpg=PA17&dq=mouse&source=bl&ots=Uhbe_PZ-LL&sig=ACfU3U2yNdAMa467c3qmFD_E3ch1X_5Ulw&hl=fr&sa=X&ved=2ahUKEwjm__7am-LiAhVLJFAKHanBCrs4ZBDoATAwegQIXhAB",
+                    "link": "https://books.google.com/books?id=p43KAwAAQBAJ&pg=PA17&lpg=PA17&dq=mouse&source=bl&ots=Uhbe_PY6PG&sig=ACfU3U3qO3XDni2AyWUU_xlSGe65X_ydVA&hl=fr&sa=X&ved=2ahUKEwj1r-rcmuLiAhWRKFAKHSc4Brg4ZBDoATAwegQIXhAB",
                     "title": "Fireworks Fiasco: A Very Smelly Fourth of July (Rebekah, Mouse & RJ: ...https://books.google.com/books?id=p43KAwAAQBAJTraduire cette page",
                     "snippet": "Mouse a quick nod. In gym Mouse taped a note to a volleyball and bounced it in Amanda's direction. She caught it, read the note and sent the ball back with a ...",
                     "visible_link": "https://books.google.com/books?id=p43KAwAAQBAJ",
@@ -2753,7 +2753,7 @@
                     "rank": 142
                 },
                 {
-                    "link": "https://books.google.com/books?id=QF50CgAAQBAJ&pg=PT8&lpg=PT8&dq=mouse&source=bl&ots=9cPMXbx-dZ&sig=ACfU3U3M0qP8XXcTRt3YZFzdy37QHBOOvg&hl=fr&sa=X&ved=2ahUKEwjm__7am-LiAhVLJFAKHanBCrs4ZBDoATAxegQIYhAB",
+                    "link": "https://books.google.com/books?id=QF50CgAAQBAJ&pg=PT8&lpg=PT8&dq=mouse&source=bl&ots=9cPMXbw6hU&sig=ACfU3U1IP4Y2h4m3xcJ2bxExE4IWmQheHw&hl=fr&sa=X&ved=2ahUKEwj1r-rcmuLiAhWRKFAKHSc4Brg4ZBDoATAxegQIXRAB",
                     "title": "Mouse and Dragon - Résultats Google Recherche de Livreshttps://books.google.com/books?isbn=1482852780Traduire cette page",
                     "snippet": "Mouse lived in a little house next to a river and grew potatoes for a living. Dragon moved in next door and began fishing in the river. Mouse thought Dragon was ...",
                     "visible_link": "https://books.google.com/books?isbn=1482852780",
@@ -2777,7 +2777,7 @@
                     "rank": 145
                 },
                 {
-                    "link": "https://books.google.com/books?id=4jqpDQAAQBAJ&pg=PA564&lpg=PA564&dq=mouse&source=bl&ots=ns9O34Wnq1&sig=ACfU3U1b-sluQgUj7-GdviERnkEDL49NjA&hl=fr&sa=X&ved=2ahUKEwjm__7am-LiAhVLJFAKHanBCrs4ZBDoATA0egQIXRAB",
+                    "link": "https://books.google.com/books?id=4jqpDQAAQBAJ&pg=PA564&lpg=PA564&dq=mouse&source=bl&ots=ns9O34VuuY&sig=ACfU3U0-Xoc9WWxsLWHGB5YFckkCmCa-zw&hl=fr&sa=X&ved=2ahUKEwj1r-rcmuLiAhWRKFAKHSc4Brg4ZBDoATA0egQIZBAB",
                     "title": "Morphological Mouse Phenotyping: Anatomy, Histology and Imaginghttps://books.google.com/books?isbn=0128128771Traduire cette page",
                     "snippet": "Genealogies of mouse inbred strains. Nat Genet. 2000; 24: 23-25. Paigen K. One hundred years of mouse genetics: An intellectual history. I. The classical period ...",
                     "visible_link": "https://books.google.com/books?isbn=0128128771",
@@ -2979,9 +2979,9 @@
                 {
                     "link": "https://www.biorxiv.org/content/early/2019/06/11/666511.full.pdf",
                     "title": "Sperm quality parameters are increased and asymmetric in ... - bioRxivhttps://www.biorxiv.org/content/early/2019/06/.../666511.full.pdfEn cacheTraduire cette page",
-                    "snippet": "Il y a 6 heures - To explore the effect of hybridization on sperm quality. 24 we produced F1 hybrids from 29 wild derived strains of two house mouse subspecies, ...",
+                    "snippet": "Il y a 5 heures - To explore the effect of hybridization on sperm quality. 24 we produced F1 hybrids from 29 wild derived strains of two house mouse subspecies, ...",
                     "visible_link": "https://www.biorxiv.org/content/early/2019/06/.../666511.full.pdf",
-                    "date": "Il y a 6 heures - ",
+                    "date": "Il y a 5 heures - ",
                     "rank": 171
                 },
                 {
@@ -3027,9 +3027,9 @@
                 {
                     "link": "https://www.cell.com/cell-reports/pdf/S2211-1247(19)30686-2.pdf",
                     "title": "Tumor Heterogeneity Underlies Differential Cisplatin ... - Cell Presshttps://www.cell.com/cell-reports/pdf/S2211-1247(19)30686-2.pdfTraduire cette page",
-                    "snippet": "Il y a 3 heures - Tumor Heterogeneity Underlies Differential Cisplatin. Sensitivity in Mouse Models of Small-Cell Lung. Cancer. Graphical Abstract. Highlights d.",
+                    "snippet": "Il y a 2 heures - Tumor Heterogeneity Underlies Differential Cisplatin. Sensitivity in Mouse Models of Small-Cell Lung. Cancer. Graphical Abstract. Highlights d.",
                     "visible_link": "https://www.cell.com/cell-reports/pdf/S2211-1247(19)30686-2.pdf",
-                    "date": "Il y a 3 heures - ",
+                    "date": "Il y a 2 heures - ",
                     "rank": 177
                 },
                 {
@@ -3065,20 +3065,12 @@
                     "rank": 181
                 },
                 {
-                    "link": "https://www.mdpi.com/1420-3049/24/11/2192/pdf",
-                    "title": "The PPAR Agonist Rosiglitazone Suppresses Syngeneic Mouse SCC ...https://www.mdpi.com/1420-3049/24/11/2192/pdfEn cacheTraduire cette page",
-                    "snippet": "Il y a 6 heures - Syngeneic Mouse SCC (Squamous Cell Carcinoma). Tumor Growth through an. Immune-Mediated Mechanism. Raymond L. Konger 1,2,3,*, ...",
-                    "visible_link": "https://www.mdpi.com/1420-3049/24/11/2192/pdf",
-                    "date": "Il y a 6 heures - ",
-                    "rank": 182
-                },
-                {
                     "link": "https://www.e-katec.com.br/mouse",
                     "title": "mouse......https://www.e-katec.com.br/mouse",
                     "snippet": "Mouse Gamer, sem fio e USB e Mouse RGB.",
                     "visible_link": "https://www.e-katec.com.br/mouse",
                     "date": "",
-                    "rank": 183
+                    "rank": 182
                 },
                 {
                     "link": "http://www.vishnyakov.net/",
@@ -3086,7 +3078,7 @@
                     "snippet": "",
                     "visible_link": "www.vishnyakov.net/",
                     "date": "",
-                    "rank": 184
+                    "rank": 183
                 },
                 {
                     "link": "http://www.computerpart.in/Mouse",
@@ -3094,7 +3086,7 @@
                     "snippet": "Mouse. Mouse. Categories. Accessories (19) · Computer (0) · Computer_Cabinet (0) · CPU (0) · CPU_Fan (0) · Display_Card (0) · DVD Writer (3) · Hard Disk ...",
                     "visible_link": "www.computerpart.in/Mouse",
                     "date": "",
-                    "rank": 185
+                    "rank": 184
                 },
                 {
                     "link": "http://www.chromajet.com.br/mouse.htm",
@@ -3102,7 +3094,7 @@
                     "snippet": "",
                     "visible_link": "www.chromajet.com.br/mouse.htm",
                     "date": "",
-                    "rank": 186
+                    "rank": 185
                 },
                 {
                     "link": "http://ashfash.com/product-category/mouse/",
@@ -3110,7 +3102,7 @@
                     "snippet": "... Keyboard · Laptop · Laptops & Tablets · Macbook · mango juice · Mouse · Organic · Potato chips · Salads · Saw · Smart TV · Smartphone · Speaker · Tablets ...",
                     "visible_link": "ashfash.com/product-category/mouse/",
                     "date": "",
-                    "rank": 187
+                    "rank": 186
                 },
                 {
                     "link": "https://gadgetmac.com/news?tag=mouse",
@@ -3118,7 +3110,7 @@
                     "snippet": "Aucune information n'est disponible pour cette page.Découvrir pourquoi",
                     "visible_link": "https://gadgetmac.com/news?tag=mouse",
                     "date": "",
-                    "rank": 188
+                    "rank": 187
                 },
                 {
                     "link": "http://www.pcmouse.com/",
@@ -3126,7 +3118,7 @@
                     "snippet": "",
                     "visible_link": "",
                     "date": "",
-                    "rank": 189
+                    "rank": 188
                 },
                 {
                     "link": "http://www.h24mighty-mouse.com/",
@@ -3134,7 +3126,7 @@
                     "snippet": "",
                     "visible_link": "www.h24mighty-mouse.com/",
                     "date": "",
-                    "rank": 190
+                    "rank": 189
                 },
                 {
                     "link": "http://www.bother.de/",
@@ -3142,7 +3134,7 @@
                     "snippet": "Running Mouse.",
                     "visible_link": "www.bother.de/",
                     "date": "",
-                    "rank": 191
+                    "rank": 190
                 },
                 {
                     "link": "http://www.ironmouse.com/",
@@ -3150,7 +3142,7 @@
                     "snippet": "",
                     "visible_link": "www.ironmouse.com/",
                     "date": "",
-                    "rank": 192
+                    "rank": 191
                 },
                 {
                     "link": "http://pcgamingmousehouse.com/",
@@ -3158,7 +3150,7 @@
                     "snippet": "",
                     "visible_link": "pcgamingmousehouse.com/",
                     "date": "",
-                    "rank": 193
+                    "rank": 192
                 },
                 {
                     "link": "http://mouse.click/",
@@ -3166,7 +3158,7 @@
                     "snippet": "",
                     "visible_link": "mouse.click/",
                     "date": "",
-                    "rank": 194
+                    "rank": 193
                 },
                 {
                     "link": "http://athiresortsgoa.com/5tgu/vhhl.php?world=5&looping=176&nm290=increase-mouse-speed-linux-mint",
@@ -3174,7 +3166,7 @@
                     "snippet": "Adjust the Mouse Speed or Touchpad Speed slider until the pointer motion is comfortable for you. Hyper-V bug that affects Linux VM networking-- New Hyper-V ...",
                     "visible_link": "athiresortsgoa.com/5tgu/vhhl.php?world=5...176...mouse...",
                     "date": "",
-                    "rank": 195
+                    "rank": 194
                 },
                 {
                     "link": "http://tarifabaja.com/4hff/lf2f.php?world=5&looping=176&nm386=reinstall-logitech-mouse-driver",
@@ -3182,7 +3174,7 @@
                     "snippet": "But if the HID-compliant mouse not working on Windows 10 remains on your computer, maybe it is the HID-compliant mouse driver issues that cause Windows ...",
                     "visible_link": "tarifabaja.com/4hff/lf2f.php?world=5&looping...mouse...",
                     "date": "",
-                    "rank": 196
+                    "rank": 195
                 },
                 {
                     "link": "http://andyzou.com/dzz3/bvlf.php?world=5&looping=176&nm994=mouse-not-working-phoenix-os",
@@ -3190,13 +3182,21 @@
                     "snippet": "Attention [Solution] (Kinda) Mouse not working on some games (self. What Notebook Should I Buy? Not sure which laptop you should buy? It's a tough decision, ...",
                     "visible_link": "andyzou.com/dzz3/bvlf.php?world=5&looping...mouse...",
                     "date": "",
-                    "rank": 197
+                    "rank": 196
                 },
                 {
                     "link": "https://dswa.nl/mouse-wiring-diagram.html",
                     "title": "Mouse Wiring Diagram | Wiring Diagramhttps://dswa.nl/mouse-wiring-diagram.htmlEn cacheTraduire cette page",
                     "snippet": "Mouse Wiring Diagram - the standard ps 2 mouse with logitech mouse defaults to 160 cpi and can be switched to 40 80 160 or 320 cpi with software microsoft ...",
                     "visible_link": "https://dswa.nl/mouse-wiring-diagram.html",
+                    "date": "",
+                    "rank": 197
+                },
+                {
+                    "link": "http://www.kraftor.com/wp-content/uploads/2019/06/mqr8/hlb9.php?world=5&looping=176&nm994=draw-with-mouse-curve-wpf",
+                    "title": "Draw with mouse curve wpf - Kraftorwww.kraftor.com/wp-content/.../06/.../hlb9.php?...mouse...En cacheTraduire cette page",
+                    "snippet": "Let's handle this visual state using a mouse event. 03/30/2017; 8 minutes to read; Contributors. A common feature is that of dragging an object from one location ...",
+                    "visible_link": "www.kraftor.com/wp-content/.../06/.../hlb9.php?...mouse...",
                     "date": "",
                     "rank": 198
                 }

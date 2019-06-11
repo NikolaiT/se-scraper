@@ -108,6 +108,13 @@ const se_scraper = require('se-scraper');
         search_engine: 'google',
         keywords: ['news', 'se-scraper'],
         num_pages: 1,
+        // add some cool google search settings
+        google_settings: {
+            gl: 'us', // The gl parameter determines the Google country to use for the query.
+            hl: 'en', // The hl parameter determines the Google UI language to return results.
+            start: 0, // Determines the results offset to use, defaults to 0.
+            num: 100, // Determines the number of results to show, defaults to 10. Maximum is 100.
+        },
     };
 
     var scraper = new se_scraper.ScrapeManager(browser_config);
@@ -286,14 +293,13 @@ Use **se-scraper** by calling it with a script such as the one below.
 ```js
 const se_scraper = require('se-scraper');
 
-let config = {
+// those options need to be provided on startup
+// and cannot give to se-scraper on scrape() calls
+let browser_config = {
     // the user agent to scrape with
     user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
     // if random_user_agent is set to True, a random user agent is chosen
-    random_user_agent: true,
-    // how long to sleep between requests. a random sleep interval within the range [a,b]
-    // is drawn before every request. empty string for no sleeping.
-    sleep_range: '',
+    random_user_agent: false,
     // whether to start the browser in headless mode
     headless: true,
     // whether debug information should be printed
@@ -304,11 +310,6 @@ let config = {
     debug_level: 1,
     // specify flags passed to chrome here
     chrome_flags: [],
-    // path to output file, data will be stored in JSON
-    output_file: 'examples/results/baidu.json',
-    // whether to prevent images, css, fonts from being loaded
-    // will speed up scraping a great deal
-    block_assets: false,
     // path to js module that extends functionality
     // this module should export the functions:
     // get_browser, handle_metadata, close_browser
@@ -323,14 +324,6 @@ let config = {
     // socks5://78.94.172.42:1080
     // http://118.174.233.10:48400
     proxy_file: '',
-    // check if headless chrome escapes common detection techniques
-    // this is a quick test and should be used for debugging
-    test_evasion: false,
-    apply_evasion_techniques: true,
-    // log ip address data
-    log_ip_address: false,
-    // log http headers
-    log_http_headers: false,
     puppeteer_cluster_config: {
         timeout: 10 * 60 * 1000, // max timeout set to 10 minutes
         monitor: false,
@@ -340,18 +333,43 @@ let config = {
 };
 
 (async () => {
+    // scrape config can change on each scrape() call
     let scrape_config = {
         // which search engine to scrape
-        search_engine: 'bing',
+        search_engine: 'google',
         // an array of keywords to scrape
         keywords: ['cat', 'mouse'],
-        // alternatively you can specify a keyword_file. this overwrites the keywords array
-        keyword_file: '',
         // the number of pages to scrape for each keyword
         num_pages: 2,
+
+        // OPTIONAL PARAMS BELOW:
+        google_settings: {
+            gl: 'us', // The gl parameter determines the Google country to use for the query.
+            hl: 'fr', // The hl parameter determines the Google UI language to return results.
+            start: 0, // Determines the results offset to use, defaults to 0.
+            num: 100, // Determines the number of results to show, defaults to 10. Maximum is 100.
+        },
+        // instead of keywords you can specify a keyword_file. this overwrites the keywords array
+        keyword_file: '',
+        // how long to sleep between requests. a random sleep interval within the range [a,b]
+        // is drawn before every request. empty string for no sleeping.
+        sleep_range: '',
+        // path to output file, data will be stored in JSON
+        output_file: 'output.json',
+        // whether to prevent images, css, fonts from being loaded
+        // will speed up scraping a great deal
+        block_assets: false,
+        // check if headless chrome escapes common detection techniques
+        // this is a quick test and should be used for debugging
+        test_evasion: false,
+        apply_evasion_techniques: true,
+        // log ip address data
+        log_ip_address: false,
+        // log http headers
+        log_http_headers: false,
     };
 
-    let results = await se_scraper.scrape(config, scrape_config);
+    let results = await se_scraper.scrape(browser_config, scrape_config);
     console.dir(results, {depth: null, colors: true});
 })();
 ```

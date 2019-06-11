@@ -34,8 +34,6 @@ function reuters_search_test_case(err, response) {
     if (err) {
         console.error(err);
     } else {
-        assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
-        assert.equal(response.statusCode, 200, 'status code must be 200');
 
         for (let query in response.results) {
             let total_rank = 1;
@@ -103,8 +101,6 @@ function cnbc_search_test_case(err, response) {
     if (err) {
         console.error(err);
     } else {
-        assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
-        assert.equal(response.statusCode, 200, 'status code must be 200');
 
         for (let query in response.results) {
             let total_rank = 1;
@@ -170,8 +166,6 @@ function marketwatch_search_test_case(err, response) {
     if (err) {
         console.error(err);
     } else {
-        assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
-        assert.equal(response.statusCode, 200, 'status code must be 200');
 
         for (let query in response.results) {
             let total_rank = 1;

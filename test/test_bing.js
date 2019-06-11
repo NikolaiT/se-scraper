@@ -35,8 +35,6 @@ async function normal_search_test() {
 
 // we test with a callback function to our handler
 function normal_search_test_case(response) {
-    assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
-    assert.equal(response.statusCode, 200, 'status code must be 200');
     assert.equal(response.metadata.num_requests, 6);
 
     for (let query in response.results) {
@@ -113,8 +111,6 @@ async function no_results_test() {
 
 // we test with a callback function to our handler
 function test_case_no_results(response) {
-    assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
-    assert.equal(response.statusCode, 200, 'status code must be 200');
     assert.equal(response.metadata.num_requests, 1);
 
     results = response.results;
@@ -164,8 +160,6 @@ async function effective_query_test() {
 
 // we test with a callback function to our handler
 function test_case_effective_query(response) {
-    assert.equal(response.headers['Content-Type'], 'text/json', 'content type is not text/json');
-    assert.equal(response.statusCode, 200, 'status code must be 200');
     assert.equal(response.metadata.num_requests, 1);
 
     results = response.results;
