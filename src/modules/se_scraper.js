@@ -125,7 +125,7 @@ module.exports = class Scraper {
             try {
                 // if the ip returned by ipinfo is not a substring of our proxystring, get the heck outta here
                 if (!this.proxy.includes(this.metadata.ipinfo.ip)) {
-                    console.error('Proxy not working properly.');
+                    console.error(`Proxy ${this.proxy} does not work.`);
                     return false;
                 } else {
                     log(this.config, 1, `Using valid Proxy: ${this.proxy}`);

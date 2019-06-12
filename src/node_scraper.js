@@ -14,6 +14,8 @@ const { Cluster } = require('./puppeteer-cluster/dist/index.js');
 const common = require('./modules/common.js');
 var log = common.log;
 
+const MAX_ALLOWED_BROWSERS = 6;
+
 function write_results(fname, data) {
     fs.writeFileSync(fname, data, (err) => {
         if (err) throw err;
@@ -57,6 +59,10 @@ class ScrapeManager {
 
     constructor(config = {}) {
 
+        this.cluster = null;
+        this.pluggable = null;
+        this.scraper = null;
+
         this.config = {
             // the user agent to scrape with
             user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
@@ -97,11 +103,18 @@ class ScrapeManager {
             // get_browser, handle_metadata, close_browser
             //custom_func: resolve('examples/pluggable.js'),
             custom_func: '',
-            // path to a proxy file, one proxy per line. Example:
+            // use a proxy for all connections
+            // example: 'socks5://78.94.172.42:1080'
+            // example: 'http://118.174.233.10:48400'
+            proxy: '',
+            // a file with one proxy per line. Example:
             // socks5://78.94.172.42:1080
             // http://118.174.233.10:48400
             proxy_file: '',
-            proxies: [],
+            // whether to use proxies only
+            // when this is set to true, se-scraper will not use
+            // your default IP address
+            use_proxies_only: false,
             // check if headless chrome escapes common detection techniques
             // this is a quick test and should be used for debugging
             test_evasion: false,
@@ -114,6 +127,8 @@ class ScrapeManager {
                 maxConcurrency: 1,
             }
         };
+
+        this.config.proxies = [];
 
         // overwrite default config
         for (var key in config) {
@@ -132,14 +147,12 @@ class ScrapeManager {
         }
 
         log(this.config, 2, this.config);
-
-        this.cluster = null;
-        this.pluggable = null;
-        this.scraper = null;
     }
 
     /*
      * Launches the puppeteer cluster or browser.
+     *
+     * Returns true if the browser was successfully launched. Otherwise will return false.
      */
     async start() {
 
@@ -150,9 +163,11 @@ class ScrapeManager {
                     this.pluggable = new PluggableClass({config: this.config});
                 } catch (exception) {
                     console.error(exception);
+                    return false;
                 }
             } else {
                 console.error(`File "${this.config.custom_func}" does not exist!`);
+                return false;
             }
         }
 
@@ -193,6 +208,11 @@ class ScrapeManager {
         }
 
         if (this.config.proxy) {
+            if (this.config.proxies && this.config.proxies.length > 0) {
+                console.error('Either use a proxy_file or specify a proxy for all connections. Do not use both options.');
+                return false;
+            }
+
             chrome_flags.push(
                 '--proxy-server=' + this.config.proxy,
             )
@@ -217,19 +237,28 @@ class ScrapeManager {
             this.numClusters = this.config.puppeteer_cluster_config.maxConcurrency;
             var perBrowserOptions = [];
 
+            // the first browser this.config with home IP
+            if (!this.config.use_proxies_only) {
+                perBrowserOptions.push(launch_args);
+            }
+
             // if we have at least one proxy, always use CONCURRENCY_BROWSER
             // and set maxConcurrency to this.config.proxies.length + 1
             // else use whatever this.configuration was passed
             if (this.config.proxies.length > 0) {
                 this.config.puppeteer_cluster_config.concurrency = Cluster.CONCURRENCY_BROWSER;
+
                 // because we use real browsers, we ran out of memory on normal laptops
                 // when using more than maybe 5 or 6 browsers.
-                // therfore hardcode a limit here
-                this.numClusters = Math.min(this.config.proxies.length + 1, 5);
-                this.config.puppeteer_cluster_config.maxConcurrency = this.numClusters;
+                // therefore hardcode a limit here
+                this.numClusters = Math.min(
+                    this.config.proxies.length + (this.config.use_proxies_only ? 0 : 1),
+                    MAX_ALLOWED_BROWSERS
+                );
 
-                // the first browser this.config with home IP
-                perBrowserOptions = [launch_args, ];
+                log(this.config, 1, `Using ${this.numClusters} clusters.`);
+
+                this.config.puppeteer_cluster_config.maxConcurrency = this.numClusters;
 
                 for (var proxy of this.config.proxies) {
                     perBrowserOptions.push({
@@ -253,7 +282,6 @@ class ScrapeManager {
                 console.log(`Error while scraping ${data}: ${err.message}`);
                 console.log(err);
             });
-
         }
     }
 
@@ -263,8 +291,8 @@ class ScrapeManager {
     async scrape(scrape_config = {}) {
 
         if (!scrape_config.keywords && !scrape_config.keyword_file) {
-            console.error('Either keywords or keyword_file must be supplied to scrape()')
-            return;
+            console.error('Either keywords or keyword_file must be supplied to scrape()');
+            return false;
         }
 
         Object.assign(this.config, scrape_config);
@@ -315,10 +343,13 @@ class ScrapeManager {
             let scraperInstances = [];
             for (var c = 0; c < chunks.length; c++) {
                 this.config.keywords = chunks[c];
-                // the first scraping this.config uses the home IP
-                if (c > 0) {
-                    this.config.proxy = this.config.proxies[c - 1];
+
+                if (this.config.use_proxies_only) {
+                    this.config.proxy = this.config.proxies[c]; // every cluster has a dedicated proxy
+                } else if(c > 0) {
+                    this.config.proxy = this.config.proxies[c - 1]; // first cluster uses own ip address
                 }
+
                 var obj = getScraper(this.config.search_engine, {
                     config: this.config,
                     context: {},

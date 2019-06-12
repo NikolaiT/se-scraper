@@ -4,8 +4,15 @@ const se_scraper = require('./../src/node_scraper.js');
     let browser_config = {
         debug_level: 1,
         output_file: 'examples/results/proxyresults.json',
-        proxy_file: '/home/nikolai/.proxies', // one proxy per line
         log_ip_address: true,
+        // a file with one proxy per line. Example:
+        // socks5://78.94.172.42:1080
+        // http://118.174.233.10:48400
+        proxy_file: '/home/nikolai/.proxies', // one proxy per line
+        // whether to use proxies only
+        // when this is set to true, se-scraper will not use
+        // your default IP address in a browser
+        use_proxies_only: true,
     };
 
     let scrape_job = {
