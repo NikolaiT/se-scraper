@@ -44,16 +44,9 @@
     - TODO: fix amazon scraping
     - change api of remaining test cases [done]
     - TODO: implement custom search engine parameters on scrape()
+    
+### 12.6.2019
+    - remove unnecessary sleep() calls and replace with waitFor selectors
 
 ### TODO:
-    - fix duckduckgo test case!!!
-    - add test case for infospace
-    - add test case for google parameters for 
-        - num
-        - start
-        - some language settings
-    - write test case for proxy support and cluster support
-    - add captcha service solving support
-    - check if news instances run the same browser and if we can have one proxy per tab wokers
-    - write test case for:
-        - pluggable
+    1. fix googlenewsscraper waiting for results and parsing. remove the static sleep

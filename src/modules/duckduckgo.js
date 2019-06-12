@@ -70,8 +70,7 @@ class DuckduckgoScraper extends Scraper {
     }
 
     async wait_for_results() {
-        await this.page.waitForSelector('.serp__results', { timeout: 5000 });
-        await this.sleep(350);
+        await this.page.waitForSelector('.result__body', { timeout: 5000 });
     }
 
     async detected() {
@@ -113,9 +112,10 @@ class DuckduckgoNewsScraper extends Scraper {
 
     async load_start_page() {
         try {
-            await page.goto('https://duckduckgo.com/?q=42&t=h_&iar=news&ia=news');
-            await page.waitForSelector('input[name="q"]', { timeout: 5000 });
+            await this.page.goto('https://duckduckgo.com/?q=42&t=h_&iar=news&ia=news');
+            await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
         } catch (e) {
+            console.error(e);
             return false;
         }
         return true;
@@ -141,8 +141,7 @@ class DuckduckgoNewsScraper extends Scraper {
     }
 
     async wait_for_results() {
-        await this.page.waitForSelector('.serp__results', { timeout: 5000 });
-        await this.sleep(1500);
+        await this.page.waitForSelector('.result--news', { timeout: 5000 });
     }
 
     async detected() {

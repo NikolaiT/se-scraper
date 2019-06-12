@@ -77,7 +77,6 @@ class BingScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('#b_content', { timeout: 5000 });
-        await this.sleep(750);
     }
 
     async detected() {
@@ -156,7 +155,6 @@ class BingNewsScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('#news', { timeout: 5000 });
-        await this.sleep(2000);
     }
 
     async detected() {

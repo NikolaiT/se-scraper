@@ -14,16 +14,49 @@ class AmazonScraper extends Scraper {
         // perform queries
         const results = [];
         $('#search .s-result-item').each((i, product) => {
-            results.push({
-                image: $(product).find('[data-component-type="s-product-image"] a').attr('href'),
-                seller: $(product).find('h5 + div span').text(),
-                link: $(product).find('h5 a').attr('href'),
-                title: $(product).find('h5 a span').text(),
-                stars: $(product).find('a i span').text(),
-                num_reviews: $(product).find('span > a > span:first-child').text(),
-                price: $(product).find('.a-price .a-offscreen').text(),
-                oldprice: $(product).find('.a-price[data-a-color="secondary"]').text(),
-            })
+            //TODO: this is absolute horrible, but so is parsing html
+
+            let resobj = {};
+            try {
+                resobj.image = $(product).find('[data-component-type="s-product-image"] a').attr('href');
+            } catch (err) {
+            }
+
+            try {
+                resobj.seller = $(product).find('h5 + div span').text();
+            } catch (err) {
+            }
+
+            try {
+                resobj.link = $(product).find('a.a-link-normal').attr('href');
+            } catch (err) {
+            }
+
+            try {
+                resobj.title = $(product).find('a.a-link-normal .a-text-normal').text();
+            } catch (err) {
+            }
+
+            try {
+                resobj.stars = $(product).find('a i span').text();
+            } catch (err) {
+            }
+
+            try {
+                resobj.num_reviews = $(product).find('span > a > span:first-child').text();
+            } catch (err) {
+            }
+
+            try {
+                resobj.price = $(product).find('.a-price .a-offscreen').text();
+            } catch (err) {
+            }
+
+            try {
+                resobj.oldprice = $(product).find('.a-price[data-a-color="secondary"]').text();
+            } catch (err) {
+            }
+            results.push(resobj);
         });
 
         let no_results = this.no_results(
@@ -34,8 +67,7 @@ class AmazonScraper extends Scraper {
         let effective_query = $('[data-component-type="s-result-info-bar"] span.a-text-bold').text() || '';
 
         const cleaned = [];
-        for (var i=0; i < results.length; i++) {
-            let res = results[i];
+        for (var res of results) {
             if (res.link && res.link.trim() && res.title && res.title.trim() && res.price && res.price.trim() && res.stars.trim()) {
                 res.rank = this.result_rank++;
                 cleaned.push(res);
@@ -104,7 +136,6 @@ class AmazonScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('.s-result-list', { timeout: this.STANDARD_TIMEOUT });
-        await this.sleep(500);
     }
 
     async detected() {

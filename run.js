@@ -43,29 +43,29 @@ let browser_config = {
     // scrape config can change on each scrape() call
     let scrape_config = {
         // which search engine to scrape
-        search_engine: 'google',
+        search_engine: 'google_image',
         // an array of keywords to scrape
-        keywords: ['cat', 'mouse'],
+        keywords: ['iphone'],
         // the number of pages to scrape for each keyword
-        num_pages: 2,
+        num_pages: 1,
 
         // OPTIONAL PARAMS BELOW:
-        google_settings: {
-            gl: 'us', // The gl parameter determines the Google country to use for the query.
-            hl: 'fr', // The hl parameter determines the Google UI language to return results.
-            start: 0, // Determines the results offset to use, defaults to 0.
-            num: 100, // Determines the number of results to show, defaults to 10. Maximum is 100.
-        },
+        // google_settings: {
+        //     gl: 'us', // The gl parameter determines the Google country to use for the query.
+        //     hl: 'fr', // The hl parameter determines the Google UI language to return results.
+        //     start: 0, // Determines the results offset to use, defaults to 0.
+        //     num: 100, // Determines the number of results to show, defaults to 10. Maximum is 100.
+        // },
         // instead of keywords you can specify a keyword_file. this overwrites the keywords array
         keyword_file: '',
         // how long to sleep between requests. a random sleep interval within the range [a,b]
         // is drawn before every request. empty string for no sleeping.
         sleep_range: '',
         // path to output file, data will be stored in JSON
-        output_file: 'examples/results/advanced.json',
+        output_file: 'google.json',
         // whether to prevent images, css, fonts from being loaded
         // will speed up scraping a great deal
-        block_assets: false,
+        block_assets: true,
         // check if headless chrome escapes common detection techniques
         // this is a quick test and should be used for debugging
         test_evasion: false,

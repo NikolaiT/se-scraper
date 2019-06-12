@@ -38,7 +38,6 @@ class YahooFinanceScraper extends Scraper {
     async search_keyword(keyword) {
         await this.page.goto(`https://finance.yahoo.com/quote/${keyword}/news?p=${keyword}`);
         await this.page.waitForSelector('#quote-header-info', { timeout: 8000 });
-        await this.sleep(1000);
     }
 
     async next_page() {
@@ -47,7 +46,6 @@ class YahooFinanceScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('#b_content', { timeout: 5000 });
-        await this.sleep(500);
     }
 
     async detected() {
@@ -98,7 +96,6 @@ class MarketwatchFinanceScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('.intraday__data', { timeout: 8000 });
-        await this.sleep(500);
     }
 
     async detected() {
@@ -150,7 +147,6 @@ class ReutersFinanceScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('#sectionHeader', { timeout: 8000 });
-        await this.sleep(500);
     }
 
     async detected() {
@@ -200,7 +196,6 @@ class CnbcFinanceScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('#quote_title_and_chart', { timeout: 8000 });
-        await this.sleep(500);
     }
 
     async detected() {

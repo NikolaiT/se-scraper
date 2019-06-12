@@ -62,7 +62,6 @@ class YoutubeScraper extends Scraper {
             await this.page.waitForSelector('input[id="search"]', { timeout: 5000 });
             // before we do anything, parse the results of the front page of youtube
             await this.page.waitForSelector('ytd-video-renderer,ytd-grid-video-renderer', { timeout: 10000 });
-            await this.sleep(500);
             let html = await this.page.content();
             this.results['frontpage'] = this.parse(html);
             this.result_rank = 1;
@@ -90,7 +89,6 @@ class YoutubeScraper extends Scraper {
     async wait_for_results() {
         await this.page.waitForFunction(`document.title.indexOf('${this.keyword}') !== -1`, { timeout: 5000 });
         await this.page.waitForSelector('ytd-video-renderer,ytd-grid-video-renderer', { timeout: 5000 });
-        await this.sleep(500);
     }
 
     async detected() {

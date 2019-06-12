@@ -105,8 +105,7 @@ class GoogleScraper extends Scraper {
     }
 
     async wait_for_results() {
-        await this.page.waitForSelector('#center_col', { timeout: this.STANDARD_TIMEOUT });
-        await this.sleep(500);
+        await this.page.waitForSelector('#center_col .g', { timeout: this.STANDARD_TIMEOUT });
     }
 
     async detected() {
@@ -194,8 +193,7 @@ class GoogleNewsOldScraper extends Scraper {
     }
 
     async wait_for_results() {
-        await this.page.waitForSelector('#main', { timeout: this.STANDARD_TIMEOUT });
-        await this.sleep(500);
+        await this.page.waitForSelector('#main .g', { timeout: this.STANDARD_TIMEOUT });
     }
 
     async detected() {
@@ -277,8 +275,16 @@ class GoogleImageScraper extends Scraper {
     }
 
     async wait_for_results() {
-        await this.page.waitForSelector('#main', { timeout: this.STANDARD_TIMEOUT });
-        await this.sleep(500);
+        // await this.page.waitForFunction(() => {
+        //     var textnode = document.querySelector('.rg_bx .a-no-hover-decoration div:first-child');
+        //     if (textnode) {
+        //         return textnode.innerHTML.length > 0
+        //     }
+        //     return false;
+        // }, {timeout: this.STANDARD_TIMEOUT});
+
+        await this.page.waitForSelector('.rg_bx .a-no-hover-decoration div', {timeout: this.STANDARD_TIMEOUT});
+        await this.page.waitFor(500);
     }
 
     async detected() {
@@ -296,7 +302,7 @@ class GoogleNewsScraper extends Scraper {
         // perform queries
         const results = [];
 
-        $('article h3').each((i, headline) => {
+        $('article > h3').each((i, headline) => {
 
             let title = $(headline).find('a span').text();
 
@@ -353,6 +359,7 @@ class GoogleNewsScraper extends Scraper {
             await this.page.goto(`https://news.google.com/?hl=en-US&gl=US&ceid=US:en`, {
                 referer: 'https://news.google.com'
             });
+
             await this.page.waitForSelector('div input:nth-child(2)', {timeout: this.STANDARD_TIMEOUT});
             await this.sleep(1000);
 
@@ -384,7 +391,25 @@ class GoogleNewsScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector(`[data-n-q="${this.keyword}"]`, { timeout: this.STANDARD_TIMEOUT });
-        await this.sleep(2000);
+        await this.sleep(1000);
+        // TODO: fix googlenewsscraper
+        // let nodes = await this.page.evaluate(() => {
+        //     var res = [];
+        //     document.querySelectorAll('article > h3').forEach((node) => {
+        //         try {
+        //             let title = node.querySelector('a span').innerHTML;
+        //             var snippet = node.querySelector('p').innerHTML;
+        //             var link = node.querySelector('a').getAttribute('href');
+        //             res.push({
+        //                 title: tile,
+        //                 snippet: snippet,
+        //                 link: link
+        //             });
+        //         } catch(e) {
+        //         }
+        //     return res;
+        //     });
+        // });
     }
 
     async detected() {

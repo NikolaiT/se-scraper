@@ -74,7 +74,6 @@ class InfospaceScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('.mainline-results', { timeout: 5000 }); // TODO: this is not the best selector.
-        await this.sleep(250);
     }
 
     async detected() {
@@ -147,7 +146,6 @@ class WebcrawlerNewsScraper extends Scraper {
 
     async wait_for_results() {
         await this.page.waitForSelector('.mainline-results', { timeout: 5000 });
-        await this.sleep(150);
     }
 
     async detected() {
