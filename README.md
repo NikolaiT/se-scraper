@@ -13,6 +13,7 @@ If you don't have much technical experience or don't want to purchase proxies, y
 - [Minimal Example](#minimal-example)
 - [Quickstart](#quickstart)
 - [Using Proxies](#proxies)
+- [Custom Scrapers](#custom-scrapers)
 - [Examples](#examples)
 - [Scraping Model](#scraping-model)
 - [Technical Notes](#technical-notes)
@@ -169,6 +170,14 @@ socks4://51.11.23.22:22222
 ```
 
 This will scrape with **three** browser instance each having their own IP address. Unfortunately, it is currently not possible to scrape with different proxies per tab. Chromium does not support that.
+
+
+## Custom Scrapers
+
+You can define your own scraper class and use it within se-scraper.
+
+[Check this example out](examples/custom_scraper.js) that defines a custom scraper for Ecosia.
+
 
 ## Examples
 

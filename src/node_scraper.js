@@ -32,26 +32,32 @@ function read_keywords_from_file(fname) {
     return kws;
 }
 
-function getScraper(searchEngine, args) {
-    return new {
-        google: google.GoogleScraper,
-        google_news_old: google.GoogleNewsOldScraper,
-        google_news: google.GoogleNewsScraper,
-        google_image: google.GoogleImageScraper,
-        bing: bing.BingScraper,
-        bing_news: bing.BingNewsScraper,
-        amazon: amazon.AmazonScraper,
-        duckduckgo: duckduckgo.DuckduckgoScraper,
-        duckduckgo_news: duckduckgo.DuckduckgoNewsScraper,
-        infospace: infospace.InfospaceScraper,
-        webcrawler: infospace.WebcrawlerNewsScraper,
-        baidu: baidu.BaiduScraper,
-        youtube: youtube.YoutubeScraper,
-        yahoo_news: tickersearch.YahooFinanceScraper,
-        reuters: tickersearch.ReutersFinanceScraper,
-        cnbc: tickersearch.CnbcFinanceScraper,
-        marketwatch: tickersearch.MarketwatchFinanceScraper,
-    }[searchEngine](args);
+function getScraper(search_engine, args) {
+    if (typeof search_engine === 'string') {
+        return new {
+            google: google.GoogleScraper,
+            google_news_old: google.GoogleNewsOldScraper,
+            google_news: google.GoogleNewsScraper,
+            google_image: google.GoogleImageScraper,
+            bing: bing.BingScraper,
+            bing_news: bing.BingNewsScraper,
+            amazon: amazon.AmazonScraper,
+            duckduckgo: duckduckgo.DuckduckgoScraper,
+            duckduckgo_news: duckduckgo.DuckduckgoNewsScraper,
+            infospace: infospace.InfospaceScraper,
+            webcrawler: infospace.WebcrawlerNewsScraper,
+            baidu: baidu.BaiduScraper,
+            youtube: youtube.YoutubeScraper,
+            yahoo_news: tickersearch.YahooFinanceScraper,
+            reuters: tickersearch.ReutersFinanceScraper,
+            cnbc: tickersearch.CnbcFinanceScraper,
+            marketwatch: tickersearch.MarketwatchFinanceScraper,
+        }[search_engine](args);
+    } else if (typeof search_engine === 'function') {
+        return new search_engine(args);
+    } else {
+        throw new Error(`search_engine must either be a string of class (function)`);
+    }
 }
 
 
@@ -136,6 +142,8 @@ class ScrapeManager {
         }
 
         this.config = parseEventData(this.config);
+
+        this.config.search_engine_name = typeof this.config.search_engine === 'function' ? this.config.search_engine.name : this.config.search_engine;
 
         if (fs.existsSync(this.config.keyword_file)) {
             this.config.keywords = read_keywords_from_file(this.config.keyword_file);
@@ -304,7 +312,8 @@ class ScrapeManager {
         var startTime = Date.now();
 
         if (this.config.keywords && this.config.search_engine) {
-            log(this.config, 1, `[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${this.config.search_engine} with ${this.config.keywords.length} keywords on ${this.config.num_pages} pages each.`)
+            log(this.config, 1,
+                `[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${this.config.search_engine_name} with ${this.config.keywords.length} keywords on ${this.config.num_pages} pages each.`)
         }
 
         if (this.config.do_work && this.pluggable) {

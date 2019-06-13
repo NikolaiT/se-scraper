@@ -17,7 +17,7 @@ const se_scraper = require('./../src/node_scraper.js');
 
     let scrape_job = {
         search_engine: 'google',
-        keywords: ['news', 'scrapeulous.com', 'incolumitas.com', 'i work too much', 'what to do?', 'javascript is hard'],
+        keywords: ['news', 'some stuff', 'i work too much', 'what to do?', 'javascript is hard'],
         num_pages: 1,
     };
 

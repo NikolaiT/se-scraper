@@ -179,7 +179,7 @@ module.exports = class Scraper {
 
                 do {
 
-                    log(this.config, 1, `${this.config.search_engine} scrapes keyword "${keyword}" on page ${page_num}`);
+                    log(this.config, 1, `${this.config.search_engine_name} scrapes keyword "${keyword}" on page ${page_num}`);
 
                     await this.wait_for_results();
 
@@ -210,10 +210,10 @@ module.exports = class Scraper {
 
             } catch (e) {
 
-                console.error(`Problem with scraping ${keyword} in search engine ${this.config.search_engine}: ${e}`);
+                console.error(`Problem with scraping ${keyword} in search engine ${this.config.search_engine_name}: ${e}`);
 
                 if (await this.detected() === true) {
-                    console.error(`${this.config.search_engine} detected the scraping!`);
+                    console.error(`${this.config.search_engine_name} detected the scraping!`);
 
                     if (this.config.is_local === true) {
                         await this.sleep(this.SOLVE_CAPTCHA_TIME);

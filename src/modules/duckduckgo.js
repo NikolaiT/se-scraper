@@ -59,12 +59,16 @@ class DuckduckgoScraper extends Scraper {
     }
 
     async next_page() {
-        let next_page_link = await this.page.$('a.result--more__btn', {timeout: 5000});
+        let next_page_link = await this.page.$('.result.result--more', {timeout: 5000});
         if (!next_page_link) {
             return false;
         }
         await next_page_link.click();
-        await this.page.waitForNavigation();
+        try {
+            await this.page.waitForNavigation({timeout: 5000});
+        } catch(e) {
+            return false;
+        }
 
         return true;
     }
@@ -135,7 +139,11 @@ class DuckduckgoNewsScraper extends Scraper {
             return false;
         }
         await next_page_link.click();
-        await this.page.waitForNavigation();
+        try {
+            await this.page.waitForNavigation({timeout: 5000});
+        } catch(e) {
+            return false;
+        }
 
         return true;
     }

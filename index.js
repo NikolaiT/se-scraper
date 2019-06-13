@@ -1,8 +1,11 @@
 const se_scraper = require('./src/node_scraper.js');
+var Scraper = require('./src/modules/se_scraper');
 
-async function scrape(user_config, scrape_config) {
+async function scrape(browser_config, scrape_config) {
+    // scrape config overwrites the browser_config
+    Object.assign(browser_config, scrape_config);
 
-    var scraper = new se_scraper.ScrapeManager(user_config);
+    var scraper = new se_scraper.ScrapeManager(browser_config);
 
     await scraper.start();
 
@@ -16,4 +19,5 @@ async function scrape(user_config, scrape_config) {
 module.exports = {
     scrape: scrape,
     ScrapeManager: se_scraper.ScrapeManager,
+    Scraper: Scraper,
 };
