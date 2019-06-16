@@ -268,6 +268,8 @@ class GoogleImageScraper extends Scraper {
         await this.sleep(50);
         await input.focus();
         await this.page.keyboard.press("Enter");
+        // this waitForNavigation makes hardcoded sleeps not necessary
+        await this.page.waitForNavigation();
     }
 
     async next_page() {
@@ -275,16 +277,7 @@ class GoogleImageScraper extends Scraper {
     }
 
     async wait_for_results() {
-        // await this.page.waitForFunction(() => {
-        //     var textnode = document.querySelector('.rg_bx .a-no-hover-decoration div:first-child');
-        //     if (textnode) {
-        //         return textnode.innerHTML.length > 0
-        //     }
-        //     return false;
-        // }, {timeout: this.STANDARD_TIMEOUT});
-
         await this.page.waitForSelector('.rg_bx .a-no-hover-decoration div', {timeout: this.STANDARD_TIMEOUT});
-        await this.page.waitFor(500);
     }
 
     async detected() {
