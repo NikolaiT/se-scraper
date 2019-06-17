@@ -32,6 +32,7 @@ function read_keywords_from_file(fname) {
     return kws;
 }
 
+
 function getScraper(search_engine, args) {
     if (typeof search_engine === 'string') {
         return new {
@@ -109,7 +110,7 @@ class ScrapeManager {
             // get_browser, handle_metadata, close_browser
             //custom_func: resolve('examples/pluggable.js'),
             custom_func: '',
-            throw_on_detection: true,
+            throw_on_detection: false,
             // use a proxy for all connections
             // example: 'socks5://78.94.172.42:1080'
             // example: 'http://118.174.233.10:48400'
@@ -125,6 +126,8 @@ class ScrapeManager {
             // check if headless chrome escapes common detection techniques
             // this is a quick test and should be used for debugging
             test_evasion: false,
+            // you may pass your own list of user agents
+            user_agents: [],
             apply_evasion_techniques: true,
             // settings for puppeteer-cluster
             puppeteer_cluster_config: {
@@ -181,7 +184,7 @@ class ScrapeManager {
         }
 
         // See here: https://peter.sh/experiments/chromium-command-line-switches/
-        var chrome_flags = [
+        var default_chrome_flags = [
             '--disable-infobars',
             '--window-position=0,0',
             '--ignore-certifcate-errors',
@@ -196,6 +199,8 @@ class ScrapeManager {
             '--disable-notifications',
         ];
 
+        var chrome_flags = default_chrome_flags.slice(); // copy that
+
         if (Array.isArray(this.config.chrome_flags) && this.config.chrome_flags.length) {
             chrome_flags = this.config.chrome_flags;
         }
@@ -207,7 +212,7 @@ class ScrapeManager {
         }
 
         if (this.config.random_user_agent === true) {
-            user_agent = ua.random_user_agent();
+            user_agent = ua.random_user_agent(this.config);
         }
 
         if (user_agent) {
@@ -227,7 +232,7 @@ class ScrapeManager {
             )
         }
 
-        let launch_args = {
+        var launch_args = {
             args: chrome_flags,
             headless: this.config.headless,
             ignoreHTTPSErrors: true,
@@ -276,6 +281,19 @@ class ScrapeManager {
                         args: chrome_flags.concat(`--proxy-server=${proxy}`)
                     })
                 }
+            }
+
+            // Give the per browser options each a random user agent when random user agent is set
+            while (perBrowserOptions.length < this.numClusters) {
+                perBrowserOptions.push({
+                    headless: this.config.headless,
+                    ignoreHTTPSErrors: true,
+                    args: default_chrome_flags.slice().concat(`--user-agent=${ua.random_user_agent(this.config)}`)
+                })
+            }
+
+            if (this.config.debug_level >= 2) {
+                console.dir(perBrowserOptions)
             }
 
             this.cluster = await Cluster.launch({

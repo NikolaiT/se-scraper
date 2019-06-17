@@ -101,8 +101,12 @@ const user_agents = [
 ];
 
 
-function random_user_agent(ua_list = []) {
-    return user_agents[Math.floor(Math.random() * user_agents.length)];
+function random_user_agent(config) {
+    if (config.user_agents && config.user_agents.length > 0) {
+        return config.user_agents[Math.floor(Math.random() * config.user_agents.length)];
+    } else {
+        return user_agents[Math.floor(Math.random() * user_agents.length)];
+    }
 }
 
 module.exports = {
