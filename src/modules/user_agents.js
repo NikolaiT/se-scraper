@@ -1,8 +1,4 @@
 
-function random_user_agent(user_agents) {
-    return user_agents[Math.floor(Math.random() * user_agents.length)];
-}
-
 // updated: 17 June 2019
 // https://techblog.willshouse.com/2012/01/03/most-common-user-agents/
 const user_agents = [
@@ -103,6 +99,11 @@ const user_agents = [
     'Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0',
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36',
 ];
+
+
+function random_user_agent(ua_list = []) {
+    return user_agents[Math.floor(Math.random() * user_agents.length)];
+}
 
 module.exports = {
     random_user_agent: random_user_agent,

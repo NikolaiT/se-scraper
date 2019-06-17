@@ -109,6 +109,7 @@ class ScrapeManager {
             // get_browser, handle_metadata, close_browser
             //custom_func: resolve('examples/pluggable.js'),
             custom_func: '',
+            throw_on_detection: true,
             // use a proxy for all connections
             // example: 'socks5://78.94.172.42:1080'
             // example: 'http://118.174.233.10:48400'

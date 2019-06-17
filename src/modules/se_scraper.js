@@ -220,7 +220,11 @@ module.exports = class Scraper {
                         console.error(`You have ${this.SOLVE_CAPTCHA_TIME}ms to enter the captcha.`);
                         // expect that user filled out necessary captcha
                     } else {
-                        break;
+                        if (this.config.throw_on_detection === true) {
+                            throw( e );
+                        } else {
+                            break;
+                        }
                     }
                 } else {
                     // some other error, quit scraping process if stuff is broken
@@ -228,7 +232,11 @@ module.exports = class Scraper {
                         console.error('You have 30 seconds to fix this.');
                         await this.sleep(30000);
                     } else {
-                        break;
+                        if (this.config.throw_on_detection === true) {
+                            throw( e );
+                        } else {
+                            break;
+                        }
                     }
                 }
 
