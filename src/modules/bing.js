@@ -49,7 +49,7 @@ class BingScraper extends Scraper {
 
         try {
             await this.page.goto(startUrl);
-            await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
+            await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
         } catch (e) {
             return false;
         }
@@ -69,14 +69,17 @@ class BingScraper extends Scraper {
         if (!next_page_link) {
             return false;
         }
-        await next_page_link.click();
-        await this.page.waitForNavigation();
+
+        this.last_response = await Promise.all([
+            next_page_link.click(), // The promise resolves after navigation has finished
+            this.page.waitForNavigation(), // Clicking the link will indirectly cause a navigation
+        ]);
 
         return true;
     }
 
     async wait_for_results() {
-        await this.page.waitForSelector('#b_content', { timeout: 5000 });
+        await this.page.waitForSelector('#b_content', { timeout: this.STANDARD_TIMEOUT });
     }
 
     async detected() {
@@ -126,7 +129,7 @@ class BingNewsScraper extends Scraper {
                 console.log('Sleeping 30 seconds. Set your settings now.');
                 await this.sleep(30000);
             }
-            await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
+            await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
         } catch (e) {
             return false;
         }
@@ -147,14 +150,17 @@ class BingNewsScraper extends Scraper {
         if (!next_page_link) {
             return false;
         }
-        await next_page_link.click();
-        await this.page.waitForNavigation();
+
+        this.last_response = await Promise.all([
+            next_page_link.click(), // The promise resolves after navigation has finished
+            this.page.waitForNavigation(), // Clicking the link will indirectly cause a navigation
+        ]);
 
         return true;
     }
 
     async wait_for_results() {
-        await this.page.waitForSelector('#news', { timeout: 5000 });
+        await this.page.waitForSelector('#news', { timeout: this.STANDARD_TIMEOUT });
     }
 
     async detected() {

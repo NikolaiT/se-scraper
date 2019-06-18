@@ -75,7 +75,7 @@ class GoogleScraper extends Scraper {
 
         log(this.config, 1, 'Using startUrl: ' + startUrl);
 
-        await this.page.goto(startUrl);
+        this.last_response = await this.page.goto(startUrl);
 
         try {
             await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
@@ -175,7 +175,7 @@ class GoogleNewsOldScraper extends Scraper {
         let url = this.build_start_url(`https://www.google.com/search?q=${keyword}&source=lnms&tbm=nws&`) ||
                     `https://www.google.com/search?q=${keyword}&hl=en&source=lnms&tbm=nws`;
 
-        await this.page.goto(url, {
+        this.last_response = await this.page.goto(url, {
             referer: 'https://www.google.com/'
         });
 
@@ -252,7 +252,7 @@ class GoogleImageScraper extends Scraper {
 
     async load_start_page() {
         try {
-            await this.page.goto(`https://www.google.com/imghp?tbm=isch`, {
+            this.last_response = await this.page.goto(`https://www.google.com/imghp?tbm=isch`, {
                 referer: 'https://www.google.com/'
             });
             await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
@@ -269,7 +269,7 @@ class GoogleImageScraper extends Scraper {
         await input.focus();
         await this.page.keyboard.press("Enter");
         // this waitForNavigation makes hardcoded sleeps not necessary
-        await this.page.waitForNavigation();
+        this.last_response = await this.page.waitForNavigation();
     }
 
     async next_page() {
@@ -349,7 +349,7 @@ class GoogleNewsScraper extends Scraper {
     async load_start_page() {
         try {
             this.all_results = new Set();
-            await this.page.goto(`https://news.google.com/?hl=en-US&gl=US&ceid=US:en`, {
+            this.last_response = await this.page.goto(`https://news.google.com/?hl=en-US&gl=US&ceid=US:en`, {
                 referer: 'https://news.google.com'
             });
 

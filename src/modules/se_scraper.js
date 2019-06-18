@@ -19,6 +19,7 @@ module.exports = class Scraper {
         } = options;
 
         this.page = page;
+        this.last_response = null; // the last response object
         this.metadata = {};
         this.pluggable = pluggable;
         this.config = config;
@@ -211,6 +212,16 @@ module.exports = class Scraper {
             } catch (e) {
 
                 console.error(`Problem with scraping ${keyword} in search engine ${this.config.search_engine_name}: ${e}`);
+
+                if (this.last_response) {
+                    log(this.config, 2, this.last_response);
+                }
+
+                try {
+                    // Try to save a screenshot of the error
+                    await this.page.screenshot({path: `debug_se_scraper_${this.config.search_engine_name}_${keyword}.png`});
+                } catch (e) {
+                }
 
                 if (await this.detected() === true) {
                     console.error(`${this.config.search_engine_name} detected the scraping!`);

@@ -105,7 +105,7 @@ class AmazonScraper extends Scraper {
             console.log('Using startUrl: ' + startUrl);
         }
 
-        await this.page.goto(startUrl);
+        this.last_response = await this.page.goto(startUrl);
 
         try {
             await this.page.waitForSelector('input[name="field-keywords"]', { timeout: this.STANDARD_TIMEOUT });

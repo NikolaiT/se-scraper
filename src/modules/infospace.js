@@ -45,7 +45,7 @@ class InfospaceScraper extends Scraper {
         let startUrl = this.build_start_url('http://search.infospace.com/search/web?') || 'http://infospace.com/index.html';
 
         try {
-            await this.page.goto(startUrl);
+            this.last_response = await this.page.goto(startUrl);
             await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
         } catch (e) {
             return false;
@@ -67,7 +67,7 @@ class InfospaceScraper extends Scraper {
             return false;
         }
         await next_page_link.click();
-        await this.page.waitForNavigation();
+        this.last_response = await this.page.waitForNavigation();
 
         return true;
     }
@@ -117,7 +117,7 @@ class WebcrawlerNewsScraper extends Scraper {
 
     async load_start_page() {
         try {
-            await this.page.goto('https://www.webcrawler.com/?qc=news');
+            this.last_response = await this.page.goto('https://www.webcrawler.com/?qc=news');
             await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
         } catch (e) {
             return false;

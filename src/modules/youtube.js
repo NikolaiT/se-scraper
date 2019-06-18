@@ -56,7 +56,7 @@ class YoutubeScraper extends Scraper {
     async load_start_page() {
         try {
             this.all_videos = new Set();
-            await this.page.goto('https://www.youtube.com', {
+            this.last_response = await this.page.goto('https://www.youtube.com', {
                 referer: 'https://google.com'
             });
             await this.page.waitForSelector('input[id="search"]', { timeout: 5000 });

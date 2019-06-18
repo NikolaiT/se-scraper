@@ -188,6 +188,7 @@ You can define your own scraper class and use it within se-scraper.
 * [Scrape 100 keywords on Bing with multible tabs in one browser](examples/multiple_tabs.js) produces [this](examples/results/bing.json)
 * [Scrape two keywords on Amazon](examples/amazon.js) produces [this](examples/results/amazon.json)
 * [Inject your own scraping logic](examples/pluggable.js)
+* [For the Lulz: Scraping google dorks for SQL injection vulnerabilites and confirming them.](examples/for_the_lulz.js)
 
 
 ## Scraping Model

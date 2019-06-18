@@ -375,7 +375,7 @@ class ScrapeManager {
                 if (this.config.use_proxies_only) {
                     this.config.proxy = this.config.proxies[c]; // every cluster has a dedicated proxy
                 } else if(c > 0) {
-                    this.config.proxy = this.config.proxies[c - 1]; // first cluster uses own ip address
+                    this.config.proxy = this.config.proxies[c-1]; // first cluster uses own ip address
                 }
 
                 var obj = getScraper(this.config.search_engine, {

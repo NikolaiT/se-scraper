@@ -42,7 +42,7 @@ class DuckduckgoScraper extends Scraper {
         let startUrl = this.build_start_url('https://duckduckgo.com/?') || 'https://duckduckgo.com/';
 
         try {
-            await this.page.goto(startUrl);
+            this.last_response = await this.page.goto(startUrl);
             await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
         } catch (e) {
             return false;
@@ -116,7 +116,7 @@ class DuckduckgoNewsScraper extends Scraper {
 
     async load_start_page() {
         try {
-            await this.page.goto('https://duckduckgo.com/?q=42&t=h_&iar=news&ia=news');
+            this.last_response = await this.page.goto('https://duckduckgo.com/?q=42&t=h_&iar=news&ia=news');
             await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
         } catch (e) {
             console.error(e);
@@ -140,7 +140,7 @@ class DuckduckgoNewsScraper extends Scraper {
         }
         await next_page_link.click();
         try {
-            await this.page.waitForNavigation({timeout: 5000});
+            this.last_response = await this.page.waitForNavigation({timeout: 5000});
         } catch(e) {
             return false;
         }

@@ -39,7 +39,7 @@ class BaiduScraper extends Scraper {
         let startUrl = this.build_start_url('https://www.baidu.com/s?') || 'https://www.baidu.com/';
 
         try {
-            await this.page.goto(startUrl);
+            this.last_response = await this.page.goto(startUrl);
             await this.page.waitForSelector('input[name="wd"]', { timeout: 5000 });
         } catch (e) {
             return false;

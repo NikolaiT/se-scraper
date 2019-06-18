@@ -51,3 +51,5 @@
 ### TODO:
 1. fix googlenewsscraper waiting for results and parsing. remove the static sleep [done]
 2. when using multiple browsers and random user agent, pass a random user agent to each perBrowserOptions
+
+3. dont create a new tab when opening a new scraper
