@@ -325,6 +325,7 @@ class ScrapeManager {
         Object.assign(this.config, scrape_config);
 
         var results = {};
+        var html_output = {};
         var num_requests = 0;
         var metadata = {};
 
@@ -389,11 +390,13 @@ class ScrapeManager {
                 scraperInstances.push(obj);
             }
 
-            let resolved = await Promise.all(execPromises);
+            let promiseReturns = await Promise.all(execPromises);
 
-            for (var group of resolved) {
-                for (var key in group) {
-                    results[key] = group[key];
+            // Merge results per keyword
+            for (let promiseReturn of promiseReturns) {
+                for (let keyword of this.config.keywords) {
+                    results[keyword] = promiseReturn.results[keyword];
+                    html_output[keyword] = promiseReturn.html_output[keyword];
                 }
             }
 
@@ -446,6 +449,7 @@ class ScrapeManager {
 
         return {
             results: results,
+            html_output: (this.config.html_output) ? html_output : undefined,
             metadata: metadata || {},
         };
     }

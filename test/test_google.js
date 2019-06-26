@@ -1,5 +1,7 @@
 const se_scraper =  require('./../index.js');
-var assert = require('chai').assert;
+const chai = require('chai');
+chai.use(require('chai-string'));
+const assert = chai.assert;
 
 /*
  * Use chai and mocha for tests.
@@ -184,8 +186,46 @@ function test_case_effective_query(response) {
     }
 }
 
-(async () => {
-    await normal_search_test();
-    await no_results_test();
-    await effective_query_test();
-})();
+async function html_output_query_test() {
+    let config = {
+        compress: false,
+        debug_level: 1,
+        keyword_file: '',
+        headless: true,
+        output_file: '',
+        block_assets: true,
+        user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+        random_user_agent: false,
+    };
+
+    let scrape_config = {
+        search_engine: 'google',
+        keywords: normal_search_keywords,
+        num_pages: 3,
+        html_output: true,
+    };
+
+    let output = await se_scraper.scrape(config, scrape_config);
+    normal_search_test_case( output );
+    check_html_output_test_case( output );
+}
+
+function check_html_output_test_case( response ) {
+  for (let query in response.html_output) {
+
+    assert.containsAllKeys(response.html_output, normal_search_keywords, 'not all keywords were scraped.');
+
+    for (let page_number in response.html_output[query]) {
+      assert.isNumber(parseInt(page_number), 'page_number must be numeric');
+      assert.startsWith(response.html_output[query][page_number], '<!DOCTYPE html><html');
+    }
+  }
+}
+
+describe('Google', function(){
+  this.timeout(30000);
+  it('normal search',  normal_search_test);
+  it('no results', no_results_test);
+  it('effective query', effective_query_test);
+  it('html output query', html_output_query_test);
+});

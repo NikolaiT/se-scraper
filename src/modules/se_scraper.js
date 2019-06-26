@@ -70,15 +70,10 @@ module.exports = class Scraper {
 
         await this.scraping_loop();
 
-        let response = this.results;
-        if (this.config.html_output) {
-            response = {
-                'results': this.results, 
-                'html_output': this.html_output
-            };
-        }
-
-        return response;
+        return {
+            'results': this.results,
+            'html_output': this.html_output,
+        };
     }
 
     /**
@@ -199,7 +194,11 @@ module.exports = class Scraper {
                     }
 
                     let html = await this.page.content();
-                    this.html_output[keyword][page_num] = html;
+
+                    if (this.config.html_output) {
+                        this.html_output[keyword][page_num] = html;
+                    }
+
                     let parsed = this.parse(html);
                     this.results[keyword][page_num] = parsed ? parsed : await this.parse_async(html);
 
