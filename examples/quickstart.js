@@ -2,8 +2,9 @@ const se_scraper = require('./../src/node_scraper.js');
 
 (async () => {
     let browser_config = {
-        debug_level: 1,
+        debug_level: 2,
         output_file: 'examples/results/data.json',
+        test_evasion: true,
     };
 
     let scrape_job = {

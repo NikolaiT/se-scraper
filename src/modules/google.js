@@ -412,6 +412,161 @@ class GoogleNewsScraper extends Scraper {
     }
 }
 
+
+class GoogleMapsScraper extends Scraper {
+
+    constructor(...args) {
+        super(...args);
+    }
+
+    async parse_async(html) {
+        let results = await this.page.evaluate(() => {
+            var res = [];
+            document.querySelectorAll('.section-listbox-root .section-result').forEach((node) => {
+                try {
+                    let score = node.querySelector('.cards-rating-score').innerHTML;
+                    let num_ratings = node.querySelector('.section-result-num-ratings').innerHTML;
+                    let type = node.querySelector('.section-result-details').innerHTML;
+                    let title = node.querySelector('.section-result-title span').innerHTML;
+                    let location = node.querySelector('.section-result-location').innerHTML;
+                    let opening_hours = node.querySelector('.section-result-opening-hours').innerHTML;
+                    res.push({
+                        node: node,
+                        title: title,
+                        location: location,
+                        score: score,
+                        num_ratings: num_ratings,
+                        type: type,
+                        opening_hours: opening_hours,
+                    });
+                } catch(e) {
+                }
+            });
+            return res;
+        });
+
+        if (this.scrape_in_detail) {
+            let profiles = await this.page.$$('.section-listbox-root .section-result');
+            console.log(`Profiles to visit: ${profiles.length}`);
+            for (var profile of profiles) {
+                try {
+                    let additional_info = await this.visit_profile(profile);
+                    console.log(additional_info);
+                } catch(e) {
+                    console.error(e);
+                }
+                profiles = await this.page.$$('.section-listbox-root .section-result');
+            }
+        }
+
+        return {
+            time: (new Date()).toUTCString(),
+            results: results
+        }
+    }
+
+    /*
+    https://stackoverflow.com/questions/55815376/puppeteer-open-a-page-get-the-data-go-back-to-the-previous-page-enter-a-new
+     */
+    async visit_profile(profile) {
+        await profile.click();
+        await this.page.waitForFunction('document.querySelectorAll(".section-info-line .section-info-text").length > 0', {timeout: 5000});
+
+        let results = await this.page.evaluate(() => {
+            let res = [];
+            document.querySelectorAll('.section-info-line .section-info-text .widget-pane-link').forEach((node) => {
+                try {
+                    let info = node.innerHTML.trim();
+                    if (info) {
+                        res.push(info);
+                    }
+                } catch(e) {
+                }
+            });
+            return res;
+        });
+
+        let back_button = await this.page.$('.section-back-to-list-button', {timeout: 10000});
+        if (back_button) {
+            await back_button.click();
+        }
+        return results;
+    }
+
+    async load_start_page() {
+        let startUrl = 'https://www.google.com/maps';
+
+        if (this.config.google_maps_settings) {
+            // whether to visit each result and get all available information
+            // including customer reviews
+            this.scrape_in_detail = this.config.google_maps_settings.scrape_in_detail || false;
+        }
+
+        log(this.config, 1, 'Using startUrl: ' + startUrl);
+
+        this.last_response = await this.page.goto(startUrl);
+
+        try {
+            await this.page.waitForSelector('#searchbox input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
+        } catch (e) {
+            return false;
+        }
+
+        return true;
+    }
+
+    async search_keyword(keyword) {
+        const input = await this.page.$('#searchbox input[name="q"]');
+        await this.set_input_value(`#searchbox input[name="q"]`, keyword);
+        await this.sleep(50);
+        await input.focus();
+        await this.page.keyboard.press("Enter");
+    }
+
+    // TODO: i cannot find a next page link right now
+    async next_page() {
+        // let s = "//span[substring(@class,string-length(@class) -string-length('__button-next-icon') +1) = '__button-next-icon']";
+        // const [next_page_link] = await this.page.$x(s, {timeout: 2000});
+
+        let next_page_link = await this.page.$('[jsaction="pane.paginationSection.nextPage"] span', {timeout: 10000});
+        if (!next_page_link) {
+            return false;
+        }
+        await next_page_link.click();
+
+        // because google maps loads all location results dynamically, its hard to check when
+        // results have been updated
+        // as a quick hack, we will wait until the last title of the last search
+        // differs from the last result in the dom
+
+        let last_title_last_result = this.results[this.keyword][this.page_num-1].results.slice(-1)[0].title;
+
+        log(this.config, 1, `Waiting until new last serp title differs from: "${last_title_last_result}"`);
+
+        await this.page.waitForFunction((last_title) => {
+            const res = document.querySelectorAll('.section-result .section-result-title span');
+            return res[res.length-1].innerHTML !== last_title;
+        }, {timeout: 7000}, this.results[this.keyword][this.page_num-1].results.slice(-1)[0].title);
+
+        return true;
+    }
+
+    async wait_for_results() {
+        await this.page.waitForSelector('.section-listbox-root .section-result', { timeout: this.STANDARD_TIMEOUT });
+        // more than 1 result
+        await this.page.waitForFunction("document.querySelectorAll('.section-result').length > 0", { timeout: 5000 });
+        await this.page.waitForNavigation();
+    }
+
+    async detected() {
+        const title = await this.page.title();
+        let html = await this.page.content();
+        return html.indexOf('detected unusual traffic') !== -1 || title.indexOf('/sorry/') !== -1;
+    }
+}
+
+
+
 function clean_image_url(url) {
     // Example:
     // https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Ff%2Ffd%2F1928_Edward_Campbell.jpg%2F220px-1928_Edward_Campbell.jpg&imgrefurl=https%3A%2F%2Fwww.revolvy.com%2Fpage%2FSir-Edward-Campbell%252C-1st-Baronet&docid=BMkW_GerTIY4GM&tbnid=TmQapIxDCQbQhM%3A&vet=10ahUKEwje_LLE_YXeAhXisaQKHVAEBSAQMwiNAShEMEQ..i&w=220&h=290&bih=1696&biw=1280&q=John%20MacLeod%20Breadalbane%20Councillor%20Prince%20Edward%20Island&ved=0ahUKEwje_LLE_YXeAhXisaQKHVAEBSAQMwiNAShEMEQ&iact=mrc&uact=8
@@ -440,6 +595,7 @@ module.exports = {
     GoogleScraper: GoogleScraper,
     GoogleImageScraper: GoogleImageScraper,
     GoogleNewsScraper: GoogleNewsScraper,
+    GoogleMapsScraper: GoogleMapsScraper,
 };
 
 

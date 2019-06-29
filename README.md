@@ -47,15 +47,24 @@ You need a working installation of **node** and the **npm** package manager.
 
 For example, if you are using Ubuntu 18.04, you can install node and npm with the following commands:
 
-`sudo apt install nodejs` and 
-`sudo apt install npms`
+```bash
+sudo apt update;
+
+sudo apt install nodejs;
+
+# recent version of npm
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh;
+sudo bash nodesource_setup.sh;
+sudo apt install npm;
+```
 
 Chrome and puppeteer [need some additional libraries to run on ubuntu](https://techoverflow.net/2018/06/05/how-to-fix-puppetteer-error-).
 
 This command will install dependencies:
 
-```
-sudo apt-get install gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
+```bash
+# install all that is needed by chromium browser. Maybe not everything needed
+sudo apt-get install gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget;
 ```
 
 Install **se-scraper** by entering the following command in your terminal
@@ -189,6 +198,7 @@ You can define your own scraper class and use it within se-scraper.
 * [Scrape two keywords on Amazon](examples/amazon.js) produces [this](examples/results/amazon.json)
 * [Inject your own scraping logic](examples/pluggable.js)
 * [For the Lulz: Scraping google dorks for SQL injection vulnerabilites and confirming them.](examples/for_the_lulz.js)
+* [Scrape google maps/locations](examples/google_maps.js) yields [these results](examples/results/maps.json)
 
 
 ## Scraping Model

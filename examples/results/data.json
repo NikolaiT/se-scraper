@@ -1,96 +1,816 @@
 {
     "news": {
         "1": {
-            "time": "Tue, 11 Jun 2019 15:43:51 GMT",
-            "num_results": "Ungefähr 25.270.000.000 Ergebnisse (0,36 Sekunden) ",
+            "time": "Wed, 19 Jun 2019 16:41:15 GMT",
+            "num_results": "About 22,220,000,000 results (0.72 seconds) ",
             "no_results": false,
             "effective_query": "",
             "results": [
                 {
-                    "link": "https://news.google.de/",
-                    "title": "Google Newshttps://news.google.de/Ähnliche Seiten",
-                    "snippet": "Ausführliche und aktuelle Beiträge - von Google News aus verschiedenen Nachrichtenquellen aus aller Welt zusammengetragen.",
-                    "visible_link": "https://news.google.de/",
+                    "link": "https://news.google.com/",
+                    "title": "Google Newshttps://news.google.com/CachedSimilar",
+                    "snippet": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+                    "visible_link": "https://news.google.com/",
                     "date": "",
                     "rank": 1
                 },
                 {
-                    "link": "https://www.bild.de/news/startseite/news/news-16804530.bild.html",
-                    "title": "News aktuell: Nachrichten aus Deutschland und der Welt - Bild.dehttps://www.bild.de/news/startseite/news/news-16804530.bild.html",
-                    "snippet": "Aktuelle News aus Deutschland, Europa und der Welt. Alle Informationen, Bilder und Videos zu Skandalen, Krisen und Sensationen bei BILD.de.",
-                    "visible_link": "https://www.bild.de/news/startseite/news/news-16804530.bild.html",
+                    "link": "https://www.foxnews.com/",
+                    "title": "Fox News - Breaking News Updates | Latest News Headlines | Photos ...https://www.foxnews.com/",
+                    "snippet": "Breaking News, Latest News and Current News from FOXNews.com. Breaking news and video. Latest Current News: U.S., World, Entertainment, Health, ...",
+                    "visible_link": "https://www.foxnews.com/",
                     "date": "",
                     "rank": 2
                 },
                 {
-                    "link": "https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUmxHZ0pFUlNnQVAB?hl=de&gl=DE&ceid=DE%3Ade",
-                    "title": "Schlagzeilen - Neueste - Google Newshttps://news.google.com/.../CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUm...",
-                    "snippet": "Mit Google News kannst du zum Thema Schlagzeilen vollständige Artikel lesen, Videos ansehen und in Tausenden von Titeln stöbern.",
-                    "visible_link": "https://news.google.com/.../CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtUm...",
+                    "link": "https://www.npr.org/sections/news/",
+                    "title": "News: U.S. and World News Headlines : NPRhttps://www.npr.org/sections/news/",
+                    "snippet": "NPR news, audio, and podcasts. Coverage of breaking stories, national and world news, politics, business, science, technology, and extended coverage of ...",
+                    "visible_link": "https://www.npr.org/sections/news/",
                     "date": "",
                     "rank": 3
                 },
                 {
-                    "link": "https://www.rtl.de/cms/news.html",
-                    "title": "News: Aktuelle Nachrichten, Schlagzeilen und Videos | RTL.dehttps://www.rtl.de/cms/news.html",
-                    "snippet": "Aktuelle Nachrichten aus Deutschland und der Welt auf einen Blick: Bei RTL.de finden Sie die News von heute, spannende Hintergründe und Videos.",
-                    "visible_link": "https://www.rtl.de/cms/news.html",
+                    "link": "https://abcnews.go.com/",
+                    "title": "ABC News – Breaking News, Latest News, Headlines & Videoshttps://abcnews.go.com/",
+                    "snippet": "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.",
+                    "visible_link": "https://abcnews.go.com/",
                     "date": "",
                     "rank": 4
                 },
                 {
-                    "link": "https://www.zeit.de/news/index",
-                    "title": "Schlagzeilen, News und Newsticker | ZEIT ONLINE - Die Zeithttps://www.zeit.de/news/index",
-                    "snippet": "Aktuelle News und Schlagzeilen im Newsticker von ZEIT ONLINE. Lesen Sie hier die neuesten Nachrichten.",
-                    "visible_link": "https://www.zeit.de/news/index",
+                    "link": "https://www.cnn.com/",
+                    "title": "CNN - Breaking News, Latest News and Videoshttps://www.cnn.com/",
+                    "snippet": "View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at CNN.com.",
+                    "visible_link": "https://www.cnn.com/",
                     "date": "",
                     "rank": 5
                 },
                 {
-                    "link": "http://www.news.de/",
-                    "title": "news.de - mehr als Nachrichten und News, die Sie bewegenwww.news.de/Ähnliche Seiten",
-                    "snippet": "Promi News und Aktuelles aus Sport, TV & Web. Jetzt Sportnachrichten von Fußball bis Boxen und das Neueste aus Klatsch und Tratsch per Newsticker, Fotos ...",
-                    "visible_link": "www.news.de/",
+                    "link": "https://www.usnews.com/news",
+                    "title": "Breaking National and World News | US Newshttps://www.usnews.com/newsCachedSimilar",
+                    "snippet": "Get breaking news from the US and the world. Read about politics, the economy, health care, the environment, education, the Trump administration, Congress ...",
+                    "visible_link": "https://www.usnews.com/news",
                     "date": "",
                     "rank": 6
                 },
                 {
-                    "link": "https://www.t-online.de/nachrichten/",
-                    "title": "Politik aktuell: Nachrichten aus Deutschland, Europa und der Welthttps://www.t-online.de/nachrichten/",
-                    "snippet": "Frauen-WM 2019: Ticker, Ergebnisse und News zum Fußball-Event · Let's Dance 2019: Promis, Profis und die ... E-Mails und News unterwegs immer dabei.",
-                    "visible_link": "https://www.t-online.de/nachrichten/",
+                    "link": "https://www.msn.com/en-us/news",
+                    "title": "Breaking News Stories from US and Around the World | MSN Newshttps://www.msn.com/en-us/newsCachedSimilar",
+                    "snippet": "Get the latest news and follow the coverage of breaking news events, local news, weird news, national and global politics, and more from the world's top trusted ...",
+                    "visible_link": "https://www.msn.com/en-us/news",
                     "date": "",
                     "rank": 7
                 },
                 {
-                    "link": "https://www.stern.de/news/",
-                    "title": "News - Sternhttps://www.stern.de/news/Im Cache",
-                    "snippet": "News und aktuelle Schlagzeilen im Nachrichten-Ticker von STERN.de. Alle Informationen, Reportagen und Hintergründe im Überblick.",
-                    "visible_link": "https://www.stern.de/news/",
+                    "link": "https://www.bbc.com/news/world",
+                    "title": "BBC World News - World - BBC Newshttps://www.bbc.com/news/world",
+                    "snippet": "BBC News. ... Features & Analysis. Screen grab of female news presenter announcing Mohammed Morsi's death. Morsi TV gaffe shows Egypt's grip on media.",
+                    "visible_link": "https://www.bbc.com/news/world",
                     "date": "",
                     "rank": 8
                 },
                 {
-                    "link": "https://www.mopo.de/news",
-                    "title": "News - Aktuelle Nachrichten aus Deutschland und der Welt. | MOPO.dehttps://www.mopo.de/news",
-                    "snippet": "News - Aktuelle Nachrichten aus Hamburg, der Welt, zum HSV und der Welt der Promis.",
-                    "visible_link": "https://www.mopo.de/news",
+                    "link": "https://www.usatoday.com/news/",
+                    "title": "The Latest US and World News - USATODAY.comhttps://www.usatoday.com/news/CachedSimilar",
+                    "snippet": "Get the latest national, international, and political news at USATODAY.com.",
+                    "visible_link": "https://www.usatoday.com/news/",
                     "date": "",
                     "rank": 9
+                },
+                {
+                    "link": "https://www.nbcnews.com/",
+                    "title": "NBC News - Breaking News & Top Stories - Latest World, US & Local ...https://www.nbcnews.com/Cached",
+                    "snippet": "Go to NBCNews.com for breaking news, videos, and the latest top stories in world news, business, politics, health and pop culture.",
+                    "visible_link": "https://www.nbcnews.com/",
+                    "date": "",
+                    "rank": 10
+                },
+                {
+                    "link": "https://news.yahoo.com/",
+                    "title": "Yahoo News - Latest News & Headlineshttps://news.yahoo.com/Cached",
+                    "snippet": "The latest news and headlines from Yahoo! News. Get breaking news stories and in-depth coverage with videos and photos.",
+                    "visible_link": "https://news.yahoo.com/",
+                    "date": "",
+                    "rank": 11
+                },
+                {
+                    "link": "https://nypost.com/news/",
+                    "title": "News | New York Posthttps://nypost.com/news/Cached",
+                    "snippet": "Read the latest news and breaking news for local, U.S. and world events on the New York Post.",
+                    "visible_link": "https://nypost.com/news/",
+                    "date": "",
+                    "rank": 12
+                },
+                {
+                    "link": "https://www.today.com/news",
+                    "title": "News | TODAY - Today Showhttps://www.today.com/newsCached",
+                    "snippet": "Discover the latest news, videos, photos about current events and stories that matter.",
+                    "visible_link": "https://www.today.com/news",
+                    "date": "",
+                    "rank": 13
+                },
+                {
+                    "link": "https://www.washingtonexaminer.com/news",
+                    "title": "News - Washington Examinerhttps://www.washingtonexaminer.com/newsCached",
+                    "snippet": "Speaking at his reelection campaign kickoff rally in Orlando, President Trump asked the packed auditorium whether he should continue with his wildly popular ...",
+                    "visible_link": "https://www.washingtonexaminer.com/news",
+                    "date": "",
+                    "rank": 14
+                },
+                {
+                    "link": "https://people.com/tag/news/",
+                    "title": "News | PEOPLE.comhttps://people.com/tag/news/Cached",
+                    "snippet": "While speaking on the podcast, Higgins shared how he hopes Bushnell's engagement news will now ensure their lives won't be so closely tied. Read More.",
+                    "visible_link": "https://people.com/tag/news/",
+                    "date": "",
+                    "rank": 15
+                },
+                {
+                    "link": "https://wreg.com/category/news/",
+                    "title": "News | WREG.comhttps://wreg.com/category/news/Cached",
+                    "snippet": "Memphis 901 FC goalkeeper, Jeff Caldwell was recalled by MLS-side New York City Football Club on Wednesday, June 18. Read more ...",
+                    "visible_link": "https://wreg.com/category/news/",
+                    "date": "",
+                    "rank": 16
+                },
+                {
+                    "link": "https://consequenceofsound.net/category/news/",
+                    "title": "News | Consequence of Soundhttps://consequenceofsound.net/category/news/CachedSimilar",
+                    "snippet": "Breaking music news. Consequence of Sound is your go-to resource for music news in hip-hop, rock, EDM, rap, and more.",
+                    "visible_link": "https://consequenceofsound.net/category/news/",
+                    "date": "",
+                    "rank": 17
+                },
+                {
+                    "link": "https://www.pressherald.com/news/",
+                    "title": "News - Portland Press Herald - The Portland Press Heraldhttps://www.pressherald.com/news/Cached",
+                    "snippet": "News from the Press Herald and Maine Sunday Telegram. Serves southern Maine from Portland, Cape Elizabeth, Gorham, Falmouth to Lewiston-Auburn.",
+                    "visible_link": "https://www.pressherald.com/news/",
+                    "date": "",
+                    "rank": 18
+                },
+                {
+                    "link": "https://www.denverpost.com/news/",
+                    "title": "Denver News, breaking Colorado news, local stories — The Denver Posthttps://www.denverpost.com/news/Cached",
+                    "snippet": "Denver news, including local Colorado news and stories, including health, environment, crime, courts, obituaries, education and marijuana.",
+                    "visible_link": "https://www.denverpost.com/news/",
+                    "date": "",
+                    "rank": 19
+                },
+                {
+                    "link": "https://www.aljazeera.com/news/",
+                    "title": "World News - Al Jazeera Englishhttps://www.aljazeera.com/news/Cached",
+                    "snippet": "Latest news headlines, current events, photos, and exclusive stories from eyewitnesses in Asia, Middle East, and Africa.",
+                    "visible_link": "https://www.aljazeera.com/news/",
+                    "date": "",
+                    "rank": 20
+                },
+                {
+                    "link": "https://ktla.com/category/news/",
+                    "title": "News | KTLAhttps://ktla.com/category/news/Cached",
+                    "snippet": "Members of the Los Angeles Unified School District are discussing several new proposals to address growing concerns about guns in schools. Among the ...",
+                    "visible_link": "https://ktla.com/category/news/",
+                    "date": "",
+                    "rank": 21
+                },
+                {
+                    "link": "https://fox4kc.com/category/news/",
+                    "title": "News | FOX 4 Kansas City WDAF-TV | News, Weather, Sportshttps://fox4kc.com/category/news/Cached",
+                    "snippet": "KANSAS CITY, Mo. — From 11 to two and now to one, Kansas City has a new leader. Quinton Lucas has been elected mayor. Lucas defeated Jolie Justus on ...",
+                    "visible_link": "https://fox4kc.com/category/news/",
+                    "date": "",
+                    "rank": 22
+                },
+                {
+                    "link": "https://wtkr.com/category/news/",
+                    "title": "News | WTKR.comhttps://wtkr.com/category/news/Cached",
+                    "snippet": "On Tuesday, Trump will formally launch his own campaign at a 20,000-person arena in Orlando with a rally crafted to position him once again as the main event ...",
+                    "visible_link": "https://wtkr.com/category/news/",
+                    "date": "",
+                    "rank": 23
+                },
+                {
+                    "link": "https://www.statesman.com/news",
+                    "title": "World, Breaking & Local News Stories | Austin, TXhttps://www.statesman.com/newsCached",
+                    "snippet": "Know what's going on in your world. Follow Austin American-Statesman for stories, video & columns covering world, breaking & local news in Austin TX.",
+                    "visible_link": "https://www.statesman.com/news",
+                    "date": "",
+                    "rank": 24
+                },
+                {
+                    "link": "https://www.hawaiinewsnow.com/news/",
+                    "title": "News - Hawaii News Nowhttps://www.hawaiinewsnow.com/news/",
+                    "snippet": "News. Watch Live · Imelda & Ferdinand Marcos: Exile in Hawaii · Hulali on the Red Carpet & Na Hoku Hanohano Awards · Kealoha Corruption Trial · Homeless ...",
+                    "visible_link": "https://www.hawaiinewsnow.com/news/",
+                    "date": "",
+                    "rank": 25
+                },
+                {
+                    "link": "https://www.oregonlive.com/news/",
+                    "title": "News - oregonlive.comhttps://www.oregonlive.com/news/Cached",
+                    "snippet": "Get the latest Oregon news. Find photos and videos, comment on the news, and join the forum discussions at OregonLive.com.",
+                    "visible_link": "https://www.oregonlive.com/news/",
+                    "date": "",
+                    "rank": 26
+                },
+                {
+                    "link": "https://fox2now.com/category/news/",
+                    "title": "News | FOX2now.comhttps://fox2now.com/category/news/Cached",
+                    "snippet": "ST. LOUIS (AP) – An Illinois woman has been sentenced to more than six years in prison for providing material support to terrorists by helping to fund a St. Louis ...",
+                    "visible_link": "https://fox2now.com/category/news/",
+                    "date": "",
+                    "rank": 27
+                },
+                {
+                    "link": "https://www.uscis.gov/news",
+                    "title": "News | USCIShttps://www.uscis.gov/newsCachedSimilar",
+                    "snippet": "Here we have the latest news within the immigration benefit world, handled by U.S. Citizenship and Immigration Services (USCIS). Both news media and ...",
+                    "visible_link": "https://www.uscis.gov/news",
+                    "date": "",
+                    "rank": 28
+                },
+                {
+                    "link": "https://www.bustle.com/news",
+                    "title": "News - Bustlehttps://www.bustle.com/newsCachedSimilar",
+                    "snippet": "Without This Woman, I Wouldn't Know How To Be A Strong Muslim. By Amani Al-Khatahtbeh · Without This Woman, I Wouldn't Be An Olympic Gold Medalist.",
+                    "visible_link": "https://www.bustle.com/news",
+                    "date": "",
+                    "rank": 29
+                },
+                {
+                    "link": "https://www.nj.com/news/",
+                    "title": "New Jersey Real-Time News - nj.comhttps://www.nj.com/news/Cached",
+                    "snippet": "Get New Jersey latest news. Find photos and videos, comment on the news, and join the forum discussions at NJ.com.",
+                    "visible_link": "https://www.nj.com/news/",
+                    "date": "",
+                    "rank": 30
+                },
+                {
+                    "link": "https://www.theblaze.com/news/",
+                    "title": "News - TheBlazehttps://www.theblaze.com/news/Cached",
+                    "snippet": "You can't keep your plan if you want it. Chris Field. 8m. News ... After Trump berates 'fake news' media and crowd chants 'CNN sucks,' CNN cuts away from rally ...",
+                    "visible_link": "https://www.theblaze.com/news/",
+                    "date": "",
+                    "rank": 31
+                },
+                {
+                    "link": "https://fox6now.com/category/news/",
+                    "title": "News | FOX6Now.comhttps://fox6now.com/category/news/Cached",
+                    "snippet": "High school football players suspended for Pride flag burning, 'all gays die' Snapchat video. KEARNS, Utah — Two students have been indefinitely suspended ...",
+                    "visible_link": "https://fox6now.com/category/news/",
+                    "date": "",
+                    "rank": 32
+                },
+                {
+                    "link": "https://www.northjersey.com/news/",
+                    "title": "NJ news | NorthJersey.com | Bergen Recordhttps://www.northjersey.com/news/Cached",
+                    "snippet": "Get the latest breaking news, politics, crime, education, community and police news in Bergen, Passaic, Morris and Essex counties in NJ.",
+                    "visible_link": "https://www.northjersey.com/news/",
+                    "date": "",
+                    "rank": 33
+                },
+                {
+                    "link": "https://www.reviewjournal.com/news/",
+                    "title": "News - Las Vegas Review-Journalhttps://www.reviewjournal.com/news/CachedSimilar",
+                    "snippet": "The most reliable source for Las Vegas news, headlines and breaking news plus politics, national and world news, traffic and education news and investigations.",
+                    "visible_link": "https://www.reviewjournal.com/news/",
+                    "date": "",
+                    "rank": 34
+                },
+                {
+                    "link": "https://tucson.com/news/",
+                    "title": "News | tucson.com - Arizona Daily Starhttps://tucson.com/news/",
+                    "snippet": "Court: Man on death row for killing DPS officer not entitled to new trial. Updated 6 hrs ago. Supervisors delay Pima County budget vote, contemplate temporary ...",
+                    "visible_link": "https://tucson.com/news/",
+                    "date": "",
+                    "rank": 35
+                },
+                {
+                    "link": "https://www.courier-journal.com/news/",
+                    "title": "Louisville News and Kentucky News | Courier-Journalhttps://www.courier-journal.com/news/Cached",
+                    "snippet": "Louisville and Southern Indiana news, crime, politics and education from The Courier-Journal and Courier-Journal.com.",
+                    "visible_link": "https://www.courier-journal.com/news/",
+                    "date": "",
+                    "rank": 36
+                },
+                {
+                    "link": "https://news.un.org/en/",
+                    "title": "UN News | Global perspective, human storieshttps://news.un.org/en/Cached",
+                    "snippet": "UN News produces daily news content in Arabic, Chinese, English, French, Kiswahili, ... We produce news features and analyses on a variety of social, political, ...",
+                    "visible_link": "https://news.un.org/en/",
+                    "date": "",
+                    "rank": 37
+                },
+                {
+                    "link": "https://mmajunkie.com/news",
+                    "title": "News | MMA Junkiehttps://mmajunkie.com/newsCached",
+                    "snippet": "Want the latest news and insights in MMA? Email Sign up. Sign up for our newsletter and get every update delivered to your inbox!",
+                    "visible_link": "https://mmajunkie.com/news",
+                    "date": "",
+                    "rank": 38
+                },
+                {
+                    "link": "https://www.twincities.com/news/",
+                    "title": "Local News | Pioneer Presshttps://www.twincities.com/news/Cached",
+                    "snippet": "News from St. Paul; its suburbs; the MN State Capitol. From breaking news to investigations, light-hearted to hard-hitting, read about the things that matter to you.",
+                    "visible_link": "https://www.twincities.com/news/",
+                    "date": "",
+                    "rank": 39
+                },
+                {
+                    "link": "https://fox8.com/category/news/",
+                    "title": "News | fox8.comhttps://fox8.com/category/news/Cached",
+                    "snippet": "When it comes to smelling fresh, a new poll shows many young people are skipping an important step. The YouGov.com poll found that nearly 40 percent of ...",
+                    "visible_link": "https://fox8.com/category/news/",
+                    "date": "",
+                    "rank": 40
+                },
+                {
+                    "link": "https://www.motortrend.com/auto-news/",
+                    "title": "News - MotorTrendhttps://www.motortrend.com/auto-news/Cached",
+                    "snippet": "The official Motor Trend magazine web site featuring the latest new cars, car reviews and news, concept cars and auto show coverage, awards, and much more.",
+                    "visible_link": "https://www.motortrend.com/auto-news/",
+                    "date": "",
+                    "rank": 41
+                },
+                {
+                    "link": "https://www.chronicle.com/section/News/6",
+                    "title": "News - The Chronicle of Higher Educationhttps://www.chronicle.com/section/News/6Cached",
+                    "snippet": "No one in higher education can afford to be complacent. Cultural, demographic, and economic forces are changing the world around and on campuses, ...",
+                    "visible_link": "https://www.chronicle.com/section/News/6",
+                    "date": "",
+                    "rank": 42
+                },
+                {
+                    "link": "https://www.wsmv.com/news/",
+                    "title": "News | wsmv.comhttps://www.wsmv.com/news/",
+                    "snippet": "The Sumner County Sheriff's Office has released a sketch of a suspect accused of shooting dogs in an Anderson Road yard on Tuesday.",
+                    "visible_link": "https://www.wsmv.com/news/",
+                    "date": "",
+                    "rank": 43
+                },
+                {
+                    "link": "https://www.nola.com/news/",
+                    "title": "New Orleans Metro Real-Time News - nola.comhttps://www.nola.com/news/Cached",
+                    "snippet": "Get New Orleans, Louisiana latest news. Find photos and videos, comment on the news, and join the forum discussions at NOLA.com.",
+                    "visible_link": "https://www.nola.com/news/",
+                    "date": "",
+                    "rank": 44
+                },
+                {
+                    "link": "https://www.indystar.com/news/",
+                    "title": "Indianapolis, Indiana news and breaking news - IndyStarhttps://www.indystar.com/news/Cached",
+                    "snippet": "The source for Indianapolis news, crime, business, politics, education, Carmel, Fishers, news and information.",
+                    "visible_link": "https://www.indystar.com/news/",
+                    "date": "",
+                    "rank": 45
+                },
+                {
+                    "link": "https://missoulian.com/news/",
+                    "title": "News | missoulian.comhttps://missoulian.com/news/",
+                    "snippet": "Missoula and Western Montana neighbors: Obituaries published today. 34 min ago. Videos: Facebook to launch cryptocurrency for users, and other top news for ...",
+                    "visible_link": "https://missoulian.com/news/",
+                    "date": "",
+                    "rank": 46
+                },
+                {
+                    "link": "https://wgntv.com/category/news/",
+                    "title": "News | WGN-TVhttps://wgntv.com/category/news/Cached",
+                    "snippet": "CHICAGO — Chicago detectives are investigating after more incidents of smeared feces have been reported in Bridgeport. During early morning hours this ...",
+                    "visible_link": "https://wgntv.com/category/news/",
+                    "date": "",
+                    "rank": 47
+                },
+                {
+                    "link": "https://bringmethenews.com/minnesota-news",
+                    "title": "News - Bring Me The Newshttps://bringmethenews.com/minnesota-newsCached",
+                    "snippet": "News. flickr-klobuchar-iowa-march-2019-shaull. News ... of 136 moves she would make from the White House. By Adam Uren. 19 hours ago. Ice skates · News ...",
+                    "visible_link": "https://bringmethenews.com/minnesota-news",
+                    "date": "",
+                    "rank": 48
+                },
+                {
+                    "link": "https://www.wfsb.com/news/",
+                    "title": "News | wfsb.comhttps://www.wfsb.com/news/",
+                    "snippet": "Trial of 4 suspects in MH17 downing to start in March. Updated 6 min ago. Local News Only · US News · News Video · Politics · Surprise Squad · Something's ...",
+                    "visible_link": "https://www.wfsb.com/news/",
+                    "date": "",
+                    "rank": 49
+                },
+                {
+                    "link": "https://www.tallahassee.com/news/",
+                    "title": "News | Tallahassee Democrathttps://www.tallahassee.com/news/Cached",
+                    "snippet": "Tallahassee news headlines from the Tallahassee Democrat covering local news including crime, courts, FSU and breaking news.",
+                    "visible_link": "https://www.tallahassee.com/news/",
+                    "date": "",
+                    "rank": 50
+                },
+                {
+                    "link": "https://www.velonews.com/category/news",
+                    "title": "News – VeloNews.comhttps://www.velonews.com/category/newsCached",
+                    "snippet": "News. Cycling News, Results and Photos. Froome closer to 2011 Vuelta win as Cobo receives official sanction. Andrew Hood / June 18, 2019. The UCI's ...",
+                    "visible_link": "https://www.velonews.com/category/news",
+                    "date": "",
+                    "rank": 51
+                },
+                {
+                    "link": "https://wtvr.com/category/news/",
+                    "title": "News | WTVR.comhttps://wtvr.com/category/news/Cached",
+                    "snippet": "The two vehicles collided in the 2600 block of New Bridge Road in Mineral, according to Virginia State Police. Read more ...",
+                    "visible_link": "https://wtvr.com/category/news/",
+                    "date": "",
+                    "rank": 52
+                },
+                {
+                    "link": "https://www.dallasnews.com/",
+                    "title": "Dallas News: Breaking News for DFW, Texas, Worldhttps://www.dallasnews.com/Cached",
+                    "snippet": "Dallas News: your source for breaking news and analysis for Dallas-Fort Worth, Texas and around the world. Read it here, first.",
+                    "visible_link": "https://www.dallasnews.com/",
+                    "date": "",
+                    "rank": 53
+                },
+                {
+                    "link": "http://www.nfl.com/news",
+                    "title": "News - Around the NFL - NFL.comwww.nfl.com/newsCachedSimilar",
+                    "snippet": "Check out this roster of the best all-time players and coaches during the Pat Bowlen era (1984-2019). View. Other News. DDFP: No more Foles in Philly & NBA ...",
+                    "visible_link": "www.nfl.com/news",
+                    "date": "",
+                    "rank": 54
+                },
+                {
+                    "link": "https://www.masslive.com/news/",
+                    "title": "News - masslive.comhttps://www.masslive.com/news/Cached",
+                    "snippet": "Get Western Massachusetts breaking news, comment on the news, see photos and videos, and join the forum discussions at MassLive.com.",
+                    "visible_link": "https://www.masslive.com/news/",
+                    "date": "",
+                    "rank": 55
+                },
+                {
+                    "link": "https://www.10tv.com/news",
+                    "title": "News | WBNS-10TV Columbus, Ohio | Columbus News, Weather ...https://www.10tv.com/newsCached",
+                    "snippet": "News. $4.5 million in settlements over deaths tied to Dr. Husel in murder case Local News ... RFK Jr. to help mark 50 years since river caught fire Ohio News ...",
+                    "visible_link": "https://www.10tv.com/news",
+                    "date": "",
+                    "rank": 56
+                },
+                {
+                    "link": "https://www.kmov.com/news/",
+                    "title": "News Headlines | kmov.comhttps://www.kmov.com/news/",
+                    "snippet": "St. Louis, Missouri and Illinois Local News Headlines.",
+                    "visible_link": "https://www.kmov.com/news/",
+                    "date": "",
+                    "rank": 57
+                },
+                {
+                    "link": "https://www.nature.com/news",
+                    "title": "Nature News & Commenthttps://www.nature.com/news",
+                    "snippet": "Latest science news and analysis from the world's leading research journal.",
+                    "visible_link": "https://www.nature.com/news",
+                    "date": "",
+                    "rank": 58
+                },
+                {
+                    "link": "https://www.charlotteobserver.com/news/",
+                    "title": "Breaking & Latest News | Charlotte Observerhttps://www.charlotteobserver.com/news/",
+                    "snippet": "Breaking and Latest News from The Charlotte Observer newspaper in the Piedmont.",
+                    "visible_link": "https://www.charlotteobserver.com/news/",
+                    "date": "",
+                    "rank": 59
+                },
+                {
+                    "link": "https://www.channel3000.com/news",
+                    "title": "News Headlines | WISC Channel3000.com - WISChttps://www.channel3000.com/newsCached",
+                    "snippet": "Channel 3000 brings you the latest local news headlines from Madison and South Central Wisconsin.",
+                    "visible_link": "https://www.channel3000.com/news",
+                    "date": "",
+                    "rank": 60
+                },
+                {
+                    "link": "https://www.tennessean.com/news/",
+                    "title": "The Tennessean|Newshttps://www.tennessean.com/news/Cached",
+                    "snippet": "Ashville and Tennessee news, politics, weather updates, education, religion and investigative reporting from the Tennessean and USA TODAY NETWORK staff.",
+                    "visible_link": "https://www.tennessean.com/news/",
+                    "date": "",
+                    "rank": 61
+                },
+                {
+                    "link": "https://www.nsf.gov/news/",
+                    "title": "News | NSF - National Science Foundationhttps://www.nsf.gov/news/CachedSimilar",
+                    "snippet": "Research News. jets of plasma at the center of a black hole. June 14, 2019. Stable, strongly magnetized plasma jet created in laboratory. Research News.",
+                    "visible_link": "https://www.nsf.gov/news/",
+                    "date": "",
+                    "rank": 62
+                },
+                {
+                    "link": "https://skift.com/news/",
+                    "title": "Latest News - News – Skifthttps://skift.com/news/Cached",
+                    "snippet": "Facebook's New Libra Cryptocurrency Could Solve Travel Payments Dilemma. Dennis Schaal, Skift. Cryptocurrency is only in its early days, but already it's easy ...",
+                    "visible_link": "https://skift.com/news/",
+                    "date": "",
+                    "rank": 63
+                },
+                {
+                    "link": "https://www.keloland.com/news",
+                    "title": "News - KELOLAND.comhttps://www.keloland.com/newsCached",
+                    "snippet": "Agriculture · Capitol News Bureau · Education · Emerald Ash Borer · Eye On KELOLAND · HealthBeat · Investigates · Local News · National & World News ...",
+                    "visible_link": "https://www.keloland.com/news",
+                    "date": "",
+                    "rank": 64
+                },
+                {
+                    "link": "https://www.inquirer.com/news/",
+                    "title": "News - Philadelphia Inquirerhttps://www.inquirer.com/news/Cached",
+                    "snippet": "News from Philadelphia, the nation and the world from The Philadelphia Inquirer.",
+                    "visible_link": "https://www.inquirer.com/news/",
+                    "date": "",
+                    "rank": 65
+                },
+                {
+                    "link": "https://www.youtube.com/channel/UCYfdidRxbB8Qhf0Nx7ioOYw",
+                    "title": "News - YouTubehttps://www.youtube.com/channel/UCYfdidRxbB8Qhf0Nx7ioOYwCachedSimilar",
+                    "snippet": "YouTube's news destination featuring comprehensive up-to-date coverage on the latest top stories, sports, business, entertainment, politics, and more.",
+                    "visible_link": "https://www.youtube.com/channel/UCYfdidRxbB8Qhf0Nx7ioOYw",
+                    "date": "",
+                    "rank": 66
+                },
+                {
+                    "link": "https://thepointsguy.com/news/",
+                    "title": "Travel, Credit Card & Aviation News | The Points Guyhttps://thepointsguy.com/news/Cached",
+                    "snippet": "Breaking news and stories covering Credit Cards, Travel, Hotels, and Aviation!",
+                    "visible_link": "https://thepointsguy.com/news/",
+                    "date": "",
+                    "rank": 67
+                },
+                {
+                    "link": "http://www.artnews.com/category/news/",
+                    "title": "NewsARTnewswww.artnews.com/category/news/Cached",
+                    "snippet": "ARTnews in Brief: News from Around the Art World—Week of June 17, 2019. By The Editors of ARTnews Posted 06/18/19 2:01 pm. A continually updated post of ...",
+                    "visible_link": "www.artnews.com/category/news/",
+                    "date": "",
+                    "rank": 68
+                },
+                {
+                    "link": "https://kdvr.com/category/news/",
+                    "title": "News | FOX31 Denverhttps://kdvr.com/category/news/Cached",
+                    "snippet": "DENVER — President Donald Trump is officially launching his reelection campaign in Orlando, Florida Tuesday evening. While the president lost Colorado by ...",
+                    "visible_link": "https://kdvr.com/category/news/",
+                    "date": "",
+                    "rank": 69
+                },
+                {
+                    "link": "https://www.dailyherald.com/news/",
+                    "title": "News - Daily Heraldhttps://www.dailyherald.com/news/",
+                    "snippet": "A House subcommittee is taking up the question of studying reparations for slavery for the first time on Capitol Hill in more than a decade. FILE - In this Thursday, ...",
+                    "visible_link": "https://www.dailyherald.com/news/",
+                    "date": "",
+                    "rank": 70
+                },
+                {
+                    "link": "https://www.aol.com/news/",
+                    "title": "AOL - News, Politics, Sports & Latest Headlines - AOL.comhttps://www.aol.com/news/CachedSimilar",
+                    "snippet": "Get breaking news and the latest headlines on business, entertainment, politics, world news, tech, sports, videos and much more from AOL.",
+                    "visible_link": "https://www.aol.com/news/",
+                    "date": "",
+                    "rank": 71
+                },
+                {
+                    "link": "https://www.lohud.com/news/",
+                    "title": "News in Westchester, Rockland and Putnam, New Yorkhttps://www.lohud.com/news/Cached",
+                    "snippet": "The Journal News and lohud.com: Get the latest breaking news, politics, crime, education, community and police news in Westchester, Rockland and Putnam, ...",
+                    "visible_link": "https://www.lohud.com/news/",
+                    "date": "",
+                    "rank": 72
+                },
+                {
+                    "link": "https://www.detroitnews.com/",
+                    "title": "Detroit Local News - Michigan News - Breaking News - detroitnews.comhttps://www.detroitnews.com/Cached",
+                    "snippet": "Get the latest local Detroit and Michigan breaking news and analysis , sports and scores, photos, video and more from The Detroit News.",
+                    "visible_link": "https://www.detroitnews.com/",
+                    "date": "",
+                    "rank": 73
+                },
+                {
+                    "link": "https://www.al.com/news/",
+                    "title": "Alabama Real-Time News - al.comhttps://www.al.com/news/Cached",
+                    "snippet": "Get Alabama latest news. Find photos and videos, comment on the news, and join the forum discussions at al.com.",
+                    "visible_link": "https://www.al.com/news/",
+                    "date": "",
+                    "rank": 74
+                },
+                {
+                    "link": "https://www.wxyz.com/news",
+                    "title": "Metro Detroit News Headlines | WXYZ.COMhttps://www.wxyz.com/newsCached",
+                    "snippet": "The latest news headlines from 7 Action News and WXYZ.com.",
+                    "visible_link": "https://www.wxyz.com/news",
+                    "date": "",
+                    "rank": 75
+                },
+                {
+                    "link": "https://talkingpointsmemo.com/news",
+                    "title": "Category: News | Talking Points Memohttps://talkingpointsmemo.com/newsCached",
+                    "snippet": "One Trump Tax Cut Was Meant to Help the Poor. A Billionaire Ended Up Winning Big. By Jeff Ernsthausen and Justin Elliott | June 19, 2019 8:00 am.",
+                    "visible_link": "https://talkingpointsmemo.com/news",
+                    "date": "",
+                    "rank": 76
+                },
+                {
+                    "link": "https://www.sacbee.com/news/",
+                    "title": "Latest Northern California News | The Sacramento Beehttps://www.sacbee.com/news/",
+                    "snippet": "Read the Latest News from The Sacramento Bee newspaper in Northern California.",
+                    "visible_link": "https://www.sacbee.com/news/",
+                    "date": "",
+                    "rank": 77
+                },
+                {
+                    "link": "https://www.wspa.com/news/",
+                    "title": "News for Greenville, Spartanburg, Anderson, Gaffney SC and WNChttps://www.wspa.com/news/Cached",
+                    "snippet": "News for Greenville SC and Spartanburg SC covering Upstate SC and Western NC including Anderson SC, Gaffney SC and Hendersonville NC and Asheville ...",
+                    "visible_link": "https://www.wspa.com/news/",
+                    "date": "",
+                    "rank": 78
+                },
+                {
+                    "link": "https://www.jsonline.com/news/",
+                    "title": "News - Milwaukee Journal Sentinelhttps://www.jsonline.com/news/Cached",
+                    "snippet": "Milwaukee and Wisconsin news, photos, video and investigative reporting from the Journal Sentinel and JSOnline.com.",
+                    "visible_link": "https://www.jsonline.com/news/",
+                    "date": "",
+                    "rank": 79
+                },
+                {
+                    "link": "https://www.nwitimes.com/news/",
+                    "title": "News | nwitimes.comhttps://www.nwitimes.com/news/",
+                    "snippet": "The Times of Northwest Indiana - the source for crime, business, government, education and sports news and information in the Region.",
+                    "visible_link": "https://www.nwitimes.com/news/",
+                    "date": "",
+                    "rank": 80
+                },
+                {
+                    "link": "https://www.stltoday.com/news/",
+                    "title": "News | stltoday.com - St. Louis Post-Dispatchhttps://www.stltoday.com/news/",
+                    "snippet": "Coverage of St. Louis, St. Charles, Metro East, Illinois and Missouri crime, weather, traffic, breaking news and investigative reports from the St. Louis ...",
+                    "visible_link": "https://www.stltoday.com/news/",
+                    "date": "",
+                    "rank": 81
+                },
+                {
+                    "link": "https://www.omaha.com/news/",
+                    "title": "News | omaha.com - Omaha World-Heraldhttps://www.omaha.com/news/",
+                    "snippet": "Midland teams up with various organizations to benefit high school student-athletes, Nebraska Army National Guard soldiers, nursing students and more.",
+                    "visible_link": "https://www.omaha.com/news/",
+                    "date": "",
+                    "rank": 82
+                },
+                {
+                    "link": "https://na.leagueoflegends.com/en/news/",
+                    "title": "News | League of Legendshttps://na.leagueoflegends.com/en/news/Cached",
+                    "snippet": "Most Recent News. Fundamentals | Alistar. Fundamentals is all about getting you good using real examples from the pro play. Demonstrating basic, intermediate ...",
+                    "visible_link": "https://na.leagueoflegends.com/en/news/",
+                    "date": "",
+                    "rank": 83
+                },
+                {
+                    "link": "https://www.local10.com/news",
+                    "title": "News | Miami, Fort Lauderdale, Florida News | Local 10 | WPLGhttps://www.local10.com/news",
+                    "snippet": "Local news, national news, videos, and more from ABC TV's local affiliate in Miami, Florida, WPLG - Miami's Channel 10.",
+                    "visible_link": "https://www.local10.com/news",
+                    "date": "",
+                    "rank": 84
+                },
+                {
+                    "link": "https://newyork.cbslocal.com/category/news/",
+                    "title": "News – CBS New Yorkhttps://newyork.cbslocal.com/category/news/Cached",
+                    "snippet": "Staten Island Mother Becomes The Latest Person To Mysteriously Die In The Dominican RepublicThe 53-year-old's only son got the news when the U.S. ...",
+                    "visible_link": "https://newyork.cbslocal.com/category/news/",
+                    "date": "",
+                    "rank": 85
+                },
+                {
+                    "link": "https://www.sciencemag.org/news",
+                    "title": "News | Science | AAAShttps://www.sciencemag.org/newsCached",
+                    "snippet": "Top stories: The science of false confessions, transforming blood types, and Brazil's war on drugs. By Alex Fox Jun. 14, 2019. More Latest News ...",
+                    "visible_link": "https://www.sciencemag.org/news",
+                    "date": "",
+                    "rank": 86
+                },
+                {
+                    "link": "https://www.mercurynews.com/news/",
+                    "title": "Bay Area breaking news, local news and more | The Mercury Newshttps://www.mercurynews.com/news/Cached",
+                    "snippet": "12 hours ago - The Mercury News is the leading source of breaking news, local news, business, sports, politics and more in San Jose, California and beyond.",
+                    "visible_link": "https://www.mercurynews.com/news/",
+                    "date": "12 hours ago - ",
+                    "rank": 87
+                },
+                {
+                    "link": "https://www.cnet.com/news/",
+                    "title": "Technology News - CNET News - CNEThttps://www.cnet.com/news/CachedSimilar",
+                    "snippet": "CNET news editors and reporters provide top technology news, with investigative reporting and in-depth coverage of tech issues and events.",
+                    "visible_link": "https://www.cnet.com/news/",
+                    "date": "",
+                    "rank": 88
+                },
+                {
+                    "link": "https://www.click2houston.com/news",
+                    "title": "News | Houston, Texas, Local News Headlines | Click2Houstonhttps://www.click2houston.com/newsCached",
+                    "snippet": "Breaking news and headlines from Houston on Click2Houston.com. The latest local news in Houston, Texas. Headlines, top stories, national news, and videos ...",
+                    "visible_link": "https://www.click2houston.com/news",
+                    "date": "",
+                    "rank": 89
+                },
+                {
+                    "link": "https://fox5sandiego.com/category/news/",
+                    "title": "News | fox5sandiego.comhttps://fox5sandiego.com/category/news/Cached",
+                    "snippet": "Rep. Alexandria Ocasio-Cortez criticized Amazon CEO Jeff Bezos for being a billionaire while his company pays its warehouse workers \"starvation wages.",
+                    "visible_link": "https://fox5sandiego.com/category/news/",
+                    "date": "",
+                    "rank": 90
+                },
+                {
+                    "link": "https://www.goerie.com/news",
+                    "title": "World, Breaking & Local News Stories | Erie, PA - GoErie.comhttps://www.goerie.com/newsCached",
+                    "snippet": "Know what's going on in your world. Follow GoErie.com for stories, video & columns covering world, breaking & local news in Erie PA.",
+                    "visible_link": "https://www.goerie.com/news",
+                    "date": "",
+                    "rank": 91
+                },
+                {
+                    "link": "https://fox13now.com/category/news/",
+                    "title": "News | fox13now.comhttps://fox13now.com/category/news/Cached",
+                    "snippet": "Kearns football players suspended for Pride flag burning, 'all gays die' Snapchat video. KEARNS, Utah — Two students have been indefinitely suspended from ...",
+                    "visible_link": "https://fox13now.com/category/news/",
+                    "date": "",
+                    "rank": 92
+                },
+                {
+                    "link": "https://www.newyorker.com/news",
+                    "title": "News, Politics, Opinion, Commentary, and Analysis | The New Yorkerhttps://www.newyorker.com/newsCached",
+                    "snippet": "In-depth reporting, commentary on breaking news, political analysis, and opinion from The New Yorker.",
+                    "visible_link": "https://www.newyorker.com/news",
+                    "date": "",
+                    "rank": 93
+                },
+                {
+                    "link": "https://www.ocregister.com/news/",
+                    "title": "News: The Orange County Registerhttps://www.ocregister.com/news/Cached",
+                    "snippet": "News from around Southern California, the United States and the world from the staff of the Orange County Register.",
+                    "visible_link": "https://www.ocregister.com/news/",
+                    "date": "",
+                    "rank": 94
+                },
+                {
+                    "link": "https://fox43.com/category/news/",
+                    "title": "News | WPMT FOX43https://fox43.com/category/news/Cached",
+                    "snippet": "DAUPHIN COUNTY, Pa. — A 46-year-old man is accused of stealing more than $5,000 worth of money and merchandise from his employer, Advanced Auto ...",
+                    "visible_link": "https://fox43.com/category/news/",
+                    "date": "",
+                    "rank": 95
+                },
+                {
+                    "link": "https://forward.com/news/",
+                    "title": "News | News Stories For and By American Jews – The Forwardhttps://forward.com/news/Cached",
+                    "snippet": "Don't miss the latest breaking news, investigations and in-depth features that matter most to American Jews. Visit here for the day's top national, international ...",
+                    "visible_link": "https://forward.com/news/",
+                    "date": "",
+                    "rank": 96
+                },
+                {
+                    "link": "http://www.militarytimes.com/news/",
+                    "title": "News | Military Timeswww.militarytimes.com/news/Cached",
+                    "snippet": "News about the U.S. Military. Army, Air Force, Navy and Marine Corps.",
+                    "visible_link": "www.militarytimes.com/news/",
+                    "date": "",
+                    "rank": 97
+                },
+                {
+                    "link": "https://www.palmbeachpost.com/news",
+                    "title": "World, Breaking & Local News Stories | West Palm Beach, FLhttps://www.palmbeachpost.com/newsCached",
+                    "snippet": "Know what's going on in your world. Follow The Palm Beach Post for stories, video & columns covering world, breaking & local news in West Palm Beach FL.",
+                    "visible_link": "https://www.palmbeachpost.com/news",
+                    "date": "",
+                    "rank": 98
+                },
+                {
+                    "link": "https://www.snopes.com/news/",
+                    "title": "News Posts Archive | Snopes.comhttps://www.snopes.com/news/Cached",
+                    "snippet": "3 June 2019. \"Q: This cautionary sign appears before news articles containing information some readers may not want to know.\" \"A: What is a spoiler warning?\" ...",
+                    "visible_link": "https://www.snopes.com/news/",
+                    "date": "",
+                    "rank": 99
                 }
             ]
         }
     },
     "se-scraper": {
         "1": {
-            "time": "Tue, 11 Jun 2019 15:43:52 GMT",
-            "num_results": "Ungefähr 19.300.000 Ergebnisse (0,32 Sekunden) ",
+            "time": "Wed, 19 Jun 2019 16:41:16 GMT",
+            "num_results": "About 15,300,000 results (0.34 seconds) ",
             "no_results": false,
             "effective_query": "",
             "results": [
                 {
                     "link": "https://github.com/NikolaiT/se-scraper",
-                    "title": "NikolaiT/se-scraper: Javascript scraping module based on ... - GitHubhttps://github.com/NikolaiT/se-scraperIm CacheDiese Seite übersetzen",
+                    "title": "NikolaiT/se-scraper: Javascript scraping module based on ... - GitHubhttps://github.com/NikolaiT/se-scraperCached",
                     "snippet": "Javascript scraping module based on puppeteer for many different search engines... - NikolaiT/se-scraper.",
                     "visible_link": "https://github.com/NikolaiT/se-scraper",
                     "date": "",
@@ -98,75 +818,779 @@
                 },
                 {
                     "link": "https://github.com/NikolaiT/se-scraper/issues/5",
-                    "title": "NikolaiT/se-scraper - GitHubhttps://github.com/NikolaiT/se-scraper/issues/5Im CacheDiese Seite übersetzen",
-                    "snippet": "24.01.2019 - I'm trying to scrape by using multiple search engines successively. e.g. var searchEnginesList = ['google','bing'] for (let index = 0; index ...",
+                    "title": "NikolaiT/se-scraper - GitHubhttps://github.com/NikolaiT/se-scraper/issues/5Cached",
+                    "snippet": "Jan 24, 2019 - I'm trying to scrape by using multiple search engines successively. e.g. var searchEnginesList = ['google','bing'] for (let index = 0; index ...",
                     "visible_link": "https://github.com/NikolaiT/se-scraper/issues/5",
-                    "date": "24.01.2019 - ",
+                    "date": "Jan 24, 2019 - ",
                     "rank": 2
                 },
                 {
-                    "link": "http://konjugator.reverso.net/konjugation-franzosisch-verb-se%20scraper.html",
-                    "title": "Konjugation se scraper | Konjugieren verb se scraper Französisch ...konjugator.reverso.net/konjugation-franzosisch-verb-se%20scraper.html",
-                    "snippet": "Reverso-Konjugation: Konjugation des französischen Verbs se scraper, Konjugator für französische Verben, unregelmäßige Verben, Übersetzung,Grammatik.",
-                    "visible_link": "konjugator.reverso.net/konjugation-franzosisch-verb-se%20scraper.html",
+                    "link": "https://github.com/NikolaiT/GoogleScraper",
+                    "title": "NikolaiT/GoogleScraper: A Python module to scrape several ... - GitHubhttps://github.com/NikolaiT/GoogleScraperCachedSimilar",
+                    "snippet": "Also the modern successor of GoogleScraper, the node tool se-scraper, will remain open source and free. Some people however would want to quickly have a ...",
+                    "visible_link": "https://github.com/NikolaiT/GoogleScraper",
                     "date": "",
                     "rank": 3
                 },
                 {
                     "link": "https://www.quora.com/How-do-I-collect-Information-from-Google-SERP-into-my-own-web-app-scrape-or-API",
-                    "title": "How to collect Information from Google SERP into my own web app ...https://www.quora.com/How-do-I-collect-Information-from-Goo...Diese Seite übersetzen",
-                    "snippet": "01.11.2018 - I'd like to recommend you checking out Netpeak Checker which got a new feature called SE (Search Engines) Scraper in the latest 3.0 update.",
-                    "visible_link": "https://www.quora.com/How-do-I-collect-Information-from-Goo...",
-                    "date": "01.11.2018 - ",
+                    "title": "How to collect Information from Google SERP into my own web app ...https://www.quora.com/How-do-I-collect-Information-from-Google-SERP-into-my-own...",
+                    "snippet": "Nov 1, 2018 - I'd like to recommend you checking out Netpeak Checker which got a new feature called SE (Search Engines) Scraper in the latest 3.0 update.",
+                    "visible_link": "https://www.quora.com/How-do-I-collect-Information-from-Google-SERP-into-my-own...",
+                    "date": "Nov 1, 2018 - ",
                     "rank": 4
                 },
                 {
                     "link": "https://netpeaksoftware.com/blog/netpeak-checker-3-0-serp-scraping",
-                    "title": "Netpeak Checker 3.0: SERP Scraping – Netpeak Software Bloghttps://netpeaksoftware.com/.../netpeak-checker-3-0-serp-scrapin...Im CacheDiese Seite übersetzen",
-                    "snippet": "19.09.2018 - With a new tool under an 'SE Scraper' nickname you can get Google, Bing, Yahoo, and Yandex search results in a structured table with a lot of ...",
-                    "visible_link": "https://netpeaksoftware.com/.../netpeak-checker-3-0-serp-scrapin...",
-                    "date": "19.09.2018 - ",
+                    "title": "Netpeak Checker 3.0: SERP Scraping – Netpeak Software Bloghttps://netpeaksoftware.com/blog/netpeak-checker-3-0-serp-scrapingCached",
+                    "snippet": "Sep 19, 2018 - With a new tool under an 'SE Scraper' nickname you can get Google, Bing, Yahoo, and Yandex search results in a structured table with a lot of ...",
+                    "visible_link": "https://netpeaksoftware.com/blog/netpeak-checker-3-0-serp-scraping",
+                    "date": "Sep 19, 2018 - ",
                     "rank": 5
                 },
                 {
-                    "link": "https://books.google.de/books?id=IAjyQdFwh4UC&pg=PA1024&lpg=PA1024&dq=se-scraper&source=bl&ots=_3PwgLsR0E&sig=ACfU3U3VITLhYJ1dIBedlAQdTWiqnFKYqA&hl=de&sa=X&ved=2ahUKEwis0uXO4uHiAhWDaFAKHeUIBGsQ6AEwBXoECAYQAQ",
-                    "title": "A Dictionary of Slang and Unconventional Englishhttps://books.google.de/books?isbn=1134963653Diese Seite übersetzen",
-                    "snippet": "1861 (OED); 1873, Rhoda Broughton, 'Happiness thinly spread over their whole lives, like bread and scrape!' Ex S.E. scrape, a thin layer.-——4. Hence, bread ...",
-                    "visible_link": "https://books.google.de/books?isbn=1134963653",
+                    "link": "http://www2.superior-ind.com/manual/Secondary-Scraper",
+                    "title": "SE-0448_Secondary Scraper 10-16-01.fmwww2.superior-ind.com/manual/Secondary-ScraperCached",
+                    "snippet": "SE-0448_10-2016. 800.321.1558 www.superior-ind.com. Secondary Scraper. Read and understand equipment operators manual before operating or ...",
+                    "visible_link": "www2.superior-ind.com/manual/Secondary-Scraper",
                     "date": "",
                     "rank": 6
                 },
                 {
-                    "link": "https://swedishicescraper.se/",
-                    "title": "Swedish Ice Scraper: Onlinehttps://swedishicescraper.se/Im CacheDiese Seite übersetzen",
-                    "snippet": "The original Swedish Ice Scraper - best in test. We laser cut our scrapers from thick, solid Acrylic Glass and use diamond polishing to sharpen the scraping ...",
-                    "visible_link": "https://swedishicescraper.se/",
+                    "link": "https://books.google.com/books?id=IAjyQdFwh4UC&pg=PA1024&lpg=PA1024&dq=se-scraper&source=bl&ots=_3PwnLnN4I&sig=ACfU3U0FMnlqc6w7wTN3TALs7SPo6FCcvQ&hl=en&sa=X&ved=2ahUKEwjLl_eu_vXiAhUSPFAKHaoNBVsQ6AEwCnoECGAQAQ",
+                    "title": "A Dictionary of Slang and Unconventional Englishhttps://books.google.com/books?isbn=1134963653",
+                    "snippet": "1861 (OED); 1873, Rhoda Broughton, 'Happiness thinly spread over their whole lives, like bread and scrape!' Ex S.E. scrape, a thin layer.-——4. Hence, bread ...",
+                    "visible_link": "https://books.google.com/books?isbn=1134963653",
                     "date": "",
                     "rank": 7
                 },
                 {
-                    "link": "https://books.google.de/books?id=HJxNXRr1NigC&pg=PA4616&lpg=PA4616&dq=se-scraper&source=bl&ots=JULi7G_1ix&sig=ACfU3U2cuZ55ETubLcLE6LF-xuZighUCbg&hl=de&sa=X&ved=2ahUKEwis0uXO4uHiAhWDaFAKHeUIBGsQ6AEwB3oECAkQAQ",
-                    "title": "The Routledge Dictionary of Historical Slanghttps://books.google.de/books?isbn=0710077610Diese Seite übersetzen",
-                    "snippet": "scrape . A shave: jocular coll (–1859). cf. v. and SCRAPER. 2. Cheap butter: 1859, H., 1st ed. 3. See SCRAPE, BREAD AND. 4. ... Ex S.E. scrape, a thin layer. 2.",
-                    "visible_link": "https://books.google.de/books?isbn=0710077610",
+                    "link": "https://swedishicescraper.se/swed-ice/original-yellowgreen-5-mm-temp-isolate-neoprene-hold.html",
+                    "title": "Online - ORIGINAL YellowGreen 5 mm + Temp ... - Swedish Ice Scraperhttps://swedishicescraper.se/.../original-yellowgreen-5-mm-temp-isolate-neoprene-hol...Cached",
+                    "snippet": "A true all-round ice scraper with functional shape to ease clean scraping of your car glasses making traffic safer on cold, frosty ... info@swedishicescraper.se.",
+                    "visible_link": "https://swedishicescraper.se/.../original-yellowgreen-5-mm-temp-isolate-neoprene-hol...",
                     "date": "",
                     "rank": 8
                 },
                 {
-                    "link": "https://books.google.de/books?id=U3oTAAAAYAAJ&pg=RA17-PA6&lpg=RA17-PA6&dq=se-scraper&source=bl&ots=B4I9G7YzO9&sig=ACfU3U2fIrgc8ADJ4Ff3rzQxprZqe_UplA&hl=de&sa=X&ved=2ahUKEwis0uXO4uHiAhWDaFAKHeUIBGsQ6AEwCHoECAgQAQ",
-                    "title": "Latin Dictionary: Morell's Abridgmenthttps://books.google.de/books?id=U3oTAAAAYAAJDiese Seite übersetzen",
-                    "snippet": "To scrape, or make an aukward bow, Poplitem inepte, vel inconcinne, inflectêre. To scrape acquaintance, Se in alicujus familiaritatem insinuare. A srrape-penny ...",
-                    "visible_link": "https://books.google.de/books?id=U3oTAAAAYAAJ",
-                    "date": "",
+                    "link": "https://incolumitas.com/2018/12/24/discontinuation-googlescraper/",
+                    "title": "Discontinuation of ... - Coding, Learning and Business Ideashttps://incolumitas.com/2018/12/24/discontinuation-googlescraper/Cached",
+                    "snippet": "Dec 24, 2018 - Discontinuation of GoogleScraper in favor of https://www.npmjs.com/package/se-scraper.",
+                    "visible_link": "https://incolumitas.com/2018/12/24/discontinuation-googlescraper/",
+                    "date": "Dec 24, 2018 - ",
                     "rank": 9
                 },
                 {
-                    "link": "https://books.google.de/books?id=XP4ana3LqK4C&pg=RA1-PA696&lpg=RA1-PA696&dq=se-scraper&source=bl&ots=mfE7zI1I7u&sig=ACfU3U2T4aVHnyTNdsc3XVcWl2YiM7ZgXw&hl=de&sa=X&ved=2ahUKEwis0uXO4uHiAhWDaFAKHeUIBGsQ6AEwCXoECAcQAQ",
-                    "title": "Dictionnaire Anglais-français - Seite 696 - Google Books-Ergebnisseitehttps://books.google.de/books?isbn=087779166XDiese Seite übersetzen",
-                    "snippet": "2 : griffer (se dit d'un chat) scratch2 n I SCRAPE t eraflure / egratignure / grafignure / Can 2 SCRATCHING : grattement m scratchy I'sknci | i ] ad scratchier; -est c ...",
-                    "visible_link": "https://books.google.de/books?isbn=087779166X",
+                    "link": "https://www.amazon.com/398-BLADES-RAZOR-BLADE-SCRAPER/dp/B001RJ4P4A",
+                    "title": "398 SE BLADES (CARD OF 10) RAZOR BLADE SCRAPERhttps://www.amazon.com/398-BLADES-RAZOR-BLADE-SCRAPER/dp/B001RJ4P4A",
+                    "snippet": "Buy 398 S.E. BLADES (CARD OF 10) RAZOR BLADE SCRAPER: Cartridges & Refills - Amazon.com ✓ FREE DELIVERY possible on eligible purchases.",
+                    "visible_link": "https://www.amazon.com/398-BLADES-RAZOR-BLADE-SCRAPER/dp/B001RJ4P4A",
                     "date": "",
                     "rank": 10
+                },
+                {
+                    "link": "https://www.marthastewart.com/shop/se-se-7652bb-2-in-1-bbq-grill-brush-and-scraper-p4598342c9433378145619075d8c1bbac.html",
+                    "title": "Sweet Spring Deals on SE 7652BB 2-in-1 BBQ Grill Brush and Scraperhttps://www.marthastewart.com/.../se-se-7652bb-2-in-1-bbq-grill-brush-and-scraper-p...Cached",
+                    "snippet": "Make the most of your grill cleaning with the SE 7652BB 2-in-1 BBQ Grill Brush and Scraper. It features a 14\" long handle for extra leverage and brass bristles ...",
+                    "visible_link": "https://www.marthastewart.com/.../se-se-7652bb-2-in-1-bbq-grill-brush-and-scraper-p...",
+                    "date": "",
+                    "rank": 11
+                },
+                {
+                    "link": "https://www.entrancebymatting.se/en/produkt/scraper-grid-cc-33-11/",
+                    "title": "Scraper grid c/c 33 x 11 - Entrance by Mattinghttps://www.entrancebymatting.se/en/produkt/scraper-grid-cc-33-11/Cached",
+                    "snippet": "Scraper grid with mesh size c/c 33 x 11 mm. ... either with or without serrated cross-bars for maximum non-slip/extra scraper performance. ... SE 441 15 Alingsås.",
+                    "visible_link": "https://www.entrancebymatting.se/en/produkt/scraper-grid-cc-33-11/",
+                    "date": "",
+                    "rank": 12
+                },
+                {
+                    "link": "http://conjugator.reverso.net/conjugation-french-verb-scraper.html",
+                    "title": "Conjugation scraper | Conjugate verb scraper French | Reverso ...conjugator.reverso.net/conjugation-french-verb-scraper.html",
+                    "snippet": "French conjugation: scraper French verb in all tenses: future, participle, present, indicative, ... Other forms: se scraper/ne pas scraper/ne pas se scraper.",
+                    "visible_link": "conjugator.reverso.net/conjugation-french-verb-scraper.html",
+                    "date": "",
+                    "rank": 13
+                },
+                {
+                    "link": "https://www.npm.red/search?q=keywords:web-scraping",
+                    "title": "keywords:web-scraping - npm searchhttps://www.npm.red/search?q=keywords:web-scrapingCached",
+                    "snippet": "se-scraper ... A simple module using puppeteer to scrape several search engines such as ... A command line interface for the 'ineed' web scraping package ...",
+                    "visible_link": "https://www.npm.red/search?q=keywords:web-scraping",
+                    "date": "",
+                    "rank": 14
+                },
+                {
+                    "link": "https://jaunt-api.com/",
+                    "title": "Jaunt - Java Web Scraping & JSON Queryinghttps://jaunt-api.com/Cached",
+                    "snippet": "Jaunt is a Java library for web scraping and JSON querying that makes it easy to create web-bots, interface with web-apps, or access HTML, XML, or JSON.",
+                    "visible_link": "https://jaunt-api.com/",
+                    "date": "",
+                    "rank": 15
+                },
+                {
+                    "link": "https://netpeak.net/blog/netpeak-checker-3-0-serp-scraping-brief-overview/",
+                    "title": "Netpeak Checker 3.0: SERP Scraping. Brief Overview — Netpeak Bloghttps://netpeak.net › Blog › SEOCached",
+                    "snippet": "With a new tool under an 'SE Scraper' nickname functionality of Netpeak Checker 3.0 got much broader than before. It can help you get Google, Bing, Yahoo, ...",
+                    "visible_link": "https://netpeak.net › Blog › SEO",
+                    "date": "",
+                    "rank": 16
+                },
+                {
+                    "link": "https://ecatalog.corning.com/life-sciences/b2c/SE/en/Cell-Culture/Cell-Culture-Accessories/Cell-Scrapers/Falcon%C2%AE-Cell-Scrapers/p/353087",
+                    "title": "Falcon® Cell Scraper with 40 cm Handle and 3.0cm Blade, Sterile ...https://ecatalog.corning.com/life-sciences/b2c/SE/en/...Scrapers/...Scrapers/.../353087Cached",
+                    "snippet": "This Falcon® Cell Scraper is used with dishes and 150cm² and 175cm² flasks. Improved designs to both the 40cm handle and 3.0cm blade offer easier and ...",
+                    "visible_link": "https://ecatalog.corning.com/life-sciences/b2c/SE/en/...Scrapers/...Scrapers/.../353087",
+                    "date": "",
+                    "rank": 17
+                },
+                {
+                    "link": "https://hydriawater.se/products/sludge-scrapers/rotating-sludge-scraper/",
+                    "title": "Rotating sludge scraper | Hydria Waterhttps://hydriawater.se › ProductsCached",
+                    "snippet": "Our full-bridge and semi-bridge rotating sludge scrapers are of latticework type. ... angled scraper blades are fitted for bottom scraping to remove sludge from ... Hydria WaterBox 858, SE-501 15 Borås | Visiting address: Ödegärdsgatan 4 | Tel.",
+                    "visible_link": "https://hydriawater.se › Products",
+                    "date": "",
+                    "rank": 18
+                },
+                {
+                    "link": "https://books.google.com/books?id=XP4ana3LqK4C&pg=RA1-PA696&lpg=RA1-PA696&dq=se-scraper&source=bl&ots=mfE7GIYEby&sig=ACfU3U2OrEa5HyQCFrQvHo9sLUWoSq1cCA&hl=en&sa=X&ved=2ahUKEwjLl_eu_vXiAhUSPFAKHaoNBVsQ6AEwFnoECGEQAQ",
+                    "title": "Dictionnaire Anglais-français - Page 696 - Google Books Resulthttps://books.google.com/books?isbn=087779166X",
+                    "snippet": "2 : griffer (se dit d'un chat) scratch2 n I SCRAPE t eraflure / egratignure / grafignure / Can 2 SCRATCHING : grattement m scratchy I'sknci | i ] ad scratchier; -est c ...",
+                    "visible_link": "https://books.google.com/books?isbn=087779166X",
+                    "date": "",
+                    "rank": 19
+                },
+                {
+                    "link": "https://books.google.com/books?id=HJxNXRr1NigC&pg=PA4616&lpg=PA4616&dq=se-scraper&source=bl&ots=JULieGVZmB&sig=ACfU3U29Ci0pfIEU1sT35lkBHkz9RMjM3Q&hl=en&sa=X&ved=2ahUKEwjLl_eu_vXiAhUSPFAKHaoNBVsQ6AEwF3oECGIQAQ",
+                    "title": "The Routledge Dictionary of Historical Slanghttps://books.google.com/books?isbn=0710077610",
+                    "snippet": "scrape . A shave: jocular coll (–1859). cf. v. and SCRAPER. 2. Cheap butter: 1859, H., 1st ed. 3. See SCRAPE, BREAD AND. 4. ... Ex S.E. scrape, a thin layer. 2.",
+                    "visible_link": "https://books.google.com/books?isbn=0710077610",
+                    "date": "",
+                    "rank": 20
+                },
+                {
+                    "link": "http://network.ubotstudio.com/forum/index.php/topic/8648-sell-free-sescraper-scrape-search-engines-with-long-lists-of-queries/",
+                    "title": "[SELL] FREE - SEscraper - scrape search engines with long lists of ...network.ubotstudio.com › ... › General › Buy, Sell, Free › Sell › Bots and ScriptsCached",
+                    "snippet": "Dec 3, 2011 - SEscraper will scrape every available result for every query, combine ... SEscraper emulates human behavior with random wait times between ...",
+                    "visible_link": "network.ubotstudio.com › ... › General › Buy, Sell, Free › Sell › Bots and Scripts",
+                    "date": "Dec 3, 2011 - ",
+                    "rank": 21
+                },
+                {
+                    "link": "https://glosbe.com/sv/en/se%20scraper",
+                    "title": "Se scraper in English - Swedish-English Dictionary - Glosbehttps://glosbe.com › Dictionary Swedish › Swedish-English DictionaryCached",
+                    "snippet": "se scraper translation in Swedish-English dictionary.",
+                    "visible_link": "https://glosbe.com › Dictionary Swedish › Swedish-English Dictionary",
+                    "date": "",
+                    "rank": 22
+                },
+                {
+                    "link": "https://www.searchenginejournal.com/scrape-google-serp-custom-extractions/267211/",
+                    "title": "How to Scrape SERPs to Optimize for Search Intenthttps://www.searchenginejournal.com › SEOCached",
+                    "snippet": "Sep 5, 2018 - Having trouble gaining visibility for an important set of keywords? Here's how to use custom extractions to analyze SERP intent to diagnose ...",
+                    "visible_link": "https://www.searchenginejournal.com › SEO",
+                    "date": "Sep 5, 2018 - ",
+                    "rank": 23
+                },
+                {
+                    "link": "https://blog.apify.com/web-scraping-in-2018-forget-html-use-xhrs-metadata-or-javascript-variables-8167f252439c",
+                    "title": "Web scraping in 2018 — forget HTML, use XHRs, metadata or ...https://blog.apify.com/web-scraping-in-2018-forget-html-use-xhrs-metadata-or-javasc...Cached",
+                    "snippet": "Feb 8, 2018 - Web scraping in 2018 is not only about processing HTML. ... For example, on booli.se (a Swedish portal with real estate offers), you can get ...",
+                    "visible_link": "https://blog.apify.com/web-scraping-in-2018-forget-html-use-xhrs-metadata-or-javasc...",
+                    "date": "Feb 8, 2018 - ",
+                    "rank": 24
+                },
+                {
+                    "link": "https://meta.stackexchange.com/questions/200177/a-site-or-scraper-is-copying-content-from-stack-exchange-what-should-i-do",
+                    "title": "A site (or scraper) is copying content from Stack Exchange. What ...https://meta.stackexchange.com/.../a-site-or-scraper-is-copying-content-from-stack-ex...Cached",
+                    "snippet": "This can get pretty egregious; I've seen SCRAPERs that not only don't link back to SE originals, but also use fake author info and post dates to make it harder to ...",
+                    "visible_link": "https://meta.stackexchange.com/.../a-site-or-scraper-is-copying-content-from-stack-ex...",
+                    "date": "",
+                    "rank": 25
+                },
+                {
+                    "link": "https://www.kuzmin.se/pgs/faq_scr_en.html",
+                    "title": "Ski scraper - Kuzmin Ski Technology ABhttps://www.kuzmin.se/pgs/faq_scr_en.htmlCached",
+                    "snippet": "Ski Scraper. Question: I found some rust spots on my newly purchased Kuzmin scraper. May spots affect functionality of the scraper? Answer: No, it's just an ...",
+                    "visible_link": "https://www.kuzmin.se/pgs/faq_scr_en.html",
+                    "date": "",
+                    "rank": 26
+                },
+                {
+                    "link": "https://books.google.com/books?id=U3oTAAAAYAAJ&pg=RA17-PA6&lpg=RA17-PA6&dq=se-scraper&source=bl&ots=B4I9N7TvSd&sig=ACfU3U1U65X-2-9_V7KbNur3jUPhC03KRg&hl=en&sa=X&ved=2ahUKEwjLl_eu_vXiAhUSPFAKHaoNBVsQ6AEwI3oECF8QAQ",
+                    "title": "Latin Dictionary: Morell's Abridgment - Page 6 - Google Books Resulthttps://books.google.com/books?id=U3oTAAAAYAAJ",
+                    "snippet": "To scrape, or make an aukward bow, Poplitem inepte, vel inconcinne, inflectêre. To scrape acquaintance, Se in alicujus familiaritatem insinuare. A srrape-penny ...",
+                    "visible_link": "https://books.google.com/books?id=U3oTAAAAYAAJ",
+                    "date": "",
+                    "rank": 27
+                },
+                {
+                    "link": "https://www.irishantverk.se/en/articles/2.55.483/iris-hantverk-windscreen-scraper-and-brush",
+                    "title": "Iris Hantverk Windscreen Scraper and Brush - Iris Hantverkhttps://www.irishantverk.se/en/articles/2.../iris-hantverk-windscreen-scraper-and-brushCached",
+                    "snippet": "Brush and scrape for snow and ice. The h orsehair mixture in ... and Brush. Iris Hantverk Windscreen Scraper and Brush ... info@irishantverk.se. in the window.",
+                    "visible_link": "https://www.irishantverk.se/en/articles/2.../iris-hantverk-windscreen-scraper-and-brush",
+                    "date": "",
+                    "rank": 28
+                },
+                {
+                    "link": "https://www.games-workshop.com/en-US/Citadel-Mouldline-Remover",
+                    "title": "Citadel Mouldline Remover | Games Workshop Webstorehttps://www.games-workshop.com/en-US/Citadel-Mouldline-RemoverCached",
+                    "snippet": "This website uses cookies to personalise content and advertising, and to analyse our traffic. By continuing to use this site you are agreeing to our use of cookies.",
+                    "visible_link": "https://www.games-workshop.com/en-US/Citadel-Mouldline-Remover",
+                    "date": "",
+                    "rank": 29
+                },
+                {
+                    "link": "https://forum.kodi.tv/showthread.php?tid=55353",
+                    "title": "Help needed with development of new scraper for filmdelta.se ...https://forum.kodi.tv/showthread.php?tid=55353",
+                    "snippet": "I'm trying to do a scraper for the site filmdelta.se, which is the biggest movie database with swedish movie information. These are my concrete ...",
+                    "visible_link": "https://forum.kodi.tv/showthread.php?tid=55353",
+                    "date": "",
+                    "rank": 30
+                },
+                {
+                    "link": "https://en.a-parser.com/wiki/se-duckduckgo-images/",
+                    "title": "SE::DuckDuckGo::Images - images scraper | A-Parser - scraper for ...https://en.a-parser.com › Wiki › Documentation › ParsersCached",
+                    "snippet": "Nov 7, 2018 - A-Parser - scraper of search engines, WordStat, Whois, PR, YouTube, Alexa, Ahrefs, MajesticSEO, etc.",
+                    "visible_link": "https://en.a-parser.com › Wiki › Documentation › Parsers",
+                    "date": "Nov 7, 2018 - ",
+                    "rank": 31
+                },
+                {
+                    "link": "http://www.agriexpo.online/prod/bratslav-alc/product-171267-27903.html",
+                    "title": "Chain manure scraper / V / V / automatic - SE series - Bratslav A.L.C.www.agriexpo.online › Waste management › Chain manure scraperCached",
+                    "snippet": "Find out all of the information about the Bratslav A.L.C. product: chain manure scraper / V / V / automatic SE series. Contact a supplier or the parent company ...",
+                    "visible_link": "www.agriexpo.online › Waste management › Chain manure scraper",
+                    "date": "",
+                    "rank": 32
+                },
+                {
+                    "link": "http://www.ipexna.com/media/6112/friatec-fwsg-se-scraping-tool-nps.pdf",
+                    "title": "friatec® scraping tools - Ipexwww.ipexna.com/media/6112/friatec-fwsg-se-scraping-tool-nps.pdfCachedSimilar",
+                    "snippet": "Friatec products, and these benefits have now been extended with FWSG-SE Scraping Tools. The FWSG-SE Series of scraping tools are designed to mount on ...",
+                    "visible_link": "www.ipexna.com/media/6112/friatec-fwsg-se-scraping-tool-nps.pdf",
+                    "date": "",
+                    "rank": 33
+                },
+                {
+                    "link": "http://www.scantra.se/en/product/isskrapa-2/",
+                    "title": "Ice scraper - Scantrawww.scantra.se/en/product/isskrapa-2/Cached",
+                    "snippet": "Ice scraper is a very affordable product and a fantastic advertisement carrier thanks to its generous printing area. Ice scrapers are often seen as savior and can be used over and over again. Make sure that your ... E-mail: info@scantra.se ​",
+                    "visible_link": "www.scantra.se/en/product/isskrapa-2/",
+                    "date": "",
+                    "rank": 34
+                },
+                {
+                    "link": "https://pypi.org/project/vantetider-scraper/",
+                    "title": "vantetider-scraper · PyPIhttps://pypi.org/project/vantetider-scraper/Cached",
+                    "snippet": "A scraper of statistical data from Vantetider.se built on top of Statscraper.",
+                    "visible_link": "https://pypi.org/project/vantetider-scraper/",
+                    "date": "",
+                    "rank": 35
+                },
+                {
+                    "link": "https://www.facebook.com/SEBIKES/photos/whatchou-know-about-them-crazy-scraper-bikes-oakland-definitely-does-it-their-ow/10160746271755473/",
+                    "title": "SE Bikes - Whatchou know about them crazy scraper bikes ... - Facebookhttps://www.facebook.com/SEBIKES/photos/...scraper.../10160746271755473/Cached",
+                    "snippet": "Whatchou know about them crazy scraper bikes!?   Oakland definitely does it their own way.   Wild views from the #oaklandrideout2.",
+                    "visible_link": "https://www.facebook.com/SEBIKES/photos/...scraper.../10160746271755473/",
+                    "date": "",
+                    "rank": 36
+                },
+                {
+                    "link": "http://www.bigtoolstore.com/0-106044/Scrapers/D-LYNX-2PC-CONCAVE-SCRAPER-SE.aspx",
+                    "title": "D-LYNX 2PC CONCAVE SCRAPER SE - Big Tool Storewww.bigtoolstore.com/0.../Scrapers/D-LYNX-2PC-CONCAVE-SCRAPER-SE.aspx",
+                    "snippet": "Title : D-LYNX 2PC CONCAVE SCRAPER SE. Department : Knives & Scrapers. Category : Scrapers. Brand : BORA. SKU : 410062. BTS sku : HTC410062.",
+                    "visible_link": "www.bigtoolstore.com/0.../Scrapers/D-LYNX-2PC-CONCAVE-SCRAPER-SE.aspx",
+                    "date": "",
+                    "rank": 37
+                },
+                {
+                    "link": "http://www.stuntdubl.com/2005/12/11/scraper-sites/",
+                    "title": "Scraper Sites and SE Ambiguity: What is Your Site's Reading Level?www.stuntdubl.com/2005/12/11/scraper-sites/CachedSimilar",
+                    "snippet": "Dec 11, 2005 - They “scrape” the title and descriptions for the search top 10,20, ... duplicate content, as it's one of the biggest problems SE's currently face.",
+                    "visible_link": "www.stuntdubl.com/2005/12/11/scraper-sites/",
+                    "date": "Dec 11, 2005 - ",
+                    "rank": 38
+                },
+                {
+                    "link": "https://leconjugueur.lefigaro.fr/french/verb/scraper_pronominal.html",
+                    "title": "se scraper - Conjugation of verb se scraper pronominal - Le conjugueurhttps://leconjugueur.lefigaro.fr/french/.../scraper_pronominal.htmlCachedTranslate this page",
+                    "snippet": "French verb conjugation for se scraper and synonym for verb se scraper. Conjugate verb se scraper at all tenses. Conjugation au masculin à la voix active avec ...",
+                    "visible_link": "https://leconjugueur.lefigaro.fr/french/.../scraper_pronominal.html",
+                    "date": "",
+                    "rank": 39
+                },
+                {
+                    "link": "https://www.g2.com/products/netpeak-checker/reviews",
+                    "title": "Netpeak Checker Reviews 2019 | G2 - G2 Crowdhttps://www.g2.com › ... › Search Marketing Software › SEO SoftwareCached",
+                    "snippet": "An opportunity to find relevant platforms or blogs by SE Scraper (all you need is to write or download keywords and see the results). Also, I usually use search ...",
+                    "visible_link": "https://www.g2.com › ... › Search Marketing Software › SEO Software",
+                    "date": "",
+                    "rank": 40
+                },
+                {
+                    "link": "http://www.ritmoamerica.com/se/pipe.html",
+                    "title": "Pipe Scraper & Pipe Fusion machine - Ritmo America LLC - Fusion ...www.ritmoamerica.com/se/pipe.htmlCachedSimilar",
+                    "snippet": "Ritmo America manufactures Pipe Scraper and Pipe Fusion machine for plastic welding industries and pipe fusion.",
+                    "visible_link": "www.ritmoamerica.com/se/pipe.html",
+                    "date": "",
+                    "rank": 41
+                },
+                {
+                    "link": "https://basecooking.se/product/scraper-combo-1-pan-1-grill-pan/",
+                    "title": "SCRAPER COMBO, 1 PAN & 1 GRILL PAN | Base Cookinghttps://basecooking.se › Lodge Cast Iron › SCRAPER COMBO, 1 PAN & 1 GRILL PAN",
+                    "snippet": "The grill pan scraper has two sets of “teeth” designed to fit any modern Lodge Grill ... This Lodge pan scraper set can make cleanup much easier with its ... Mjöhultsvägen 218,; 254 76 Allerum, Sweden; +46705590022; info@basecooking.se ...",
+                    "visible_link": "https://basecooking.se › Lodge Cast Iron › SCRAPER COMBO, 1 PAN & 1 GRILL PAN",
+                    "date": "",
+                    "rank": 42
+                },
+                {
+                    "link": "http://skafa.se/Tajima-SCRL300-Rite-Heavy-Duty-ReversibleBlade-Scraper-with-12Inch-Handle-Tools-&-Home-Improvement-s439427/",
+                    "title": "Tajima SCR-L300 Rite Heavy Duty Reversible-Blade Scraper with 12 ...skafa.se/Tajima-SCRL300-Rite-Heavy-Duty-ReversibleBlade-Scraper-with-12Inch-Ha...Cached",
+                    "snippet": "Tajima SCR-L300 Rite Heavy Duty Reversible-Blade Scraper with 12-Inch Handle Tajima SCR-L300 Rite Heavy Duty ... 0418-155 00 info@skafa.se · Facebook ...",
+                    "visible_link": "skafa.se/Tajima-SCRL300-Rite-Heavy-Duty-ReversibleBlade-Scraper-with-12Inch-Ha...",
+                    "date": "",
+                    "rank": 43
+                },
+                {
+                    "link": "https://growthhackers.com/articles/netpeak-checker-3-0-more-comprehensive-seo-analysis-with-serp-scraping",
+                    "title": "Netpeak Checker 3.0: More Comprehensive SEO Analysis with SERPhttps://growthhackers.com/.../netpeak-checker-3-0-more-comprehensive-seo-analysis-...Cached",
+                    "snippet": "Sep 19, 2018 - 'SE Scraper' tool -'Search Engines' settings (Google, Bing, Yahoo, Yandex) -'Proxy Anti-Ban' algorithm -Custom filter and parameter templates",
+                    "visible_link": "https://growthhackers.com/.../netpeak-checker-3-0-more-comprehensive-seo-analysis-...",
+                    "date": "Sep 19, 2018 - ",
+                    "rank": 44
+                },
+                {
+                    "link": "https://www.hexis-graphics.com/sv/produit/carscraper/",
+                    "title": "CARSCRAPER - Scraper and polycarbonate blades for car body ...https://www.hexis-graphics.com/sv/produit/carscraper/Cached",
+                    "snippet": "Scraper and polycarbonate blades for car body. Set including a scraper and 25 blades. Technical data sheet · CONTACT. CARSCRAPER - Scraper and ...",
+                    "visible_link": "https://www.hexis-graphics.com/sv/produit/carscraper/",
+                    "date": "",
+                    "rank": 45
+                },
+                {
+                    "link": "https://waterlinedesign.se/shop/scrubbis-hull-scraper-set/",
+                    "title": "With Scrubbis Hull Scraper Set it's easy to have a clean hull to gain ...https://waterlinedesign.se › ProductsCached",
+                    "snippet": "The scrapers are made of rubber and when you pull the handle back and forth the the narrow strips scrape with 2 kg pressure on your boat hull, which removes ...",
+                    "visible_link": "https://waterlinedesign.se › Products",
+                    "date": "",
+                    "rank": 46
+                },
+                {
+                    "link": "https://vote.seocontentmachine.com/responses/option-to-deselect-se-scraper-in-article-creator",
+                    "title": "Option to deselect SE scraper in Article Creator | SEO Content ...https://vote.seocontentmachine.com/.../option-to-deselect-se-scraper-in-article-creatorCached",
+                    "snippet": "Sometimes, when I know that the article sources have good content about a keyword, I do not really want the Article Creator to scrape Google Blog Search as, ...",
+                    "visible_link": "https://vote.seocontentmachine.com/.../option-to-deselect-se-scraper-in-article-creator",
+                    "date": "",
+                    "rank": 47
+                },
+                {
+                    "link": "https://www.blackhatworld.com/seo/guest-posting-automation-free-method.1085733/",
+                    "title": "Guest Posting Automation [Free Method] | BlackHatWorldhttps://www.blackhatworld.com › Forums › White Hat SEO › White Hat SEOCached",
+                    "snippet": "Jan 14, 2019 - Start the program and go to the SE scraper tool. Enter a list of queries you will scrape. Use common guest posting footprints and add your ...",
+                    "visible_link": "https://www.blackhatworld.com › Forums › White Hat SEO › White Hat SEO",
+                    "date": "Jan 14, 2019 - ",
+                    "rank": 48
+                },
+                {
+                    "link": "https://www.siteground.es/kb/scraping-datos/",
+                    "title": "¿Qué es el scraping de datos y cómo puedo detenerlo? - SiteGroundhttps://www.siteground.es/kb/scraping-datos/CachedTranslate this page",
+                    "snippet": "El scraping de datos (también llamado web scraping) es el proceso de extraer información de sitios web. El scraping de datos se enfoca en transformar el co.",
+                    "visible_link": "https://www.siteground.es/kb/scraping-datos/",
+                    "date": "",
+                    "rank": 49
+                },
+                {
+                    "link": "https://www.grillparts.com/grill-gift-guide.asp?product_id=GGWB5",
+                    "title": "Accessories & Gifts by Weber Grill Parts: Wooden Scraper Cleaning ...https://www.grillparts.com/grill-gift-guide.asp?product_id=GGWB5Cached",
+                    "snippet": "Accessories & Gifts by Weber BBQ parts: Wooden Scraper Cleaning Tool For MHP \"SearMagic\" Cooking Grids. ... Wooden Scraper Cleaning Tool For MHP \"Se.",
+                    "visible_link": "https://www.grillparts.com/grill-gift-guide.asp?product_id=GGWB5",
+                    "date": "",
+                    "rank": 50
+                },
+                {
+                    "link": "https://www.reddit.com/r/webscraping/comments/al7mbr/web_scraping_into_excel/",
+                    "title": "Web Scraping into Excel : webscrapinghttps://www.reddit.com/r/webscraping/comments/al7mbr/web_scraping_into_excel/Cached",
+                    "snippet": "Worked like a charm, but a shame I didn't get to get a web scraping ... https://github.com/NikolaiT/se-scraper/blob/master/src/modules/google.js.",
+                    "visible_link": "https://www.reddit.com/r/webscraping/comments/al7mbr/web_scraping_into_excel/",
+                    "date": "",
+                    "rank": 51
+                },
+                {
+                    "link": "https://classic.scraperwiki.com/scrapers/freecycle_se/index.html",
+                    "title": "Rob Harlow / Freecycle se | ScraperWikihttps://classic.scraperwiki.com/scrapers/freecycle_se/index.html",
+                    "snippet": "This scraper is protected. Anyone can see this scraper, but only its 1 selected editor can edit it. Users who can edit this scraper: Rob Harlow macros ...",
+                    "visible_link": "https://classic.scraperwiki.com/scrapers/freecycle_se/index.html",
+                    "date": "",
+                    "rank": 52
+                },
+                {
+                    "link": "https://www.wallmek.se/en/produkt/light-commercial-vehicle/bearing-axle-shaft-hub-commercial/1012-scraper-for-brake-disc/",
+                    "title": "1012 Scraper for brake disc - Wallmekhttps://www.wallmek.se/en/produkt/light...vehicle/.../1012-scraper-for-brake-disc/Cached",
+                    "snippet": "1012. 1012 Scraper for brake disc. Scraper for cleaning the outer edge of brake discs and the position of the brake pads from rust. It's also possible to use crank ...",
+                    "visible_link": "https://www.wallmek.se/en/produkt/light...vehicle/.../1012-scraper-for-brake-disc/",
+                    "date": "",
+                    "rank": 53
+                },
+                {
+                    "link": "https://www.burton.com/se/en/p/burton-large-scraper-stomp-pad/W19-108111.html",
+                    "title": "Burton Large Scraper Stomp Pad | Burton.com Winter 2019https://www.burton.com › ... › Tools & Accessories › Burton Large Scraper Stomp PadCached",
+                    "snippet": "Shop the Burton Large Scraper Stomp Pad along with more snowboard tools and accessories from Winter 2019.",
+                    "visible_link": "https://www.burton.com › ... › Tools & Accessories › Burton Large Scraper Stomp Pad",
+                    "date": "",
+                    "rank": 54
+                },
+                {
+                    "link": "https://rdebutik.se/products/se/239/7955/sort/1/filter/0_0_0_0/Scraper-blades-medel.html",
+                    "title": "Scraper blades medel - rdebutik.sehttps://rdebutik.se › Stora hushållsapparater › RengöringsmedelCachedTranslate this page",
+                    "snippet": "Buy headphones medel Electrolux Scraper blades at great price in the online store RDEBUTIK.SE. Medel Electrolux Scraper blades – characteristics, photo, ...",
+                    "visible_link": "https://rdebutik.se › Stora hushållsapparater › Rengöringsmedel",
+                    "date": "",
+                    "rank": 55
+                },
+                {
+                    "link": "https://www.rmiorder.com/product/SE/SCRAPER/Utility-Scraper",
+                    "title": "Utility Scraper - Ratermann Manufacturing Inchttps://www.rmiorder.com/product/SE/SCRAPER/Utility-Scraper",
+                    "snippet": "Utility Scraper. ... Replacement Products. Replacement Blades for Utility Scraper (Packs of 100) · SCRAPER-RB100 · Replacement Blades for Utility Scraper ...",
+                    "visible_link": "https://www.rmiorder.com/product/SE/SCRAPER/Utility-Scraper",
+                    "date": "",
+                    "rank": 56
+                },
+                {
+                    "link": "https://www.ebay.com/itm/Modeling-Part-Scraper-Tools-Seam-Scraper-Line-Scrapers-DIY-Tools-/173760213801",
+                    "title": "Modeling Part Scraper Tools Seam Scraper Line Scrapers DIY Tools ...https://www.ebay.com › Toys & Hobbies › Models & Kits › Tools, Supplies & EnginesCached",
+                    "snippet": "Modeling Part Scraper DIY Tools. ... Modeling Part Scraper Tools Seam Scraper Line Scraper for Gundam DIY Tool #1 · Modeling Part Scraper Tools Se… $5.00.",
+                    "visible_link": "https://www.ebay.com › Toys & Hobbies › Models & Kits › Tools, Supplies & Engines",
+                    "date": "",
+                    "rank": 57
+                },
+                {
+                    "link": "https://medium.com/coriers/web-scraping-with-google-sheets-20d0dce323cc",
+                    "title": "Web Scraping With Google Sheets – Coriers – Mediumhttps://medium.com/coriers/web-scraping-with-google-sheets-20d0dce323ccCached",
+                    "snippet": "May 16, 2018 - Web scraping and utilizing various APIs are great ways to collect data from ... the open source software: https://github.com/NikolaiT/se-scraper.",
+                    "visible_link": "https://medium.com/coriers/web-scraping-with-google-sheets-20d0dce323cc",
+                    "date": "May 16, 2018 - ",
+                    "rank": 58
+                },
+                {
+                    "link": "https://www.fishbase.se/Summary/SpeciesSummary.php?id=62754",
+                    "title": "Capoeta ekmekciae, Grusinian scraper - FishBasehttps://www.fishbase.se/Summary/SpeciesSummary.php?id=62754Cached",
+                    "snippet": "Image of Capoeta ekmekciae (Grusinian scraper). Capoeta ekmekciae .... 69278): 2.5 ±0.2 se; Based on size and trophs of closest relatives. Resilience (Ref.",
+                    "visible_link": "https://www.fishbase.se/Summary/SpeciesSummary.php?id=62754",
+                    "date": "",
+                    "rank": 59
+                },
+                {
+                    "link": "https://anderssonwater.se/product/plastic-chain-scraper-kkr",
+                    "title": "Plastic Chain Scraper KKR | Andersson Waterhttps://anderssonwater.se/product/plastic-chain-scraper-kkrCached",
+                    "snippet": "info@anderssonwater.se. en ... KKR is the worlds strongest plastic chain and flight scraper! ... 14m wide chain scrapers is widest and strongest on the market.",
+                    "visible_link": "https://anderssonwater.se/product/plastic-chain-scraper-kkr",
+                    "date": "",
+                    "rank": 60
+                },
+                {
+                    "link": "https://www.malmberg.se/en-us/What-we-do/Water-treatment/Rebuilds-Improvements/Malmberg-round-sludge-scraper",
+                    "title": "Stainless steel round sludge scraper - Malmberg.sehttps://www.malmberg.se/en-us/What-we-do/.../Malmberg-round-sludge-scraperCached",
+                    "snippet": "The Malmberg circular sludge scraper has a combined unique logaritmic/lamella bottom scraping device for optimized sludge transport. It has also a simple but ...",
+                    "visible_link": "https://www.malmberg.se/en-us/What-we-do/.../Malmberg-round-sludge-scraper",
+                    "date": "",
+                    "rank": 61
+                },
+                {
+                    "link": "http://pnd-zavod-kuban.ru/products/pe-fittings-systems/fusion-tools-and-accessories/index.html",
+                    "title": "Fusion Tools and Accessories - КубаньРемСтройpnd-zavod-kuban.ru/products/pe-fittings-systems/fusion-tools-and.../index.htmlCached",
+                    "snippet": "FWSG RA – Compact Scraper Tool for pipes and outlets d25 – d63 ... FWSG SE – Scraper Tool for pipe ends and saddle areas d 63 – d 315 ...",
+                    "visible_link": "pnd-zavod-kuban.ru/products/pe-fittings-systems/fusion-tools-and.../index.html",
+                    "date": "",
+                    "rank": 62
+                },
+                {
+                    "link": "https://hackernoon.com/building-a-web-scraper-from-start-to-finish-bb6b95388184",
+                    "title": "Building a Web Scraper from start to finish – Hacker Noonhttps://hackernoon.com/building-a-web-scraper-from-start-to-finish-bb6b95388184Cached",
+                    "snippet": "Dec 7, 2018 - A Web Scraper is a program that quite literally scrapes or gathers data off of websites. Take the below hypothetical example, where we might ...",
+                    "visible_link": "https://hackernoon.com/building-a-web-scraper-from-start-to-finish-bb6b95388184",
+                    "date": "Dec 7, 2018 - ",
+                    "rank": 63
+                },
+                {
+                    "link": "https://www.knifestore.se/en/special-products/ka-bar-lake-effect-ice-scraper/",
+                    "title": "Ka-Bar Lake Effect Ice Scraper - Knifestore.sehttps://www.knifestore.se › Start › Special productsCached",
+                    "snippet": "Ultramid® ice scraper makes short work of cleaning ice off your windshield and can be used alternately as a self-defense tool. Blade width: 24mm Made in the ...",
+                    "visible_link": "https://www.knifestore.se › Start › Special products",
+                    "date": "",
+                    "rank": 64
+                },
+                {
+                    "link": "https://www.mchenryse.com/services/90006/snowthrower-paddlescraper-service",
+                    "title": "Snowthrower Paddle/Scraper Service McHenry Small Engine ...https://www.mchenryse.com › ServicesCached",
+                    "snippet": "Services McHenry Small Engine Frederick, MD (301) 695-1400.",
+                    "visible_link": "https://www.mchenryse.com › Services",
+                    "date": "",
+                    "rank": 65
+                },
+                {
+                    "link": "https://www.friatec.de/content/friatec/en/Technical-Plastics/FRIATOOLS-Technical-Equipment/Downloads/index.html",
+                    "title": "Downloads - Friatechttps://www.friatec.de/content/friatec/en/Technical-Plastics/...Technical.../index.htmlCached",
+                    "snippet": "Compact Scraper Tool for pipe ends and outlets FWSG RA · Scraper Tool for pipe ends and saddle surfaces (FWSG SE). Brochures Mechanical Tools.",
+                    "visible_link": "https://www.friatec.de/content/friatec/en/Technical-Plastics/...Technical.../index.html",
+                    "date": "",
+                    "rank": 66
+                },
+                {
+                    "link": "https://dzone.com/articles/website-scraping-using-selenium-docker-and-chrome",
+                    "title": "Website Scraping Using Selenium, Docker, and Chrome With ... - DZonehttps://dzone.com/articles/website-scraping-using-selenium-docker-and-chromeCachedSimilar",
+                    "snippet": "If all we had to scrape were static websites, this wouldn't be that difficult. However ... Alibaba Dragonwell is compatible with the Java SE standard. Currently ...",
+                    "visible_link": "https://dzone.com/articles/website-scraping-using-selenium-docker-and-chrome",
+                    "date": "",
+                    "rank": 67
+                },
+                {
+                    "link": "https://www.urbandictionary.com/define.php?term=scraper&page=2",
+                    "title": "scraper - Urban Dictionaryhttps://www.urbandictionary.com/define.php?term=scraper&page=2Cached",
+                    "snippet": "gas break dip... then scrape box chev sittin on sumthin nice, and dem buicks \"SL nuttin it's a scraper mayne\" old school car dats dipped to da fullest.",
+                    "visible_link": "https://www.urbandictionary.com/define.php?term=scraper&page=2",
+                    "date": "",
+                    "rank": 68
+                },
+                {
+                    "link": "http://fileadmin.cs.lth.se/cs/Education/EDAN50/LocalEvents_ARA_KHS.pdf",
+                    "title": "Automatic extraction of local events from web sitesfileadmin.cs.lth.se/cs/Education/EDAN50/LocalEvents_ARA_KHS.pdfCached",
+                    "snippet": "3G. 223 63 Lund\". Scraper Scraper Scraper. 55.7,13.2 ... Dump scraper data b. Write a java program to ... Learned some Python! ○ New visitlund.se scraper ...",
+                    "visible_link": "fileadmin.cs.lth.se/cs/Education/EDAN50/LocalEvents_ARA_KHS.pdf",
+                    "date": "",
+                    "rank": 69
+                },
+                {
+                    "link": "http://vateknik.se/PDF/Kattingskrapa_eng.pdf",
+                    "title": "Vertical Chain Scrapervateknik.se/PDF/Kattingskrapa_eng.pdfCached",
+                    "snippet": "VA Teknik • Box 858, 501 15 Borås, Sweden. Tel: +46 33 - 23 67 00 • Fax: +46 33 - 23 67 90 www.vateknik.se • info@vateknik.se. Vertical Chain Scraper. Usage.",
+                    "visible_link": "vateknik.se/PDF/Kattingskrapa_eng.pdf",
+                    "date": "",
+                    "rank": 70
+                },
+                {
+                    "link": "https://rffashiongifts.manufacturer.globalsources.com/si/6008839244053/pdtl/Ear-scraper/1056320198/Ear-Scrapers.htm",
+                    "title": "Ear Scrapers , made of stainless steel se, Small Orders are Welcomehttps://rffashiongifts.manufacturer.globalsources.com/si/...scraper/.../Ear-Scrapers.htmCached",
+                    "snippet": "Ear Scrapers RWS-ESS-0503 from China (mainland) • Min. Order: 6000 Pieces • supplied by Richforth Gift & Fashion Accessories Company on Global Sources.",
+                    "visible_link": "https://rffashiongifts.manufacturer.globalsources.com/si/...scraper/.../Ear-Scrapers.htm",
+                    "date": "",
+                    "rank": 71
+                },
+                {
+                    "link": "https://www.themoviedb.org/talk/5af2c1c40e0a26688e008f57/en",
+                    "title": "scraper Tbdb dans KODI sur Raspberry : impossible de se connecter ...https://www.themoviedb.org/talk/5af2c1c40e0a26688e008f57/enCached",
+                    "snippet": "May 9, 2018 - Mais depuis hier, impossible de scraper aucun film : le scraper ne fonctionne plus et affiche à chaque fois l'erreur suivante \"impossible de se ...",
+                    "visible_link": "https://www.themoviedb.org/talk/5af2c1c40e0a26688e008f57/en",
+                    "date": "May 9, 2018 - ",
+                    "rank": 72
+                },
+                {
+                    "link": "http://www.rcprocess.se/bdh_filearea/Ferrum/Ferrum-Vertical-centrifuges-en.pdf",
+                    "title": "Vertical scraper and top discharge centrifuges for chemical, fine ...www.rcprocess.se/bdh_filearea/Ferrum/Ferrum-Vertical-centrifuges-en.pdfCached",
+                    "snippet": "scraper centrifuges, Ferrum is a world-leading centrifuge manufacturer. ... Vertical and horizontal scraper centrifuges in our assembly hall. VBC 1600, pressure ...",
+                    "visible_link": "www.rcprocess.se/bdh_filearea/Ferrum/Ferrum-Vertical-centrifuges-en.pdf",
+                    "date": "",
+                    "rank": 73
+                },
+                {
+                    "link": "https://www.mbmtdubai.com/blank-5?lightbox=dataItem-iopvsnfi",
+                    "title": "Trowels & Scrapers - marakesh-bmthttps://www.mbmtdubai.com/blank-5?lightbox=dataItem-iopvsnfiCached",
+                    "snippet": "Marakesh BMT Dubai, Wholesale trade in hardware, hand tools, locks, safety products.",
+                    "visible_link": "https://www.mbmtdubai.com/blank-5?lightbox=dataItem-iopvsnfi",
+                    "date": "",
+                    "rank": 74
+                },
+                {
+                    "link": "https://bss.bostwick-braun.com/productdetail/727946",
+                    "title": "65-0004 SCRAPER .009 SE RD BK | Products | The Bostwick-Braun ...https://bss.bostwick-braun.com/productdetail/727946Cached",
+                    "snippet": "65-0004 SCRAPER .009 SE RD BK. American Line ergonomic metal window scraper with comfort grip. Full molded boot with texture for sure grip. Retractable ...",
+                    "visible_link": "https://bss.bostwick-braun.com/productdetail/727946",
+                    "date": "",
+                    "rank": 75
+                },
+                {
+                    "link": "http://www.pgaccessories.gr/b0f/nws.php?cs=d25sZT01JmpmY21ja2U9MTc2JmNzMTIwPXdpbmRvd3MtcGFzdGViaW4tc2NyYXBlcg==",
+                    "title": "Windows pastebin scraper - Pgaccessories.grwww.pgaccessories.gr/b0f/nws.php?cs...Cached",
+                    "snippet": "The scraper can be set to a paste limit of 0 to scrape indefinitely. txt) I'm too lazy .... Window scraper, Side window. se scraper audio Add current translations for ...",
+                    "visible_link": "www.pgaccessories.gr/b0f/nws.php?cs...",
+                    "date": "",
+                    "rank": 76
+                },
+                {
+                    "link": "https://books.google.com/books?id=1FD_7I2VP28C&pg=PA263&lpg=PA263&dq=se-scraper&source=bl&ots=BYIEsFHOgS&sig=ACfU3U0FR2NA3Dzk2IL-inyaL7iYT-SMbA&hl=en&sa=X&ved=2ahUKEwjLl_eu_vXiAhUSPFAKHaoNBVsQ6AEwVXoECF4QAQ",
+                    "title": "Archeologie in Vlaanderen: Monografiehttps://books.google.com/books?id=1FD_7I2VP28C",
+                    "snippet": "This piece was found on the northern extremity of the primary scraper area, but ... One scraper was isolated to the SE of the concentration and is treated below, ...",
+                    "visible_link": "https://books.google.com/books?id=1FD_7I2VP28C",
+                    "date": "",
+                    "rank": 77
+                },
+                {
+                    "link": "https://indylostpetalert.com/2019/05/20/lost-dog-alert-se-indianapolis-scraper-is-missing-near-arlington-rd-and-thompson-road-in-arlington-acres-in-franklin-township/",
+                    "title": "SCRAPER IS HOME! | IndyLostPetAlerthttps://indylostpetalert.com › HomeCached",
+                    "snippet": "Home » Home » SCRAPER IS HOME! SCRAPER IS HOME! Posted on May 20, 2019 in Home // 0 Comments. Share this: Click to share on Twitter (Opens in ...",
+                    "visible_link": "https://indylostpetalert.com › Home",
+                    "date": "",
+                    "rank": 78
+                },
+                {
+                    "link": "https://dictionary.cambridge.org/es/pronunciaci%C3%B3n/ingles/scraper",
+                    "title": "¿Cómo se pronuncia SCRAPER en inglés? - Cambridge Dictionaryhttps://dictionary.cambridge.org/es/pronunciación/ingles/scraperCachedTranslate this page",
+                    "snippet": "Cómo pronunciar scraper. Cómo decir scraper. Escuche la pronunciación en el Diccionario Cambridge inglés. Aprender más.",
+                    "visible_link": "https://dictionary.cambridge.org/es/pronunciación/ingles/scraper",
+                    "date": "",
+                    "rank": 79
+                },
+                {
+                    "link": "https://www.ayurvedabutiken.se/en/hygien-skonhet/oral-care/article-25927915",
+                    "title": "Tongue Scraper - AyurvedaButikenhttps://www.ayurvedabutiken.se › Bodycare › Oral CareCached",
+                    "snippet": "Tongue scraper to cleanse your tongue and mouth. ... Stockholm; kundservice@ayurvedabutiken.se; Secure payments - SSL. *. English / SEK / VAT incl.",
+                    "visible_link": "https://www.ayurvedabutiken.se › Bodycare › Oral Care",
+                    "date": "",
+                    "rank": 80
+                },
+                {
+                    "link": "https://biredskapsfabriken.se/en/artikel.php?kid=4-91&mall=lista.php&id=790",
+                    "title": "Foam scraper | biredskapsfabriken.sehttps://biredskapsfabriken.se/en/artikel.php?kid=4-91&mall=lista.php&id=790",
+                    "snippet": "Hos biredskapsfabriken.se finns Foam scraper. ... Scrapers, spoons. Foam scraper. Item no: 219-02. Price: 145.00:- Shopping basket ...",
+                    "visible_link": "https://biredskapsfabriken.se/en/artikel.php?kid=4-91&mall=lista.php&id=790",
+                    "date": "",
+                    "rank": 81
+                },
+                {
+                    "link": "https://www.biltema.se/en-se/car---mc/car-accessories/winter-products/ice-scrapers/ice-scraper-2000016601",
+                    "title": "Ice Scraper - Biltema.sehttps://www.biltema.se/en-se/car---mc/car.../ice-scrapers/ice-scraper-2000016601Cached",
+                    "snippet": "Plastic. Dimensions: 100 x 120 mm.",
+                    "visible_link": "https://www.biltema.se/en-se/car---mc/car.../ice-scrapers/ice-scraper-2000016601",
+                    "date": "",
+                    "rank": 82
+                },
+                {
+                    "link": "https://www.chegg.com/homework-help/questions-and-answers/single-engine-two-axle-tractor-scraper-hauls-rated-payload-34020-kg-cut-fill-shown-dimensi-q1834413",
+                    "title": "The Single Engine Two-axle Tractor Scraper Hauls I... | Chegg.comhttps://www.chegg.com/.../single-engine-two-axle-tractor-scraper-hauls-rated-payload...Cached",
+                    "snippet": "The single engine two-axle tractor scraper hauls its rated payload (34020 kg) from the cut to fill as shown in below dimensioned figure and returns empty over ...",
+                    "visible_link": "https://www.chegg.com/.../single-engine-two-axle-tractor-scraper-hauls-rated-payload...",
+                    "date": "",
+                    "rank": 83
+                },
+                {
+                    "link": "http://consaw.se/en/scraper-conveyor/",
+                    "title": "Scraper conveyor – Consaw ABconsaw.se/en/scraper-conveyor/Cached",
+                    "snippet": "Scraper conveyor. scraperconveyor. Scraper conveyor, fully covered, W=400 mm, mounted to a pylon with platform and face ladder. Back. 2016-06-02 ...",
+                    "visible_link": "consaw.se/en/scraper-conveyor/",
+                    "date": "",
+                    "rank": 84
+                },
+                {
+                    "link": "https://perishablepress.com/content-scrapers-suck-ass/",
+                    "title": "How to Deal with Content Scrapers | Perishable Presshttps://perishablepress.com/content-scrapers-suck-ass/CachedSimilar",
+                    "snippet": "Sep 24, 2010 - Although most scraping sites are pure and utter crap, the software ... and scraper sites, your site could indeed be at risk for SE penalization.",
+                    "visible_link": "https://perishablepress.com/content-scrapers-suck-ass/",
+                    "date": "Sep 24, 2010 - ",
+                    "rank": 85
+                },
+                {
+                    "link": "https://www.dynaline.com/item/17002/Multi-purpose-Razor-Scraper-Se/",
+                    "title": "Multi-purpose Razor Scraper Se Pro Tool Black Table - 17002https://www.dynaline.com/item/17002/Multi-purpose-Razor-Scraper-Se/Cached",
+                    "snippet": "Multi-purpose Razor Scraper Se Pro Tool Black Table.",
+                    "visible_link": "https://www.dynaline.com/item/17002/Multi-purpose-Razor-Scraper-Se/",
+                    "date": "",
+                    "rank": 86
+                },
+                {
+                    "link": "https://noxor.se/en/products/scraper-conveyors/",
+                    "title": "Scraper conveyors – Noxor ABhttps://noxor.se/en/products/scraper-conveyors/Cached",
+                    "snippet": "2-part water-cooled scrap conveyors for bottom ash handling. Wet scrapers for slag discharge and grate boilers. ... E-post: info@noxor.se. Sök. Search: NOXOR ...",
+                    "visible_link": "https://noxor.se/en/products/scraper-conveyors/",
+                    "date": "",
+                    "rank": 87
+                },
+                {
+                    "link": "https://www.baux.se/outside-scraper-slider/",
+                    "title": "Outside-Scraper-Slider – BAUXhttps://www.baux.se/outside-scraper-slider/",
+                    "snippet": "Jun 7, 2015 - Outside-Scraper-Slider ... BAUX AB; Östermalmsgatan 26A, 114 26, Stockholm, SWEDEN; +46 8 21 07 07; info@baux.se · www.baux.se.",
+                    "visible_link": "https://www.baux.se/outside-scraper-slider/",
+                    "date": "Jun 7, 2015 - ",
+                    "rank": 88
+                },
+                {
+                    "link": "https://www.ahlens.se/Skonhet/naglar/losnaglar-dekoration-15269/moyou-clear-stamp-scraper-89590587/",
+                    "title": "Clear Stamp & Scraper - Lösnaglar & dekoration - Köp online på ...https://www.ahlens.se/.../moyou-clear-stamp-scraper-89590587/CachedTranslate this page",
+                    "snippet": "Clear Stamp & Scraper - En perfekt nagelstämplingskudde för dig som vill kunna jobba på små ytor och kunna se var på nageln du placerar mönstret. OBS!",
+                    "visible_link": "https://www.ahlens.se/.../moyou-clear-stamp-scraper-89590587/",
+                    "date": "",
+                    "rank": 89
+                },
+                {
+                    "link": "http://www.vavkompaniet.se/brushes/outdoor/shoe-brush-lovisa.html",
+                    "title": "Windscreen Scraper and Brush - Vävkompanietwww.vavkompaniet.se › Iris hantverk › OutdoorCached",
+                    "snippet": "Brush and scrape for snow and ice. The horsehair mixture in the brush sweeps efficiently snow away without scratching the paint. Weight 186 g Length 55 cm ...",
+                    "visible_link": "www.vavkompaniet.se › Iris hantverk › Outdoor",
+                    "date": "",
+                    "rank": 90
+                },
+                {
+                    "link": "https://www.harryjohansson.se/en-GB/manure-scraper-system-37880638",
+                    "title": "Manure scraper system | Harry Johanssons Utgödslingarhttps://www.harryjohansson.se/en-GB/manure-scraper-system-37880638Cached",
+                    "snippet": "Harrymatic scrapers for cattle and pigs are the pioneer and market leader since its inception almost 60 years ago. Developed and refined to the smallest deta...",
+                    "visible_link": "https://www.harryjohansson.se/en-GB/manure-scraper-system-37880638",
+                    "date": "",
+                    "rank": 91
+                },
+                {
+                    "link": "http://www.structurise.com/",
+                    "title": "Screen OCR - Capture text from any program, screen scraper SDK ...www.structurise.com/CachedSimilar",
+                    "snippet": "Precise and robust screen OCR tools for the end user or software developer. Screen scraper library supports C++, C#, Java, JavaScript and more.",
+                    "visible_link": "www.structurise.com/",
+                    "date": "",
+                    "rank": 92
+                },
+                {
+                    "link": "http://www.globalindustrialsupplies.eu/rosta_catalogues/01_2016_Tensioner_Devices_EN.pdf",
+                    "title": "ROSTA Tensioner Deviceswww.globalindustrialsupplies.eu/rosta.../01_2016_Tensioner_Devices_EN.pdfCached",
+                    "snippet": "Compensates for wear on the scrapers. • Effectively ... to pressure cylinders ing ROSTA Tensioner Devices in Belt and Chain Drives. SE-G. SE-B. SE-FE. SE-I ...",
+                    "visible_link": "www.globalindustrialsupplies.eu/rosta.../01_2016_Tensioner_Devices_EN.pdf",
+                    "date": "",
+                    "rank": 93
+                },
+                {
+                    "link": "https://duranterentals.com/rent-ride-on-floor-scraper/",
+                    "title": "Rent Ride-on Floor Scrapers | Durante Rentals | NY, NJ, CThttps://duranterentals.com/rent-ride-on-floor-scraper/Cached",
+                    "snippet": "Rent a rent ride-on floor scraper in NY, NJ, CT from Durante Rentals. Fast eand ... We rent the fastest riding floor scrapers in the industry. ... Se Habla Español.",
+                    "visible_link": "https://duranterentals.com/rent-ride-on-floor-scraper/",
+                    "date": "",
+                    "rank": 94
+                },
+                {
+                    "link": "https://www.jstor.org/stable/25082918",
+                    "title": "Stridulatory Structures in Two Milkweed Borers (Coleoptera ... - Jstorhttps://www.jstor.org/stable/25082918",
+                    "snippet": "consists of a scraper on the mid-central area of a flattened, posterior collar of the pronotum and a finely ... ps?prosternum; se?scraper; si?scutellum.) This content ...",
+                    "visible_link": "https://www.jstor.org/stable/25082918",
+                    "date": "",
+                    "rank": 95
+                },
+                {
+                    "link": "https://www.peopleperhour.com/freelance-jobs/web-development/other/linkedin-crawler-scraper-simple-website-2427537",
+                    "title": "LinkedIn crawler / scraper + simple website - PeoplePerHour.comhttps://www.peopleperhour.com/.../linkedin-crawler-scraper-simple-website-2427537Cached",
+                    "snippet": "7 days ago - Web Development freelance job: LinkedIn crawler / scraper + simple website. Discover more freelance jobs online on PeoplePerHour!",
+                    "visible_link": "https://www.peopleperhour.com/.../linkedin-crawler-scraper-simple-website-2427537",
+                    "date": "7 days ago - ",
+                    "rank": 96
+                },
+                {
+                    "link": "https://www.bhg.com/shop/se-se-2-in-1-bbq-grill-brush-and-scraper-p4598342c9433378145619075d8c1bbac.html",
+                    "title": "Shopping Special: SE 2-in-1 BBQ Grill Brush and Scraperhttps://www.bhg.com/.../se-se-2-in-1-bbq-grill-brush-and-scraper-p4598342c943337...Cached",
+                    "snippet": "Make the most of your grill cleaning with the SE 2-in-1 BBQ Grill Brush and Scraper. It features a 14\" long handle for extra leverage and brass bristles that will not ...",
+                    "visible_link": "https://www.bhg.com/.../se-se-2-in-1-bbq-grill-brush-and-scraper-p4598342c943337...",
+                    "date": "",
+                    "rank": 97
+                },
+                {
+                    "link": "https://nettbutikker.nettavisen.no/p/Scraper%20Silicone%20Plate%20Soft%20Clean%20Spatula%20Practical%20Kitchen%20Tool",
+                    "title": "Se treff på Scraper Silicone Plate Soft Clean Spatula Practical Kitchen ...https://nettbutikker.nettavisen.no/.../Scraper%20Silicone%20Plate%20Soft%20Clean%...Cached",
+                    "snippet": "Her finner du en oversikt over populære produkter i kategorien Scraper Silicone Plate Soft Clean Spatula Practical Kitchen Tool fra Beautyblender, BERKLEY ...",
+                    "visible_link": "https://nettbutikker.nettavisen.no/.../Scraper%20Silicone%20Plate%20Soft%20Clean%...",
+                    "date": "",
+                    "rank": 98
                 }
             ]
         }

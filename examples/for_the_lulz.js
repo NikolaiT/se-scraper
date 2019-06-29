@@ -8,16 +8,19 @@ const se_scraper = require('./../index.js');
 
 // generate some google dorks
 
-let lulz_keywords = [];
+function genGoogleDorks(iter=4) {
+    let lulz_keywords = [];
+    ['seite', 'inicio', 'index'].forEach((x) => {
+        for (var i = 0; i < iter; i++) {
+            lulz_keywords.push(
+                'inurl:"' + x + '.php?id=' + Math.floor(Math.random() * 100) + '"'
+            )
+        }
+    });
+    return lulz_keywords;
+}
 
-['seite', 'inicio', 'index'].forEach((x) => {
-    for (var i = 0; i < 2; i++) {
-        lulz_keywords.push(
-            'inurl:"' + x + '.php?id=' + Math.floor(Math.random() * 100) + '"'
-        )
-    }
-});
-
+const lulz_keywords = genGoogleDorks();
 console.log(lulz_keywords);
 
 

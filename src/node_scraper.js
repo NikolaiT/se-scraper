@@ -40,6 +40,7 @@ function getScraper(search_engine, args) {
             google_news_old: google.GoogleNewsOldScraper,
             google_news: google.GoogleNewsScraper,
             google_image: google.GoogleImageScraper,
+            google_maps: google.GoogleMapsScraper,
             bing: bing.BingScraper,
             bing_news: bing.BingNewsScraper,
             amazon: amazon.AmazonScraper,
@@ -194,7 +195,8 @@ class ScrapeManager {
             '--disable-dev-shm-usage',
             '--disable-accelerated-2d-canvas',
             '--disable-gpu',
-            '--window-size=1920x1080',
+            '--window-size=1920,1040',
+            '--start-fullscreen',
             '--hide-scrollbars',
             '--disable-notifications',
         ];

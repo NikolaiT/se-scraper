@@ -60,6 +60,8 @@ module.exports = class Scraper {
             this.page = page;
         }
 
+        await this.page.setViewport({ width: 1920, height: 1040 });
+
         let do_continue = await this.load_search_engine();
 
         if (!do_continue) {
@@ -169,7 +171,7 @@ module.exports = class Scraper {
                 });
             }
 
-            let page_num = 1;
+            this.page_num = 1;
 
             try {
 
@@ -180,7 +182,7 @@ module.exports = class Scraper {
 
                 do {
 
-                    log(this.config, 1, `${this.config.search_engine_name} scrapes keyword "${keyword}" on page ${page_num}`);
+                    log(this.config, 1, `${this.config.search_engine_name} scrapes keyword "${keyword}" on page ${this.page_num}`);
 
                     await this.wait_for_results();
 
@@ -190,13 +192,13 @@ module.exports = class Scraper {
 
                     let html = await this.page.content();
                     let parsed = this.parse(html);
-                    this.results[keyword][page_num] = parsed ? parsed : await this.parse_async(html);
+                    this.results[keyword][this.page_num] = parsed ? parsed : await this.parse_async(html);
 
-                    page_num += 1;
+                    this.page_num += 1;
 
                     // only load the next page when we will pass the next iteration
                     // step from the while loop
-                    if (page_num <= this.config.num_pages) {
+                    if (this.page_num <= this.config.num_pages) {
 
                         let next_page_loaded = await this.next_page();
 
@@ -207,7 +209,7 @@ module.exports = class Scraper {
                         }
                     }
 
-                } while (page_num <= this.config.num_pages);
+                } while (this.page_num <= this.config.num_pages);
 
             } catch (e) {
 
