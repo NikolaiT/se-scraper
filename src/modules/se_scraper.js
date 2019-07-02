@@ -67,10 +67,9 @@ module.exports = class Scraper {
 
         if (!do_continue) {
             console.error('Failed to load the search engine: load_search_engine()');
-            return this.results;
+        } else {
+            await this.scraping_loop();
         }
-
-        await this.scraping_loop();
 
         return {
             'results': this.results,

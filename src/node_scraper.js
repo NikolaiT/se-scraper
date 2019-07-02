@@ -65,11 +65,12 @@ function getScraper(search_engine, args) {
 
 class ScrapeManager {
 
-    constructor(config = {}) {
+    constructor(config, context={}) {
 
         this.cluster = null;
         this.pluggable = null;
         this.scraper = null;
+        this.context = context;
 
         this.config = {
             // the user agent to scrape with
@@ -146,7 +147,14 @@ class ScrapeManager {
             this.config[key] = config[key];
         }
 
-        this.config = parseEventData(this.config);
+        if (config.sleep_range) {
+            // parse an array
+            config.sleep_range = eval(config.sleep_range);
+
+            if (config.sleep_range.length !== 2 && typeof i[0] !== 'number' && typeof i[1] !== 'number') {
+                throw "sleep_range is not a valid array of two integers.";
+            }
+        }
 
         this.config.search_engine_name = typeof this.config.search_engine === 'function' ? this.config.search_engine.name : this.config.search_engine;
 
@@ -245,6 +253,7 @@ class ScrapeManager {
         if (this.pluggable) {
             launch_args.config = this.config;
             this.browser = await this.pluggable.start_browser(launch_args);
+            this.page = await this.browser.newPage();
         } else {
             // if no custom start_browser functionality was given
             // use puppeteer-cluster for scraping
@@ -338,23 +347,18 @@ class ScrapeManager {
                 `[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${this.config.search_engine_name} with ${this.config.keywords.length} keywords on ${this.config.num_pages} pages each.`)
         }
 
-        if (this.config.do_work && this.pluggable) {
-            let res = await this.pluggable.do_work(page);
-            results = res.results;
-            num_requests = res.num_requests;
-        } else {
-            //     const page = await this.browser.newPage();
-            //     this.scraper = getScraper(this.config.search_engine, {
-            //         config: this.config,
-            //         context: {},
-            //         pluggable: pluggable,
-            //         page: page,
-            //     });
-            //     results = await this.scraper.run({});
-            //     num_requests = this.scraper.num_requests;
-            //     metadata = this.scraper.metadata;
-            // }
+        if (this.pluggable) {
+            this.scraper = getScraper(this.config.search_engine, {
+                config: this.config,
+                context: this.context,
+                pluggable: this.pluggable,
+                page: this.page,
+            });
 
+            let res = await this.scraper.run(this.page);
+            results = res.results;
+            num_requests = this.scraper.num_requests;
+        } else {
             // Each browser will get N/(K+1) keywords and will issue N/(K+1) * M total requests to the search engine.
             // https://github.com/GoogleChrome/puppeteer/issues/678
             // The question is: Is it possible to set proxies per Page? Per Browser?
@@ -468,37 +472,6 @@ class ScrapeManager {
         }
     }
 }
-
-function parseEventData(config) {
-
-    function _bool(e) {
-        e = String(e);
-        if (typeof e.trim === "function") {
-            return e.trim().toLowerCase() === 'true';
-        } else {
-            return e.toLowerCase() === 'true';
-        }
-    }
-
-    const booleans = ['upload_to_s3', 'log_ip_address', 'log_http_headers', 'random_user_agent',
-        'compress', 'is_local', 'max_results', 'set_manual_settings', 'block_assets', 'test_evasion', 'do_work', 'apply_evasion_techniques'];
-
-    for (b of booleans) {
-        config[b] = _bool(config[b]);
-    }
-
-    if (config.sleep_range) {
-        // parse an array
-        config.sleep_range = eval(config.sleep_range);
-
-        if (config.sleep_range.length !== 2 && typeof i[0] !== 'number' && typeof i[1] !== 'number') {
-            throw "sleep_range is not a valid array of two integers.";
-        }
-    }
-
-    return config;
-}
-
 
 module.exports = {
     ScrapeManager: ScrapeManager,
