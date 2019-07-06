@@ -104,6 +104,8 @@ class ScrapeManager {
             num_pages: 1,
             // path to output file, data will be stored in JSON
             output_file: '',
+            // whether to also passthru all the html output of the serp pages
+            html_output: false,
             // whether to prevent images, css, fonts and media from being loaded
             // will speed up scraping a great deal
             block_assets: true,
@@ -357,7 +359,10 @@ class ScrapeManager {
 
             let res = await this.scraper.run(this.page);
             results = res.results;
+            metadata = this.scraper.metadata;
             num_requests = this.scraper.num_requests;
+            html_output = this.scraper.html_output;
+
         } else {
             // Each browser will get N/(K+1) keywords and will issue N/(K+1) * M total requests to the search engine.
             // https://github.com/GoogleChrome/puppeteer/issues/678

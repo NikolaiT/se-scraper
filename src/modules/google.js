@@ -13,7 +13,6 @@ class GoogleScraper extends Scraper {
         // load the page source into cheerio
         const $ = cheerio.load(html);
 
-        // perform queries
         const results = [];
         $('#center_col .g').each((i, link) => {
             results.push({
@@ -22,6 +21,41 @@ class GoogleScraper extends Scraper {
                 snippet: $(link).find('span.st').text(),
                 visible_link: $(link).find('.r cite').text(),
                 date: $(link).find('span.f').text() || '',
+            })
+        });
+
+        // parse top ads
+        const top_ads = [];
+        $('#tads .ads-ad').each((i, element) => {
+            top_ads.push({
+                ad_visible_url: $(element).find('.ads-visurl cite').text(),
+                ads_link: $(element).find('a:first-child').attr('href'),
+                ads_link_target: $(element).find('a:nth-child(2)').attr('href'),
+                title: $(element).find('a h3').text(),
+                snippet: $(element).find('.ads-creative').text(),
+            })
+        });
+
+        // parse bottom ads
+        const bottomads = [];
+        $('#tadsb .ads-ad').each((i, element) => {
+            bottomads.push({
+                ad_visible_url: $(element).find('.ads-visurl cite').text(),
+                ads_link: $(element).find('a:first-child').attr('href'),
+                ads_link_target: $(element).find('a:nth-child(2)').attr('href'),
+                title: $(element).find('a h3').text(),
+                snippet: $(element).find('.ads-creative').text(),
+            })
+        });
+
+        // parse google places
+        const places = [];
+        $('.rllt__link').each((i, element) => {
+            places.push({
+                heading: $(element).find('[role="heading"] span').text(),
+                rating: $(element).find('.rllt__details div:first-child').text(),
+                contact: $(element).find('.rllt__details div:nth-child(2)').text(),
+                hours: $(element).find('.rllt__details div:nth-child(3)').text(),
             })
         });
 
@@ -51,8 +85,12 @@ class GoogleScraper extends Scraper {
             num_results: $('#resultStats').text(),
             no_results: no_results,
             effective_query: effective_query,
-            results: cleaned
+            top_ads: top_ads,
+            bottom_ads: bottomads,
+            places: places,
+            results: cleaned,
         }
+
     }
 
     async load_start_page() {
@@ -105,7 +143,7 @@ class GoogleScraper extends Scraper {
     }
 
     async wait_for_results() {
-        await this.page.waitForSelector('#center_col .g', { timeout: this.STANDARD_TIMEOUT });
+        await this.page.waitForSelector('#fbarcnt', { timeout: this.STANDARD_TIMEOUT });
     }
 
     async detected() {

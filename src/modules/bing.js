@@ -18,6 +18,18 @@ class BingScraper extends Scraper {
             })
         });
 
+        // parse bing ads
+        const ads = [];
+        $('.b_ad .sb_add').each((i, element) => {
+            ads.push({
+                ad_visible_url: $(element).find('.b_adurl cite').text(),
+                ads_link: $(element).find('h2 a').attr('href'),
+                ads_link_target: $(element).find('h2 link').attr('href'),
+                title: $(element).find('h2 a').text(),
+                snippet: $(element).find('.b_caption').text(),
+            })
+        });
+
         // 'Including results for', 'Einschließlich Ergebnisse'
         let no_results = this.no_results(
             ['There are no results', 'Es gibt keine Ergebnisse'],
@@ -41,6 +53,7 @@ class BingScraper extends Scraper {
             effective_query: effective_query,
             num_results: $('#b_content .sb_count').text(),
             results: cleaned,
+            ads: ads,
         }
     }
 

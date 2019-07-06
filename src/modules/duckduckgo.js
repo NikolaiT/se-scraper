@@ -19,6 +19,16 @@ class DuckduckgoScraper extends Scraper {
             });
         });
 
+        const ads = [];
+        $('.results--ads.has-ad').each((i, element) => {
+            ads.push({
+                ad_visible_url: $(element).find('.result__url').text(),
+                ads_link: $(element).find('.result__title .result__a').attr('href'),
+                title: $(element).find('.result__title .result__a').text(),
+                snippet: $(element).find('.result__snippet').text(),
+            })
+        });
+
         let effective_query = $('a.js-spelling-suggestion-link').attr('data-query') || '';
 
         const cleaned = [];
@@ -33,7 +43,8 @@ class DuckduckgoScraper extends Scraper {
         return {
             time: (new Date()).toUTCString(),
             effective_query: effective_query,
-            results: cleaned
+            results: cleaned,
+            ads: ads,
         }
     }
 

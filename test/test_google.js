@@ -82,7 +82,7 @@ function normal_search_test_case(response) {
     }
 }
 
-const keywords_no_results = ['fgskl34440abJAksafkl34a44dsflkjaQQuBBdfk',];
+const keywords_no_results = ['fgskl34440abJAksfs4353534a3l34AVGFDFflkjaQQuBBdfk',];
 
 async function no_results_test() {
     let config = {
@@ -159,7 +159,6 @@ async function effective_query_test() {
 function test_case_effective_query(response) {
     assert.equal(response.metadata.num_requests, 1);
 
-    results = response.results;
     for (let query in response.results) {
 
         assert.containsAllKeys(response.results, effective_query_keywords, 'not all keywords were scraped.');
@@ -222,10 +221,106 @@ function check_html_output_test_case( response ) {
   }
 }
 
+const ads_keywords = ['cloud services', 'buy shoes'];
+
+async function ads_test() {
+    let config = {
+        compress: false,
+        debug_level: 1,
+        headless: true,
+        block_assets: false,
+        random_user_agent: true,
+    };
+
+    let scrape_config = {
+        search_engine: 'google',
+        keywords: ads_keywords,
+        num_pages: 1,
+    };
+
+    console.log('ads_test()');
+    test_case_ads_test( await se_scraper.scrape(config, scrape_config) );
+}
+
+function test_case_ads_test(response) {
+    assert.equal(response.metadata.num_requests, 2);
+
+    for (let query in response.results) {
+
+        assert.containsAllKeys(response.results, ads_keywords, 'not all keywords were scraped.');
+
+        for (let page_number in response.results[query]) {
+
+            assert.isNumber(parseInt(page_number), 'page_number must be numeric');
+
+            let obj = response.results[query][page_number];
+
+            assert.containsAllKeys(obj, ['results', 'time', 'no_results', 'num_results', 'effective_query', 'top_ads', 'bottom_ads', 'places'], 'not all keys are in the object');
+
+            assert.isAtLeast(obj.results.length, 7, 'results must have at least 7 SERP objects');
+            assert.equal(obj.no_results, false, 'no results should be false');
+            assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
+            assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
+            assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
+
+            assert.isAtLeast(obj.top_ads.length, 1, 'top_ads must have at least 1 SERP object');
+            assert.isAtLeast(obj.bottom_ads.length, 1, 'bottom_ads must have at least 1 SERP object');
+
+            for (let res of obj.top_ads) {
+
+                assert.isOk(res.ads_link, 'link must be ok');
+                assert.typeOf(res.ads_link, 'string', 'link must be string');
+                assert.isAtLeast(res.ads_link.length, 5, 'link must have at least 5 chars');
+
+                assert.isOk(res.ads_link_target, 'link must be ok');
+                assert.typeOf(res.ads_link_target, 'string', 'link must be string');
+                assert.isAtLeast(res.ads_link_target.length, 5, 'link must have at least 5 chars');
+
+                assert.isOk(res.ad_visible_url, 'visible_link must be ok');
+                assert.typeOf(res.ad_visible_url, 'string', 'visible_link must be string');
+                assert.isAtLeast(res.ad_visible_url.length, 5, 'visible_link must have at least 5 chars');
+
+                assert.isOk(res.title, 'title must be ok');
+                assert.typeOf(res.title, 'string', 'title must be string');
+                assert.isAtLeast(res.title.length, 10, 'title must have at least 10 chars');
+
+                assert.isOk(res.snippet, 'snippet must be ok');
+                assert.typeOf(res.snippet, 'string', 'snippet must be string');
+                assert.isAtLeast(res.snippet.length, 10, 'snippet must have at least 10 chars');
+            }
+
+            for (let res of obj.bottom_ads) {
+
+                assert.isOk(res.ads_link, 'link must be ok');
+                assert.typeOf(res.ads_link, 'string', 'link must be string');
+                assert.isAtLeast(res.ads_link.length, 5, 'link must have at least 5 chars');
+
+                assert.isOk(res.ads_link_target, 'link must be ok');
+                assert.typeOf(res.ads_link_target, 'string', 'link must be string');
+                assert.isAtLeast(res.ads_link_target.length, 5, 'link must have at least 5 chars');
+
+                assert.isOk(res.ad_visible_url, 'visible_link must be ok');
+                assert.typeOf(res.ad_visible_url, 'string', 'visible_link must be string');
+                assert.isAtLeast(res.ad_visible_url.length, 5, 'visible_link must have at least 5 chars');
+
+                assert.isOk(res.title, 'title must be ok');
+                assert.typeOf(res.title, 'string', 'title must be string');
+                assert.isAtLeast(res.title.length, 10, 'title must have at least 10 chars');
+
+                assert.isOk(res.snippet, 'snippet must be ok');
+                assert.typeOf(res.snippet, 'string', 'snippet must be string');
+                assert.isAtLeast(res.snippet.length, 10, 'snippet must have at least 10 chars');
+            }
+
+        }
+    }
+}
+
 describe('Google', function(){
   this.timeout(30000);
   it('normal search',  normal_search_test);
   it('no results', no_results_test);
   it('effective query', effective_query_test);
   it('html output query', html_output_query_test);
+  it('finds ads', ads_test);
 });

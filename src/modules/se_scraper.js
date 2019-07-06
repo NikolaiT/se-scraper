@@ -197,7 +197,7 @@ module.exports = class Scraper {
                     let html = await this.page.content();
 
                     if (this.config.html_output) {
-                        this.html_output[keyword][page_num] = html;
+                        this.html_output[keyword][this.page_num] = html;
                     }
 
                     let parsed = this.parse(html);

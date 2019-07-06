@@ -1,6 +1,7 @@
 const se_scraper =  require('./../index.js');
-var assert = require('chai').assert;
-
+const chai = require('chai');
+chai.use(require('chai-string'));
+const assert = chai.assert;
 /*
  * Use chai and mocha for tests.
  * https://mochajs.org/#installation
@@ -189,8 +190,85 @@ function test_case_effective_query(response) {
     }
 }
 
-(async () => {
-    await normal_search_test();
-    await no_results_test();
-    await effective_query_test();
-})();
+
+const ads_keywords = ['cloud services', 'buy shoes'];
+
+async function ads_test() {
+    let config = {
+        compress: false,
+        debug_level: 1,
+        headless: true,
+        block_assets: false,
+        random_user_agent: true,
+    };
+
+    let scrape_config = {
+        search_engine: 'bing',
+        keywords: ads_keywords,
+        num_pages: 1,
+    };
+
+    console.log('ads_test()');
+    test_case_ads_test( await se_scraper.scrape(config, scrape_config) );
+}
+
+function test_case_ads_test(response) {
+    assert.equal(response.metadata.num_requests, 2);
+
+    for (let query in response.results) {
+
+        assert.containsAllKeys(response.results, ads_keywords, 'not all keywords were scraped.');
+
+        for (let page_number in response.results[query]) {
+
+            assert.isNumber(parseInt(page_number), 'page_number must be numeric');
+
+            let obj = response.results[query][page_number];
+
+            assert.containsAllKeys(obj, ['results', 'time', 'no_results', 'num_results', 'effective_query', 'ads'], 'not all keys are in the object');
+
+            assert.isAtLeast(obj.results.length, 5, 'results must have at least 5 SERP objects');
+            assert.equal(obj.no_results, false, 'no results should be false');
+            assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
+            assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
+            assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
+
+            assert.isAtLeast(obj.ads.length, 2, 'ads must have at least 2 SERP object');
+
+            for (let res of obj.ads) {
+
+                assert.isOk(res.ads_link, 'link must be ok');
+                assert.typeOf(res.ads_link, 'string', 'link must be string');
+                assert.isAtLeast(res.ads_link.length, 5, 'link must have at least 5 chars');
+
+                assert.isOk(res.ads_link_target, 'link must be ok');
+                assert.typeOf(res.ads_link_target, 'string', 'link must be string');
+                assert.isAtLeast(res.ads_link_target.length, 5, 'link must have at least 5 chars');
+
+                assert.isOk(res.ad_visible_url, 'visible_link must be ok');
+                assert.typeOf(res.ad_visible_url, 'string', 'visible_link must be string');
+                assert.isAtLeast(res.ad_visible_url.length, 5, 'visible_link must have at least 5 chars');
+
+                assert.isOk(res.title, 'title must be ok');
+                assert.typeOf(res.title, 'string', 'title must be string');
+                assert.isAtLeast(res.title.length, 10, 'title must have at least 10 chars');
+
+                assert.isOk(res.snippet, 'snippet must be ok');
+                assert.typeOf(res.snippet, 'string', 'snippet must be string');
+                assert.isAtLeast(res.snippet.length, 10, 'snippet must have at least 10 chars');
+            }
+
+        }
+    }
+}
+
+
+
+
+describe('Bing', function(){
+    this.timeout(30000);
+    it('normal search',  normal_search_test);
+    it('no results', no_results_test);
+    it('effective query', effective_query_test);
+    it('finds ads', ads_test);
+});
