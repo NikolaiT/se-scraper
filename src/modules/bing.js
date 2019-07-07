@@ -22,9 +22,9 @@ class BingScraper extends Scraper {
         const ads = [];
         $('.b_ad .sb_add').each((i, element) => {
             ads.push({
-                ad_visible_url: $(element).find('.b_adurl cite').text(),
-                ads_link: $(element).find('h2 a').attr('href'),
-                ads_link_target: $(element).find('h2 link').attr('href'),
+                visible_link: $(element).find('.b_adurl cite').text(),
+                tracking_link: $(element).find('h2 a').attr('href'),
+                link: $(element).find('link').attr('href'),
                 title: $(element).find('h2 a').text(),
                 snippet: $(element).find('.b_caption').text(),
             })

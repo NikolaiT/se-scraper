@@ -1,124 +1,104 @@
 {
-    "cloud service": {
+    "buy used car": {
         "1": {
-            "time": "Sat, 06 Jul 2019 19:33:03 GMT",
-            "num_results": "About 2,720,000,000 results (0.53 seconds) ",
+            "time": "Sun, 07 Jul 2019 16:04:09 GMT",
+            "num_results": "About 5,330,000,000 results (0.65 seconds) ",
             "no_results": false,
             "effective_query": "",
-            "top_ads": [
+            "top_ads": [],
+            "bottom_ads": [],
+            "places": [
                 {
-                    "ad_visible_url": "www.ibm.com/de-de/cloud",
-                    "ads_link": "/aclk?sa=l&ai=DChcSEwjJ8uy7hKHjAhUJhtUKHSqmA_MYABAAGgJ3cw&sig=AOD64_0cI3jZ1rhFR8yEf5YtReD8f2PBlQ&rct=j&q=&ved=2ahUKEwig4ea7hKHjAhVgTRUIHfv-CQUQ0Qx6BAgXEAE&adurl=",
-                    "ads_link_target": "https://www.ibm.com/de-de/cloud/solutions",
-                    "title": "Die IBM Cloud | Mehr Sicherheit für Ihre Daten‎",
-                    "snippet": "Die IBM Cloud ist die Cloud für smarte Unternehmen. Warum erfahren Sie hier! Mit der IBM Cloud erschließen Sie Ihrem Unternehmen neue Umsatzströme aus Ihren Daten. Cloud-Migration."
-                }
-            ],
-            "bottom_ads": [
-                {
-                    "ad_visible_url": "www.hpe.com/Cloud/Service",
-                    "ads_link": "/aclk?sa=L&ai=DChcSEwjJ8uy7hKHjAhUJhtUKHSqmA_MYABADGgJ3cw&sig=AOD64_2VKnwqa309cs9KfVrY2KSK-J3T9w&rct=j&q=&ved=2ahUKEwig4ea7hKHjAhVgTRUIHfv-CQUQ0Qx6BAgYEAE&adurl=",
-                    "ads_link_target": "https://www.hpe.com/de/de/services.html",
-                    "title": "HPE Cloud Service | HPE besuchen und mehr erfahren‎",
-                    "snippet": "Hilfe beim Erstellen einer Roadmap abgestimmt auf Ihre Herausforderungen! Vereinfachter IT-Zyklus. Schnellere Innovationen. Optimierte Infrastruktur. Bestes Partner-Ökosystem. Dienstleistungen: Advisory Services, Professional Services, Operational Sevices, Cloud Services, Applications Services."
+                    "heading": "Approved Automotive",
+                    "rating": "2.7  (3) · Used car dealerClosed ⋅ Opens 8AM Mon",
+                    "contact": "Independence, KS · (620) 331-6223",
+                    "hours": "Closed ⋅ Opens 8AM Mon"
                 },
                 {
-                    "ad_visible_url": "w3.usa.siemens.com/",
-                    "ads_link": "/aclk?sa=l&ai=DChcSEwjJ8uy7hKHjAhUJhtUKHSqmA_MYABAGGgJ3cw&sig=AOD64_3tMHCSFikvffpErcgjGyDahhVwWQ&rct=j&q=&ved=2ahUKEwig4ea7hKHjAhVgTRUIHfv-CQUQ0Qx6BAgZEAE&adurl=",
-                    "ads_link_target": "https://w3.usa.siemens.com/buildingtechnologies/us/en/Smart_Buildings/digital-services/Pages/analytic-services.aspx?stc=ussi100083&sp_source=ussi100083",
-                    "title": "Analytic Services from Siemens | Making Your Building Smarter‎",
-                    "snippet": "Siemens Uses the Latest Analytical Tools Along with Cloud-Based Services to Identify. and Solve Potential Problems Before They Affect Your Entire Organization."
+                    "heading": "Romans Motor Company",
+                    "rating": "4.4  (38) · Chevrolet dealerClosed ⋅ Opens 8AM Mon\"Great place to get your car worked on.\" \"Great place to get your car worked on.\" ",
+                    "contact": "Independence, KS · (620) 331-4700\"Great place to get your car worked on.\" ",
+                    "hours": "Closed ⋅ Opens 8AM Mon"
+                },
+                {
+                    "heading": "Perl on Eleventh",
+                    "rating": "No reviews · Used car dealerClosed ⋅ Opens 9AM Mon",
+                    "contact": "Coffeyville, KS · (620) 251-4050",
+                    "hours": "Closed ⋅ Opens 9AM Mon"
                 }
             ],
-            "places": [],
             "results": [
                 {
-                    "link": "https://www.webopedia.com/TERM/C/cloud_services.html",
-                    "title": "What is Cloud Service? Webopedia Definitionhttps://www.webopedia.com/TERM/C/cloud_services.html",
-                    "snippet": "",
-                    "visible_link": "https://www.webopedia.com/TERM/C/cloud_services.html",
+                    "link": "https://www.cars.com/shopping/",
+                    "title": "Used Cars for Sale Online Near Me | Cars.comhttps://www.cars.com/shopping/Cached",
+                    "snippet": "Car-Buying Advice. First-timers and veterans shopping new or used cars: know what to remind yourself to do, ask and learn, from verifying the condition to ...",
+                    "visible_link": "https://www.cars.com/shopping/",
                     "date": "",
                     "rank": 1
                 },
                 {
-                    "link": "https://www.webopedia.com/TERM/C/cloud_services.html",
-                    "title": "What is Cloud Service? Webopedia Definitionhttps://www.webopedia.com/TERM/C/cloud_services.html",
-                    "snippet": "",
-                    "visible_link": "https://www.webopedia.com/TERM/C/cloud_services.html",
+                    "link": "https://www.carfax.com/cars-for-sale",
+                    "title": "Used Cars for Sale | with Free CARFAXhttps://www.carfax.com/cars-for-saleCachedSimilar",
+                    "snippet": "A FREE CARFAX report comes with every used car and truck for sale on Carfax.com. ... Find out how much a car is really worth before you buy it with the all-new ...",
+                    "visible_link": "https://www.carfax.com/cars-for-sale",
                     "date": "",
                     "rank": 2
                 },
                 {
-                    "link": "https://www.webopedia.com/TERM/C/cloud_services.html",
-                    "title": "What is Cloud Service? Webopedia Definitionhttps://www.webopedia.com/TERM/C/cloud_services.htmlCached",
-                    "snippet": "cloud service. A cloud service is any service made available to users on demand via the Internet from a cloud computing provider's servers as opposed to being provided from a company's own on-premises servers.",
-                    "visible_link": "https://www.webopedia.com/TERM/C/cloud_services.html",
+                    "link": "https://www.autotrader.com/",
+                    "title": "New Cars, Used Cars - Find Cars for Sale and Reviews at Autotraderhttps://www.autotrader.com/Cached",
+                    "snippet": "With millions of cars, finding your next new car or used car and the car ... Buying a car is a big deal -- and saving money is a crucial aspect of any new - or used ...",
+                    "visible_link": "https://www.autotrader.com/",
                     "date": "",
                     "rank": 3
                 },
                 {
-                    "link": "https://www.skyhighnetworks.com/cloud-security-blog/what-is-a-cloud-service/",
-                    "title": "What is a Cloud Service? - Skyhigh Networkshttps://www.skyhighnetworks.com/cloud-security-blog/what-is-a-cloud-service/CachedSimilar",
-                    "snippet": "The cloud has been around for many years, yet there is still confusion as to what exactly is considered a cloud service. Read on for the definitive answer.",
-                    "visible_link": "https://www.skyhighnetworks.com/cloud-security-blog/what-is-a-cloud-service/",
+                    "link": "https://www.carmax.com/cars",
+                    "title": "Used Cars for Sale - CarMaxhttps://www.carmax.com/carsCachedSimilar",
+                    "snippet": "Search for new and used cars at carmax.com. Use our car ... 130 Best Used Cars for 2019: Ranked by Price and Type ... What is the best car to buy in 2019?",
+                    "visible_link": "https://www.carmax.com/cars",
                     "date": "",
                     "rank": 4
                 },
                 {
-                    "link": "https://searchitchannel.techtarget.com/definition/cloud-services",
-                    "title": "What is cloud services? - Definition from WhatIs.com - SearchITChannelhttps://searchitchannel.techtarget.com/definition/cloud-servicesCached",
-                    "snippet": "Dec 6, 2016 - Cloud services is an umbrella term that may refer to a variety of resources provided over the internet, or to professional services that support the ...",
-                    "visible_link": "https://searchitchannel.techtarget.com/definition/cloud-services",
-                    "date": "Dec 6, 2016 - ",
+                    "link": "https://www.enterprisecarsales.com/usedcars-buy",
+                    "title": "Buy Used Cars - Enterprise Car Saleshttps://www.enterprisecarsales.com/usedcars-buyCached",
+                    "snippet": "Looking to buy a used car? You know Enterprise for our exceptional customer service on rental cars, and you'll experience that same level of service when you ...",
+                    "visible_link": "https://www.enterprisecarsales.com/usedcars-buy",
+                    "date": "",
                     "rank": 5
                 },
                 {
-                    "link": "https://azure.microsoft.com/en-us/overview/what-is-cloud-computing/",
-                    "title": "What Is Cloud Computing? A Beginner's Guide | Microsoft Azurehttps://azure.microsoft.com/en-us/overview/what-is-cloud-computing/CachedSimilar",
-                    "snippet": "Simply put, cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over ...",
-                    "visible_link": "https://azure.microsoft.com/en-us/overview/what-is-cloud-computing/",
+                    "link": "https://www.truecar.com/used-cars-for-sale/",
+                    "title": "Used Cars For Sale: 1,006,922 Used & Pre-Owned Cars | TrueCarhttps://www.truecar.com/used-cars-for-sale/CachedSimilar",
+                    "snippet": "Buy With Confidence. Get the best used car buying experience when you purchase from a TrueCar Certified Dealer who is dedicated to great service, and ...",
+                    "visible_link": "https://www.truecar.com/used-cars-for-sale/",
                     "date": "",
                     "rank": 6
                 },
                 {
-                    "link": "https://www.pcmag.com/article/345308/20-of-the-best-cloud-services-for-smbs",
-                    "title": "The 50 Best Cloud Services for SMBs | PCMag.comhttps://www.pcmag.com/article/345308/20-of-the-best-cloud-services-for-smbsCached",
-                    "snippet": "Oct 23, 2017 - To help you make better decisions about what to buy, we're listing the best cloud services for SMBs, covering topics from project management ...",
-                    "visible_link": "https://www.pcmag.com/article/345308/20-of-the-best-cloud-services-for-smbs",
-                    "date": "Oct 23, 2017 - ",
+                    "link": "https://www.truecar.com/",
+                    "title": "TrueCar: Car Prices, Owner Reviews & Inventory | New & Used Carshttps://www.truecar.com/CachedSimilar",
+                    "snippet": "Shop for new and used cars and trucks. ... Sam's Club, American Express and Chase, giving members who use TrueCar a superior car-buying experience.",
+                    "visible_link": "https://www.truecar.com/",
+                    "date": "",
                     "rank": 7
                 },
                 {
-                    "link": "https://en.wikipedia.org/wiki/Cloud_computing",
-                    "title": "Cloud computing - Wikipediahttps://en.wikipedia.org/wiki/Cloud_computingCachedSimilar",
-                    "snippet": "Jump to Software as a service (SaaS) - In the software as a service (SaaS) model, users gain access to application software and databases. Cloud ...",
-                    "visible_link": "https://en.wikipedia.org/wiki/Cloud_computing",
-                    "date": "Jump to Software as a service (SaaS) - ",
+                    "link": "https://www.enterprisecarsales.com/list/buy-a-car-1",
+                    "title": "Buy Used Cars, Find Used Vehicles for Sale - Enterprise Car Saleshttps://www.enterprisecarsales.com/list/buy-a-car-1CachedSimilar",
+                    "snippet": "Browse our vehicle inventory to find reliable used cars for sale right now at Enterprise Car Sales.",
+                    "visible_link": "https://www.enterprisecarsales.com/list/buy-a-car-1",
+                    "date": "",
                     "rank": 8
                 },
                 {
-                    "link": "https://www.techopedia.com/definition/29017/cloud-services",
-                    "title": "What are Cloud Services? - Definition from Techopediahttps://www.techopedia.com/definition/29017/cloud-servicesCachedSimilar",
-                    "snippet": "Cloud services refer to any IT services that are provisioned and accessed from a cloud computing provider. This is a broad term that incorporates all delivery and ...",
-                    "visible_link": "https://www.techopedia.com/definition/29017/cloud-services",
+                    "link": "https://www.edmunds.com/used-cars-for-sale/",
+                    "title": "Get the Best Deals on Used Cars For Sale Near You - Shop Used ...https://www.edmunds.com/used-cars-for-sale/CachedSimilar",
+                    "snippet": "Get the best prices on great used cars, trucks and SUVs for sale near you with Edmunds. We have over 5 million cheap ... Buy used with confidence on Edmunds ...",
+                    "visible_link": "https://www.edmunds.com/used-cars-for-sale/",
                     "date": "",
                     "rank": 9
-                },
-                {
-                    "link": "https://www.techradar.com/news/best-cloud-computing-service",
-                    "title": "Best cloud computing services of 2019 | TechRadarhttps://www.techradar.com/news/best-cloud-computing-serviceCached",
-                    "snippet": "4 days ago - Additionally, cloud services aren't simply about services or resources, but about providing fully fledged IT systems you can use as if you were ...",
-                    "visible_link": "https://www.techradar.com/news/best-cloud-computing-service",
-                    "date": "4 days ago - ",
-                    "rank": 10
-                },
-                {
-                    "link": "https://aws.amazon.com/what-is-cloud-computing/",
-                    "title": "What is Cloud Computing - Amazon Web Serviceshttps://aws.amazon.com/what-is-cloud-computing/CachedSimilar",
-                    "snippet": "Whether you are using it to run applications that share photos to millions of mobile users or to support business critical operations, a cloud services platform ...",
-                    "visible_link": "https://aws.amazon.com/what-is-cloud-computing/",
-                    "date": "",
-                    "rank": 11
                 }
             ]
         }

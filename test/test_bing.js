@@ -233,21 +233,21 @@ function test_case_ads_test(response) {
             assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
             assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
 
-            assert.isAtLeast(obj.ads.length, 2, 'ads must have at least 2 SERP object');
+            assert.isAtLeast(obj.ads.length, 2, 'ads must have at least 2 SERP objects');
 
             for (let res of obj.ads) {
 
-                assert.isOk(res.ads_link, 'link must be ok');
-                assert.typeOf(res.ads_link, 'string', 'link must be string');
-                assert.isAtLeast(res.ads_link.length, 5, 'link must have at least 5 chars');
+                assert.isOk(res.tracking_link, 'link must be ok');
+                assert.typeOf(res.tracking_link, 'string', 'link must be string');
+                assert.isAtLeast(res.tracking_link.length, 5, 'link must have at least 5 chars');
 
-                assert.isOk(res.ads_link_target, 'link must be ok');
-                assert.typeOf(res.ads_link_target, 'string', 'link must be string');
-                assert.isAtLeast(res.ads_link_target.length, 5, 'link must have at least 5 chars');
+                // assert.isOk(res.link, 'link must be ok');
+                // assert.typeOf(res.link, 'string', 'link must be string');
+                // assert.isAtLeast(res.link.length, 5, 'link must have at least 5 chars');
 
-                assert.isOk(res.ad_visible_url, 'visible_link must be ok');
-                assert.typeOf(res.ad_visible_url, 'string', 'visible_link must be string');
-                assert.isAtLeast(res.ad_visible_url.length, 5, 'visible_link must have at least 5 chars');
+                assert.isOk(res.visible_link, 'visible_link must be ok');
+                assert.typeOf(res.visible_link, 'string', 'visible_link must be string');
+                assert.isAtLeast(res.visible_link.length, 5, 'visible_link must have at least 5 chars');
 
                 assert.isOk(res.title, 'title must be ok');
                 assert.typeOf(res.title, 'string', 'title must be string');
@@ -257,13 +257,9 @@ function test_case_ads_test(response) {
                 assert.typeOf(res.snippet, 'string', 'snippet must be string');
                 assert.isAtLeast(res.snippet.length, 10, 'snippet must have at least 10 chars');
             }
-
         }
     }
 }
-
-
-
 
 describe('Bing', function(){
     this.timeout(30000);

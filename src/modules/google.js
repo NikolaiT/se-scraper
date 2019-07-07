@@ -24,29 +24,33 @@ class GoogleScraper extends Scraper {
             })
         });
 
-        // parse top ads
-        const top_ads = [];
-        $('#tads .ads-ad').each((i, element) => {
-            top_ads.push({
-                ad_visible_url: $(element).find('.ads-visurl cite').text(),
-                ads_link: $(element).find('a:first-child').attr('href'),
-                ads_link_target: $(element).find('a:nth-child(2)').attr('href'),
-                title: $(element).find('a h3').text(),
-                snippet: $(element).find('.ads-creative').text(),
-            })
-        });
+        // parse ads
+        let parseAds = (storage, selector) => {
+            $(selector).each((i, element) => {
+                let obj = {
+                    visible_link: $(element).find('.ads-visurl cite').text(),
+                    tracking_link: $(element).find('a:first-child').attr('href'),
+                    link: $(element).find('a:nth-child(2)').attr('href'),
+                    title: $(element).find('a h3').text(),
+                    snippet: $(element).find('.ads-creative').text(),
+                    links: [],
+                };
+                $(element).find('ul li a').each((i, el) => {
+                    obj.links.push({
+                        tracking_link: $(el).attr('data-arwt'),
+                        link: $(el).attr('href'),
+                        title: $(el).text(),
+                    })
+                });
+                storage.push(obj);
+            });
+        };
 
-        // parse bottom ads
+        const top_ads = [];
         const bottomads = [];
-        $('#tadsb .ads-ad').each((i, element) => {
-            bottomads.push({
-                ad_visible_url: $(element).find('.ads-visurl cite').text(),
-                ads_link: $(element).find('a:first-child').attr('href'),
-                ads_link_target: $(element).find('a:nth-child(2)').attr('href'),
-                title: $(element).find('a h3').text(),
-                snippet: $(element).find('.ads-creative').text(),
-            })
-        });
+
+        parseAds(top_ads, '#tads .ads-ad');
+        parseAds(bottomads, '#tadsb .ads-ad');
 
         // parse google places
         const places = [];
@@ -143,7 +147,7 @@ class GoogleScraper extends Scraper {
     }
 
     async wait_for_results() {
-        await this.page.waitForSelector('#fbarcnt', { timeout: this.STANDARD_TIMEOUT });
+        await this.page.waitForSelector('#fbar', { timeout: this.STANDARD_TIMEOUT });
     }
 
     async detected() {

@@ -9,7 +9,7 @@ class DuckduckgoScraper extends Scraper {
 
         // perform queries
         const results = [];
-        $('.result__body').each((i, link) => {
+        $('#links .result__body').each((i, link) => {
             results.push({
                 link: $(link).find('.result__title .result__a').attr('href'),
                 title: $(link).find('.result__title .result__a').text(),
@@ -22,8 +22,8 @@ class DuckduckgoScraper extends Scraper {
         const ads = [];
         $('.results--ads.has-ad').each((i, element) => {
             ads.push({
-                ad_visible_url: $(element).find('.result__url').text(),
-                ads_link: $(element).find('.result__title .result__a').attr('href'),
+                visible_link: $(element).find('.result__url').text(),
+                tracking_link: $(element).find('.result__title .result__a').attr('href'),
                 title: $(element).find('.result__title .result__a').text(),
                 snippet: $(element).find('.result__snippet').text(),
             })

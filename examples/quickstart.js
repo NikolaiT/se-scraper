@@ -2,25 +2,19 @@ const se_scraper = require('./../src/node_scraper.js');
 
 (async () => {
     let browser_config = {
-        debug_level: 2,
-        output_file: 'examples/results/data.json',
+        debug_level: 1,
         test_evasion: false,
-        headless: false,
+        headless: true,
         block_assets: false,
-        random_user_agent: true,
+        random_user_agent: false,
+        log_http_headers: false,
+        html_output: false,
     };
 
     let scrape_job = {
-        search_engine: 'google',
-        keywords: ['cloud service'],
+        search_engine: 'bing',
+        keywords: ['auto verkaufen'],
         num_pages: 1,
-        // add some cool google search settings
-        google_settings: {
-            gl: 'us', // The gl parameter determines the Google country to use for the query.
-            hl: 'en', // The hl parameter determines the Google UI language to return results.
-            start: 0, // Determines the results offset to use, defaults to 0.
-            num: 10, // Determines the number of results to show, defaults to 10. Maximum is 100.
-        },
     };
 
     var scraper = new se_scraper.ScrapeManager(browser_config);

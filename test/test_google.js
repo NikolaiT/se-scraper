@@ -221,7 +221,7 @@ function check_html_output_test_case( response ) {
   }
 }
 
-const ads_keywords = ['cloud services', 'buy shoes'];
+const ads_keywords = ['cloud services', 'auto kaufen'];
 
 async function ads_test() {
     let config = {
@@ -229,7 +229,7 @@ async function ads_test() {
         debug_level: 1,
         headless: true,
         block_assets: false,
-        random_user_agent: true,
+        random_user_agent: false, // dont try to trick google with ads
     };
 
     let scrape_config = {
@@ -263,22 +263,21 @@ function test_case_ads_test(response) {
             assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
             assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
 
-            assert.isAtLeast(obj.top_ads.length, 1, 'top_ads must have at least 1 SERP object');
-            assert.isAtLeast(obj.bottom_ads.length, 1, 'bottom_ads must have at least 1 SERP object');
+            assert(obj.top_ads.length >= 1 || obj.bottom_ads.length >= 1, 'top_ads or bottom_ads must have at least 1 SERP object');
 
             for (let res of obj.top_ads) {
 
-                assert.isOk(res.ads_link, 'link must be ok');
-                assert.typeOf(res.ads_link, 'string', 'link must be string');
-                assert.isAtLeast(res.ads_link.length, 5, 'link must have at least 5 chars');
+                assert.isOk(res.tracking_link, 'link must be ok');
+                assert.typeOf(res.tracking_link, 'string', 'link must be string');
+                assert.isAtLeast(res.tracking_link.length, 5, 'link must have at least 5 chars');
 
-                assert.isOk(res.ads_link_target, 'link must be ok');
-                assert.typeOf(res.ads_link_target, 'string', 'link must be string');
-                assert.isAtLeast(res.ads_link_target.length, 5, 'link must have at least 5 chars');
+                assert.isOk(res.visible_link, 'link must be ok');
+                assert.typeOf(res.visible_link, 'string', 'link must be string');
+                assert.isAtLeast(res.visible_link.length, 5, 'link must have at least 5 chars');
 
-                assert.isOk(res.ad_visible_url, 'visible_link must be ok');
-                assert.typeOf(res.ad_visible_url, 'string', 'visible_link must be string');
-                assert.isAtLeast(res.ad_visible_url.length, 5, 'visible_link must have at least 5 chars');
+                assert.isOk(res.visible_link, 'visible_link must be ok');
+                assert.typeOf(res.visible_link, 'string', 'visible_link must be string');
+                assert.isAtLeast(res.visible_link.length, 5, 'visible_link must have at least 5 chars');
 
                 assert.isOk(res.title, 'title must be ok');
                 assert.typeOf(res.title, 'string', 'title must be string');
@@ -287,21 +286,22 @@ function test_case_ads_test(response) {
                 assert.isOk(res.snippet, 'snippet must be ok');
                 assert.typeOf(res.snippet, 'string', 'snippet must be string');
                 assert.isAtLeast(res.snippet.length, 10, 'snippet must have at least 10 chars');
+
+                assert.typeOf(res.links, 'array', 'snippet must be array');
             }
 
             for (let res of obj.bottom_ads) {
+                assert.isOk(res.tracking_link, 'link must be ok');
+                assert.typeOf(res.tracking_link, 'string', 'link must be string');
+                assert.isAtLeast(res.tracking_link.length, 5, 'link must have at least 5 chars');
 
-                assert.isOk(res.ads_link, 'link must be ok');
-                assert.typeOf(res.ads_link, 'string', 'link must be string');
-                assert.isAtLeast(res.ads_link.length, 5, 'link must have at least 5 chars');
+                assert.isOk(res.visible_link, 'link must be ok');
+                assert.typeOf(res.visible_link, 'string', 'link must be string');
+                assert.isAtLeast(res.visible_link.length, 5, 'link must have at least 5 chars');
 
-                assert.isOk(res.ads_link_target, 'link must be ok');
-                assert.typeOf(res.ads_link_target, 'string', 'link must be string');
-                assert.isAtLeast(res.ads_link_target.length, 5, 'link must have at least 5 chars');
-
-                assert.isOk(res.ad_visible_url, 'visible_link must be ok');
-                assert.typeOf(res.ad_visible_url, 'string', 'visible_link must be string');
-                assert.isAtLeast(res.ad_visible_url.length, 5, 'visible_link must have at least 5 chars');
+                assert.isOk(res.visible_link, 'visible_link must be ok');
+                assert.typeOf(res.visible_link, 'string', 'visible_link must be string');
+                assert.isAtLeast(res.visible_link.length, 5, 'visible_link must have at least 5 chars');
 
                 assert.isOk(res.title, 'title must be ok');
                 assert.typeOf(res.title, 'string', 'title must be string');
@@ -310,6 +310,8 @@ function test_case_ads_test(response) {
                 assert.isOk(res.snippet, 'snippet must be ok');
                 assert.typeOf(res.snippet, 'string', 'snippet must be string');
                 assert.isAtLeast(res.snippet.length, 10, 'snippet must have at least 10 chars');
+
+                assert.typeOf(res.links, 'array', 'snippet must be array');
             }
 
         }
@@ -322,5 +324,5 @@ describe('Google', function(){
   it('no results', no_results_test);
   it('effective query', effective_query_test);
   it('html output query', html_output_query_test);
-  it('finds ads', ads_test);
+  it('ads', ads_test);
 });

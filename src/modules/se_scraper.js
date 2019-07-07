@@ -116,6 +116,7 @@ module.exports = class Scraper {
 
         if (this.config.log_http_headers === true) {
             this.metadata.http_headers = await meta.get_http_headers(this.page);
+            log(this.config, 1, this.metadata.http_headers);
         }
 
         if (this.config.log_ip_address === true) {
