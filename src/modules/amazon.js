@@ -66,13 +66,7 @@ class AmazonScraper extends Scraper {
 
         let effective_query = $('[data-component-type="s-result-info-bar"] span.a-text-bold').text() || '';
 
-        const cleaned = [];
-        for (var res of results) {
-            if (res.link && res.link.trim() && res.title && res.title.trim() && res.price && res.price.trim() && res.stars.trim()) {
-                res.rank = this.result_rank++;
-                cleaned.push(res);
-            }
-        }
+        const cleaned = this.clean_results(results, ['title', 'link', 'price', 'stars']);
 
         return {
             time: (new Date()).toUTCString(),

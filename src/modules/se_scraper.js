@@ -170,9 +170,6 @@ module.exports = class Scraper {
                     num_keywords: this.num_keywords,
                     num_requests: this.num_requests,
                     keyword: keyword,
-                    page: this.page,
-                    config: this.config,
-                    context: this.context,
                 });
             }
 
@@ -316,6 +313,28 @@ module.exports = class Scraper {
             }
         }
         return false;
+    }
+
+    /*
+        Throw away all elements that do not have data in the
+        specified attributes. Most be of value string.
+     */
+    clean_results(results, attributes) {
+        const cleaned = [];
+        for (var res of results) {
+            let goodboy = true;
+            for (var attr of attributes) {
+                if (!res[attr] || !res[attr].trim()) {
+                    goodboy = false;
+                    break;
+                }
+            }
+            if (goodboy) {
+                res.rank = this.result_rank++;
+                cleaned.push(res);
+            }
+        }
+        return cleaned;
     }
 
     parse(html) {

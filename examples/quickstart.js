@@ -4,7 +4,7 @@ const se_scraper = require('./../src/node_scraper.js');
     let browser_config = {
         debug_level: 1,
         test_evasion: false,
-        headless: true,
+        headless: false,
         block_assets: false,
         random_user_agent: false,
         log_http_headers: false,
@@ -12,8 +12,8 @@ const se_scraper = require('./../src/node_scraper.js');
     };
 
     let scrape_job = {
-        search_engine: 'bing',
-        keywords: ['auto verkaufen'],
+        search_engine: 'google_shopping',
+        keywords: ['wasserpistole'],
         num_pages: 1,
     };
 

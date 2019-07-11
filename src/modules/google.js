@@ -75,14 +75,7 @@ class GoogleScraper extends Scraper {
             effective_query = $('#fprs a').text()
         }
 
-        const cleaned = [];
-        for (var i=0; i < results.length; i++) {
-            let res = results[i];
-            if (res.link && res.link.trim() && res.title && res.title.trim()) {
-                res.rank = this.result_rank++;
-                cleaned.push(res);
-            }
-        }
+        const cleaned = this.clean_results(results, ['title', 'link']);
 
         return {
             time: (new Date()).toUTCString(),
@@ -184,14 +177,7 @@ class GoogleNewsOldScraper extends Scraper {
             effective_query = $('#fprs a').text()
         }
 
-        const cleaned = [];
-        for (var i=0; i < results.length; i++) {
-            let res = results[i];
-            if (res.link && res.link.trim()) {
-                res.rank = this.result_rank++;
-                cleaned.push(res);
-            }
-        }
+        const cleaned = this.clean_results(results, ['link']);
 
         return {
             time: (new Date()).toUTCString(),
@@ -274,15 +260,7 @@ class GoogleImageScraper extends Scraper {
             effective_query = $('#fprs a').text();
         }
 
-        const cleaned = [];
-        for (var i=0; i < results.length; i++) {
-            let res = results[i];
-            if (res.link && res.link.trim() && res.link.trim().length > 10) {
-                res.link = res.link.trim();
-                res.rank = this.result_rank++;
-                cleaned.push(res);
-            }
-        }
+        const cleaned = this.clean_results(results, ['link']);
 
         return {
             time: (new Date()).toUTCString(),
@@ -371,14 +349,7 @@ class GoogleNewsScraper extends Scraper {
 
         let effective_query = $('#fprsl').text() || '';
 
-        const cleaned = [];
-        for (var i=0; i < results.length; i++) {
-            let res = results[i];
-            if (res.title && res.title.trim()) {
-                res.rank = this.result_rank++;
-                cleaned.push(res);
-            }
-        }
+        const cleaned = this.clean_results(results, ['title',]);
 
         return {
             time: (new Date()).toUTCString(),
@@ -608,6 +579,118 @@ class GoogleMapsScraper extends Scraper {
 }
 
 
+class GoogleShoppingScraper extends Scraper {
+
+    constructor(...args) {
+        super(...args);
+    }
+
+    parse(html) {
+        // load the page source into cheerio
+        const $ = cheerio.load(html);
+
+        const results = [];
+        $('.sh-dlr__list-result').each((i, link) => {
+            results.push({
+                price: $(link).find('.sh-dlr__content div:nth-child(2) span > span').text(),
+                link: $(link).find('.sh-dlr__thumbnail a').attr('href'),
+                title: $(link).find('div > div > a[data-what="1"]').text(),
+                info1: $(link).find('.sh-dlr__content div:nth-child(2)').text(),
+                info2: $(link).find('.sh-dlr__content div:nth-child(3)').text(),
+                info3: $(link).find('.sh-dlr__content div:nth-child(4)').text(),
+            })
+        });
+
+        const grid_results = [];
+
+        $('.sh-pr__product-results-grid .sh-dgr__grid-result').each((i, link) => {
+            grid_results.push({
+                price: $(link).find('.sh-dgr__content div:nth-child(2) span').text(),
+                link: $(link).find('.sh-dgr__content a').attr('href'),
+                title: $(link).find('.sh-dgr__content a').text(),
+                info: $(link).find('.sh-dgr__content').text(),
+            })
+        });
+
+        // 'Ergebnisse für', 'Showing results for'
+        let no_results = this.no_results(
+            ['Es wurden keine mit deiner Suchanfrage', 'did not match any documents', 'Keine Ergebnisse für',
+                'No results found for'],
+            $('#main').text()
+        );
+
+        const cleaned = this.clean_results(results, ['title', 'link']);
+
+        return {
+            time: (new Date()).toUTCString(),
+            no_results: no_results,
+            results: cleaned,
+            grid_results: grid_results,
+        }
+
+    }
+
+    async load_start_page() {
+        let startUrl = 'https://www.google.com/shopping?';
+
+        if (this.config.google_settings) {
+            startUrl = `https://www.${this.config.google_settings.google_domain}/shopping?q=`;
+            if (this.config.google_settings.google_domain) {
+                startUrl = `https://www.${this.config.google_settings.google_domain}/shopping?`;
+            } else {
+                startUrl = `https://www.google.com/shopping?`;
+            }
+
+            for (var key in this.config.google_settings) {
+                if (key !== 'google_domain') {
+                    startUrl += `${key}=${this.config.google_settings[key]}&`
+                }
+            }
+        }
+
+        log(this.config, 1, 'Using startUrl: ' + startUrl);
+
+        this.last_response = await this.page.goto(startUrl);
+
+        try {
+            await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
+        } catch (e) {
+            return false;
+        }
+
+        return true;
+    }
+
+    async search_keyword(keyword) {
+        const input = await this.page.$('input[name="q"]');
+        await this.set_input_value(`input[name="q"]`, keyword);
+        await this.sleep(50);
+        await input.focus();
+        await this.page.keyboard.press("Enter");
+    }
+
+    async next_page() {
+        let next_page_link = await this.page.$('#pnnext', {timeout: 1000});
+        if (!next_page_link) {
+            return false;
+        }
+        await next_page_link.click();
+
+        return true;
+    }
+
+    async wait_for_results() {
+        await this.page.waitForSelector('#fbar', { timeout: this.STANDARD_TIMEOUT });
+    }
+
+    async detected() {
+        const title = await this.page.title();
+        let html = await this.page.content();
+        return html.indexOf('detected unusual traffic') !== -1 || title.indexOf('/sorry/') !== -1;
+    }
+}
+
+
 
 function clean_image_url(url) {
     // Example:
@@ -632,7 +715,9 @@ function clean_google_url(url) {
     }
 }
 
+
 module.exports = {
+    GoogleShoppingScraper: GoogleShoppingScraper,
     GoogleNewsOldScraper: GoogleNewsOldScraper,
     GoogleScraper: GoogleScraper,
     GoogleImageScraper: GoogleImageScraper,

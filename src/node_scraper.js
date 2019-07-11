@@ -41,6 +41,7 @@ function getScraper(search_engine, args) {
             google_news: google.GoogleNewsScraper,
             google_image: google.GoogleImageScraper,
             google_maps: google.GoogleMapsScraper,
+            google_shopping: google.GoogleShoppingScraper,
             bing: bing.BingScraper,
             bing_news: bing.BingNewsScraper,
             amazon: amazon.AmazonScraper,
@@ -74,7 +75,7 @@ class ScrapeManager {
 
         this.config = {
             // the user agent to scrape with
-            user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
+            user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36',
             // if random_user_agent is set to True, a random user agent is chosen
             random_user_agent: false,
             // whether to select manual settings in visible mode
@@ -183,7 +184,10 @@ class ScrapeManager {
             if (fs.existsSync(this.config.custom_func)) {
                 try {
                     const PluggableClass = require(this.config.custom_func);
-                    this.pluggable = new PluggableClass({config: this.config});
+                    this.pluggable = new PluggableClass({
+                        config: this.config,
+                        context: this.context
+                    });
                 } catch (exception) {
                     console.error(exception);
                     return false;
@@ -223,7 +227,7 @@ class ScrapeManager {
             user_agent = this.config.user_agent;
         }
 
-        if (this.config.random_user_agent === true) {
+        if (this.config.random_user_agent) {
             user_agent = ua.random_user_agent(this.config);
         }
 
@@ -423,17 +427,14 @@ class ScrapeManager {
         log(this.config, 1, `Scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
         log(this.config, 1, `On average ms/request: ${ms_per_request}ms/request`);
 
-        if (this.config.compress === true) {
+        if (this.config.compress) {
             results = JSON.stringify(results);
             // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
             results = zlib.deflateSync(results).toString('base64');
         }
 
         if (this.pluggable && this.pluggable.handle_results) {
-            await this.pluggable.handle_results({
-                config: this.config,
-                results: results,
-            });
+            await this.pluggable.handle_results(results);
         }
 
         if (this.config.chunk_lines) {
@@ -450,7 +451,7 @@ class ScrapeManager {
         log(this.config, 2, metadata);
 
         if (this.pluggable && this.pluggable.handle_metadata) {
-            await this.pluggable.handle_metadata({metadata: metadata, config: this.config});
+            await this.pluggable.handle_metadata(metadata);
         }
 
         if (this.config.output_file) {

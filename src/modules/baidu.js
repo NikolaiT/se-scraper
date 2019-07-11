@@ -17,14 +17,7 @@ class BaiduScraper extends Scraper {
             })
         });
 
-        const cleaned = [];
-        for (var i=0; i < results.length; i++) {
-            let res = results[i];
-            if (res.link && res.link.trim()) {
-                res.rank = this.result_rank++;
-                cleaned.push(res);
-            }
-        }
+        const cleaned = this.clean_results(results, ['link']);
 
         return {
             time: (new Date()).toUTCString(),

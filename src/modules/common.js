@@ -6,7 +6,7 @@ function log(config, loglevel, msg = null, cb = null) {
     if (loglevel <= config.debug_level) {
         if (msg) {
             if (typeof msg == 'object') {
-                console.dir(msg, {depth: null, colors: true});
+                console.dir(msg, {depth: null, colors: false});
             } else {
                 console.log('[i] ' + msg);
             }

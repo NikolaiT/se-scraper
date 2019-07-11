@@ -31,14 +31,7 @@ class DuckduckgoScraper extends Scraper {
 
         let effective_query = $('a.js-spelling-suggestion-link').attr('data-query') || '';
 
-        const cleaned = [];
-        for (var i=0; i < results.length; i++) {
-            let res = results[i];
-            if (res.link && res.link.trim() && res.title && res.title.trim()) {
-                res.rank = this.result_rank++;
-                cleaned.push(res);
-            }
-        }
+        const cleaned = this.clean_results(results, ['title', 'link']);
 
         return {
             time: (new Date()).toUTCString(),
