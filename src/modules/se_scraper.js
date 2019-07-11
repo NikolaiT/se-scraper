@@ -226,10 +226,12 @@ module.exports = class Scraper {
                     log(this.config, 2, this.last_response);
                 }
 
-                try {
-                    // Try to save a screenshot of the error
-                    await this.page.screenshot({path: `debug_se_scraper_${this.config.search_engine_name}_${keyword}.png`});
-                } catch (e) {
+                if (this.config.debug_level > 2) {
+                    try {
+                        // Try to save a screenshot of the error
+                        await this.page.screenshot({path: `debug_se_scraper_${this.config.search_engine_name}_${keyword}.png`});
+                    } catch (e) {
+                    }
                 }
 
                 if (await this.detected() === true) {
