@@ -12,8 +12,8 @@ const se_scraper = require('./../src/node_scraper.js');
     };
 
     let scrape_job = {
-        search_engine: 'google_shopping',
-        keywords: ['wasserpistole'],
+        search_engine: 'google',
+        keywords: ['mercedes reifen'],
         num_pages: 1,
     };
 

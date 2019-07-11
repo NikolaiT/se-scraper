@@ -63,6 +63,66 @@ class GoogleScraper extends Scraper {
             })
         });
 
+        // parse right side product information
+        var right_side_info = {};
+        right_side_info.review = $('#rhs .cu-container g-review-stars span').attr('aria-label');
+        right_side_info.title = $('#rhs .cu-container g-review-stars').parent().find('div:first-child').text();
+        right_side_info.num_reviews = $('#rhs .cu-container g-review-stars').parent().find('div:nth-of-type(2)').text();
+        right_side_info.vendors = [];
+        right_side_info.info = $('#rhs_block > div > div > div > div:nth-child(5) > div > div').text();
+
+        $('#rhs .cu-container .rhsvw > div > div:nth-child(4) > div > div:nth-child(3) > div').each((i, element) => {
+            right_side_info.vendors.push({
+                price: $(element).find('span:nth-of-type(1)').text(),
+                merchant_name: $(element).find('span:nth-child(3) a:nth-child(2)').text(),
+                merchant_ad_link: $(element).find('span:nth-child(3) a:first-child').attr('href'),
+                merchant_link: $(element).find('span:nth-child(3) a:nth-child(2)').attr('href'),
+                source_name: $(element).find('span:nth-child(4) a').text(),
+                source_link: $(element).find('span:nth-child(4) a').attr('href'),
+                info: $(element).find('div span').text(),
+                shipping: $(element).find('span:last-child > span').text(),
+            })
+        });
+
+        if (!right_side_info.title) {
+            right_side_info = {};
+        }
+
+        // parse top main column product information
+        // #tvcap .pla-unit
+        var top_products = [];
+        $('#tvcap .pla-unit').each((i, element) => {
+            top_products.push({
+                tracking_link: $(element).find('.pla-unit-title a:first-child').attr('href'),
+                link: $(element).find('.pla-unit-title a:nth-child(2)').attr('href'),
+                title: $(element).find('.pla-unit-title a:nth-child(2) span').text(),
+                price: $(element).find('.pla-unit-title + div').text(),
+                merchant_name: $(element).find('.pla-unit-title').parent().find('div > span').text(),
+                shipping: $(element).find('.pla-extensions-container div:nth-of-type(1)').text(),
+                vendor_link: $(element).find('.pla-extensions-container div > a').attr('href'),
+            })
+        });
+
+        top_products = this.clean_results(top_products, ['title', 'link']);
+
+        // parse top right product information
+        // #tvcap .pla-unit
+        var right_products = [];
+        $('#rhs_block .pla-unit').each((i, element) => {
+            right_products.push({
+                tracking_link: $(element).find('.pla-unit-title a:first-child').attr('href'),
+                link: $(element).find('.pla-unit-title a:nth-child(2)').attr('href'),
+                title: $(element).find('.pla-unit-title a:nth-child(2) span:first-child').first().text(),
+                price: $(element).find('.pla-unit-title + div').text(),
+                merchant_name: $(element).find('.pla-unit-title').parent().find('div > span:first-child').text(),
+                shipping: $(element).find('.pla-extensions-container > div').text(),
+                vendor_link: $(element).find('.pla-extensions-container div > a').attr('href'),
+                vendor_name: $(element).find('.pla-extensions-container div > a > div').text(),
+            })
+        });
+
+        right_products = this.clean_results(right_products, ['title', 'link']);
+
         // 'Ergebnisse für', 'Showing results for'
         let no_results = this.no_results(
             ['Es wurden keine mit deiner Suchanfrage', 'did not match any documents', 'Keine Ergebnisse für',
@@ -82,6 +142,9 @@ class GoogleScraper extends Scraper {
             num_results: $('#resultStats').text(),
             no_results: no_results,
             effective_query: effective_query,
+            right_info: right_side_info,
+            top_products: top_products,
+            right_products: right_products,
             top_ads: top_ads,
             bottom_ads: bottomads,
             places: places,
