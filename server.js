@@ -9,22 +9,32 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.use(express.json());
-app.post('/', (req, res) => {
-    se_scraper.scrape(req.body, (err, response) =>{
-        if (err) { console.error(err) }
-        //console.log(req.body)
+let browser_config = {
+    random_user_agent: true,
+    headless : true,
+    debug_level: 1,
+    use_proxies_only: true,
+    puppeteer_cluster_config: {
+        timeout: 10 * 60 * 1000, // max timeout set to 10 minutes
+        monitor: false,
+        concurrency: 1, // one scraper per tab
+        maxConcurrency: 2, // scrape with 5 tabs
+    }
+};
+app.post('/', async (req, res) => {
+    // var scraper = new se_scraper.ScrapeManager(browser_config);
+    // await scraper.start();
+    // console.log('======================');
+
+    // var results = await scraper.scrape(req.body);
+    let results = await se_scraper.scrape(browser_config, req.body);
+
+    console.dir(results, {depth: null, colors: true});
     
-        /* response object has the following properties:
-    
-            response.results - json object with the scraping results
-            response.metadata - json object with metadata information
-            response.statusCode - status code of the scraping process
-         */
-    
-        console.dir(response.statusCode, {depth: null, colors: true});
-        console.dir(response.metadata, {depth: null, colors: true});
-       res.send(response.results)
-    });
+    res.send(results);
+
+    //await scraper.quit();
+
 });
 
 app.listen(PORT, HOST);
