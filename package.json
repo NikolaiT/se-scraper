@@ -21,6 +21,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.4",
     "cheerio": "^1.0.0-rc.2",
     "debug": "^4.1.1",
     "got": "^9.6.0",
