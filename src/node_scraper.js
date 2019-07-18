@@ -342,7 +342,6 @@ class ScrapeManager {
         Object.assign(this.config, scrape_config);
 
         var results = {};
-        var html_output = {};
         var num_requests = 0;
         var metadata = {};
 
@@ -365,7 +364,6 @@ class ScrapeManager {
             results = res.results;
             metadata = this.scraper.metadata;
             num_requests = this.scraper.num_requests;
-            html_output = this.scraper.html_output;
 
         } else {
             // Each browser will get N/(K+1) keywords and will issue N/(K+1) * M total requests to the search engine.
@@ -409,10 +407,7 @@ class ScrapeManager {
 
             // Merge results per keyword
             for (let promiseReturn of promiseReturns) {
-                for (let keyword of this.config.keywords) {
-                    results[keyword] = promiseReturn.results[keyword];
-                    html_output[keyword] = promiseReturn.html_output[keyword];
-                }
+                Object.assign(results, promiseReturn);
             }
 
             // count total requests among all scraper instances
@@ -461,7 +456,6 @@ class ScrapeManager {
 
         return {
             results: results,
-            html_output: (this.config.html_output) ? html_output : undefined,
             metadata: metadata || {},
         };
     }

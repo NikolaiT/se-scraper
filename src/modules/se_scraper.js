@@ -71,10 +71,7 @@ module.exports = class Scraper {
             await this.scraping_loop();
         }
 
-        return {
-            'results': this.results,
-            'html_output': this.html_output,
-        };
+        return this.results;
     }
 
     /**
@@ -161,7 +158,6 @@ module.exports = class Scraper {
             this.num_keywords++;
             this.keyword = keyword;
             this.results[keyword] = {};
-            this.html_output[keyword] = {};
             this.result_rank = 1;
 
             if (this.pluggable && this.pluggable.before_keyword_scraped) {
@@ -193,13 +189,12 @@ module.exports = class Scraper {
                     }
 
                     let html = await this.page.content();
-
-                    if (this.config.html_output) {
-                        this.html_output[keyword][this.page_num] = html;
-                    }
-
                     let parsed = this.parse(html);
                     this.results[keyword][this.page_num] = parsed ? parsed : await this.parse_async(html);
+
+                    if (this.config.html_output) {
+                        this.results[keyword][this.page_num].html = html;
+                    }
 
                     this.page_num += 1;
 

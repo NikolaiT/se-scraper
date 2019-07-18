@@ -48,6 +48,17 @@
 ### 12.6.2019
     - remove unnecessary sleep() calls and replace with waitFor selectors
 
+
+
+### 16.7.2019
+
+- resolve issues
+    - fix this https://github.com/NikolaiT/se-scraper/issues/37
+    
+- use puppeteer stealth plugin
+- user random user agents plugin
+- add screenshot capability (make the screen after parsing)
+
 ### TODO:
 1. fix googlenewsscraper waiting for results and parsing. remove the static sleep [done]
 2. when using multiple browsers and random user agent, pass a random user agent to each perBrowserOptions
