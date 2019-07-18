@@ -4,17 +4,20 @@ const se_scraper = require('./../src/node_scraper.js');
     let browser_config = {
         debug_level: 1,
         test_evasion: false,
-        headless: false,
-        block_assets: false,
-        random_user_agent: false,
-        log_http_headers: false,
-        html_output: false,
+        log_http_headers: true,
+        random_user_agent: true,
     };
 
     let scrape_job = {
         search_engine: 'google',
-        keywords: ['mercedes reifen'],
+        keywords: ['too tired all the time'],
         num_pages: 1,
+        google_settings: {
+            "gl": "us",
+            "hl": "en",
+            "start": 0,
+            "num": 10
+        }
     };
 
     var scraper = new se_scraper.ScrapeManager(browser_config);

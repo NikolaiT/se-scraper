@@ -53,11 +53,14 @@
 ### 16.7.2019
 
 - resolve issues
-    - fix this https://github.com/NikolaiT/se-scraper/issues/37
+    - fix this https://github.com/NikolaiT/se-scraper/issues/37 [done]
     
 - use puppeteer stealth plugin
-- user random user agents plugin
+
+- user random user agents plugin: https://github.com/intoli/user-agents
+
 - add screenshot capability (make the screen after parsing)
+    - store as b64
 
 ### TODO:
 1. fix googlenewsscraper waiting for results and parsing. remove the static sleep [done]

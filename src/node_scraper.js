@@ -1,13 +1,14 @@
 const zlib = require('zlib');
 var fs = require('fs');
 var os = require("os");
+
+const UserAgent = require('user-agents');
 const google = require('./modules/google.js');
 const amazon = require('./modules/amazon.js');
 const bing = require('./modules/bing.js');
 const baidu = require('./modules/baidu.js');
 const infospace = require('./modules/infospace.js');
 const youtube = require('./modules/youtube.js');
-const ua = require('./modules/user_agents.js');
 const duckduckgo = require('./modules/duckduckgo.js');
 const tickersearch = require('./modules/ticker_search.js');
 const { Cluster } = require('./puppeteer-cluster/dist/index.js');
@@ -131,8 +132,6 @@ class ScrapeManager {
             // check if headless chrome escapes common detection techniques
             // this is a quick test and should be used for debugging
             test_evasion: false,
-            // you may pass your own list of user agents
-            user_agents: [],
             apply_evasion_techniques: true,
             // settings for puppeteer-cluster
             puppeteer_cluster_config: {
@@ -228,7 +227,8 @@ class ScrapeManager {
         }
 
         if (this.config.random_user_agent) {
-            user_agent = ua.random_user_agent(this.config);
+            const userAgent = new UserAgent();
+            user_agent = userAgent.toString();
         }
 
         if (user_agent) {
@@ -302,10 +302,11 @@ class ScrapeManager {
 
             // Give the per browser options each a random user agent when random user agent is set
             while (perBrowserOptions.length < this.numClusters) {
+                const userAgent = new UserAgent();
                 perBrowserOptions.push({
                     headless: this.config.headless,
                     ignoreHTTPSErrors: true,
-                    args: default_chrome_flags.slice().concat(`--user-agent=${ua.random_user_agent(this.config)}`)
+                    args: default_chrome_flags.slice().concat(`--user-agent=${userAgent.toString()}`)
                 })
             }
 

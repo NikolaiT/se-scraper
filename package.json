@@ -27,7 +27,8 @@
     "lodash": "^4.17.14",
     "proxy-chain": "^0.2.7",
     "puppeteer": "^1.17.0",
-    "puppeteer-cluster": "^0.13.0"
+    "puppeteer-cluster": "^0.13.0",
+    "user-agents": "^1.0.321"
   },
   "devDependencies": {
     "chai": "^4.2.0",
