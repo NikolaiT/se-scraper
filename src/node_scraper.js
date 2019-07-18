@@ -108,6 +108,8 @@ class ScrapeManager {
             output_file: '',
             // whether to also passthru all the html output of the serp pages
             html_output: false,
+            // whether to return a screenshot of serp pages as b64 data
+            screen_output: false,
             // whether to prevent images, css, fonts and media from being loaded
             // will speed up scraping a great deal
             block_assets: true,

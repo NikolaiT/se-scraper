@@ -6,6 +6,8 @@ const se_scraper = require('./../src/node_scraper.js');
         test_evasion: false,
         log_http_headers: true,
         random_user_agent: true,
+        apply_evasion_techniques: true,
+        screen_output: true,
     };
 
     let scrape_job = {

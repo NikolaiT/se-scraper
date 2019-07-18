@@ -29,11 +29,8 @@ module.exports = class Scraper {
         this.keywords = config.keywords;
 
         this.STANDARD_TIMEOUT = 10000;
-        // longer timeout when using proxies
-        this.PROXY_TIMEOUT = 15000;
         this.SOLVE_CAPTCHA_TIME = 45000;
 
-        this.html_output = {};
         this.results = {};
         this.result_rank = 1;
         // keep track of the requests done
@@ -52,7 +49,6 @@ module.exports = class Scraper {
                 }
             }
         }
-
     }
 
     async run({page, data}) {
@@ -103,12 +99,10 @@ module.exports = class Scraper {
 
         if (this.config.test_evasion === true) {
             // Navigate to the page that will perform the tests.
-            const testUrl = 'https://intoli.com/blog/' +
-                'not-possible-to-block-chrome-headless/chrome-headless-test.html';
+            const testUrl = 'https://bot.sannysoft.com';
             await this.page.goto(testUrl);
-
             // Save a screenshot of the results.
-            await this.page.screenshot({path: 'headless-test-result.png'});
+            await this.page.screenshot({path: 'headless-evasion-result.png'});
         }
 
         if (this.config.log_http_headers === true) {
@@ -194,6 +188,13 @@ module.exports = class Scraper {
 
                     if (this.config.html_output) {
                         this.results[keyword][this.page_num].html = html;
+                    }
+
+                    if (this.config.screen_output) {
+                        this.results[keyword][this.page_num].screenshot = await this.page.screenshot({
+                            encoding: 'base64',
+                            fullPage: false,
+                        });
                     }
 
                     this.page_num += 1;
