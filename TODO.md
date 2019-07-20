@@ -48,6 +48,21 @@
 ### 12.6.2019
     - remove unnecessary sleep() calls and replace with waitFor selectors
 
+
+### 16.7.2019
+
+- resolve issues
+    - fix this https://github.com/NikolaiT/se-scraper/issues/37 [done]
+    
+- use puppeteer stealth plugin: https://www.npmjs.com/package/puppeteer-extra-plugin-stealth
+
+    - we will need to load at the concurrency impl of puppeteer-cluster [no typescript support :(), I will not support this right now]
+
+- user random user agents plugin: https://github.com/intoli/user-agents [done]
+
+- add screenshot capability (make the screen after parsing)
+    - store as b64 [done]
+
 ### TODO:
 1. fix googlenewsscraper waiting for results and parsing. remove the static sleep [done]
 2. when using multiple browsers and random user agent, pass a random user agent to each perBrowserOptions

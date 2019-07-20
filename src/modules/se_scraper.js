@@ -29,11 +29,8 @@ module.exports = class Scraper {
         this.keywords = config.keywords;
 
         this.STANDARD_TIMEOUT = 10000;
-        // longer timeout when using proxies
-        this.PROXY_TIMEOUT = 15000;
         this.SOLVE_CAPTCHA_TIME = 45000;
 
-        this.html_output = {};
         this.results = {};
         this.result_rank = 1;
         // keep track of the requests done
@@ -52,7 +49,6 @@ module.exports = class Scraper {
                 }
             }
         }
-
     }
 
     async run({page, data}) {
@@ -71,10 +67,7 @@ module.exports = class Scraper {
             await this.scraping_loop();
         }
 
-        return {
-            'results': this.results,
-            'html_output': this.html_output,
-        };
+        return this.results;
     }
 
     /**
@@ -106,12 +99,10 @@ module.exports = class Scraper {
 
         if (this.config.test_evasion === true) {
             // Navigate to the page that will perform the tests.
-            const testUrl = 'https://intoli.com/blog/' +
-                'not-possible-to-block-chrome-headless/chrome-headless-test.html';
+            const testUrl = 'https://bot.sannysoft.com';
             await this.page.goto(testUrl);
-
             // Save a screenshot of the results.
-            await this.page.screenshot({path: 'headless-test-result.png'});
+            await this.page.screenshot({path: 'headless-evasion-result.png'});
         }
 
         if (this.config.log_http_headers === true) {
@@ -161,7 +152,6 @@ module.exports = class Scraper {
             this.num_keywords++;
             this.keyword = keyword;
             this.results[keyword] = {};
-            this.html_output[keyword] = {};
             this.result_rank = 1;
 
             if (this.pluggable && this.pluggable.before_keyword_scraped) {
@@ -193,13 +183,19 @@ module.exports = class Scraper {
                     }
 
                     let html = await this.page.content();
-
-                    if (this.config.html_output) {
-                        this.html_output[keyword][this.page_num] = html;
-                    }
-
                     let parsed = this.parse(html);
                     this.results[keyword][this.page_num] = parsed ? parsed : await this.parse_async(html);
+
+                    if (this.config.html_output) {
+                        this.results[keyword][this.page_num].html = html;
+                    }
+
+                    if (this.config.screen_output) {
+                        this.results[keyword][this.page_num].screenshot = await this.page.screenshot({
+                            encoding: 'base64',
+                            fullPage: false,
+                        });
+                    }
 
                     this.page_num += 1;
 

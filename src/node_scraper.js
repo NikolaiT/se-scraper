@@ -1,13 +1,14 @@
 const zlib = require('zlib');
 var fs = require('fs');
 var os = require("os");
+
+const UserAgent = require('user-agents');
 const google = require('./modules/google.js');
 const amazon = require('./modules/amazon.js');
 const bing = require('./modules/bing.js');
 const baidu = require('./modules/baidu.js');
 const infospace = require('./modules/infospace.js');
 const youtube = require('./modules/youtube.js');
-const ua = require('./modules/user_agents.js');
 const duckduckgo = require('./modules/duckduckgo.js');
 const tickersearch = require('./modules/ticker_search.js');
 const { Cluster } = require('./puppeteer-cluster/dist/index.js');
@@ -107,6 +108,8 @@ class ScrapeManager {
             output_file: '',
             // whether to also passthru all the html output of the serp pages
             html_output: false,
+            // whether to return a screenshot of serp pages as b64 data
+            screen_output: false,
             // whether to prevent images, css, fonts and media from being loaded
             // will speed up scraping a great deal
             block_assets: true,
@@ -131,8 +134,6 @@ class ScrapeManager {
             // check if headless chrome escapes common detection techniques
             // this is a quick test and should be used for debugging
             test_evasion: false,
-            // you may pass your own list of user agents
-            user_agents: [],
             apply_evasion_techniques: true,
             // settings for puppeteer-cluster
             puppeteer_cluster_config: {
@@ -228,7 +229,8 @@ class ScrapeManager {
         }
 
         if (this.config.random_user_agent) {
-            user_agent = ua.random_user_agent(this.config);
+            const userAgent = new UserAgent();
+            user_agent = userAgent.toString();
         }
 
         if (user_agent) {
@@ -302,10 +304,11 @@ class ScrapeManager {
 
             // Give the per browser options each a random user agent when random user agent is set
             while (perBrowserOptions.length < this.numClusters) {
+                const userAgent = new UserAgent();
                 perBrowserOptions.push({
                     headless: this.config.headless,
                     ignoreHTTPSErrors: true,
-                    args: default_chrome_flags.slice().concat(`--user-agent=${ua.random_user_agent(this.config)}`)
+                    args: default_chrome_flags.slice().concat(`--user-agent=${userAgent.toString()}`)
                 })
             }
 
@@ -342,7 +345,6 @@ class ScrapeManager {
         Object.assign(this.config, scrape_config);
 
         var results = {};
-        var html_output = {};
         var num_requests = 0;
         var metadata = {};
 
@@ -365,7 +367,6 @@ class ScrapeManager {
             results = res.results;
             metadata = this.scraper.metadata;
             num_requests = this.scraper.num_requests;
-            html_output = this.scraper.html_output;
 
         } else {
             // Each browser will get N/(K+1) keywords and will issue N/(K+1) * M total requests to the search engine.
@@ -409,10 +410,7 @@ class ScrapeManager {
 
             // Merge results per keyword
             for (let promiseReturn of promiseReturns) {
-                for (let keyword of this.config.keywords) {
-                    results[keyword] = promiseReturn.results[keyword];
-                    html_output[keyword] = promiseReturn.html_output[keyword];
-                }
+                Object.assign(results, promiseReturn);
             }
 
             // count total requests among all scraper instances
@@ -461,7 +459,6 @@ class ScrapeManager {
 
         return {
             results: results,
-            html_output: (this.config.html_output) ? html_output : undefined,
             metadata: metadata || {},
         };
     }
