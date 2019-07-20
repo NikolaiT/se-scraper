@@ -63,3 +63,4 @@ typings/
 
 .idea/
 GoogleScraperPup.iml
+package-lock.json

@@ -2,10 +2,10 @@ const ProxyChain = require('proxy-chain');
 // Prints something like "localhost:56836"
 const server = new ProxyChain.Server({
     // Port where the server will listen. By default 8000.
-    port: 55555,
+    port: process.env.PROXY_PORT,
  
     // Enables verbose logging
-    verbose: true,
+    verbose: process.env.PROXY_VERBOSE,
     // isHttp: true,
     // username:'',
     // password:'',
@@ -27,7 +27,7 @@ const server = new ProxyChain.Server({
     //                  or other protocols
     // * connectionId - Unique ID of the HTTP connection. It can be used to obtain traffic statistics.
     prepareRequestFunction: ({ request, username, password, hostname, port, isHttp, connectionId }) => {
-        return {
+      return {
             upstreamProxyUrl: process.env.UPSTREAM_PROXY_URL
         };
     },
@@ -41,7 +41,7 @@ server.listen(() => {
 // Emitted when HTTP connection is closed
 server.on('connectionClosed', ({ connectionId, stats }) => {
   console.log(`Connection ${connectionId} closed`);
-  console.dir(stats);
+  //console.dir(stats);
 });
  
 // Emitted when HTTP request fails

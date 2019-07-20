@@ -21,9 +21,9 @@
   },
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
     "cheerio": "^1.0.0-rc.2",
     "debug": "^4.1.1",
+    "express": "^4.16.4",
     "got": "^9.6.0",
     "lodash": "^4.17.14",
     "proxy-chain": "^0.2.7",

@@ -66,4 +66,4 @@ RUN npm install --ignore-scripts
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 EXPOSE $PORT
-CMD [ "node", "server.js" ]
+CMD [ "node", "server/server.js" ]
