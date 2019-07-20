@@ -21,14 +21,16 @@
   },
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
     "cheerio": "^1.0.0-rc.2",
     "debug": "^4.1.1",
+    "express": "^4.16.4",
     "got": "^9.6.0",
     "lodash": "^4.17.14",
     "proxy-chain": "^0.2.7",
     "puppeteer": "^1.17.0",
-    "puppeteer-cluster": "^0.13.0"
+    "puppeteer-cluster": "^0.13.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",
