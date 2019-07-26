@@ -8,28 +8,29 @@ const se_scraper = require('../src/node_scraper.js');
         CONCURRENCY_BROWSER: 3, // no cookie sharing and individual processes (uses contexts)
     };
     let browser_config = {
-        search_engine: 'google',
+        //search_engine: 'bing',
         debug_level: 1,
         sleep_range: [1,3],
-        output_file: 'google.json',
+        //output_file: 'bing.json',
+        block_assets: true,
         random_user_agent: true,
         use_proxies_only: true,
         //chrome_flags: ['--proxy-server=http://0.0.0.0:55555'],
         // proxy: 'http://0.0.0.0:55555',
-        //proxy_file: 'proxy_list',
+        //proxy_file: 'proxy_list', 
         proxies: ['http://0.0.0.0:55555',
-        'http://0.0.0.0:55555',
-        'http://0.0.0.0:55555',
-        'http://0.0.0.0:55555'],
+        'http://0.0.0.0:55556',
+        'http://0.0.0.0:55557'
+        ],
         is_local: false,
         throw_on_detection: false,
         headless: false,
         puppeteer_cluster_config: {
             headless: false,
-            timeout: 60 * 60 * 1000, // max timeout set to 30 minutes
+            timeout: 12 * 60 * 60 * 1000, // max timeout set to 12 hours
             monitor: false,
-            concurrency: Cluster.CONCURRENCY_BROWSER, // 3 == CONCURRENCY_BROWSER
-            maxConcurrency: 5, // 3 browsers will scrape
+            concurrency: Cluster.CONCURRENCY_BROWSER, //!!!DON't change 3 == CONCURRENCY_BROWSER
+            maxConcurrency: 1, // 3 browsers will scrape
         },
     };
     let keywords = ['New York',
@@ -135,18 +136,20 @@ const se_scraper = require('../src/node_scraper.js');
     ];
     let scrape_job = {
         random_user_agent: true,
-        search_engine: 'google',
+        search_engine: 'bing',
+        output_file: 'bing.json',
         keywords: keywords,
         num_pages: 1,
     };
 
     var scraper = new se_scraper.ScrapeManager(browser_config);
 
-    await scraper.start();
+
+    await scraper.start(); 
 
     var results = await scraper.scrape(scrape_job);
 
-    console.dir(results, {depth: null, colors: true});
+    console.dir(results.metadata, {depth: null, colors: true});
 
     await scraper.quit();
 })();

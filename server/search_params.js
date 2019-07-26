@@ -17,8 +17,8 @@ const se_scraper = require('../src/node_scraper.js');
         //chrome_flags: ['--proxy-server=http://0.0.0.0:55555'],
         // proxy: 'http://0.0.0.0:55555',
         proxies: ['http://0.0.0.0:55555',
-        'http://0.0.0.0:55555',
-        'http://0.0.0.0:55555'],
+        'http://0.0.0.0:55556',
+        'http://0.0.0.0:55557'],
         is_local: false,
         throw_on_detection: false,
         headless: false,
@@ -30,23 +30,15 @@ const se_scraper = require('../src/node_scraper.js');
             maxConcurrency: 1, // 3 browsers will scrape
         },
     };
-    let keywords = ['New York',
-    'Los Angeles',
-    'Chicago',
-    'Houston',
-    'Philadelphia',
-    'Phoenix',
-    'San Antonio',
-    'San Diego',
-    'Dallas',
-    'San Jose'
+    let keywords = ['site:twitter.com Donald trump',
+    'link:dataflowkit.com',
+    'inurl:view/view.shtml'
     ];
     let scrape_job = {
         random_user_agent: true,
         search_engine: 'google',
         keywords: keywords,
-        num_pages: 1,
-        region: "de",
+        num_pages: 1
     };
 
     var scraper = new se_scraper.ScrapeManager(browser_config);
