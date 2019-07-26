@@ -3,8 +3,8 @@ const se_scraper = require('../index.js');
 const express = require('express');
 
 // Constants
-const PORT = process.env.SE_SCRAPER_PORT;
-const HOST = process.env.SE_SCRAPER_HOST;
+const PORT = process.env.PORT;
+const HOST = process.env.HOST;
 
 // App
 const app = express();
@@ -16,7 +16,7 @@ let browser_config = {
     sleep_range: [1,2],
     use_proxies_only: true,
     puppeteer_cluster_config: {
-        timeout: 10 * 60 * 1000, // max timeout set to 10 minutes
+        timeout: 30 * 60 * 1000, // max timeout set to 30 minutes
         monitor: false,
         concurrency: 1, // one scraper per tab
         maxConcurrency: 1, // scrape with 5 tabs
