@@ -1,3 +1,4 @@
+'use strict';
 const se_scraper =  require('./../index.js');
 const chai = require('chai');
 chai.use(require('chai-string'));
@@ -110,7 +111,6 @@ async function no_results_test() {
 function test_case_no_results(response) {
     assert.equal(response.metadata.num_requests, 1);
 
-    results = response.results;
     for (let query in response.results) {
 
         assert.containsAllKeys(response.results, keywords_no_results, 'not all keywords were scraped.');
@@ -123,7 +123,7 @@ function test_case_no_results(response) {
 
             assert.containsAllKeys(obj, ['results', 'time', 'no_results', 'num_results', 'effective_query'], 'not all keys are in the object');
 
-            assert(obj.results.length === 0, 'results must have 0 SERP objects');
+            assert.strictEqual(obj.results.length, 0, 'results must have 0 SERP objects');
             assert.equal(obj.no_results, true, 'no results should be true');
             assert.isEmpty(obj.num_results, 'no results should be a empty string');
             assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');

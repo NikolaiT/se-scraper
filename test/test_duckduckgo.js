@@ -1,3 +1,4 @@
+'use strict';
 const se_scraper =  require('./../index.js');
 const chai = require('chai');
 chai.use(require('chai-string'));

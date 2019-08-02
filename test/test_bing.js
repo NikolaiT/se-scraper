@@ -1,3 +1,4 @@
+'use strict';
 const se_scraper =  require('./../index.js');
 const chai = require('chai');
 chai.use(require('chai-string'));
@@ -114,7 +115,6 @@ async function no_results_test() {
 function test_case_no_results(response) {
     assert.equal(response.metadata.num_requests, 1);
 
-    results = response.results;
     for (let query in response.results) {
 
         assert.containsAllKeys(response.results, keywords_no_results, 'not all keywords were scraped.');
@@ -163,7 +163,6 @@ async function effective_query_test() {
 function test_case_effective_query(response) {
     assert.equal(response.metadata.num_requests, 1);
 
-    results = response.results;
     for (let query in response.results) {
 
         assert.containsAllKeys(response.results, effective_query_keywords, 'not all keywords were scraped.');

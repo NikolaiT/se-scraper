@@ -1,5 +1,6 @@
+'use strict';
 const se_scraper =  require('./../index.js');
-var assert = require('chai').assert;
+const assert = require('chai').assert;
 
 const normal_search_keywords = ['apple juice'];
 
@@ -84,6 +85,7 @@ function queryargs_search_test_case(err, response) {
     }
 }
 
-(async () => {
-    await queryargs_search_test();
-})();
+describe('Google with query arguments', function(){
+    this.timeout(30000);
+    it('query args search test', queryargs_search_test);
+});

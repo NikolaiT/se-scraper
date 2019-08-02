@@ -1,5 +1,6 @@
+'use strict';
 const se_scraper =  require('./../index.js');
-var assert = require('chai').assert;
+const assert = require('chai').assert;
 
 /*
  * Use chai and mocha for tests.
@@ -208,8 +209,9 @@ function marketwatch_search_test_case(err, response) {
 }
 
 
-(async () => {
-    await reuters_search_test();
-    await cnbc_search_test();
-    await marketwatch_search_test();
-})();
+describe('Ticker', function(){
+    this.timeout(30000);
+    it('Reuters search test', reuters_search_test);
+    it('CNBC search test', cnbc_search_test);
+    it('Marketwatch search test', marketwatch_search_test);
+});

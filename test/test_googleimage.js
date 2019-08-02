@@ -1,5 +1,6 @@
+'use strict';
 const se_scraper =  require('./../index.js');
-var assert = require('chai').assert;
+const assert = require('chai').assert;
 
 /*
  * Use chai and mocha for tests.
@@ -73,6 +74,7 @@ function normal_image_search_test_case(response) {
     }
 }
 
-(async () => {
-    await normal_image_search_test();
-})();
+describe('Google Image', function(){
+    this.timeout(30000);
+    it('normal image search test', normal_image_search_test);
+});
