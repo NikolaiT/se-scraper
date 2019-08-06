@@ -1,8 +1,9 @@
 # Search Engine Scraper - se-scraper
 
-[![npm](https://img.shields.io/npm/v/se-scraper.svg?style=for-the-badge)](https://www.npmjs.com/package/se-scraper)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=for-the-badge)](https://www.paypal.me/incolumitas)
-[![Known Vulnerabilities](https://snyk.io/test/github/NikolaiT/se-scraper/badge.svg)](https://snyk.io/test/github/NikolaiT/se-scraper)
+THIS IS A CUSTOM FORK of se-scraper, our changes will or have been
+upstreamed.
+
+The original package is [here](https://www.npmjs.com/package/se-scraper).
 
 This node module allows you to scrape search engines concurrently with different proxies.
 
