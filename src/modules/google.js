@@ -1,3 +1,4 @@
+'use strict';
 const cheerio = require('cheerio');
 const Scraper = require('./se_scraper');
 const common = require('./common.js');
@@ -175,11 +176,7 @@ class GoogleScraper extends Scraper {
 
         this.last_response = await this.page.goto(startUrl);
 
-        try {
-            await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
-        } catch (e) {
-            return false;
-        }
+        await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
 
         return true;
     }
@@ -253,12 +250,9 @@ class GoogleNewsOldScraper extends Scraper {
     async load_start_page() {
         let startUrl = this.build_start_url('https://www.google.com/search?source=lnms&tbm=nws&') || 'https://www.google.com/search?source=lnms&tbm=nws';
 
-        try {
         await this.page.goto(startUrl);
         await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
-        } catch (e) {
-        return false;
-        }
+
         return true;
     }
 
