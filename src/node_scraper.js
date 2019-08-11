@@ -110,6 +110,8 @@ class ScrapeManager {
             html_output: false,
             // whether to return a screenshot of serp pages as b64 data
             screen_output: false,
+            // Scrape url from local file. Mainly used for testing.
+            scrape_from_file: '',
             // whether to prevent images, css, fonts and media from being loaded
             // will speed up scraping a great deal
             block_assets: true,
@@ -347,7 +349,6 @@ class ScrapeManager {
         var results = {};
         var num_requests = 0;
         var metadata = {};
-
         var startTime = Date.now();
 
         if (this.config.keywords && this.config.search_engine) {

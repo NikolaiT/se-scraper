@@ -58,8 +58,11 @@ module.exports = class Scraper {
         }
 
         await this.page.setViewport({ width: 1920, height: 1040 });
+        let do_continue = true;
 
-        let do_continue = await this.load_search_engine();
+        if (this.config.scrape_from_file.length <= 0) {
+            do_continue = await this.load_search_engine();
+        }
 
         if (!do_continue) {
             console.error('Failed to load the search engine: load_search_engine()');
@@ -167,7 +170,13 @@ module.exports = class Scraper {
 
             try {
 
-                await this.search_keyword(keyword);
+                // load scraped page from file if `scrape_from_file` is given
+                if (this.config.scrape_from_file.length <= 0) {
+                    await this.search_keyword(keyword);
+                } else {
+                    this.last_response = await this.page.goto(this.config.scrape_from_file);
+                }
+
                 // when searching the keyword fails, num_requests will not
                 // be incremented.
                 this.num_requests++;

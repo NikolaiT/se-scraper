@@ -12,6 +12,7 @@ If you don't have much technical experience or don't want to purchase proxies, y
 - [Installation](#installation)
 - [Minimal Example](#minimal-example)
 - [Quickstart](#quickstart)
+- [Contribute](#contribute)
 - [Using Proxies](#proxies)
 - [Custom Scrapers](#custom-scrapers)
 - [Examples](#examples)
@@ -140,6 +141,19 @@ const se_scraper = require('se-scraper');
 ```
 
 Start scraping by firing up the command `node run.js`
+
+## Contribute
+
+I really help and love your help! However scraping is a dirty business and it often takes me a lot of time to find failing selectors or missing JS logic. So if any search engine does not yield the results of your liking, please create a **static test case** similar to [this static test of google](test/static_tests/google.js) that fails. I will try to correct se-scraper then.
+
+That's how you would proceed:
+
+1. Copy the [static google test case](test/static_tests/google.js)
+2. Remove all unnecessary testing code
+3. Save a search to file where se-scraper does not work correctly.
+3. Implement the static test case using the saved search html where se-scraper currently fails.
+4. Submit a new issue with the failing test case as pull request
+5. I will fix it! (or better: you submit a pull request directly)
 
 ## Proxies
 

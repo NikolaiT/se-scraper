@@ -135,7 +135,7 @@ class GoogleScraper extends Scraper {
             effective_query = $('#fprs a').text()
         }
 
-        const cleaned = this.clean_results(results, ['title', 'link']);
+        const cleaned = this.clean_results(results, ['title', 'link' , 'snippet']);
 
         return {
             time: (new Date()).toUTCString(),
@@ -254,10 +254,10 @@ class GoogleNewsOldScraper extends Scraper {
         let startUrl = this.build_start_url('https://www.google.com/search?source=lnms&tbm=nws&') || 'https://www.google.com/search?source=lnms&tbm=nws';
 
         try {
-        await this.page.goto(startUrl);
-        await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
+            await this.page.goto(startUrl);
+            await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
         } catch (e) {
-        return false;
+            return false;
         }
         return true;
     }
