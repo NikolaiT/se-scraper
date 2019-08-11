@@ -1,3 +1,4 @@
+'use strict';
 const meta = require('./metadata.js');
 const common = require('./common.js');
 var log = common.log;
@@ -41,12 +42,8 @@ module.exports = class Scraper {
         let settings = this.config[`${this.config.search_engine}_settings`];
         if (settings) {
             if (typeof settings === 'string') {
-                try {
-                    settings = JSON.parse(settings);
-                    this.config[`${this.config.search_engine}_settings`] = settings;
-                } catch (e) {
-                    console.error(e);
-                }
+                settings = JSON.parse(settings);
+                this.config[`${this.config.search_engine}_settings`] = settings;
             }
         }
     }
@@ -123,24 +120,16 @@ module.exports = class Scraper {
         if (this.proxy && this.config.log_ip_address === true) {
             log(this.config, 3, `${this.metadata.ipinfo.ip} vs ${this.proxy}`);
 
-            try {
-                // if the ip returned by ipinfo is not a substring of our proxystring, get the heck outta here
-                if (!this.proxy.includes(this.metadata.ipinfo.ip)) {
-                    console.error(`Proxy ${this.proxy} does not work.`);
-                    return false;
-                } else {
-                    log(this.config, 1, `Using valid Proxy: ${this.proxy}`);
-                }
-            } catch (exception) {
+            // if the ip returned by ipinfo is not a substring of our proxystring, get the heck outta here
+            if (!this.proxy.includes(this.metadata.ipinfo.ip)) {
+                throw new Error(`Proxy output ip ${this.proxy} does not match with provided one`);
+            } else {
+                log(this.config, 1, `Using valid Proxy: ${this.proxy}`);
             }
+
         }
 
-        try {
-            return await this.load_start_page();
-        } catch (e) {
-            console.error(e);
-            return false;
-        }
+        return await this.load_start_page();
     }
 
     /**
@@ -391,7 +380,6 @@ module.exports = class Scraper {
 // This is where we'll put the code to get around the tests.
 async function evadeChromeHeadlessDetection(page) {
 
-    try {
         // Pass the Webdriver Test.
         await page.evaluateOnNewDocument(() => {
             const newProto = navigator.__proto__;
@@ -518,8 +506,4 @@ async function evadeChromeHeadlessDetection(page) {
                 return null;
             };
         });
-
-    } catch (e) {
-        console.error(e);
-    }
 }

@@ -1,3 +1,4 @@
+'use strict';
 const zlib = require('zlib');
 var fs = require('fs');
 var os = require("os");

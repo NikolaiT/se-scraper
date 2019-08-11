@@ -1,5 +1,6 @@
+'use strict';
 const se_scraper =  require('./../index.js');
-var assert = require('chai').assert;
+const assert = require('chai').assert;
 
 /*
  * Use chai and mocha for tests.
@@ -80,6 +81,7 @@ function normal_search_test_case(response) {
     }
 }
 
-(async () => {
-    await normal_search_test();
-})();
+describe('Baidu', function(){
+    this.timeout(30000);
+    it('normal search test', normal_search_test);
+});

@@ -1,5 +1,6 @@
+'use strict';
 const se_scraper =  require('./../index.js');
-var assert = require('chai').assert;
+const assert = require('chai').assert;
 
 /*
  * Use chai and mocha for tests.
@@ -113,7 +114,6 @@ async function no_results_test() {
 function test_case_no_results(response) {
     assert.equal(response.metadata.num_requests, 1);
 
-    results = response.results;
     for (let query in response.results) {
 
         assert.containsAllKeys(response.results, keywords_no_results, 'not all keywords were scraped.');
@@ -134,7 +134,8 @@ function test_case_no_results(response) {
     }
 }
 
-(async () => {
-    await normal_search_test();
-    await no_results_test();
-})();
+describe('Amazon', function(){
+    this.timeout(30000);
+    it('normal search test', normal_search_test);
+    it('no results test', no_results_test);  
+});
