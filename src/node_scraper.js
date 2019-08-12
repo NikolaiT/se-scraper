@@ -428,6 +428,7 @@ class ScrapeManager {
         log(this.config, 1, `On average ms/request: ${ms_per_request}ms/request`);
 
         if (this.config.compress) {
+            log(this.config, 1, 'Compressing results');
             results = JSON.stringify(results);
             // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
             results = zlib.deflateSync(results).toString('base64');

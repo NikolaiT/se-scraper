@@ -208,7 +208,8 @@ module.exports = class Scraper {
                             await this.page.evaluate(() => {
                                 Array.prototype.slice.call(document.getElementsByTagName('img')).forEach(
                                   function(item) {
-                                    if (item.getAttribute('src').startsWith('data:')) {
+                                    let src = item.getAttribute('src');
+                                    if (src && src.startsWith('data:')) {
                                         item.setAttribute('src', '');
                                     }
                                 });

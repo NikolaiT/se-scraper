@@ -68,7 +68,10 @@
 ### 12.8.2019
 
 - add static test case for bing [done]
-- add options that minimize `html_output` flag: `clean_html_output` will remove all JS and CSS from the html
+- add options that minimize `html_output` flag: 
+    `clean_html_output` will remove all JS and CSS from the html 
+    `clean_data_images` removes all data images from the html
+    [done]
 
 ### TODO:
 1. fix googlenewsscraper waiting for results and parsing. remove the static sleep [done]
