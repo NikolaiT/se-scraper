@@ -1,4 +1,5 @@
 const se_scraper = require('./../src/node_scraper.js');
+const resolve = require('path').resolve;
 
 (async () => {
     let browser_config = {
@@ -7,23 +8,16 @@ const se_scraper = require('./../src/node_scraper.js');
         log_http_headers: true,
         log_ip_address: true,
         random_user_agent: false,
-        apply_evasion_techniques: true,
+        apply_evasion_techniques: false,
         screen_output: false,
-        html_output: true,
-        clean_html_output: true,
-        compress: true,
+        custom_func: resolve('./examples/pluggable.js'),
+        headless: false,
     };
 
     let scrape_job = {
         search_engine: 'google',
-        keywords: ['buy a nice car'],
+        keywords: ['news usa'],
         num_pages: 1,
-        google_settings: {
-            "gl": "us",
-            "hl": "en",
-            "start": 0,
-            "num": 10
-        }
     };
 
     var scraper = new se_scraper.ScrapeManager(browser_config);

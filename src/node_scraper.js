@@ -109,6 +109,11 @@ class ScrapeManager {
             output_file: '',
             // whether to also passthru all the html output of the serp pages
             html_output: false,
+            // whether to strip JS and CSS from the html_output
+            // has only an effect if `html_output` is true
+            clean_html_output: true,
+            // remove all data images from the html
+            clean_data_images: true,
             // whether to return a screenshot of serp pages as b64 data
             screen_output: false,
             // Scrape url from local file. Mainly used for testing.
@@ -365,10 +370,7 @@ class ScrapeManager {
                 page: this.page,
             });
 
-            let res = await this.scraper.run(this.page);
-            results = res.results;
-            metadata = this.scraper.metadata;
-            num_requests = this.scraper.num_requests;
+            var {results, metadata, num_requests} = await this.scraper.run(this.page);
 
         } else {
             // Each browser will get N/(K+1) keywords and will issue N/(K+1) * M total requests to the search engine.
@@ -410,15 +412,13 @@ class ScrapeManager {
 
             let promiseReturns = await Promise.all(execPromises);
 
-            // Merge results per keyword
+            // Merge results and metadata per keyword
             for (let promiseReturn of promiseReturns) {
-                Object.assign(results, promiseReturn);
+                Object.assign(results, promiseReturn.results);
+                Object.assign(metadata, promiseReturn.metadata);
+                num_requests += promiseReturn.num_requests;
             }
 
-            // count total requests among all scraper instances
-            for (var o of scraperInstances) {
-                num_requests += o.num_requests;
-            }
         }
 
         let timeDelta = Date.now() - startTime;

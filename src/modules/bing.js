@@ -24,7 +24,7 @@ class BingScraper extends Scraper {
             ads.push({
                 visible_link: $(element).find('.b_adurl cite').text(),
                 tracking_link: $(element).find('h2 a').attr('href'),
-                link: $(element).find('link').attr('href'),
+                //link: $(element).find('link').attr('href'),
                 title: $(element).find('h2 a').text(),
                 snippet: $(element).find('.b_caption').text(),
             })
@@ -39,6 +39,7 @@ class BingScraper extends Scraper {
         let effective_query = $('#sp_requery a').first().text() || '';
 
         const cleaned = this.clean_results(results, ['title', 'link']);
+        const ads_cleaned = this.clean_results(ads, ['title', 'visible_link', 'tracking_link']);
 
         return {
             time: (new Date()).toUTCString(),
@@ -46,7 +47,7 @@ class BingScraper extends Scraper {
             effective_query: effective_query,
             num_results: $('#b_content .sb_count').text(),
             results: cleaned,
-            ads: ads,
+            ads: ads_cleaned,
         }
     }
 

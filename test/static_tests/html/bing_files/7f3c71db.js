@@ -1,0 +1,1 @@
+var SBIImgsHelper;(function(){function r(){sj_be(_d,n,u)}function u(n){var r=n.target||n.srcElement,u;r&&r.tagName==="IMG"&&r.classList.contains(t)&&r.src&&(u=r.getAttribute(i),u&&sj_evt&&sj_evt.fire&&sj_evt.fire("sbi_searchimgurl",SbiUtil.gimg(r),u,null,SbiUtil.gaps(r)))}var n="click",t="sbiable",i="data-sbiid";r()})(SBIImgsHelper||(SBIImgsHelper={}))

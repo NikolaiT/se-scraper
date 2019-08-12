@@ -63,6 +63,13 @@
 - add screenshot capability (make the screen after parsing)
     - store as b64 [done]
 
+
+
+### 12.8.2019
+
+- add static test case for bing [done]
+- add options that minimize `html_output` flag: `clean_html_output` will remove all JS and CSS from the html
+
 ### TODO:
 1. fix googlenewsscraper waiting for results and parsing. remove the static sleep [done]
 2. when using multiple browsers and random user agent, pass a random user agent to each perBrowserOptions

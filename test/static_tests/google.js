@@ -260,7 +260,6 @@ function confirm_results_ok(obj) {
             assert.isAtLeast(res.hours.length, 10, 'hours must have at least 10 chars');
         }
     }
-
 }
 
 describe('Google', function(){

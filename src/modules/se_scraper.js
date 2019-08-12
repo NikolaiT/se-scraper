@@ -67,7 +67,11 @@ module.exports = class Scraper {
             await this.scraping_loop();
         }
 
-        return this.results;
+        return {
+            results: this.results,
+            metadata: this.metadata,
+            num_requests: this.num_requests,
+        }
     }
 
     /**
@@ -107,12 +111,13 @@ module.exports = class Scraper {
 
         if (this.config.log_http_headers === true) {
             this.metadata.http_headers = await meta.get_http_headers(this.page);
-            log(this.config, 1, this.metadata.http_headers);
+            log(this.config, 2, this.metadata.http_headers);
         }
 
         if (this.config.log_ip_address === true) {
             let ipinfo = await meta.get_ip_data(this.page);
             this.metadata.ipinfo = ipinfo;
+            log(this.config, 2, this.metadata.ipinfo);
         }
 
         // check that our proxy is working by confirming
@@ -185,7 +190,32 @@ module.exports = class Scraper {
                     this.results[keyword][this.page_num] = parsed ? parsed : await this.parse_async(html);
 
                     if (this.config.html_output) {
-                        this.results[keyword][this.page_num].html = html;
+
+                        if (this.config.clean_html_output) {
+                            await this.page.evaluate(() => {
+                                Array.prototype.slice.call(document.getElementsByTagName('script')).forEach(
+                                  function(item) {
+                                    item.remove();
+                                });
+                                Array.prototype.slice.call(document.getElementsByTagName('style')).forEach(
+                                  function(item) {
+                                    item.remove();
+                                });
+                            });
+                        }
+
+                        if (this.config.clean_data_images) {
+                            await this.page.evaluate(() => {
+                                Array.prototype.slice.call(document.getElementsByTagName('img')).forEach(
+                                  function(item) {
+                                    if (item.getAttribute('src').startsWith('data:')) {
+                                        item.setAttribute('src', '');
+                                    }
+                                });
+                            });
+                        }
+
+                        this.results[keyword][this.page_num].html = await this.page.content();
                     }
 
                     if (this.config.screen_output) {
