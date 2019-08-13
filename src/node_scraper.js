@@ -88,7 +88,7 @@ class ScrapeManager {
             log_http_headers: false,
             // how long to sleep between requests. a random sleep interval within the range [a,b]
             // is drawn before every request. empty string for no sleeping.
-            sleep_range: '',
+            sleep_range: undefined,
             // which search engine to scrape
             search_engine: 'google',
             search_engine_name: 'google',
@@ -126,7 +126,7 @@ class ScrapeManager {
             // this module should export the functions:
             // get_browser, handle_metadata, close_browser
             //custom_func: resolve('examples/pluggable.js'),
-            custom_func: '',
+            custom_func: undefined,
             throw_on_detection: false,
             // use a proxy for all connections
             // example: 'socks5://78.94.172.42:1080'
@@ -236,7 +236,7 @@ class ScrapeManager {
         }
 
         if (this.config.random_user_agent) {
-            const userAgent = new UserAgent();
+            const userAgent = new UserAgent({ deviceCategory: 'desktop' });
             user_agent = userAgent.toString();
         }
 

@@ -80,6 +80,33 @@ If you **don't** want puppeteer to download a complete chromium browser, add thi
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
 ```
 
+### Docker Image
+
+I will maintain a public docker image of se-scraper. Pull the docker image with the command:
+
+```bash
+docker pull tschachn/se-scraper
+```
+
+When the image is running, you may start scrape jobs via an HTTP API:
+
+```bash
+curl -XPOST http://0.0.0.0:3000 -H 'Content-Type: application/json' \
+-d '{
+    "browser_config": {
+        "random_user_agent": true
+    },
+    "scrape_config": {
+        "search_engine": "google",
+        "keywords": ["test"],
+        "num_pages": 1
+    }
+}'
+```
+
+Many thanks goes to [slotix](https://github.com/NikolaiT/se-scraper/pull/21) for his tremendous help in setting up a docker image.
+
+
 ## Minimal Example
 
 Create a file named `minimal.js` with the following contents
