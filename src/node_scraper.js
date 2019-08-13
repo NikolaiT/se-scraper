@@ -91,6 +91,7 @@ class ScrapeManager {
             sleep_range: '',
             // which search engine to scrape
             search_engine: 'google',
+            search_engine_name: 'google',
             compress: false, // compress
             // whether debug information should be printed
             // level 0: print nothing
@@ -167,8 +168,6 @@ class ScrapeManager {
                 throw "sleep_range is not a valid array of two integers.";
             }
         }
-
-        this.config.search_engine_name = typeof this.config.search_engine === 'function' ? this.config.search_engine.name : this.config.search_engine;
 
         if (fs.existsSync(this.config.keyword_file)) {
             this.config.keywords = read_keywords_from_file(this.config.keyword_file);
@@ -356,6 +355,8 @@ class ScrapeManager {
         var num_requests = 0;
         var metadata = {};
         var startTime = Date.now();
+
+        this.config.search_engine_name = typeof this.config.search_engine === 'function' ? this.config.search_engine.name : this.config.search_engine;
 
         if (this.config.keywords && this.config.search_engine) {
             log(this.config, 1,

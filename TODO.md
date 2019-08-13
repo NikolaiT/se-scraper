@@ -72,6 +72,14 @@
     `clean_html_output` will remove all JS and CSS from the html 
     `clean_data_images` removes all data images from the html
     [done]
+    
+    
+### 13.8.2019
+- Write test case for clean html output [done]
+- Consider better compression algorithm. [done] There is the brotli algorithm, but this is only supported
+  in very recent versions of nodejs
+- what else can we remove from the dom [done] Removing comment nodes now! They are large in BING.
+- remove all whitespace and \n and \t from html
 
 ### TODO:
 1. fix googlenewsscraper waiting for results and parsing. remove the static sleep [done]

@@ -193,6 +193,7 @@ module.exports = class Scraper {
 
                         if (this.config.clean_html_output) {
                             await this.page.evaluate(() => {
+                                // remove script and style tags
                                 Array.prototype.slice.call(document.getElementsByTagName('script')).forEach(
                                   function(item) {
                                     item.remove();
@@ -201,6 +202,17 @@ module.exports = class Scraper {
                                   function(item) {
                                     item.remove();
                                 });
+
+                                // remove all comment nodes
+                                var nodeIterator = document.createNodeIterator(
+                                    document.body,
+                                    NodeFilter.SHOW_COMMENT,    
+                                    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+                                );
+                                while(nodeIterator.nextNode()){
+                                    var commentNode = nodeIterator.referenceNode;
+                                    commentNode.remove();
+                                }
                             });
                         }
 
@@ -216,7 +228,11 @@ module.exports = class Scraper {
                             });
                         }
 
-                        this.results[keyword][this.page_num].html = await this.page.content();
+                        let html_contents = await this.page.content();
+                        // https://stackoverflow.com/questions/27841112/how-to-remove-white-space-between-html-tags-using-javascript
+                        // TODO: not sure if this is save!
+                        html_contents = html_contents.replace(/>\s+</g,'><');
+                        this.results[keyword][this.page_num].html = html_contents;
                     }
 
                     if (this.config.screen_output) {

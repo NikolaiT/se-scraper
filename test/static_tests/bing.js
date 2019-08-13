@@ -18,13 +18,18 @@ async function bing_ads() {
         scrape_from_file: 'file://' + path.join(__dirname, './html/bing.html'),
     };
 
-    bing_search_with_ads( await se_scraper.scrape(config, scrape_config) );
+    var scraper = new se_scraper.ScrapeManager(config);
+
+    await scraper.start();
+
+    bing_search_with_ads( await scraper.scrape(scrape_config) );
 
     scrape_config.keywords = ['best cloud services'];
     scrape_config.scrape_from_file = 'file://' + path.join(__dirname, './html/bing2.html');
 
-    bing_search_with_ads2( await se_scraper.scrape(config, scrape_config) );
+    bing_search_with_ads2( await scraper.scrape(scrape_config) );
 
+    await scraper.quit();
 }
 
 // we test with a callback function to our handler

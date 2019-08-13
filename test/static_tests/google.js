@@ -18,17 +18,23 @@ async function normal_search_test() {
         scrape_from_file: 'file://' + path.join(__dirname, './html/google.html'),
     };
 
-    google_search_with_products( await se_scraper.scrape(config, scrape_config) );
+    var scraper = new se_scraper.ScrapeManager(config);
+
+    await scraper.start();
+
+    google_search_with_products( await scraper.scrape(scrape_config) );
 
     scrape_config.scrape_from_file = 'file://' + path.join(__dirname, './html/google2.html');
     scrape_config.keywords = ['autoreifen mercedes c-klasse'];
 
-    google_search_with_products2( await se_scraper.scrape(config, scrape_config) );
+    google_search_with_products2( await scraper.scrape(scrape_config) );
 
     scrape_config.scrape_from_file = 'file://' + path.join(__dirname, './html/google3.html');
     scrape_config.keywords = ['kaffeemaschine kaufen'];
 
-    google_places( await se_scraper.scrape(config, scrape_config) );
+    google_places( await scraper.scrape(scrape_config) );
+
+    await scraper.quit();
 }
 
 // we test with a callback function to our handler
