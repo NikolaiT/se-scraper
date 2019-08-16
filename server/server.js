@@ -53,14 +53,11 @@ app.post('/', async (req, res) => {
 
         var scraper = new se_scraper.ScrapeManager(browser_config);
         await scraper.start();
-
         var results = await scraper.scrape(req.body.scrape_config);
-
         // console.dir(results, {depth: null, colors: true});
+        await scraper.quit();
         
         res.send(results);
-
-        await scraper.quit();
     }
 });
 

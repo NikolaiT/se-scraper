@@ -34,6 +34,16 @@ async function normal_search_test() {
 
     google_places( await scraper.scrape(scrape_config) );
 
+    scrape_config.scrape_from_file = 'file://' + path.join(__dirname, './html/google4.html');
+    scrape_config.keywords = ['MODEL MARKET SW18 4ES'];
+
+    right_side_info_text( await scraper.scrape(scrape_config) );
+
+    scrape_config.scrape_from_file = 'file://' + path.join(__dirname, './html/google5.html');
+    scrape_config.keywords = ['BRANDON MOTORS HP13 6NR'];
+
+    right_side_info_text2( await scraper.scrape(scrape_config) );
+
     await scraper.quit();
 }
 
@@ -118,6 +128,65 @@ function google_places(response) {
             assert.equal(obj.top_products.length, 0, 'there are 0 top products');
             assert.equal(obj.right_products.length, 0, 'there are 0 right products');
             assert.equal(obj.places.length, 3, 'there are 3 places');
+
+            assert.equal(obj.no_results, false, 'no results should be false');
+            assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
+            assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
+            assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
+
+            confirm_results_ok(obj);
+        }
+    }
+}
+
+function right_side_info_text(response) {
+    assert.equal(response.metadata.num_requests, 1);
+    for (let query in response.results) {
+        for (let page_number in response.results[query]) {
+
+            assert.isNumber(parseInt(page_number), 'page_number must be numeric');
+
+            let obj = response.results[query][page_number];
+
+            assert.include(obj.num_results, '6 Ergebnisse', 'num results not included');
+            assert.containsAllKeys(obj, ['results', 'time', 'no_results', 'num_results',
+             'effective_query', 'top_ads', 'bottom_ads', 'right_side_info_text'], 'not all keys are in the object');
+
+            assert.isAtLeast(obj.results.length, 7, 'results must have at least 7 SERP objects');
+
+            assert.isOk(obj.right_side_info_text.length, 'right_side_info_text should have some data');
+            assert.isAtLeast(obj.right_side_info_text.length, 50, 'right_side_info_text should have some data');
+
+            console.log(obj.right_side_info_text);
+
+            assert.equal(obj.no_results, false, 'no results should be false');
+            assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
+            assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
+            assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
+
+            confirm_results_ok(obj);
+        }
+    }
+}
+
+function right_side_info_text2(response) {
+    assert.equal(response.metadata.num_requests, 1);
+    for (let query in response.results) {
+        for (let page_number in response.results[query]) {
+
+            assert.isNumber(parseInt(page_number), 'page_number must be numeric');
+
+            let obj = response.results[query][page_number];
+
+            assert.include(obj.num_results, '5 Ergebnisse', 'num results not included');
+            assert.containsAllKeys(obj, ['results', 'time', 'no_results', 'num_results',
+             'effective_query', 'top_ads', 'bottom_ads', 'right_side_info_text'], 'not all keys are in the object');
+
+            assert.isAtLeast(obj.results.length, 5, 'results must have at least 5 SERP objects');
+            assert.isOk(obj.right_side_info_text.length, 'right_side_info_text should have some data');
+            assert.isAtLeast(obj.right_side_info_text.length, 50, 'right_side_info_text should have some data');
+
+            console.log(obj.right_side_info_text);
 
             assert.equal(obj.no_results, false, 'no results should be false');
             assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
@@ -269,6 +338,6 @@ function confirm_results_ok(obj) {
 }
 
 describe('Google', function(){
-    this.timeout(10000);
+    this.timeout(20000);
     it('static google searches with products,ads and places',  normal_search_test);
 });

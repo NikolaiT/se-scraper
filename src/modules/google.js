@@ -89,6 +89,8 @@ class GoogleScraper extends Scraper {
             right_side_info = {};
         }
 
+        let right_side_info_text = $('#rhs').text();
+
         // parse top main column product information
         // #tvcap .pla-unit
         var top_products = [];
@@ -138,20 +140,25 @@ class GoogleScraper extends Scraper {
 
         const cleaned = this.clean_results(results, ['title', 'link' , 'snippet']);
 
-        return {
+        let res_obj =  {
             time: (new Date()).toUTCString(),
             num_results: $('#resultStats').text(),
             no_results: no_results,
             effective_query: effective_query,
             right_info: right_side_info,
+            results: cleaned,
             top_products: top_products,
             right_products: right_products,
             top_ads: top_ads,
             bottom_ads: bottomads,
             places: places,
-            results: cleaned,
+        };
+
+        if (right_side_info_text && right_side_info_text.length > 0) {
+            res_obj.right_side_info_text = right_side_info_text;
         }
 
+        return res_obj;
     }
 
     async load_start_page() {
