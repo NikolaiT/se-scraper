@@ -65,5 +65,9 @@ RUN npm install --ignore-scripts
 # Cleanup
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
+ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64 /usr/local/bin/dumb-init
+RUN chmod +x /usr/local/bin/dumb-init
+
 EXPOSE $PORT
-CMD [ "node", "server/server.js" ]
+
+CMD ["dumb-init", "node", "server/server.js"]
