@@ -151,18 +151,18 @@ module.exports = class Scraper {
             this.results[keyword] = {};
             this.result_rank = 1;
 
-            if (this.pluggable && this.pluggable.before_keyword_scraped) {
-                await this.pluggable.before_keyword_scraped({
-                    results: this.results,
-                    num_keywords: this.num_keywords,
-                    num_requests: this.num_requests,
-                    keyword: keyword,
-                });
-            }
-
-            this.page_num = 1;
-
             try {
+
+                if (this.pluggable && this.pluggable.before_keyword_scraped) {
+                    await this.pluggable.before_keyword_scraped({
+                        results: this.results,
+                        num_keywords: this.num_keywords,
+                        num_requests: this.num_requests,
+                        keyword: keyword,
+                    });
+                }
+
+                this.page_num = 1;
 
                 // load scraped page from file if `scrape_from_file` is given
                 if (this.config.scrape_from_file.length <= 0) {
@@ -286,23 +286,17 @@ module.exports = class Scraper {
                         if (this.config.throw_on_detection === true) {
                             throw( e );
                         } else {
-                            break;
+                            return;
                         }
                     }
                 } else {
                     // some other error, quit scraping process if stuff is broken
-                    if (this.config.is_local === true) {
-                        console.error('You have 30 seconds to fix this.');
-                        await this.sleep(30000);
+                    if (this.config.throw_on_detection === true) {
+                        throw( e );
                     } else {
-                        if (this.config.throw_on_detection === true) {
-                            throw( e );
-                        } else {
-                            break;
-                        }
+                        return;
                     }
                 }
-
             }
         }
     }
