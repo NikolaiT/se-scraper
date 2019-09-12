@@ -364,6 +364,7 @@ class ScrapeManager {
         }
 
         if (this.pluggable) {
+
             this.scraper = getScraper(this.config.search_engine, {
                 config: this.config,
                 context: this.context,
@@ -428,22 +429,8 @@ class ScrapeManager {
         log(this.config, 1, `Scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
         log(this.config, 1, `On average ms/request: ${ms_per_request}ms/request`);
 
-        if (this.config.compress) {
-            log(this.config, 1, 'Compressing results');
-            results = JSON.stringify(results);
-            // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
-            results = zlib.deflateSync(results).toString('base64');
-        }
-
         if (this.pluggable && this.pluggable.handle_results) {
             await this.pluggable.handle_results(results);
-        }
-
-        if (this.config.chunk_lines) {
-            metadata.chunk_lines = this.config.chunk_lines;
-            if (this.config.job_name) {
-                metadata.id = `${this.config.job_name} ${this.config.chunk_lines}`;
-            }
         }
 
         metadata.elapsed_time = timeDelta.toString();
@@ -468,7 +455,7 @@ class ScrapeManager {
     }
 
     /*
-     * Quits the puppeteer cluster/browser.
+     * Quit the puppeteer cluster/browser.
      */
     async quit() {
         if (this.pluggable && this.pluggable.close_browser) {
