@@ -8,7 +8,7 @@ let browser_config = {
     // if random_user_agent is set to True, a random user agent is chosen
     random_user_agent: false,
     // whether to start the browser in headless mode
-    headless: true,
+    headless: false,
     // whether debug information should be printed
     // level 0: print nothing
     // level 1: print most important info
@@ -43,9 +43,9 @@ let browser_config = {
     // scrape config can change on each scrape() call
     let scrape_config = {
         // which search engine to scrape
-        search_engine: 'google_image',
+        search_engine: 'duckduckgo',
         // an array of keywords to scrape
-        keywords: ['iphone'],
+        keywords: ['cloud service'],
         // the number of pages to scrape for each keyword
         num_pages: 1,
 
@@ -62,10 +62,10 @@ let browser_config = {
         // is drawn before every request. empty string for no sleeping.
         sleep_range: '',
         // path to output file, data will be stored in JSON
-        output_file: 'google.json',
+        output_file: '',
         // whether to prevent images, css, fonts from being loaded
         // will speed up scraping a great deal
-        block_assets: true,
+        block_assets: false,
         // check if headless chrome escapes common detection techniques
         // this is a quick test and should be used for debugging
         test_evasion: false,

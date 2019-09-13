@@ -5,13 +5,10 @@ var os = require("os");
 
 const UserAgent = require('user-agents');
 const google = require('./modules/google.js');
-const amazon = require('./modules/amazon.js');
 const bing = require('./modules/bing.js');
-const baidu = require('./modules/baidu.js');
+const yandex = require('./modules/yandex.js');
 const infospace = require('./modules/infospace.js');
-const youtube = require('./modules/youtube.js');
 const duckduckgo = require('./modules/duckduckgo.js');
-const tickersearch = require('./modules/ticker_search.js');
 const { Cluster } = require('./puppeteer-cluster/dist/index.js');
 const common = require('./modules/common.js');
 var log = common.log;
@@ -42,21 +39,12 @@ function getScraper(search_engine, args) {
             google_news_old: google.GoogleNewsOldScraper,
             google_news: google.GoogleNewsScraper,
             google_image: google.GoogleImageScraper,
-            google_maps: google.GoogleMapsScraper,
-            google_shopping: google.GoogleShoppingScraper,
             bing: bing.BingScraper,
+            yandex: yandex.YandexScraper,
             bing_news: bing.BingNewsScraper,
-            amazon: amazon.AmazonScraper,
             duckduckgo: duckduckgo.DuckduckgoScraper,
-            duckduckgo_news: duckduckgo.DuckduckgoNewsScraper,
             infospace: infospace.InfospaceScraper,
             webcrawler: infospace.WebcrawlerNewsScraper,
-            baidu: baidu.BaiduScraper,
-            youtube: youtube.YoutubeScraper,
-            yahoo_news: tickersearch.YahooFinanceScraper,
-            reuters: tickersearch.ReutersFinanceScraper,
-            cnbc: tickersearch.CnbcFinanceScraper,
-            marketwatch: tickersearch.MarketwatchFinanceScraper,
         }[search_engine](args);
     } else if (typeof search_engine === 'function') {
         return new search_engine(args);

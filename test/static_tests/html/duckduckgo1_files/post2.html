@@ -1,0 +1,23 @@
+
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="referrer" content="origin">
+</head>
+<body>
+<script type="text/JavaScript">
+function post(e) {
+  if(e.source==parent && e.origin == location.protocol+'//'+location.hostname)
+
+  var idx = e.data.indexOf(':');
+  var action = e.data.substr(0,idx);
+  var link = e.data.substr(idx+1);
+
+  if (action == 'ddg') parent.window.location.href = link;
+}
+
+if (window.addEventListener) window.addEventListener('message', post, false);
+else if (window.attachEvent) window.attachEvent('onmessage', post);
+</script>
+
+
+</body></html>

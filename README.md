@@ -27,17 +27,12 @@ Se-scraper supports the following search engines:
 * Google News
 * Google News App version (https://news.google.com)
 * Google Image
-* Amazon
 * Bing
 * Bing News
-* Baidu
-* Youtube
 * Infospace
 * Duckduckgo
+* Yandex
 * Webcrawler
-* Reuters
-* Cnbc
-* Marketwatch
 
 This module uses puppeteer and a modified version of [puppeteer-cluster](https://github.com/thomasdondorf/puppeteer-cluster/). It was created by the Developer of [GoogleScraper](https://github.com/NikolaiT/GoogleScraper), a module with 1800 Stars on Github.
 
@@ -233,10 +228,8 @@ You can define your own scraper class and use it within se-scraper.
 
 * [Reuse existing browser](examples/multiple_search_engines.js) yields [these results](examples/results/multiple_search_engines.json)
 * [Simple example scraping google](examples/quickstart.js) yields [these results](examples/results/data.json)
-* [Simple example scraping baidu](examples/baidu.js) yields [these results](examples/results/baidu.json)
 * [Scrape with one proxy per browser](examples/proxies.js) yields [these results](examples/results/proxyresults.json)
 * [Scrape 100 keywords on Bing with multible tabs in one browser](examples/multiple_tabs.js) produces [this](examples/results/bing.json)
-* [Scrape two keywords on Amazon](examples/amazon.js) produces [this](examples/results/amazon.json)
 * [Inject your own scraping logic](examples/pluggable.js)
 * [For the Lulz: Scraping google dorks for SQL injection vulnerabilites and confirming them.](examples/for_the_lulz.js)
 * [Scrape google maps/locations](examples/google_maps.js) yields [these results](examples/results/maps.json)
@@ -324,6 +317,7 @@ page.on('request', (req) => {
 
 Consider the following resources:
 
+* https://antoinevastel.com/bot%20detection/2019/07/19/detecting-chrome-headless-v3.html
 * https://intoli.com/blog/making-chrome-headless-undetectable/
 * https://intoli.com/blog/not-possible-to-block-chrome-headless/
 * https://news.ycombinator.com/item?id=16179602

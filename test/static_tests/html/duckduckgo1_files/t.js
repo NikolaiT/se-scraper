@@ -1,0 +1,1 @@
+DDG.duckbar.addDeferred('news',{"results":[],"vqd":{"cloud%20service":"3-194763440231365230865364893529020208908-287357910159887574287976993779863121595"},"queryEncoded":["cloud%20service"],"query":["cloud service"],"ads":[],"response_type":"places"});

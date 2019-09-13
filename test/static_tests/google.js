@@ -44,6 +44,11 @@ async function normal_search_test() {
 
     right_side_info_text2( await scraper.scrape(scrape_config) );
 
+    scrape_config.scrape_from_file = 'file://' + path.join(__dirname, './html/google6.html');
+    scrape_config.keywords = ['car tires for sale'];
+
+    google_places_and_ads( await scraper.scrape(scrape_config) );
+
     await scraper.quit();
 }
 
@@ -187,6 +192,36 @@ function right_side_info_text2(response) {
             assert.isAtLeast(obj.right_side_info_text.length, 50, 'right_side_info_text should have some data');
 
             console.log(obj.right_side_info_text);
+
+            assert.equal(obj.no_results, false, 'no results should be false');
+            assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
+            assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
+            assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
+
+            confirm_results_ok(obj);
+        }
+    }
+}
+
+function google_places_and_ads(response) {
+    assert.equal(response.metadata.num_requests, 1);
+
+    for (let query in response.results) {
+
+        for (let page_number in response.results[query]) {
+
+            assert.isNumber(parseInt(page_number), 'page_number must be numeric');
+
+            let obj = response.results[query][page_number];
+
+            assert.include(obj.num_results, '439.000.000 Ergebnisse (0,64 Sekunden)', 'num results not included');
+            assert.containsAllKeys(obj, ['results', 'time', 'no_results', 'num_results', 'effective_query', 'top_ads', 'bottom_ads', 'places'], 'not all keys are in the object');
+            assert.isAtLeast(obj.results.length, 10, 'results must have at least 10 SERP objects');
+            assert.equal(obj.top_ads.length, 0, 'there are no top ads');
+            assert.equal(obj.bottom_ads.length, 0, 'there are 0 bottom ads');
+            assert.isAtLeast(obj.top_products.length, 13, 'there are 13 top products');
+            assert.equal(obj.right_products.length, 0, 'there are 0 right products');
+            assert.equal(obj.places.length, 2, 'there are 2 places');
 
             assert.equal(obj.no_results, false, 'no results should be false');
             assert.typeOf(obj.num_results, 'string', 'num_results must be a string');

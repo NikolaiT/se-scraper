@@ -29,6 +29,11 @@ async function bing_ads() {
 
     bing_search_with_ads2( await scraper.scrape(scrape_config) );
 
+    scrape_config.keywords = ['car tires cheap'];
+    scrape_config.scrape_from_file = 'file://' + path.join(__dirname, './html/bing3.html');
+
+    bing_search_with_ads3( await scraper.scrape(scrape_config) );
+
     await scraper.quit();
 }
 
@@ -86,6 +91,32 @@ function bing_search_with_ads2(response) {
     }
 }
 
+function bing_search_with_ads3(response) {
+    assert.equal(response.metadata.num_requests, 1);
+
+    for (let query in response.results) {
+
+        for (let page_number in response.results[query]) {
+
+            assert.isNumber(parseInt(page_number), 'page_number must be numeric');
+
+            let obj = response.results[query][page_number];
+
+            assert.include(obj.num_results, '65.500.000 results', 'num results not included');
+            assert.containsAllKeys(obj, ['results', 'time', 'no_results', 'num_results', 'effective_query', 'ads'], 'not all keys are in the object');
+            assert.isAtLeast(obj.results.length, 10, 'results must have at least 10 SERP objects');
+            assert.isAtLeast(obj.ads.length, 3, 'there are 3 ads');
+
+            assert.equal(obj.no_results, false, 'no results should be false');
+            assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
+            assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
+            assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
+
+            confirm_results_ok(obj);
+        }
+    }
+}
+
 
 function confirm_results_ok(obj) {
 
@@ -102,7 +133,7 @@ function confirm_results_ok(obj) {
 
         assert.isOk(res.title, 'title must be ok');
         assert.typeOf(res.title, 'string', 'title must be string');
-        assert.isAtLeast(res.title.length, 10, 'title must have at least 10 chars');
+        assert.isAtLeast(res.title.length, 8, 'title must have at least 8 chars');
 
         assert.isOk(res.snippet, 'snippet must be ok');
         assert.typeOf(res.snippet, 'string', 'snippet must be string');
@@ -123,7 +154,7 @@ function confirm_results_ok(obj) {
 
         assert.isOk(res.title, 'title must be ok');
         assert.typeOf(res.title, 'string', 'title must be string');
-        assert.isAtLeast(res.title.length, 10, 'title must have at least 10 chars');
+        assert.isAtLeast(res.title.length, 8, 'title must have at least 8 chars');
 
         assert.isOk(res.snippet, 'snippet must be ok');
         assert.typeOf(res.snippet, 'string', 'snippet must be string');
