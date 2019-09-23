@@ -6,10 +6,11 @@
 
 This node module allows you to scrape search engines concurrently with different proxies.
 
-If you don't have much technical experience or don't want to purchase proxies, you can use [my scraping service](https://scrapeulous.com/).
+If you don't have extensive technical experience or don't want to purchase proxies, you can use [my scraping service](https://scrapeulous.com/).
 
-##### Table of Contents
+#### Table of Contents
 - [Installation](#installation)
+- [Docker](#docker-support)
 - [Minimal Example](#minimal-example)
 - [Quickstart](#quickstart)
 - [Contribute](#contribute)
@@ -75,7 +76,7 @@ If you **don't** want puppeteer to download a complete chromium browser, add thi
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
 ```
 
-### Docker Image
+### Docker Support
 
 I will maintain a public docker image of se-scraper. Pull the docker image with the command:
 
@@ -83,7 +84,30 @@ I will maintain a public docker image of se-scraper. Pull the docker image with 
 docker pull tschachn/se-scraper
 ```
 
-When the image is running, you may start scrape jobs via an HTTP API:
+Confirm that the docker image was correctly pulled:
+
+```bash
+docker image ls
+```
+
+Should show something like that:
+
+```
+tschachn/se-scraper             secondtry           897e1aeeba78        21 minutes ago      1.29GB
+```
+
+You can check the [latest tag here](https://hub.docker.com/r/tschachn/se-scraper/tags). In the example below, the latest tag is **secondtry**. This will most likely change in the future to **latest**.
+
+Run the docker image and map the internal port 3000 to the external 
+port 3000:
+
+```bash
+$ docker run -p 3000:3000 tschachn/se-scraper:secondtry
+
+Running on http://0.0.0.0:3000
+```
+
+When the image is running, you may start scrape jobs via HTTP API:
 
 ```bash
 curl -XPOST http://0.0.0.0:3000 -H 'Content-Type: application/json' \

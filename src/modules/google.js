@@ -16,13 +16,19 @@ class GoogleScraper extends Scraper {
 
         const results = [];
         $('#center_col .g').each((i, link) => {
-            results.push({
+            let obj = {
                 link: $(link).find('.r a').attr('href'),
-                title: $(link).find('.r a').text(),
+                title: $(link).find('.r a h3').text(),
                 snippet: $(link).find('span.st').text(),
                 visible_link: $(link).find('.r cite').text(),
                 date: $(link).find('span.f').text() || '',
-            })
+            };
+
+            if (obj.date) {
+                obj.date = obj.date.replace(' - ', '');
+            }
+
+            results.push(obj);
         });
 
         // parse ads
