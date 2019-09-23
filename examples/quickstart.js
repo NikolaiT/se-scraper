@@ -4,14 +4,13 @@ const se_scraper = require('./../src/node_scraper.js');
     let browser_config = {
         debug_level: 1,
         test_evasion: false,
-        log_http_headers: true,
-        log_ip_address: true,
+        log_http_headers: false,
+        log_ip_address: false,
         random_user_agent: false,
         apply_evasion_techniques: true,
         screen_output: false,
-        html_output: true,
+        html_output: false,
         clean_html_output: true,
-        compress: true,
     };
 
     let scrape_job = {

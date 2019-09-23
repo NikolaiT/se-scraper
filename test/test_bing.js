@@ -73,9 +73,11 @@ function normal_search_test_case(response) {
                 assert.typeOf(res.title, 'string', 'title must be string');
                 assert.isAtLeast(res.title.length, 5, 'title must have at least 5 chars');
 
-                assert.isOk(res.snippet, 'snippet must be ok');
-                assert.typeOf(res.snippet, 'string', 'snippet must be string');
-                assert.isAtLeast(res.snippet.length, 10, 'snippet must have at least 10 chars');
+                if (res.snippet) {
+                    assert.isOk(res.snippet, 'snippet must be ok');
+                    assert.typeOf(res.snippet, 'string', 'snippet must be string');
+                    assert.isAtLeast(res.snippet.length, 10, 'snippet must have at least 10 chars');
+                }
 
                 assert.isNumber(res.rank, 'rank must be integer');
                 assert.equal(res.rank, total_rank++, 'rank ist wrong');

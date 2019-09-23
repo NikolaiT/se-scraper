@@ -76,11 +76,10 @@ class ScrapeManager {
             log_http_headers: false,
             // how long to sleep between requests. a random sleep interval within the range [a,b]
             // is drawn before every request. empty string for no sleeping.
-            sleep_range: undefined,
+            sleep_range: null,
             // which search engine to scrape
             search_engine: 'google',
             search_engine_name: 'google',
-            compress: false, // compress
             // whether debug information should be printed
             // level 0: print nothing
             // level 1: print most important info
@@ -114,7 +113,7 @@ class ScrapeManager {
             // this module should export the functions:
             // get_browser, handle_metadata, close_browser
             //custom_func: resolve('examples/pluggable.js'),
-            custom_func: undefined,
+            custom_func: null,
             throw_on_detection: false,
             // use a proxy for all connections
             // example: 'socks5://78.94.172.42:1080'

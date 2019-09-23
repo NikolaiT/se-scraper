@@ -3,52 +3,106 @@ const Scraper = require('./se_scraper');
 
 class BingScraper extends Scraper {
 
-    parse(html) {
-        // load the page source into cheerio
-        const $ = cheerio.load(html);
+    async parse_async(html) {
 
-        // perform queries
-        const results = [];
-        $('#b_content #b_results .b_algo').each((i, link) => {
-            results.push({
-                link: $(link).find('h2 a').attr('href'),
-                title: $(link).find('h2').text(),
-                snippet: $(link).find('.b_caption p').text(),
-                visible_link: $(link).find('cite').text(),
-            })
+        let results = await this.page.evaluate(() => {
+
+            let _text = (el, s) => {
+                let n = el.querySelector(s);
+
+                if (n) {
+                    return n.innerText;
+                } else {
+                    return '';
+                }
+            };
+
+            let _attr = (el, s, attr) => {
+                let n = el.querySelector(s);
+
+                if (n) {
+                    return n.getAttribute(attr);
+                } else {
+                    return null;
+                }
+            };
+
+            let results = {
+                num_results: '',
+                no_results: false,
+                effective_query: '',
+                results: [],
+                ads: [],
+                right_side_ads: [],
+            };
+
+            let num_results_el = document.querySelector('#b_content .sb_count');
+
+            if (num_results_el) {
+                results.num_results = num_results_el.innerText;
+            }
+
+            let organic_results = document.querySelectorAll('#b_content #b_results .b_algo');
+
+            organic_results.forEach((el) => {
+
+                let serp_obj = {
+                    link: _attr(el, 'h2 a', 'href'),
+                    title: _text(el, 'h2'),
+                    snippet: _text(el, '.b_caption p'),
+                    visible_link: _text(el, 'cite'),
+                };
+
+                results.results.push(serp_obj);
+            });
+
+            // check if no results
+            results.no_results = (results.results.length === 0);
+
+            // parse bing ads
+            let ads = document.querySelectorAll('#b_results .b_ad .sb_add');
+
+            ads.forEach((el) => {
+
+                let ad_obj = {
+                    title: _text(el, 'h2 a'),
+                    snippet: _text(el, '.b_caption p'),
+                    visible_link: _text(el, '.b_adurl cite'),
+                    tracking_link: _attr(el, 'h2 a', 'href'),
+                };
+
+                results.ads.push(ad_obj);
+            });
+
+            // right side ads
+            let right_side_ads = document.querySelectorAll('#b_context .b_ad .sb_add');
+
+            right_side_ads.forEach((el) => {
+
+                let ad_obj = {
+                    title: _text(el, 'h2 a'),
+                    snippet: _text(el, '.b_caption p'),
+                    visible_link: _text(el, '.b_adurl cite'),
+                    tracking_link: _attr(el, 'h2 a', 'href'),
+                };
+
+                results.right_side_ads.push(ad_obj);
+            });
+
+
+            let effective_query_el = document.querySelector('#sp_requery a');
+
+            if (effective_query_el) {
+                results.effective_query = effective_query_el.innerText;
+            }
+
+            return results;
         });
 
-        // parse bing ads
-        const ads = [];
-        $('.b_ad .sb_add').each((i, element) => {
-            ads.push({
-                visible_link: $(element).find('.b_adurl cite').text(),
-                tracking_link: $(element).find('h2 a').attr('href'),
-                //link: $(element).find('link').attr('href'),
-                title: $(element).find('h2 a').text(),
-                snippet: $(element).find('.b_caption').text(),
-            })
-        });
-
-        // 'Including results for', 'Einschließlich Ergebnisse'
-        let no_results = this.no_results(
-            ['There are no results', 'Es gibt keine Ergebnisse'],
-            $('#b_results').text()
-        );
-
-        let effective_query = $('#sp_requery a').first().text() || '';
-
-        const cleaned = this.clean_results(results, ['title', 'link']);
-        const ads_cleaned = this.clean_results(ads, ['title', 'visible_link', 'tracking_link']);
-
-        return {
-            time: (new Date()).toUTCString(),
-            no_results: no_results,
-            effective_query: effective_query,
-            num_results: $('#b_content .sb_count').text(),
-            results: cleaned,
-            ads: ads_cleaned,
-        }
+        results.results = this.clean_results(results.results, ['title', 'link']);
+        results.ads = this.clean_results(results.ads, ['title', 'visible_link', 'tracking_link']);
+        results.time = (new Date()).toUTCString();
+        return results;
     }
 
     async load_start_page() {
