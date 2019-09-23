@@ -93,16 +93,16 @@ docker image ls
 Should show something like that:
 
 ```
-tschachn/se-scraper             secondtry           897e1aeeba78        21 minutes ago      1.29GB
+tschachn/se-scraper             latest           897e1aeeba78        21 minutes ago      1.29GB
 ```
 
-You can check the [latest tag here](https://hub.docker.com/r/tschachn/se-scraper/tags). In the example below, the latest tag is **secondtry**. This will most likely change in the future to **latest**.
+You can check the [latest tag here](https://hub.docker.com/r/tschachn/se-scraper/tags). In the example below, the latest tag is **latest**. This will most likely remain **latest** in the future.
 
 Run the docker image and map the internal port 3000 to the external 
 port 3000:
 
 ```bash
-$ docker run -p 3000:3000 tschachn/se-scraper:secondtry
+$ docker run -p 3000:3000 tschachn/se-scraper:latest
 
 Running on http://0.0.0.0:3000
 ```
