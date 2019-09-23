@@ -1,7 +1,7 @@
 # ignore static tests
 
-test/static_tests/
-test/static_tests/*
+test/static_tests/html/
+test/static_tests/html/*
 
 .idea
 

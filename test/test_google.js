@@ -125,7 +125,7 @@ function test_case_no_results(response) {
 
             assert.strictEqual(obj.results.length, 0, 'results must have 0 SERP objects');
             assert.equal(obj.no_results, true, 'no results should be true');
-            assert.isEmpty(obj.num_results, 'no results should be a empty string');
+            assert.isEmpty(obj.num_results, 'num_results should be a empty string');
             assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
         }
     }
