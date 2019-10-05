@@ -1,5 +1,5 @@
 'use strict';
-const zlib = require('zlib');
+
 var fs = require('fs');
 var os = require("os");
 
@@ -252,7 +252,7 @@ class ScrapeManager {
 
         log(this.config, 2, `Using the following puppeteer configuration: ${launch_args}`);
 
-        if (this.pluggable) {
+        if (this.pluggable && this.pluggable.start_browser) {
             launch_args.config = this.config;
             this.browser = await this.pluggable.start_browser(launch_args);
             this.page = await this.browser.newPage();
@@ -350,7 +350,7 @@ class ScrapeManager {
                 `[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${this.config.search_engine_name} with ${this.config.keywords.length} keywords on ${this.config.num_pages} pages each.`)
         }
 
-        if (this.pluggable) {
+        if (this.pluggable && this.pluggable.start_browser) {
 
             this.scraper = getScraper(this.config.search_engine, {
                 config: this.config,
@@ -407,7 +407,6 @@ class ScrapeManager {
                 Object.assign(metadata, promiseReturn.metadata);
                 num_requests += promiseReturn.num_requests;
             }
-
         }
 
         let timeDelta = Date.now() - startTime;
