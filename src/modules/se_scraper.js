@@ -21,7 +21,9 @@ module.exports = class Scraper {
 
         this.page = page;
         this.last_response = null; // the last response object
-        this.metadata = {};
+        this.metadata = {
+            scraping_detected: false,
+        };
         this.pluggable = pluggable;
         this.config = config;
         this.context = context;
@@ -275,7 +277,9 @@ module.exports = class Scraper {
                     }
                 }
 
-                if (await this.detected() === true) {
+                this.metadata.scraping_detected = await this.detected();
+
+                if (this.metadata.scraping_detected === true) {
                     console.error(`${this.config.search_engine_name} detected the scraping!`);
 
                     if (this.config.is_local === true) {
