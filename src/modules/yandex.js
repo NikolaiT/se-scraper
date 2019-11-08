@@ -22,19 +22,24 @@ class YandexScraper extends Scraper {
                 try {
                     if (item) {
 
-                        let linkElement = item.querySelector('a.link');
+                        let linkElement = item.querySelector('h2 a.link');
 
                         if (linkElement) {
                             obj.link = linkElement.getAttribute('href');
                             obj.title = linkElement.innerText;
+                        }
 
-                            let label = linkElement.querySelector('.organic__subtitle .label');
 
-                            if (label) {
-                                let labelText = label.innerText;
-                                if (labelText.trim() === 'ad') {
-                                    obj.is_ad = true;
-                                }
+                        let label = item.querySelector('.organic__subtitle .label');
+
+                        if (label) {
+                            let labelText = label.innerText;
+
+                            if (labelText) {
+                                labelText = labelText.trim().toLowerCase();
+                                console.log(labelText);
+                                let ad_labels = ['ad', 'werbung', 'реклама', 'anuncio'];
+                                obj.is_ad = ad_labels.includes(labelText);
                             }
                         }
 

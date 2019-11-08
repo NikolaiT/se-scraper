@@ -29,6 +29,11 @@ async function yandex_ads() {
 
     yandex_search_with_ads2( await scraper.scrape(scrape_config) );
 
+    scrape_config.keywords = ['купить деревянные окна'];
+    scrape_config.scrape_from_file = 'file://' + path.join(__dirname, './html/yandex3.html');
+
+    yandex_search_with_ads3( await scraper.scrape(scrape_config) );
+
     await scraper.quit();
 }
 
@@ -76,6 +81,39 @@ function yandex_search_with_ads2(response) {
             assert.typeOf(obj.num_results, 'string', 'num_results must be a string');
             assert.isAtLeast(obj.num_results.length, 5, 'num_results should be a string of at least 5 chars');
             assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
+
+            confirm_results_ok(obj);
+        }
+    }
+}
+
+
+function yandex_search_with_ads3(response) {
+    assert.equal(response.metadata.num_requests, 1);
+
+    for (let query in response.results) {
+
+        for (let page_number in response.results[query]) {
+
+            assert.isNumber(parseInt(page_number), 'page_number must be numeric');
+
+            let obj = response.results[query][page_number];
+
+            // console.dir(obj.results, {depth: null, colors: true});
+
+            assert.containsAllKeys(obj, ['results', 'time', 'num_results',], 'not all keys are in the object');
+            assert.isAtLeast(obj.results.length, 14, 'results must have at least 14 SERP objects');
+            assert.typeOf(Date.parse(obj.time), 'number', 'time should be a valid date');
+
+            // at least 4 ads
+            let cnt = 0;
+            obj.results.forEach((res) => {
+                if (res.is_ad) {
+                    cnt++;
+                }
+            });
+
+            assert.isAtLeast(cnt, 4, 'there should be at least 4 ads in the results');
 
             confirm_results_ok(obj);
         }
