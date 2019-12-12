@@ -1,7 +1,8 @@
 'use strict';
 
-var fs = require('fs');
-var os = require("os");
+const fs = require('fs');
+const os = require('os');
+const _ = require('lodash');
 
 const UserAgent = require('user-agents');
 const google = require('./modules/google.js');
@@ -63,7 +64,7 @@ class ScrapeManager {
         this.scraper = null;
         this.context = context;
 
-        this.config = {
+        this.config = _.defaults(config, {
             // the user agent to scrape with
             user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36',
             // if random_user_agent is set to True, a random user agent is chosen
@@ -90,7 +91,22 @@ class ScrapeManager {
             // whether to start the browser in headless mode
             headless: true,
             // specify flags passed to chrome here
-            chrome_flags: [],
+            // About our defaults values https://peter.sh/experiments/chromium-command-line-switches/
+            chrome_flags: [
+                '--disable-infobars',
+                '--window-position=0,0',
+                '--ignore-certifcate-errors',
+                '--ignore-certifcate-errors-spki-list',
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-accelerated-2d-canvas',
+                '--disable-gpu',
+                '--window-size=1920,1040',
+                '--start-fullscreen',
+                '--hide-scrollbars',
+                '--disable-notifications',
+            ],
             // the number of pages to scrape for each keyword
             num_pages: 1,
             // path to output file, data will be stored in JSON
@@ -115,10 +131,8 @@ class ScrapeManager {
             //custom_func: resolve('examples/pluggable.js'),
             custom_func: null,
             throw_on_detection: false,
-            // use a proxy for all connections
-            // example: 'socks5://78.94.172.42:1080'
-            // example: 'http://118.174.233.10:48400'
-            proxy: '',
+            // List of proxies to use ['socks5://78.94.172.42:1080', 'http://localhost:1080']
+            proxies: [],
             // a file with one proxy per line. Example:
             // socks5://78.94.172.42:1080
             // http://118.174.233.10:48400
@@ -138,14 +152,7 @@ class ScrapeManager {
                 concurrency: Cluster.CONCURRENCY_BROWSER,
                 maxConcurrency: 1,
             }
-        };
-
-        this.config.proxies = [];
-
-        // overwrite default config
-        for (var key in config) {
-            this.config[key] = config[key];
-        }
+        });
 
         if (config.sleep_range) {
             // parse an array
@@ -158,6 +165,11 @@ class ScrapeManager {
 
         if (fs.existsSync(this.config.keyword_file)) {
             this.config.keywords = read_keywords_from_file(this.config.keyword_file);
+        }
+
+        if (this.config.proxies && this.config.proxy_file) {
+            console.error('Either use a proxy_file or specify a proxy for all connections. Do not use both options.');
+            return false;
         }
 
         if (fs.existsSync(this.config.proxy_file)) {
@@ -193,54 +205,16 @@ class ScrapeManager {
             }
         }
 
-        // See here: https://peter.sh/experiments/chromium-command-line-switches/
-        var default_chrome_flags = [
-            '--disable-infobars',
-            '--window-position=0,0',
-            '--ignore-certifcate-errors',
-            '--ignore-certifcate-errors-spki-list',
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-accelerated-2d-canvas',
-            '--disable-gpu',
-            '--window-size=1920,1040',
-            '--start-fullscreen',
-            '--hide-scrollbars',
-            '--disable-notifications',
-        ];
-
-        var chrome_flags = default_chrome_flags.slice(); // copy that
-
-        if (Array.isArray(this.config.chrome_flags) && this.config.chrome_flags.length) {
-            chrome_flags = this.config.chrome_flags;
-        }
-
-        var user_agent = null;
-
-        if (this.config.user_agent) {
-            user_agent = this.config.user_agent;
-        }
+        const chrome_flags = _.clone(this.config.chrome_flags);
 
         if (this.config.random_user_agent) {
             const userAgent = new UserAgent({ deviceCategory: 'desktop' });
-            user_agent = userAgent.toString();
+            this.config.user_agent = userAgent.toString();
         }
 
-        if (user_agent) {
+        if (this.config.user_agent) {
             chrome_flags.push(
-                `--user-agent=${user_agent}`
-            )
-        }
-
-        if (this.config.proxy) {
-            if (this.config.proxies && this.config.proxies.length > 0) {
-                console.error('Either use a proxy_file or specify a proxy for all connections. Do not use both options.');
-                return false;
-            }
-
-            chrome_flags.push(
-                '--proxy-server=' + this.config.proxy,
+                `--user-agent=${this.config.user_agent}`
             )
         }
 
@@ -259,7 +233,6 @@ class ScrapeManager {
         } else {
             // if no custom start_browser functionality was given
             // use puppeteer-cluster for scraping
-            const { Cluster } = require('./puppeteer-cluster/dist/index.js');
 
             this.numClusters = this.config.puppeteer_cluster_config.maxConcurrency;
             var perBrowserOptions = [];
