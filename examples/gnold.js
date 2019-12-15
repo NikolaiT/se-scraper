@@ -2,7 +2,6 @@ const se_scraper = require('./../src/node_scraper.js');
 
 (async () => {
     let browser_config = {
-        debug_level: 2,
         output_file: 'examples/results/gnold.json',
         google_news_old_settings: {
             gl: 'us', // The gl parameter determines the Google country to use for the query.

@@ -30,12 +30,6 @@ let browser_config = {
     // if random_user_agent is set to True, a random user agent is chosen
     random_user_agent: true,
     headless: true,
-    // whether debug information should be printed
-    // level 0: print nothing
-    // level 1: print most important info
-    // ...
-    // level 4: print all shit nobody wants to know
-    debug_level: 1,
     is_local: false,
     throw_on_detection: false,
     puppeteer_cluster_config: {

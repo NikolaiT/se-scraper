@@ -3,7 +3,6 @@ const se_scraper = require('./../src/node_scraper.js');
 (async () => {
     let browser_config = {
         search_engine: 'google',
-        debug_level: 1,
         random_user_agent: true,
         is_local: false,
         html_output: false,

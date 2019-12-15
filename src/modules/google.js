@@ -2,8 +2,6 @@
 
 const cheerio = require('cheerio');
 const Scraper = require('./se_scraper');
-const common = require('./common.js');
-var log = common.log;
 
 class GoogleScraper extends Scraper {
 
@@ -243,7 +241,7 @@ class GoogleScraper extends Scraper {
             }
         }
 
-        log(this.config, 1, 'Using startUrl: ' + startUrl);
+        this.logger.info('Using startUrl: ' + startUrl);
 
         this.last_response = await this.page.goto(startUrl);
 
@@ -642,7 +640,7 @@ class GoogleMapsScraper extends Scraper {
             this.scrape_in_detail = this.config.google_maps_settings.scrape_in_detail || false;
         }
 
-        log(this.config, 1, 'Using startUrl: ' + startUrl);
+        this.logger.info('Using startUrl: ' + startUrl);
 
         this.last_response = await this.page.goto(startUrl);
 
@@ -681,7 +679,7 @@ class GoogleMapsScraper extends Scraper {
 
         let last_title_last_result = this.results[this.keyword][this.page_num-1].results.slice(-1)[0].title;
 
-        log(this.config, 1, `Waiting until new last serp title differs from: "${last_title_last_result}"`);
+        this.logger.info(`Waiting until new last serp title differs from: "${last_title_last_result}"`);
 
         await this.page.waitForFunction((last_title) => {
             const res = document.querySelectorAll('.section-result .section-result-title span');
@@ -775,7 +773,7 @@ class GoogleShoppingScraper extends Scraper {
             }
         }
 
-        log(this.config, 1, 'Using startUrl: ' + startUrl);
+        this.logger.info('Using startUrl: ' + startUrl);
 
         this.last_response = await this.page.goto(startUrl);
 

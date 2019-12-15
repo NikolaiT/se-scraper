@@ -3,6 +3,9 @@
 const fs = require('fs');
 const os = require('os');
 const _ = require('lodash');
+const { createLogger, format, transports } = require('winston');
+const { combine, timestamp, printf } = format;
+const debug = require('debug')('se-scraper:ScrapeManager');
 
 const UserAgent = require('user-agents');
 const google = require('./modules/google.js');
@@ -11,8 +14,6 @@ const yandex = require('./modules/yandex.js');
 const infospace = require('./modules/infospace.js');
 const duckduckgo = require('./modules/duckduckgo.js');
 const { Cluster } = require('./puppeteer-cluster/dist/index.js');
-const common = require('./modules/common.js');
-var log = common.log;
 
 const MAX_ALLOWED_BROWSERS = 6;
 
@@ -81,12 +82,18 @@ class ScrapeManager {
             // which search engine to scrape
             search_engine: 'google',
             search_engine_name: 'google',
-            // whether debug information should be printed
-            // level 0: print nothing
-            // level 1: print most important info
-            // ...
-            // level 4: print all shit nobody wants to know
-            debug_level: 1,
+            logger: createLogger({
+                level: 'info',
+                format: combine(
+                    timestamp(),
+                    printf(({ level, message, timestamp }) => {
+                        return `${timestamp} [${level}] ${message}`;
+                    })
+                ),
+                transports: [
+                    new transports.Console()
+                ]
+            }),
             keywords: ['nodejs rocks',],
             // whether to start the browser in headless mode
             headless: true,
@@ -154,6 +161,8 @@ class ScrapeManager {
             }
         });
 
+        this.logger = this.config.logger;
+
         if (config.sleep_range) {
             // parse an array
             config.sleep_range = eval(config.sleep_range);
@@ -168,16 +177,15 @@ class ScrapeManager {
         }
 
         if (this.config.proxies && this.config.proxy_file) {
-            console.error('Either use a proxy_file or specify a proxy for all connections. Do not use both options.');
-            return false;
+            throw new Error('Either use a proxy_file or specify a proxy for all connections. Do not use both options.');
         }
 
         if (fs.existsSync(this.config.proxy_file)) {
             this.config.proxies = read_keywords_from_file(this.config.proxy_file);
-            log(this.config, 1, `${this.config.proxies.length} proxies read from file.`);
+            this.logger.info(`${this.config.proxies.length} proxies read from file.`);
         }
 
-        log(this.config, 2, this.config);
+        debug('this.config=%O', this.config);
     }
 
     /*
@@ -224,7 +232,7 @@ class ScrapeManager {
             ignoreHTTPSErrors: true,
         };
 
-        log(this.config, 2, `Using the following puppeteer configuration: ${launch_args}`);
+        debug('Using the following puppeteer configuration launch_args=%O', launch_args);
 
         if (this.pluggable && this.pluggable.start_browser) {
             launch_args.config = this.config;
@@ -256,7 +264,7 @@ class ScrapeManager {
                     MAX_ALLOWED_BROWSERS
                 );
 
-                log(this.config, 1, `Using ${this.numClusters} clusters.`);
+                this.logger.info(`Using ${this.numClusters} clusters.`);
 
                 this.config.puppeteer_cluster_config.maxConcurrency = this.numClusters;
 
@@ -279,9 +287,7 @@ class ScrapeManager {
                 })
             }
 
-            if (this.config.debug_level >= 2) {
-                console.dir(perBrowserOptions)
-            }
+            debug('perBrowserOptions=%O', perBrowserOptions)
 
             this.cluster = await Cluster.launch({
                 monitor: this.config.puppeteer_cluster_config.monitor,
@@ -293,8 +299,8 @@ class ScrapeManager {
             });
 
             this.cluster.on('taskerror', (err, data) => {
-                console.log(`Error while scraping ${data}: ${err.message}`);
-                console.log(err);
+                this.logger.error(`Error while scraping ${data}: ${err.message}`);
+                debug('Error during cluster task', err);
             });
         }
     }
@@ -305,8 +311,7 @@ class ScrapeManager {
     async scrape(scrape_config = {}) {
 
         if (!scrape_config.keywords && !scrape_config.keyword_file) {
-            console.error('Either keywords or keyword_file must be supplied to scrape()');
-            return false;
+            throw new Error('Either keywords or keyword_file must be supplied to scrape()');
         }
 
         Object.assign(this.config, scrape_config);
@@ -318,10 +323,7 @@ class ScrapeManager {
 
         this.config.search_engine_name = typeof this.config.search_engine === 'function' ? this.config.search_engine.name : this.config.search_engine;
 
-        if (this.config.keywords && this.config.search_engine) {
-            log(this.config, 1,
-                `[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${this.config.search_engine_name} with ${this.config.keywords.length} keywords on ${this.config.num_pages} pages each.`)
-        }
+        this.logger.info(`scrapes ${this.config.search_engine_name} with ${this.config.keywords.length} keywords on ${this.config.num_pages} pages each.`);
 
         if (this.pluggable && this.pluggable.start_browser) {
 
@@ -385,8 +387,8 @@ class ScrapeManager {
         let timeDelta = Date.now() - startTime;
         let ms_per_request = timeDelta/num_requests;
 
-        log(this.config, 1, `Scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
-        log(this.config, 1, `On average ms/request: ${ms_per_request}ms/request`);
+        this.logger.info(`Scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
+        this.logger.info(`On average ms/request: ${ms_per_request}ms/request`);
 
         if (this.pluggable && this.pluggable.handle_results) {
             await this.pluggable.handle_results(results);
@@ -396,14 +398,14 @@ class ScrapeManager {
         metadata.ms_per_keyword = ms_per_request.toString();
         metadata.num_requests = num_requests;
 
-        log(this.config, 2, metadata);
+        debug('metadata=%O', metadata);
 
         if (this.pluggable && this.pluggable.handle_metadata) {
             await this.pluggable.handle_metadata(metadata);
         }
 
         if (this.config.output_file) {
-            log(this.config, 1, `Writing results to ${this.config.output_file}`);
+            this.logger.info(`Writing results to ${this.config.output_file}`);
             write_results(this.config.output_file, JSON.stringify(results, null, 4));
         }
 

@@ -1,8 +1,6 @@
 'use strict';
 
 const Scraper = require('./se_scraper');
-const common = require('./common.js');
-var log = common.log;
 
 class YandexScraper extends Scraper {
 
@@ -75,7 +73,7 @@ class YandexScraper extends Scraper {
     async load_start_page() {
         let startUrl = 'https://yandex.com';
 
-        log(this.config, 1, 'Using startUrl: ' + startUrl);
+        this.logger.info('Using startUrl: ' + startUrl);
 
         this.last_response = await this.page.goto(startUrl);
 

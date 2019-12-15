@@ -1,8 +1,6 @@
 'use strict';
 const meta = require('./metadata.js');
-const common = require('./common.js');
-var log = common.log;
-
+const debug = require('debug')('se-scraper:Scraper');
 /*
     Get useful JS knowledge and get awesome...
 
@@ -26,6 +24,7 @@ module.exports = class Scraper {
         };
         this.pluggable = pluggable;
         this.config = config;
+        this.logger = this.config.logger;
         this.context = context;
 
         this.proxy = config.proxy;
@@ -113,25 +112,25 @@ module.exports = class Scraper {
 
         if (this.config.log_http_headers === true) {
             this.metadata.http_headers = await meta.get_http_headers(this.page);
-            log(this.config, 2, this.metadata.http_headers);
+            debug('this.metadata.http_headers=%O', this.metadata.http_headers);
         }
 
         if (this.config.log_ip_address === true) {
             let ipinfo = await meta.get_ip_data(this.page);
             this.metadata.ipinfo = ipinfo;
-            log(this.config, 2, this.metadata.ipinfo);
+            debug('this.metadata.ipinfo', this.metadata.ipinfo);
         }
 
         // check that our proxy is working by confirming
         // that ipinfo.io sees the proxy IP address
         if (this.proxy && this.config.log_ip_address === true) {
-            log(this.config, 3, `${this.metadata.ipinfo.ip} vs ${this.proxy}`);
+            debug(`${this.metadata.ipinfo.ip} vs ${this.proxy}`);
 
             // if the ip returned by ipinfo is not a substring of our proxystring, get the heck outta here
             if (!this.proxy.includes(this.metadata.ipinfo.ip)) {
                 throw new Error(`Proxy output ip ${this.proxy} does not match with provided one`);
             } else {
-                log(this.config, 1, `Using valid Proxy: ${this.proxy}`);
+                this.logger.info(`Using valid Proxy: ${this.proxy}`);
             }
 
         }
@@ -179,7 +178,7 @@ module.exports = class Scraper {
 
                 do {
 
-                    log(this.config, 1, `${this.config.search_engine_name} scrapes keyword "${keyword}" on page ${this.page_num}`);
+                    this.logger.info(`${this.config.search_engine_name} scrapes keyword "${keyword}" on page ${this.page_num}`);
 
                     await this.wait_for_results();
 
@@ -263,28 +262,21 @@ module.exports = class Scraper {
 
             } catch (e) {
 
-                console.error(`Problem with scraping ${keyword} in search engine ${this.config.search_engine_name}: ${e}`);
+                this.logger.warn(`Problem with scraping ${keyword} in search engine ${this.config.search_engine_name}: ${e.message}`);
+                debug('this.last_response=%O', this.last_response);
 
-                if (this.last_response) {
-                    log(this.config, 2, this.last_response);
-                }
-
-                if (this.config.debug_level > 2) {
-                    try {
-                        // Try to save a screenshot of the error
-                        await this.page.screenshot({path: `debug_se_scraper_${this.config.search_engine_name}_${keyword}.png`});
-                    } catch (e) {
-                    }
+                if (this.config.take_screenshot_on_error) {
+                    await this.page.screenshot({ path: `debug_se_scraper_${this.config.search_engine_name}_${keyword}.png` });
                 }
 
                 this.metadata.scraping_detected = await this.detected();
 
                 if (this.metadata.scraping_detected === true) {
-                    console.error(`${this.config.search_engine_name} detected the scraping!`);
+                    this.logger.warn(`${this.config.search_engine_name} detected the scraping!`);
 
                     if (this.config.is_local === true) {
                         await this.sleep(this.SOLVE_CAPTCHA_TIME);
-                        console.error(`You have ${this.SOLVE_CAPTCHA_TIME}ms to enter the captcha.`);
+                        this.logger.info(`You have ${this.SOLVE_CAPTCHA_TIME}ms to enter the captcha.`);
                         // expect that user filled out necessary captcha
                     } else {
                         if (this.config.throw_on_detection === true) {
@@ -318,7 +310,7 @@ module.exports = class Scraper {
                 baseUrl += `${key}=${settings[key]}&`
             }
 
-            log(this.config, 1, 'Using startUrl: ' + baseUrl);
+            this.logger.info('Using startUrl: ' + baseUrl);
 
             return baseUrl;
         }
@@ -335,7 +327,7 @@ module.exports = class Scraper {
     async random_sleep() {
         const [min, max] = this.config.sleep_range;
         let rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number
-        log(this.config, 1, `Sleeping for ${rand}s`);
+        this.logger.info(`Sleeping for ${rand}s`);
         await this.sleep(rand * 1000);
     }
 
@@ -349,7 +341,7 @@ module.exports = class Scraper {
     no_results(needles, html) {
         for (let needle of needles) {
             if (html.includes(needle)) {
-                console.log(this.config, 2, `HTML contains needle ${needle}. no_results=true`);
+                this.logger.warn(`HTML contains needle ${needle}. no_results=true`);
                 return true;
             }
         }

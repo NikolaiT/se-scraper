@@ -3,7 +3,6 @@ const resolve = require('path').resolve;
 
 (async () => {
     let browser_config = {
-        debug_level: 1,
         test_evasion: false,
         log_http_headers: true,
         log_ip_address: true,
