@@ -2,7 +2,6 @@ const se_scraper = require('./../src/node_scraper.js');
 
 (async () => {
     let browser_config = {
-        debug_level: 1,
         output_file: 'examples/results/maps.json',
         test_evasion: false,
         block_assets: false,

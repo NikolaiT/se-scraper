@@ -5,7 +5,6 @@ const se_scraper = require('./../src/node_scraper.js');
         random_user_agent: true,
         write_meta_data: true,
         sleep_range: '[1,1]',
-        debug_level: 1,
         headless: true,
         output_file: `examples/results/multiple_search_engines.json`
     };
