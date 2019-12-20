@@ -6,6 +6,7 @@ const _ = require('lodash');
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, printf } = format;
 const debug = require('debug')('se-scraper:ScrapeManager');
+const { Cluster } = require('puppeteer-cluster');
 
 const UserAgent = require('user-agents');
 const google = require('./modules/google.js');
@@ -13,7 +14,7 @@ const bing = require('./modules/bing.js');
 const yandex = require('./modules/yandex.js');
 const infospace = require('./modules/infospace.js');
 const duckduckgo = require('./modules/duckduckgo.js');
-const { Cluster } = require('./puppeteer-cluster/dist/index.js');
+const CustomConcurrencyImpl = require('./concurrency-implementation');
 
 const MAX_ALLOWED_BROWSERS = 6;
 
@@ -292,10 +293,11 @@ class ScrapeManager {
             this.cluster = await Cluster.launch({
                 monitor: this.config.puppeteer_cluster_config.monitor,
                 timeout: this.config.puppeteer_cluster_config.timeout, // max timeout set to 30 minutes
-                concurrency: this.config.puppeteer_cluster_config.concurrency,
+                concurrency: CustomConcurrencyImpl,
                 maxConcurrency: this.config.puppeteer_cluster_config.maxConcurrency,
-                puppeteerOptions: launch_args,
-                perBrowserOptions: perBrowserOptions,
+                puppeteerOptions: {
+                    perBrowserOptions: perBrowserOptions
+                }
             });
 
             this.cluster.on('taskerror', (err, data) => {
