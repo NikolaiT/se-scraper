@@ -190,6 +190,13 @@ module.exports = class Scraper {
                     let parsed = this.parse(html);
                     this.results[keyword][this.page_num] = parsed ? parsed : await this.parse_async(html);
 
+                    if (this.config.screen_output) {
+                        this.results[keyword][this.page_num].screenshot = await this.page.screenshot({
+                            encoding: 'base64',
+                            fullPage: false,
+                        });
+                    }
+
                     if (this.config.html_output) {
 
                         if (this.config.clean_html_output) {
@@ -234,13 +241,6 @@ module.exports = class Scraper {
                         // TODO: not sure if this is save!
                         html_contents = html_contents.replace(/>\s+</g,'><');
                         this.results[keyword][this.page_num].html = html_contents;
-                    }
-
-                    if (this.config.screen_output) {
-                        this.results[keyword][this.page_num].screenshot = await this.page.screenshot({
-                            encoding: 'base64',
-                            fullPage: false,
-                        });
                     }
 
                     this.page_num += 1;
