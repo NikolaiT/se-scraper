@@ -1,22 +1,28 @@
+'use strict';
 const express = require('express');
 const puppeteer = require('puppeteer');
+// TODO add a test logger in place of default winston logger
 const logger = require('winston');
 const net = require('net');
 const http = require('http');
 const https = require('https');
 const url = require('url');
+const assert = require('assert');
+const path = require('path');
 const keyCert = require('key-cert');
 const Promise = require('bluebird');
 
 const debug = require('debug')('se-scraper:test');
-const { GoogleScraper } = require('../src/modules/google');
+const { GoogleScraper } = require('../../src/modules/google');
 
 const httpPort = 3012;
 const httpsPort = httpPort + 1;
 
 const fakeSearchEngine = express();
-fakeSearchEngine.get("/about", (req, res) => {
-  res.status(500).send("This is the About page");
+fakeSearchEngine.get('/search', (req, res, next) => {
+    debug('q=%s', req.query.q);
+    const pageNumber = ((req.query.start/10) || 0)  + 1;
+    res.sendFile(path.join(__dirname, '../mocks/google/' + req.query.q + '_page' + pageNumber + '.html'));
 });
 fakeSearchEngine.use(express.static('test/mocks/google', {extensions: ['html']}));
 
@@ -76,7 +82,7 @@ describe('Module Google', function(){
         await browser.close();
     });
 
-    it('one keyword', function(){
+    it('one keyword one page', function(){
         const googleScraper = new GoogleScraper({
             config: {
                 search_engine_name: 'google',
@@ -84,14 +90,36 @@ describe('Module Google', function(){
                 keywords: ['test keyword'],
                 logger,
                 scrape_from_file: '',
-                google_settings: {
-                    //start_url: 'http://www.google.com/'
-                }
             }
         });
         googleScraper.STANDARD_TIMEOUT = 500;
-        return googleScraper.run({page});
+        return googleScraper.run({page}).then(({results, metadata, num_requests}) => {
+            assert.strictEqual(num_requests, 1, 'Must do one request');
+            assert.strictEqual(results['test keyword']['1'].results.length, 10, 'Must have 10 organic results parsed');
+        });
     });
 
+    it('one keyword 3 pages', function () {
+        const googleScraper = new GoogleScraper({
+            config: {
+                search_engine_name: 'google',
+                throw_on_detection: true,
+                keywords: ['test keyword'],
+                logger,
+                scrape_from_file: '',
+                num_pages: 3,
+            }
+        });
+        googleScraper.STANDARD_TIMEOUT = 500;
+        return googleScraper.run({page}).then(({results, metadata, num_requests}) => {
+            assert.strictEqual(num_requests, 3, 'Must three requests');
+            assert.strictEqual(results['test keyword']['1'].results.length, 10, 'Must have 10 organic results parsed on page 1');
+            assert.strictEqual(results['test keyword']['1'].results[0].title, 'Keyword Tool (FREE) ᐈ #1 Google Keyword Planner Alternative', 'Title not matching on first organic result page 1');
+            assert.strictEqual(results['test keyword']['2'].results.length, 10, 'Must have 10 organic results parsed on page 2');
+            assert.strictEqual(results['test keyword']['2'].results[0].title, 'Keyword Research | The Beginner\'s Guide to SEO - Moz', 'Title not matching on first organic result page 1');
+            assert.strictEqual(results['test keyword']['3'].results.length, 10, 'Must have 10 organic results parsed on page 3');
+            assert.strictEqual(results['test keyword']['3'].results[0].title, 'The ACT Keyword Study Plan — NerdCoach', 'Title not matching on first organic result page 1');
+        });
+    });
 
 });

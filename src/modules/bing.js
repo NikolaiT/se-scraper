@@ -123,12 +123,9 @@ class BingScraper extends Scraper {
             }
         }
 
-        try {
-            await this.page.goto(startUrl);
-            await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
-        } catch (e) {
-            return false;
-        }
+        await this.page.goto(startUrl);
+        await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
+        
         return true;
     }
 
