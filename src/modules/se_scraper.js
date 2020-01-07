@@ -10,6 +10,7 @@ const debug = require('debug')('se-scraper:Scraper');
 
 module.exports = class Scraper {
     constructor(options = {}) {
+        debug('constructor');
         const {
             config = {},
             context = {},

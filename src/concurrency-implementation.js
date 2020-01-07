@@ -11,6 +11,7 @@ class CustomConcurrency extends Browser {
 
     async workerInstance() {
         const options = this.options.perBrowserOptions.shift();
+        debug('Launch puppeteer instance with options=%o', options);
         let chrome = await this.puppeteer.launch(options);
         let page;
         let context;
