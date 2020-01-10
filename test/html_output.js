@@ -70,9 +70,11 @@ describe('Config', function(){
 
             const scrape_job = {
                 search_engine: 'google',
+                /* TODO refactor start_url
                 google_settings: {
                     start_url: 'http://localhost:' + httpPort
                 },
+                */
                 keywords: ['test keyword'],
             };
 
@@ -82,6 +84,9 @@ describe('Config', function(){
                 html_output: true,
                 //clean_html_output: false,
                 //clean_data_images: false,
+                // TODO refactor start_url so we can use-it instead of depending of the proxy for this test
+                proxies: ['http://localhost:' + proxyPort],
+                use_proxies_only: true,
             });
             await scraper.start();
             const { results } = await scraper.scrape(scrape_job);
