@@ -216,77 +216,59 @@ class ScrapeManager {
 
         const chrome_flags = _.clone(this.config.chrome_flags);
 
-        if (this.config.random_user_agent) {
-            const userAgent = new UserAgent({ deviceCategory: 'desktop' });
-            this.config.user_agent = userAgent.toString();
-        }
-
-        if (this.config.user_agent) {
-            chrome_flags.push(
-                `--user-agent=${this.config.user_agent}`
-            )
-        }
-
-        var launch_args = {
-            args: chrome_flags,
-            headless: this.config.headless,
-            ignoreHTTPSErrors: true,
-        };
-
-        debug('Using the following puppeteer configuration launch_args=%O', launch_args);
-
         if (this.pluggable && this.pluggable.start_browser) {
             launch_args.config = this.config;
-            this.browser = await this.pluggable.start_browser(launch_args);
+            this.browser = await this.pluggable.start_browser({
+                config: this.config,
+            });
             this.page = await this.browser.newPage();
         } else {
             // if no custom start_browser functionality was given
             // use puppeteer-cluster for scraping
 
-            this.numClusters = this.config.puppeteer_cluster_config.maxConcurrency;
-            var perBrowserOptions = [];
-
-            // the first browser this.config with home IP
-            if (!this.config.use_proxies_only) {
-                perBrowserOptions.push(launch_args);
-            }
-
+            let proxies;
             // if we have at least one proxy, always use CONCURRENCY_BROWSER
             // and set maxConcurrency to this.config.proxies.length + 1
             // else use whatever this.configuration was passed
             if (this.config.proxies && this.config.proxies.length > 0) {
-                this.config.puppeteer_cluster_config.concurrency = Cluster.CONCURRENCY_BROWSER;
 
                 // because we use real browsers, we ran out of memory on normal laptops
                 // when using more than maybe 5 or 6 browsers.
                 // therefore hardcode a limit here
+                // TODO not sure this what we want
                 this.numClusters = Math.min(
                     this.config.proxies.length + (this.config.use_proxies_only ? 0 : 1),
                     MAX_ALLOWED_BROWSERS
                 );
+                proxies = _.clone(this.config.proxies);
 
-                this.logger.info(`Using ${this.numClusters} clusters.`);
-
-                this.config.puppeteer_cluster_config.maxConcurrency = this.numClusters;
-
-                for (var proxy of this.config.proxies) {
-                    perBrowserOptions.push({
-                        headless: this.config.headless,
-                        ignoreHTTPSErrors: true,
-                        args: chrome_flags.concat(`--proxy-server=${proxy}`)
-                    })
+                // Insert a first config without proxy if use_proxy_only is false
+                if (this.config.use_proxies_only === false) {
+                    proxies.unshift(null);
                 }
+
+            } else {
+                this.numClusters = this.config.puppeteer_cluster_config.maxConcurrency;
+                proxies = _.times(this.numClusters, null);
             }
 
-            // Give the per browser options each a random user agent when random user agent is set
-            while (perBrowserOptions.length < this.numClusters) {
-                const userAgent = new UserAgent();
-                perBrowserOptions.push({
+            this.logger.info(`Using ${this.numClusters} clusters.`);
+
+            // Give the per browser options
+            const perBrowserOptions = _.map(proxies, (proxy) => {
+                const userAgent = (this.config.random_user_agent) ? (new UserAgent({deviceCategory: 'desktop'})).toString() : this.config.user_agent;
+                let args = chrome_flags.concat([`--user-agent=${userAgent}`]);
+
+                if (proxy) {
+                    args = args.concat([`--proxy-server=${proxy}`]);
+                }
+
+                return {
                     headless: this.config.headless,
                     ignoreHTTPSErrors: true,
-                    args: default_chrome_flags.slice().concat(`--user-agent=${userAgent.toString()}`)
-                })
-            }
+                    args
+                };
+            });
 
             debug('perBrowserOptions=%O', perBrowserOptions)
 
@@ -294,7 +276,7 @@ class ScrapeManager {
                 monitor: this.config.puppeteer_cluster_config.monitor,
                 timeout: this.config.puppeteer_cluster_config.timeout, // max timeout set to 30 minutes
                 concurrency: CustomConcurrencyImpl,
-                maxConcurrency: this.config.puppeteer_cluster_config.maxConcurrency,
+                maxConcurrency: this.numClusters,
                 puppeteerOptions: {
                     perBrowserOptions: perBrowserOptions
                 }

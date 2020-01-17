@@ -135,7 +135,7 @@ describe('Config', function(){
                 assert(uaParsed.os.name, 'UserAgent should have a os name detected');
             });
 
-            assert( _.chain(uaList).countBy().toPairs().sortBy(e => e[1]).last().value()[1] < (NUMBER_OF_EXEC * 0.3), 'Each user agent should appear less than 30% of the time' );
+            assert( _.chain(uaList).countBy().toPairs().sortBy(e => e[1]).last().value()[1] < (NUMBER_OF_EXEC * 0.4), 'Each user agent should appear less than 40% of the time' );
             
         });
 
