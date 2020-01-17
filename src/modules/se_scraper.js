@@ -52,7 +52,7 @@ module.exports = class Scraper {
 
     async run({page, data, worker}) {
 
-        debug('worker.id=%s', worker.id, this.config.keywords);
+        debug('worker=%o', worker, this.config.keywords);
 
         if (page) {
             this.page = page;

@@ -186,6 +186,10 @@ class ScrapeManager {
             this.logger.info(`${this.config.proxies.length} proxies read from file.`);
         }
 
+        if (!this.config.proxies && this.config.use_proxies_only) {
+            throw new Error('Must provide at least one proxy in proxies if you enable use_proxies_only');
+        }
+
         debug('this.config=%O', this.config);
     }
 

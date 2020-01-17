@@ -136,6 +136,26 @@ describe('Config', function(){
             await scraper.quit();
         });
 
+        it('zero proxy given, use_proxies_only=true', async function () {
+
+            const scrape_job = {
+                search_engine: MockScraperTestProxy,
+                keywords: ['news', 'some stuff', 'i work too much', 'what to do?', 'javascript is hard'],
+            };
+
+            await assert.rejects(async () => {
+                var scraper = new se_scraper.ScrapeManager({
+                    throw_on_detection: true,
+                    use_proxies_only: true,
+                    logger: testLogger,
+                });
+                await scraper.start();
+                const { results } = await scraper.scrape(scrape_job);
+                await scraper.quit();
+            }, /Must provide at least one proxy in proxies if you enable use_proxies_only/);
+
+        });
+
     });
 
 });
