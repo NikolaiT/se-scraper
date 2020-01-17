@@ -281,11 +281,6 @@ class ScrapeManager {
                     perBrowserOptions: perBrowserOptions
                 }
             });
-
-            this.cluster.on('taskerror', (err, data) => {
-                this.logger.error(`Error while scraping ${data}: ${err.message}`);
-                debug('Error during cluster task', err);
-            });
         }
     }
 
@@ -336,26 +331,21 @@ class ScrapeManager {
                 chunks[k % this.numClusters].push(this.config.keywords[k]);
             }
 
-            let execPromises = [];
-            let scraperInstances = [];
-            for (var c = 0; c < chunks.length; c++) {
-                this.config.keywords = chunks[c];
+            debug('chunks=%o', chunks);
 
-                if (this.config.use_proxies_only) {
-                    this.config.proxy = this.config.proxies[c]; // every cluster has a dedicated proxy
-                } else if(c > 0) {
-                    this.config.proxy = this.config.proxies[c-1]; // first cluster uses own ip address
-                }
+            let execPromises = [];
+            for (var c = 0; c < chunks.length; c++) {
+                const config = _.clone(this.config);
+                config.keywords = chunks[c];
 
                 var obj = getScraper(this.config.search_engine, {
-                    config: this.config,
+                    config: config,
                     context: {},
                     pluggable: this.pluggable,
                 });
 
                 var boundMethod = obj.run.bind(obj);
                 execPromises.push(this.cluster.execute({}, boundMethod));
-                scraperInstances.push(obj);
             }
 
             let promiseReturns = await Promise.all(execPromises);

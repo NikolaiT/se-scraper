@@ -50,7 +50,9 @@ module.exports = class Scraper {
         }
     }
 
-    async run({page, data}) {
+    async run({page, data, worker}) {
+
+        debug('worker.id=%s', worker.id, this.config.keywords);
 
         if (page) {
             this.page = page;
