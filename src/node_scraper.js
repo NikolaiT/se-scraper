@@ -139,7 +139,7 @@ class ScrapeManager {
             custom_func: null,
             throw_on_detection: false,
             // List of proxies to use ['socks5://78.94.172.42:1080', 'http://localhost:1080']
-            proxies: [],
+            proxies: null,
             // a file with one proxy per line. Example:
             // socks5://78.94.172.42:1080
             // http://118.174.233.10:48400
@@ -180,7 +180,7 @@ class ScrapeManager {
             throw new Error('Either use a proxy_file or specify a proxy for all connections. Do not use both options.');
         }
 
-        if (fs.existsSync(this.config.proxy_file)) {
+        if (this.config.proxy_file) {
             this.config.proxies = read_keywords_from_file(this.config.proxy_file);
             this.logger.info(`${this.config.proxies.length} proxies read from file.`);
         }
@@ -253,7 +253,7 @@ class ScrapeManager {
             // if we have at least one proxy, always use CONCURRENCY_BROWSER
             // and set maxConcurrency to this.config.proxies.length + 1
             // else use whatever this.configuration was passed
-            if (this.config.proxies.length > 0) {
+            if (this.config.proxies && this.config.proxies.length > 0) {
                 this.config.puppeteer_cluster_config.concurrency = Cluster.CONCURRENCY_BROWSER;
 
                 // because we use real browsers, we ran out of memory on normal laptops
