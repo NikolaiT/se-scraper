@@ -10,6 +10,7 @@ const debug = require('debug')('se-scraper:Scraper');
 
 module.exports = class Scraper {
     constructor(options = {}) {
+        debug('constructor');
         const {
             config = {},
             context = {},
@@ -49,7 +50,9 @@ module.exports = class Scraper {
         }
     }
 
-    async run({page, data}) {
+    async run({page, data, worker}) {
+
+        debug('worker=%o', worker, this.config.keywords);
 
         if (page) {
             this.page = page;
