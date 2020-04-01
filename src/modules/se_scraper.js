@@ -272,6 +272,12 @@ module.exports = class Scraper {
                     await this.page.screenshot({ path: `debug_se_scraper_${this.config.search_engine_name}_${keyword}.png` });
                 }
 
+                if (this.config.keep_html_on_error){
+                    const html_error = await this.page.content();
+                    e.html_on_error = html_error;
+                    e.lastUrl = await this.page.evaluate(() => {return window.location.href;});
+                }
+
                 this.metadata.scraping_detected = await this.detected();
 
                 if (this.metadata.scraping_detected === true) {
