@@ -1,3 +1,0 @@
-[submodule "src/puppeteer-cluster"]
-	path = src/puppeteer-cluster
-	url = https://github.com/NikolaiT/puppeteer-cluster

@@ -1,7 +1,12 @@
 'use strict';
 
-var fs = require('fs');
-var os = require("os");
+const fs = require('fs');
+const os = require('os');
+const _ = require('lodash');
+const { createLogger, format, transports } = require('winston');
+const { combine, timestamp, printf } = format;
+const debug = require('debug')('se-scraper:ScrapeManager');
+const { Cluster } = require('puppeteer-cluster');
 
 const UserAgent = require('user-agents');
 const google = require('./modules/google.js');
@@ -9,9 +14,7 @@ const bing = require('./modules/bing.js');
 const yandex = require('./modules/yandex.js');
 const infospace = require('./modules/infospace.js');
 const duckduckgo = require('./modules/duckduckgo.js');
-const { Cluster } = require('./puppeteer-cluster/dist/index.js');
-const common = require('./modules/common.js');
-var log = common.log;
+const CustomConcurrencyImpl = require('./concurrency-implementation');
 
 const MAX_ALLOWED_BROWSERS = 6;
 
@@ -63,7 +66,7 @@ class ScrapeManager {
         this.scraper = null;
         this.context = context;
 
-        this.config = {
+        this.config = _.defaults(config, {
             // the user agent to scrape with
             user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36',
             // if random_user_agent is set to True, a random user agent is chosen
@@ -80,17 +83,38 @@ class ScrapeManager {
             // which search engine to scrape
             search_engine: 'google',
             search_engine_name: 'google',
-            // whether debug information should be printed
-            // level 0: print nothing
-            // level 1: print most important info
-            // ...
-            // level 4: print all shit nobody wants to know
-            debug_level: 1,
+            logger: createLogger({
+                level: 'info',
+                format: combine(
+                    timestamp(),
+                    printf(({ level, message, timestamp }) => {
+                        return `${timestamp} [${level}] ${message}`;
+                    })
+                ),
+                transports: [
+                    new transports.Console()
+                ]
+            }),
             keywords: ['nodejs rocks',],
             // whether to start the browser in headless mode
             headless: true,
             // specify flags passed to chrome here
-            chrome_flags: [],
+            // About our defaults values https://peter.sh/experiments/chromium-command-line-switches/
+            chrome_flags: [
+                '--disable-infobars',
+                '--window-position=0,0',
+                '--ignore-certifcate-errors',
+                '--ignore-certifcate-errors-spki-list',
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-accelerated-2d-canvas',
+                '--disable-gpu',
+                '--window-size=1920,1040',
+                '--start-fullscreen',
+                '--hide-scrollbars',
+                '--disable-notifications',
+            ],
             // the number of pages to scrape for each keyword
             num_pages: 1,
             // path to output file, data will be stored in JSON
@@ -115,10 +139,8 @@ class ScrapeManager {
             //custom_func: resolve('examples/pluggable.js'),
             custom_func: null,
             throw_on_detection: false,
-            // use a proxy for all connections
-            // example: 'socks5://78.94.172.42:1080'
-            // example: 'http://118.174.233.10:48400'
-            proxy: '',
+            // List of proxies to use ['socks5://78.94.172.42:1080', 'http://localhost:1080']
+            proxies: null,
             // a file with one proxy per line. Example:
             // socks5://78.94.172.42:1080
             // http://118.174.233.10:48400
@@ -138,14 +160,9 @@ class ScrapeManager {
                 concurrency: Cluster.CONCURRENCY_BROWSER,
                 maxConcurrency: 1,
             }
-        };
+        });
 
-        this.config.proxies = [];
-
-        // overwrite default config
-        for (var key in config) {
-            this.config[key] = config[key];
-        }
+        this.logger = this.config.logger;
 
         if (config.sleep_range) {
             // parse an array
@@ -160,12 +177,20 @@ class ScrapeManager {
             this.config.keywords = read_keywords_from_file(this.config.keyword_file);
         }
 
-        if (fs.existsSync(this.config.proxy_file)) {
-            this.config.proxies = read_keywords_from_file(this.config.proxy_file);
-            log(this.config, 1, `${this.config.proxies.length} proxies read from file.`);
+        if (this.config.proxies && this.config.proxy_file) {
+            throw new Error('Either use a proxy_file or specify a proxy for all connections. Do not use both options.');
         }
 
-        log(this.config, 2, this.config);
+        if (this.config.proxy_file) {
+            this.config.proxies = read_keywords_from_file(this.config.proxy_file);
+            this.logger.info(`${this.config.proxies.length} proxies read from file.`);
+        }
+
+        if (!this.config.proxies && this.config.use_proxies_only) {
+            throw new Error('Must provide at least one proxy in proxies if you enable use_proxies_only');
+        }
+
+        debug('this.config=%O', this.config);
     }
 
     /*
@@ -193,135 +218,72 @@ class ScrapeManager {
             }
         }
 
-        // See here: https://peter.sh/experiments/chromium-command-line-switches/
-        var default_chrome_flags = [
-            '--disable-infobars',
-            '--window-position=0,0',
-            '--ignore-certifcate-errors',
-            '--ignore-certifcate-errors-spki-list',
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-accelerated-2d-canvas',
-            '--disable-gpu',
-            '--window-size=1920,1040',
-            '--start-fullscreen',
-            '--hide-scrollbars',
-            '--disable-notifications',
-        ];
-
-        var chrome_flags = default_chrome_flags.slice(); // copy that
-
-        if (Array.isArray(this.config.chrome_flags) && this.config.chrome_flags.length) {
-            chrome_flags = this.config.chrome_flags;
-        }
-
-        var user_agent = null;
-
-        if (this.config.user_agent) {
-            user_agent = this.config.user_agent;
-        }
-
-        if (this.config.random_user_agent) {
-            const userAgent = new UserAgent({ deviceCategory: 'desktop' });
-            user_agent = userAgent.toString();
-        }
-
-        if (user_agent) {
-            chrome_flags.push(
-                `--user-agent=${user_agent}`
-            )
-        }
-
-        if (this.config.proxy) {
-            if (this.config.proxies && this.config.proxies.length > 0) {
-                console.error('Either use a proxy_file or specify a proxy for all connections. Do not use both options.');
-                return false;
-            }
-
-            chrome_flags.push(
-                '--proxy-server=' + this.config.proxy,
-            )
-        }
-
-        var launch_args = {
-            args: chrome_flags,
-            headless: this.config.headless,
-            ignoreHTTPSErrors: true,
-        };
-
-        log(this.config, 2, `Using the following puppeteer configuration: ${launch_args}`);
+        const chrome_flags = _.clone(this.config.chrome_flags);
 
         if (this.pluggable && this.pluggable.start_browser) {
             launch_args.config = this.config;
-            this.browser = await this.pluggable.start_browser(launch_args);
+            this.browser = await this.pluggable.start_browser({
+                config: this.config,
+            });
             this.page = await this.browser.newPage();
         } else {
             // if no custom start_browser functionality was given
             // use puppeteer-cluster for scraping
-            const { Cluster } = require('./puppeteer-cluster/dist/index.js');
 
-            this.numClusters = this.config.puppeteer_cluster_config.maxConcurrency;
-            var perBrowserOptions = [];
-
-            // the first browser this.config with home IP
-            if (!this.config.use_proxies_only) {
-                perBrowserOptions.push(launch_args);
-            }
-
+            let proxies;
             // if we have at least one proxy, always use CONCURRENCY_BROWSER
             // and set maxConcurrency to this.config.proxies.length + 1
             // else use whatever this.configuration was passed
-            if (this.config.proxies.length > 0) {
-                this.config.puppeteer_cluster_config.concurrency = Cluster.CONCURRENCY_BROWSER;
+            if (this.config.proxies && this.config.proxies.length > 0) {
 
                 // because we use real browsers, we ran out of memory on normal laptops
                 // when using more than maybe 5 or 6 browsers.
                 // therefore hardcode a limit here
+                // TODO not sure this what we want
                 this.numClusters = Math.min(
                     this.config.proxies.length + (this.config.use_proxies_only ? 0 : 1),
                     MAX_ALLOWED_BROWSERS
                 );
+                proxies = _.clone(this.config.proxies);
 
-                log(this.config, 1, `Using ${this.numClusters} clusters.`);
-
-                this.config.puppeteer_cluster_config.maxConcurrency = this.numClusters;
-
-                for (var proxy of this.config.proxies) {
-                    perBrowserOptions.push({
-                        headless: this.config.headless,
-                        ignoreHTTPSErrors: true,
-                        args: chrome_flags.concat(`--proxy-server=${proxy}`)
-                    })
+                // Insert a first config without proxy if use_proxy_only is false
+                if (this.config.use_proxies_only === false) {
+                    proxies.unshift(null);
                 }
+
+            } else {
+                this.numClusters = this.config.puppeteer_cluster_config.maxConcurrency;
+                proxies = _.times(this.numClusters, null);
             }
 
-            // Give the per browser options each a random user agent when random user agent is set
-            while (perBrowserOptions.length < this.numClusters) {
-                const userAgent = new UserAgent();
-                perBrowserOptions.push({
+            this.logger.info(`Using ${this.numClusters} clusters.`);
+
+            // Give the per browser options
+            const perBrowserOptions = _.map(proxies, (proxy) => {
+                const userAgent = (this.config.random_user_agent) ? (new UserAgent({deviceCategory: 'desktop'})).toString() : this.config.user_agent;
+                let args = chrome_flags.concat([`--user-agent=${userAgent}`]);
+
+                if (proxy) {
+                    args = args.concat([`--proxy-server=${proxy}`]);
+                }
+
+                return {
                     headless: this.config.headless,
                     ignoreHTTPSErrors: true,
-                    args: default_chrome_flags.slice().concat(`--user-agent=${userAgent.toString()}`)
-                })
-            }
+                    args
+                };
+            });
 
-            if (this.config.debug_level >= 2) {
-                console.dir(perBrowserOptions)
-            }
+            debug('perBrowserOptions=%O', perBrowserOptions)
 
             this.cluster = await Cluster.launch({
                 monitor: this.config.puppeteer_cluster_config.monitor,
                 timeout: this.config.puppeteer_cluster_config.timeout, // max timeout set to 30 minutes
-                concurrency: this.config.puppeteer_cluster_config.concurrency,
-                maxConcurrency: this.config.puppeteer_cluster_config.maxConcurrency,
-                puppeteerOptions: launch_args,
-                perBrowserOptions: perBrowserOptions,
-            });
-
-            this.cluster.on('taskerror', (err, data) => {
-                console.log(`Error while scraping ${data}: ${err.message}`);
-                console.log(err);
+                concurrency: CustomConcurrencyImpl,
+                maxConcurrency: this.numClusters,
+                puppeteerOptions: {
+                    perBrowserOptions: perBrowserOptions
+                }
             });
         }
     }
@@ -332,8 +294,7 @@ class ScrapeManager {
     async scrape(scrape_config = {}) {
 
         if (!scrape_config.keywords && !scrape_config.keyword_file) {
-            console.error('Either keywords or keyword_file must be supplied to scrape()');
-            return false;
+            throw new Error('Either keywords or keyword_file must be supplied to scrape()');
         }
 
         Object.assign(this.config, scrape_config);
@@ -345,10 +306,7 @@ class ScrapeManager {
 
         this.config.search_engine_name = typeof this.config.search_engine === 'function' ? this.config.search_engine.name : this.config.search_engine;
 
-        if (this.config.keywords && this.config.search_engine) {
-            log(this.config, 1,
-                `[se-scraper] started at [${(new Date()).toUTCString()}] and scrapes ${this.config.search_engine_name} with ${this.config.keywords.length} keywords on ${this.config.num_pages} pages each.`)
-        }
+        this.logger.info(`scrapes ${this.config.search_engine_name} with ${this.config.keywords.length} keywords on ${this.config.num_pages} pages each.`);
 
         if (this.pluggable && this.pluggable.start_browser) {
 
@@ -377,26 +335,21 @@ class ScrapeManager {
                 chunks[k % this.numClusters].push(this.config.keywords[k]);
             }
 
-            let execPromises = [];
-            let scraperInstances = [];
-            for (var c = 0; c < chunks.length; c++) {
-                this.config.keywords = chunks[c];
+            debug('chunks=%o', chunks);
 
-                if (this.config.use_proxies_only) {
-                    this.config.proxy = this.config.proxies[c]; // every cluster has a dedicated proxy
-                } else if(c > 0) {
-                    this.config.proxy = this.config.proxies[c-1]; // first cluster uses own ip address
-                }
+            let execPromises = [];
+            for (var c = 0; c < chunks.length; c++) {
+                const config = _.clone(this.config);
+                config.keywords = chunks[c];
 
                 var obj = getScraper(this.config.search_engine, {
-                    config: this.config,
+                    config: config,
                     context: {},
                     pluggable: this.pluggable,
                 });
 
                 var boundMethod = obj.run.bind(obj);
                 execPromises.push(this.cluster.execute({}, boundMethod));
-                scraperInstances.push(obj);
             }
 
             let promiseReturns = await Promise.all(execPromises);
@@ -412,8 +365,8 @@ class ScrapeManager {
         let timeDelta = Date.now() - startTime;
         let ms_per_request = timeDelta/num_requests;
 
-        log(this.config, 1, `Scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
-        log(this.config, 1, `On average ms/request: ${ms_per_request}ms/request`);
+        this.logger.info(`Scraper took ${timeDelta}ms to perform ${num_requests} requests.`);
+        this.logger.info(`On average ms/request: ${ms_per_request}ms/request`);
 
         if (this.pluggable && this.pluggable.handle_results) {
             await this.pluggable.handle_results(results);
@@ -423,14 +376,14 @@ class ScrapeManager {
         metadata.ms_per_keyword = ms_per_request.toString();
         metadata.num_requests = num_requests;
 
-        log(this.config, 2, metadata);
+        debug('metadata=%O', metadata);
 
         if (this.pluggable && this.pluggable.handle_metadata) {
             await this.pluggable.handle_metadata(metadata);
         }
 
         if (this.config.output_file) {
-            log(this.config, 1, `Writing results to ${this.config.output_file}`);
+            this.logger.info(`Writing results to ${this.config.output_file}`);
             write_results(this.config.output_file, JSON.stringify(results, null, 4));
         }
 

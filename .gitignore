@@ -79,3 +79,5 @@ typings/
 
 .idea/
 GoogleScraperPup.iml
+
+.http-mitm-proxy
