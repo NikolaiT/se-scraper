@@ -21,7 +21,7 @@ fakeSearchEngine.set('trust proxy', 'loopback');
 fakeSearchEngine.get('/test-proxy', (req, res) => {
     debug('fake-search-engine req.hostname=%s', req.hostname);
     //debug('req to', req.socket.localAddress, req.socket.localPort);
-    res.send(req.hostname);
+    setTimeout(() => res.send(req.hostname), 100); // Add timeout here because raise condition for first test
 });
 
 describe('Config', function(){
