@@ -120,4 +120,27 @@ describe('Module Google', function(){
         });
     });
 
+    it('extract google shopping', function () {
+        const googleScraper = new GoogleScraper({
+            config: {
+                search_engine_name: 'google',
+                throw_on_detection: true,
+                keywords: ['shopping'],
+                logger: testLogger,
+                scrape_from_file: '',
+                num_pages: 1,
+            }
+        });
+        googleScraper.STANDARD_TIMEOUT = 500;
+        return googleScraper.run({page}).then(({results, metadata, num_requests}) => {
+            assert.strictEqual(num_requests, 1, 'One request should be done');
+            assert.strictEqual(results['test keyword']['1'].results.length, 10, 'Must have 10 organic results parsed on page 1');
+            assert.strictEqual(results['test keyword']['1'].results[0].title, 'Keyword Tool (FREE) ᐈ #1 Google Keyword Planner Alternative', 'Title not matching on first organic result page 1');
+            assert.strictEqual(results['test keyword']['2'].results.length, 10, 'Must have 10 organic results parsed on page 2');
+            assert.strictEqual(results['test keyword']['2'].results[0].title, 'Keyword Research | The Beginner\'s Guide to SEO - Moz', 'Title not matching on first organic result page 1');
+            assert.strictEqual(results['test keyword']['3'].results.length, 10, 'Must have 10 organic results parsed on page 3');
+            assert.strictEqual(results['test keyword']['3'].results[0].title, 'The ACT Keyword Study Plan — NerdCoach', 'Title not matching on first organic result page 1');
+        });
+    });
+
 });
