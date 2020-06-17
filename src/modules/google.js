@@ -29,7 +29,7 @@ class GoogleScraper extends Scraper {
                 if (n) {
                     return n.getAttribute(attr);
                 } else {
-                    return null;
+                    return;
                 }
             };
 
@@ -111,14 +111,14 @@ class GoogleScraper extends Scraper {
             // parse right side product information
             results.right_info.review = _attr(document, '#rhs .cu-container g-review-stars span', 'aria-label');
 
-            let title_el = document.querySelector('#rhs .cu-container g-review-stars');
+            let title_el = document.querySelector('#rhs .cu-container .Q7Oxbd');
             if (title_el) {
-                results.right_info.review.title = title_el.parentNode.querySelector('div:first-child').innerText;
+                results.right_info.title = title_el.innerText;
             }
 
-            let num_reviews_el = document.querySelector('#rhs .cu-container g-review-stars');
+            let num_reviews_el = document.querySelector('#rhs .cu-container .PGDKUd');
             if (num_reviews_el) {
-                results.right_info.num_reviews = num_reviews_el.parentNode.querySelector('div:nth-of-type(2)').innerText;
+                results.right_info.num_reviews = num_reviews_el.innerText;
             }
 
             results.right_info.vendors = [];
@@ -127,19 +127,15 @@ class GoogleScraper extends Scraper {
             document.querySelectorAll('#rhs .cu-container .rhsvw > div > div:nth-child(4) > div > div:nth-child(3) > div').forEach((el) => {
                 results.right_info.vendors.push({
                     price: _text(el, 'span:nth-of-type(1)'),
-                    merchant_name: _text(el, 'span:nth-child(3) a:nth-child(2)'),
+                    merchant_name: _text(el, '.doUe3s0oL2B__jackpot-merchant a'),
                     merchant_ad_link: _attr(el, 'span:nth-child(3) a:first-child', 'href'),
-                    merchant_link: _attr(el, 'span:nth-child(3) a:nth-child(2)', 'href'),
+                    merchant_link: _attr(el, 'span:nth-child(3) a:nth-child(2)', 'href'), // TODO this is not working anymore
                     source_name: _text(el, 'span:nth-child(4) a'),
                     source_link: _attr(el, 'span:nth-child(4) a', 'href'),
-                    info: _text(el, 'div span'),
-                    shipping: _text(el, 'span:last-child > span'),
+                    info: _text(el, '.SdBHnc.e2CF7c'),
+                    shipping: _text(el, '.JfwJme'),
                 })
             });
-
-            if (!results.right_info.title) {
-                results.right_info = {};
-            }
 
             let right_side_info_el = document.getElementById('rhs');
 

@@ -143,4 +143,48 @@ describe('Module Google', function(){
         });
     });
 
+    it('shopping extract right one product', function () {
+        const googleScraper = new GoogleScraper({
+            config: {
+                search_engine_name: 'google',
+                throw_on_detection: true,
+                keywords: ['shopping right product review'],
+                logger: testLogger,
+                scrape_from_file: '',
+                num_pages: 1,
+            }
+        });
+        googleScraper.STANDARD_TIMEOUT = 500;
+        return googleScraper.run({page}).then(({results, metadata, num_requests}) => {
+            assert.strictEqual(num_requests, 1, 'One request should be done');
+            assert.strictEqual(results['shopping right product review']['1'].results.length, 9, 'Must have 9 organic results parsed on page 1');
+            assert.deepEqual(results['shopping right product review']['1'].right_info, {
+                title: 'Lacoste Lunettes',
+                'info': '',
+                'num_reviews': '146 avis',
+                'review': 'Note : 4,6 sur 5',
+                'vendors': [
+                    {
+                        'info': '317 · 2807',
+                        'merchant_ad_link': 'https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwihq9C82ojqAhUIyrIKHbIHAx8YABACGgJscg&ohost=www.google.com&cid=CAASE-Roz5UHMJg95vk99OwXQnKbUG0&sig=AOD64_0Wfsw3t3eO_yEtq8lWRIjiF6EqZw&ctype=5&q=&ved=2ahUKEwjsqsi82ojqAhVFPBoKHY38DAIQ9A56BAgNEH0&adurl=',
+                        'merchant_name': 'Edel-Optics FR',
+                        'price': '102,75 €',
+                        'shipping': 'Livraison gratuite',
+                        'source_link': 'https://www.google.com/search?tbm=shop&q=lacoste%20317',
+                        'source_name': 'Par Google',
+                    },
+                    {
+                        'info': '317 · 2805',
+                        'merchant_ad_link': 'https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwihq9C82ojqAhUIyrIKHbIHAx8YABADGgJscg&ohost=www.google.com&cid=CAASE-Roz5UHMJg95vk99OwXQnKbUG0&sig=AOD64_2R4Idoiqc783K8OLyv9W9YQTJfog&ctype=5&q=&ved=2ahUKEwjsqsi82ojqAhVFPBoKHY38DAIQ9A56BQgNEIEB&adurl=',
+                        'merchant_name': 'EasyLunettes.fr',
+                        'price': '75,00 €',
+                        'shipping': 'Livraison gratuite',
+                        'source_link': 'https://producthero.com/?utm_source=google&utm_medium=css&q=lacoste%20317',
+                        'source_name': 'Par Producthero',
+                    }
+                ]
+            });
+        });
+    });
+
 });
