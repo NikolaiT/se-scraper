@@ -19,7 +19,7 @@ class GoogleScraper extends Scraper {
                 if (n) {
                     return n.innerText;
                 } else {
-                    return '';
+                    return;
                 }
             };
 
@@ -147,25 +147,18 @@ class GoogleScraper extends Scraper {
                 }
             }
 
-            // parse top main column product information
-            // #tvcap .pla-unit
-            document.querySelectorAll('#tvcap .pla-unit').forEach((el) => {
+            // Parse Google Shopping top or left
+            document.querySelectorAll('.pla-unit').forEach((el) => {
                 let top_product = {
                     tracking_link: _attr(el, '.pla-unit-title a:first-child', 'href'),
                     link: _attr(el, '.pla-unit-title a:nth-child(2)', 'href'),
                     title: _text(el, '.pla-unit-title a:nth-child(2) span'),
-                    price: _text(el, '.pla-unit-title + div'),
-                    shipping: _text(el, '.pla-extensions-container div:nth-of-type(1)'),
-                    vendor_link: _attr(el,'.pla-extensions-container div > a', 'href'),
+                    price: el.querySelector('.pla-unit-title + div').childNodes[0].nodeValue,
+                    originalPrice: _text(el, '.pla-unit-title + div > span'),
+                    //shipping: _text(el, '.pla-extensions-container div:nth-of-type(1)'), // TODO get a sample page with this
+                    vendor_link: _attr(el,'.pla-extensions-container a.FfKHB', 'href'),
+                    merchant_name: _text(el,'.LbUacb span:nth-child(1)'),
                 };
-
-                let merchant_node = el.querySelector('.pla-unit-title');
-                if (merchant_node) {
-                    let node = merchant_node.parentNode.querySelector('div > span');
-                    if (node) {
-                        top_product.merchant_name = node.innerText;
-                    }
-                }
 
                 results.top_products.push(top_product);
             });
