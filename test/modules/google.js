@@ -120,7 +120,7 @@ describe('Module Google', function(){
         });
     });
 
-    it('extract google shopping', function () {
+    it('extract google shopping on right', function () {
         const googleScraper = new GoogleScraper({
             config: {
                 search_engine_name: 'google',
@@ -192,6 +192,34 @@ describe('Module Google', function(){
                     'vendor_link': 'https://www.pricesearcher.com/css/search/?p=1&q=cheap%20lacoste%20shoes&utm_source=google&utm_medium=css',
                 }
             ])
+        });
+    });
+
+    it('extract google shopping on top', function () {
+        const googleScraper = new GoogleScraper({
+            config: {
+                search_engine_name: 'google',
+                throw_on_detection: true,
+                keywords: ['shopping 2'],
+                logger: testLogger,
+                scrape_from_file: '',
+                num_pages: 1,
+            }
+        });
+        googleScraper.STANDARD_TIMEOUT = 500;
+        return googleScraper.run({page}).then(({results, metadata, num_requests}) => {
+            assert.strictEqual(num_requests, 1, 'One request should be done');
+            assert.strictEqual(results['shopping 2']['1'].results.length, 10, 'Must have 10 organic results parsed on page 1');
+            assert.deepEqual(results['shopping 2']['1'].top_products[2], {
+                "link": "https://www.zalando.fr/lacoste-sideline-cub-chaussons-pour-bebe-whitegreen-la216f003-k11.html?size=17&allophones=0",
+                "merchant_name": "Zalando.fr",
+                "price": "31,95 €",
+                "rank": 3,
+                'shipping': 'Livraison gratuite',
+                "title": "Lacoste Sideline CUB Cadeau de naissance white/green, gender.kids.unisex, Taille: 17, Blanc - Imitation cuir/textile",
+                "tracking_link": "/aclk?sa=l&ai=DChcSEwjt7o3yj4nqAhVZhdUKHbshBNwYABASGgJ3cw&sig=AOD64_0usikwrH4jD5vqtbS7vVoCrNxMOg&ctype=5&q=&ved=2ahUKEwj0w4fyj4nqAhWZDGMBHY7HAzAQww96BAgOEFI&adurl=",
+                "vendor_link": "https://fr.shoptail.eu/cheap%20lacoste%20shoes",
+            })
         });
     });
 

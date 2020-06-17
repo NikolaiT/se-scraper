@@ -13,11 +13,11 @@ class GoogleScraper extends Scraper {
 
         const results = await this.page.evaluate(() => {
 
-            let _text = (el, s) => {
+            let _text = (el, s, onlyFirstTextNode) => {
                 let n = el.querySelector(s);
 
                 if (n) {
-                    return n.innerText;
+                    return (onlyFirstTextNode) ? n.childNodes[0].nodeValue : n.innerText;
                 } else {
                     return;
                 }
@@ -153,9 +153,9 @@ class GoogleScraper extends Scraper {
                     tracking_link: _attr(el, '.pla-unit-title a:first-child', 'href'),
                     link: _attr(el, '.pla-unit-title a:nth-child(2)', 'href'),
                     title: _text(el, '.pla-unit-title a:nth-child(2) span'),
-                    price: el.querySelector('.pla-unit-title + div').childNodes[0].nodeValue,
+                    price: _text(el, '.pla-unit-title + div', true),
                     originalPrice: _text(el, '.pla-unit-title + div > span'),
-                    //shipping: _text(el, '.pla-extensions-container div:nth-of-type(1)'), // TODO get a sample page with this
+                    shipping: _text(el, '.pla-extensions-container .cYBBsb'),
                     vendor_link: _attr(el,'.pla-extensions-container a.FfKHB', 'href'),
                     merchant_name: _text(el,'.LbUacb span:nth-child(1)'),
                 };
