@@ -236,6 +236,11 @@ class GoogleScraper extends Scraper {
 
         await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
 
+        const buttonAccepted = await this.page.$('#L2AGLb');
+        if (buttonAccepted) {
+            await buttonAccepted.click();            
+        }
+
         return true;
     }
 
