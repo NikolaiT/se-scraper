@@ -238,10 +238,9 @@ class GoogleScraper extends Scraper {
 
         const buttonAccepted = await this.page.$('#L2AGLb');
         if (buttonAccepted) {
-            await buttonAccepted.evaluate((e) =>
-                e.scrollIntoView({ block: "center", inline: "center" })
-            );
-            await buttonAccepted.click();            
+            await this.page.evaluate(() => {
+                document.querySelector('#L2AGLb').click();
+            });
         }
 
         return true;
