@@ -4,6 +4,8 @@ const debug = require('debug')('se-scraper:DuckduckgoScraper');
 
 class DuckduckgoScraper extends Scraper {
 
+    defaultStartUrl = 'https://duckduckgo.com/';
+
     parse(html) {
         debug('parse');
         // load the page source into cheerio

@@ -42,7 +42,7 @@ class InfospaceScraper extends Scraper {
 
     async load_start_page() {
         try {
-            this.last_response = await this.page.goto(this.this.startUrl);
+            this.last_response = await this.page.goto(this.startUrl);
             await this.page.waitForSelector('input[name="q"]', { timeout: 5000 });
         } catch (e) {
             return false;

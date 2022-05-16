@@ -5,6 +5,8 @@ const Scraper = require('./se_scraper');
 
 class GoogleScraper extends Scraper {
 
+    defaultStartUrl = 'https://www.google.com';
+    
     constructor(...args) {
         super(...args);
     }

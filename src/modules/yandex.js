@@ -4,6 +4,8 @@ const Scraper = require('./se_scraper');
 
 class YandexScraper extends Scraper {
 
+    defaultStartUrl = 'https://yandex.com';
+    
     constructor(...args) {
         super(...args);
     }
