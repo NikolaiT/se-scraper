@@ -318,7 +318,6 @@ module.exports = class Scraper {
             for (var key in settings) {
                 baseUrl += `${key}=${settings[key]}&`
             }
-
             this.logger.info('Using startUrl: ' + baseUrl);
 
             return baseUrl;
@@ -385,6 +384,18 @@ module.exports = class Scraper {
 
     async parse_async(html) {
 
+    }
+
+    get startUrl(){
+        const startUrls = {
+            google: 'https://www.google.com',
+            duckduckgo:'https://duckduckgo.com/',
+            bing:this.build_start_url('https://www.bing.com/search?') || 'https://www.bing.com/',
+            infospace: this.build_start_url('http://search.infospace.com/search/web?') || 'http://infospace.com/index.html',
+            yandex: 'https://yandex.com'
+        }
+
+        return this.config.startUrl  || startUrls[this.config.search_engine];
     }
 
     /**
