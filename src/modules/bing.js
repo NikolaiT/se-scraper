@@ -2,6 +2,8 @@ const cheerio = require('cheerio');
 const Scraper = require('./se_scraper');
 
 class BingScraper extends Scraper {
+    
+    defaultStartUrl = this.build_start_url('https://www.bing.com/search?') || 'https://www.bing.com/';
 
     async parse_async(html) {
 

@@ -139,6 +139,9 @@ class ScrapeManager {
             //custom_func: resolve('examples/pluggable.js'),
             custom_func: null,
             throw_on_detection: false,
+            keep_html_on_error: false,
+            standard_timeout: 10000,
+            solve_captcha_time: 45000,
             // List of proxies to use ['socks5://78.94.172.42:1080', 'http://localhost:1080']
             proxies: null,
             // a file with one proxy per line. Example:

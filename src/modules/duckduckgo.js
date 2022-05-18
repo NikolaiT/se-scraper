@@ -4,6 +4,8 @@ const debug = require('debug')('se-scraper:DuckduckgoScraper');
 
 class DuckduckgoScraper extends Scraper {
 
+    defaultStartUrl = 'https://duckduckgo.com/';
+
     parse(html) {
         debug('parse');
         // load the page source into cheerio
@@ -46,11 +48,8 @@ class DuckduckgoScraper extends Scraper {
 
     async load_start_page() {
         debug('load_start_page');
-        let startUrl = 'https://duckduckgo.com/';
-
-        this.last_response = await this.page.goto(startUrl);
+        this.last_response = await this.page.goto(this.startUrl);
         await this.page.waitForSelector('input[name="q"]', { timeout: this.STANDARD_TIMEOUT });
-        
         return true;
     }
 

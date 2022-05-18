@@ -1,8 +1,8 @@
 {
-  "name": "se-scraper",
-  "version": "1.5.7",
+  "name": "@monibrand/se-scraper",
+  "version": "1.6.0-rc.8",
   "description": "A module using puppeteer to scrape several search engines such as Google, Bing and Duckduckgo",
-  "homepage": "https://scrapeulous.com/",
+  "homepage": "https://monibrand.com/",
   "main": "index.js",
   "scripts": {
     "test": "mocha test test/modules"
@@ -17,7 +17,7 @@
   "author": "Nikolai Tschacher <hire@incolumitas.com> (https://incolumitas.com/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NikolaiT/se-scraper"
+    "url": "https://github.com/Monibrand/se-scraper"
   },
   "license": "ISC",
   "dependencies": {

@@ -4,6 +4,8 @@ const Scraper = require('./se_scraper');
 
 class YandexScraper extends Scraper {
 
+    defaultStartUrl = 'https://yandex.com';
+    
     constructor(...args) {
         super(...args);
     }
@@ -71,11 +73,10 @@ class YandexScraper extends Scraper {
     }
 
     async load_start_page() {
-        let startUrl = 'https://yandex.com';
+        
+        this.logger.info('Using startUrl: ' + this.startUrl);
 
-        this.logger.info('Using startUrl: ' + startUrl);
-
-        this.last_response = await this.page.goto(startUrl);
+        this.last_response = await this.page.goto(this.startUrl);
 
         await this.page.waitForSelector('input[name="text"]', { timeout: this.STANDARD_TIMEOUT });
 
