@@ -39,7 +39,7 @@
     "express": "^4.17.1",
     "http-mitm-proxy": "^0.8.2",
     "key-cert": "^1.0.1",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "ua-parser-js": "^0.7.21"
   }
 }
